@@ -7,5 +7,5 @@ export default defineConfig({
   // TODO: replace REPO_NAME with your GitHub repo's name, e.g. '/edusite-economics/'
   // This must match exactly (including the slashes) or the deployed site will
   // show a blank page. Leave as '/' only if you set up a custom domain.
-  base: '/Learn.git/',
+  base: '/Learn/',
 })
