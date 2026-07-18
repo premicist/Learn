@@ -1,0 +1,89 @@
+backend:
+  name: github
+  # TODO: replace with your GitHub username/org and repo name, e.g. jsmith/edusite-economics
+  repo: premicist/Learn.git
+  branch: main
+  # TODO: replace with the URL of the free Netlify site you create just for
+  # login (see README.md "Connect the login" step). Example:
+  # base_url: https://your-site-name.netlify.app
+  base_url: https://REPLACE_WITH_YOUR_NETLIFY_SITE.netlify.app
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+publish_mode: simple
+
+collections:
+  - name: subjects
+    label: Subjects & Levels
+    files:
+      - file: content/subjects.yml
+        label: Subjects & Levels
+        name: subjects
+        fields:
+          - label: Levels
+            name: levels
+            widget: list
+            fields:
+              - { label: 'ID (no spaces, e.g. bachelors)', name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: 'Short title (for menus)', name: shortTitle, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Subjects
+            name: subjects
+            widget: list
+            fields:
+              - { label: 'ID (no spaces, e.g. microeconomics)', name: id, widget: string }
+              - { label: 'Level ID (must match a Level ID above)', name: levelId, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Color (hex code), name: color, widget: color, allowInput: true }
+
+  - name: notes
+    label: Notes
+    folder: content/notes
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Subject ID', name: subjectId, widget: string, hint: 'Must match a Subject ID exactly, e.g. microeconomics' }
+      - { label: Title, name: title, widget: string }
+      - { label: Summary, name: summary, widget: text }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: blogs
+    label: Blog Posts
+    folder: content/blogs
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Subject ID', name: subjectId, widget: string, hint: 'Must match a Subject ID exactly, e.g. microeconomics' }
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false }
+      - { label: Excerpt, name: excerpt, widget: text }
+
+  - name: quizzes
+    label: Quizzes
+    folder: content/quizzes
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Subject ID', name: subjectId, widget: string, hint: 'Must match a Subject ID exactly, e.g. microeconomics' }
+      - { label: Title, name: title, widget: string }
+      - label: Questions
+        name: questions
+        widget: list
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Options, name: options, widget: list }
+          - { label: 'Correct option number (0 = first option, 1 = second, etc.)', name: answerIndex, widget: number, value_type: int }
+
+  - name: videos
+    label: Videos
+    folder: content/videos
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Subject ID', name: subjectId, widget: string, hint: 'Must match a Subject ID exactly, e.g. microeconomics' }
+      - { label: Title, name: title, widget: string }
+      - { label: 'YouTube video ID', name: youtubeId, widget: string, required: false, hint: 'From youtube.com/watch?v=THIS_PART' }
+      - { label: Description, name: description, widget: text }

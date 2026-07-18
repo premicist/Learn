@@ -1,0 +1,55 @@
+levels:
+  - id: school
+    title: Class 11 & 12 (NEB)
+    shortTitle: Class 11 & 12
+    description: Economics for +2 students following the NEB curriculum.
+  - id: bachelors
+    title: Bachelor's Level
+    shortTitle: Bachelor's
+    description: Core courses in economics, management, and social science.
+  - id: masters
+    title: Master's Level
+    shortTitle: Master's
+    description: Advanced graduate-level economics.
+
+subjects:
+  - id: economics-11-12
+    levelId: school
+    title: Economics
+    description: "Class 11 & 12 Economics: microeconomics, macroeconomics, and Nepal economy."
+    color: "#2563eb"
+  - id: microeconomics
+    levelId: bachelors
+    title: Microeconomics
+    description: Consumer theory, production, market structures, and welfare economics.
+    color: "#16a34a"
+  - id: macroeconomics
+    levelId: bachelors
+    title: Macroeconomics
+    description: National income, money and banking, inflation, growth, and fiscal policy.
+    color: "#9333ea"
+  - id: mathematical-economics
+    levelId: bachelors
+    title: Mathematical Economics
+    description: Mathematical tools and models used in economic analysis.
+    color: "#ea580c"
+  - id: sociology
+    levelId: bachelors
+    title: Sociology
+    description: Society, social institutions, and social change.
+    color: "#0891b2"
+  - id: revenue-management
+    levelId: bachelors
+    title: Revenue Management
+    description: Pricing strategy, demand forecasting, and yield management.
+    color: "#be123c"
+  - id: hrm
+    levelId: bachelors
+    title: Human Resource Management
+    description: Recruitment, training, performance, and organizational behavior.
+    color: "#a16207"
+  - id: managerial-economics
+    levelId: masters
+    title: Managerial Economics
+    description: Applying economic theory to business decision-making.
+    color: "#4338ca"
