@@ -1,7 +1,7 @@
 backend:
   name: github
   # TODO: replace with your GitHub username/org and repo name, e.g. jsmith/edusite-economics
-  repo: premicist/Learn.git
+  repo: premicist/Learn
   branch: main
   # TODO: replace with the URL of the free Netlify site you create just for
   # login (see README.md "Connect the login" step). Example:
