@@ -6,7 +6,7 @@ backend:
   # TODO: replace with the URL of the free Netlify site you create just for
   # login (see README.md "Connect the login" step). Example:
   # base_url: https://your-site-name.netlify.app
-  base_url: https://REPLACE_WITH_YOUR_NETLIFY_SITE.netlify.app
+  base_url: https://unrivaled-muffin-e96868.netlify.app
 
 media_folder: public/images/uploads
 public_folder: /images/uploads
