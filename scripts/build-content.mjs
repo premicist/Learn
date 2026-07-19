@@ -31,7 +31,7 @@ function jsonString(value) {
   return JSON.stringify(value, null, 2)
 }
 
-// --- subjects.yml (levels + subjects) --------------------------------
+// --- subjects.yml (coursework levels + subjects) --------------------------------
 const subjectsRaw = readFileSync(path.join(contentDir, 'subjects.yml'), 'utf8')
 const { levels, subjects } = yaml.load(subjectsRaw)
 
