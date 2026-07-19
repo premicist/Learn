@@ -12,8 +12,8 @@ function Home() {
             Where supply meets <em>understanding</em>.
           </h1>
           <p>
-            Notes, articles, quizzes, and videos in economics — built for students moving from
-            board exams to bachelor&apos;s and master&apos;s level coursework.
+            Notes, articles, quizzes, and videos in economics — built for students pursuing class 11-12,
+            bachelor&apos;s and master&apos;s level coursework.
           </p>
           <div className="hero-actions">
             <Link to="/subjects" className="hero-cta">
