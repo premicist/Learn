@@ -138,7 +138,7 @@ function SubjectDetails() {
       </div>
 
       <Link to="/subjects" className="back-link">
-         Back to Subjects
+      Back to Subjects
       </Link>
     </section>
   )
