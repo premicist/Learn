@@ -83,7 +83,7 @@ function Notes() {
             </button>
           </div>
           {searchResults.length === 0 ? (
-            <p className="empty-state">No notes match that search yet.</p>
+            <p className="empty-state">No notes matching that search yet.</p>
           ) : (
             <div className="note-card-grid">
               {searchResults.map((note) => (
