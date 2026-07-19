@@ -83,7 +83,18 @@ function Notes() {
             </button>
           </div>
           {searchResults.length === 0 ? (
-            <p className="empty-state">No notes matching that search yet.</p>
+            <div className="no-results">
+              <p className="empty-state">No notes match that search yet.</p>
+              <p className="no-results__prompt">Don't see what you're looking for?</p>
+              <a
+                href="https://forms.gle/fwU1Fyxs3RKVEHxT7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-results__cta"
+              >
+                Request a note on this topic →
+              </a>
+            </div>
           ) : (
             <div className="note-card-grid">
               {searchResults.map((note) => (
