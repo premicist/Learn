@@ -8,13 +8,13 @@ import {
   getVideosBySubject,
 } from '../data/content'
 import QuizCard from '../components/QuizCard'
+import NoteCard from '../components/NoteCard'
 
 type Tab = 'notes' | 'blogs' | 'quizzes' | 'videos'
 
 function SubjectDetails() {
   const { subjectId } = useParams()
   const [activeTab, setActiveTab] = useState<Tab>('notes')
-  const [openNoteId, setOpenNoteId] = useState<string | null>(null)
 
   const subject = subjectId ? getSubjectById(subjectId) : undefined
 
@@ -74,20 +74,9 @@ function SubjectDetails() {
           notes.length === 0 ? (
             <p className="empty-state">No notes yet for this subject.</p>
           ) : (
-            <div className="notes-list">
+            <div className="note-card-grid">
               {notes.map((note) => (
-                <div className="note-item" key={note.id}>
-                  <button
-                    type="button"
-                    className="note-item__header"
-                    onClick={() => setOpenNoteId(openNoteId === note.id ? null : note.id)}
-                  >
-                    <span>{note.title}</span>
-                    <span>{openNoteId === note.id ? '−' : '+'}</span>
-                  </button>
-                  <p className="note-item__summary">{note.summary}</p>
-                  {openNoteId === note.id && <p className="note-item__body">{note.body}</p>}
-                </div>
+                <NoteCard key={note.id} note={note} subject={subject} showSubjectTag={false} />
               ))}
             </div>
           )
