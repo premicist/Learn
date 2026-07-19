@@ -35,6 +35,9 @@ jobs:
       - name: Add .nojekyll (so GitHub Pages serves the _-prefixed Vite assets)
         run: touch dist/.nojekyll
 
+      - name: Copy index.html to 404.html (fixes direct links to routes like /subjects)
+        run: cp dist/index.html dist/404.html
+        
       - name: Upload build output
         uses: actions/upload-pages-artifact@v3
         with:
