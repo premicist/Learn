@@ -70,12 +70,21 @@ export function getSubjectsByLevel(levelId: string): Subject[] {
 `
 writeFileSync(path.join(outDir, 'levels.ts'), levelsTs)
 
+const FALLBACK_NOTE_DATE = '2026-07-19'
+
 // --- notes, blogs, quizzes, videos ------------------------------------
 const notes = readMarkdownFolder('notes').map((n) => ({
   id: n.id,
   subjectId: n.subjectId,
   title: n.title,
   summary: n.summary,
+  date:
+    typeof n.date === 'string'
+      ? n.date
+      : n.date
+        ? new Date(n.date).toISOString().slice(0, 10)
+        : FALLBACK_NOTE_DATE,
+  image: n.image || '',
   body: n.body,
 }))
 
@@ -113,6 +122,8 @@ export type Note = {
   subjectId: string
   title: string
   summary: string
+  date: string
+  image: string
   body: string
 }
 
