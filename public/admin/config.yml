@@ -16,7 +16,7 @@ backend:
 # Better Decap + Bridge logo (optional)
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 # Add site links in Decap CMS (optional)
-site_url: https://premicist.github.io
+site_url: https://prempokhrel.com.np
 
 media_folder: public/images/uploads
 public_folder: /images/uploads
