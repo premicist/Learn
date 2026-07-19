@@ -607,6 +607,35 @@ h2 {
   border-color: var(--teal);
 }
 
+.no-results {
+  text-align: center;
+  padding: 32px 20px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+}
+
+.no-results__prompt {
+  margin-top: 6px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.no-results__cta {
+  display: inline-block;
+  margin-top: 14px;
+  background: var(--teal);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.no-results__cta:hover {
+  background: var(--teal-deep);
+}
+
 .subject-notes-section {
   margin-bottom: 28px;
 }
