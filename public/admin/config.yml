@@ -56,6 +56,8 @@ collections:
       - { label: 'Subject ID', name: subjectId, widget: string, hint: 'Must match a Subject ID exactly, e.g. microeconomics' }
       - { label: Title, name: title, widget: string }
       - { label: Summary, name: summary, widget: text }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false }
+      - { label: Cover Image, name: image, widget: image, required: false, hint: 'Optional — shows a colored placeholder if left blank' }
       - { label: Body, name: body, widget: markdown }
 
   - name: blogs
