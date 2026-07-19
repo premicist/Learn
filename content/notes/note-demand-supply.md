@@ -1,5 +1,5 @@
 ---
-subjectId: Economics-I
+subjectId: Class-11
 title: Law of Demand and Supply
 summary: The basics of how price relates to quantity demanded and supplied.
 date: 2026-07-19
