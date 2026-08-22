@@ -863,6 +863,15 @@ h2 {
   color: var(--teal-deep);
 }
 
+.note-page__body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin: 16px 0;
+}
+
+
 .note-chart {
   margin: 20px 0;
   padding: 16px;
