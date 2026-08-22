@@ -18,7 +18,7 @@ subjects:
     description: Microeconomics, Macroeconomics, and Nepal economy.
     color: "#2563eb"
   - levelId: school
-    id: class-12
+    id: Class-12
     title: Economics-II
     description: Microeconomics, Macroeconomics, and Nepal economy.
     color: "#2563eb"
@@ -47,7 +47,7 @@ subjects:
     title: Revenue Management
     description: Pricing strategy, demand forecasting, and yield management.
     color: "#be123c"
-  - id: hrm
+  - id: HRM
     levelId: bachelors
     title: Human Resource Management
     description: Recruitment, training, performance, and organizational behavior.
