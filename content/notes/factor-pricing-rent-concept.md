@@ -1,5 +1,5 @@
 ---
-subjectId: Class-12
+subjectId: Economics-II
 title: "FACTOR PRICING: RENT CONCEPT"
 summary: "Rent is payment for using production factors; contract rent is
   tenant-landlord gross payment, while economic rent is surplus from fixed
