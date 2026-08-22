@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Link } from 'react-router'
 import type { Note } from '../data/content'
 import type { Subject } from '../data/levels'
@@ -16,16 +15,9 @@ function formatDate(dateStr: string) {
 }
 
 function NoteCard({ note, subject, showSubjectTag = true }: NoteCardProps) {
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
     <article className="note-card">
-      <button
-        type="button"
-        className="note-card__header"
-        onClick={() => setIsOpen((open) => !open)}
-        aria-expanded={isOpen}
-      >
+      <Link to={`/notes/${note.id}`} className="note-card__header">
         {note.image ? (
           <img className="note-card__image" src={note.image} alt="" />
         ) : (
@@ -41,13 +33,7 @@ function NoteCard({ note, subject, showSubjectTag = true }: NoteCardProps) {
           <h3>{note.title}</h3>
           <p className="note-card__summary">{note.summary}</p>
         </div>
-      </button>
-
-      {isOpen && (
-        <div className="note-card__expanded">
-          <p>{note.body}</p>
-        </div>
-      )}
+      </Link>
 
       {showSubjectTag && subject && (
         <Link to={`/subjects/${subject.id}`} className="note-card__tag">
