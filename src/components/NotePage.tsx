@@ -40,6 +40,7 @@ function NotePage() {
       )}
 
       <section className="note-page__content">
+        
         <div className="note-page__meta">
           <span className="note-page__date">{formatDate(note.date)}</span>
           {subject && (
