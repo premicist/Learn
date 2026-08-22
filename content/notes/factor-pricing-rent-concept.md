@@ -1,5 +1,5 @@
 ---
-subjectId: Economics-II
+subjectId: Class-12
 title: "FACTOR PRICING: RENT CONCEPT"
 summary: "Rent is payment for using production factors; contract rent is
   tenant-landlord gross payment, while economic rent is surplus from fixed
@@ -37,14 +37,11 @@ Economic rent is the excess payment made to any factor of production whose suppl
 
 “Rent is the price paid for the original and indestructible power of soil.”
 
-
 The Ricardian Theory of Rent was propounded by the classical economist David Ricardo. According to Ricardo, “Rent is that portion of the produce of the earth which is paid to the landlord for the original and indestructible powers of the soil.” Rent arises due to differences in the fertility of the soil.
-
 
 **Assumptions:**
 
 The Ricardian explanation of origin and determination of rent is based on the following assumptions.
-
 
 * Land is a free gift of nature and its supply is fixed.
 * Land is graded according to fertility.
@@ -83,6 +80,8 @@ The intensive use of land refers to expanding production by using more labour an
 
 The land area remains fixed, but inputs increase. Because land is fixed, the law of diminishing returns operates where total output may rise, but each additional dose contributes less than the previous dose. Here, Rent is the difference between the output of earlier intramarginal doses (1st, 2nd and 3rd) and the marginal dose (4th).
 
+
+
 Criticisms:
 
 1. *Indestructible power of the soil:* Fertility decreases over time through continuous cultivation and can increase through the use of fertiliser.
@@ -90,5 +89,7 @@ Criticisms:
 3. *The concept of rent is narrow and limited:* Rent arises not only from land but from all factors that are limited and inelastic in supply.
 4. *Ignores different uses of land:* Land can be used for houses, industries, forests, and other purposes as well as cultivation.
 5. *No existence of marginal land:* In reality, even inferior land may pay some rent, however small.
+
+
 
 Despite these criticisms, the Ricardian Theory of Rent remains one of the most accepted and important theories of rent in economics.
