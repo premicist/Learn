@@ -17,43 +17,54 @@ subjects:
     title: Economics-I
     description: Microeconomics, Macroeconomics, and Nepal economy.
     color: "#2563eb"
+    featured: []
   - levelId: school
     id: class-12
     title: Economics-II
     description: Microeconomics, Macroeconomics, and Nepal economy.
     color: "#2563eb"
+    featured:
+      - type: note
+        id: factor-pricing-rent-concept
   - id: microeconomics
     levelId: bachelors
     title: Microeconomics
     description: Consumer theory, production, market structures, and welfare economics.
     color: "#16a34a"
+    featured: []
   - id: macroeconomics
     levelId: bachelors
     title: Macroeconomics
     description: National income, money and banking, inflation, growth, and fiscal policy.
     color: "#9333ea"
+    featured: []
   - id: mathematical-economics
     levelId: bachelors
     title: Mathematical Economics
     description: Mathematical tools and models used in economic analysis.
     color: "#ea580c"
+    featured: []
   - id: sociology
     levelId: bachelors
     title: Sociology
     description: Society, social institutions, and social change.
     color: "#0891b2"
+    featured: []
   - id: revenue-management
     levelId: bachelors
     title: Revenue Management
     description: Pricing strategy, demand forecasting, and yield management.
     color: "#be123c"
+    featured: []
   - id: hrm
     levelId: bachelors
     title: Human Resource Management
     description: Recruitment, training, performance, and organizational behavior.
     color: "#a16207"
+    featured: []
   - id: managerial-economics
     levelId: masters
     title: Managerial Economics
     description: Applying economic theory to business decision-making.
     color: "#4338ca"
+    featured: []

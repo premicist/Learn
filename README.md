@@ -23,7 +23,7 @@ npm run build
 
 ## Project structure
 - `content/` — your notes, blog posts, quizzes, videos, and subject list.
-  Edit these through `/admin` (recommended) or by hand.
+  Edit these through `/admin` (recommended) or by hand. Each subject can include a manually ordered `featured` list containing note, blog, quiz, or video IDs; invalid pins stop the build.
 - `admin/` — the Decap CMS dashboard configuration.
 - `scripts/build-content.mjs` — turns `content/` into data the site reads.
   Runs automatically before `dev`/`build`; you don't need to run it yourself.

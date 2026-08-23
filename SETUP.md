@@ -8,7 +8,7 @@ This site is a React + Vite learning website for economics notes, articles, quiz
 /admin → DecapBridge → GitHub content files → validation/build → GitHub Pages
 ```
 
-The editable source files live under `content/`. The `admin/config.yml` file is the canonical CMS configuration. The build synchronizes it into `public/admin/config.yml`; do not edit the public copy by hand.
+The editable source files live under `content/`. The `admin/config.yml` file is the canonical CMS configuration. The build synchronizes it into `public/admin/config.yml`; do not edit the public copy by hand. Each subject has a manually ordered `featured` list where editors can pin notes, blogs, quizzes, or videos by exact resource ID.
 
 ## Local development
 
@@ -29,7 +29,7 @@ The development command synchronizes the CMS, generates the sitemap, validates t
 
 ## Adding content
 
-Use the `/admin/` dashboard whenever possible. Every note, blog, quiz, and video must use a valid `subjectId` from `content/subjects.yml`. Subject and level IDs must be lowercase kebab-case, such as `microeconomics`, `class-11`, or `managerial-economics`.
+Use the `/admin/` dashboard whenever possible. Every note, blog, quiz, and video must use a valid `subjectId` from `content/subjects.yml`. Subject and level IDs must be lowercase kebab-case, such as `microeconomics`, `class-11`, or `managerial-economics`. Featured entries use `type` (`note`, `blog`, `quiz`, or `video`) plus the exact filename ID without `.md`; their order controls the display order on the subject page.
 
 Notes support a Markdown body, optional cover image, and optional image alt text. Blog posts require a Markdown body. Quiz questions require at least two options, a valid zero-based `answerIndex`, and an explanation. Videos may include a YouTube ID, transcript, and key takeaways.
 

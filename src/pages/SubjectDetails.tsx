@@ -1,16 +1,36 @@
-import { useState } from 'react'
 import { Link, useParams } from 'react-router'
-import { getSubjectById, getLevelById } from '../data/levels'
-import { getNotesBySubject, getBlogPostsBySubject, getQuizzesBySubject, getVideosBySubject } from '../data/content'
-import QuizCard from '../components/QuizCard'
-import NoteCard from '../components/NoteCard'
+import { getSubjectById, getLevelById, type Subject } from '../data/levels'
+import { blogPosts, getBlogPostsBySubject, getNotesBySubject, getQuizzesBySubject, getVideosBySubject, notes, quizzes, videos } from '../data/content'
+import ResourceCard, { type Resource, type ResourceKind } from '../components/ResourceCard'
+import ResourceRail from '../components/ResourceRail'
 import Seo from '../components/Seo'
 
-type Tab = 'notes' | 'blogs' | 'quizzes' | 'videos'
+type FeaturedSelection = Subject['featured'][number]
+type FeaturedEntry = { selection: FeaturedSelection; resource: Resource; kind: ResourceKind }
+
+function formatCount(count: number, label: string) {
+  return `${count} ${label}${count === 1 ? '' : 's'}`
+}
+
+function resolveFeaturedResources(subject: Subject): FeaturedEntry[] {
+  const lookup: Record<FeaturedSelection['type'], { kind: ResourceKind; resources: Resource[] }> = {
+    note: { kind: 'notes', resources: notes },
+    blog: { kind: 'blogs', resources: blogPosts },
+    quiz: { kind: 'quizzes', resources: quizzes },
+    video: { kind: 'videos', resources: videos },
+  }
+
+  return subject.featured
+    .map((selection) => {
+      const collection = lookup[selection.type]
+      const resource = collection.resources.find((item) => item.id === selection.id)
+      return resource ? { selection, resource, kind: collection.kind } : null
+    })
+    .filter((entry): entry is FeaturedEntry => entry !== null)
+}
 
 function SubjectDetails() {
   const { subjectId } = useParams()
-  const [activeTab, setActiveTab] = useState<Tab>('notes')
   const subject = subjectId ? getSubjectById(subjectId) : undefined
 
   if (!subject) {
@@ -25,61 +45,56 @@ function SubjectDetails() {
   }
 
   const level = getLevelById(subject.levelId)
-  const notes = getNotesBySubject(subject.id)
-  const blogs = getBlogPostsBySubject(subject.id)
-  const quizzes = getQuizzesBySubject(subject.id)
-  const videos = getVideosBySubject(subject.id)
-  const tabs: { key: Tab; label: string; count: number }[] = [
-    { key: 'notes', label: 'Notes', count: notes.length },
-    { key: 'blogs', label: 'Blogs', count: blogs.length },
-    { key: 'quizzes', label: 'Quizzes', count: quizzes.length },
-    { key: 'videos', label: 'Videos', count: videos.length },
-  ]
+  const subjectNotes = getNotesBySubject(subject.id)
+  const subjectBlogs = getBlogPostsBySubject(subject.id)
+  const subjectQuizzes = getQuizzesBySubject(subject.id)
+  const subjectVideos = getVideosBySubject(subject.id)
+  const featured = resolveFeaturedResources(subject)
 
   return (
-    <section>
+    <section className="subject-hub">
       <Seo title={`${subject.title} | Prem Pokhrel`} description={subject.description} />
       <div className="subject-header">
         <div className="subject-header__bar" style={{ backgroundColor: subject.color }} />
         <div>
           <p className="eyebrow">{level?.shortTitle || 'Economics learning'}</p>
-          <h2>{subject.title}</h2>
+          <h1>{subject.title}</h1>
           <p>{subject.description}</p>
           {level && <Link to={`/levels/${level.id}`} className="subject-header__level">View {level.shortTitle}</Link>}
         </div>
       </div>
 
-      <div className="tabs" role="tablist" aria-label={`${subject.title} resources`}>
-        {tabs.map((tab) => (
-          <button
-            key={tab.key}
-            type="button"
-            role="tab"
-            id={`tab-${tab.key}`}
-            aria-selected={activeTab === tab.key}
-            aria-controls={`panel-${tab.key}`}
-            className={`tab ${activeTab === tab.key ? 'tab--active' : ''}`}
-            onClick={() => setActiveTab(tab.key)}
-          >
-            {tab.label} ({tab.count})
-          </button>
-        ))}
+      <div className="subject-hub__summary" aria-label="Subject resource summary">
+        <span>{formatCount(subjectNotes.length, 'note')}</span>
+        <span>{formatCount(subjectBlogs.length, 'blog')}</span>
+        <span>{formatCount(subjectVideos.length, 'video')}</span>
+        <span>{formatCount(subjectQuizzes.length, 'quiz')}</span>
       </div>
 
-      <div className="tab-content">
-        {activeTab === 'notes' && <div id="panel-notes" role="tabpanel" aria-labelledby="tab-notes">
-          {notes.length === 0 ? <p className="empty-state">No notes yet for this subject.</p> : <div className="note-card-grid">{notes.map((note) => <NoteCard key={note.id} note={note} subject={subject} showSubjectTag={false} />)}</div>}
-        </div>}
-        {activeTab === 'blogs' && <div id="panel-blogs" role="tabpanel" aria-labelledby="tab-blogs">
-          {blogs.length === 0 ? <p className="empty-state">No blog posts yet for this subject.</p> : <div className="blogs-list">{blogs.map((post) => <article className="blog-item" key={post.id}><div className="blog-item__meta"><time dateTime={post.date}>{post.date}</time></div><h3><Link to={`/blogs/${post.id}`}>{post.title}</Link></h3><p>{post.excerpt}</p></article>)}</div>}
-        </div>}
-        {activeTab === 'quizzes' && <div id="panel-quizzes" role="tabpanel" aria-labelledby="tab-quizzes">
-          {quizzes.length === 0 ? <p className="empty-state">No quizzes yet for this subject.</p> : <div className="quizzes-list">{quizzes.map((quiz) => <QuizCard key={quiz.id} quiz={quiz} />)}</div>}
-        </div>}
-        {activeTab === 'videos' && <div id="panel-videos" role="tabpanel" aria-labelledby="tab-videos">
-          {videos.length === 0 ? <p className="empty-state">No videos yet for this subject.</p> : <div className="videos-list">{videos.map((video) => <div className="video-item" key={video.id}><h3>{video.title}</h3><p>{video.description}</p>{video.youtubeId ? <div className="video-embed"><iframe loading="lazy" src={`https://www.youtube.com/embed/${video.youtubeId}`} title={video.title} allowFullScreen /></div> : <p className="empty-state">Video not added yet. Review the key takeaways below.</p>}{video.keyTakeaways.length > 0 && <ul className="takeaways">{video.keyTakeaways.map((takeaway) => <li key={takeaway}>{takeaway}</li>)}</ul>}</div>)}</div>}
-        </div>}
-      </div>
+      <section className={`subject-featured ${featured.length === 0 ? 'subject-featured--empty' : ''}`} aria-labelledby="featured-heading">
+        <div className="subject-rail__header">
+          <div>
+            <p className="eyebrow">Start here</p>
+            <h2 id="featured-heading">Featured</h2>
+            <p className="subject-rail__hint">Hand-picked resources for this subject</p>
+          </div>
+          <span className="featured-badge">{featured.length > 0 ? `${featured.length} pinned` : 'Coming soon'}</span>
+        </div>
+        {featured.length > 0 ? (
+          <div className="resource-rail resource-rail--featured" tabIndex={0} aria-label={`Featured resources for ${subject.title}`}>
+            {featured.map(({ selection, resource, kind }) => (
+              <ResourceCard key={`${selection.type}-${selection.id}`} resource={resource} kind={kind} subject={subject} featured />
+            ))}
+          </div>
+        ) : (
+          <p className="empty-state">Featured resources will appear here when they are pinned in the content manager.</p>
+        )}
+      </section>
+
+      <ResourceRail title="Notes" kind="notes" resources={subjectNotes} subject={subject} viewAllHref="/notes" viewAllLabel="View all notes" />
+      <ResourceRail title="Blogs" kind="blogs" resources={subjectBlogs} subject={subject} viewAllHref="/blogs" viewAllLabel="View all blogs" />
+      <ResourceRail title="Videos" kind="videos" resources={subjectVideos} subject={subject} viewAllHref="/videos" viewAllLabel="View all videos" />
+      <ResourceRail title="Quizzes" kind="quizzes" resources={subjectQuizzes} subject={subject} viewAllHref="/quizzes" viewAllLabel="View all quizzes" />
 
       <Link to="/subjects" className="back-link">← Back to subjects</Link>
     </section>

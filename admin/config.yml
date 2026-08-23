@@ -40,6 +40,15 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: text }
               - { label: Color (hex code), name: color, widget: color, allowInput: true }
+              - label: Featured resources
+                name: featured
+                widget: list
+                required: false
+                summary: '{{type}}: {{id}}'
+                hint: 'Add resources in the order they should appear. Use the exact Markdown filename without .md.'
+                fields:
+                  - { label: Type, name: type, widget: select, options: [note, blog, quiz, video] }
+                  - { label: Resource ID, name: id, widget: string }
 
   - name: notes
     label: Notes

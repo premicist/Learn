@@ -25,6 +25,8 @@ const paths = [
   ...taxonomy.subjects.map((subject) => `/subjects/${subject.id}`),
   ...ids('notes').map((id) => `/notes/${id}`),
   ...ids('blogs').map((id) => `/blogs/${id}`),
+  ...ids('quizzes').map((id) => `/quizzes/${id}`),
+  ...ids('videos').map((id) => `/videos/${id}`),
 ]
 
 const urls = paths.map((route) => `  <url><loc>${siteUrl}${route}</loc></url>`).join('\n')

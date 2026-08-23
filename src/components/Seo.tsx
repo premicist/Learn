@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 type SeoProps = {
   title: string
   description: string
-  type?: 'website' | 'article'
+  type?: 'website' | 'article' | 'video.other'
   image?: string
 }
 

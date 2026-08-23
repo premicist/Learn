@@ -45,6 +45,8 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
   const subjects = Array.isArray(taxonomy.subjects) ? taxonomy.subjects : []
   const levelIds = new Set()
   const subjectIds = new Set()
+  const resourceIds = Object.fromEntries(MARKDOWN_COLLECTIONS.map((collection) => [collection, new Set(readMarkdownCollection(contentDir, collection).map((item) => item.file.replace(/\.md$/, '')))]))
+  const featuredTypeToCollection = { note: 'notes', blog: 'blogs', quiz: 'quizzes', video: 'videos' }
 
   if (levels.length === 0) errors.push('content/subjects.yml must define at least one level')
   if (subjects.length === 0) errors.push('content/subjects.yml must define at least one subject')
@@ -65,6 +67,19 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
     if (subjectIds.has(subject.id)) errors.push(`Duplicate subject ID: ${subject.id}`)
     if (subject.levelId && !levelIds.has(subject.levelId)) {
       errors.push(`Subject ${subject.id} references missing level: ${subject.levelId}`)
+    }
+    if (subject.featured !== undefined && !Array.isArray(subject.featured)) {
+      errors.push(`Subject ${subject.id} featured must be a list`)
+    }
+    for (const [index, featured] of (Array.isArray(subject.featured) ? subject.featured.entries() : [])) {
+      const label = `Subject ${subject.id} featured item ${index + 1}`
+      if (!featured || !featured.type || !featured.id) {
+        errors.push(`${label} needs a type and id`)
+        continue
+      }
+      const collection = featuredTypeToCollection[featured.type]
+      if (!collection) errors.push(`${label} has unsupported type: ${featured.type}`)
+      else if (!resourceIds[collection].has(featured.id)) errors.push(`${label} references missing resource: ${featured.type}/${featured.id}`)
     }
     subjectIds.add(subject.id)
   }
