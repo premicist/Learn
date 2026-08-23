@@ -39,7 +39,9 @@ subjects:
     title: Macroeconomics
     description: National income, money and banking, inflation, growth, and fiscal policy.
     color: "#9333ea"
-    featured: []
+    featured:
+      - type: note
+        id: macro-introduction
   - id: mathematical-economics
     levelId: bachelors
     title: Mathematical Economics

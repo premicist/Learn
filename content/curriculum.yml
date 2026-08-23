@@ -902,3 +902,464 @@ curricula:
             resourceId: quiz-micro-resources
             estimatedMinutes: 15
             description: Review resource rewards, labour markets, interest, and profit.
+
+  - id: macroeconomics-guided
+    subjectId: macroeconomics
+    title: Your guided Macroeconomics path
+    description: Follow a coherent sequence from macroeconomic foundations and national accounting to policy, global links, growth, and development.
+    syllabusNote: A structured Macroeconomics study path.
+    units:
+      - id: macro-foundations
+        order: 1
+        title: Foundations of Macroeconomics
+        summary: Build the language of economy-wide analysis, circular flow, equilibrium, and the changing business environment.
+        estimatedMinutes: 150
+        outcomes:
+          - Explain the scope and uses of macroeconomics.
+          - Distinguish stock, flow, nominal, and real variables.
+          - Trace circular flow and identify injections and leakages.
+        lessons:
+          - id: macro-introduction
+            title: Macroeconomics scope and method
+            resourceType: note
+            resourceId: macro-introduction
+            estimatedMinutes: 25
+            description: Introduce economy-wide questions, indicators, uses, and limits.
+          - id: macro-macro-variables
+            title: Macroeconomic variables, stocks, and flows
+            resourceType: note
+            resourceId: macro-macro-variables
+            estimatedMinutes: 25
+            description: Classify the variables used to describe the macroeconomy.
+          - id: macro-circular-flow
+            title: Circular flow of income and expenditure
+            resourceType: note
+            resourceId: macro-circular-flow
+            estimatedMinutes: 30
+            description: Trace two-sector, government, and open-economy flows.
+          - id: macro-analysis-methods
+            title: Equilibrium and methods of macroeconomic analysis
+            resourceType: note
+            resourceId: macro-analysis-methods
+            estimatedMinutes: 25
+            description: Compare static, comparative-static, and dynamic reasoning.
+          - id: macro-digital-business
+            title: Macroeconomics and the digital economy
+            resourceType: note
+            resourceId: macro-digital-business
+            estimatedMinutes: 25
+            description: Connect digital production and data with macroeconomic outcomes.
+          - id: macro-foundations-check
+            title: Macroeconomics foundations practice
+            resourceType: quiz
+            resourceId: quiz-macro-foundations
+            estimatedMinutes: 12
+            description: Check the core language and circular-flow relationships.
+      - id: macro-national-income
+        order: 2
+        title: National Income Accounting
+        summary: Measure output and income using national aggregates, accounting approaches, price indexes, and interpretation limits.
+        estimatedMinutes: 170
+        outcomes:
+          - Explain the main national income aggregates.
+          - Compare product, income, and expenditure methods.
+          - Distinguish nominal and real GDP and interpret measurement limits.
+        lessons:
+          - id: macro-national-income-note
+            title: Measuring national income
+            resourceType: note
+            resourceId: note-national-income
+            estimatedMinutes: 35
+            description: Use the three approaches and avoid double counting.
+          - id: macro-national-aggregates
+            title: National income aggregates and their interpretation
+            resourceType: note
+            resourceId: macro-national-aggregates
+            estimatedMinutes: 30
+            description: Relate gross, net, domestic, national, personal, and per-capita measures.
+          - id: macro-national-income-methods
+            title: Methods and difficulties of national income measurement
+            resourceType: note
+            resourceId: macro-national-income-methods
+            estimatedMinutes: 30
+            description: Review measurement methods and practical data limitations.
+          - id: macro-real-nominal-green-gdp
+            title: Real GDP, price indexes, and green GDP
+            resourceType: note
+            resourceId: macro-real-nominal-green-gdp
+            estimatedMinutes: 30
+            description: Separate price changes from output and introduce sustainability adjustments.
+          - id: macro-saving-wealth
+            title: Saving, wealth, and macroeconomic accounting
+            resourceType: note
+            resourceId: macro-saving-wealth
+            estimatedMinutes: 25
+            description: Distinguish saving flows from wealth stocks and connect them with investment.
+          - id: macro-national-income-check
+            title: National income accounting practice
+            resourceType: quiz
+            resourceId: quiz-macro-national-income
+            estimatedMinutes: 12
+            description: Practise aggregates, approaches, and real-versus-nominal interpretation.
+      - id: macro-consumption-investment
+        order: 3
+        title: Consumption, Saving, and Investment
+        summary: Explain household spending, saving behaviour, business investment, and the main investment theories.
+        estimatedMinutes: 170
+        outcomes:
+          - Interpret consumption and saving functions.
+          - Explain the paradox of thrift and investment determinants.
+          - Compare MEC, accelerator, neoclassical, and Tobin’s q approaches.
+        lessons:
+          - id: macro-consumption-function
+            title: Consumption function and determinants
+            resourceType: note
+            resourceId: macro-consumption-function
+            estimatedMinutes: 30
+            description: Introduce the consumption function and its technical properties.
+          - id: macro-consumption-hypotheses
+            title: Theories of consumption behaviour
+            resourceType: note
+            resourceId: macro-consumption-hypotheses
+            estimatedMinutes: 30
+            description: Compare current-income and forward-looking explanations of consumption.
+          - id: macro-saving-paradox-thrift
+            title: Saving function and the paradox of thrift
+            resourceType: note
+            resourceId: macro-saving-paradox-thrift
+            estimatedMinutes: 30
+            description: Relate saving to income and aggregate demand.
+          - id: macro-investment-function
+            title: Investment function and investment demand
+            resourceType: note
+            resourceId: macro-investment-function
+            estimatedMinutes: 30
+            description: Organise investment types, determinants, and uncertainty.
+          - id: macro-investment-theories
+            title: Investment theories and Tobin’s q
+            resourceType: note
+            resourceId: macro-investment-theories
+            estimatedMinutes: 35
+            description: Introduce MEC, accelerator, neoclassical, and q-theory reasoning.
+          - id: macro-consumption-investment-check
+            title: Consumption, saving, and investment practice
+            resourceType: quiz
+            resourceId: quiz-macro-consumption-investment
+            estimatedMinutes: 12
+            description: Check the main spending and investment relationships.
+      - id: macro-employment
+        order: 4
+        title: Classical and Keynesian Employment
+        summary: Compare classical and Keynesian explanations of employment, effective demand, sector models, and income multipliers.
+        estimatedMinutes: 200
+        outcomes:
+          - Explain Say’s law and the classical employment model.
+          - Determine Keynesian equilibrium through effective demand.
+          - Apply sector models and the multiplier family.
+        lessons:
+          - id: macro-classical-employment
+            title: Classical theory of employment and output
+            resourceType: note
+            resourceId: macro-classical-employment
+            estimatedMinutes: 35
+            description: Introduce classical assumptions about wages, prices, output, and employment.
+          - id: macro-says-law-classical-critique
+            title: Say’s law and the classical employment debate
+            resourceType: note
+            resourceId: macro-says-law-classical-critique
+            estimatedMinutes: 30
+            description: Explain Say’s law and the main demand-side criticisms.
+          - id: macro-keynes-effective-demand
+            title: Keynesian effective demand
+            resourceType: note
+            resourceId: macro-keynes-effective-demand
+            estimatedMinutes: 35
+            description: Use aggregate expenditure to explain output and employment.
+          - id: macro-income-determination-sectors
+            title: Income determination in sector models
+            resourceType: note
+            resourceId: macro-income-determination-sectors
+            estimatedMinutes: 35
+            description: Build two-sector, three-sector, and four-sector equilibrium models.
+          - id: macro-multiplier
+            title: Multiplier analysis and its extensions
+            resourceType: note
+            resourceId: macro-multiplier
+            estimatedMinutes: 35
+            description: Compare investment, fiscal, balanced-budget, and foreign-trade multipliers.
+          - id: macro-employment-evaluation
+            title: "Classical and Keynesian employment: evaluation"
+            resourceType: note
+            resourceId: macro-employment-evaluation
+            estimatedMinutes: 30
+            description: Compare the adjustment stories, policy implications, and limits of the two approaches.
+          - id: macro-employment-check
+            title: Classical and Keynesian employment practice
+            resourceType: quiz
+            resourceId: quiz-macro-employment
+            estimatedMinutes: 12
+            description: Review employment theories, effective demand, and multiplier logic.
+      - id: macro-money-islm
+        order: 5
+        title: Money, Interest, and the IS-LM Model
+        summary: Explain money markets, interest rates, liquidity preference, and short-run closed-economy equilibrium.
+        estimatedMinutes: 150
+        outcomes:
+          - Explain money demand and money supply.
+          - Relate bond prices, yields, and liquidity preference.
+          - Derive IS and LM relationships and compare policy effects.
+        lessons:
+          - id: macro-money-demand-supply
+            title: Money supply and demand for money
+            resourceType: note
+            resourceId: macro-money-demand-supply
+            estimatedMinutes: 30
+            description: Introduce money functions, supply, and Keynesian money demand.
+          - id: macro-interest-bonds-liquidity-trap
+            title: Interest rates, bond prices, and the liquidity trap
+            resourceType: note
+            resourceId: macro-interest-bonds-liquidity-trap
+            estimatedMinutes: 30
+            description: Connect asset prices, liquidity preference, and policy limits.
+          - id: macro-is-lm
+            title: The IS-LM model
+            resourceType: note
+            resourceId: macro-is-lm
+            estimatedMinutes: 35
+            description: Derive product-market and money-market equilibrium.
+          - id: macro-closed-economy-policy
+            title: Fiscal and monetary policy in the closed economy
+            resourceType: note
+            resourceId: macro-closed-economy-policy
+            estimatedMinutes: 30
+            description: Compare policy transmission and crowding-out effects.
+          - id: macro-money-islm-check
+            title: Money, interest, and IS-LM practice
+            resourceType: quiz
+            resourceId: quiz-macro-money-islm
+            estimatedMinutes: 12
+            description: Check the core money-market and IS-LM relationships.
+      - id: macro-adas
+        order: 6
+        title: Aggregate Demand, Aggregate Supply, and Equilibrium
+        summary: Build the AD-AS framework and compare Keynesian and classical adjustment through output, prices, wages, and capacity.
+        estimatedMinutes: 150
+        outcomes:
+          - Explain the derivation and shifts of aggregate demand.
+          - Describe short-run and long-run aggregate supply.
+          - Compare Keynesian and classical output adjustment.
+        lessons:
+          - id: macro-aggregate-demand
+            title: Aggregate demand and its derivation
+            resourceType: note
+            resourceId: macro-aggregate-demand
+            estimatedMinutes: 30
+            description: Connect the price level with equilibrium output and spending.
+          - id: macro-aggregate-supply
+            title: Aggregate supply and output adjustment
+            resourceType: note
+            resourceId: macro-aggregate-supply
+            estimatedMinutes: 30
+            description: Explain capacity, costs, productivity, and supply shifts.
+          - id: macro-wage-rigidity-labour-market
+            title: Wage rigidity, labour supply, and unemployment
+            resourceType: note
+            resourceId: macro-wage-rigidity-labour-market
+            estimatedMinutes: 30
+            description: Relate wage adjustment and labour-market conditions to output.
+          - id: macro-keynes-classics
+            title: Keynesian and classical aggregate supply
+            resourceType: note
+            resourceId: macro-keynes-classics
+            estimatedMinutes: 30
+            description: Compare output and price responses across capacity ranges.
+          - id: macro-adas-check
+            title: Aggregate demand and supply practice
+            resourceType: quiz
+            resourceId: quiz-macro-adas
+            estimatedMinutes: 12
+            description: Practise AD-AS shifts, capacity, and supply reasoning.
+      - id: macro-inflation-cycles
+        order: 7
+        title: Inflation, Unemployment, and Business Cycles
+        summary: Diagnose price instability, labour-market slack, expectations, and cyclical fluctuations before choosing stabilisation tools.
+        estimatedMinutes: 180
+        outcomes:
+          - Distinguish inflation, deflation, and stagflation.
+          - Classify unemployment and interpret the Phillips curve.
+          - Identify business-cycle phases and stabilisation options.
+        lessons:
+          - id: macro-inflation
+            title: "Inflation: concepts, causes, measurement, and effects"
+            resourceType: note
+            resourceId: macro-inflation
+            estimatedMinutes: 35
+            description: Explain inflation types, measurement, effects, and causes.
+          - id: macro-unemployment
+            title: "Unemployment: types, costs, and the natural rate"
+            resourceType: note
+            resourceId: macro-unemployment
+            estimatedMinutes: 30
+            description: Classify unemployment and connect it with output and policy.
+          - id: macro-phillips-expectations
+            title: Phillips curve and expectations
+            resourceType: note
+            resourceId: macro-phillips-expectations
+            estimatedMinutes: 35
+            description: Introduce short-run trade-offs, expectations, and long-run limits.
+          - id: macro-business-cycles
+            title: Business cycles and economic fluctuations
+            resourceType: note
+            resourceId: macro-business-cycles
+            estimatedMinutes: 30
+            description: Identify phases, shocks, and business consequences.
+          - id: macro-stabilisation
+            title: Macroeconomic stabilisation and anti-inflation measures
+            resourceType: note
+            resourceId: macro-stabilisation
+            estimatedMinutes: 30
+            description: Compare demand-management and supply-side responses.
+          - id: macro-inflation-cycles-blog
+            title: Inflation explained
+            resourceType: blog
+            resourceId: blog-inflation-explained
+            estimatedMinutes: 10
+            description: Reinforce inflation measurement, causes, and household effects.
+          - id: macro-inflation-cycles-check
+            title: Inflation, unemployment, and cycles practice
+            resourceType: quiz
+            resourceId: quiz-macro-inflation-cycles
+            estimatedMinutes: 12
+            description: Check the links among prices, jobs, expectations, and cycles.
+      - id: macro-banking
+        order: 8
+        title: Banking, Monetary Policy, and Financial Innovation
+        summary: Study banks, central banking, monetary-policy transmission, financial inclusion, fintech, and digital money.
+        estimatedMinutes: 170
+        outcomes:
+          - Explain commercial-bank and central-bank functions.
+          - Compare monetary-policy objectives, tools, and transmission.
+          - Assess inclusion and innovation alongside financial risks.
+        lessons:
+          - id: macro-banking-central-bank
+            title: Banking and central banking
+            resourceType: note
+            resourceId: macro-banking-central-bank
+            estimatedMinutes: 35
+            description: Introduce deposit creation, banking functions, and central-bank roles.
+          - id: macro-monetary-policy
+            title: "Monetary policy: objectives and instruments"
+            resourceType: note
+            resourceId: macro-monetary-policy
+            estimatedMinutes: 35
+            description: Explain monetary-policy goals, tools, and transmission.
+          - id: macro-financial-markets-inclusion
+            title: Financial and capital markets with financial inclusion
+            resourceType: note
+            resourceId: macro-financial-markets-inclusion
+            estimatedMinutes: 30
+            description: Connect market access with saving, payments, and investment.
+          - id: macro-fintech-digital-money
+            title: Fintech, digital money, and decentralised finance
+            resourceType: note
+            resourceId: macro-fintech-digital-money
+            estimatedMinutes: 30
+            description: Introduce financial innovation and its oversight challenges.
+          - id: macro-monetary-exchange-links
+            title: Money, interest, and exchange-rate links
+            resourceType: note
+            resourceId: macro-monetary-exchange-links
+            estimatedMinutes: 25
+            description: Link monetary conditions with capital flows and currency pressure.
+          - id: macro-banking-check
+            title: Banking and monetary policy practice
+            resourceType: quiz
+            resourceId: quiz-macro-banking
+            estimatedMinutes: 12
+            description: Review banking functions, policy tools, and financial inclusion.
+      - id: macro-fiscal
+        order: 9
+        title: Fiscal Policy and Government Finance
+        summary: Organise public revenue, spending, budgets, deficits, fiscal policy, federal finance, and partnerships.
+        estimatedMinutes: 150
+        outcomes:
+          - Classify public revenue and expenditure.
+          - Explain budgets, deficits, and fiscal-policy instruments.
+          - Evaluate coordination across government levels and public–private projects.
+        lessons:
+          - id: macro-public-revenue
+            title: Public revenue and government expenditure
+            resourceType: note
+            resourceId: macro-public-revenue
+            estimatedMinutes: 30
+            description: Introduce government receipts, spending, and macroeconomic roles.
+          - id: macro-budget
+            title: Government budget and deficit financing
+            resourceType: note
+            resourceId: macro-budget
+            estimatedMinutes: 30
+            description: Read budgets and compare deficit-financing methods.
+          - id: macro-fiscal-policy
+            title: Fiscal policy and fiscal multipliers
+            resourceType: note
+            resourceId: macro-fiscal-policy
+            estimatedMinutes: 35
+            description: Explain fiscal stance, automatic stabilisers, and multiplier limits.
+          - id: macro-fiscal-federalism-ppp
+            title: Fiscal federalism and public–private partnerships
+            resourceType: note
+            resourceId: macro-fiscal-federalism-ppp
+            estimatedMinutes: 30
+            description: Introduce intergovernmental finance and partnership design.
+          - id: macro-fiscal-check
+            title: Fiscal policy and government finance practice
+            resourceType: quiz
+            resourceId: quiz-macro-fiscal
+            estimatedMinutes: 12
+            description: Check public finance, budgets, deficits, and stabilisers.
+      - id: macro-open-growth
+        order: 10
+        title: Open Economy, Growth, Development, and Contemporary Issues
+        summary: Connect external accounts, exchange rates, global integration, growth, development, poverty, inequality, and sustainability.
+        estimatedMinutes: 190
+        outcomes:
+          - Interpret balance-of-payments accounts and exchange-rate regimes.
+          - Compare policy effects in a simple open-economy model.
+          - Distinguish growth from development and assess contemporary issues.
+        lessons:
+          - id: macro-balance-payments
+            title: Balance of payments and external accounts
+            resourceType: note
+            resourceId: macro-balance-payments
+            estimatedMinutes: 30
+            description: Organise external trade, income, transfer, and financial flows.
+          - id: macro-exchange-rates
+            title: Exchange rates and exchange-rate regimes
+            resourceType: note
+            resourceId: macro-exchange-rates
+            estimatedMinutes: 30
+            description: Explain currency demand, supply, and fixed or flexible regimes.
+          - id: macro-mundell-fleming
+            title: The Mundell–Fleming open-economy model
+            resourceType: note
+            resourceId: macro-mundell-fleming
+            estimatedMinutes: 35
+            description: Compare fiscal and monetary policy under alternative exchange-rate regimes.
+          - id: macro-globalization-fdi
+            title: Globalisation, foreign direct investment, and the global economy
+            resourceType: note
+            resourceId: macro-globalization-fdi
+            estimatedMinutes: 30
+            description: Assess integration, capital flows, and business exposure.
+          - id: macro-growth-development-issues
+            title: Economic growth, development, poverty, and inequality
+            resourceType: note
+            resourceId: macro-growth-development-issues
+            estimatedMinutes: 40
+            description: Connect productive capacity with wellbeing, distribution, and sustainability.
+          - id: macro-open-growth-check
+            title: Open economy and global economy practice
+            resourceType: quiz
+            resourceId: quiz-macro-open-economy
+            estimatedMinutes: 12
+            description: Review external accounts, exchange rates, and development.
