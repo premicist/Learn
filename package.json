@@ -12,7 +12,7 @@
     "sync-admin": "node scripts/sync-admin.mjs",
     "build-sitemap": "node scripts/build-sitemap.mjs",
     "validate-content": "node scripts/validate-content.mjs",
-    "check": "npm run validate-content && tsc -b && npm run lint",
+    "check": "npm run build-content && tsc -b && npm run lint",
     "build": "npm run sync-admin && npm run build-sitemap && npm run build-content && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
