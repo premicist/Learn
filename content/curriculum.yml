@@ -541,3 +541,364 @@ curricula:
             resourceId: quiz-sociology-urbanization
             estimatedMinutes: 12
             description: Review the meanings, drivers, impacts, and opportunities of urbanisation.
+
+  - id: microeconomics-guided
+    subjectId: microeconomics
+    title: Your guided Microeconomics path
+    description: Follow a coherent sequence from choice and market analysis to consumer behaviour, production, pricing, and resource markets.
+    syllabusNote: A structured Microeconomics study path.
+    units:
+      - id: micro-foundations
+        order: 1
+        title: Introduction to Microeconomics
+        summary: Build the language of scarcity, choice, economic reasoning, and business decision-making.
+        estimatedMinutes: 120
+        outcomes:
+          - Explain the meaning, scope, and uses of microeconomics.
+          - Distinguish positive and normative economic statements.
+          - Apply scarcity, opportunity cost, incentives, and marginal reasoning.
+        lessons:
+          - id: micro-introduction
+            title: "Microeconomics: scope and method"
+            resourceType: note
+            resourceId: micro-introduction
+            estimatedMinutes: 25
+            description: Understand what microeconomics studies and how it supports resource allocation and business decisions.
+          - id: micro-positive-normative
+            title: Positive, normative, micro, and macro economics
+            resourceType: note
+            resourceId: micro-positive-normative
+            estimatedMinutes: 25
+            description: Separate evidence, explanation, evaluation, and recommendation in economic reasoning.
+          - id: micro-scarcity-choice
+            title: Scarcity, alternatives, and choice
+            resourceType: note
+            resourceId: micro-scarcity-choice
+            estimatedMinutes: 25
+            description: Use scarcity, opportunity cost, incentives, and efficiency to explain decisions.
+          - id: micro-foundations-check
+            title: Microeconomics foundations practice
+            resourceType: quiz
+            resourceId: quiz-micro-foundations
+            estimatedMinutes: 12
+            description: Check the core concepts before moving to demand and supply.
+      - id: micro-demand-supply
+        order: 2
+        title: Demand, Supply, Equilibrium, and Elasticity
+        summary: Move from demand and supply functions to equilibrium, government policy, efficiency, and elasticity applications.
+        estimatedMinutes: 220
+        outcomes:
+          - Explain demand and supply functions and distinguish shifts from movements.
+          - Determine market equilibrium and evaluate taxes, subsidies, and price controls.
+          - Calculate and interpret price, income, cross, advertising, and supply elasticities.
+        lessons:
+          - id: micro-demand-function
+            title: Demand function and the law of demand
+            resourceType: note
+            resourceId: micro-demand-function
+            estimatedMinutes: 30
+            description: Define demand and relate quantity demanded to price, income, tastes, and related goods.
+          - id: micro-supply-function
+            title: Supply function and the law of supply
+            resourceType: note
+            resourceId: micro-supply-function
+            estimatedMinutes: 30
+            description: Explain supply and the producer-side conditions that shape it.
+          - id: micro-equilibrium-policy
+            title: Market equilibrium and government policy
+            resourceType: note
+            resourceId: micro-equilibrium-policy
+            estimatedMinutes: 35
+            description: Find equilibrium and examine taxes, subsidies, price controls, and efficiency.
+          - id: micro-price-elasticity
+            title: Price elasticity of demand
+            resourceType: note
+            resourceId: note-elasticity
+            estimatedMinutes: 30
+            description: Measure responsiveness to price and connect elasticity with revenue and decisions.
+          - id: micro-elasticity-applications
+            title: Other elasticities and business applications
+            resourceType: note
+            resourceId: micro-elasticity-applications
+            estimatedMinutes: 30
+            description: Extend elasticity analysis to income, cross, advertising, and supply responses.
+          - id: micro-demand-supply-check
+            title: Demand, supply, and elasticity practice
+            resourceType: quiz
+            resourceId: quiz-micro-demand-supply
+            estimatedMinutes: 15
+            description: Practise curve shifts, policy effects, and elasticity interpretation.
+          - id: micro-elasticity-check
+            title: Price elasticity check
+            resourceType: quiz
+            resourceId: quiz-elasticity
+            estimatedMinutes: 10
+            description: Reinforce the measurement and classification of price elasticity.
+      - id: micro-consumer-cardinal
+        order: 3
+        title: "Consumer Behaviour I: Utility and Risk"
+        summary: Introduce cardinal utility, consumer equilibrium, and decision-making under risk.
+        estimatedMinutes: 120
+        outcomes:
+          - Explain total utility, marginal utility, and diminishing marginal utility.
+          - Apply the equi-marginal principle to a simple consumer choice.
+          - Distinguish risk from uncertainty and compare basic risk preferences.
+        lessons:
+          - id: micro-cardinal-utility
+            title: Cardinal utility and consumer equilibrium
+            resourceType: note
+            resourceId: micro-cardinal-utility
+            estimatedMinutes: 35
+            description: Use total and marginal utility to explain consumer choice under a budget constraint.
+          - id: micro-risk-management
+            title: Consumer choice under risk
+            resourceType: note
+            resourceId: micro-risk-management
+            estimatedMinutes: 30
+            description: Introduce expected outcomes, risk preferences, insurance, and diversification.
+      - id: micro-consumer-ordinal
+        order: 4
+        title: "Consumer Behaviour II: Preferences and Demand"
+        summary: Combine indifference curves and budget lines to explain equilibrium and the decomposition of price effects.
+        estimatedMinutes: 170
+        outcomes:
+          - Explain ordinal preferences, indifference curves, and marginal rate of substitution.
+          - Use budget lines to locate consumer equilibrium.
+          - Distinguish income and substitution effects for normal and inferior goods.
+        lessons:
+          - id: micro-indifference-curves
+            title: Indifference curves and marginal rate of substitution
+            resourceType: note
+            resourceId: micro-indifference-curves
+            estimatedMinutes: 35
+            description: Understand ordinal preferences and the properties of indifference curves.
+          - id: micro-budget-equilibrium
+            title: Budget line and consumer equilibrium
+            resourceType: note
+            resourceId: micro-budget-equilibrium
+            estimatedMinutes: 35
+            description: Combine preferences, income, and prices to identify an attainable optimum.
+          - id: micro-price-income-substitution
+            title: Income, substitution, and price effects
+            resourceType: note
+            resourceId: micro-price-income-substitution
+            estimatedMinutes: 40
+            description: Decompose a price change and connect it to normal and inferior goods.
+          - id: micro-consumer-check
+            title: Consumer behaviour practice
+            resourceType: quiz
+            resourceId: quiz-micro-consumer
+            estimatedMinutes: 15
+            description: Check utility, indifference curves, and income and substitution effects.
+      - id: micro-production
+        order: 5
+        title: Production and Input Choice
+        summary: Study production functions, variable proportions, input combinations, and returns to scale.
+        estimatedMinutes: 210
+        outcomes:
+          - Explain production functions and the short-run and long-run distinction.
+          - Interpret total, average, and marginal product under variable proportions.
+          - Use isoquant, isocost, and returns-to-scale reasoning for input decisions.
+        lessons:
+          - id: micro-production-function
+            title: Production function and Cobb-Douglas form
+            resourceType: note
+            resourceId: micro-production-function
+            estimatedMinutes: 35
+            description: Introduce production functions, inputs, output, and the Cobb-Douglas form.
+          - id: micro-variable-proportions
+            title: Law of variable proportions
+            resourceType: note
+            resourceId: micro-variable-proportions
+            estimatedMinutes: 35
+            description: Trace output and marginal product as a variable input increases.
+          - id: micro-isoquant-isocost
+            title: Isoquants, isocosts, and input choice
+            resourceType: note
+            resourceId: micro-isoquant-isocost
+            estimatedMinutes: 40
+            description: Find least-cost input combinations and distinguish output and cost objectives.
+          - id: micro-returns-to-scale
+            title: Returns to scale
+            resourceType: note
+            resourceId: micro-returns-to-scale
+            estimatedMinutes: 30
+            description: Compare increasing, constant, and decreasing returns when all inputs change.
+          - id: micro-production-check
+            title: Production and input-choice practice
+            resourceType: quiz
+            resourceId: quiz-micro-production
+            estimatedMinutes: 15
+            description: Practise product measures, isoquants, and economic cost.
+      - id: micro-costs
+        order: 6
+        title: Cost Analysis, Scale, and Break-Even
+        summary: Build cost concepts and curves before using scale, scope, and break-even reasoning.
+        estimatedMinutes: 170
+        outcomes:
+          - Distinguish explicit, implicit, accounting, economic, fixed, and variable costs.
+          - Interpret short-run and long-run average and marginal cost curves.
+          - Explain economies of scale, economies of scope, and break-even output.
+        lessons:
+          - id: micro-cost-concepts
+            title: Cost concepts and opportunity cost
+            resourceType: note
+            resourceId: micro-cost-concepts
+            estimatedMinutes: 35
+            description: Organise the main cost categories and the importance of the time period.
+          - id: micro-cost-curves
+            title: Short-run and long-run cost curves
+            resourceType: note
+            resourceId: micro-cost-curves
+            estimatedMinutes: 35
+            description: Read average and marginal cost curves and connect them to firm decisions.
+          - id: micro-scale-scope-breakeven
+            title: Economies of scale, scope, and break-even
+            resourceType: note
+            resourceId: micro-scale-scope-breakeven
+            estimatedMinutes: 35
+            description: Explain scale and scope economies and introduce break-even analysis.
+          - id: micro-cost-check
+            title: Cost analysis practice
+            resourceType: quiz
+            resourceId: quiz-micro-costs
+            estimatedMinutes: 15
+            description: Revisit product and cost relationships before studying market structure.
+      - id: micro-market-structures
+        order: 7
+        title: Market Structures
+        summary: Compare competition, monopoly, differentiated competition, duopoly, oligopoly, and cartels.
+        estimatedMinutes: 260
+        outcomes:
+          - Classify markets using sellers, products, entry barriers, information, and price control.
+          - Determine short-run and long-run equilibrium in major market-structure models.
+          - Explain strategic interdependence, cartels, and the welfare effects of market power.
+        lessons:
+          - id: micro-market-structure
+            title: Market structure and firm objectives
+            resourceType: note
+            resourceId: micro-market-structure
+            estimatedMinutes: 30
+            description: Classify market structures and introduce profit maximisation and alternative objectives.
+          - id: micro-perfect-competition
+            title: Perfect competition
+            resourceType: note
+            resourceId: micro-perfect-competition
+            estimatedMinutes: 40
+            description: Explain short-run and long-run equilibrium and the supply logic of competitive firms.
+          - id: micro-monopoly
+            title: Monopoly
+            resourceType: note
+            resourceId: micro-monopoly
+            estimatedMinutes: 35
+            description: Use demand, revenue, and cost to explain monopoly equilibrium and market power.
+          - id: micro-monopolistic-competition
+            title: Monopolistic competition and selling cost
+            resourceType: note
+            resourceId: micro-monopolistic-competition
+            estimatedMinutes: 35
+            description: Study product differentiation, long-run adjustment, selling cost, and advertising.
+          - id: micro-oligopoly-cartel
+            title: Duopoly, oligopoly, and cartels
+            resourceType: note
+            resourceId: micro-oligopoly-cartel
+            estimatedMinutes: 35
+            description: Introduce strategic interdependence, cartel incentives, and competition concerns.
+          - id: micro-markets-check
+            title: Market structure practice
+            resourceType: quiz
+            resourceId: quiz-micro-markets
+            estimatedMinutes: 15
+            description: Check the assumptions and equilibrium logic of major market structures.
+      - id: micro-pricing
+        order: 8
+        title: Pricing Techniques
+        summary: Apply market-power and cost concepts to practical pricing strategies and business decisions.
+        estimatedMinutes: 250
+        outcomes:
+          - Explain price discrimination and the conditions that support it.
+          - Compare mark-up, cost-plus, incremental, transfer, peak-load, and two-part pricing.
+          - Distinguish skimming, penetration, and predatory pricing strategies.
+        lessons:
+          - id: micro-price-discrimination
+            title: Price discrimination
+            resourceType: note
+            resourceId: micro-price-discrimination
+            estimatedMinutes: 35
+            description: Identify forms of price discrimination, conditions, and possible effects.
+          - id: micro-markup-pricing
+            title: Mark-up and cost-plus pricing
+            resourceType: note
+            resourceId: micro-markup-pricing
+            estimatedMinutes: 30
+            description: Introduce cost-based pricing and its limits in competitive markets.
+          - id: micro-incremental-transfer-pricing
+            title: Incremental cost and transfer pricing
+            resourceType: note
+            resourceId: micro-incremental-transfer-pricing
+            estimatedMinutes: 35
+            description: Use incremental cost and transfer pricing for internal and short-run decisions.
+          - id: micro-peak-load-two-part-pricing
+            title: Peak-load and two-part pricing
+            resourceType: note
+            resourceId: micro-peak-load-two-part-pricing
+            estimatedMinutes: 35
+            description: Explore pricing that responds to timing, capacity, access, and usage.
+          - id: micro-skimming-penetration-pricing
+            title: Skimming, penetration, and predatory pricing
+            resourceType: note
+            resourceId: micro-skimming-penetration-pricing
+            estimatedMinutes: 35
+            description: Compare launch-pricing strategies and the analysis of predatory pricing.
+          - id: micro-pricing-check
+            title: Pricing techniques practice
+            resourceType: quiz
+            resourceId: quiz-micro-pricing
+            estimatedMinutes: 15
+            description: Check practical pricing concepts and strategy selection.
+      - id: micro-resource-markets
+        order: 9
+        title: Fundamentals of Resource Markets
+        summary: Study rent, wages, work and leisure, interest, and profit as returns to scarce resources.
+        estimatedMinutes: 220
+        outcomes:
+          - Explain rent and the derived demand for productive resources.
+          - Analyse wage determination, labour supply, wage differentials, and minimum wages.
+          - Distinguish interest-rate differentials and accounting from economic profit.
+        lessons:
+          - id: micro-rent
+            title: Rent and the resource market
+            resourceType: note
+            resourceId: micro-rent
+            estimatedMinutes: 30
+            description: Introduce rent, economic rent, resource scarcity, and derived demand.
+          - id: micro-wage-determination
+            title: Wage determination and labour markets
+            resourceType: note
+            resourceId: micro-wage-determination
+            estimatedMinutes: 40
+            description: Study labour demand, unions, minimum wages, pay, and wage differentials.
+          - id: micro-work-leisure
+            title: Choice between work and leisure
+            resourceType: note
+            resourceId: micro-work-leisure
+            estimatedMinutes: 30
+            description: Use a labour-leisure model to explain the income and substitution effects of wages.
+          - id: micro-interest-rates
+            title: Interest rates and differentials
+            resourceType: note
+            resourceId: micro-interest-rates
+            estimatedMinutes: 30
+            description: Explain interest as a return to capital and why rates differ across decisions.
+          - id: micro-profit
+            title: Accounting profit and economic profit
+            resourceType: note
+            resourceId: micro-profit
+            estimatedMinutes: 30
+            description: Distinguish accounting and economic profit and connect profit with resource allocation.
+          - id: micro-resources-check
+            title: Resource markets practice
+            resourceType: quiz
+            resourceId: quiz-micro-resources
+            estimatedMinutes: 15
+            description: Review resource rewards, labour markets, interest, and profit.

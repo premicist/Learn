@@ -31,7 +31,9 @@ subjects:
     title: Microeconomics
     description: Consumer theory, production, market structures, and welfare economics.
     color: "#16a34a"
-    featured: []
+    featured:
+      - type: note
+        id: micro-introduction
   - id: macroeconomics
     levelId: bachelors
     title: Macroeconomics
