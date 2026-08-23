@@ -29,12 +29,14 @@ function resourcePath(lesson: CurriculumLesson) {
 function UnitContext({ curriculum, currentResourceType, currentResourceId, subjectTitle }: UnitContextProps) {
   const units = [...curriculum.units].sort((a, b) => a.order - b.order)
   const sequence = units.flatMap((unit) => unit.lessons.map((lesson) => ({ unit, lesson })))
-  const currentIndex = sequence.findIndex(({ lesson }) => lesson.resourceType === currentResourceType && lesson.resourceId === currentResourceId)
-  if (currentIndex < 0) return null
+  const currentPathIndex = sequence.findIndex(({ lesson }) => lesson.resourceType === currentResourceType && lesson.resourceId === currentResourceId)
+  if (currentPathIndex < 0) return null
 
-  const current = sequence[currentIndex]
-  const previous = sequence[currentIndex - 1]
-  const next = sequence[currentIndex + 1]
+  const current = sequence[currentPathIndex]
+  const sameTypeSequence = sequence.filter(({ lesson }) => lesson.resourceType === currentResourceType)
+  const currentIndex = sameTypeSequence.findIndex(({ lesson }) => lesson.resourceType === currentResourceType && lesson.resourceId === currentResourceId)
+  const previous = sameTypeSequence[currentIndex - 1]
+  const next = sameTypeSequence[currentIndex + 1]
 
   return (
     <>
@@ -45,7 +47,7 @@ function UnitContext({ curriculum, currentResourceType, currentResourceId, subje
             <h2 id="unit-context-heading">Unit {current.unit.order}: {current.unit.title}</h2>
             <p>{current.unit.summary}</p>
           </div>
-          <span className="unit-context__count">{currentIndex + 1} of {sequence.length} in path</span>
+          <span className="unit-context__count">Unit {current.unit.order} · {current.unit.lessons.length} resources</span>
         </div>
         <div className="unit-context__lessons" aria-label={`Lessons in Unit ${current.unit.order}`}>
           {current.unit.lessons.map((lesson, lessonIndex) => {
@@ -76,7 +78,7 @@ function UnitContext({ curriculum, currentResourceType, currentResourceId, subje
               <p className="eyebrow">Keep learning</p>
               <h2 id="unit-sequence-heading">More in {subjectTitle}</h2>
             </div>
-            <span className="unit-sequence__position">Topic {currentIndex + 1} of {sequence.length}</span>
+            <span className="unit-sequence__position">{resourceLabels[currentResourceType]} {currentIndex + 1} of {sameTypeSequence.length}</span>
           </div>
           <div className="related-content__grid">
             {next && (

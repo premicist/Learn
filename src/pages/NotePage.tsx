@@ -5,6 +5,7 @@ import NoteMarkdown from '../components/NoteMarkdown'
 import Seo from '../components/Seo'
 import { getCurriculumBySubject } from '../data/curriculum'
 import UnitContext from '../components/UnitContext'
+import NoteUnitNavigator from '../components/NoteUnitNavigator'
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr)
@@ -42,6 +43,7 @@ function NotePage() {
   const subject = getSubjectById(note.subjectId)
   const curriculum = getCurriculumBySubject(note.subjectId)
   const headings = getHeadings(note.body)
+  const noteUnit = curriculum?.units.find((unit) => unit.lessons.some((lesson) => lesson.resourceType === 'note' && lesson.resourceId === note.id))
   const relatedNotes = notes
     .filter((item) => item.subjectId === note.subjectId && item.id !== note.id)
     .slice(0, 3)
@@ -67,7 +69,9 @@ function NotePage() {
         <h1>{note.title}</h1>
         <p className="note-page__summary">{note.summary}</p>
 
-        {headings.length > 0 && (
+        {noteUnit && headings.length > 0 && <NoteUnitNavigator unit={noteUnit} headings={headings} />}
+
+        {!noteUnit && headings.length > 0 && (
           <nav className="table-of-contents" aria-label="On this page">
             <strong>On this page</strong>
             <ol>
