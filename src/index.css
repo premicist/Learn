@@ -1335,3 +1335,51 @@ h2 {
   section,
   .note-page { border: 0; box-shadow: none; }
 }
+
+.move-to-top {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 3.25rem;
+  min-height: 3rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--teal-deep);
+  border-radius: 999px;
+  background: var(--teal);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(18, 42, 58, 0.22);
+  font: 700 0.78rem/1 var(--font-mono);
+  letter-spacing: 0.04em;
+  transition: transform 160ms ease-out, background 160ms ease-out, box-shadow 160ms ease-out;
+}
+
+.move-to-top:hover {
+  transform: translateY(-2px);
+  background: var(--teal-deep);
+  box-shadow: 0 10px 24px rgba(18, 42, 58, 0.28);
+}
+
+.move-to-top:active { transform: translateY(0) scale(0.97); }
+.move-to-top span[aria-hidden="true"] { font-size: 1.1rem; line-height: 0.8; }
+
+@media (max-width: 480px) {
+  .move-to-top {
+    right: 1rem;
+    bottom: 1rem;
+    min-width: 3rem;
+    min-height: 3rem;
+    padding: 0.65rem;
+    justify-content: center;
+  }
+  .move-to-top span:not([aria-hidden="true"]) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .move-to-top { transition: none; }
+  .move-to-top:hover,
+  .move-to-top:active { transform: none; }
+}

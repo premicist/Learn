@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import MoveToTop from './components/MoveToTop'
 
 const Home = lazy(() => import('./pages/Home'))
 const Subjects = lazy(() => import('./pages/Subjects'))
@@ -39,6 +40,7 @@ function App() {
         </Suspense>
       </main>
       <Footer />
+      <MoveToTop />
     </>
   )
 }
