@@ -1363,3 +1363,476 @@ curricula:
             resourceId: quiz-macro-open-economy
             estimatedMinutes: 12
             description: Review external accounts, exchange rates, and development.
+
+  - id: managerial-economics-guided
+    subjectId: managerial-economics
+    title: Your guided Managerial Economics path
+    description: Apply economic reasoning to firms, demand, forecasting, production, costs, pricing, strategy, and public policy.
+    syllabusNote: A structured Managerial Economics study path.
+    units:
+      - id: managerial-foundations
+        order: 1
+        title: Foundations of Managerial Economics and Decision Tools
+        summary: Build the language of scarcity, opportunity cost, marginal reasoning, profit, optimisation, and business analysis.
+        estimatedMinutes: 150
+        outcomes:
+          - Explain the scope and practical uses of Managerial Economics.
+          - Apply opportunity-cost, marginal, incremental, and optimisation reasoning.
+          - Distinguish positive analysis, normative judgement, and economic profit.
+        lessons:
+          - id: managerial-introduction
+            title: Managerial Economics scope and use
+            resourceType: note
+            resourceId: managerial-introduction
+            estimatedMinutes: 25
+            description: Introduce economic reasoning for business decisions under constraints.
+          - id: managerial-marginal-analysis
+            title: Marginal analysis in decision-making
+            resourceType: note
+            resourceId: note-marginal-analysis
+            estimatedMinutes: 30
+            description: Compare marginal benefits, marginal costs, and incremental alternatives.
+          - id: managerial-opportunity-cost
+            title: Scarcity, opportunity cost, and the production possibility curve
+            resourceType: note
+            resourceId: managerial-opportunity-cost
+            estimatedMinutes: 25
+            description: Frame resource allocation through scarcity and trade-offs.
+          - id: managerial-profit-optimisation
+            title: Profit, economic profit, and optimisation
+            resourceType: note
+            resourceId: managerial-profit-optimisation
+            estimatedMinutes: 30
+            description: Distinguish profit measures and constrained optimisation.
+          - id: managerial-positive-normative
+            title: Positive and normative business analysis
+            resourceType: note
+            resourceId: managerial-positive-normative
+            estimatedMinutes: 20
+            description: Separate evidence, assumptions, values, and recommendations.
+          - id: managerial-foundations-check
+            title: Managerial Economics foundations practice
+            resourceType: quiz
+            resourceId: quiz-managerial-foundations
+            estimatedMinutes: 12
+            description: Check the core decision tools before studying firms and markets.
+      - id: managerial-firms
+        order: 2
+        title: Firms, Managers, and Organisational Goals
+        summary: Compare profit, value, sales, growth, managerial discretion, agency, and behavioural views of the firm.
+        estimatedMinutes: 130
+        outcomes:
+          - Compare common objectives of firms and managers.
+          - Explain profit and value maximisation across time and risk.
+          - Identify agency conflicts and behavioural decision limits.
+        lessons:
+          - id: managerial-firm-goals
+            title: The firm and its objectives
+            resourceType: note
+            resourceId: managerial-firm-goals
+            estimatedMinutes: 25
+            description: Introduce the firm and the objectives that guide decisions.
+          - id: managerial-profit-value
+            title: Profit maximisation and value maximisation
+            resourceType: note
+            resourceId: managerial-profit-value
+            estimatedMinutes: 30
+            description: Compare current profit with long-run value and risk.
+          - id: managerial-sales-growth
+            title: Sales revenue, growth, and managerial discretion
+            resourceType: note
+            resourceId: managerial-sales-growth
+            estimatedMinutes: 30
+            description: Examine revenue, growth, and management objectives.
+          - id: managerial-agency-behaviour
+            title: Agency relationships and behavioural theories of the firm
+            resourceType: note
+            resourceId: managerial-agency-behaviour
+            estimatedMinutes: 30
+            description: Explain incentives, information, routines, and organisational behaviour.
+          - id: managerial-firms-check
+            title: Firms, managers, and objectives practice
+            resourceType: quiz
+            resourceId: quiz-managerial-firms
+            estimatedMinutes: 12
+            description: Review firm objectives and agency relationships.
+      - id: managerial-demand-welfare
+        order: 3
+        title: Demand, Supply, Market Equilibrium, and Welfare
+        summary: Use market functions, elasticity, equilibrium, surplus, efficiency, and policy analysis for decisions.
+        estimatedMinutes: 170
+        outcomes:
+          - Interpret demand, supply, and elasticity relationships.
+          - Analyse equilibrium changes and market adjustment.
+          - Evaluate taxes, subsidies, price controls, trade, and efficiency.
+        lessons:
+          - id: managerial-demand-supply
+            title: Demand and supply for business decisions
+            resourceType: note
+            resourceId: managerial-demand-supply
+            estimatedMinutes: 30
+            description: Build demand and supply functions and interpret shifts.
+          - id: managerial-elasticity
+            title: Elasticity and revenue applications
+            resourceType: note
+            resourceId: managerial-elasticity
+            estimatedMinutes: 35
+            description: Apply price, income, cross, and promotional elasticity.
+          - id: managerial-market-equilibrium
+            title: Market equilibrium and market mechanism
+            resourceType: note
+            resourceId: managerial-market-equilibrium
+            estimatedMinutes: 30
+            description: Find equilibrium and analyse market shocks.
+          - id: managerial-efficiency-policy
+            title: Market efficiency, surplus, and policy effects
+            resourceType: note
+            resourceId: managerial-efficiency-policy
+            estimatedMinutes: 35
+            description: Evaluate surplus, efficiency, taxes, subsidies, and price controls.
+          - id: managerial-trade-applications
+            title: Trade and market decisions
+            resourceType: note
+            resourceId: managerial-trade-applications
+            estimatedMinutes: 25
+            description: Apply trade and sourcing reasoning to business choices.
+          - id: managerial-demand-welfare-check
+            title: Demand, equilibrium, and welfare practice
+            resourceType: quiz
+            resourceId: quiz-managerial-demand-welfare
+            estimatedMinutes: 12
+            description: Practise demand, elasticity, equilibrium, and policy effects.
+      - id: managerial-forecasting
+        order: 4
+        title: Demand Estimation and Forecasting
+        summary: Build practical forecasting skills using research, experiments, time series, indicators, and regression.
+        estimatedMinutes: 140
+        outcomes:
+          - Explain the purpose and limits of demand estimation.
+          - Compare qualitative and quantitative forecasting techniques.
+          - Interpret uncertainty, forecast error, and structural change.
+        lessons:
+          - id: managerial-demand-estimation
+            title: Demand estimation and marketing research
+            resourceType: note
+            resourceId: managerial-demand-estimation
+            estimatedMinutes: 30
+            description: Define the market and variables needed for demand estimation.
+          - id: managerial-qualitative-forecasting
+            title: Qualitative demand forecasting
+            resourceType: note
+            resourceId: managerial-qualitative-forecasting
+            estimatedMinutes: 30
+            description: Compare surveys, market experiments, and structured judgement.
+          - id: managerial-quantitative-forecasting
+            title: Quantitative demand forecasting
+            resourceType: note
+            resourceId: managerial-quantitative-forecasting
+            estimatedMinutes: 35
+            description: Introduce time series, smoothing, indicators, and regression.
+          - id: managerial-forecasting-limitations
+            title: Forecast accuracy, uncertainty, and limitations
+            resourceType: note
+            resourceId: managerial-forecasting-limitations
+            estimatedMinutes: 30
+            description: Use forecast error, scenarios, and monitoring responsibly.
+          - id: managerial-forecasting-check
+            title: Demand estimation and forecasting practice
+            resourceType: quiz
+            resourceId: quiz-managerial-forecasting
+            estimatedMinutes: 12
+            description: Review forecasting methods and limitations.
+      - id: managerial-consumer-risk
+        order: 5
+        title: Consumer Choice, Risk, and Information
+        summary: Analyse preferences, constraints, price effects, risk attitudes, and information problems in business markets.
+        estimatedMinutes: 160
+        outcomes:
+          - Use consumer-choice tools to explain demand responses.
+          - Distinguish income, substitution, and price effects.
+          - Explain risk, uncertainty, adverse selection, and moral hazard.
+        lessons:
+          - id: managerial-consumer-choice
+            title: Consumer behaviour and choice
+            resourceType: note
+            resourceId: managerial-consumer-choice
+            estimatedMinutes: 30
+            description: Introduce preferences, constraints, and consumer optimisation.
+          - id: managerial-indifference-budget
+            title: Indifference curves and budget constraints
+            resourceType: note
+            resourceId: managerial-indifference-budget
+            estimatedMinutes: 35
+            description: Use indifference curves and budget lines to locate choice.
+          - id: managerial-price-effects
+            title: Income, substitution, and price effects
+            resourceType: note
+            resourceId: managerial-price-effects
+            estimatedMinutes: 35
+            description: Decompose a price change for normal and inferior goods.
+          - id: managerial-risk-uncertainty
+            title: Risk and uncertainty in business decisions
+            resourceType: note
+            resourceId: managerial-risk-uncertainty
+            estimatedMinutes: 30
+            description: Frame business exposures and risk responses.
+          - id: managerial-information-asymmetry
+            title: Asymmetric information and incentives
+            resourceType: note
+            resourceId: managerial-information-asymmetry
+            estimatedMinutes: 30
+            description: Explain adverse selection, moral hazard, and agency problems.
+          - id: managerial-consumer-risk-check
+            title: Consumer choice, risk, and information practice
+            resourceType: quiz
+            resourceId: quiz-managerial-consumer-risk
+            estimatedMinutes: 12
+            description: Check preference, risk, and information concepts.
+      - id: managerial-production
+        order: 6
+        title: Production and Input Choice
+        summary: Study production functions, variable inputs, isoquants, isocosts, scale, scope, and learning.
+        estimatedMinutes: 170
+        outcomes:
+          - Explain production functions and time horizons.
+          - Interpret total, average, and marginal product.
+          - Choose efficient input combinations and evaluate scale and learning.
+        lessons:
+          - id: managerial-production-functions
+            title: Production functions and technology
+            resourceType: note
+            resourceId: managerial-production-functions
+            estimatedMinutes: 35
+            description: Introduce inputs, output, technology, and short-run or long-run choices.
+          - id: managerial-variable-inputs
+            title: One and two variable inputs
+            resourceType: note
+            resourceId: managerial-variable-inputs
+            estimatedMinutes: 35
+            description: Apply product measures and variable-proportion reasoning.
+          - id: managerial-isoquant-isocost
+            title: Isoquants, isocosts, and least-cost input choice
+            resourceType: note
+            resourceId: managerial-isoquant-isocost
+            estimatedMinutes: 35
+            description: Find cost-efficient combinations of inputs.
+          - id: managerial-returns-scope
+            title: Returns to scale and economies of scope
+            resourceType: note
+            resourceId: managerial-returns-scope
+            estimatedMinutes: 30
+            description: Distinguish scale effects from scope effects.
+          - id: managerial-learning-curve
+            title: Learning curves and productivity
+            resourceType: note
+            resourceId: managerial-learning-curve
+            estimatedMinutes: 25
+            description: Use learning effects in capacity and cost planning.
+          - id: managerial-production-check
+            title: Production and input choice practice
+            resourceType: quiz
+            resourceId: quiz-managerial-production
+            estimatedMinutes: 12
+            description: Review production functions, input choice, and learning.
+      - id: managerial-costs
+        order: 7
+        title: Cost Analysis and Break-Even Decisions
+        summary: Build cost curves, cost estimates, break-even analysis, and relevant-cost decisions.
+        estimatedMinutes: 160
+        outcomes:
+          - Distinguish major cost categories and time horizons.
+          - Interpret short-run and long-run cost relationships.
+          - Apply cost estimation, break-even, and incremental decision rules.
+        lessons:
+          - id: managerial-cost-concepts
+            title: Cost concepts for managerial decisions
+            resourceType: note
+            resourceId: managerial-cost-concepts
+            estimatedMinutes: 30
+            description: Organise explicit, implicit, fixed, variable, average, and marginal costs.
+          - id: managerial-cost-curves
+            title: Short-run and long-run cost curves
+            resourceType: note
+            resourceId: managerial-cost-curves
+            estimatedMinutes: 35
+            description: Read cost curves and connect them with productivity.
+          - id: managerial-cost-estimation
+            title: Empirical estimation of cost functions
+            resourceType: note
+            resourceId: managerial-cost-estimation
+            estimatedMinutes: 30
+            description: Use data and engineering methods to estimate costs.
+          - id: managerial-break-even
+            title: Break-even and contribution analysis
+            resourceType: note
+            resourceId: managerial-break-even
+            estimatedMinutes: 30
+            description: Connect price, variable cost, fixed cost, contribution, and output.
+          - id: managerial-relevant-cost
+            title: Relevant cost and short-run decisions
+            resourceType: note
+            resourceId: managerial-relevant-cost
+            estimatedMinutes: 30
+            description: Apply incremental, avoidable, and opportunity-cost reasoning.
+          - id: managerial-costs-check
+            title: Cost and break-even practice
+            resourceType: quiz
+            resourceId: quiz-managerial-costs
+            estimatedMinutes: 12
+            description: Check cost classifications and break-even decisions.
+      - id: managerial-markets
+        order: 8
+        title: Market Structures and Strategic Behaviour
+        summary: Compare competition, monopoly, differentiated markets, oligopoly, cartels, and strategic games.
+        estimatedMinutes: 190
+        outcomes:
+          - Classify markets and identify sources of market power.
+          - Compare pricing and output under major market structures.
+          - Use game theory for one-shot, repeated, and sequential choices.
+        lessons:
+          - id: managerial-market-structures
+            title: Market structure and competitive conditions
+            resourceType: note
+            resourceId: managerial-market-structures
+            estimatedMinutes: 30
+            description: Classify markets using sellers, products, entry, and information.
+          - id: managerial-competition-monopoly
+            title: Perfect competition and monopoly
+            resourceType: note
+            resourceId: managerial-competition-monopoly
+            estimatedMinutes: 40
+            description: Compare price-taking and market-power outcomes.
+          - id: managerial-monopolistic-competition
+            title: Monopolistic competition and product differentiation
+            resourceType: note
+            resourceId: managerial-monopolistic-competition
+            estimatedMinutes: 30
+            description: Explain differentiation, selling cost, and entry.
+          - id: managerial-oligopoly-pricing
+            title: Oligopoly, cartels, price leadership, and kinked demand
+            resourceType: note
+            resourceId: managerial-oligopoly-pricing
+            estimatedMinutes: 35
+            description: Introduce major oligopoly pricing models.
+          - id: managerial-game-theory
+            title: Game theory and payoff matrices
+            resourceType: note
+            resourceId: managerial-game-theory
+            estimatedMinutes: 30
+            description: Use payoffs, Nash equilibrium, and the prisoner’s dilemma.
+          - id: managerial-strategic-interaction
+            title: Repeated and multistage strategic interaction
+            resourceType: note
+            resourceId: managerial-strategic-interaction
+            estimatedMinutes: 30
+            description: Extend strategy analysis across time and decision stages.
+          - id: managerial-markets-check
+            title: Market structures and strategic behaviour practice
+            resourceType: quiz
+            resourceId: quiz-managerial-markets
+            estimatedMinutes: 12
+            description: Review competition, market power, and strategic interaction.
+      - id: managerial-pricing
+        order: 9
+        title: Pricing Practices and Strategy
+        summary: Apply cost-based, incremental, internal, multi-product, time-based, discriminatory, and value-based pricing.
+        estimatedMinutes: 190
+        outcomes:
+          - Compare cost-plus and incremental pricing decisions.
+          - Explain transfer, multiple-product, peak-load, and two-part pricing.
+          - Evaluate discrimination, dynamic, value-based, and predatory pricing.
+        lessons:
+          - id: managerial-cost-plus-markup
+            title: Cost-plus and mark-up pricing
+            resourceType: note
+            resourceId: managerial-cost-plus-markup
+            estimatedMinutes: 30
+            description: Introduce cost-based pricing and margin calculations.
+          - id: managerial-incremental-pricing
+            title: Incremental cost pricing
+            resourceType: note
+            resourceId: managerial-incremental-pricing
+            estimatedMinutes: 30
+            description: Use relevant cost for short-run pricing decisions.
+          - id: managerial-transfer-pricing
+            title: Transfer pricing
+            resourceType: note
+            resourceId: managerial-transfer-pricing
+            estimatedMinutes: 30
+            description: Align internal prices with coordination and incentives.
+          - id: managerial-multiple-product-pricing
+            title: Multiple-product and fixed-proportion pricing
+            resourceType: note
+            resourceId: managerial-multiple-product-pricing
+            estimatedMinutes: 30
+            description: Analyse product interactions, bundles, and joint costs.
+          - id: managerial-peak-load-two-part
+            title: Peak-load pricing and two-part tariffs
+            resourceType: note
+            resourceId: managerial-peak-load-two-part
+            estimatedMinutes: 30
+            description: Design access and usage charges under capacity pressure.
+          - id: managerial-price-discrimination-dynamic
+            title: Price discrimination, dynamic, and predatory pricing
+            resourceType: note
+            resourceId: managerial-price-discrimination-dynamic
+            estimatedMinutes: 35
+            description: Compare segmented, adaptive, value-based, and predatory strategies.
+          - id: managerial-pricing-check
+            title: Pricing practices and strategy practice
+            resourceType: quiz
+            resourceId: quiz-managerial-pricing
+            estimatedMinutes: 12
+            description: Review pricing methods and strategic constraints.
+      - id: managerial-market-failure
+        order: 10
+        title: Market Failure and Government Intervention
+        summary: Diagnose market failure and evaluate competition, environmental, information, and public-choice responses.
+        estimatedMinutes: 180
+        outcomes:
+          - Identify market power, externalities, public goods, common resources, and information failure.
+          - Compare regulation, taxes, subsidies, patents, standards, and competition policy.
+          - Evaluate regulatory trade-offs and government failure.
+        lessons:
+          - id: managerial-market-failure
+            title: Market failure and deadweight loss
+            resourceType: note
+            resourceId: managerial-market-failure
+            estimatedMinutes: 30
+            description: Introduce the main sources of market failure.
+          - id: managerial-externalities
+            title: Externalities and corrective policies
+            resourceType: note
+            resourceId: managerial-externalities
+            estimatedMinutes: 30
+            description: Evaluate taxes, subsidies, standards, permits, and rights.
+          - id: managerial-public-goods-common
+            title: Public goods and common-property resources
+            resourceType: note
+            resourceId: managerial-public-goods-common
+            estimatedMinutes: 30
+            description: Explain free-riding, overuse, and collective-action solutions.
+          - id: managerial-information-failure
+            title: Incomplete information and market quality
+            resourceType: note
+            resourceId: managerial-information-failure
+            estimatedMinutes: 30
+            description: Analyse quality uncertainty, screening, signalling, and protection.
+          - id: managerial-regulation-competition
+            title: Competition policy, regulation, and patents
+            resourceType: note
+            resourceId: managerial-regulation-competition
+            estimatedMinutes: 35
+            description: Introduce antitrust, utility regulation, patents, and operating controls.
+          - id: managerial-environment-public-choice
+            title: Environmental policy and public choice
+            resourceType: note
+            resourceId: managerial-environment-public-choice
+            estimatedMinutes: 35
+            description: Connect pollution policy, regulatory trade-offs, and government failure.
+          - id: managerial-market-failure-check
+            title: Market failure and government intervention practice
+            resourceType: quiz
+            resourceId: quiz-managerial-market-failure
+            estimatedMinutes: 12
+            description: Check market-failure mechanisms and policy responses.

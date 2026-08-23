@@ -73,4 +73,6 @@ subjects:
     title: Managerial Economics
     description: Applying economic theory to business decision-making.
     color: "#4338ca"
-    featured: []
+    featured:
+      - type: note
+        id: managerial-introduction
