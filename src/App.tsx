@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import MoveToTop from './components/MoveToTop'
+import ScrollToTop from './components/ScrollToTop'
 
 const Home = lazy(() => import('./pages/Home'))
 const Subjects = lazy(() => import('./pages/Subjects'))
@@ -22,6 +23,7 @@ const NotFound = lazy(() => import('./pages/NotFound'))
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <main>
         <Suspense fallback={<div className="route-loading" role="status">Loading page…</div>}>

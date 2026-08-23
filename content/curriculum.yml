@@ -181,3 +181,196 @@ curricula:
             resourceId: quiz-class11-maths
             estimatedMinutes: 12
             description: Consolidate the calculation patterns used throughout the course.
+
+  - id: class-12-economics
+    subjectId: class-12
+    title: Your guided Economics-II path
+    description: Follow a practical sequence from resource allocation and microeconomics to macroeconomics, development, Nepal’s economy, and quantitative techniques.
+    syllabusNote: Based on the latest NEB syllabus.
+    units:
+      - id: class12-foundations
+        order: 1
+        title: Basic concepts and allocation of resources
+        summary: Revisit economic choice, compare economic systems, and use the production possibility curve.
+        estimatedMinutes: 90
+        outcomes:
+          - Explain the central allocation problems of an economy.
+          - Compare market, command, and mixed economic systems.
+          - Interpret production possibility curves and opportunity cost.
+        lessons:
+          - id: class12-foundations-note
+            title: Economic systems and the production possibility curve
+            resourceType: note
+            resourceId: class12-economic-system-ppc
+            estimatedMinutes: 35
+            description: Compare economic systems and read choice, efficiency, and growth from a production possibility curve.
+          - id: class12-foundations-check
+            title: Allocation and systems check
+            resourceType: quiz
+            resourceId: quiz-class12-foundations
+            estimatedMinutes: 12
+            description: Test the core ideas of scarcity, systems, opportunity cost, and productive efficiency.
+      - id: class12-microeconomics
+        order: 2
+        title: Microeconomics and market analysis
+        summary: Build revenue and cost tables before studying how firms choose price and output.
+        estimatedMinutes: 190
+        outcomes:
+          - Calculate and interpret total, average, and marginal revenue.
+          - Distinguish fixed, variable, average, and marginal cost.
+          - Use revenue and cost relationships to explain firm decisions.
+        lessons:
+          - id: class12-market-revenue
+            title: Market and revenue curves
+            resourceType: note
+            resourceId: class12-market-revenue
+            estimatedMinutes: 35
+            description: Connect market demand with total, average, and marginal revenue.
+          - id: class12-cost-curves
+            title: Cost concepts and cost curves
+            resourceType: note
+            resourceId: class12-cost-curves
+            estimatedMinutes: 35
+            description: Build cost tables and explain the relationships among average and marginal costs.
+          - id: class12-micro-check
+            title: Microeconomics practice
+            resourceType: quiz
+            resourceId: quiz-class12-micro
+            estimatedMinutes: 15
+            description: Practise revenue and cost calculations before moving to market structures.
+      - id: class12-price-output
+        order: 3
+        title: Price and output determination
+        summary: Compare perfect and imperfect competition using equilibrium, profit, and market-power reasoning.
+        estimatedMinutes: 170
+        outcomes:
+          - Explain the assumptions of perfect competition.
+          - Determine firm output using the marginal-revenue and marginal-cost condition.
+          - Compare competitive and monopoly outcomes.
+        lessons:
+          - id: class12-perfect-competition
+            title: Price and output under perfect competition
+            resourceType: note
+            resourceId: class12-perfect-competition
+            estimatedMinutes: 35
+            description: Use price, marginal revenue, marginal cost, and shutdown reasoning to explain firm equilibrium.
+          - id: class12-imperfect-competition
+            title: Price and output under imperfect competition
+            resourceType: note
+            resourceId: class12-imperfect-competition
+            estimatedMinutes: 35
+            description: Compare monopoly and other imperfectly competitive markets through demand and revenue curves.
+          - id: class12-price-output-check
+            title: Price and output practice
+            resourceType: quiz
+            resourceId: quiz-class12-price-output
+            estimatedMinutes: 15
+            description: Check equilibrium conditions, diagrams, and market-structure comparisons.
+      - id: class12-factor-pricing
+        order: 4
+        title: Factor pricing and distribution
+        summary: Study how land, labour, capital, and entrepreneurship are rewarded in the distribution of income.
+        estimatedMinutes: 100
+        outcomes:
+          - Explain the meaning of factor pricing and distribution.
+          - Distinguish rent, wages, interest, and profit.
+          - Apply rent and distribution concepts to simple economic situations.
+        lessons:
+          - id: class12-factor-pricing-note
+            title: Factor pricing and the Ricardian theory of rent
+            resourceType: note
+            resourceId: factor-pricing-rent-concept
+            estimatedMinutes: 40
+            description: Review rent and the Ricardian theory, then connect them to wages, interest, and profit.
+          - id: class12-factor-pricing-extension
+            title: Factor rewards and distribution
+            resourceType: note
+            resourceId: class12-factor-pricing
+            estimatedMinutes: 30
+            description: Organise the main factor rewards and the forces that influence their differences.
+          - id: class12-factor-pricing-check
+            title: Factor pricing practice
+            resourceType: quiz
+            resourceId: quiz-class12-factor-pricing
+            estimatedMinutes: 15
+            description: Practise rent, wages, interest, profit, and distribution reasoning.
+      - id: class12-macro-policy
+        order: 5
+        title: Banking, public finance, and international trade
+        summary: Move to macroeconomic institutions and examine money, fiscal choices, and global exchange.
+        estimatedMinutes: 215
+        outcomes:
+          - Explain the functions of banks and the main tools of monetary policy.
+          - Classify public revenue, expenditure, budgets, and fiscal policy.
+          - Use comparative advantage to evaluate international trade and policy.
+        lessons:
+          - id: class12-banking
+            title: Banking and monetary policy
+            resourceType: note
+            resourceId: class12-banking-monetary-policy
+            estimatedMinutes: 35
+            description: Understand money creation, central banking, and monetary-policy transmission.
+          - id: class12-government-finance
+            title: Government finance and fiscal policy
+            resourceType: note
+            resourceId: class12-government-finance
+            estimatedMinutes: 35
+            description: Organise public revenue and expenditure and explain fiscal policy choices.
+          - id: class12-international-trade
+            title: International trade and trade policy
+            resourceType: note
+            resourceId: class12-international-trade
+            estimatedMinutes: 35
+            description: Apply comparative advantage and evaluate tariffs, quotas, and exchange-rate links.
+          - id: class12-macro-check
+            title: Macro policy practice
+            resourceType: quiz
+            resourceId: quiz-class12-macro
+            estimatedMinutes: 15
+            description: Consolidate banking, fiscal policy, and international-trade reasoning.
+      - id: class12-development-nepal
+        order: 6
+        title: Development, Nepal’s economy, and quantitative techniques
+        summary: Apply development ideas to Nepal and finish with data skills for economic interpretation.
+        estimatedMinutes: 250
+        outcomes:
+          - Evaluate poverty, inequality, unemployment, and human resources together.
+          - Explain Nepal’s trade, employment, planning, and sustainable-development priorities.
+          - Calculate and interpret basic dispersion and index-number measures.
+        lessons:
+          - id: class12-development
+            title: Development economics
+            resourceType: note
+            resourceId: class12-development-economics
+            estimatedMinutes: 35
+            description: Distinguish growth from development and evaluate wellbeing and employment.
+          - id: class12-nepal-trade
+            title: Nepal’s foreign trade and foreign employment
+            resourceType: note
+            resourceId: class12-nepal-trade-employment
+            estimatedMinutes: 35
+            description: Connect trade, migration, remittances, and employment challenges in Nepal.
+          - id: class12-nepal-planning
+            title: Development planning in Nepal
+            resourceType: note
+            resourceId: class12-nepal-development-planning
+            estimatedMinutes: 30
+            description: Understand planning goals, resource allocation, implementation, and evaluation.
+          - id: class12-nepal-sdgs
+            title: Sustainable Development Goals and Nepal
+            resourceType: note
+            resourceId: class12-sdgs-nepal
+            estimatedMinutes: 30
+            description: Connect economic, social, and environmental dimensions of sustainable development.
+          - id: class12-quantitative
+            title: Quantitative techniques for economics
+            resourceType: note
+            resourceId: class12-quantitative-techniques
+            estimatedMinutes: 35
+            description: Practise dispersion, index numbers, and clear interpretation of economic data.
+          - id: class12-development-check
+            title: Development and quantitative skills check
+            resourceType: quiz
+            resourceId: quiz-class12-development-quantitative
+            estimatedMinutes: 15
+            description: Review development indicators, Nepal-focused applications, and quantitative reasoning.
