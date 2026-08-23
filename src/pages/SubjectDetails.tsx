@@ -1,6 +1,8 @@
 import { Link, useParams } from 'react-router'
 import { getSubjectById, getLevelById, type Subject } from '../data/levels'
 import { blogPosts, getBlogPostsBySubject, getNotesBySubject, getQuizzesBySubject, getVideosBySubject, notes, quizzes, videos } from '../data/content'
+import { getCurriculumBySubject } from '../data/curriculum'
+import CurriculumPath from '../components/CurriculumPath'
 import ResourceCard, { type Resource, type ResourceKind } from '../components/ResourceCard'
 import ResourceRail from '../components/ResourceRail'
 import Seo from '../components/Seo'
@@ -9,7 +11,8 @@ type FeaturedSelection = Subject['featured'][number]
 type FeaturedEntry = { selection: FeaturedSelection; resource: Resource; kind: ResourceKind }
 
 function formatCount(count: number, label: string) {
-  return `${count} ${label}${count === 1 ? '' : 's'}`
+  const plural = label === 'quiz' ? 'quizzes' : `${label}s`
+  return `${count} ${count === 1 ? label : plural}`
 }
 
 function resolveFeaturedResources(subject: Subject): FeaturedEntry[] {
@@ -50,6 +53,7 @@ function SubjectDetails() {
   const subjectQuizzes = getQuizzesBySubject(subject.id)
   const subjectVideos = getVideosBySubject(subject.id)
   const featured = resolveFeaturedResources(subject)
+  const curriculum = getCurriculumBySubject(subject.id)
 
   return (
     <section className="subject-hub">
@@ -90,6 +94,8 @@ function SubjectDetails() {
           <p className="empty-state">Featured resources will appear here when they are pinned in the content manager.</p>
         )}
       </section>
+
+      {curriculum && <CurriculumPath curriculum={curriculum} />}
 
       <ResourceRail title="Notes" kind="notes" resources={subjectNotes} subject={subject} viewAllHref="/notes" viewAllLabel="View all notes" />
       <ResourceRail title="Blogs" kind="blogs" resources={subjectBlogs} subject={subject} viewAllHref="/blogs" viewAllLabel="View all blogs" />

@@ -1,0 +1,183 @@
+curricula:
+  - id: class-11-economics
+    subjectId: class-11
+    title: Your guided Economics-I path
+    description: Follow a steady sequence from economic foundations to Nepal-focused applications and quantitative practice.
+    syllabusNote: Based on the latest NEB syllabus.
+    units:
+      - id: foundations
+        order: 1
+        title: Basic concepts and resources
+        summary: Build the vocabulary of economics and see how scarce resources shape choices.
+        estimatedMinutes: 75
+        outcomes:
+          - Define economics and explain its scope.
+          - Distinguish microeconomics from macroeconomics.
+          - Identify land, labour, capital, and organisation as production resources.
+        lessons:
+          - id: class11-foundations
+            title: What economics studies
+            resourceType: note
+            resourceId: class11-economic-basics
+            estimatedMinutes: 25
+            description: Start with scarcity, choice, opportunity cost, and the basic economic problem.
+          - id: class11-foundations-check
+            title: Check your foundations
+            resourceType: quiz
+            resourceId: quiz-class11-foundations
+            estimatedMinutes: 10
+            description: Test the essential terms before moving to markets.
+      - id: demand-supply
+        order: 2
+        title: Demand, supply, and equilibrium
+        summary: Explain how buyers and sellers interact and how market equilibrium is formed.
+        estimatedMinutes: 100
+        outcomes:
+          - Explain the laws of demand and supply.
+          - Distinguish movement along a curve from a shift of a curve.
+          - Find equilibrium and interpret simple schedules and diagrams.
+        lessons:
+          - id: class11-demand-supply
+            title: Demand, supply, and the market
+            resourceType: note
+            resourceId: note-demand-supply
+            estimatedMinutes: 25
+            description: Learn the core relationships and read a market diagram.
+          - id: class11-demand-supply-check
+            title: Demand and supply practice
+            resourceType: quiz
+            resourceId: quiz-demand-supply
+            estimatedMinutes: 10
+            description: Check whether you can identify equilibrium and curve movements.
+      - id: elasticity-consumer
+        order: 3
+        title: Elasticity and consumer behaviour
+        summary: Measure responsiveness and use utility ideas to understand consumer choice.
+        estimatedMinutes: 120
+        outcomes:
+          - Calculate and interpret basic price elasticity.
+          - Explain total and marginal utility.
+          - Apply diminishing marginal utility and consumer surplus.
+        lessons:
+          - id: class11-elasticity-consumer
+            title: Elasticity, utility, and consumer choice
+            resourceType: note
+            resourceId: class11-elasticity-consumer
+            estimatedMinutes: 35
+            description: Connect percentage changes in demand with the logic of consumer choice.
+          - id: class11-elasticity-consumer-check
+            title: Elasticity and utility check
+            resourceType: quiz
+            resourceId: quiz-class11-elasticity
+            estimatedMinutes: 12
+            description: Practise classification, interpretation, and short calculations.
+      - id: production
+        order: 4
+        title: Production and cost
+        summary: Study how firms combine resources, how output changes, and why costs matter.
+        estimatedMinutes: 110
+        outcomes:
+          - Define production and production function.
+          - Distinguish total, average, and marginal product.
+          - Explain the law of variable proportions and basic cost measures.
+        lessons:
+          - id: class11-production
+            title: From inputs to output
+            resourceType: note
+            resourceId: class11-production-and-cost
+            estimatedMinutes: 35
+            description: Build a production table and interpret marginal changes.
+          - id: class11-production-check
+            title: Production and cost practice
+            resourceType: quiz
+            resourceId: quiz-class11-production
+            estimatedMinutes: 12
+            description: Check your understanding of product and cost relationships.
+      - id: macroeconomics
+        order: 5
+        title: National income, money, and inflation
+        summary: Move from individual markets to economy-wide measures and monetary conditions.
+        estimatedMinutes: 130
+        outcomes:
+          - Distinguish major national-income concepts and approaches.
+          - Explain the functions of money and broad versus narrow money.
+          - Describe inflation, deflation, causes, and effects.
+        lessons:
+          - id: class11-national-income
+            title: Measuring national income
+            resourceType: note
+            resourceId: class11-national-income
+            estimatedMinutes: 35
+            description: Organise the key aggregates and avoid common double-counting errors.
+          - id: class11-money-inflation
+            title: Money and inflation
+            resourceType: note
+            resourceId: class11-money-inflation
+            estimatedMinutes: 35
+            description: Connect money, prices, and purchasing power through simple examples.
+      - id: development
+        order: 6
+        title: Development, growth, and human wellbeing
+        summary: Compare growth with broader development and examine poverty, inequality, employment, and human resources.
+        estimatedMinutes: 95
+        outcomes:
+          - Distinguish economic growth from economic development.
+          - Use development indicators with appropriate care.
+          - Explain how poverty, inequality, employment, and human resources interact.
+        lessons:
+          - id: class11-development
+            title: Growth, development, and indicators
+            resourceType: note
+            resourceId: class11-development-growth
+            estimatedMinutes: 30
+            description: Use a wider lens than output alone when evaluating progress.
+          - id: class11-development-application
+            title: Nepal-focused development application
+            resourceType: blog
+            resourceId: blog-nepal-economy-2026
+            estimatedMinutes: 15
+            description: Apply the growth-versus-development distinction to Nepal’s economy.
+      - id: nepal-economy
+        order: 7
+        title: Nepal’s economy and natural resources
+        summary: Apply economic ideas to Nepal’s resources, agriculture, industry, tourism, transport, and communication.
+        estimatedMinutes: 130
+        outcomes:
+          - Describe major features of Nepal’s economy.
+          - Assess natural resources, agriculture, industry, and tourism with evidence.
+          - Identify local examples and connect them to economic development.
+        lessons:
+          - id: class11-nepal-economy
+            title: A quick overview of Nepal’s economy
+            resourceType: blog
+            resourceId: blog-nepal-economy-2026
+            estimatedMinutes: 20
+            description: Establish a country context for the topics that follow.
+          - id: class11-nepal-resources
+            title: Resources, agriculture, and productive sectors
+            resourceType: note
+            resourceId: class11-nepal-economy-resources
+            estimatedMinutes: 35
+            description: Turn local observation into structured economic analysis.
+      - id: quantitative-methods
+        order: 8
+        title: Economic mathematics and problem solving
+        summary: Strengthen the mathematical habits needed for schedules, equations, and economic numericals.
+        estimatedMinutes: 90
+        outcomes:
+          - Rearrange and solve simple linear equations.
+          - Read tables and calculate changes carefully.
+          - Show clear steps so that economic reasoning is visible.
+        lessons:
+          - id: class11-economic-maths
+            title: Mathematics for economics
+            resourceType: note
+            resourceId: class11-economic-maths
+            estimatedMinutes: 30
+            description: Practise equations, percentage changes, and a repeatable numerical method.
+          - id: class11-economic-maths-check
+            title: Quantitative skills check
+            resourceType: quiz
+            resourceId: quiz-class11-maths
+            estimatedMinutes: 12
+            description: Consolidate the calculation patterns used throughout the course.

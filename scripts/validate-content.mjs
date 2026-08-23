@@ -47,6 +47,9 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
   const subjectIds = new Set()
   const resourceIds = Object.fromEntries(MARKDOWN_COLLECTIONS.map((collection) => [collection, new Set(readMarkdownCollection(contentDir, collection).map((item) => item.file.replace(/\.md$/, '')))]))
   const featuredTypeToCollection = { note: 'notes', blog: 'blogs', quiz: 'quizzes', video: 'videos' }
+  const curriculumPath = path.join(contentDir, 'curriculum.yml')
+  const curriculumTaxonomy = existsSync(curriculumPath) ? yaml.load(readFileSync(curriculumPath, 'utf8')) || {} : {}
+  const curricula = Array.isArray(curriculumTaxonomy.curricula) ? curriculumTaxonomy.curricula : []
 
   if (levels.length === 0) errors.push('content/subjects.yml must define at least one level')
   if (subjects.length === 0) errors.push('content/subjects.yml must define at least one subject')
@@ -82,6 +85,51 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
       else if (!resourceIds[collection].has(featured.id)) errors.push(`${label} references missing resource: ${featured.type}/${featured.id}`)
     }
     subjectIds.add(subject.id)
+  }
+
+  const curriculumIds = new Set()
+  for (const curriculum of curricula) {
+    const label = `curriculum/${curriculum.id || 'unknown'}`
+    if (!curriculum.id || !curriculum.subjectId || !curriculum.title || !curriculum.description) {
+      errors.push(`${label} needs an id, subjectId, title, and description`)
+    }
+    if (curriculumIds.has(curriculum.id)) errors.push(`Duplicate curriculum ID: ${curriculum.id}`)
+    curriculumIds.add(curriculum.id)
+    if (curriculum.subjectId && !subjectIds.has(curriculum.subjectId)) {
+      errors.push(`${label} references missing subject: ${curriculum.subjectId}`)
+    }
+    if (!curriculum.syllabusNote) errors.push(`${label} is missing syllabusNote`)
+    if (!Array.isArray(curriculum.units) || curriculum.units.length === 0) {
+      errors.push(`${label} must contain at least one unit`)
+      continue
+    }
+    const unitIds = new Set()
+    curriculum.units.forEach((unit, unitIndex) => {
+      const unitLabel = `${label} unit ${unitIndex + 1}`
+      if (!unit.id || !unit.title || !unit.summary) errors.push(`${unitLabel} needs an id, title, and summary`)
+      if (unitIds.has(unit.id)) errors.push(`Duplicate unit ID in ${label}: ${unit.id}`)
+      unitIds.add(unit.id)
+      if (!Number.isInteger(unit.order) || unit.order < 1) errors.push(`${unitLabel} needs a positive integer order`)
+      if (!Number.isInteger(unit.estimatedMinutes) || unit.estimatedMinutes < 1) errors.push(`${unitLabel} needs a positive estimatedMinutes value`)
+      if (!Array.isArray(unit.outcomes) || unit.outcomes.length === 0) errors.push(`${unitLabel} needs at least one outcome`)
+      if (!Array.isArray(unit.lessons) || unit.lessons.length === 0) {
+        errors.push(`${unitLabel} must contain at least one lesson`)
+        return
+      }
+      const lessonIds = new Set()
+      unit.lessons.forEach((lesson, lessonIndex) => {
+        const lessonLabel = `${unitLabel} lesson ${lessonIndex + 1}`
+        if (!lesson.id || !lesson.title || !lesson.resourceType || !lesson.resourceId || !lesson.description) {
+          errors.push(`${lessonLabel} needs id, title, resourceType, resourceId, and description`)
+        }
+        if (lessonIds.has(lesson.id)) errors.push(`Duplicate lesson ID in ${unitLabel}: ${lesson.id}`)
+        lessonIds.add(lesson.id)
+        const collection = featuredTypeToCollection[lesson.resourceType]
+        if (!collection) errors.push(`${lessonLabel} has unsupported resourceType: ${lesson.resourceType}`)
+        else if (!resourceIds[collection].has(lesson.resourceId)) errors.push(`${lessonLabel} references missing resource: ${lesson.resourceType}/${lesson.resourceId}`)
+        if (!Number.isInteger(lesson.estimatedMinutes) || lesson.estimatedMinutes < 1) errors.push(`${lessonLabel} needs a positive estimatedMinutes value`)
+      })
+    })
   }
 
   for (const collection of MARKDOWN_COLLECTIONS) {

@@ -50,6 +50,43 @@ collections:
                   - { label: Type, name: type, widget: select, options: [note, blog, quiz, video] }
                   - { label: Resource ID, name: id, widget: string }
 
+  - name: curricula
+    label: Guided Curricula
+    files:
+      - file: content/curriculum.yml
+        label: Guided Curricula
+        name: curriculum
+        fields:
+          - label: Curricula
+            name: curricula
+            widget: list
+            fields:
+              - { label: 'ID (lowercase kebab-case)', name: id, widget: string }
+              - { label: 'Subject ID', name: subjectId, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Syllabus note, name: syllabusNote, widget: string, hint: 'Use simple wording such as Based on the latest NEB syllabus.' }
+              - label: Units
+                name: units
+                widget: list
+                fields:
+                  - { label: 'Unit ID', name: id, widget: string }
+                  - { label: Order, name: order, widget: number, value_type: int }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Summary, name: summary, widget: text }
+                  - { label: 'Estimated minutes', name: estimatedMinutes, widget: number, value_type: int }
+                  - { label: Outcomes, name: outcomes, widget: list }
+                  - label: Lessons
+                    name: lessons
+                    widget: list
+                    fields:
+                      - { label: 'Lesson ID', name: id, widget: string }
+                      - { label: Title, name: title, widget: string }
+                      - { label: Resource type, name: resourceType, widget: select, options: [note, blog, quiz, video] }
+                      - { label: 'Resource ID', name: resourceId, widget: string }
+                      - { label: 'Estimated minutes', name: estimatedMinutes, widget: number, value_type: int }
+                      - { label: Description, name: description, widget: text }
+
   - name: notes
     label: Notes
     folder: content/notes
