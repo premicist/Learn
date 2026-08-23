@@ -1747,8 +1747,9 @@ h2 {
 
 .curriculum-lesson {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
+  grid-template-columns: 1.25rem minmax(0, 1fr) auto;
+  align-items: start;
+  min-width: 0;
   gap: 0.65rem;
   padding: 0.65rem 0.7rem;
   border: 1px solid var(--line);
@@ -1813,7 +1814,9 @@ h2 {
 }
 
 .curriculum-lesson__link {
+  align-self: start;
   flex: none;
+  white-space: nowrap;
   color: var(--teal);
   font: 700 0.7rem/1.2 var(--font-mono);
   text-decoration: underline;
@@ -1832,6 +1835,6 @@ h2 {
   .curriculum-next__link { width: 100%; text-align: center; }
   .curriculum-unit { grid-template-columns: 1fr; gap: 0.6rem; padding: 0.85rem; }
   .curriculum-unit__topline { flex-direction: column; gap: 0.35rem; }
-  .curriculum-lesson { grid-template-columns: auto 1fr; }
-  .curriculum-lesson__link { grid-column: 2; justify-self: start; }
+  .curriculum-lesson { grid-template-columns: 1.25rem minmax(0, 1fr) auto; }
+  .curriculum-lesson__link { grid-column: auto; justify-self: auto; }
 }

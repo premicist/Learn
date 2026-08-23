@@ -110,8 +110,12 @@ function CurriculumPath({ curriculum }: { curriculum: Curriculum }) {
                     return (
                       <div className={`curriculum-lesson ${complete ? 'is-complete' : ''} ${recommended ? 'is-recommended' : ''}`} key={lesson.id}>
                         <label className="curriculum-lesson__check">
-                          <input type="checkbox" checked={complete} onChange={() => toggleLesson(lesson.id)} />
-                          <span className="sr-only">Mark {lesson.title} complete</span>
+                          <input
+                            type="checkbox"
+                            checked={complete}
+                            onChange={() => toggleLesson(lesson.id)}
+                            aria-label={`Mark ${lesson.title} complete`}
+                          />
                         </label>
                         <div className="curriculum-lesson__body">
                           <div className="curriculum-lesson__meta">
