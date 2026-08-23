@@ -374,3 +374,170 @@ curricula:
             resourceId: quiz-class12-development-quantitative
             estimatedMinutes: 15
             description: Review development indicators, Nepal-focused applications, and quantitative reasoning.
+
+  - id: sociology-guided
+    subjectId: sociology
+    title: Your guided Sociology path
+    description: Follow a practical sequence from sociological foundations and theory to society, culture, social change, business, demography, and urbanization.
+    syllabusNote: A structured Sociology study path.
+    units:
+      - id: sociology-overview
+        order: 1
+        title: Overview of Sociology
+        summary: Build a clear foundation in sociological thinking, social interaction, and the relevance of sociology to organisations and everyday life.
+        estimatedMinutes: 95
+        outcomes:
+          - Explain the meaning, nature, subject matter, and scope of sociology.
+          - Describe the origin and development of sociology, including its development in Nepal.
+          - Classify major forms of social interaction and connect sociology with business and management.
+        lessons:
+          - id: sociology-overview-note
+            title: What Sociology studies
+            resourceType: note
+            resourceId: sociology-overview
+            estimatedMinutes: 35
+            description: Learn the scope of sociology, its development, social interaction, and its practical relevance.
+          - id: sociology-overview-check
+            title: Sociology foundations check
+            resourceType: quiz
+            resourceId: quiz-sociology-overview
+            estimatedMinutes: 12
+            description: Test the basic vocabulary and applications of sociological thinking.
+      - id: sociology-theories
+        order: 2
+        title: Theoretical Perspectives of Sociology
+        summary: Compare major sociological perspectives and use them as different lenses for interpreting organisations and social life.
+        estimatedMinutes: 100
+        outcomes:
+          - Explain structural functionalism, conflict theory, symbolic interactionism, and postmodernism.
+          - Compare the assumptions and criticisms of major sociological perspectives.
+          - Apply theory to simple business, workplace, and social situations.
+        lessons:
+          - id: sociology-theories-note
+            title: Four sociological perspectives
+            resourceType: note
+            resourceId: sociology-theoretical-perspectives
+            estimatedMinutes: 40
+            description: Compare functionalist, conflict, interactionist, and postmodern approaches.
+          - id: sociology-theories-check
+            title: Sociological theory practice
+            resourceType: quiz
+            resourceId: quiz-sociology-theories
+            estimatedMinutes: 12
+            description: Identify theoretical lenses, assumptions, and practical applications.
+      - id: sociology-society
+        order: 3
+        title: The Foundations of Society
+        summary: Organise the building blocks of society, from community and culture to socialisation, institutions, norms, values, status, and roles.
+        estimatedMinutes: 150
+        outcomes:
+          - Distinguish society, community, culture, and social institutions.
+          - Explain socialisation and the roles of family, education, religion, economy, and politics.
+          - Analyse how norms, values, status, and roles shape social behaviour.
+        lessons:
+          - id: sociology-society-note
+            title: Society, culture, and social institutions
+            resourceType: note
+            resourceId: sociology-foundations-of-society
+            estimatedMinutes: 50
+            description: Study society, community, culture, socialisation, institutions, norms, values, status, and roles.
+          - id: sociology-social-institutions
+            title: Social institutions in everyday life
+            resourceType: note
+            resourceId: note-social-institutions
+            estimatedMinutes: 20
+            description: Review how family, education, religion, and the state organise important social needs.
+          - id: sociology-society-check
+            title: Society and culture practice
+            resourceType: quiz
+            resourceId: quiz-sociology-society
+            estimatedMinutes: 15
+            description: Practise distinctions among social concepts and institutions.
+      - id: sociology-change
+        order: 4
+        title: Social Change and Social Movement
+        summary: Examine why societies change and how movements, technology, media, and global connections affect work and markets.
+        estimatedMinutes: 90
+        outcomes:
+          - Explain the meaning and nature of social change.
+          - Describe modernisation, diffusion, social media, technology, and globalisation as drivers of change.
+          - Classify social movements and evaluate their effects on workers and markets.
+        lessons:
+          - id: sociology-change-note
+            title: How societies change
+            resourceType: note
+            resourceId: sociology-social-change-movements
+            estimatedMinutes: 35
+            description: Connect social change, social movements, technology, and globalisation to working life.
+          - id: sociology-change-check
+            title: Social change practice
+            resourceType: quiz
+            resourceId: quiz-sociology-change
+            estimatedMinutes: 12
+            description: Check the causes, types, and impacts of social change and movements.
+      - id: sociology-culture-business
+        order: 5
+        title: Business and Culture
+        summary: Understand how organisations adapt to cultural transformation and how cultural differences influence marketing, human resources, and negotiation.
+        estimatedMinutes: 95
+        outcomes:
+          - Explain how business adapts to social and cultural transformation.
+          - Distinguish acculturation, enculturation, assimilation, and adaptation.
+          - Apply cultural dimensions to marketing, human resources, and negotiations.
+        lessons:
+          - id: sociology-culture-business-note
+            title: Culture in organisations and markets
+            resourceType: note
+            resourceId: sociology-business-and-culture
+            estimatedMinutes: 35
+            description: Explore cultural processes and their implications for organisations, customers, and workplaces.
+          - id: sociology-culture-business-check
+            title: Business and culture practice
+            resourceType: quiz
+            resourceId: quiz-sociology-culture-business
+            estimatedMinutes: 12
+            description: Practise cultural concepts and workplace applications.
+      - id: sociology-demography
+        order: 6
+        title: Business Demography
+        summary: Use population concepts and demographic evidence to understand workforce planning, markets, inequality, and business opportunity.
+        estimatedMinutes: 155
+        outcomes:
+          - Explain demography, population distribution, density, and composition.
+          - Distinguish census, surveys, and vital statistics as tools of demographic analysis.
+          - Evaluate population as a resource, demographic dividend, migration, ageing, and youth unemployment.
+        lessons:
+          - id: sociology-demography-note
+            title: Population, people, and business
+            resourceType: note
+            resourceId: sociology-business-demography
+            estimatedMinutes: 50
+            description: Study population structure, demographic tools, human resources, inequality, and business planning.
+          - id: sociology-demography-check
+            title: Demography practice
+            resourceType: quiz
+            resourceId: quiz-sociology-demography
+            estimatedMinutes: 15
+            description: Check population measures and the implications of demographic change.
+      - id: sociology-urbanization
+        order: 7
+        title: Urbanization
+        summary: Examine urbanisation as a demographic, structural, and behavioural process and identify its effects on infrastructure, labour, markets, and enterprise.
+        estimatedMinutes: 90
+        outcomes:
+          - Explain the meaning and causes of urbanisation.
+          - Distinguish behavioural, structural, and demographic views of urbanisation.
+          - Evaluate opportunities and challenges created by urban growth.
+        lessons:
+          - id: sociology-urbanization-note
+            title: Urbanisation and changing markets
+            resourceType: note
+            resourceId: sociology-urbanization
+            estimatedMinutes: 35
+            description: Connect urban growth with infrastructure, labour, markets, and business opportunities.
+          - id: sociology-urbanization-check
+            title: Urbanisation practice
+            resourceType: quiz
+            resourceId: quiz-sociology-urbanization
+            estimatedMinutes: 12
+            description: Review the meanings, drivers, impacts, and opportunities of urbanisation.

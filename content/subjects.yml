@@ -49,7 +49,9 @@ subjects:
     title: Sociology
     description: Society, social institutions, and social change.
     color: "#0891b2"
-    featured: []
+    featured:
+      - type: note
+        id: sociology-overview
   - id: revenue-management
     levelId: bachelors
     title: Revenue Management
