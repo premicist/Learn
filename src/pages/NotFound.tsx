@@ -6,7 +6,7 @@ function NotFound() {
     <section className="not-found">
       <Seo title="Page not found | Prem Pokhrel" description="The requested economics learning page could not be found." />
       <span className="eyebrow">404</span>
-      <h2>That page is not in the syllabus.</h2>
+      <h2>That page isn’t available yet.</h2>
       <p>The link may be outdated, or the resource may have moved.</p>
       <div className="hero-actions">
         <Link to="/" className="hero-cta">Go home</Link>

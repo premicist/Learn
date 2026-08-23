@@ -5,9 +5,9 @@ date: 2026-05-02
 excerpt: Practical study strategies for the NEB economics exam.
 ---
 
-## Start with the syllabus
+## Start with the NEB syllabus
 
-Use the official syllabus as your checklist. Divide each unit into concepts, diagrams, definitions, and numerical problems, then mark the topics you can explain without looking at your notes.
+Use the latest NEB syllabus as your checklist. Divide each unit into concepts, diagrams, definitions, and numerical problems, then mark the topics you can explain without looking at your notes.
 
 ## Build a one-page revision sheet
 

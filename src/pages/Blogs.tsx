@@ -43,7 +43,7 @@ function Blogs() {
         title="Economics blogs | Prem Pokhrel"
         description="Readable economics articles and explainers for school, bachelor’s, and master’s level learners."
       />
-      <span className="eyebrow">Ideas beyond the textbook</span>
+      <span className="eyebrow">Ideas beyond the classroom</span>
       <h2>Blogs</h2>
       <p>Articles and explainers to complement your study notes.</p>
 
