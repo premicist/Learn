@@ -1,94 +1,52 @@
-# Setup guide: GitHub Pages + Decap CMS
+# Learn site setup
 
-This site is now wired so that you can log in to a `/admin` page and write notes,
-blog posts, quizzes, and videos through forms — no code editing needed. Every
-time you click "Publish" in that admin page, your live site rebuilds and
-updates automatically within a couple of minutes.
+This site is a React + Vite learning website for economics notes, articles, quizzes, and videos. Content is authored through Decap CMS and deployed to GitHub Pages.
 
-You only need to do the steps below **once**. After that, posting content is
-just: go to `yourusername.github.io/yourrepo/admin/`, log in, write, publish.
+## Content flow
 
-## How content flows (for your own understanding)
-
-```
-You write in /admin  →  Decap CMS saves a file to GitHub  →  GitHub Actions
-rebuilds the site  →  GitHub Pages serves the updated site
+```text
+/admin → DecapBridge → GitHub content files → validation/build → GitHub Pages
 ```
 
-Your notes/blogs/quizzes/videos live as plain files under the `content/`
-folder. A small script (`scripts/build-content.mjs`) turns them into the data
-the website reads. You never need to touch that script or the `content/`
-files directly — the admin panel does it for you.
+The editable source files live under `content/`. The `admin/config.yml` file is the canonical CMS configuration. The build synchronizes it into `public/admin/config.yml`; do not edit the public copy by hand.
 
-## One-time setup
+## Local development
 
-### 1. Create the GitHub repository
-Create a new **public** repository on GitHub (public is required for the free
-GitHub Pages + this OAuth method to work smoothly) and push this project to
-it — e.g. via GitHub Desktop, or:
-```
-git init
-git add .
-git commit -m "Initial site"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git push -u origin main
+```bash
+npm install
+npm run dev
 ```
 
-### 2. Fix the two placeholders that reference your repo name
-- In `vite.config.ts`, change `base: '/REPO_NAME/'` to `base: '/YOUR_REPO/'`
-  (must match your repo name exactly, with leading and trailing slashes).
-- In `admin/config.yml`, change `repo: REPLACE_WITH_USERNAME/REPLACE_WITH_REPO_NAME`
-  to `repo: YOUR_USERNAME/YOUR_REPO`.
-Commit and push these two small edits.
+The development command synchronizes the CMS, generates the sitemap, validates the content, generates typed data under `src/data/generated/`, and starts Vite at `http://localhost:5173`.
 
-### 3. Turn on GitHub Pages
-In your repo: **Settings → Pages → Build and deployment → Source → GitHub
-Actions**. That's it — the included workflow (`.github/workflows/deploy.yml`)
-will now build and publish your site on every push to `main`. Check the
-**Actions** tab to watch it run; your site will appear at
-`https://YOUR_USERNAME.github.io/YOUR_REPO/` a minute or two after it finishes.
+## One-time deployment setup
 
-### 4. Connect the login (so `/admin` knows who you are)
-Decap CMS needs a way to check "is this really me" before letting anyone edit
-your content. Since your site itself is hosted on GitHub Pages (not Netlify),
-we use a free Netlify account for this login step only — nothing about your
-actual site moves there.
+1. Confirm the repository is public and GitHub Pages is enabled with **Settings → Pages → Build and deployment → Source → GitHub Actions**.
+2. Confirm `vite.config.ts` uses `base: '/'` for the custom domain `prempokhrel.com.np`. If deploying under `username.github.io/repository-name/` instead, change it to `base: '/repository-name/'`.
+3. Confirm the canonical `admin/config.yml` points to the correct DecapBridge site and repository. The matching deployed copy is generated automatically during the build.
+4. Confirm the custom domain is configured through `public/CNAME` and that DNS points to GitHub Pages.
+5. Visit `https://prempokhrel.com.np/admin/` to open the content dashboard. Publishing creates a GitHub commit through DecapBridge, which triggers the deployment workflow.
 
-1. Go to **netlify.com**, sign up free, click **Add new site → Import an
-   existing project**, and connect the same GitHub repo. (Netlify will try to
-   build it too — that's fine, you can ignore or delete that deployment
-   later; we only need the site to exist so its login settings are usable.)
-2. Note the site's URL, e.g. `https://random-name-12345.netlify.app`.
-3. Go to **github.com/settings/developers → OAuth Apps → New OAuth App** and
-   fill in:
-   - **Homepage URL**: your Netlify site URL from step 2
-   - **Authorization callback URL**: `https://api.netlify.com/auth/done`
-   Click **Register application**, then **Generate a new client secret**.
-   Keep this tab open.
-4. Back in Netlify: **Site configuration → General → Access & security →
-   OAuth → Install provider → GitHub**, and paste in the Client ID and
-   Client Secret from step 3.
-5. In `admin/config.yml`, change `base_url:` to your Netlify site URL from
-   step 2. Commit and push.
+## Adding content
 
-### 5. Log in and start posting
-Visit `https://YOUR_USERNAME.github.io/YOUR_REPO/admin/`, click **Login with
-GitHub**, approve access, and you'll see a dashboard with **Notes**, **Blog
-Posts**, **Quizzes**, **Videos**, and **Subjects & Levels** — click any one,
-fill in the form, hit **Publish**, and your live site updates automatically.
+Use the `/admin/` dashboard whenever possible. Every note, blog, quiz, and video must use a valid `subjectId` from `content/subjects.yml`. Subject and level IDs must be lowercase kebab-case, such as `microeconomics`, `class-11`, or `managerial-economics`.
 
-## Everyday use
-That's it from here on — no more setup. Just go to the `/admin/` URL, log in,
-and write. Ignore everything above unless something breaks.
+Notes support a Markdown body, optional cover image, and optional image alt text. Blog posts require a Markdown body. Quiz questions require at least two options, a valid zero-based `answerIndex`, and an explanation. Videos may include a YouTube ID, transcript, and key takeaways.
 
-## If something looks broken
-- **Site shows a blank page after deploying**: almost always the `base` in
-  `vite.config.ts` doesn't match your repo name exactly. Double check it.
-- **Admin page says login failed**: double-check the callback URL in your
-  GitHub OAuth App is exactly `https://api.netlify.com/auth/done`, and that
-  the `base_url` in `admin/config.yml` matches your Netlify site URL exactly
-  (including `https://`, no trailing slash).
-- **A new note/blog doesn't show the right subject**: the "Subject ID" field
-  must exactly match an ID from the Subjects & Levels collection (lowercase,
-  no spaces, e.g. `microeconomics`).
+You can also edit files under `content/` directly. Run the following before committing:
+
+```bash
+npm run validate-content
+npm run build
+npm run lint
+```
+
+The validator checks taxonomy references, duplicate IDs, required fields, dates, quiz answer indexes, and YouTube IDs. The build will stop if validation fails.
+
+## Deployment workflow
+
+`.github/workflows/deploy.yml` runs on pushes to `main` and manual dispatch. It installs dependencies with `npm ci` on Node 22.22.0, validates content, synchronizes the CMS, generates the sitemap, builds the application, adds `.nojekyll`, creates a `404.html` SPA fallback, and deploys `dist/` to GitHub Pages.
+
+## Common problems
+
+If the site shows a blank page under a repository URL, check that `vite.config.ts` has the correct `base` path. If content does not appear under a subject, check the exact `subjectId` and run `npm run validate-content`. If the admin panel looks outdated, confirm that `admin/config.yml` is the source of truth and rebuild so it is synchronized to `public/admin/config.yml`.

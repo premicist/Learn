@@ -1,10 +1,12 @@
 import { Link } from 'react-router'
 import { levels, getSubjectsByLevel } from '../data/levels'
 import LevelCard from '../components/LevelCard'
+import Seo from '../components/Seo'
 
 function Home() {
   return (
     <>
+      <Seo title="Economics, explained | Prem Pokhrel" description="Notes, articles, quizzes, and videos in economics for school, bachelor’s, and master’s level learners." />
       <section className="hero-section">
         <div className="hero-copy">
           <span className="eyebrow">Class 11 &amp; 12 · Bachelor&apos;s · Master&apos;s</span>

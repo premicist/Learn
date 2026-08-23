@@ -1,9 +1,11 @@
 import { levels, getSubjectsByLevel } from '../data/levels'
 import SubjectCard from '../components/SubjectCard'
+import Seo from '../components/Seo'
 
 function Subjects() {
   return (
     <section>
+      <Seo title="Economics subjects | Prem Pokhrel" description="Explore economics subjects organized by school, bachelor’s, and master’s level." />
       <h2>All Subjects</h2>
       <p>Every subject, grouped by level.</p>
 

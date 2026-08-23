@@ -1,21 +1,28 @@
+import Seo from '../components/Seo'
+
 function About() {
   return (
     <section>
-      <h2>About EduSite</h2>
+      <Seo title="About | Prem Pokhrel" description="Learn about Prem Pokhrel’s economics learning resources for school, bachelor’s, and master’s level students." />
+      <span className="eyebrow">About the project</span>
+      <h2>About Prem Pokhrel ECON</h2>
       <p>
-        EduSite is a learning resource covering Economics from Class 11 &amp; 12 (NEB) through
-        Bachelor's and Master's level. It brings together study notes, blog articles, short
-        quizzes, and videos for each subject in one place.
+        Prem Pokhrel ECON is a learning resource covering economics from Class 11 &amp; 12 (NEB)
+        through bachelor&apos;s and master&apos;s level. It brings together study notes, blog articles,
+        short quizzes, and videos for each subject in one place.
       </p>
       <p>
-        Subjects currently covered include Microeconomics, Macroeconomics, Mathematical
-        Economics, Sociology, Revenue Management, Human Resource Management, and Managerial
-        Economics, alongside +2 level Economics.
+        Subjects currently covered include Microeconomics, Macroeconomics, Mathematical Economics,
+        Sociology, Revenue Management, Human Resource Management, and Managerial Economics,
+        alongside school-level Economics.
       </p>
       <p>
-        This site is a work in progress &mdash; new notes, quizzes, and videos are added
-        regularly.
+        This site is a work in progress. New notes, quizzes, and videos are added regularly, and
+        learners can request topics that would help them study more effectively.
       </p>
+      <a className="no-results__cta" href="https://forms.gle/fwU1Fyxs3RKVEHxT7" target="_blank" rel="noopener noreferrer">
+        Request a topic →
+      </a>
     </section>
   )
 }

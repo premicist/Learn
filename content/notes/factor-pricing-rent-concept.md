@@ -1,5 +1,5 @@
 ---
-subjectId: Class-12
+subjectId: class-12
 title: "FACTOR PRICING: RENT CONCEPT"
 summary: "Rent is payment for using production factors; contract rent is
   tenant-landlord gross payment, while economic rent is surplus from fixed
@@ -59,7 +59,7 @@ It refers to expanding production by using more plots of land. If food demand ri
 
 The Ricardian Theory of Rent can be explained with the following schedule:
 
-![](/images/uploads/ricardian_theory_of_rent.png "Table: Determination of Rent (Output in Kg)")
+![Table showing output and rent by grade of land](/images/uploads/ricardian_theory_of_rent.png "Table: Determination of Rent (Output in Kg)")
 
 There are A, B, C, and D four grades of land according to their fertility where A is most superior and B, C, and D represents second, third and last grade of lands.\
 Suppose, when people enter into the inland, they start to cultivate A grade land. but as population raises, more demand for food increases then people start cultivating B, C and D grade lands because their supply is fixed. Rent arises from differences infertility: 60 kg, 40 kg, 20 kg, and zero respectively. 
@@ -68,7 +68,7 @@ Here, Grade D is marginal land or no-rent land. it is the base of rent for other
 
 **Differential rent = output of an intramarginal land − output of the marginal land ,** assuming a common cost benchmark.
 
-![](/images/uploads/ricardian_theory_of_rent_figure.png "Figure: Ricardian Theory of Rent")
+![Diagram showing differential rent under extensive cultivation](/images/uploads/ricardian_theory_of_rent_figure.png "Figure: Ricardian Theory of Rent")
 
 Diagram description: 
 

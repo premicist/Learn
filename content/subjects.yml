@@ -12,13 +12,13 @@ levels:
     shortTitle: Master's
     description: Advanced graduate-level economics.
 subjects:
-  - id: Class-11
+  - id: class-11
     levelId: school
     title: Economics-I
     description: Microeconomics, Macroeconomics, and Nepal economy.
     color: "#2563eb"
   - levelId: school
-    id: Class-12
+    id: class-12
     title: Economics-II
     description: Microeconomics, Macroeconomics, and Nepal economy.
     color: "#2563eb"
@@ -47,7 +47,7 @@ subjects:
     title: Revenue Management
     description: Pricing strategy, demand forecasting, and yield management.
     color: "#be123c"
-  - id: HRM
+  - id: hrm
     levelId: bachelors
     title: Human Resource Management
     description: Recruitment, training, performance, and organizational behavior.

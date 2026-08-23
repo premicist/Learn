@@ -12,8 +12,14 @@ simple dashboard instead of editing code.
 npm install
 npm run dev
 ```
-This regenerates the site's data from `/content` and starts a local preview
-at `http://localhost:5173`.
+This synchronizes the CMS files, generates the sitemap and typed site data from `/content`, validates the content, and starts a local preview at `http://localhost:5173`.
+
+Before committing content or code changes, run:
+
+```bash
+npm run check
+npm run build
+```
 
 ## Project structure
 - `content/` — your notes, blog posts, quizzes, videos, and subject list.
@@ -21,6 +27,13 @@ at `http://localhost:5173`.
 - `admin/` — the Decap CMS dashboard configuration.
 - `scripts/build-content.mjs` — turns `content/` into data the site reads.
   Runs automatically before `dev`/`build`; you don't need to run it yourself.
-- `src/` — the React application.
+- `scripts/validate-content.mjs` — checks subject references, required metadata,
+  dates, quiz answer indexes, and media identifiers before generation.
+- `scripts/build-sitemap.mjs` — generates `public/sitemap.xml` from the route and
+  content tree.
+- `scripts/sync-admin.mjs` — keeps the canonical `admin/` CMS files synchronized
+  with the deployed `public/admin/` copy.
+- `src/` — the React application, including route-level SEO, article pages,
+  searchable content directories, quiz feedback, and local progress persistence.
 - `.github/workflows/deploy.yml` — automatically builds and publishes the
   site to GitHub Pages on every push to `main`.

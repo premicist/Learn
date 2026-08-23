@@ -19,7 +19,7 @@ function NoteCard({ note, subject, showSubjectTag = true }: NoteCardProps) {
     <article className="note-card">
       <Link to={`/notes/${note.id}`} className="note-card__header">
         {note.image ? (
-          <img className="note-card__image" src={note.image} alt="" />
+          <img className="note-card__image" src={note.image} alt={note.imageAlt || ''} loading="lazy" />
         ) : (
           <div
             className="note-card__image note-card__image--placeholder"
@@ -29,7 +29,7 @@ function NoteCard({ note, subject, showSubjectTag = true }: NoteCardProps) {
           </div>
         )}
         <div className="note-card__body">
-          <span className="note-card__date">{formatDate(note.date)}</span>
+          <time className="note-card__date" dateTime={note.date}>{formatDate(note.date)}</time>
           <h3>{note.title}</h3>
           <p className="note-card__summary">{note.summary}</p>
         </div>

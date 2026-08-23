@@ -2,63 +2,94 @@ import { Link, useParams } from 'react-router'
 import { notes } from '../data/content'
 import { getSubjectById } from '../data/levels'
 import NoteMarkdown from '../components/NoteMarkdown'
+import Seo from '../components/Seo'
 
 function formatDate(dateStr: string) {
-  const d = new Date(dateStr)
-  if (Number.isNaN(d.getTime())) return dateStr
-  return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  const date = new Date(dateStr)
+  if (Number.isNaN(date.getTime())) return dateStr
+  return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+}
+
+function readingTime(content: string) {
+  const words = content.trim().split(/\s+/).filter(Boolean).length
+  return `${Math.max(1, Math.ceil(words / 220))} min read`
+}
+
+function getHeadings(content: string) {
+  return content
+    .split('\n')
+    .map((line) => line.match(/^#{2,3}\s+(.+)$/))
+    .filter((match): match is RegExpMatchArray => Boolean(match))
+    .map((match) => ({ title: match[1].replace(/[*_`]/g, ''), id: match[1].toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-') }))
 }
 
 function NotePage() {
   const { noteId } = useParams()
-  const note = notes.find((n) => n.id === noteId)
+  const note = notes.find((item) => item.id === noteId)
 
   if (!note) {
     return (
       <section>
-        <p className="empty-state">This note couldn't be found.</p>
-        <Link to="/notes" className="back-link">
-          ← Back to notes
-        </Link>
+        <Seo title="Note not found | Prem Pokhrel" description="The requested economics note could not be found." />
+        <p className="empty-state">This note couldn&apos;t be found.</p>
+        <Link to="/notes" className="back-link">← Back to notes</Link>
       </section>
     )
   }
 
   const subject = getSubjectById(note.subjectId)
+  const headings = getHeadings(note.body)
+  const relatedNotes = notes
+    .filter((item) => item.subjectId === note.subjectId && item.id !== note.id)
+    .slice(0, 3)
 
   return (
     <article className="note-page">
+      <Seo title={`${note.title} | Prem Pokhrel`} description={note.summary} type="article" image={note.image || undefined} />
       {note.image ? (
-        <img className="note-page__image" src={note.image} alt="" />
+        <img className="note-page__image" src={note.image} alt={note.imageAlt || ''} />
       ) : (
-        <div
-          className="note-page__image note-page__image--placeholder"
-          style={{ backgroundColor: subject?.color || 'var(--teal)' }}
-        >
+        <div className="note-page__image note-page__image--placeholder" style={{ backgroundColor: subject?.color || 'var(--teal)' }} aria-hidden="true">
           <span>{note.title.charAt(0)}</span>
         </div>
       )}
 
       <section className="note-page__content">
-        
         <div className="note-page__meta">
-          <span className="note-page__date">{formatDate(note.date)}</span>
-          {subject && (
-            <Link to={`/subjects/${subject.id}`} className="note-page__subject">
-              {subject.title}
-            </Link>
-          )}
+          <time className="note-page__date" dateTime={note.date}>{formatDate(note.date)}</time>
+          <span aria-hidden="true">·</span>
+          <span>{readingTime(note.body)}</span>
+          {subject && <Link to={`/subjects/${subject.id}`} className="note-page__subject">{subject.title}</Link>}
         </div>
         <h1>{note.title}</h1>
         <p className="note-page__summary">{note.summary}</p>
 
-        <div className="note-page__body">
-          <NoteMarkdown content={note.body} />
-        </div>
+        {headings.length > 0 && (
+          <nav className="table-of-contents" aria-label="On this page">
+            <strong>On this page</strong>
+            <ol>
+              {headings.map((heading) => <li key={heading.id}><a href={`#${heading.id}`}>{heading.title}</a></li>)}
+            </ol>
+          </nav>
+        )}
 
-        <Link to="/notes" className="back-link">
-          ← Back to all notes
-        </Link>
+        <div className="note-page__body"><NoteMarkdown content={note.body} /></div>
+
+        {relatedNotes.length > 0 && (
+          <aside className="related-content" aria-labelledby="related-notes-heading">
+            <h2 id="related-notes-heading">More in {subject?.title || 'this subject'}</h2>
+            <div className="related-content__grid">
+              {relatedNotes.map((related) => (
+                <Link to={`/notes/${related.id}`} className="related-content__card" key={related.id}>
+                  <strong>{related.title}</strong>
+                  <span>{related.summary}</span>
+                </Link>
+              ))}
+            </div>
+          </aside>
+        )}
+
+        <Link to="/notes" className="back-link">← Back to all notes</Link>
       </section>
     </article>
   )

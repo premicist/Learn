@@ -24,10 +24,13 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22.22.0
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Quality checks
+        run: npm run check
 
       - name: Build site (regenerates content from /content, then builds)
         run: npm run build

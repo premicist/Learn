@@ -1,34 +1,42 @@
-import { Routes, Route } from 'react-router'
+import { lazy, Suspense } from 'react'
+import { Route, Routes } from 'react-router'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Home from './pages/Home'
-import Subjects from './pages/Subjects'
-import LevelDetails from './pages/LevelDetails'
-import SubjectDetails from './pages/SubjectDetails'
-import Notes from './pages/Notes'
-import NotePage from './pages/NotePage'
-import Blogs from './pages/Blogs'
-import Quizzes from './pages/Quizzes'
-import Videos from './pages/Videos'
-import About from './pages/About'
+
+const Home = lazy(() => import('./pages/Home'))
+const Subjects = lazy(() => import('./pages/Subjects'))
+const LevelDetails = lazy(() => import('./pages/LevelDetails'))
+const SubjectDetails = lazy(() => import('./pages/SubjectDetails'))
+const Notes = lazy(() => import('./pages/Notes'))
+const NotePage = lazy(() => import('./pages/NotePage'))
+const Blogs = lazy(() => import('./pages/Blogs'))
+const BlogPage = lazy(() => import('./pages/BlogPage'))
+const Quizzes = lazy(() => import('./pages/Quizzes'))
+const Videos = lazy(() => import('./pages/Videos'))
+const About = lazy(() => import('./pages/About'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 function App() {
   return (
     <>
       <Navbar />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/subjects" element={<Subjects />} />
-          <Route path="/subjects/:subjectId" element={<SubjectDetails />} />
-          <Route path="/levels/:levelId" element={<LevelDetails />} />
-          <Route path="/notes" element={<Notes />} />
-          <Route path="/notes/:noteId" element={<NotePage />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/quizzes" element={<Quizzes />} />
-          <Route path="/videos" element={<Videos />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        <Suspense fallback={<div className="route-loading" role="status">Loading page…</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/subjects" element={<Subjects />} />
+            <Route path="/subjects/:subjectId" element={<SubjectDetails />} />
+            <Route path="/levels/:levelId" element={<LevelDetails />} />
+            <Route path="/notes" element={<Notes />} />
+            <Route path="/notes/:noteId" element={<NotePage />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:blogId" element={<BlogPage />} />
+            <Route path="/quizzes" element={<Quizzes />} />
+            <Route path="/videos" element={<Videos />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
     </>

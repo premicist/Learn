@@ -26,12 +26,13 @@ function Navbar() {
         className="navbar__toggle"
         onClick={() => setIsOpen((open) => !open)}
         aria-expanded={isOpen}
+        aria-controls="primary-navigation"
         aria-label="Toggle navigation menu"
       >
         {isOpen ? 'Close' : 'Menu'}
       </button>
 
-      <nav className={`navbar__links ${isOpen ? 'is-open' : ''}`}>
+      <nav id="primary-navigation" className={`navbar__links ${isOpen ? 'is-open' : ''}`} aria-label="Primary navigation">
         {links.map((link) => (
           <NavLink
             key={link.to}

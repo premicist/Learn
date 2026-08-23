@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router'
 import { getLevelById, getSubjectsByLevel } from '../data/levels'
 import SubjectCard from '../components/SubjectCard'
+import Seo from '../components/Seo'
 
 function LevelDetails() {
   const { levelId } = useParams()
@@ -9,6 +10,7 @@ function LevelDetails() {
   if (!level) {
     return (
       <section>
+        <Seo title="Level not found | Prem Pokhrel" description="The requested economics level could not be found." />
         <h2>Level not found</h2>
         <Link to="/">Back to Home</Link>
       </section>
@@ -19,6 +21,8 @@ function LevelDetails() {
 
   return (
     <section>
+      <Seo title={`${level.title} | Prem Pokhrel`} description={level.description} />
+      <p className="eyebrow">Choose a subject</p>
       <h2>{level.title}</h2>
       <p>{level.description}</p>
 
@@ -29,7 +33,7 @@ function LevelDetails() {
       </div>
 
       <Link to="/" className="back-link">
-        Back to Home
+        ← Back to all levels
       </Link>
     </section>
   )

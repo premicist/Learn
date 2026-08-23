@@ -9,4 +9,5 @@ questions:
       - Only exported goods
       - Household savings
     answerIndex: 1
+    explanation: "GDP measures the market value of final goods and services produced within a country during a specified period."
 ---
