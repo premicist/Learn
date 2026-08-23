@@ -134,7 +134,7 @@ curricula:
           - id: class11-development-application
             title: Nepal-focused development application
             resourceType: blog
-            resourceId: blog-nepal-economy-2026
+            resourceId: blog-class11-development-nepal
             estimatedMinutes: 15
             description: Apply the growth-versus-development distinction to Nepal’s economy.
       - id: nepal-economy

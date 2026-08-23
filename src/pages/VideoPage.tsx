@@ -2,11 +2,14 @@ import { Link, useParams } from 'react-router'
 import { getVideoById } from '../data/content'
 import { getSubjectById } from '../data/levels'
 import Seo from '../components/Seo'
+import { getCurriculumBySubject } from '../data/curriculum'
+import UnitContext from '../components/UnitContext'
 
 function VideoPage() {
   const { videoId } = useParams()
   const video = videoId ? getVideoById(videoId) : undefined
   const subject = video ? getSubjectById(video.subjectId) : undefined
+  const curriculum = video ? getCurriculumBySubject(video.subjectId) : undefined
 
   if (!video || !subject) {
     return (
@@ -41,6 +44,7 @@ function VideoPage() {
         </div>
       )}
       {video.transcript && <details className="transcript"><summary>Read transcript</summary><p>{video.transcript}</p></details>}
+      {curriculum && <UnitContext curriculum={curriculum} currentResourceType="video" currentResourceId={video.id} subjectTitle={subject.title} />}
       <Link to={`/subjects/${subject.id}`} className="back-link">← Back to {subject.title}</Link>
     </section>
   )

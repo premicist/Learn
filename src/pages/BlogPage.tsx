@@ -3,6 +3,8 @@ import { blogPosts, notes } from '../data/content'
 import { getSubjectById } from '../data/levels'
 import NoteMarkdown from '../components/NoteMarkdown'
 import Seo from '../components/Seo'
+import { getCurriculumBySubject } from '../data/curriculum'
+import UnitContext from '../components/UnitContext'
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr)
@@ -30,6 +32,7 @@ function BlogPage() {
   }
 
   const subject = getSubjectById(post.subjectId)
+  const curriculum = getCurriculumBySubject(post.subjectId)
   const relatedNotes = notes
     .filter((note) => note.subjectId === post.subjectId)
     .slice(0, 3)
@@ -55,7 +58,9 @@ function BlogPage() {
         <NoteMarkdown content={post.body} />
       </div>
 
-      {relatedNotes.length > 0 && (
+      {curriculum ? (
+        <UnitContext curriculum={curriculum} currentResourceType="blog" currentResourceId={post.id} subjectTitle={subject?.title || 'this subject'} />
+      ) : relatedNotes.length > 0 && (
         <aside className="related-content" aria-labelledby="related-notes-heading">
           <h2 id="related-notes-heading">Continue with these notes</h2>
           <div className="related-content__grid">

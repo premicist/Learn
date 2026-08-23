@@ -3,11 +3,14 @@ import { getQuizById } from '../data/content'
 import { getSubjectById } from '../data/levels'
 import QuizCard from '../components/QuizCard'
 import Seo from '../components/Seo'
+import { getCurriculumBySubject } from '../data/curriculum'
+import UnitContext from '../components/UnitContext'
 
 function QuizPage() {
   const { quizId } = useParams()
   const quiz = quizId ? getQuizById(quizId) : undefined
   const subject = quiz ? getSubjectById(quiz.subjectId) : undefined
+  const curriculum = quiz ? getCurriculumBySubject(quiz.subjectId) : undefined
 
   if (!quiz || !subject) {
     return (
@@ -27,6 +30,7 @@ function QuizPage() {
       <h1>{quiz.title}</h1>
       <p className="article-page__excerpt">Test your understanding and receive instant explanations after submitting.</p>
       <QuizCard quiz={quiz} />
+      {curriculum && <UnitContext curriculum={curriculum} currentResourceType="quiz" currentResourceId={quiz.id} subjectTitle={subject.title} />}
       <Link to={`/subjects/${subject.id}`} className="back-link">← Back to {subject.title}</Link>
     </section>
   )

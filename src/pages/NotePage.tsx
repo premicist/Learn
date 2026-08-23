@@ -3,6 +3,8 @@ import { notes } from '../data/content'
 import { getSubjectById } from '../data/levels'
 import NoteMarkdown from '../components/NoteMarkdown'
 import Seo from '../components/Seo'
+import { getCurriculumBySubject } from '../data/curriculum'
+import UnitContext from '../components/UnitContext'
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr)
@@ -38,6 +40,7 @@ function NotePage() {
   }
 
   const subject = getSubjectById(note.subjectId)
+  const curriculum = getCurriculumBySubject(note.subjectId)
   const headings = getHeadings(note.body)
   const relatedNotes = notes
     .filter((item) => item.subjectId === note.subjectId && item.id !== note.id)
@@ -75,7 +78,9 @@ function NotePage() {
 
         <div className="note-page__body"><NoteMarkdown content={note.body} /></div>
 
-        {relatedNotes.length > 0 && (
+        {curriculum ? (
+          <UnitContext curriculum={curriculum} currentResourceType="note" currentResourceId={note.id} subjectTitle={subject?.title || 'this subject'} />
+        ) : relatedNotes.length > 0 && (
           <aside className="related-content" aria-labelledby="related-notes-heading">
             <h2 id="related-notes-heading">More in {subject?.title || 'this subject'}</h2>
             <div className="related-content__grid">
