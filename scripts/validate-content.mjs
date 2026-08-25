@@ -171,6 +171,46 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
             }
           }
         }
+        if (data.visualBlocks !== undefined) {
+          if (!Array.isArray(data.visualBlocks)) {
+            errors.push(`${label} visualBlocks must be a list`)
+          } else {
+            const visualTypes = new Set(['formula', 'table', 'graph'])
+            data.visualBlocks.forEach((block, blockIndex) => {
+              const blockLabel = `${label} visualBlocks item ${blockIndex + 1}`
+              if (!block || typeof block !== 'object' || Array.isArray(block)) {
+                errors.push(`${blockLabel} must be an object`)
+                return
+              }
+              if (!visualTypes.has(block.type)) errors.push(`${blockLabel} has unsupported type: ${block.type}`)
+              if (typeof block.title !== 'string' || !block.title.trim()) errors.push(`${blockLabel} needs a title`)
+              if (block.type === 'formula' && (typeof block.expression !== 'string' || !block.expression.trim())) {
+                errors.push(`${blockLabel} formula needs an expression`)
+              }
+              if (block.type === 'table') {
+                if (!Array.isArray(block.columns) || block.columns.length === 0 || block.columns.some((column) => typeof column !== 'string')) {
+                  errors.push(`${blockLabel} table needs a non-empty list of string columns`)
+                }
+                if (!Array.isArray(block.rows) || block.rows.length === 0) {
+                  errors.push(`${blockLabel} table needs a non-empty list of rows`)
+                } else if (Array.isArray(block.columns)) {
+                  block.rows.forEach((row, rowIndex) => {
+                    if (!Array.isArray(row) || row.length !== block.columns.length) errors.push(`${blockLabel} row ${rowIndex + 1} must match the column count`)
+                  })
+                }
+              }
+              if (block.type === 'graph') {
+                if (typeof block.asset !== 'string' || !block.asset.startsWith('/generated/visuals/') || !block.asset.endsWith('.svg')) {
+                  errors.push(`${blockLabel} graph asset must be a generated SVG path`)
+                }
+                if (!Array.isArray(block.points) || block.points.length < 2 || block.points.some((point) => !Array.isArray(point) || point.length !== 2 || point.some((value) => typeof value !== 'number' || !Number.isFinite(value)))) {
+                  errors.push(`${blockLabel} graph needs at least two numeric [x, y] points`)
+                }
+                if (typeof block.xLabel !== 'string' || typeof block.yLabel !== 'string') errors.push(`${blockLabel} graph needs xLabel and yLabel`)
+              }
+            })
+          }
+        }
       }
       if (collection === 'blogs') {
         if (!data.excerpt) errors.push(`${label} is missing excerpt`)

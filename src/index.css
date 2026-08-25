@@ -2350,3 +2350,133 @@ h2 {
   .note-unit-navigator__hint { display: none; }
   .note-unit-navigator__panel { padding: 0 0.7rem 0.7rem; }
 }
+
+
+/* Structured formula, table, and graph blocks */
+.note-visual-stack {
+  margin: 28px 0 34px;
+  padding: 22px;
+  background: linear-gradient(135deg, rgba(20, 107, 99, 0.06), rgba(180, 135, 42, 0.08));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.note-visual-stack__header h2 {
+  margin: 4px 0 6px;
+  font-size: 1.25rem;
+}
+
+.note-visual-stack__header > p:last-child {
+  margin: 0 0 18px;
+  color: var(--ink-faint);
+  font-size: 0.92rem;
+}
+
+.note-visual-block {
+  margin: 16px 0 0;
+  padding: 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.note-visual-block__eyebrow {
+  margin: 0 0 6px;
+  color: var(--teal-deep);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.note-visual-block h3 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.note-formula {
+  padding: 18px;
+  overflow-x: auto;
+  color: var(--teal-deep);
+  font-family: var(--font-mono);
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.note-visual-block__explanation {
+  margin: 14px 0 0;
+  color: var(--ink-faint);
+  font-size: 0.92rem;
+}
+
+.note-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.note-visual-block--table table {
+  min-width: 560px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.note-visual-block--table th,
+.note-visual-block--table td {
+  border: 1px solid var(--line);
+  padding: 9px 12px;
+  text-align: center;
+}
+
+.note-visual-block--table th {
+  background: var(--teal-tint);
+  color: var(--teal-deep);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.note-visual-block--graph img {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.note-visual-block--graph figcaption {
+  margin-top: 10px;
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.note-slide .note-visual-block {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(255, 253, 248, 0.78);
+}
+
+.note-slide .note-visual-block--table table {
+  min-width: 460px;
+}
+
+.note-slide .note-visual-block--graph figcaption,
+.note-slide .note-visual-block--graph .note-visual-block__eyebrow {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .note-visual-stack {
+    margin-left: -4px;
+    margin-right: -4px;
+    padding: 14px;
+  }
+
+  .note-visual-block {
+    padding: 14px;
+  }
+}

@@ -111,6 +111,36 @@ collections:
           - { label: Include quick check, name: includeQuickCheck, widget: boolean, default: true }
           - { label: Sections to include, name: sections, widget: list, required: false, hint: 'Optional exact H2 section titles. Leave empty to include all sections.' }
           - { label: Deck title, name: title, widget: string, required: false, hint: 'Optional custom title for the slide viewer.' }
+      - label: Structured visual blocks
+        name: visualBlocks
+        widget: list
+        required: false
+        collapsed: true
+        hint: 'Use explicit data for formulas, tables, and graphs. Generated graphs must be checked before publishing.'
+        types:
+          - label: Formula
+            name: formula
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Expression, name: expression, widget: string, hint: 'Use plain text such as W = WF / N.' }
+              - { label: Explanation, name: explanation, widget: text, required: false }
+          - label: Table
+            name: table
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Columns, name: columns, widget: list }
+              - { label: Rows, name: rows, widget: list, hint: 'Enter one comma-separated row per item; keep every row the same length as Columns.' }
+          - label: Graph
+            name: graph
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Generated SVG asset, name: asset, widget: string, hint: 'Use a generated /generated/visuals/*.svg path.' }
+              - { label: X-axis label, name: xLabel, widget: string }
+              - { label: Y-axis label, name: yLabel, widget: string }
+              - { label: Points, name: points, widget: list, hint: 'Enter [x, y] pairs matching the validated source table.' }
       - { label: Body, name: body, widget: markdown }
 
   - name: blogs

@@ -1,10 +1,11 @@
-import type { Note, NoteSlideControls, NoteSlideMode } from '../data/content'
+import type { Note, NoteSlideControls, NoteSlideMode, NoteVisualBlock } from '../data/content'
 
 export type NoteSlide = {
   title: string
   eyebrow: string
   points: string[]
   mode: NoteSlideMode
+  visual?: NoteVisualBlock
 }
 
 function cleanInline(value: string) {
@@ -104,6 +105,21 @@ export function buildNoteSlides(note: Note): NoteSlide[] {
     points: [cleanInline(note.summary)],
     mode,
   }]
+
+  for (const visual of note.visualBlocks || []) {
+    const visualPoints = visual.type === 'formula'
+      ? [visual.explanation || 'A validated formula from this note.']
+      : visual.type === 'table'
+        ? ['Use the table to compare the values and identify the relationship described in the note.']
+        : ['Read the trend using the labelled axes and the values described in the note.']
+    slides.push({
+      title: visual.title,
+      eyebrow: visual.type === 'graph' ? 'Python-generated visual' : 'Validated visual aid',
+      points: visualPoints,
+      mode,
+      visual,
+    })
+  }
 
   for (const section of sections) {
     if (!controls.includeQuickCheck && normalizeSection(section.title).includes('quick check')) continue

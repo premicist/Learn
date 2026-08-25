@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "npm run sync-admin && npm run build-sitemap && npm run build-content && vite",
-    "build-content": "node scripts/build-content.mjs",
+    "generate-visuals": "python3 scripts/generate-visual-assets.py",
+    "build-content": "npm run generate-visuals && node scripts/build-content.mjs",
     "sync-admin": "node scripts/sync-admin.mjs",
     "build-sitemap": "node scripts/build-sitemap.mjs",
     "validate-content": "node scripts/validate-content.mjs",

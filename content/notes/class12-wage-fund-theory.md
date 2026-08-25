@@ -3,6 +3,35 @@ subjectId: class-12
 title: "Wage Fund Theory of Wages"
 summary: "Use the classical wage-fund formula to explain average wages, evaluate its assumptions, and write a focused 8-mark answer."
 date: "2026-08-25"
+slidesEnabled: true
+slideControls:
+  mode: bullets
+  maxPoints: 3
+  includeQuickCheck: true
+visualBlocks:
+  - type: formula
+    title: Average wage
+    expression: "W = WF / N"
+    explanation: "Average wage equals the total wage fund divided by the number of workers employed."
+  - type: table
+    title: Wage fund example
+    columns:
+      - Total wage fund (Rs.)
+      - Number of workers
+      - Average wage (Rs.)
+    rows:
+      - ["Rs. 1,00,00,000", 50000, 200]
+      - ["Rs. 1,00,00,000", 100000, 100]
+      - ["Rs. 1,00,00,000", 150000, 66.67]
+  - type: graph
+    title: Average wage falls as employment rises
+    asset: /generated/visuals/wage-fund-average-wage.svg
+    xLabel: Number of workers
+    yLabel: Average wage (Rs.)
+    points:
+      - [50000, 200]
+      - [100000, 100]
+      - [150000, 66.67]
 ---
 
 ## Core idea
@@ -15,9 +44,7 @@ The theory says that the average wage depends on two things: the total wage fund
 
 In symbols:
 
-\[
-W = \frac{WF}{N}
-\]
+**W = WF ÷ N**
 
 Here, **W** means average wage, **WF** means the wage fund, and **N** means the number of workers employed.
 

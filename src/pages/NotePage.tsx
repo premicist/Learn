@@ -7,6 +7,7 @@ import { getCurriculumBySubject } from '../data/curriculum'
 import UnitContext from '../components/UnitContext'
 import NoteUnitNavigator from '../components/NoteUnitNavigator'
 import NoteSlideViewer from '../components/NoteSlideViewer'
+import NoteVisualBlock from '../components/NoteVisualBlock'
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr)
@@ -70,6 +71,17 @@ function NotePage() {
         <h1>{note.title}</h1>
         <p className="note-page__summary">{note.summary}</p>
         <NoteSlideViewer note={note} />
+
+        {note.visualBlocks.length > 0 && (
+          <section className="note-visual-stack" aria-label="Structured visual aids">
+            <div className="note-visual-stack__header">
+              <p className="section-kicker">Checked visual aids</p>
+              <h2>Formulas, tables, and graphs</h2>
+              <p>These visuals are generated from the note&apos;s structured data so the explanation and calculations stay aligned.</p>
+            </div>
+            {note.visualBlocks.map((block, index) => <NoteVisualBlock block={block} key={`${block.type}-${block.title}-${index}`} />)}
+          </section>
+        )}
 
         {noteUnit && headings.length > 0 && <NoteUnitNavigator unit={noteUnit} headings={headings} />}
 

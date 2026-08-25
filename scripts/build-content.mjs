@@ -156,6 +156,7 @@ const notes = readMarkdownFolder('notes').map((n) => ({
     sections: Array.isArray(n.slideControls?.sections) ? n.slideControls.sections : [],
     title: n.slideControls?.title || '',
   },
+  visualBlocks: Array.isArray(n.visualBlocks) ? n.visualBlocks : [],
   body: n.body,
 }))
 
@@ -203,6 +204,19 @@ export type NoteSlideControls = {
   title: string
 }
 
+export type NoteVisualBlock = {
+  type: 'formula' | 'table' | 'graph'
+  title: string
+  expression?: string
+  explanation?: string
+  columns?: string[]
+  rows?: Array<Array<string | number>>
+  asset?: string
+  xLabel?: string
+  yLabel?: string
+  points?: Array<[number, number]>
+}
+
 export type Note = {
   id: string
   subjectId: string
@@ -213,6 +227,7 @@ export type Note = {
   imageAlt: string
   slidesEnabled: boolean
   slideControls: NoteSlideControls
+  visualBlocks: NoteVisualBlock[]
   body: string
 }
 
