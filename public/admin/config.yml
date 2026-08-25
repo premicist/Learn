@@ -99,6 +99,18 @@ collections:
       - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false, required: false }
       - { label: Cover Image, name: image, widget: image, required: false }
       - { label: Image alt text, name: imageAlt, widget: string, required: false, hint: 'Describe the image when it conveys meaning; leave blank for decorative images.' }
+      - { label: Enable slide viewer, name: slidesEnabled, widget: boolean, required: false, default: false, hint: 'Show a note-derived slide viewer at the top of this note.' }
+      - label: Slide controls
+        name: slideControls
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: Slide mode, name: mode, widget: select, options: [auto, text, bullets, recap], default: auto, hint: 'Use text for paragraph-heavy notes, bullets for compact points, or recap for a summary-focused deck.' }
+          - { label: Maximum points per slide, name: maxPoints, widget: number, value_type: int, min: 1, max: 6, default: 4, hint: 'Lower this for dense or numerical notes.' }
+          - { label: Include quick check, name: includeQuickCheck, widget: boolean, default: true }
+          - { label: Sections to include, name: sections, widget: list, required: false, hint: 'Optional exact H2 section titles. Leave empty to include all sections.' }
+          - { label: Deck title, name: title, widget: string, required: false, hint: 'Optional custom title for the slide viewer.' }
       - { label: Body, name: body, widget: markdown }
 
   - name: blogs

@@ -6,6 +6,7 @@ import Seo from '../components/Seo'
 import { getCurriculumBySubject } from '../data/curriculum'
 import UnitContext from '../components/UnitContext'
 import NoteUnitNavigator from '../components/NoteUnitNavigator'
+import NoteSlideViewer from '../components/NoteSlideViewer'
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr)
@@ -68,6 +69,7 @@ function NotePage() {
         </div>
         <h1>{note.title}</h1>
         <p className="note-page__summary">{note.summary}</p>
+        <NoteSlideViewer note={note} />
 
         {noteUnit && headings.length > 0 && <NoteUnitNavigator unit={noteUnit} headings={headings} />}
 

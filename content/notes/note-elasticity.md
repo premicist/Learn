@@ -3,6 +3,15 @@ subjectId: microeconomics
 title: Price Elasticity of Demand
 summary: How responsive quantity demanded is to a change in price.
 date: "2026-08-23"
+slidesEnabled: false
+slideControls:
+  mode: text
+  maxPoints: 2
+  includeQuickCheck: true
+  sections:
+    - Meaning of price elasticity
+    - Factors determining elasticity
+    - Business decision-making
 ---
 
 ## Meaning of price elasticity

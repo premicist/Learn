@@ -146,6 +146,31 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
           errors.push(`${label} image must use a /images/ path`)
         }
         validateIsoDate(data.date, `${label} date`, errors)
+        if (data.slidesEnabled !== undefined && typeof data.slidesEnabled !== 'boolean') {
+          errors.push(`${label} slidesEnabled must be a boolean`)
+        }
+        if (data.slideControls !== undefined) {
+          const controls = data.slideControls
+          if (!controls || typeof controls !== 'object' || Array.isArray(controls)) {
+            errors.push(`${label} slideControls must be an object`)
+          } else {
+            if (controls.mode !== undefined && !['auto', 'text', 'bullets', 'recap'].includes(controls.mode)) {
+              errors.push(`${label} slideControls.mode must be auto, text, bullets, or recap`)
+            }
+            if (controls.maxPoints !== undefined && (!Number.isInteger(controls.maxPoints) || controls.maxPoints < 1 || controls.maxPoints > 6)) {
+              errors.push(`${label} slideControls.maxPoints must be an integer from 1 to 6`)
+            }
+            if (controls.includeQuickCheck !== undefined && typeof controls.includeQuickCheck !== 'boolean') {
+              errors.push(`${label} slideControls.includeQuickCheck must be a boolean`)
+            }
+            if (controls.sections !== undefined && (!Array.isArray(controls.sections) || controls.sections.some((section) => typeof section !== 'string'))) {
+              errors.push(`${label} slideControls.sections must be a list of strings`)
+            }
+            if (controls.title !== undefined && typeof controls.title !== 'string') {
+              errors.push(`${label} slideControls.title must be a string`)
+            }
+          }
+        }
       }
       if (collection === 'blogs') {
         if (!data.excerpt) errors.push(`${label} is missing excerpt`)

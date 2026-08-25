@@ -3,6 +3,11 @@ subjectId: microeconomics
 title: "Microeconomics: Scope and Method"
 summary: "Understand what microeconomics studies and how it supports business decisions and resource allocation."
 date: "2026-08-23"
+slidesEnabled: true
+slideControls:
+  mode: bullets
+  maxPoints: 3
+  includeQuickCheck: true
 ---
 
 ## Meaning and scope
