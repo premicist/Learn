@@ -270,7 +270,7 @@ curricula:
         order: 4
         title: Factor pricing and distribution
         summary: Study how land, labour, capital, and entrepreneurship are rewarded in the distribution of income.
-        estimatedMinutes: 100
+        estimatedMinutes: 130
         outcomes:
           - Explain the meaning of factor pricing and distribution.
           - Distinguish rent, wages, interest, and profit.
@@ -288,6 +288,12 @@ curricula:
             resourceId: class12-factor-pricing
             estimatedMinutes: 30
             description: Organise the main factor rewards and the forces that influence their differences.
+          - id: class12-subsistence-wage
+            title: Subsistence theory of wage
+            resourceType: note
+            resourceId: class12-subsistence-theory-wage
+            estimatedMinutes: 30
+            description: Explain the classical wage-adjustment mechanism and evaluate its assumptions and criticisms.
           - id: class12-factor-pricing-check
             title: Factor pricing practice
             resourceType: quiz
