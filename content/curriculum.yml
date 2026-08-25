@@ -270,11 +270,11 @@ curricula:
         order: 4
         title: Factor pricing and distribution
         summary: Study how land, labour, capital, and entrepreneurship are rewarded in the distribution of income.
-        estimatedMinutes: 130
+        estimatedMinutes: 150
         outcomes:
           - Explain the meaning of factor pricing and distribution.
           - Distinguish rent, wages, interest, and profit.
-          - Apply rent and distribution concepts to simple economic situations.
+          - Explain and evaluate classical wage theories in simple economic situations.
         lessons:
           - id: class12-factor-pricing-note
             title: Factor pricing and the Ricardian theory of rent
@@ -294,6 +294,12 @@ curricula:
             resourceId: class12-subsistence-theory-wage
             estimatedMinutes: 30
             description: Explain the classical wage-adjustment mechanism and evaluate its assumptions and criticisms.
+          - id: class12-wage-fund-theory
+            title: Wage Fund Theory of Wages
+            resourceType: note
+            resourceId: class12-wage-fund-theory
+            estimatedMinutes: 30
+            description: Use the wage-fund formula to explain average wages and evaluate the theory’s assumptions and criticisms.
           - id: class12-factor-pricing-check
             title: Factor pricing practice
             resourceType: quiz
