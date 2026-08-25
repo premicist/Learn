@@ -20,18 +20,21 @@ visualBlocks:
       - Number of workers
       - Average wage (Rs.)
     rows:
-      - ["Rs. 1,00,00,000", 50000, 200]
-      - ["Rs. 1,00,00,000", 100000, 100]
-      - ["Rs. 1,00,00,000", 150000, 66.67]
+      - cells: ["Rs. 1,00,00,000", 50000, 200]
+      - cells: ["Rs. 1,00,00,000", 100000, 100]
+      - cells: ["Rs. 1,00,00,000", 150000, 66.67]
   - type: graph
     title: Average wage falls as employment rises
     asset: /generated/visuals/wage-fund-average-wage.svg
     xLabel: Number of workers
     yLabel: Average wage (Rs.)
     points:
-      - [50000, 200]
-      - [100000, 100]
-      - [150000, 66.67]
+      - x: 50000
+        y: 200
+      - x: 100000
+        y: 100
+      - x: 150000
+        y: 66.67
 ---
 
 ## Core idea

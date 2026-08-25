@@ -131,7 +131,12 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Columns, name: columns, widget: list }
-              - { label: Rows, name: rows, widget: list, hint: 'Enter one comma-separated row per item; keep every row the same length as Columns.' }
+              - label: Rows
+                name: rows
+                widget: list
+                hint: 'Add one row at a time. Each row must contain one cell for every column.'
+                fields:
+                  - { label: Cells, name: cells, widget: list, hint: 'Enter cells in the same order as Columns.' }
           - label: Graph
             name: graph
             widget: object
@@ -140,7 +145,13 @@ collections:
               - { label: Generated SVG asset, name: asset, widget: string, hint: 'Use a generated /generated/visuals/*.svg path.' }
               - { label: X-axis label, name: xLabel, widget: string }
               - { label: Y-axis label, name: yLabel, widget: string }
-              - { label: Points, name: points, widget: list, hint: 'Enter [x, y] pairs matching the validated source table.' }
+              - label: Points
+                name: points
+                widget: list
+                hint: 'Add one point at a time using the same x and y values as the source table.'
+                fields:
+                  - { label: X value, name: x, widget: number, value_type: float }
+                  - { label: Y value, name: y, widget: number, value_type: float }
       - { label: Body, name: body, widget: markdown }
 
   - name: blogs

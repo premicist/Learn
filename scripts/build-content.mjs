@@ -6,6 +6,7 @@ import path from 'node:path'
 import matter from 'gray-matter'
 import yaml from 'js-yaml'
 import { validateContent } from './validate-content.mjs'
+import { normalizeVisualBlocks } from './normalize-visual-blocks.mjs'
 
 const root = path.resolve(import.meta.dirname, '..')
 const contentDir = path.join(root, 'content')
@@ -156,7 +157,7 @@ const notes = readMarkdownFolder('notes').map((n) => ({
     sections: Array.isArray(n.slideControls?.sections) ? n.slideControls.sections : [],
     title: n.slideControls?.title || '',
   },
-  visualBlocks: Array.isArray(n.visualBlocks) ? n.visualBlocks : [],
+  visualBlocks: normalizeVisualBlocks(Array.isArray(n.visualBlocks) ? n.visualBlocks : []),
   body: n.body,
 }))
 

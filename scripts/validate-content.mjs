@@ -2,6 +2,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import path from 'node:path'
 import matter from 'gray-matter'
 import yaml from 'js-yaml'
+import { normalizeVisualBlocks } from './normalize-visual-blocks.mjs'
 
 const MARKDOWN_COLLECTIONS = ['notes', 'blogs', 'quizzes', 'videos']
 
@@ -172,11 +173,12 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
           }
         }
         if (data.visualBlocks !== undefined) {
-          if (!Array.isArray(data.visualBlocks)) {
+          const visualBlocks = normalizeVisualBlocks(data.visualBlocks)
+          if (!Array.isArray(visualBlocks)) {
             errors.push(`${label} visualBlocks must be a list`)
           } else {
             const visualTypes = new Set(['formula', 'table', 'graph'])
-            data.visualBlocks.forEach((block, blockIndex) => {
+            visualBlocks.forEach((block, blockIndex) => {
               const blockLabel = `${label} visualBlocks item ${blockIndex + 1}`
               if (!block || typeof block !== 'object' || Array.isArray(block)) {
                 errors.push(`${blockLabel} must be an object`)

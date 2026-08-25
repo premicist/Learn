@@ -1,9 +1,9 @@
-#!/usr/bin/env python3
 """Generate deterministic visual assets from note frontmatter visualBlocks.
 
 The pilot intentionally uses only Python's standard library plus PyYAML for
-frontmatter parsing. It validates formulas/tables/graph points before writing
-responsive SVG assets into public/generated/visuals.
+frontmatter parsing. It accepts the editor-friendly Decap CMS object shape and
+normalizes it before validating formulas, tables, and graph points. Validated
+responsive SVG assets are written into public/generated/visuals.
 """
 from __future__ import annotations
 
@@ -41,15 +41,57 @@ def number(value, note: Path, label: str) -> float:
     return parsed
 
 
-def validate_blocks(note: Path, blocks: list[dict]) -> dict | None:
+def normalize_rows(rows, note: Path, label: str) -> list[list[object]]:
+    if not isinstance(rows, list):
+        fail(note, f"{label} must be a non-empty list")
+    normalized: list[list[object]] = []
+    for row_index, row in enumerate(rows, start=1):
+        if isinstance(row, list):
+            normalized.append(row)
+        elif isinstance(row, dict) and isinstance(row.get("cells"), list):
+            normalized.append(row["cells"])
+        else:
+            fail(note, f"{label}[{row_index}] must be a cell list or an object with cells")
+    if not normalized:
+        fail(note, f"{label} must be a non-empty list")
+    return normalized
+
+
+def normalize_points(points, note: Path, label: str) -> list[list[object]]:
+    if not isinstance(points, list) or len(points) < 2:
+        fail(note, f"{label} must contain at least two points")
+    normalized: list[list[object]] = []
+    for point_index, point in enumerate(points, start=1):
+        if isinstance(point, list) and len(point) == 2:
+            normalized.append(point)
+        elif isinstance(point, dict) and "x" in point and "y" in point:
+            normalized.append([point["x"], point["y"]])
+        else:
+            fail(note, f"{label}[{point_index}] must contain x and y")
+    return normalized
+
+
+def normalize_blocks(note: Path, blocks) -> list[dict]:
     if not isinstance(blocks, list):
         fail(note, "visualBlocks must be a list")
-
-    table_rows: list[list[object]] | None = None
-    graph_block: dict | None = None
+    normalized: list[dict] = []
     for index, block in enumerate(blocks, start=1):
         if not isinstance(block, dict):
             fail(note, f"visualBlocks[{index}] must be an object")
+        block_copy = dict(block)
+        if block_copy.get("type") == "table" and "rows" in block_copy:
+            block_copy["rows"] = normalize_rows(block_copy["rows"], note, f"visualBlocks[{index}].rows")
+        if block_copy.get("type") == "graph" and "points" in block_copy:
+            block_copy["points"] = normalize_points(block_copy["points"], note, f"visualBlocks[{index}].points")
+        normalized.append(block_copy)
+    return normalized
+
+
+def validate_blocks(note: Path, blocks: list[dict]) -> dict | None:
+    blocks = normalize_blocks(note, blocks)
+    table_rows: list[list[object]] | None = None
+    graph_block: dict | None = None
+    for index, block in enumerate(blocks, start=1):
         block_type = block.get("type")
         if block_type not in {"formula", "table", "graph"}:
             fail(note, f"visualBlocks[{index}].type must be formula, table, or graph")
@@ -95,8 +137,8 @@ def validate_blocks(note: Path, blocks: list[dict]) -> dict | None:
         graph_points = [(number(point[0], note, "graph x"), number(point[1], note, "graph y")) for point in graph_block["points"]]
         if table_points != graph_points:
             fail(note, "table and graph points do not match")
-        for workers, wage in table_points:
-            fund = number(str(table_rows[table_points.index((workers, wage))][0]).replace("Rs. ", "").replace(",", ""), note, "wage fund")
+        for row, (workers, wage) in zip(table_rows, table_points):
+            fund = number(str(row[0]).replace("Rs. ", "").replace(",", ""), note, "wage fund")
             expected = round(fund / workers, 2)
             if round(wage, 2) != expected:
                 fail(note, f"average wage check failed for {workers} workers: expected {expected}, got {wage}")
