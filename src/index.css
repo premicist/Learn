@@ -1622,11 +1622,12 @@ h2 {
 
   body:has(.unit-sequence-dock) .move-to-top {
     right: auto;
-    bottom: calc(4.55rem + env(safe-area-inset-bottom));
+    bottom: calc(3.45rem + env(safe-area-inset-bottom));
     left: 50%;
     min-width: auto;
-    min-height: 2rem;
-    padding: 0.25rem 0.55rem;
+    min-height: 1.5rem;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.7rem;
     border: 0;
     background: transparent;
     color: var(--teal);
