@@ -2,12 +2,12 @@
 subjectId: class-12
 title: Wage Fund Theory of Wages
 summary: "Wage Fund Theory states that average wages are determined by dividing
-  a predetermined wage fund by the number of workers employed: (W =
-  \\frac{WF}{N} ). It explains why average wages fall when more workers share a
-  fixed fund. However, the theory is unrealistic because the wage fund is not
-  always fixed, workers are not homogeneous, wages are not perfectly flexible,
-  and labour demand depends on product demand, productivity, and institutions.
-  Thus, it is mainly important as a classical theory of wages."
+  a predetermined wage fund by the number of workers employed: (W = Total Wage
+  Fund / No. of Workers) . It explains why average wages fall when more workers
+  share a fixed fund. However, the theory is unrealistic because the wage fund
+  is not always fixed, workers are not homogeneous, wages are not perfectly
+  flexible, and labour demand depends on product demand, productivity, and
+  institutions. Thus, it is mainly important as a classical theory of wages."
 date: 2026-08-25
 slidesEnabled: false
 slideControls:
@@ -20,37 +20,6 @@ visualBlocks:
     expression: W = \frac{WF}{N}
     explanation: Average wage equals the total wage fund divided by the number of
       workers employed.
-  - type: table
-    title: Wage fund example
-    columns:
-      - Total wage fund (Rs.)
-      - Number of workers
-      - Average wage (Rs.)
-    rows:
-      - cells:
-          - Rs. 1,00,00,000
-          - 50000
-          - 200
-      - cells:
-          - Rs. 1,00,00,000
-          - 100000
-          - 100
-      - cells:
-          - Rs. 1,00,00,000
-          - 150000
-          - 66.67
-  - type: graph
-    title: Average wage falls as employment rises
-    asset: /generated/visuals/wage-fund-average-wage.svg
-    xLabel: Number of workers
-    yLabel: Average wage (Rs.)
-    points:
-      - x: 50000
-        y: 200
-      - x: 100000
-        y: 100
-      - x: 150000
-        y: 66.67
 ---
 ## What it is?
 
