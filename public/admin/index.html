@@ -7,5 +7,106 @@
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      (function () {
+        var h = window.h;
+        var createClass = window.createClass;
+
+        function value(entry, field, fallback) {
+          if (!entry || !entry.getIn) return fallback || '';
+          var result = entry.getIn([field]);
+          if (result === undefined || result === null) return fallback || '';
+          return result && result.toJS ? result.toJS() : result;
+        }
+
+        function escapeText(text) {
+          return String(text || '').replace(/\s+/g, ' ').trim();
+        }
+
+        function inlineText(text) {
+          return escapeText(text)
+            .replace(/\*\*(.+?)\*\*/g, '$1')
+            .replace(/\*(.+?)\*/g, '$1')
+            .replace(/`(.+?)`/g, '$1');
+        }
+
+        function bodyBlocks(body) {
+          return String(body || '')
+            .split(/\n\s*\n/)
+            .map(function (block) { return block.trim(); })
+            .filter(Boolean)
+            .slice(0, 18)
+            .map(function (block, index) {
+              var lines = block.split('\n');
+              var first = lines[0] || '';
+              if (/^###\s+/.test(first)) {
+                return h('h3', { key: index }, inlineText(first.replace(/^###\s+/, '')));
+              }
+              if (/^##\s+/.test(first)) {
+                return h('h2', { key: index }, inlineText(first.replace(/^##\s+/, '')));
+              }
+              if (/^#\s+/.test(first)) {
+                return h('h2', { key: index }, inlineText(first.replace(/^#\s+/, '')));
+              }
+              if (lines.every(function (line) { return /^[-*]\s+/.test(line); })) {
+                return h('ul', { key: index }, lines.map(function (line, itemIndex) {
+                  return h('li', { key: itemIndex }, inlineText(line.replace(/^[-*]\s+/, '')));
+                }));
+              }
+              if (/^>\s+/.test(first)) {
+                return h('blockquote', { key: index }, inlineText(lines.join(' ')).replace(/^>\s+/, ''));
+              }
+              return h('p', { key: index }, inlineText(lines.join(' ')));
+            });
+        }
+
+        function visualSummary(blocks) {
+          return (Array.isArray(blocks) ? blocks : []).map(function (block, index) {
+            var type = block.type || 'visual';
+            var title = block.title || type;
+            var detail = '';
+            if (type === 'formula') detail = block.expression || 'Formula expression not entered yet.';
+            if (type === 'table') detail = (block.columns || []).join(' · ') || 'Table columns not entered yet.';
+            if (type === 'graph') detail = (block.xLabel || 'x') + ' against ' + (block.yLabel || 'y');
+            return h('div', { className: 'learn-preview-visual', key: index }, [
+              h('span', { className: 'learn-preview-kicker' }, type),
+              h('strong', null, title),
+              h('p', null, detail),
+            ]);
+          });
+        }
+
+        var NotePreview = createClass({
+          render: function () {
+            var entry = this.props.entry;
+            var title = value(entry, 'title', 'Untitled note');
+            var summary = value(entry, 'summary', 'Add a short learner-facing summary.');
+            var subject = value(entry, 'subjectId', 'No subject selected');
+            var body = value(entry, 'body', 'Start writing the note body.');
+            var slidesEnabled = value(entry, 'slidesEnabled', false);
+            var blocks = value(entry, 'visualBlocks', []);
+            return h('article', { className: 'learn-preview-shell' }, [
+              h('div', { className: 'learn-preview-label' }, 'Student-facing note preview'),
+              h('header', { className: 'learn-preview-header' }, [
+                h('div', { className: 'learn-preview-meta' }, subject + (slidesEnabled ? ' · Slides enabled' : '')),
+                h('h1', null, title),
+                h('p', { className: 'learn-preview-summary' }, summary),
+              ]),
+              Array.isArray(blocks) && blocks.length
+                ? h('section', { className: 'learn-preview-visuals' }, [
+                    h('h2', null, 'Checked visual aids'),
+                    h('div', { className: 'learn-preview-visual-grid' }, visualSummary(blocks)),
+                  ])
+                : null,
+              h('section', { className: 'learn-preview-body' }, bodyBlocks(body)),
+              h('footer', { className: 'learn-preview-footer' }, 'Preview the reading flow here, then verify the published route on desktop and mobile before classroom use.'),
+            ]);
+          },
+        });
+
+        CMS.registerPreviewTemplate('notes', NotePreview);
+        CMS.registerPreviewStyle('/admin/preview.css');
+      })();
+    </script>
   </body>
 </html>

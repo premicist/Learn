@@ -6,7 +6,7 @@ const sourceDir = path.join(root, 'admin')
 const publicDir = path.join(root, 'public', 'admin')
 
 mkdirSync(publicDir, { recursive: true })
-for (const file of ['config.yml', 'index.html']) {
+for (const file of ['config.yml', 'index.html', 'preview.css']) {
   copyFileSync(path.join(sourceDir, file), path.join(publicDir, file))
 }
 
