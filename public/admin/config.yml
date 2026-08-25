@@ -141,40 +141,18 @@ collections:
         collapsed: true
         hint: 'Use explicit data for formulas, tables, and graphs. Generated graphs must be checked before publishing.'
         types:
-          - label: Formula
+          - label: Formula builder
             name: formula
-            widget: object
-            fields:
-              - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
-              - { label: Expression, name: expression, widget: string, hint: 'Use LaTeX math, for example: \\frac{WF}{N}. Inline: \\(W = \\frac{WF}{N}\\).' }
-              - { label: Explanation, name: explanation, widget: text, required: false }
-          - label: Table
+            widget: formula_builder
+            hint: 'Build a common fraction with simple fields. Advanced LaTeX remains available when needed.'
+          - label: Table builder
             name: table
-            widget: object
-            fields:
-              - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
-              - { label: Columns, name: columns, widget: list }
-              - label: Rows
-                name: rows
-                widget: list
-                hint: 'Add one row at a time. Each row must contain one cell for every column.'
-                fields:
-                  - { label: Cells, name: cells, widget: list, hint: 'Enter cells in the same order as Columns.' }
-          - label: Graph
+            widget: table_builder
+            hint: 'Add columns and rows visually. The builder keeps every row aligned with the column count.'
+          - label: Graph builder
             name: graph
-            widget: object
-            fields:
-              - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
-              - { label: Generated SVG asset, name: asset, widget: string, hint: 'Use a generated /generated/visuals/*.svg path.' }
-              - { label: X-axis label, name: xLabel, widget: string }
-              - { label: Y-axis label, name: yLabel, widget: string }
-              - label: Points
-                name: points
-                widget: list
-                hint: 'Add one point at a time using the same x and y values as the source table.'
-                fields:
-                  - { label: X value, name: x, widget: number, value_type: float }
-                  - { label: Y value, name: y, widget: number, value_type: float }
+            widget: graph_builder
+            hint: 'Add x/y points visually. The build pipeline validates the graph against the source table.'
       - { label: Body, name: body, widget: markdown }
 
   - name: blogs

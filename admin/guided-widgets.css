@@ -1,0 +1,20 @@
+.learn-guided-widget { max-width: 760px; padding: 12px 0 4px; }
+.learn-guided-help { margin: 4px 0 10px; color: #60727a; font-size: 12px; line-height: 1.45; }
+.learn-guided-field { display: block; margin: 0 0 10px; }
+.learn-guided-field > span { display: block; margin-bottom: 4px; color: #38515c; font-size: 12px; font-weight: 700; }
+.learn-guided-field input, .learn-guided-field textarea { width: 100%; padding: 8px 9px; border: 1px solid #b8c6ca; border-radius: 4px; font: inherit; }
+.learn-guided-toggle, .learn-guided-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 14px; }
+.learn-guided-toggle button, .learn-guided-actions button { padding: 7px 10px; border: 1px solid #9aafb4; border-radius: 4px; background: #fff; color: #214654; cursor: pointer; font-size: 12px; font-weight: 700; }
+.learn-guided-toggle button.is-active { border-color: #16746a; background: #e9f7f4; color: #0e5b54; }
+.learn-guided-actions button:disabled { cursor: not-allowed; opacity: .45; }
+.learn-guided-fraction-fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.learn-guided-table-editor { overflow-x: auto; padding-bottom: 4px; }
+.learn-guided-table-row { display: grid; grid-template-columns: repeat(var(--learn-table-columns, 2), minmax(110px, 1fr)); gap: 6px; min-width: 360px; margin-bottom: 6px; }
+.learn-guided-table-row input { min-width: 0; padding: 8px; border: 1px solid #b8c6ca; border-radius: 4px; font: inherit; }
+.learn-guided-table-header input { background: #eef7f6; font-weight: 700; }
+.learn-guided-point { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.learn-guided-points { max-width: 520px; }
+@media (max-width: 640px) {
+  .learn-guided-fraction-fields { grid-template-columns: 1fr; gap: 0; }
+  .learn-guided-point { grid-template-columns: 1fr 1fr; }
+}

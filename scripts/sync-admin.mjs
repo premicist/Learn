@@ -8,7 +8,7 @@ const publicDir = path.join(root, 'public', 'admin')
 
 mkdirSync(publicDir, { recursive: true })
 generateResourceCatalog(root)
-for (const file of ['config.yml', 'index.html', 'preview.css']) {
+for (const file of ['config.yml', 'index.html', 'preview.css', 'guided-widgets.js', 'guided-widgets.css']) {
   copyFileSync(path.join(sourceDir, file), path.join(publicDir, file))
 }
 
