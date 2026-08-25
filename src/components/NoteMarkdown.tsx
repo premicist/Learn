@@ -1,8 +1,20 @@
 import type { ReactNode } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import 'katex/dist/katex.min.css'
 
 const CHART_COLORS = ['#146b63', '#b4872a', '#b23a2b', '#47607a', '#0e4a45']
+
+function normalizeMathDelimiters(content: string) {
+  const slash = String.fromCharCode(92)
+  return content
+    .split(`${slash}[`).join('$$\n')
+    .split(`${slash}]`).join('\n$$')
+    .split(`${slash}(`).join('$')
+    .split(`${slash})`).join('$')
+}
 
 function slugify(children: ReactNode) {
   return String(children)
@@ -25,11 +37,9 @@ function NoteChart({ json }: { json: string }) {
   } catch {
     parsed = null
   }
-
   if (!parsed || !parsed.xKey || !Array.isArray(parsed.series) || !Array.isArray(parsed.data) || parsed.data.length === 0) {
     return <p className="note-chart-error">(Chart data couldn&apos;t be read.)</p>
   }
-
   const values = parsed.series.flatMap((key) => parsed.data.map((row) => Number(row[key])).filter(Number.isFinite))
   const min = Math.min(0, ...values)
   const max = Math.max(1, ...values)
@@ -43,7 +53,6 @@ function NoteChart({ json }: { json: string }) {
   const chartHeight = height - top - bottom
   const x = (index: number) => left + (index / Math.max(parsed.data.length - 1, 1)) * chartWidth
   const y = (value: number) => top + ((max - value) / (max - min || 1)) * chartHeight
-
   return (
     <figure className="note-chart">
       <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Interactive economics chart">
@@ -68,7 +77,8 @@ function NoteChart({ json }: { json: string }) {
 function NoteMarkdown({ content }: { content: string }) {
   return (
     <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
+      remarkPlugins={[remarkGfm, remarkMath]}
+      rehypePlugins={[rehypeKatex]}
       components={{
         h2({ children, ...props }) { return <h2 id={slugify(children)} {...props}>{children}</h2> },
         h3({ children, ...props }) { return <h3 id={slugify(children)} {...props}>{children}</h3> },
@@ -79,7 +89,7 @@ function NoteMarkdown({ content }: { content: string }) {
         },
       }}
     >
-      {content}
+      {normalizeMathDelimiters(content)}
     </ReactMarkdown>
   )
 }

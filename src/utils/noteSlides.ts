@@ -17,7 +17,6 @@ function cleanInline(value: string) {
     .replace(/__([^_]+)__/g, '$1')
     .replace(/\*([^*]+)\*/g, '$1')
     .replace(/_([^_]+)_/g, '$1')
-    .replace(/\\\[|\\\]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
 }
@@ -108,7 +107,7 @@ export function buildNoteSlides(note: Note): NoteSlide[] {
 
   for (const visual of note.visualBlocks || []) {
     const visualPoints = visual.type === 'formula'
-      ? [visual.explanation || 'A validated formula from this note.']
+      ? []
       : visual.type === 'table'
         ? ['Use the table to compare the values and identify the relationship described in the note.']
         : ['Read the trend using the labelled axes and the values described in the note.']

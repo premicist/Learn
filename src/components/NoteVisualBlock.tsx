@@ -1,5 +1,7 @@
 import type { NoteVisualBlock as VisualBlock } from '../data/content'
 
+import NoteMath from './NoteMath'
+
 type NoteVisualBlockProps = {
   block: VisualBlock
   showTitle?: boolean
@@ -16,7 +18,9 @@ function NoteVisualBlock({ block, showTitle = true }: NoteVisualBlockProps) {
       <section className="note-visual-block note-visual-block--formula" aria-label={`Formula: ${block.title}`}>
         {showTitle && <p className="note-visual-block__eyebrow">Formula</p>}
         {showTitle && <h3>{block.title}</h3>}
-        <div className="note-formula" role="img" aria-label={`${block.title}: ${block.expression || ''}`}>{block.expression}</div>
+        <div className="note-formula">
+          <NoteMath expression={block.expression || ''} display />
+        </div>
         {block.explanation && <p className="note-visual-block__explanation">{block.explanation}</p>}
       </section>
     )

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import type { Note } from '../data/content'
 import { buildNoteSlides } from '../utils/noteSlides'
+import NoteMarkdown from './NoteMarkdown'
 import NoteVisualBlock from './NoteVisualBlock'
 
 type NoteSlideViewerProps = {
@@ -102,9 +103,13 @@ function NoteSlideViewer({ note }: NoteSlideViewerProps) {
             <div className={`note-slide ${slide.mode === 'recap' ? 'note-slide--recap' : ''}`}>
               <p className="note-slide__eyebrow">{note.title}</p>
               <h2 id="note-slide-viewer-title">{slide.title}</h2>
-              <div className="note-slide__points">
-                {slide.points.map((point, index) => <p key={`${slide.title}-${index}`}>{point}</p>)}
-              </div>
+              {slide.points.length > 0 && <div className="note-slide__points">
+                {slide.points.map((point, index) => (
+                  <div className="note-slide__point" key={`${slide.title}-${index}`}>
+                    <NoteMarkdown content={point} />
+                  </div>
+                ))}
+              </div>}
               {slide.visual && <NoteVisualBlock block={slide.visual} showTitle={false} />}
             </div>
 

@@ -959,7 +959,7 @@ h2 {
   max-width: 720px;
 }
 
-.note-slide__points p {
+.note-slide__point {
   position: relative;
   margin: 0;
   padding: 15px 18px 15px 22px;
@@ -1032,7 +1032,7 @@ h2 {
     font-size: clamp(1.8rem, 9vw, 2.6rem);
   }
 
-  .note-slide__points p {
+  .note-slide__point {
     padding: 13px 14px 13px 16px;
     font-size: 0.98rem;
   }
@@ -2404,6 +2404,20 @@ h2 {
   font-weight: 700;
   text-align: center;
   white-space: nowrap;
+}
+
+.note-math p {
+  margin: 0;
+}
+
+.note-math--display {
+  overflow-x: auto;
+  padding: 4px 0;
+  text-align: center;
+}
+
+.note-math--display .katex-display {
+  margin: 0;
 }
 
 .note-visual-block__explanation {

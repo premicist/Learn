@@ -11,7 +11,7 @@ slideControls:
 visualBlocks:
   - type: formula
     title: Average wage
-    expression: "W = WF / N"
+    expression: 'W = \frac{WF}{N}'
     explanation: "Average wage equals the total wage fund divided by the number of workers employed."
   - type: table
     title: Wage fund example
@@ -47,7 +47,7 @@ The theory says that the average wage depends on two things: the total wage fund
 
 In symbols:
 
-**W = WF ÷ N**
+\(W = \frac{WF}{N}\)
 
 Here, **W** means average wage, **WF** means the wage fund, and **N** means the number of workers employed.
 
@@ -99,7 +99,7 @@ Actual wage rates are influenced by negotiations between workers and employers, 
 
 ## Exam-ready conclusion
 
-Wage Fund Theory states that average wages are determined by dividing a predetermined wage fund by the number of workers employed: \(W = WF/N\). It explains why average wages fall when more workers share a fixed fund. However, the theory is unrealistic because the wage fund is not always fixed, workers are not homogeneous, wages are not perfectly flexible, and labour demand depends on product demand, productivity, and institutions. Thus, it is mainly important as a classical theory of wages.
+Wage Fund Theory states that average wages are determined by dividing a predetermined wage fund by the number of workers employed: \(W = \frac{WF}{N} \). It explains why average wages fall when more workers share a fixed fund. However, the theory is unrealistic because the wage fund is not always fixed, workers are not homogeneous, wages are not perfectly flexible, and labour demand depends on product demand, productivity, and institutions. Thus, it is mainly important as a classical theory of wages.
 
 ## Quick check
 
