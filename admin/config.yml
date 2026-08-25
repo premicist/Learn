@@ -55,7 +55,7 @@ collections:
                 hint: 'Add resources in the order they should appear. Use the exact Markdown filename without .md.'
                 fields:
                   - { label: Type, name: type, widget: select, options: [note, blog, quiz, video] }
-                  - { label: Resource ID, name: id, widget: string }
+                  - { label: Resource, name: id, widget: resource_id, hint: 'Search by title, subject, or resource ID. Choose the resource matching the selected type.' }
 
   - name: curricula
     label: Guided Curricula
@@ -97,7 +97,7 @@ collections:
                       - { label: 'Lesson ID', name: id, widget: string }
                       - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
                       - { label: Resource type, name: resourceType, widget: select, options: [note, blog, quiz, video] }
-                      - { label: 'Resource ID', name: resourceId, widget: string }
+                      - { label: Resource, name: resourceId, widget: resource_id, hint: 'Search for the note, blog, quiz, or video to place in this lesson.' }
                       - { label: 'Estimated minutes', name: estimatedMinutes, widget: number, value_type: int }
                       - { label: Description, name: description, widget: text }
 

@@ -11,6 +11,10 @@
       (function () {
         var h = window.h;
         var createClass = window.createClass;
+        var catalogPromise = fetch('/admin/resource-catalog.json').then(function (response) {
+          if (!response.ok) throw new Error('Resource catalog unavailable');
+          return response.json();
+        }).catch(function () { return []; });
 
         function value(entry, field, fallback) {
           if (!entry || !entry.getIn) return fallback || '';
@@ -39,23 +43,15 @@
             .map(function (block, index) {
               var lines = block.split('\n');
               var first = lines[0] || '';
-              if (/^###\s+/.test(first)) {
-                return h('h3', { key: index }, inlineText(first.replace(/^###\s+/, '')));
-              }
-              if (/^##\s+/.test(first)) {
-                return h('h2', { key: index }, inlineText(first.replace(/^##\s+/, '')));
-              }
-              if (/^#\s+/.test(first)) {
-                return h('h2', { key: index }, inlineText(first.replace(/^#\s+/, '')));
-              }
+              if (/^###\s+/.test(first)) return h('h3', { key: index }, inlineText(first.replace(/^###\s+/, '')));
+              if (/^##\s+/.test(first)) return h('h2', { key: index }, inlineText(first.replace(/^##\s+/, '')));
+              if (/^#\s+/.test(first)) return h('h2', { key: index }, inlineText(first.replace(/^#\s+/, '')));
               if (lines.every(function (line) { return /^[-*]\s+/.test(line); })) {
                 return h('ul', { key: index }, lines.map(function (line, itemIndex) {
                   return h('li', { key: itemIndex }, inlineText(line.replace(/^[-*]\s+/, '')));
                 }));
               }
-              if (/^>\s+/.test(first)) {
-                return h('blockquote', { key: index }, inlineText(lines.join(' ')).replace(/^>\s+/, ''));
-              }
+              if (/^>\s+/.test(first)) return h('blockquote', { key: index }, inlineText(lines.join(' ')).replace(/^>\s+/, ''));
               return h('p', { key: index }, inlineText(lines.join(' ')));
             });
         }
@@ -75,6 +71,62 @@
             ]);
           });
         }
+
+        var ResourceControl = createClass({
+          getInitialState: function () { return { catalog: [], query: '', open: false }; },
+          componentDidMount: function () {
+            var self = this;
+            catalogPromise.then(function (catalog) {
+              self.setState({ catalog: catalog });
+            });
+          },
+          selectResource: function (resource) {
+            this.props.onChange(resource.id);
+            this.setState({ query: resource.title, open: false });
+          },
+          render: function () {
+            var self = this;
+            var current = String(this.props.value || '');
+            var query = this.state.query || current;
+            var normalized = query.toLowerCase();
+            var matches = this.state.catalog.filter(function (resource) {
+              return [resource.title, resource.id, resource.subjectId, resource.type].join(' ').toLowerCase().indexOf(normalized) >= 0;
+            }).slice(0, 8);
+            return h('div', { className: 'learn-resource-picker' }, [
+              h('input', {
+                id: this.props.forID,
+                type: 'search',
+                value: query,
+                placeholder: 'Search title, subject, or ID…',
+                onFocus: function () { self.setState({ open: true }); },
+                onChange: function (event) { self.setState({ query: event.target.value, open: true }); },
+              }),
+              this.state.open && normalized
+                ? h('div', { className: 'learn-resource-results' }, matches.length
+                  ? matches.map(function (resource) {
+                      return h('button', {
+                        type: 'button',
+                        className: 'learn-resource-result',
+                        key: resource.type + '/' + resource.id,
+                        onMouseDown: function (event) { event.preventDefault(); self.selectResource(resource); },
+                      }, [
+                        h('strong', null, resource.title),
+                        h('span', null, resource.type + ' · ' + (resource.subjectId || 'No subject')),
+                      ]);
+                    })
+                  : h('div', { className: 'learn-resource-empty' }, 'No matching resource found.'))
+                : null,
+              current && query !== current ? h('small', null, 'Stored resource ID: ' + current) : null,
+            ]);
+          },
+        });
+
+        var ResourcePreview = createClass({
+          render: function () {
+            var resourceId = String(this.props.value || '');
+            return h('span', null, resourceId || 'No resource selected');
+          },
+        });
 
         var NotePreview = createClass({
           render: function () {
@@ -104,6 +156,10 @@
           },
         });
 
+        var style = document.createElement('style');
+        style.textContent = '.learn-resource-picker{position:relative;max-width:560px}.learn-resource-picker input{width:100%;padding:9px 10px;border:1px solid #b8c6ca;border-radius:4px}.learn-resource-results{position:absolute;z-index:20;left:0;right:0;top:calc(100% + 4px);max-height:280px;overflow:auto;background:#fff;border:1px solid #b8c6ca;border-radius:5px;box-shadow:0 8px 20px rgba(23,48,66,.16)}.learn-resource-result{display:block;width:100%;padding:9px 11px;border:0;border-bottom:1px solid #e4eaec;background:#fff;text-align:left;cursor:pointer}.learn-resource-result:hover{background:#f0f8f7}.learn-resource-result strong,.learn-resource-result span{display:block}.learn-resource-result span,.learn-resource-empty,.learn-resource-picker small{color:#60727a;font-size:12px}.learn-resource-empty{padding:11px}.learn-resource-picker small{display:block;margin-top:5px}';
+        document.head.appendChild(style);
+        CMS.registerWidget('resource_id', ResourceControl, ResourcePreview);
         CMS.registerPreviewTemplate('notes', NotePreview);
         CMS.registerPreviewStyle('/admin/preview.css');
       })();

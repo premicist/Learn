@@ -1,0 +1,1818 @@
+[
+  {
+    "id": "class11-development-growth",
+    "type": "note",
+    "title": "Class 11 Economics: Growth and Development",
+    "subjectId": "class-11",
+    "summary": "Distinguish rising output from broader development and evaluate poverty, inequality, employment, and human resources together.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class11-economic-basics",
+    "type": "note",
+    "title": "Class 11 Economics: Basic Concepts and Resources",
+    "subjectId": "class-11",
+    "summary": "A clear starting point for scarcity, choice, opportunity cost, and the resources used in production.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class11-economic-maths",
+    "type": "note",
+    "title": "Class 11 Economics: Mathematics for Economic Problems",
+    "subjectId": "class-11",
+    "summary": "A practical method for solving equations, percentage changes, tables, and common economics numericals.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class11-elasticity-consumer",
+    "type": "note",
+    "title": "Class 11 Economics: Elasticity and Consumer Behaviour",
+    "subjectId": "class-11",
+    "summary": "Understand responsiveness, utility, consumer choice, and the meaning of consumer surplus.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class11-money-inflation",
+    "type": "note",
+    "title": "Class 11 Economics: Money and Inflation",
+    "subjectId": "class-11",
+    "summary": "Understand the functions of money, money supply, inflation, deflation, and their effects on households and firms.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class11-national-income",
+    "type": "note",
+    "title": "Class 11 Economics: National Income",
+    "subjectId": "class-11",
+    "summary": "Organise GDP and related income measures, compare the main approaches, and avoid double counting.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class11-nepal-economy-resources",
+    "type": "note",
+    "title": "Class 11 Economics: Nepal’s Economy and Resources",
+    "subjectId": "class-11",
+    "summary": "Use economic concepts to study Nepal’s natural resources, agriculture, industry, tourism, transport, and communication.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class11-production-and-cost",
+    "type": "note",
+    "title": "Class 11 Economics: Production and Cost",
+    "subjectId": "class-11",
+    "summary": "Learn how firms transform inputs into output and how total, average, marginal, and cost measures fit together.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-banking-monetary-policy",
+    "type": "note",
+    "title": "Banking and Monetary Policy",
+    "subjectId": "class-12",
+    "summary": "Understand the banking system, money creation, and the tools used to influence monetary conditions.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-cost-curves",
+    "type": "note",
+    "title": "Cost Concepts and Cost Curves",
+    "subjectId": "class-12",
+    "summary": "Build cost tables and explain the relationships among total, average, and marginal cost.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-development-economics",
+    "type": "note",
+    "title": "Development Economics: Poverty, Inequality, and Employment",
+    "subjectId": "class-12",
+    "summary": "Distinguish growth from development and evaluate poverty, inequality, unemployment, and human resources together.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-economic-system-ppc",
+    "type": "note",
+    "title": "Economic Systems and the Production Possibility Curve",
+    "subjectId": "class-12",
+    "summary": "Compare ways of organising an economy and use the production possibility curve to explain choice and efficiency.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-factor-pricing",
+    "type": "note",
+    "title": "Factor Pricing: Rent, Wages, Interest, and Profit",
+    "subjectId": "class-12",
+    "summary": "Study how the factors of production are rewarded and use the existing rent note as the starting point for distribution theory.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-government-finance",
+    "type": "note",
+    "title": "Government Finance and Fiscal Policy",
+    "subjectId": "class-12",
+    "summary": "Organise public revenue and expenditure and explain how fiscal policy can influence the economy.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-imperfect-competition",
+    "type": "note",
+    "title": "Price and Output under Imperfect Competition",
+    "subjectId": "class-12",
+    "summary": "Compare monopoly and other imperfectly competitive markets through demand, revenue, and equilibrium output.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-international-trade",
+    "type": "note",
+    "title": "International Trade and Trade Policy",
+    "subjectId": "class-12",
+    "summary": "Use comparative advantage to explain trade and evaluate tariffs, quotas, and other trade-policy choices.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-market-revenue",
+    "type": "note",
+    "title": "Market and Revenue Curves",
+    "subjectId": "class-12",
+    "summary": "Read market demand and connect total, average, and marginal revenue for different sellers.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-nepal-development-planning",
+    "type": "note",
+    "title": "Development Planning in Nepal",
+    "subjectId": "class-12",
+    "summary": "Understand why development plans are prepared and how goals, resources, implementation, and evaluation fit together.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-nepal-trade-employment",
+    "type": "note",
+    "title": "Nepal’s Foreign Trade and Foreign Employment",
+    "subjectId": "class-12",
+    "summary": "Connect trade, migration, remittances, and employment challenges to Nepal’s economic choices.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-perfect-competition",
+    "type": "note",
+    "title": "Price and Output under Perfect Competition",
+    "subjectId": "class-12",
+    "summary": "Explain firm equilibrium in perfect competition using revenue, cost, and profit conditions.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-quantitative-techniques",
+    "type": "note",
+    "title": "Quantitative Techniques for Economics",
+    "subjectId": "class-12",
+    "summary": "Build a repeatable method for averages, dispersion, index numbers, and clear economic interpretation.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-sdgs-nepal",
+    "type": "note",
+    "title": "Sustainable Development Goals and Nepal",
+    "subjectId": "class-12",
+    "summary": "Use the SDG framework to connect economic, social, and environmental dimensions of development in Nepal.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "class12-subsistence-theory-wage",
+    "type": "note",
+    "title": "Subsistence Theory of Wage",
+    "subjectId": "class-12",
+    "summary": "Explain why classical economists believed wages tend to return to the subsistence level and evaluate the theory’s limitations.",
+    "date": "2026-08-25"
+  },
+  {
+    "id": "class12-wage-fund-theory",
+    "type": "note",
+    "title": "Wage Fund Theory of Wages",
+    "subjectId": "class-12",
+    "summary": "Wage Fund Theory states that average wages are determined by dividing a predetermined wage fund by the number of workers employed: (W = Total Wage Fund / No. of Workers) . It explains why average wages fall when more workers share a fixed fund. However, the theory is unrealistic because the wage fund is not always fixed, workers are not homogeneous, wages are not perfectly flexible, and labour demand depends on product demand, productivity, and institutions. Thus, it is mainly important as a classical theory of wages.",
+    "date": "2026-08-25T00:00:00.000Z"
+  },
+  {
+    "id": "factor-pricing-rent-concept",
+    "type": "note",
+    "title": "FACTOR PRICING: RENT CONCEPT",
+    "subjectId": "class-12",
+    "summary": "Rent is payment for using production factors; contract rent is tenant-landlord gross payment, while economic rent is surplus from fixed supply. Ricardo argued rent stems from fertility differences: superior land earns differential rent over marginal no-rent land, through extensive or intensive cultivation. Critics note fertility changes, accessibility, uses, and scarcity.",
+    "date": "2026-08-22T00:00:00.000Z"
+  },
+  {
+    "id": "macro-aggregate-demand",
+    "type": "note",
+    "title": "Aggregate Demand and Its Derivation",
+    "subjectId": "macroeconomics",
+    "summary": "Explain how the aggregate-demand curve connects the price level with equilibrium output.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-aggregate-supply",
+    "type": "note",
+    "title": "Aggregate Supply and Output Adjustment",
+    "subjectId": "macroeconomics",
+    "summary": "Introduce short-run and long-run aggregate supply and explain how firms respond to prices and costs.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-analysis-methods",
+    "type": "note",
+    "title": "Equilibrium and Methods of Macroeconomic Analysis",
+    "subjectId": "macroeconomics",
+    "summary": "Distinguish equilibrium from disequilibrium and introduce static, comparative-static, and dynamic analysis.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-balance-payments",
+    "type": "note",
+    "title": "Balance of Payments and External Accounts",
+    "subjectId": "macroeconomics",
+    "summary": "Organise current, capital, and financial transactions with the rest of the world.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-banking-central-bank",
+    "type": "note",
+    "title": "Banking and Central Banking",
+    "subjectId": "macroeconomics",
+    "summary": "Explain commercial-bank functions, deposit creation, central-bank roles, and the financial system’s macroeconomic importance.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-budget",
+    "type": "note",
+    "title": "Government Budget and Deficit Financing",
+    "subjectId": "macroeconomics",
+    "summary": "Read the main parts of a government budget and explain revenue deficits, borrowing, and deficit financing methods.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-business-cycles",
+    "type": "note",
+    "title": "Business Cycles and Economic Fluctuations",
+    "subjectId": "macroeconomics",
+    "summary": "Identify business-cycle phases and the demand, supply, financial, and expectation forces behind fluctuations.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-circular-flow",
+    "type": "note",
+    "title": "Circular Flow of Income and Expenditure",
+    "subjectId": "macroeconomics",
+    "summary": "Trace income, output, and expenditure through two-sector, three-sector, and open-economy models.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-classical-employment",
+    "type": "note",
+    "title": "Classical Theory of Employment and Output",
+    "subjectId": "macroeconomics",
+    "summary": "Introduce the classical view of employment, wages, prices, output, and the role of flexible markets.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-closed-economy-policy",
+    "type": "note",
+    "title": "Fiscal and Monetary Policy in the Closed Economy",
+    "subjectId": "macroeconomics",
+    "summary": "Compare how fiscal and monetary changes affect output and interest rates through the IS-LM framework.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-consumption-function",
+    "type": "note",
+    "title": "Consumption Function and Determinants",
+    "subjectId": "macroeconomics",
+    "summary": "Introduce the consumption function, its technical properties, and the variables that influence household spending.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-consumption-hypotheses",
+    "type": "note",
+    "title": "Theories of Consumption Behaviour",
+    "subjectId": "macroeconomics",
+    "summary": "Compare absolute-income, relative-income, life-cycle, and permanent-income explanations of consumption.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-digital-business",
+    "type": "note",
+    "title": "Macroeconomics and the Digital Economy",
+    "subjectId": "macroeconomics",
+    "summary": "Connect digital production, platforms, data, and changing business models with macroeconomic outcomes.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-employment-evaluation",
+    "type": "note",
+    "title": "Classical and Keynesian Employment: Evaluation",
+    "subjectId": "macroeconomics",
+    "summary": "Compare classical and Keynesian explanations of employment, output, and policy effectiveness.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-exchange-rates",
+    "type": "note",
+    "title": "Exchange Rates and Exchange-Rate Regimes",
+    "subjectId": "macroeconomics",
+    "summary": "Explain exchange rates, purchasing-power and market forces, and the difference between fixed and flexible regimes.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-financial-markets-inclusion",
+    "type": "note",
+    "title": "Financial and Capital Markets with Financial Inclusion",
+    "subjectId": "macroeconomics",
+    "summary": "Distinguish money and capital markets and explain how access to finance affects macroeconomic participation.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-fintech-digital-money",
+    "type": "note",
+    "title": "Fintech, Digital Money, and Decentralised Finance",
+    "subjectId": "macroeconomics",
+    "summary": "Introduce financial innovation and consider its effects on money, payments, credit, and policy oversight.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-fiscal-federalism-ppp",
+    "type": "note",
+    "title": "Fiscal Federalism and Public–Private Partnerships",
+    "subjectId": "macroeconomics",
+    "summary": "Introduce the allocation of public finance across levels of government and the logic of public–private partnerships.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-fiscal-policy",
+    "type": "note",
+    "title": "Fiscal Policy and Fiscal Multipliers",
+    "subjectId": "macroeconomics",
+    "summary": "Explain fiscal-policy objectives, instruments, automatic stabilisers, and the limits of multiplier estimates.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-globalization-fdi",
+    "type": "note",
+    "title": "Globalisation, Foreign Direct Investment, and the Global Economy",
+    "subjectId": "macroeconomics",
+    "summary": "Assess trade, capital flows, global integration, and foreign direct investment as macroeconomic forces.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-growth-development-issues",
+    "type": "note",
+    "title": "Economic Growth, Development, Poverty, and Inequality",
+    "subjectId": "macroeconomics",
+    "summary": "Distinguish growth from development and connect productivity, poverty, inequality, employment, and sustainable progress.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-income-determination-sectors",
+    "type": "note",
+    "title": "Income Determination in Two, Three, and Four-Sector Models",
+    "subjectId": "macroeconomics",
+    "summary": "Build equilibrium income models by adding households, government, and the external sector to aggregate expenditure.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-inflation",
+    "type": "note",
+    "title": "Inflation: Concepts, Causes, Measurement, and Effects",
+    "subjectId": "macroeconomics",
+    "summary": "Define inflation, distinguish major causes, and assess how changing prices affect households and firms.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-interest-bonds-liquidity-trap",
+    "type": "note",
+    "title": "Interest Rates, Bond Prices, and the Liquidity Trap",
+    "subjectId": "macroeconomics",
+    "summary": "Connect bond prices with interest rates and explain the Keynesian liquidity-trap idea.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-introduction",
+    "type": "note",
+    "title": "Macroeconomics: Scope and Method",
+    "subjectId": "macroeconomics",
+    "summary": "Understand economy-wide analysis and the main questions asked about output, employment, prices, and growth.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-investment-function",
+    "type": "note",
+    "title": "Investment Function and Investment Demand",
+    "subjectId": "macroeconomics",
+    "summary": "Explain the types, determinants, and uncertainty involved in business investment decisions.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-investment-theories",
+    "type": "note",
+    "title": "Investment Theories: MEC, Accelerator, and Tobin’s q",
+    "subjectId": "macroeconomics",
+    "summary": "Introduce marginal efficiency of capital, accelerator, neoclassical, and Tobin’s q approaches to investment.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-is-lm",
+    "type": "note",
+    "title": "The IS-LM Model",
+    "subjectId": "macroeconomics",
+    "summary": "Derive the product-market and money-market equilibrium schedules and locate short-run output and interest-rate equilibrium.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-keynes-classics",
+    "type": "note",
+    "title": "Keynesian and Classical Aggregate Supply",
+    "subjectId": "macroeconomics",
+    "summary": "Compare Keynesian, intermediate, and classical views of output adjustment and policy effects.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-keynes-effective-demand",
+    "type": "note",
+    "title": "Keynesian Effective Demand",
+    "subjectId": "macroeconomics",
+    "summary": "Use aggregate expenditure and effective demand to explain output and employment when resources are underused.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-macro-variables",
+    "type": "note",
+    "title": "Macroeconomic Variables, Stocks, and Flows",
+    "subjectId": "macroeconomics",
+    "summary": "Classify important macroeconomic variables and distinguish stock measures from flow measures.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-monetary-exchange-links",
+    "type": "note",
+    "title": "Money, Interest, and Exchange-Rate Links",
+    "subjectId": "macroeconomics",
+    "summary": "Connect monetary conditions, interest rates, capital flows, and exchange-rate pressure in an open financial system.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-monetary-policy",
+    "type": "note",
+    "title": "Monetary Policy: Objectives and Instruments",
+    "subjectId": "macroeconomics",
+    "summary": "Describe the goals, types, instruments, and transmission channels of monetary policy.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-money-demand-supply",
+    "type": "note",
+    "title": "Money Supply and Demand for Money",
+    "subjectId": "macroeconomics",
+    "summary": "Introduce the functions of money, determinants of money supply, and Keynesian motives for holding money.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-multiplier",
+    "type": "note",
+    "title": "Multiplier Analysis and Its Extensions",
+    "subjectId": "macroeconomics",
+    "summary": "Explain the investment, government-expenditure, tax, balanced-budget, and foreign-trade multipliers.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-mundell-fleming",
+    "type": "note",
+    "title": "The Mundell–Fleming Open-Economy Model",
+    "subjectId": "macroeconomics",
+    "summary": "Use a simple open-economy framework to compare fiscal and monetary policy under fixed and flexible exchange rates.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-national-aggregates",
+    "type": "note",
+    "title": "National Income Aggregates and Their Interpretation",
+    "subjectId": "macroeconomics",
+    "summary": "Relate GDP, GNP, NDP, NNP, national income, personal income, disposable income, and per-capita income.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-national-income-methods",
+    "type": "note",
+    "title": "Methods and Difficulties of National Income Measurement",
+    "subjectId": "macroeconomics",
+    "summary": "Compare the product, income, and expenditure methods and identify practical measurement difficulties.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-phillips-expectations",
+    "type": "note",
+    "title": "Phillips Curve and Expectations",
+    "subjectId": "macroeconomics",
+    "summary": "Introduce the inflation-unemployment trade-off, natural rate, adaptive expectations, and policy ineffectiveness debate.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-public-revenue",
+    "type": "note",
+    "title": "Public Revenue and Government Expenditure",
+    "subjectId": "macroeconomics",
+    "summary": "Classify public revenue and expenditure and connect government finance with macroeconomic allocation and demand.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-real-nominal-green-gdp",
+    "type": "note",
+    "title": "Real GDP, Price Indexes, and Green GDP",
+    "subjectId": "macroeconomics",
+    "summary": "Separate changes in production from price changes and introduce environmental adjustments to output measures.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-saving-paradox-thrift",
+    "type": "note",
+    "title": "Saving Function and the Paradox of Thrift",
+    "subjectId": "macroeconomics",
+    "summary": "Relate saving to income and explain why a collective attempt to save more can reduce short-run income.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-saving-wealth",
+    "type": "note",
+    "title": "Saving, Wealth, and Macroeconomic Accounting",
+    "subjectId": "macroeconomics",
+    "summary": "Distinguish saving from wealth and connect household, business, and national saving with investment.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-says-law-classical-critique",
+    "type": "note",
+    "title": "Say’s Law and the Classical Employment Debate",
+    "subjectId": "macroeconomics",
+    "summary": "Explain Say’s law, its implications for demand, and the main reasons it was challenged.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-stabilisation",
+    "type": "note",
+    "title": "Macroeconomic Stabilisation and Anti-Inflation Measures",
+    "subjectId": "macroeconomics",
+    "summary": "Compare demand-management, supply-side, and institutional responses to inflation, unemployment, and cycles.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-unemployment",
+    "type": "note",
+    "title": "Unemployment: Types, Costs, and the Natural Rate",
+    "subjectId": "macroeconomics",
+    "summary": "Classify unemployment and connect labour-market slack with output, income, and policy choices.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "macro-wage-rigidity-labour-market",
+    "type": "note",
+    "title": "Wage Rigidity, Labour Supply, and Unemployment",
+    "subjectId": "macroeconomics",
+    "summary": "Explain why wages may adjust slowly and how labour-market conditions affect aggregate supply and unemployment.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-agency-behaviour",
+    "type": "note",
+    "title": "Agency Relationships and Behavioural Theories of the Firm",
+    "subjectId": "managerial-economics",
+    "summary": "Understand agency problems, managerial utility, and behavioural approaches to organisational decision-making.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-break-even",
+    "type": "note",
+    "title": "Break-Even and Contribution Analysis",
+    "subjectId": "managerial-economics",
+    "summary": "Connect fixed cost, variable cost, price, contribution, and break-even output.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-competition-monopoly",
+    "type": "note",
+    "title": "Perfect Competition and Monopoly",
+    "subjectId": "managerial-economics",
+    "summary": "Compare price-taking competition with monopoly pricing, output, and welfare outcomes.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-consumer-choice",
+    "type": "note",
+    "title": "Consumer Behaviour and Choice",
+    "subjectId": "managerial-economics",
+    "summary": "Introduce consumer preferences, constraints, and optimisation as a basis for understanding demand.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-cost-concepts",
+    "type": "note",
+    "title": "Cost Concepts for Managerial Decisions",
+    "subjectId": "managerial-economics",
+    "summary": "Distinguish explicit, implicit, fixed, variable, average, marginal, and opportunity costs.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-cost-curves",
+    "type": "note",
+    "title": "Short-Run and Long-Run Cost Curves",
+    "subjectId": "managerial-economics",
+    "summary": "Interpret average, marginal, fixed, variable, and long-run cost relationships.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-cost-estimation",
+    "type": "note",
+    "title": "Empirical Estimation of Cost Functions",
+    "subjectId": "managerial-economics",
+    "summary": "Use observed cost and output data to estimate cost relationships for planning and control.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-cost-plus-markup",
+    "type": "note",
+    "title": "Cost-Plus and Mark-Up Pricing",
+    "subjectId": "managerial-economics",
+    "summary": "Introduce cost-based pricing, mark-up calculations, contribution, and the limits of simple rules.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-demand-estimation",
+    "type": "note",
+    "title": "Demand Estimation and Marketing Research",
+    "subjectId": "managerial-economics",
+    "summary": "Introduce demand estimation using data, customer research, and economic reasoning.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-demand-supply",
+    "type": "note",
+    "title": "Demand and Supply for Business Decisions",
+    "subjectId": "managerial-economics",
+    "summary": "Use demand and supply functions to describe markets and support managerial decisions.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-efficiency-policy",
+    "type": "note",
+    "title": "Market Efficiency, Surplus, and Policy Effects",
+    "subjectId": "managerial-economics",
+    "summary": "Evaluate consumer surplus, producer surplus, efficiency, and the effects of taxes, subsidies, and price controls.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-elasticity",
+    "type": "note",
+    "title": "Elasticity and Revenue Applications",
+    "subjectId": "managerial-economics",
+    "summary": "Measure demand and supply responsiveness and apply elasticity to pricing, revenue, and planning.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-environment-public-choice",
+    "type": "note",
+    "title": "Environmental Policy and Public Choice",
+    "subjectId": "managerial-economics",
+    "summary": "Evaluate pollution controls, government failure, regulatory trade-offs, and public-choice incentives.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-externalities",
+    "type": "note",
+    "title": "Externalities and Corrective Policies",
+    "subjectId": "managerial-economics",
+    "summary": "Explain positive and negative externalities and evaluate taxes, subsidies, standards, and permits.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-firm-goals",
+    "type": "note",
+    "title": "The Firm and Its Objectives",
+    "subjectId": "managerial-economics",
+    "summary": "Introduce the firm as a decision-making organisation and compare common managerial objectives.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-forecasting-limitations",
+    "type": "note",
+    "title": "Forecast Accuracy, Uncertainty, and Limitations",
+    "subjectId": "managerial-economics",
+    "summary": "Evaluate forecast error, model assumptions, structural change, and responsible use of forecasts.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-game-theory",
+    "type": "note",
+    "title": "Game Theory and Payoff Matrices",
+    "subjectId": "managerial-economics",
+    "summary": "Use payoff matrices to represent strategic choices, incentives, and possible outcomes.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-incremental-pricing",
+    "type": "note",
+    "title": "Incremental Cost Pricing",
+    "subjectId": "managerial-economics",
+    "summary": "Use incremental revenue and cost for short-run pricing, special orders, and capacity decisions.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-indifference-budget",
+    "type": "note",
+    "title": "Indifference Curves and Budget Constraints",
+    "subjectId": "managerial-economics",
+    "summary": "Use indifference curves, marginal rate of substitution, and budget lines to describe consumer equilibrium.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-information-asymmetry",
+    "type": "note",
+    "title": "Asymmetric Information and Incentives",
+    "subjectId": "managerial-economics",
+    "summary": "Explain adverse selection, moral hazard, signalling, and principal-agent problems in business markets.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-information-failure",
+    "type": "note",
+    "title": "Incomplete Information and Market Quality",
+    "subjectId": "managerial-economics",
+    "summary": "Analyse hidden information, quality uncertainty, signalling, screening, and consumer protection.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-introduction",
+    "type": "note",
+    "title": "Managerial Economics: Scope and Use",
+    "subjectId": "managerial-economics",
+    "summary": "Understand how economic reasoning supports business decisions under scarcity, constraints, and uncertainty.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-isoquant-isocost",
+    "type": "note",
+    "title": "Isoquants, Isocosts, and Least-Cost Input Choice",
+    "subjectId": "managerial-economics",
+    "summary": "Find efficient input combinations using technical substitution and input prices.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-learning-curve",
+    "type": "note",
+    "title": "Learning Curves and Productivity",
+    "subjectId": "managerial-economics",
+    "summary": "Introduce learning effects and their use in cost, capacity, pricing, and project planning.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-market-equilibrium",
+    "type": "note",
+    "title": "Market Equilibrium and Market Mechanism",
+    "subjectId": "managerial-economics",
+    "summary": "Explain how market demand and supply determine equilibrium and how shocks change price and quantity.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-market-failure",
+    "type": "note",
+    "title": "Market Failure and Deadweight Loss",
+    "subjectId": "managerial-economics",
+    "summary": "Identify situations where private market outcomes do not use resources efficiently.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-market-structures",
+    "type": "note",
+    "title": "Market Structure and Competitive Conditions",
+    "subjectId": "managerial-economics",
+    "summary": "Classify markets using sellers, products, entry barriers, information, and price control.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-monopolistic-competition",
+    "type": "note",
+    "title": "Monopolistic Competition and Product Differentiation",
+    "subjectId": "managerial-economics",
+    "summary": "Explain differentiated products, selling cost, entry, and long-run adjustment.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-multiple-product-pricing",
+    "type": "note",
+    "title": "Multiple-Product and Fixed-Proportion Pricing",
+    "subjectId": "managerial-economics",
+    "summary": "Introduce pricing choices for product lines, complements, bundles, and joint production.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-oligopoly-pricing",
+    "type": "note",
+    "title": "Oligopoly, Cartels, Price Leadership, and Kinked Demand",
+    "subjectId": "managerial-economics",
+    "summary": "Introduce strategic pricing models used when a few firms are mutually dependent.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-opportunity-cost",
+    "type": "note",
+    "title": "Scarcity, Opportunity Cost, and the Production Possibility Curve",
+    "subjectId": "managerial-economics",
+    "summary": "Use scarcity and opportunity cost to frame resource allocation and business trade-offs.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-peak-load-two-part",
+    "type": "note",
+    "title": "Peak-Load Pricing and Two-Part Tariffs",
+    "subjectId": "managerial-economics",
+    "summary": "Apply time-based pricing and access-fee design when demand and capacity vary.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-positive-normative",
+    "type": "note",
+    "title": "Positive and Normative Business Analysis",
+    "subjectId": "managerial-economics",
+    "summary": "Separate evidence-based explanation from value-based recommendation in managerial and policy analysis.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-price-discrimination-dynamic",
+    "type": "note",
+    "title": "Price Discrimination, Dynamic, and Predatory Pricing",
+    "subjectId": "managerial-economics",
+    "summary": "Compare customer-based pricing, value-based adaptation, and the risks of predatory strategies.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-price-effects",
+    "type": "note",
+    "title": "Income, Substitution, and Price Effects",
+    "subjectId": "managerial-economics",
+    "summary": "Decompose a price change into income and substitution effects and interpret normal and inferior goods.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-production-functions",
+    "type": "note",
+    "title": "Production Functions and Technology",
+    "subjectId": "managerial-economics",
+    "summary": "Describe how firms transform inputs into output and distinguish short-run from long-run production choices.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-profit-optimisation",
+    "type": "note",
+    "title": "Profit, Economic Profit, and Optimisation",
+    "subjectId": "managerial-economics",
+    "summary": "Distinguish accounting and economic profit and introduce constrained optimisation for managers.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-profit-value",
+    "type": "note",
+    "title": "Profit Maximisation and Value Maximisation",
+    "subjectId": "managerial-economics",
+    "summary": "Compare profit-maximising and value-maximising decisions across time, risk, and investment horizons.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-public-goods-common",
+    "type": "note",
+    "title": "Public Goods and Common-Property Resources",
+    "subjectId": "managerial-economics",
+    "summary": "Distinguish public goods from common resources and explain free-riding and overuse.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-qualitative-forecasting",
+    "type": "note",
+    "title": "Qualitative Demand Forecasting",
+    "subjectId": "managerial-economics",
+    "summary": "Compare surveys, expert judgement, and market experiments as qualitative forecasting tools.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-quantitative-forecasting",
+    "type": "note",
+    "title": "Quantitative Demand Forecasting",
+    "subjectId": "managerial-economics",
+    "summary": "Introduce time-series, moving-average, smoothing, barometric, and regression forecasting methods.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-regulation-competition",
+    "type": "note",
+    "title": "Competition Policy, Regulation, and Patents",
+    "subjectId": "managerial-economics",
+    "summary": "Introduce antitrust, utility regulation, operating controls, and patent policy as responses to market power.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-relevant-cost",
+    "type": "note",
+    "title": "Relevant Cost and Short-Run Decisions",
+    "subjectId": "managerial-economics",
+    "summary": "Apply incremental and avoidable-cost reasoning to special orders, shutdowns, and capacity choices.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-returns-scope",
+    "type": "note",
+    "title": "Returns to Scale and Economies of Scope",
+    "subjectId": "managerial-economics",
+    "summary": "Distinguish scale effects from scope effects in long-run production and organisation.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-risk-uncertainty",
+    "type": "note",
+    "title": "Risk and Uncertainty in Business Decisions",
+    "subjectId": "managerial-economics",
+    "summary": "Distinguish measurable risk from uncertainty and frame managerial choices under changing outcomes.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-sales-growth",
+    "type": "note",
+    "title": "Sales Revenue, Growth, and Managerial Discretion",
+    "subjectId": "managerial-economics",
+    "summary": "Explore sales-revenue maximisation, growth objectives, and managerial discretion in large organisations.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-strategic-interaction",
+    "type": "note",
+    "title": "Repeated and Multistage Strategic Interaction",
+    "subjectId": "managerial-economics",
+    "summary": "Extend game-theory reasoning to repeated, sequential, and multistage business decisions.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-trade-applications",
+    "type": "note",
+    "title": "Trade and Market Decisions",
+    "subjectId": "managerial-economics",
+    "summary": "Apply comparative-advantage and trade-policy reasoning to business markets and sourcing decisions.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-transfer-pricing",
+    "type": "note",
+    "title": "Transfer Pricing",
+    "subjectId": "managerial-economics",
+    "summary": "Explain internal pricing between divisions and its effects on coordination and performance evaluation.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "managerial-variable-inputs",
+    "type": "note",
+    "title": "One and Two Variable Inputs",
+    "subjectId": "managerial-economics",
+    "summary": "Use total, average, and marginal product to analyse input employment and short-run production.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "micro-budget-equilibrium",
+    "type": "note",
+    "title": "Budget Line and Consumer Equilibrium",
+    "subjectId": "microeconomics",
+    "summary": "Combine preferences with income and prices to locate consumer equilibrium using the budget line.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-cardinal-utility",
+    "type": "note",
+    "title": "Cardinal Utility and Consumer Equilibrium",
+    "subjectId": "microeconomics",
+    "summary": "Use total and marginal utility, diminishing marginal utility, and the equi-marginal principle to explain consumer choice.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-cost-concepts",
+    "type": "note",
+    "title": "Cost Concepts and Opportunity Cost",
+    "subjectId": "microeconomics",
+    "summary": "Distinguish explicit, implicit, accounting, economic, fixed, variable, and opportunity costs.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-cost-curves",
+    "type": "note",
+    "title": "Short-Run and Long-Run Cost Curves",
+    "subjectId": "microeconomics",
+    "summary": "Read average and marginal cost curves and connect short-run decisions with long-run planning.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-demand-function",
+    "type": "note",
+    "title": "Demand Function and the Law of Demand",
+    "subjectId": "microeconomics",
+    "summary": "Understand demand, demand functions, types of demand, and the relationship between price and quantity demanded.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-elasticity-applications",
+    "type": "note",
+    "title": "Other Elasticities and Business Applications",
+    "subjectId": "microeconomics",
+    "summary": "Extend elasticity analysis to income, cross, advertising, and supply responses for practical decisions.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-equilibrium-policy",
+    "type": "note",
+    "title": "Market Equilibrium and Government Policy",
+    "subjectId": "microeconomics",
+    "summary": "Find market equilibrium and examine how taxes, subsidies, and price controls change market outcomes.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-incremental-transfer-pricing",
+    "type": "note",
+    "title": "Incremental Cost and Transfer Pricing",
+    "subjectId": "microeconomics",
+    "summary": "Use incremental-cost thinking and transfer-pricing principles for internal and short-run business decisions.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-indifference-curves",
+    "type": "note",
+    "title": "Indifference Curves and Marginal Rate of Substitution",
+    "subjectId": "microeconomics",
+    "summary": "Understand ordinal preferences, indifference curves, and the marginal rate of substitution.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-interest-rates",
+    "type": "note",
+    "title": "Interest Rates and Differentials",
+    "subjectId": "microeconomics",
+    "summary": "Understand interest as a return to capital and explain why interest rates differ across loans and investments.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-introduction",
+    "type": "note",
+    "title": "Microeconomics: Scope and Method",
+    "subjectId": "microeconomics",
+    "summary": "Understand what microeconomics studies and how it supports business decisions and resource allocation.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-isoquant-isocost",
+    "type": "note",
+    "title": "Isoquants, Isocosts, and Input Choice",
+    "subjectId": "microeconomics",
+    "summary": "Use isoquant and isocost analysis to explain the optimal combination of two variable inputs.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-market-structure",
+    "type": "note",
+    "title": "Market Structure and Firm Objectives",
+    "subjectId": "microeconomics",
+    "summary": "Classify market structures and introduce profit maximisation as a firm decision objective.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-markup-pricing",
+    "type": "note",
+    "title": "Mark-Up and Cost-Plus Pricing",
+    "subjectId": "microeconomics",
+    "summary": "Introduce practical pricing based on cost, mark-up, contribution, and the limits of cost-plus rules.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-monopolistic-competition",
+    "type": "note",
+    "title": "Monopolistic Competition and Selling Cost",
+    "subjectId": "microeconomics",
+    "summary": "Study differentiated products, short-run and long-run equilibrium, selling cost, and advertising choices.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-monopoly",
+    "type": "note",
+    "title": "Monopoly",
+    "subjectId": "microeconomics",
+    "summary": "Use demand, revenue, and cost relationships to explain monopoly equilibrium and market-power outcomes.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-oligopoly-cartel",
+    "type": "note",
+    "title": "Duopoly, Oligopoly, and Cartels",
+    "subjectId": "microeconomics",
+    "summary": "Introduce strategic interdependence, duopoly, oligopoly, and the conditions that support or weaken cartels.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-peak-load-two-part-pricing",
+    "type": "note",
+    "title": "Peak-Load and Two-Part Pricing",
+    "subjectId": "microeconomics",
+    "summary": "Explore pricing that responds to demand timing and combines an access fee with a per-unit charge.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-perfect-competition",
+    "type": "note",
+    "title": "Perfect Competition",
+    "subjectId": "microeconomics",
+    "summary": "Explain short-run and long-run equilibrium and derive the firm and industry supply logic under perfect competition.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-positive-normative",
+    "type": "note",
+    "title": "Positive, Normative, Micro, and Macro Economics",
+    "subjectId": "microeconomics",
+    "summary": "Distinguish positive and normative statements and place microeconomic questions in their wider economic context.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-price-discrimination",
+    "type": "note",
+    "title": "Price Discrimination",
+    "subjectId": "microeconomics",
+    "summary": "Understand how a seller may charge different prices for the same product and identify the conditions required.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-price-income-substitution",
+    "type": "note",
+    "title": "Income, Substitution, and Price Effects",
+    "subjectId": "microeconomics",
+    "summary": "Decompose a price change into income and substitution effects and connect the result to demand for normal and inferior goods.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-production-function",
+    "type": "note",
+    "title": "Production Function and Cobb-Douglas Form",
+    "subjectId": "microeconomics",
+    "summary": "Understand production functions, inputs, output, and the introductory logic of a Cobb-Douglas production function.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-profit",
+    "type": "note",
+    "title": "Accounting Profit and Economic Profit",
+    "subjectId": "microeconomics",
+    "summary": "Distinguish accounting and economic profit and connect profit to risk, innovation, and resource allocation.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-rent",
+    "type": "note",
+    "title": "Rent and the Resource Market",
+    "subjectId": "microeconomics",
+    "summary": "Introduce rent as a factor reward and connect resource scarcity, demand, and alternative uses.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-returns-to-scale",
+    "type": "note",
+    "title": "Returns to Scale",
+    "subjectId": "microeconomics",
+    "summary": "Distinguish increasing, constant, and decreasing returns to scale when all inputs change together.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-risk-management",
+    "type": "note",
+    "title": "Consumer Choice under Risk",
+    "subjectId": "microeconomics",
+    "summary": "Introduce risk preferences, expected outcomes, and simple risk-management choices in consumer and business decisions.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-scale-scope-breakeven",
+    "type": "note",
+    "title": "Economies of Scale, Scope, and Break-Even",
+    "subjectId": "microeconomics",
+    "summary": "Understand scale and scope economies and use break-even reasoning to connect price, cost, and output.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-scarcity-choice",
+    "type": "note",
+    "title": "Scarcity, Alternatives, and Choice",
+    "subjectId": "microeconomics",
+    "summary": "Use scarcity and opportunity cost to explain how consumers, firms, and governments choose among alternatives.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-skimming-penetration-pricing",
+    "type": "note",
+    "title": "Skimming, Penetration, and Predatory Pricing",
+    "subjectId": "microeconomics",
+    "summary": "Compare launch-pricing strategies and distinguish competitive strategy from potentially harmful predatory pricing.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-supply-function",
+    "type": "note",
+    "title": "Supply Function and the Law of Supply",
+    "subjectId": "microeconomics",
+    "summary": "Explain supply, its determinants, and how producers respond to price and production conditions.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-variable-proportions",
+    "type": "note",
+    "title": "Law of Variable Proportions",
+    "subjectId": "microeconomics",
+    "summary": "Use total, average, and marginal product to explain how output responds to a changing variable input in the short run.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-wage-determination",
+    "type": "note",
+    "title": "Wage Determination and Labour Markets",
+    "subjectId": "microeconomics",
+    "summary": "Study wage determination, unions, minimum wages, pay for performance, and wage differentials.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "micro-work-leisure",
+    "type": "note",
+    "title": "Choice between Work and Leisure",
+    "subjectId": "microeconomics",
+    "summary": "Use a simple labour-leisure model to explain how wages and income affect work decisions.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "note-demand-supply",
+    "type": "note",
+    "title": "Law of Demand and Supply",
+    "subjectId": "class-11",
+    "summary": "The basics of how price relates to quantity demanded and supplied.",
+    "date": "2026-07-19T00:00:00.000Z"
+  },
+  {
+    "id": "note-elasticity",
+    "type": "note",
+    "title": "Price Elasticity of Demand",
+    "subjectId": "microeconomics",
+    "summary": "How responsive quantity demanded is to a change in price.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "note-marginal-analysis",
+    "type": "note",
+    "title": "Marginal Analysis in Decision-Making",
+    "subjectId": "managerial-economics",
+    "summary": "Apply marginal benefit, marginal cost, and incremental reasoning to practical managerial choices.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "note-national-income",
+    "type": "note",
+    "title": "Measuring National Income",
+    "subjectId": "macroeconomics",
+    "summary": "Use national income accounting concepts and the product, income, and expenditure approaches to measure economic activity.",
+    "date": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "note-optimization",
+    "type": "note",
+    "title": "Unconstrained Optimization",
+    "subjectId": "mathematical-economics",
+    "summary": "Using derivatives to find maxima and minima in economic models.",
+    "date": ""
+  },
+  {
+    "id": "note-pricing-strategy",
+    "type": "note",
+    "title": "Dynamic Pricing Fundamentals",
+    "subjectId": "revenue-management",
+    "summary": "How firms adjust prices in response to demand fluctuations.",
+    "date": ""
+  },
+  {
+    "id": "note-recruitment",
+    "type": "note",
+    "title": "Recruitment and Selection",
+    "subjectId": "hrm",
+    "summary": "The process of attracting and choosing qualified candidates.",
+    "date": ""
+  },
+  {
+    "id": "note-social-institutions",
+    "type": "note",
+    "title": "Social Institutions",
+    "subjectId": "sociology",
+    "summary": "Family, education, religion, and the state as building blocks of society.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "sociology-business-and-culture",
+    "type": "note",
+    "title": "Culture in Organisations and Markets",
+    "subjectId": "sociology",
+    "summary": "Explore cultural processes and their implications for organisations, customers, workplaces, marketing, human resources, and negotiations.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "sociology-business-demography",
+    "type": "note",
+    "title": "Population, People, and Business",
+    "subjectId": "sociology",
+    "summary": "Study population concepts, demographic evidence, human resources, inequality, and the implications of population change for business planning.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "sociology-foundations-of-society",
+    "type": "note",
+    "title": "Society, Culture, and Social Institutions",
+    "subjectId": "sociology",
+    "summary": "Study the building blocks of social life, from society and community to culture, socialisation, institutions, norms, status, and roles.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "sociology-overview",
+    "type": "note",
+    "title": "What Sociology Studies",
+    "subjectId": "sociology",
+    "summary": "Build a foundation in sociological thinking, social interaction, and the relevance of sociology to organisations and everyday life.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "sociology-social-change-movements",
+    "type": "note",
+    "title": "How Societies Change",
+    "subjectId": "sociology",
+    "summary": "Connect social change, social movements, technology, and globalisation to working life, markets, and organisational decisions.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "sociology-theoretical-perspectives",
+    "type": "note",
+    "title": "Four Sociological Perspectives",
+    "subjectId": "sociology",
+    "summary": "Compare structural functionalism, conflict theory, symbolic interactionism, and postmodernism as lenses for social and organisational life.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "sociology-urbanization",
+    "type": "note",
+    "title": "Urbanisation and Changing Markets",
+    "subjectId": "sociology",
+    "summary": "Connect urban growth with infrastructure, labour, markets, and business opportunities and challenges.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "blog-behavioral-economics",
+    "type": "blog",
+    "title": "Why We Don't Always Act Rationally: An Intro to Behavioral Economics",
+    "subjectId": "microeconomics",
+    "summary": "A look at how psychology challenges the assumption of the rational consumer.",
+    "date": "2026-04-20T00:00:00.000Z"
+  },
+  {
+    "id": "blog-class11-development-nepal",
+    "type": "blog",
+    "title": "Applying Growth and Development Ideas to Nepal",
+    "subjectId": "class-11",
+    "summary": "A short framework for evaluating Nepal’s progress beyond output alone.",
+    "date": "2026-08-23"
+  },
+  {
+    "id": "blog-exam-tips",
+    "type": "blog",
+    "title": "Five Tips to Prepare for Your Economics Board Exam",
+    "subjectId": "class-11",
+    "summary": "Practical study strategies for the NEB economics exam.",
+    "date": "2026-05-02T00:00:00.000Z"
+  },
+  {
+    "id": "blog-inflation-explained",
+    "type": "blog",
+    "title": "Inflation Explained: Causes and Consequences",
+    "subjectId": "macroeconomics",
+    "summary": "Breaking down why prices rise and what it means for households.",
+    "date": "2026-03-10T00:00:00.000Z"
+  },
+  {
+    "id": "blog-nepal-economy-2026",
+    "type": "blog",
+    "title": "Understanding Nepal's Economy: A Quick Overview",
+    "subjectId": "class-11",
+    "summary": "A beginner-friendly look at the structure and challenges of the Nepali economy.",
+    "date": "2026-06-15T00:00:00.000Z"
+  },
+  {
+    "id": "quiz-class11-elasticity",
+    "type": "quiz",
+    "title": "Class 11 Elasticity and Utility Check",
+    "subjectId": "class-11",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-class11-foundations",
+    "type": "quiz",
+    "title": "Class 11 Foundations Check",
+    "subjectId": "class-11",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-class11-maths",
+    "type": "quiz",
+    "title": "Class 11 Quantitative Skills Check",
+    "subjectId": "class-11",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-class11-production",
+    "type": "quiz",
+    "title": "Class 11 Production and Cost Check",
+    "subjectId": "class-11",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-class12-development-quantitative",
+    "type": "quiz",
+    "title": "Class 12 Development and Quantitative Skills Check",
+    "subjectId": "class-12",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-class12-factor-pricing",
+    "type": "quiz",
+    "title": "Class 12 Factor Pricing Practice",
+    "subjectId": "class-12",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-class12-foundations",
+    "type": "quiz",
+    "title": "Class 12 Allocation and Systems Check",
+    "subjectId": "class-12",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-class12-macro",
+    "type": "quiz",
+    "title": "Class 12 Macro Policy Practice",
+    "subjectId": "class-12",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-class12-micro",
+    "type": "quiz",
+    "title": "Class 12 Microeconomics Practice",
+    "subjectId": "class-12",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-class12-price-output",
+    "type": "quiz",
+    "title": "Class 12 Price and Output Practice",
+    "subjectId": "class-12",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-demand-supply",
+    "type": "quiz",
+    "title": "Demand and Supply Basics",
+    "subjectId": "class-11",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-elasticity",
+    "type": "quiz",
+    "title": "Price Elasticity",
+    "subjectId": "microeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-macro-adas",
+    "type": "quiz",
+    "title": "Aggregate demand and supply practice",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-macro-banking",
+    "type": "quiz",
+    "title": "Banking and monetary policy practice",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-macro-consumption-investment",
+    "type": "quiz",
+    "title": "Consumption, saving, and investment practice",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-macro-employment",
+    "type": "quiz",
+    "title": "Classical and Keynesian employment practice",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-macro-fiscal",
+    "type": "quiz",
+    "title": "Fiscal policy and government finance practice",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-macro-foundations",
+    "type": "quiz",
+    "title": "Macroeconomics foundations practice",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-macro-inflation-cycles",
+    "type": "quiz",
+    "title": "Inflation, unemployment, and cycles practice",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-macro-money-islm",
+    "type": "quiz",
+    "title": "Money, interest, and IS-LM practice",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-macro-national-income",
+    "type": "quiz",
+    "title": "National income accounting practice",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-macro-open-economy",
+    "type": "quiz",
+    "title": "Open economy and global economy practice",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-managerial-consumer-risk",
+    "type": "quiz",
+    "title": "Consumer choice, risk, and information practice",
+    "subjectId": "managerial-economics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-managerial-costs",
+    "type": "quiz",
+    "title": "Cost and break-even practice",
+    "subjectId": "managerial-economics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-managerial-demand-welfare",
+    "type": "quiz",
+    "title": "Demand, equilibrium, and welfare practice",
+    "subjectId": "managerial-economics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-managerial-firms",
+    "type": "quiz",
+    "title": "Firms, managers, and objectives practice",
+    "subjectId": "managerial-economics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-managerial-forecasting",
+    "type": "quiz",
+    "title": "Demand estimation and forecasting practice",
+    "subjectId": "managerial-economics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-managerial-foundations",
+    "type": "quiz",
+    "title": "Managerial Economics foundations practice",
+    "subjectId": "managerial-economics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-managerial-market-failure",
+    "type": "quiz",
+    "title": "Market failure and government intervention practice",
+    "subjectId": "managerial-economics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-managerial-markets",
+    "type": "quiz",
+    "title": "Market structures and strategic behaviour practice",
+    "subjectId": "managerial-economics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-managerial-pricing",
+    "type": "quiz",
+    "title": "Pricing practices and strategy practice",
+    "subjectId": "managerial-economics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-managerial-production",
+    "type": "quiz",
+    "title": "Production and input choice practice",
+    "subjectId": "managerial-economics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-micro-consumer",
+    "type": "quiz",
+    "title": "Consumer Behaviour Practice",
+    "subjectId": "microeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-micro-costs",
+    "type": "quiz",
+    "title": "Cost Analysis Practice",
+    "subjectId": "microeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-micro-demand-supply",
+    "type": "quiz",
+    "title": "Demand, Supply, and Elasticity Practice",
+    "subjectId": "microeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-micro-foundations",
+    "type": "quiz",
+    "title": "Microeconomics Foundations Check",
+    "subjectId": "microeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-micro-markets",
+    "type": "quiz",
+    "title": "Market Structure Practice",
+    "subjectId": "microeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-micro-pricing",
+    "type": "quiz",
+    "title": "Pricing Techniques Practice",
+    "subjectId": "microeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-micro-production",
+    "type": "quiz",
+    "title": "Production and Cost Practice",
+    "subjectId": "microeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-micro-resources",
+    "type": "quiz",
+    "title": "Resource Markets Practice",
+    "subjectId": "microeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-national-income",
+    "type": "quiz",
+    "title": "National Income Basics",
+    "subjectId": "macroeconomics",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-sociology-change",
+    "type": "quiz",
+    "title": "Social Change Practice",
+    "subjectId": "sociology",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-sociology-culture-business",
+    "type": "quiz",
+    "title": "Business and Culture Practice",
+    "subjectId": "sociology",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-sociology-demography",
+    "type": "quiz",
+    "title": "Demography Practice",
+    "subjectId": "sociology",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-sociology-overview",
+    "type": "quiz",
+    "title": "Sociology Foundations Check",
+    "subjectId": "sociology",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-sociology-society",
+    "type": "quiz",
+    "title": "Society and Culture Practice",
+    "subjectId": "sociology",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-sociology-theories",
+    "type": "quiz",
+    "title": "Sociological Theory Practice",
+    "subjectId": "sociology",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "quiz-sociology-urbanization",
+    "type": "quiz",
+    "title": "Urbanisation Practice",
+    "subjectId": "sociology",
+    "summary": "",
+    "date": ""
+  },
+  {
+    "id": "video-demand-supply",
+    "type": "video",
+    "title": "Demand and Supply Explained",
+    "subjectId": "class-11",
+    "summary": "A visual walkthrough of demand and supply curves and equilibrium.",
+    "date": ""
+  },
+  {
+    "id": "video-elasticity",
+    "type": "video",
+    "title": "Understanding Price Elasticity",
+    "subjectId": "microeconomics",
+    "summary": "How to calculate and interpret price elasticity of demand.",
+    "date": ""
+  },
+  {
+    "id": "video-gdp",
+    "type": "video",
+    "title": "How GDP is Calculated",
+    "subjectId": "macroeconomics",
+    "summary": "The three approaches to measuring national income.",
+    "date": ""
+  }
+]

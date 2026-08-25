@@ -1,11 +1,13 @@
 import { copyFileSync, mkdirSync } from 'node:fs'
 import path from 'node:path'
+import { generateResourceCatalog } from './generate-resource-catalog.mjs'
 
 const root = path.resolve(import.meta.dirname, '..')
 const sourceDir = path.join(root, 'admin')
 const publicDir = path.join(root, 'public', 'admin')
 
 mkdirSync(publicDir, { recursive: true })
+generateResourceCatalog(root)
 for (const file of ['config.yml', 'index.html', 'preview.css']) {
   copyFileSync(path.join(sourceDir, file), path.join(publicDir, file))
 }
