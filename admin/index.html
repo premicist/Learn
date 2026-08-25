@@ -18,7 +18,8 @@
 
         function value(entry, field, fallback) {
           if (!entry || !entry.getIn) return fallback || '';
-          var result = entry.getIn([field]);
+          var result = entry.getIn(['data', field]);
+          if (result === undefined || result === null) result = entry.getIn([field]);
           if (result === undefined || result === null) return fallback || '';
           return result && result.toJS ? result.toJS() : result;
         }
