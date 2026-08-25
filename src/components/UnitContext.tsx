@@ -26,6 +26,36 @@ function resourcePath(lesson: CurriculumLesson) {
   return `/${resourceCollections[lesson.resourceType]}/${lesson.resourceId}`
 }
 
+function SequenceLink({
+  direction,
+  item,
+  resourceType,
+}: {
+  direction: 'previous' | 'next'
+  item?: { lesson: CurriculumLesson }
+  resourceType: CurriculumResourceType
+}) {
+  if (!item) {
+    return <span className="unit-sequence-dock__item unit-sequence-dock__item--empty" aria-hidden="true" />
+  }
+
+  const isNext = direction === 'next'
+  const label = isNext ? 'Next topic' : 'Previous topic'
+  const action = isNext ? 'Continue to' : 'Review'
+
+  return (
+    <Link
+      to={resourcePath(item.lesson)}
+      className={`unit-sequence-dock__item unit-sequence-dock__item--${direction}`}
+      aria-label={`${label}: ${item.lesson.title}`}
+    >
+      <span className="unit-sequence-dock__label">{label}</span>
+      <strong>{item.lesson.title}</strong>
+      <span className="unit-sequence-dock__action">{action} {resourceLabels[resourceType].toLowerCase()} <span aria-hidden="true">→</span></span>
+    </Link>
+  )
+}
+
 function UnitContext({ curriculum, currentResourceType, currentResourceId, subjectTitle }: UnitContextProps) {
   const units = [...curriculum.units].sort((a, b) => a.order - b.order)
   const sequence = units.flatMap((unit) => unit.lessons.map((lesson) => ({ unit, lesson })))
@@ -72,33 +102,43 @@ function UnitContext({ curriculum, currentResourceType, currentResourceId, subje
       </section>
 
       {(previous || next) && (
-        <aside className="related-content unit-sequence" aria-labelledby="unit-sequence-heading">
-          <div className="unit-sequence__header">
-            <div>
-              <p className="eyebrow">Keep learning</p>
-              <h2 id="unit-sequence-heading">More in {subjectTitle}</h2>
+        <>
+          <aside className="related-content unit-sequence" aria-labelledby="unit-sequence-heading">
+            <div className="unit-sequence__header">
+              <div>
+                <p className="eyebrow">Keep learning</p>
+                <h2 id="unit-sequence-heading">More in {subjectTitle}</h2>
+              </div>
+              <span className="unit-sequence__position">{resourceLabels[currentResourceType]} {currentIndex + 1} of {sameTypeSequence.length}</span>
             </div>
-            <span className="unit-sequence__position">{resourceLabels[currentResourceType]} {currentIndex + 1} of {sameTypeSequence.length}</span>
-          </div>
-          <div className="related-content__grid">
-            {next && (
-              <Link to={resourcePath(next.lesson)} className="related-content__card unit-sequence__card unit-sequence__card--next">
-                <span className="unit-sequence__label">Next topic</span>
-                <strong>{next.lesson.title}</strong>
-                <span>{next.lesson.description}</span>
-                <span className="unit-sequence__cta">Continue to {resourceLabels[next.lesson.resourceType].toLowerCase()} →</span>
-              </Link>
-            )}
-            {previous && (
-              <Link to={resourcePath(previous.lesson)} className="related-content__card unit-sequence__card">
-                <span className="unit-sequence__label">Previous topic</span>
-                <strong>{previous.lesson.title}</strong>
-                <span>{previous.lesson.description}</span>
-                <span className="unit-sequence__cta">Review {resourceLabels[previous.lesson.resourceType].toLowerCase()} →</span>
-              </Link>
-            )}
-          </div>
-        </aside>
+            <div className="related-content__grid">
+              {next && (
+                <Link to={resourcePath(next.lesson)} className="related-content__card unit-sequence__card unit-sequence__card--next">
+                  <span className="unit-sequence__label">Next topic</span>
+                  <strong>{next.lesson.title}</strong>
+                  <span>{next.lesson.description}</span>
+                  <span className="unit-sequence__cta">Continue to {resourceLabels[next.lesson.resourceType].toLowerCase()} →</span>
+                </Link>
+              )}
+              {previous && (
+                <Link to={resourcePath(previous.lesson)} className="related-content__card unit-sequence__card">
+                  <span className="unit-sequence__label">Previous topic</span>
+                  <strong>{previous.lesson.title}</strong>
+                  <span>{previous.lesson.description}</span>
+                  <span className="unit-sequence__cta">Review {resourceLabels[previous.lesson.resourceType].toLowerCase()} →</span>
+                </Link>
+              )}
+            </div>
+          </aside>
+
+          <nav className="unit-sequence-dock" aria-label={`Navigate through ${resourceLabels[currentResourceType].toLowerCase()}s in ${subjectTitle}`}>
+            <div className="unit-sequence-dock__inner">
+              <SequenceLink direction="previous" item={previous} resourceType={currentResourceType} />
+              <span className="unit-sequence-dock__progress" aria-hidden="true">{currentIndex + 1} / {sameTypeSequence.length}</span>
+              <SequenceLink direction="next" item={next} resourceType={currentResourceType} />
+            </div>
+          </nav>
+        </>
       )}
     </>
   )

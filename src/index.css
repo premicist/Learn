@@ -1,6 +1,6 @@
 /* ===== Design tokens ===== */
 :root {
-  --paper: #eef2ef;
+  --paper: #f6f8f7;
   --paper-card: #ffffff;
   --grid-line: rgba(18, 42, 58, 0.07);
   --ink: #122a3a;
@@ -51,13 +51,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background:
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px), var(--paper);
-  background-size:
-    28px 28px,
-    28px 28px,
-    auto;
+  background: #ffffff;
   color: var(--ink);
   line-height: 1.6;
 }
@@ -107,9 +101,9 @@ h3 {
 
 /* Layout */
 main {
-  max-width: 1100px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 32px clamp(24px, 5vw, 72px) 48px;
   min-height: calc(100vh - 140px);
 }
 
@@ -774,7 +768,7 @@ h2 {
 }
 
 .note-page__content {
-  padding: 32px;
+  padding: clamp(28px, 4vw, 56px);
   box-shadow: none;
   border: none;
   margin: 0;
@@ -1055,9 +1049,11 @@ h2 {
 }
 
 .note-page__body {
+  max-width: 78ch;
+  margin-inline: auto;
   color: #334155;
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: clamp(1rem, 1.05vw, 1.08rem);
+  line-height: 1.8;
 }
 
 .note-page__body h1,
@@ -1385,8 +1381,12 @@ h2 {
 
 .article-page h1,
 .note-page__content h1 {
-  max-width: 18ch;
+  max-width: none;
   margin: 0.8rem 0 1rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .article-page__meta,
@@ -1522,7 +1522,10 @@ h2 {
   .content-filters { grid-template-columns: 1fr; }
   .related-content__grid { grid-template-columns: 1fr; }
   .article-page h1,
-  .note-page__content h1 { max-width: none; }
+  .note-page__content h1 {
+    max-width: none;
+    font-size: clamp(1.85rem, 8vw, 2.6rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1616,6 +1619,34 @@ h2 {
     justify-content: center;
   }
   .move-to-top span:not([aria-hidden="true"]) { display: none; }
+
+  body:has(.unit-sequence-dock) .move-to-top {
+    right: auto;
+    bottom: calc(4.55rem + env(safe-area-inset-bottom));
+    left: 50%;
+    min-width: auto;
+    min-height: 2rem;
+    padding: 0.25rem 0.55rem;
+    border: 0;
+    background: transparent;
+    color: var(--teal);
+    box-shadow: none;
+    transform: translateX(-50%);
+  }
+
+  body:has(.unit-sequence-dock) .move-to-top:hover {
+    background: transparent;
+    box-shadow: none;
+    transform: translateX(-50%) translateY(-2px);
+  }
+
+  body:has(.unit-sequence-dock) .move-to-top:active {
+    background: transparent;
+    box-shadow: none;
+    transform: translateX(-50%) scale(0.97);
+  }
+
+  body:has(.unit-sequence-dock) .move-to-top span:not([aria-hidden="true"]) { display: inline; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2215,6 +2246,79 @@ h2 {
   text-underline-offset: 0.2em;
 }
 
+.unit-sequence-dock {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 850;
+  padding: 0.7rem 1.5rem calc(0.7rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 -8px 28px rgba(18, 42, 58, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.unit-sequence-dock__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.unit-sequence-dock__item {
+  display: grid;
+  min-width: 0;
+  gap: 0.18rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.45rem;
+  color: var(--ink);
+  transition: background 160ms ease-out, color 160ms ease-out;
+}
+
+.unit-sequence-dock__item:hover {
+  background: var(--teal-tint);
+  color: var(--teal-deep);
+}
+
+.unit-sequence-dock__item--next { text-align: right; }
+.unit-sequence-dock__item--empty { pointer-events: none; }
+
+.unit-sequence-dock__label {
+  color: var(--ink-faint);
+  font: 700 0.62rem/1.2 var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.unit-sequence-dock__item strong {
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.unit-sequence-dock__action {
+  overflow: hidden;
+  color: var(--teal);
+  font: 700 0.66rem/1.2 var(--font-mono);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.unit-sequence-dock__progress {
+  flex: none;
+  color: var(--ink-faint);
+  font: 700 0.64rem/1 var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+main:has(.unit-sequence-dock) { padding-bottom: 112px; }
+
 @media (max-width: 720px) {
   .unit-context { padding: 1rem; }
   .unit-context__header,
@@ -2224,6 +2328,19 @@ h2 {
   .unit-context__lesson { grid-template-columns: 1.8rem minmax(0, 1fr); }
   .unit-context__lesson-state { grid-column: 2; justify-self: start; }
   .unit-context__lesson-copy strong { white-space: normal; }
+}
+
+@media (max-width: 640px) {
+  .unit-sequence-dock {
+    padding: 0.45rem 0.55rem calc(0.45rem + env(safe-area-inset-bottom));
+  }
+
+  .unit-sequence-dock__inner { gap: 0.3rem; }
+  .unit-sequence-dock__item { padding: 0.3rem 0.35rem; }
+  .unit-sequence-dock__item strong { font-size: 0.8rem; }
+  .unit-sequence-dock__action { display: none; }
+  .unit-sequence-dock__progress { font-size: 0.58rem; }
+  main:has(.unit-sequence-dock) { padding-bottom: 86px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2354,11 +2471,12 @@ h2 {
 
 /* Structured formula, table, and graph blocks */
 .note-visual-stack {
-  margin: 28px 0 34px;
-  padding: 22px;
-  background: linear-gradient(135deg, rgba(20, 107, 99, 0.06), rgba(180, 135, 42, 0.08));
-  border: 1px solid var(--line);
-  border-radius: 16px;
+  max-width: 1040px;
+  margin: 28px auto 34px;
+  padding: 22px clamp(18px, 2vw, 28px);
+  background: #ffffff;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .note-visual-stack__header h2 {
@@ -2375,9 +2493,9 @@ h2 {
 .note-visual-block {
   margin: 16px 0 0;
   padding: 18px;
-  background: var(--paper);
+  background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .note-visual-block__eyebrow {
@@ -2458,7 +2576,7 @@ h2 {
   max-width: 760px;
   height: auto;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .note-visual-block--graph figcaption {
@@ -2485,9 +2603,7 @@ h2 {
 
 @media (max-width: 780px) {
   .note-visual-stack {
-    margin-left: -4px;
-    margin-right: -4px;
-    padding: 14px;
+    padding: 18px 14px;
   }
 
   .note-visual-block {

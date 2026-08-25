@@ -170,13 +170,12 @@ def write_svg(note: Path, block: dict) -> None:
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">',
         f'<title id="title">{html.escape(block["title"])}</title>',
         f'<desc id="desc">{html.escape(block["yLabel"])} plotted against {html.escape(block["xLabel"])}.</desc>',
-        '<rect width="100%" height="100%" fill="#fffdf8" rx="18"/>',
-        '<style>text{font-family:Inter,Arial,sans-serif;fill:#334155} .axis{stroke:#64748b;stroke-width:1.5} .grid{stroke:#dbe4e6;stroke-width:1;stroke-dasharray:5 5} .line{fill:none;stroke:#146b63;stroke-width:4;stroke-linecap:round;stroke-linejoin:round} .dot{fill:#b4872a;stroke:#fffdf8;stroke-width:3}</style>',
+        '<rect width="100%" height="100%" fill="#ffffff"/>',
+        '<style>text{font-family:Inter,Arial,sans-serif;fill:#334155} .axis{stroke:#64748b;stroke-width:1.5} .line{fill:none;stroke:#146b63;stroke-width:4;stroke-linecap:round;stroke-linejoin:round} .dot{fill:#b4872a;stroke:#ffffff;stroke-width:3}</style>',
     ]
     for fraction in (0, 0.5, 1):
         value = max_y - fraction * (max_y - min_y)
         y_pos = y(value)
-        parts.append(f'<line class="grid" x1="{left}" y1="{y_pos:.1f}" x2="{width-right}" y2="{y_pos:.1f}"/>')
         parts.append(f'<text x="{left-12}" y="{y_pos+5:.1f}" text-anchor="end" font-size="13">{html.escape(fmt(value))}</text>')
     parts.append(f'<line class="axis" x1="{left}" y1="{top}" x2="{left}" y2="{height-bottom}"/>')
     parts.append(f'<line class="axis" x1="{left}" y1="{height-bottom}" x2="{width-right}" y2="{height-bottom}"/>')

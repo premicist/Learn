@@ -53,13 +53,7 @@ function NotePage() {
   return (
     <article className="note-page">
       <Seo title={`${note.title} | Prem Pokhrel`} description={note.summary} type="article" image={note.image || undefined} />
-      {note.image ? (
-        <img className="note-page__image" src={note.image} alt={note.imageAlt || ''} />
-      ) : (
-        <div className="note-page__image note-page__image--placeholder" style={{ backgroundColor: subject?.color || 'var(--teal)' }} aria-hidden="true">
-          <span>{note.title.charAt(0)}</span>
-        </div>
-      )}
+      {note.image && <img className="note-page__image" src={note.image} alt={note.imageAlt || ''} />}
 
       <section className="note-page__content">
         <div className="note-page__meta">
