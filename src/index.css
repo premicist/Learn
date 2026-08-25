@@ -2340,7 +2340,7 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
   .unit-sequence-dock__item strong { font-size: 0.8rem; }
   .unit-sequence-dock__action { display: none; }
   .unit-sequence-dock__progress { font-size: 0.58rem; }
-  main:has(.unit-sequence-dock) { padding-bottom: 86px; }
+  main:has(.unit-sequence-dock) { padding-bottom: 140px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
