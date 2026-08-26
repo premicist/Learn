@@ -203,6 +203,38 @@ collections:
           - { label: 'Correct option number (0 = first option, 1 = second, etc.)', name: answerIndex, widget: number, value_type: int }
           - { label: Explanation, name: explanation, widget: text }
 
+  - name: practice-sets
+    label: Practice Sets
+    folder: content/practice-sets
+    create: true
+    summary: '{{title}} · {{subjectId}}'
+    slug: '{{slug}}'
+    fields:
+      - label: Subject
+        name: subjectId
+        widget: relation
+        collection: subjects
+        file: subjects
+        search_fields: [subjects.*.id, subjects.*.title]
+        display_fields: [subjects.*.title, subjects.*.id]
+        value_field: subjects.*.id
+        hint: 'Search by subject title; the CMS stores the matching subject ID.'
+      - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+      - { label: Instructions, name: instructions, widget: text, required: false, hint: 'Shown above the questions, e.g. "Show your working on paper."' }
+      - label: Questions
+        name: questions
+        widget: list
+        fields:
+          - label: Type
+            name: type
+            widget: select
+            options: [{ label: 'Numerical (auto-graded)', value: numerical }, { label: 'Writing (graded by you later)', value: writing }]
+            default: numerical
+          - { label: Question, name: question, widget: text }
+          - { label: 'Correct answer (numerical only)', name: answer, widget: number, value_type: float, required: false, hint: 'Leave blank for writing questions.' }
+          - { label: 'Tolerance (numerical only)', name: tolerance, widget: number, value_type: float, default: 0, required: false, hint: 'Accepted margin of error either side of the correct answer, e.g. 0.05.' }
+          - { label: Points, name: points, widget: number, value_type: int, default: 10 }
+
   - name: videos
     label: Videos
     folder: content/videos
