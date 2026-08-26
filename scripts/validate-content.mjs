@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import yaml from 'js-yaml'
 import { normalizeVisualBlocks } from './normalize-visual-blocks.mjs'
 
-const MARKDOWN_COLLECTIONS = ['notes', 'blogs', 'quizzes', 'videos']
+const MARKDOWN_COLLECTIONS = ['notes', 'blogs', 'quizzes', 'videos', 'practice-sets']
 
 function fail(errors) {
   if (errors.length === 0) return
@@ -233,6 +233,25 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
               errors.push(`${questionLabel} has an invalid answerIndex`)
             }
             if (!question.explanation) errors.push(`${questionLabel} is missing an explanation`)
+          })
+        }
+      }
+      if (collection === 'practice-sets') {
+        if (!Array.isArray(data.questions) || data.questions.length === 0) {
+          errors.push(`${label} must contain at least one question`)
+        } else {
+          data.questions.forEach((question, index) => {
+            const questionLabel = `${label} question ${index + 1}`
+            if (!question.question) errors.push(`${questionLabel} is missing question text`)
+            if (question.type !== 'numerical' && question.type !== 'writing') {
+              errors.push(`${questionLabel} type must be "numerical" or "writing"`)
+            }
+            if (question.type === 'numerical' && typeof question.answer !== 'number') {
+              errors.push(`${questionLabel} needs a numeric answer`)
+            }
+            if (question.points !== undefined && (typeof question.points !== 'number' || question.points <= 0)) {
+              errors.push(`${questionLabel} points must be a positive number`)
+            }
           })
         }
       }
