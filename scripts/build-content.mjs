@@ -183,6 +183,24 @@ const quizzes = readMarkdownFolder('quizzes').map((q) => ({
   })),
 }))
 
+const practiceSets = readMarkdownFolder('practice-sets').map((p) => ({
+  id: p.id,
+  subjectId: p.subjectId,
+  title: p.title,
+  instructions: p.instructions || '',
+  questions: (p.questions || []).map((pq) =>
+    pq.type === 'writing'
+      ? { type: 'writing', question: pq.question, points: Number.isFinite(pq.points) ? pq.points : 1 }
+      : {
+          type: 'numerical',
+          question: pq.question,
+          answer: pq.answer,
+          tolerance: Number.isFinite(pq.tolerance) ? pq.tolerance : 0,
+          points: Number.isFinite(pq.points) ? pq.points : 1,
+        },
+  ),
+}))
+
 const videos = readMarkdownFolder('videos').map((v) => ({
   id: v.id,
   subjectId: v.subjectId,
@@ -266,6 +284,18 @@ export type Video = {
   keyTakeaways: string[]
 }
 
+export type PracticeQuestion =
+  | { type: 'numerical'; question: string; answer: number; tolerance: number; points: number }
+  | { type: 'writing'; question: string; points: number }
+
+export type PracticeSet = {
+  id: string
+  subjectId: string
+  title: string
+  instructions: string
+  questions: PracticeQuestion[]
+}
+
 export const notes: Note[] = ${jsonString(notes)}
 
 export const blogPosts: BlogPost[] = ${jsonString(blogPosts)}
@@ -273,6 +303,8 @@ export const blogPosts: BlogPost[] = ${jsonString(blogPosts)}
 export const quizzes: Quiz[] = ${jsonString(quizzes)}
 
 export const videos: Video[] = ${jsonString(videos)}
+
+export const practiceSets: PracticeSet[] = ${jsonString(practiceSets)}
 
 export function getNoteById(noteId: string): Note | undefined {
   return notes.find((note) => note.id === noteId)
@@ -296,6 +328,14 @@ export function getQuizById(quizId: string): Quiz | undefined {
 
 export function getQuizzesBySubject(subjectId: string): Quiz[] {
   return quizzes.filter((q) => q.subjectId === subjectId)
+}
+
+export function getPracticeSetById(practiceSetId: string): PracticeSet | undefined {
+  return practiceSets.find((p) => p.id === practiceSetId)
+}
+
+export function getPracticeSetsBySubject(subjectId: string): PracticeSet[] {
+  return practiceSets.filter((p) => p.subjectId === subjectId)
 }
 
 export function getVideoById(videoId: string): Video | undefined {
