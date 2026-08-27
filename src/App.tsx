@@ -15,6 +15,8 @@ const Blogs = lazy(() => import('./pages/Blogs'))
 const BlogPage = lazy(() => import('./pages/BlogPage'))
 const Quizzes = lazy(() => import('./pages/Quizzes'))
 const QuizPage = lazy(() => import('./pages/QuizPage'))
+const PracticeSets = lazy(() => import('./pages/PracticeSets'))
+const PracticeSetPage = lazy(() => import('./pages/PracticeSetPage'))
 const Videos = lazy(() => import('./pages/Videos'))
 const VideoPage = lazy(() => import('./pages/VideoPage'))
 const About = lazy(() => import('./pages/About'))
@@ -38,6 +40,8 @@ function App() {
             <Route path="/blogs/:blogId" element={<BlogPage />} />
             <Route path="/quizzes" element={<Quizzes />} />
             <Route path="/quizzes/:quizId" element={<QuizPage />} />
+            <Route path="/practice-sets" element={<PracticeSets />} />
+            <Route path="/practice-sets/:practiceSetId" element={<PracticeSetPage />} />
             <Route path="/videos" element={<Videos />} />
             <Route path="/videos/:videoId" element={<VideoPage />} />
             <Route path="/about" element={<About />} />
