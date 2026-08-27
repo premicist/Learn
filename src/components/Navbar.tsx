@@ -7,6 +7,7 @@ const links = [
   { to: '/notes', label: 'Notes' },
   { to: '/blogs', label: 'Blogs' },
   { to: '/quizzes', label: 'Quizzes' },
+  { to: '/practice-sets', label: 'Practice' },
   { to: '/videos', label: 'Videos' },
   { to: '/about', label: 'About' },
 ]
