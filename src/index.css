@@ -2492,7 +2492,7 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
 }
 
 .note-visual-block {
-  margin: 16px 0 0;
+  margin: 28px 0;
   padding: 18px;
   background: #ffffff;
   border: 1px solid var(--line);
@@ -2571,6 +2571,38 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
   font-size: 0.72rem;
 }
 
+.note-inline-graph {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.note-inline-graph__axis {
+  stroke: var(--ink-soft);
+  stroke-width: 1.5;
+}
+
+.note-inline-graph__line {
+  fill: none;
+  stroke: var(--teal);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.note-inline-graph__dot {
+  fill: var(--gold);
+  stroke: #ffffff;
+  stroke-width: 3;
+}
+
+.note-inline-graph__label {
+  fill: var(--ink-soft);
+  font: 600 0.78rem var(--font-mono);
+}
+
 .note-visual-block--graph img {
   display: block;
   width: 100%;
@@ -2585,6 +2617,50 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
   color: var(--ink-faint);
   font-size: 0.78rem;
   text-align: center;
+}
+
+.note-inline-error {
+  margin: 20px 0;
+  padding: 12px 14px;
+  border: 1px solid var(--red);
+  border-radius: 8px;
+  color: var(--red);
+  background: color-mix(in srgb, var(--red) 8%, transparent);
+}
+
+.inline-resource {
+  display: grid;
+  gap: 0.35rem;
+  margin: 28px 0;
+  padding: 16px 18px;
+  border-left: 4px solid var(--teal);
+  background: var(--teal-tint);
+}
+
+.inline-resource__eyebrow {
+  color: var(--teal-deep);
+  font: 700 0.7rem/1.2 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.inline-resource__link {
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.inline-resource__summary,
+.inline-resource--missing > span:last-child {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.inline-resource--missing {
+  border-left-color: var(--gold);
+  background: var(--gold-tint);
 }
 
 .note-slide .note-visual-block {

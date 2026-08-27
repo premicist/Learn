@@ -14,12 +14,6 @@ slideControls:
   mode: bullets
   maxPoints: 3
   includeQuickCheck: false
-visualBlocks:
-  - type: formula
-    title: Average wage
-    expression: W = \frac{WF}{N}
-    explanation: Average wage equals the total wage fund divided by the number of
-      workers employed.
 ---
 ## What it is?
 
@@ -31,7 +25,9 @@ The theory says that the average wage depends on two things: the total wage fund
 
 In symbols:
 
-(W = \frac{WF}{N})
+```learn-formula
+{"title":"Average wage","expression":"W = \\frac{WF}{N}","explanation":"Average wage equals the total wage fund divided by the number of workers employed."}
+```
 
 Here, **W** means average wage, **WF** means the wage fund, and **N** means the number of workers employed.
 
@@ -39,13 +35,17 @@ Here, **W** means average wage, **WF** means the wage fund, and **N** means the 
 
 Suppose a total wage fund of Rs. 1,00,00,000 is available. If 50,000 workers are employed, each worker receives an average wage of Rs. 200. If employment rises to 1,00,000 workers while the fund remains unchanged, the average wage falls to Rs. 100.
 
-| Total wage fund | Number of workers | Average wage |
-| --------------- | ----------------- | ------------ |
-| Rs. 1,00,00,000 | 50,000            | Rs. 200.00   |
-| Rs. 1,00,00,000 | 1,00,000          | Rs. 100.00   |
-| Rs. 1,00,00,000 | 1,50,000          | Rs. 66.67    |
+```learn-table
+{"title":"Wage fund and average wage","columns":["Total wage fund","Number of workers","Average wage"],"rows":[["Rs. 1,00,00,000",50000,"Rs. 200.00"],["Rs. 1,00,00,000",100000,"Rs. 100.00"],["Rs. 1,00,00,000",150000,"Rs. 66.67"]]}
+```
 
-The table shows an **inverse relationship** between the number of workers and the average wage when the wage fund remains constant. A diagram would place average wage on the vertical axis and the number of workers on the horizontal axis. The curve slopes downward: as employment increases, the average wage decreases.
+The table shows an **inverse relationship** between the number of workers and the average wage when the wage fund remains constant.
+
+```learn-graph
+{"title":"Average wage falls as employment rises","xLabel":"Number of workers","yLabel":"Average wage","points":[[50000,200],[100000,100],[150000,66.67]]}
+```
+
+The graph places average wage on the vertical axis and the number of workers on the horizontal axis. The curve slopes downward: as employment increases, the average wage decreases.
 
 ## Main assumptions
 
@@ -94,3 +94,9 @@ Wage Fund Theory states that average wages are determined by dividing a predeter
 ## Quick check
 
 If a wage fund of Rs. 60,00,000 is shared by 30,000 workers, what is the average wage? Explain what happens to the average wage if the number of workers doubles while the wage fund stays unchanged.
+
+For a related foundation note, review:
+
+```learn-resource
+{"resourceType":"note","resourceId":"class11-economic-basics","label":"Class 11 economic basics"}
+```

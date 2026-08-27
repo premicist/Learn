@@ -1,11 +1,21 @@
-import type { ReactNode } from 'react'
+import { Children, isValidElement, type ReactNode } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import type { NoteVisualBlock as VisualBlock } from '../data/content'
+import InlineResource from './InlineResource'
+import NoteVisualBlock from './NoteVisualBlock'
 import 'katex/dist/katex.min.css'
 
 const CHART_COLORS = ['#146b63', '#b4872a', '#b23a2b', '#47607a', '#0e4a45']
+const INLINE_VISUAL_TYPES = new Set(['formula', 'table', 'graph'])
+
+type InlineResourceData = {
+  resourceType?: string
+  resourceId?: string
+  label?: string
+}
 
 function normalizeMathDelimiters(content: string) {
   const slash = String.fromCharCode(92)
@@ -74,6 +84,17 @@ function NoteChart({ json }: { json: string }) {
   )
 }
 
+function parseInlineVisualBlock(language: string, json: string): VisualBlock | null {
+  if (!INLINE_VISUAL_TYPES.has(language)) return null
+  try {
+    const value = JSON.parse(json) as Record<string, unknown>
+    if (!value || typeof value !== 'object') return null
+    return { type: language, ...value } as VisualBlock
+  } catch {
+    return null
+  }
+}
+
 function NoteMarkdown({ content }: { content: string }) {
   return (
     <ReactMarkdown
@@ -82,9 +103,31 @@ function NoteMarkdown({ content }: { content: string }) {
       components={{
         h2({ children, ...props }) { return <h2 id={slugify(children)} {...props}>{children}</h2> },
         h3({ children, ...props }) { return <h3 id={slugify(children)} {...props}>{children}</h3> },
+        pre({ children }) {
+          const child = Children.toArray(children)[0]
+          if (isValidElement(child) && (child.props as { 'data-inline-content'?: boolean })['data-inline-content']) return child
+          return <pre>{children}</pre>
+        },
         code(props) {
           const { className, children, ...rest } = props
-          if (className === 'language-chart') return <NoteChart json={String(children).trim()} />
+          const language = className?.replace(/^language-/, '')
+          const inlineLanguage = language?.replace(/^learn-/, '')
+          if (inlineLanguage === 'chart') return <div data-inline-content="true"><NoteChart json={String(children).trim()} /></div>
+          if (inlineLanguage && INLINE_VISUAL_TYPES.has(inlineLanguage)) {
+            const block = parseInlineVisualBlock(inlineLanguage, String(children).trim())
+            return <div data-inline-content="true">{block
+              ? <NoteVisualBlock block={block} />
+              : <p className="note-inline-error">This inline {inlineLanguage} block could not be read.</p>}
+            </div>
+          }
+          if (inlineLanguage === 'resource') {
+            try {
+              const resource = JSON.parse(String(children).trim()) as InlineResourceData
+              return <div data-inline-content="true"><InlineResource {...resource} /></div>
+            } catch {
+              return <div data-inline-content="true"><p className="note-inline-error">This inline resource link could not be read.</p></div>
+            }
+          }
           return <code className={className} {...rest}>{children}</code>
         },
       }}

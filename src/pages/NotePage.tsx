@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router'
 import { notes } from '../data/content'
+import type { Note } from '../data/content'
 import { getSubjectById } from '../data/levels'
 import NoteMarkdown from '../components/NoteMarkdown'
 import Seo from '../components/Seo'
@@ -7,7 +8,6 @@ import { getCurriculumBySubject } from '../data/curriculum'
 import UnitContext from '../components/UnitContext'
 import NoteUnitNavigator from '../components/NoteUnitNavigator'
 import NoteSlideViewer from '../components/NoteSlideViewer'
-import NoteVisualBlock from '../components/NoteVisualBlock'
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr)
@@ -18,6 +18,16 @@ function formatDate(dateStr: string) {
 function readingTime(content: string) {
   const words = content.trim().split(/\s+/).filter(Boolean).length
   return `${Math.max(1, Math.ceil(words / 220))} min read`
+}
+
+function legacyVisualBlockMarkdown(block: Note['visualBlocks'][number]) {
+  return ['', '```learn-' + block.type, JSON.stringify(block), '```', ''].join('\n')
+}
+
+function getNoteBody(note: Note) {
+  const legacyBlocks = note.visualBlocks || []
+  if (legacyBlocks.length === 0) return note.body
+  return `${legacyBlocks.map(legacyVisualBlockMarkdown).join('\n')}\n${note.body}`
 }
 
 function getHeadings(content: string) {
@@ -44,6 +54,7 @@ function NotePage() {
 
   const subject = getSubjectById(note.subjectId)
   const curriculum = getCurriculumBySubject(note.subjectId)
+  const noteBody = getNoteBody(note)
   const headings = getHeadings(note.body)
   const noteUnit = curriculum?.units.find((unit) => unit.lessons.some((lesson) => lesson.resourceType === 'note' && lesson.resourceId === note.id))
   const relatedNotes = notes
@@ -66,16 +77,6 @@ function NotePage() {
         <p className="note-page__summary">{note.summary}</p>
         <NoteSlideViewer note={note} />
 
-        {note.visualBlocks.length > 0 && (
-          <section className="note-visual-stack" aria-label="Structured visual aids">
-            <div className="note-visual-stack__header">
-              <p className="section-kicker">Checked visual aids</p>
-              <h2>Formulas, tables, and graphs</h2>
-              <p>These visuals are generated from the note&apos;s structured data so the explanation and calculations stay aligned.</p>
-            </div>
-            {note.visualBlocks.map((block, index) => <NoteVisualBlock block={block} key={`${block.type}-${block.title}-${index}`} />)}
-          </section>
-        )}
 
         {noteUnit && headings.length > 0 && <NoteUnitNavigator unit={noteUnit} headings={headings} />}
 
@@ -88,7 +89,7 @@ function NotePage() {
           </nav>
         )}
 
-        <div className="note-page__body"><NoteMarkdown content={note.body} /></div>
+        <div className="note-page__body"><NoteMarkdown content={noteBody} /></div>
 
         {curriculum ? (
           <UnitContext curriculum={curriculum} currentResourceType="note" currentResourceId={note.id} subjectTitle={subject?.title || 'this subject'} />

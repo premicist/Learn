@@ -24,6 +24,76 @@ function readMarkdownCollection(contentDir, collection) {
     })
 }
 
+const INLINE_BLOCK_PATTERN = /```learn-(formula|table|graph|resource)\n([\s\S]*?)\n```/g
+
+function parseInlineBlocks(body, label, errors) {
+  const blocks = []
+  for (const match of body.matchAll(INLINE_BLOCK_PATTERN)) {
+    const type = match[1]
+    const blockLabel = `${label} inline ${type} block ${blocks.length + 1}`
+    try {
+      const data = JSON.parse(match[2])
+      if (!data || typeof data !== 'object' || Array.isArray(data)) {
+        errors.push(`${blockLabel} must contain a JSON object`)
+      } else {
+        blocks.push({ type, ...data })
+      }
+    } catch {
+      errors.push(`${blockLabel} contains invalid JSON`)
+    }
+  }
+  return blocks
+}
+
+function validateInlineBlocks(blocks, label, resourceIds, errors) {
+  const resourceTypeToCollection = { note: 'notes', blog: 'blogs', quiz: 'quizzes', video: 'videos' }
+  blocks.forEach((block, index) => {
+    const blockLabel = `${label} inline ${block.type} block ${index + 1}`
+    if (['formula', 'table', 'graph'].includes(block.type)) {
+      if (typeof block.title !== 'string' || !block.title.trim()) errors.push(`${blockLabel} needs a title`)
+    }
+    if (block.type === 'formula') {
+      if (typeof block.expression !== 'string' || !block.expression.trim()) errors.push(`${blockLabel} needs an expression`)
+      if (block.explanation !== undefined && typeof block.explanation !== 'string') errors.push(`${blockLabel} explanation must be text`)
+    }
+    if (block.type === 'table') {
+      if (!Array.isArray(block.columns) || block.columns.length === 0 || block.columns.some((column) => typeof column !== 'string' || !column.trim())) {
+        errors.push(`${blockLabel} needs a non-empty list of column names`)
+      }
+      if (!Array.isArray(block.rows) || block.rows.length === 0) {
+        errors.push(`${blockLabel} needs a non-empty list of rows`)
+      } else if (Array.isArray(block.columns)) {
+        block.rows.forEach((row, rowIndex) => {
+          const cells = Array.isArray(row) ? row : row && Array.isArray(row.cells) ? row.cells : null
+          if (!cells || cells.length !== block.columns.length) errors.push(`${blockLabel} row ${rowIndex + 1} must match the column count`)
+        })
+      }
+    }
+    if (block.type === 'graph') {
+      if (!Array.isArray(block.points) || block.points.length < 2) {
+        errors.push(`${blockLabel} needs at least two points`)
+      } else {
+        block.points.forEach((point, pointIndex) => {
+          const x = Array.isArray(point) ? point[0] : point?.x
+          const y = Array.isArray(point) ? point[1] : point?.y
+          if (typeof x !== 'number' || !Number.isFinite(x) || typeof y !== 'number' || !Number.isFinite(y)) {
+            errors.push(`${blockLabel} point ${pointIndex + 1} needs finite numeric x and y values`)
+          }
+        })
+      }
+      if (typeof block.xLabel !== 'string' || !block.xLabel.trim() || typeof block.yLabel !== 'string' || !block.yLabel.trim()) {
+        errors.push(`${blockLabel} needs xLabel and yLabel`)
+      }
+    }
+    if (block.type === 'resource') {
+      const collection = resourceTypeToCollection[block.resourceType]
+      if (!collection) errors.push(`${blockLabel} has unsupported resourceType: ${block.resourceType || 'missing'}`)
+      else if (!block.resourceId || !resourceIds[collection].has(block.resourceId)) errors.push(`${blockLabel} references missing resource: ${block.resourceType}/${block.resourceId || 'missing'}`)
+      if (block.label !== undefined && typeof block.label !== 'string') errors.push(`${blockLabel} label must be text`)
+    }
+  })
+}
+
 function validateIsoDate(value, label, errors) {
   if (value === undefined || value === null || value === '') return
   const date = new Date(value)
@@ -143,6 +213,8 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
       if (collection === 'notes') {
         if (!data.summary) errors.push(`${label} is missing summary`)
         if (!body) errors.push(`${label} is missing a Markdown body`)
+        const inlineBlocks = parseInlineBlocks(body, label, errors)
+        validateInlineBlocks(inlineBlocks, label, resourceIds, errors)
         if (data.image && !String(data.image).startsWith('/images/')) {
           errors.push(`${label} image must use a /images/ path`)
         }

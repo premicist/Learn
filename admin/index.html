@@ -37,6 +37,33 @@
             .replace(/`(.+?)`/g, '$1');
         }
 
+        function parseInlineBlock(block) {
+          var match = String(block || '').match(/^```learn-(formula|table|graph|resource)\n([\s\S]*?)\n```$/);
+          if (!match) return null;
+          try {
+            return { type: match[1], data: JSON.parse(match[2]) || {} };
+          } catch (error) {
+            return { type: match[1], data: { title: 'Invalid inline block', error: 'The saved block data could not be read.' } };
+          }
+        }
+
+        function inlineBlockPreview(block, index) {
+          var data = block.data || {};
+          var title = data.title || data.label || data.resourceId || block.type;
+          var detail = block.type === 'formula'
+            ? (data.expression || 'Formula')
+            : block.type === 'table'
+              ? ((data.columns || []).join(' · ') || 'Table')
+              : block.type === 'graph'
+                ? ((data.xLabel || 'x') + ' against ' + (data.yLabel || 'y'))
+                : ((data.resourceType || 'resource') + ' · ' + (data.resourceId || 'Choose a resource'));
+          return h('aside', { className: 'learn-preview-inline-block', key: index }, [
+            h('span', { className: 'learn-preview-kicker' }, 'Inline ' + block.type),
+            h('strong', null, title),
+            h('p', null, detail),
+          ]);
+        }
+
         function bodyBlocks(body) {
           return String(body || '')
             .split(/\n\s*\n/)
@@ -46,6 +73,8 @@
             .map(function (block, index) {
               var lines = block.split('\n');
               var first = lines[0] || '';
+              var inlineBlock = parseInlineBlock(block);
+              if (inlineBlock) return inlineBlockPreview(inlineBlock, index);
               if (/^###\s+/.test(first)) return h('h3', { key: index }, inlineText(first.replace(/^###\s+/, '')));
               if (/^##\s+/.test(first)) return h('h2', { key: index }, inlineText(first.replace(/^##\s+/, '')));
               if (/^#\s+/.test(first)) return h('h2', { key: index }, inlineText(first.replace(/^#\s+/, '')));
@@ -131,6 +160,60 @@
           },
         });
 
+        function parseEditorBlock(match) {
+          try { return JSON.parse(match[1]) || {}; } catch (error) { return {}; }
+        }
+
+        function inlineBlockMarkdown(type, data) {
+          return '\n\n```learn-' + type + '\n' + JSON.stringify(data || {}) + '\n```\n\n';
+        }
+
+        function registerInlineEditorComponents() {
+          var visualField = function (name, label, widget) {
+            return { name: name, label: label, widget: widget };
+          };
+          CMS.registerEditorComponent({
+            id: 'learn-formula',
+            label: 'Formula',
+            fields: [visualField('formula', 'Formula', 'formula_builder')],
+            pattern: /^```learn-formula\n([\s\S]*?)\n```$/m,
+            fromBlock: function (match) { return { formula: parseEditorBlock(match) }; },
+            toBlock: function (data) { return inlineBlockMarkdown('formula', data.formula); },
+            toPreview: function (data) { return '<strong>Inline formula</strong><br>' + String((data.formula || {}).expression || 'Formula'); },
+          });
+          CMS.registerEditorComponent({
+            id: 'learn-table',
+            label: 'Table',
+            fields: [visualField('table', 'Table', 'table_builder')],
+            pattern: /^```learn-table\n([\s\S]*?)\n```$/m,
+            fromBlock: function (match) { return { table: parseEditorBlock(match) }; },
+            toBlock: function (data) { return inlineBlockMarkdown('table', data.table); },
+            toPreview: function (data) { return '<strong>Inline table</strong><br>' + String((data.table || {}).title || 'Table'); },
+          });
+          CMS.registerEditorComponent({
+            id: 'learn-graph',
+            label: 'Graph',
+            fields: [visualField('graph', 'Graph', 'graph_builder')],
+            pattern: /^```learn-graph\n([\s\S]*?)\n```$/m,
+            fromBlock: function (match) { return { graph: parseEditorBlock(match) }; },
+            toBlock: function (data) { return inlineBlockMarkdown('graph', data.graph); },
+            toPreview: function (data) { return '<strong>Inline graph</strong><br>' + String((data.graph || {}).title || 'Graph'); },
+          });
+          CMS.registerEditorComponent({
+            id: 'learn-resource',
+            label: 'Resource link',
+            fields: [
+              { name: 'resourceType', label: 'Resource type', widget: 'select', options: ['note', 'blog', 'quiz', 'video'] },
+              { name: 'resourceId', label: 'Resource', widget: 'resource_id' },
+              { name: 'label', label: 'Link label (optional)', widget: 'string', required: false },
+            ],
+            pattern: /^```learn-resource\n([\s\S]*?)\n```$/m,
+            fromBlock: function (match) { return parseEditorBlock(match); },
+            toBlock: function (data) { return inlineBlockMarkdown('resource', data); },
+            toPreview: function (data) { return '<strong>Inline resource</strong><br>' + String(data.label || data.resourceId || 'Choose a resource'); },
+          });
+        }
+
         var NotePreview = createClass({
           render: function () {
             var entry = this.props.entry;
@@ -139,7 +222,6 @@
             var subject = value(entry, 'subjectId', 'No subject selected');
             var body = value(entry, 'body', 'Start writing the note body.');
             var slidesEnabled = value(entry, 'slidesEnabled', false);
-            var blocks = value(entry, 'visualBlocks', []);
             return h('article', { className: 'learn-preview-shell' }, [
               h('div', { className: 'learn-preview-label' }, 'Student-facing note preview'),
               h('header', { className: 'learn-preview-header' }, [
@@ -147,12 +229,6 @@
                 h('h1', null, title),
                 h('p', { className: 'learn-preview-summary' }, summary),
               ]),
-              Array.isArray(blocks) && blocks.length
-                ? h('section', { className: 'learn-preview-visuals' }, [
-                    h('h2', null, 'Checked visual aids'),
-                    h('div', { className: 'learn-preview-visual-grid' }, visualSummary(blocks)),
-                  ])
-                : null,
               h('section', { className: 'learn-preview-body' }, bodyBlocks(body)),
               h('footer', { className: 'learn-preview-footer' }, 'Preview the reading flow here, then verify the published route on desktop and mobile before classroom use.'),
             ]);
@@ -163,6 +239,7 @@
         style.textContent = '.learn-resource-picker{position:relative;max-width:560px}.learn-resource-picker input{width:100%;padding:9px 10px;border:1px solid #b8c6ca;border-radius:4px}.learn-resource-results{position:absolute;z-index:20;left:0;right:0;top:calc(100% + 4px);max-height:280px;overflow:auto;background:#fff;border:1px solid #b8c6ca;border-radius:5px;box-shadow:0 8px 20px rgba(23,48,66,.16)}.learn-resource-result{display:block;width:100%;padding:9px 11px;border:0;border-bottom:1px solid #e4eaec;background:#fff;text-align:left;cursor:pointer}.learn-resource-result:hover{background:#f0f8f7}.learn-resource-result strong,.learn-resource-result span{display:block}.learn-resource-result span,.learn-resource-empty,.learn-resource-picker small{color:#60727a;font-size:12px}.learn-resource-empty{padding:11px}.learn-resource-picker small{display:block;margin-top:5px}';
         document.head.appendChild(style);
         CMS.registerWidget('resource_id', ResourceControl, ResourcePreview);
+        registerInlineEditorComponents();
         CMS.registerPreviewTemplate('notes', NotePreview);
         CMS.registerPreviewStyle('/admin/preview.css');
       })();

@@ -134,26 +134,12 @@ collections:
           - { label: Include quick check, name: includeQuickCheck, widget: boolean, default: true }
           - { label: Sections to include, name: sections, widget: list, required: false, hint: 'Optional exact H2 section titles. Leave empty to include all sections.' }
           - { label: Deck title, name: title, widget: string, required: false, hint: 'Optional custom title for the slide viewer.' }
-      - label: Structured visual blocks
-        name: visualBlocks
-        widget: list
-        required: false
-        collapsed: true
-        hint: 'Use explicit data for formulas, tables, and graphs. Generated graphs must be checked before publishing.'
-        types:
-          - label: Formula builder
-            name: formula
-            widget: formula_builder
-            hint: 'Build a common fraction with simple fields. Advanced LaTeX remains available when needed.'
-          - label: Table builder
-            name: table
-            widget: table_builder
-            hint: 'Add columns and rows visually. The builder keeps every row aligned with the column count.'
-          - label: Graph builder
-            name: graph
-            widget: graph_builder
-            hint: 'Add x/y points visually. The build pipeline validates the graph against the source table.'
-      - { label: Body, name: body, widget: markdown }
+      - { label: Legacy visual blocks, name: visualBlocks, widget: hidden, required: false }
+      - label: Body
+        name: body
+        widget: markdown
+        editor_components: [image, code-block, learn-formula, learn-table, learn-graph, learn-resource]
+        hint: 'Write your note and use the toolbar insert buttons to place formulas, tables, graphs, or resource links exactly where they belong.'
 
   - name: blogs
     label: Blog Posts
@@ -202,6 +188,38 @@ collections:
           - { label: Options, name: options, widget: list }
           - { label: 'Correct option number (0 = first option, 1 = second, etc.)', name: answerIndex, widget: number, value_type: int }
           - { label: Explanation, name: explanation, widget: text }
+
+  - name: practice-sets
+    label: Practice Sets
+    folder: content/practice-sets
+    create: true
+    summary: '{{title}} · {{subjectId}}'
+    slug: '{{slug}}'
+    fields:
+      - label: Subject
+        name: subjectId
+        widget: relation
+        collection: subjects
+        file: subjects
+        search_fields: [subjects.*.id, subjects.*.title]
+        display_fields: [subjects.*.title, subjects.*.id]
+        value_field: subjects.*.id
+        hint: 'Search by subject title; the CMS stores the matching subject ID.'
+      - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+      - { label: Instructions, name: instructions, widget: text, required: false, hint: 'Shown above the questions, e.g. "Show your working on paper."' }
+      - label: Questions
+        name: questions
+        widget: list
+        fields:
+          - label: Type
+            name: type
+            widget: select
+            options: [{ label: 'Numerical (auto-graded)', value: numerical }, { label: 'Writing (graded by you later)', value: writing }]
+            default: numerical
+          - { label: Question, name: question, widget: text }
+          - { label: 'Correct answer (numerical only)', name: answer, widget: number, value_type: float, required: false, hint: 'Leave blank for writing questions.' }
+          - { label: 'Tolerance (numerical only)', name: tolerance, widget: number, value_type: float, default: 0, required: false, hint: 'Accepted margin of error either side of the correct answer, e.g. 0.05.' }
+          - { label: Points, name: points, widget: number, value_type: int, default: 10 }
 
   - name: videos
     label: Videos
