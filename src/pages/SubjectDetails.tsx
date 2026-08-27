@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router'
 import { getSubjectById, getLevelById, type Subject } from '../data/levels'
-import { blogPosts, getBlogPostsBySubject, getNotesBySubject, getQuizzesBySubject, getVideosBySubject, notes, quizzes, videos } from '../data/content'
+import { blogPosts, getBlogPostsBySubject, getNotesBySubject, getPracticeSetsBySubject, getQuizzesBySubject, getVideosBySubject, notes, quizzes, videos } from '../data/content'
 import { getCurriculumBySubject } from '../data/curriculum'
 import CurriculumPath from '../components/CurriculumPath'
 import ResourceCard, { type Resource, type ResourceKind } from '../components/ResourceCard'
@@ -52,6 +52,7 @@ function SubjectDetails() {
   const subjectBlogs = getBlogPostsBySubject(subject.id)
   const subjectQuizzes = getQuizzesBySubject(subject.id)
   const subjectVideos = getVideosBySubject(subject.id)
+  const subjectPracticeSets = getPracticeSetsBySubject(subject.id)
   const featured = resolveFeaturedResources(subject)
   const curriculum = getCurriculumBySubject(subject.id)
 
@@ -73,6 +74,7 @@ function SubjectDetails() {
         <span>{formatCount(subjectBlogs.length, 'blog')}</span>
         <span>{formatCount(subjectVideos.length, 'video')}</span>
         <span>{formatCount(subjectQuizzes.length, 'quiz')}</span>
+        <span>{formatCount(subjectPracticeSets.length, 'practice set')}</span>
       </div>
 
       <section className={`subject-featured ${featured.length === 0 ? 'subject-featured--empty' : ''}`} aria-labelledby="featured-heading">
@@ -101,6 +103,15 @@ function SubjectDetails() {
       <ResourceRail title="Blogs" kind="blogs" resources={subjectBlogs} subject={subject} viewAllHref="/blogs" viewAllLabel="View all blogs" />
       <ResourceRail title="Videos" kind="videos" resources={subjectVideos} subject={subject} viewAllHref="/videos" viewAllLabel="View all videos" />
       <ResourceRail title="Quizzes" kind="quizzes" resources={subjectQuizzes} subject={subject} viewAllHref="/quizzes" viewAllLabel="View all quizzes" />
+      <ResourceRail
+        title="Practice"
+        kind="practiceSets"
+        resources={subjectPracticeSets}
+        subject={subject}
+        viewAllHref="/practice-sets"
+        viewAllLabel="View all practice sets"
+        emptyMessage="No practice sets for this subject yet."
+      />
 
       <Link to="/subjects" className="back-link">← Back to subjects</Link>
     </section>
