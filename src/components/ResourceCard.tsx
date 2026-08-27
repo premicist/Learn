@@ -1,9 +1,9 @@
 import { Link } from 'react-router'
-import type { BlogPost, Note, Quiz, Video } from '../data/content'
+import type { BlogPost, Note, PracticeSet, Quiz, Video } from '../data/content'
 import type { Subject } from '../data/levels'
 
-export type ResourceKind = 'notes' | 'blogs' | 'videos' | 'quizzes'
-export type Resource = Note | BlogPost | Quiz | Video
+export type ResourceKind = 'notes' | 'blogs' | 'videos' | 'quizzes' | 'practiceSets'
+export type Resource = Note | BlogPost | Quiz | Video | PracticeSet
 
 type ResourceCardProps = {
   resource: Resource
@@ -25,8 +25,18 @@ function getResourceDetails(resource: Resource, kind: ResourceKind) {
     const video = resource as Video
     return { title: video.title, summary: video.description, href: `/videos/${video.id}`, action: 'Watch video', label: 'Video' }
   }
-  const quiz = resource as Quiz
-  return { title: quiz.title, summary: `${quiz.questions.length} questions with instant feedback`, href: `/quizzes/${quiz.id}`, action: 'Start quiz', label: 'Quiz' }
+  if (kind === 'quizzes') {
+    const quiz = resource as Quiz
+    return { title: quiz.title, summary: `${quiz.questions.length} questions with instant feedback`, href: `/quizzes/${quiz.id}`, action: 'Start quiz', label: 'Quiz' }
+  }
+  const practiceSet = resource as PracticeSet
+  return {
+    title: practiceSet.title,
+    summary: `${practiceSet.questions.length} questions · numerical scored instantly, writing graded by your teacher`,
+    href: `/practice-sets/${practiceSet.id}`,
+    action: 'Start practice set',
+    label: 'Practice set',
+  }
 }
 
 function ResourceCard({ resource, kind, subject, featured = false }: ResourceCardProps) {
