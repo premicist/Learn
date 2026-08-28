@@ -38,7 +38,6 @@ function NoteUnitNavigator({ unit, headings }: NoteUnitNavigatorProps) {
       <summary>
         <span className="note-unit-navigator__eyebrow">Unit {unit.order}</span>
         <strong>{unit.title}</strong>
-        <span className="note-unit-navigator__hint">Browse this note</span>
       </summary>
       <div className="note-unit-navigator__panel">
         <p>{unit.summary}</p>

@@ -30,12 +30,16 @@ function getNoteBody(note: Note) {
   return `${legacyBlocks.map(legacyVisualBlockMarkdown).join('\n')}\n${note.body}`
 }
 
-function getHeadings(content: string) {
-  return content
+function getHeadings(content: string, selectedTitles: string[] = []) {
+  const headings = content
     .split('\n')
-    .map((line) => line.match(/^#{2,3}\s+(.+)$/))
+    .map((line) => line.match(/^#{1,2}\s+(.+)$/))
     .filter((match): match is RegExpMatchArray => Boolean(match))
-    .map((match) => ({ title: match[1].replace(/[*_`]/g, ''), id: match[1].toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-') }))
+    .map((match) => ({ title: match[1].replace(/[*_`]/g, '').trim(), id: match[1].toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-') }))
+  if (selectedTitles.length === 0) return headings
+  return selectedTitles
+    .map((title) => headings.find((heading) => heading.title.toLowerCase() === title.trim().toLowerCase()))
+    .filter((heading): heading is typeof headings[number] => Boolean(heading))
 }
 
 function NotePage() {
@@ -55,7 +59,7 @@ function NotePage() {
   const subject = getSubjectById(note.subjectId)
   const curriculum = getCurriculumBySubject(note.subjectId)
   const noteBody = getNoteBody(note)
-  const headings = getHeadings(note.body)
+  const headings = getHeadings(note.body, note.toc)
   const noteUnit = curriculum?.units.find((unit) => unit.lessons.some((lesson) => lesson.resourceType === 'note' && lesson.resourceId === note.id))
   const relatedNotes = notes
     .filter((item) => item.subjectId === note.subjectId && item.id !== note.id)

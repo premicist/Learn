@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router'
-import type { Curriculum, CurriculumLesson, CurriculumResourceType } from '../data/curriculum'
+import type { Curriculum, CurriculumChapterLink, CurriculumLesson, CurriculumResourceType } from '../data/curriculum'
 
 const resourceLabels: Record<CurriculumResourceType, string> = {
   note: 'Note',
@@ -20,119 +20,108 @@ function resourcePath(lesson: CurriculumLesson) {
   return `/${resourceCollections[lesson.resourceType]}/${lesson.resourceId}`
 }
 
-function readCompletedLessons(storageKey: string) {
-  if (typeof window === 'undefined') return []
-  try {
-    const saved = JSON.parse(window.localStorage.getItem(storageKey) || '[]')
-    return Array.isArray(saved) && saved.every((item) => typeof item === 'string') ? saved : []
-  } catch {
-    return []
-  }
+function getChapterLinks(curriculum: Curriculum, units: Curriculum['units']) {
+  const titles = curriculum.syllabusChapters
+    .split(',')
+    .map((title) => title.trim())
+    .filter(Boolean)
+  const chapterLinks = Array.isArray(curriculum.syllabusChapterLinks) ? curriculum.syllabusChapterLinks : []
+  const displayTitles = titles.length > 0
+    ? titles
+    : chapterLinks.length > 0
+      ? chapterLinks.map((link) => link.title).filter(Boolean)
+      : units.map((unit) => unit.title)
+
+  return displayTitles.map((title) => {
+    const configured = chapterLinks.find((link: CurriculumChapterLink) => link.title.trim().toLowerCase() === title.toLowerCase())
+    const unit = units.find((candidate) => candidate.id === configured?.unitId || candidate.title.trim().toLowerCase() === title.toLowerCase())
+    return { title, url: configured?.url, unit }
+  })
 }
 
 function CurriculumPath({ curriculum }: { curriculum: Curriculum }) {
-  const storageKey = `learn.curriculum.${curriculum.id}`
-  const [completedLessons, setCompletedLessons] = useState<string[]>(() => readCompletedLessons(storageKey))
   const orderedUnits = useMemo(() => [...curriculum.units].sort((a, b) => a.order - b.order), [curriculum.units])
-  const allLessons = useMemo(() => orderedUnits.flatMap((unit) => unit.lessons), [orderedUnits])
-  const completedSet = useMemo(() => new Set(completedLessons), [completedLessons])
-  const nextLesson = allLessons.find((lesson) => !completedSet.has(lesson.id))
-  const completedCount = allLessons.filter((lesson) => completedSet.has(lesson.id)).length
-  const progress = allLessons.length > 0 ? Math.round((completedCount / allLessons.length) * 100) : 0
+  const chapters = useMemo(() => getChapterLinks(curriculum, orderedUnits), [curriculum, orderedUnits])
+  const [openUnitId, setOpenUnitId] = useState<string | null>(null)
 
-  useEffect(() => {
-    window.localStorage.setItem(storageKey, JSON.stringify(completedLessons))
-  }, [completedLessons, storageKey])
-
-  function toggleLesson(lessonId: string) {
-    setCompletedLessons((current) => current.includes(lessonId) ? current.filter((id) => id !== lessonId) : [...current, lessonId])
+  function toggleUnit(unitId: string) {
+    setOpenUnitId((current) => current === unitId ? null : unitId)
   }
 
   return (
     <section className="curriculum-path" aria-labelledby="curriculum-path-heading">
       <div className="curriculum-path__header">
         <div>
-          <p className="eyebrow">Guided study path</p>
+          <p className="eyebrow">Syllabus chapters</p>
           <h2 id="curriculum-path-heading">{curriculum.title}</h2>
           <p>{curriculum.description}</p>
           <p className="curriculum-path__syllabus">{curriculum.syllabusNote}</p>
         </div>
-        <div className="curriculum-path__progress" aria-label={`${completedCount} of ${allLessons.length} lessons complete`}>
-          <strong>{progress}%</strong>
-          <span>{completedCount} of {allLessons.length} complete</span>
-        </div>
       </div>
 
-      <div className="curriculum-progress" aria-hidden="true">
-        <span style={{ width: `${progress}%` }} />
-      </div>
-
-      {nextLesson ? (
-        <div className="curriculum-next">
-          <div>
-            <span className="curriculum-next__label">Recommended next</span>
-            <strong>{nextLesson.title}</strong>
-          </div>
-          <Link className="hero-cta curriculum-next__link" to={resourcePath(nextLesson)}>Continue</Link>
-        </div>
-      ) : (
-        <div className="curriculum-complete">
-          <strong>Path complete.</strong>
-          <span>Review any unit or revisit the resources that need another pass.</span>
-        </div>
+      {chapters.length > 0 && (
+        <nav className="curriculum-chapters" aria-label={`${curriculum.title} chapters`}>
+          {chapters.map((chapter) => {
+            const href = chapter.url || (chapter.unit ? `#curriculum-unit-${chapter.unit.id}` : '#curriculum-path-heading')
+            return (
+              <a className="curriculum-chapter" href={href} key={`${chapter.title}-${href}`}>
+                <span className="curriculum-chapter__dot" aria-hidden="true" />
+                <span>{chapter.title}</span>
+              </a>
+            )
+          })}
+        </nav>
       )}
 
       <div className="curriculum-units">
         {orderedUnits.map((unit) => {
-          const unitCompleted = unit.lessons.filter((lesson) => completedSet.has(lesson.id)).length
+          const isOpen = openUnitId === unit.id
           return (
-            <article className="curriculum-unit" key={unit.id}>
-              <div className="curriculum-unit__marker" style={{ backgroundColor: 'var(--teal)' }}>{String(unit.order).padStart(2, '0')}</div>
-              <div className="curriculum-unit__content">
-                <div className="curriculum-unit__topline">
-                  <div>
-                    <p className="eyebrow">Unit {unit.order}</p>
-                    <h3>{unit.title}</h3>
-                  </div>
-                  <span className="curriculum-unit__time">{unit.estimatedMinutes} min · {unitCompleted}/{unit.lessons.length}</span>
-                </div>
-                <p className="curriculum-unit__summary">{unit.summary}</p>
-                <div className="curriculum-unit__outcomes">
-                  <strong>By the end, you can:</strong>
-                  <ul>
-                    {unit.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}
-                  </ul>
-                </div>
-                <div className="curriculum-lessons">
-                  {unit.lessons.map((lesson) => {
-                    const complete = completedSet.has(lesson.id)
-                    const recommended = nextLesson?.id === lesson.id
-                    return (
-                      <div className={`curriculum-lesson ${complete ? 'is-complete' : ''} ${recommended ? 'is-recommended' : ''}`} key={lesson.id}>
-                        <label className="curriculum-lesson__check">
-                          <input
-                            type="checkbox"
-                            checked={complete}
-                            onChange={() => toggleLesson(lesson.id)}
-                            aria-label={`Mark ${lesson.title} complete`}
-                          />
-                        </label>
-                        <div className="curriculum-lesson__body">
-                          <div className="curriculum-lesson__meta">
+            <article className={`curriculum-unit ${isOpen ? 'is-open' : ''}`} id={`curriculum-unit-${unit.id}`} key={unit.id}>
+              <button
+                type="button"
+                className="curriculum-unit__trigger"
+                aria-expanded={isOpen}
+                aria-controls={`curriculum-unit-panel-${unit.id}`}
+                onClick={() => toggleUnit(unit.id)}
+              >
+                <span className="curriculum-unit__marker" aria-hidden="true">{String(unit.order).padStart(2, '0')}</span>
+                <span className="curriculum-unit__trigger-copy">
+                  <span className="eyebrow">Unit {unit.order}</span>
+                  <strong>{unit.title}</strong>
+                </span>
+                <span className="curriculum-unit__toggle" aria-hidden="true">{isOpen ? '−' : '+'}</span>
+              </button>
+
+              {isOpen && (
+                <div className="curriculum-unit__panel" id={`curriculum-unit-panel-${unit.id}`}>
+                  <p className="curriculum-unit__summary">{unit.summary}</p>
+                  {unit.outcomes.length > 0 && (
+                    <div className="curriculum-unit__outcomes">
+                      <strong>By the end, you can:</strong>
+                      <ul>
+                        {unit.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}
+                      </ul>
+                    </div>
+                  )}
+                  <div className="curriculum-lessons">
+                    {unit.lessons.map((lesson) => (
+                      <Link className="curriculum-lesson" to={resourcePath(lesson)} key={lesson.id}>
+                        <span className="curriculum-lesson__body">
+                          <span className="curriculum-lesson__meta">
                             <span>{resourceLabels[lesson.resourceType]}</span>
                             <span aria-hidden="true">·</span>
                             <span>{lesson.estimatedMinutes} min</span>
-                            {recommended && <span className="curriculum-lesson__recommended">Next</span>}
-                          </div>
+                          </span>
                           <strong>{lesson.title}</strong>
-                          <p>{lesson.description}</p>
-                        </div>
-                        <Link className="curriculum-lesson__link" to={resourcePath(lesson)}>{complete ? 'Review' : 'Open'}</Link>
-                      </div>
-                    )
-                  })}
+                          <span>{lesson.description}</span>
+                        </span>
+                        <span className="curriculum-lesson__link">Open <span aria-hidden="true">→</span></span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </article>
           )
         })}

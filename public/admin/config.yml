@@ -80,6 +80,16 @@ collections:
               - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
               - { label: Description, name: description, widget: text }
               - { label: Syllabus note, name: syllabusNote, widget: string, hint: 'Use simple wording such as Based on the latest NEB syllabus.' }
+              - { label: Syllabus chapter titles, name: syllabusChapters, widget: string, required: false, hint: 'Enter chapter titles separated by commas. Leave empty to use the unit titles.' }
+              - label: Syllabus chapter links
+                name: syllabusChapterLinks
+                widget: list
+                required: false
+                collapsed: true
+                fields:
+                  - { label: Chapter title, name: title, widget: string }
+                  - { label: Optional URL, name: url, widget: string, required: false, hint: 'Leave blank to scroll to the matching unit on this page.' }
+                  - { label: Optional unit ID, name: unitId, widget: string, required: false, hint: 'Use this when the chapter title differs from the unit title.' }
               - label: Units
                 name: units
                 widget: list
@@ -135,11 +145,16 @@ collections:
           - { label: Sections to include, name: sections, widget: list, required: false, hint: 'Optional exact H2 section titles. Leave empty to include all sections.' }
           - { label: Deck title, name: title, widget: string, required: false, hint: 'Optional custom title for the slide viewer.' }
       - { label: Legacy visual blocks, name: visualBlocks, widget: hidden, required: false }
+      - label: Table of contents headings
+        name: toc
+        widget: list
+        required: false
+        hint: 'Optional exact H1/H2 headings to show in note navigation. Leave empty to include all H1/H2 headings.'
       - label: Body
         name: body
         widget: markdown
         editor_components: [image, code-block, learn-formula, learn-table, learn-graph, learn-resource]
-        hint: 'Write your note and use the toolbar insert buttons to place formulas, tables, graphs, or resource links exactly where they belong.'
+        hint: 'Write your note and use the toolbar insert buttons to place formulas, tables, or graphs exactly where they belong.'
 
   - name: blogs
     label: Blog Posts
@@ -180,6 +195,9 @@ collections:
         value_field: subjects.*.id
         hint: 'Search by subject title; the CMS stores the matching subject ID.'
       - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+      - { label: Topic, name: topic, widget: string, required: false, hint: 'The topic card where this quiz set should appear. If blank, the curriculum unit is used.' }
+      - { label: Quiz set label, name: setLabel, widget: string, required: false, hint: 'For example Set 1, Numerical practice, or Theory check.' }
+      - { label: Question style, name: format, widget: select, options: [theory, numerical, mixed], default: mixed, required: false }
       - label: Questions
         name: questions
         widget: list
@@ -238,6 +256,7 @@ collections:
         value_field: subjects.*.id
         hint: 'Search by subject title; the CMS stores the matching subject ID.'
       - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+      - { label: Topic, name: topic, widget: string, required: false, hint: 'The topic card where this video should appear. If blank, the curriculum unit is used.' }
       - { label: 'YouTube video ID', name: youtubeId, widget: string, required: false, pattern: ['^[A-Za-z0-9_-]{6,}$', 'Enter only the YouTube video ID, not the full URL.'], hint: 'From youtube.com/watch?v=THIS_PART' }
       - { label: Description, name: description, widget: text }
       - { label: Transcript, name: transcript, widget: text, required: false }

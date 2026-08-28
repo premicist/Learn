@@ -41,7 +41,7 @@ function InlineResource({ resourceType, resourceId, label }: InlineResourceProps
 
   if (!resource || !resourceId) {
     return (
-      <aside className="inline-resource inline-resource--missing" aria-label="Unavailable inline resource">
+      <aside className="inline-resource inline-resource--missing" aria-label="Unavailable resource">
         <span className="inline-resource__eyebrow">Resource link</span>
         <strong>{label || resourceId || 'Resource not selected'}</strong>
         <span>This resource is not available yet.</span>

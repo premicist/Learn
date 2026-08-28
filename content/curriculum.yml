@@ -4,6 +4,8 @@ curricula:
     title: Your guided Economics-I path
     description: Follow a steady sequence from economic foundations to Nepal-focused applications and quantitative practice.
     syllabusNote: Based on the latest NEB syllabus.
+    syllabusChapters: ''
+    syllabusChapterLinks: []
     units:
       - id: foundations
         order: 1
@@ -185,8 +187,10 @@ curricula:
   - id: class-12-economics
     subjectId: class-12
     title: Your guided Economics-II path
-    description: Follow a practical sequence from resource allocation and microeconomics to macroeconomics, development, Nepal’s economy, and quantitative techniques.
+    description: Follow a steady sequence from resource allocation to macroeconomics, development, Nepal’s economy, and quantitative techniques.
     syllabusNote: Based on the latest NEB syllabus.
+    syllabusChapters: ''
+    syllabusChapterLinks: []
     units:
       - id: class12-foundations
         order: 1
@@ -390,8 +394,10 @@ curricula:
   - id: sociology-guided
     subjectId: sociology
     title: Your guided Sociology path
-    description: Follow a practical sequence from sociological foundations and theory to society, culture, social change, business, demography, and urbanization.
+    description: Follow a structured sequence through sociological concepts, institutions, change, culture, demography, and urbanisation.
     syllabusNote: A structured Sociology study path.
+    syllabusChapters: ''
+    syllabusChapterLinks: []
     units:
       - id: sociology-overview
         order: 1
@@ -557,8 +563,10 @@ curricula:
   - id: microeconomics-guided
     subjectId: microeconomics
     title: Your guided Microeconomics path
-    description: Follow a coherent sequence from choice and market analysis to consumer behaviour, production, pricing, and resource markets.
+    description: Follow a structured sequence through choice, markets, consumer behaviour, firms, pricing, and resource allocation.
     syllabusNote: A structured Microeconomics study path.
+    syllabusChapters: ''
+    syllabusChapterLinks: []
     units:
       - id: micro-foundations
         order: 1
@@ -918,8 +926,10 @@ curricula:
   - id: macroeconomics-guided
     subjectId: macroeconomics
     title: Your guided Macroeconomics path
-    description: Follow a coherent sequence from macroeconomic foundations and national accounting to policy, global links, growth, and development.
+    description: Follow a structured sequence through national income, employment, money, inflation, policy, development, and global issues.
     syllabusNote: A structured Macroeconomics study path.
+    syllabusChapters: ''
+    syllabusChapterLinks: []
     units:
       - id: macro-foundations
         order: 1
@@ -1379,8 +1389,10 @@ curricula:
   - id: managerial-economics-guided
     subjectId: managerial-economics
     title: Your guided Managerial Economics path
-    description: Apply economic reasoning to firms, demand, forecasting, production, costs, pricing, strategy, and public policy.
+    description: Follow a structured sequence through decision tools, firm behaviour, demand, costs, strategy, pricing, and policy.
     syllabusNote: A structured Managerial Economics study path.
+    syllabusChapters: ''
+    syllabusChapterLinks: []
     units:
       - id: managerial-foundations
         order: 1

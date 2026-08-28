@@ -40,7 +40,7 @@ function InlineGraph({ block, title }: { block: VisualBlock; title: string }) {
 
   return (
     <figure className="note-visual-block note-visual-block--graph">
-      <p className="note-visual-block__eyebrow">Inline graph</p>
+      <p className="note-visual-block__eyebrow">Graph</p>
       <h3>{title}</h3>
       <svg className="note-inline-graph" viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby={`${graphId}-title ${graphId}-description`}>
         <title id={`${graphId}-title`}>{title}</title>
@@ -63,7 +63,7 @@ function InlineGraph({ block, title }: { block: VisualBlock; title: string }) {
         <text x={(left + width - right) / 2} y={height - 16} textAnchor="middle" className="note-inline-graph__label">{block.xLabel || 'X'}</text>
         <text x="18" y={(top + height - bottom) / 2} textAnchor="middle" className="note-inline-graph__label" transform={`rotate(-90 18 ${(top + height - bottom) / 2})`}>{block.yLabel || 'Y'}</text>
       </svg>
-      <figcaption>{block.xLabel || 'X'} against {block.yLabel || 'Y'}. Values are rendered from the validated inline block.</figcaption>
+      <figcaption>{block.xLabel || 'X'} against {block.yLabel || 'Y'}. Values are rendered from the validated graph data.</figcaption>
     </figure>
   )
 }

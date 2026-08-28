@@ -1,6 +1,7 @@
 ---
 subjectId: class-11
 title: Demand and Supply Explained
+topic: Demand, supply, and equilibrium
 youtubeId: ""
 description: A visual walkthrough of demand and supply curves and equilibrium.
 keyTakeaways:

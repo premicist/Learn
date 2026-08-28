@@ -170,6 +170,19 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
       errors.push(`${label} references missing subject: ${curriculum.subjectId}`)
     }
     if (!curriculum.syllabusNote) errors.push(`${label} is missing syllabusNote`)
+    if (curriculum.syllabusChapters !== undefined && typeof curriculum.syllabusChapters !== 'string') {
+      errors.push(`${label} syllabusChapters must be text`)
+    }
+    if (curriculum.syllabusChapterLinks !== undefined && !Array.isArray(curriculum.syllabusChapterLinks)) {
+      errors.push(`${label} syllabusChapterLinks must be a list`)
+    } else {
+      for (const [chapterIndex, chapter] of (Array.isArray(curriculum.syllabusChapterLinks) ? curriculum.syllabusChapterLinks.entries() : [])) {
+        const chapterLabel = `${label} syllabusChapterLinks item ${chapterIndex + 1}`
+        if (!chapter || typeof chapter !== 'object' || !chapter.title) errors.push(`${chapterLabel} needs a title`)
+        if (chapter?.url !== undefined && typeof chapter.url !== 'string') errors.push(`${chapterLabel} url must be text`)
+        if (chapter?.unitId !== undefined && typeof chapter.unitId !== 'string') errors.push(`${chapterLabel} unitId must be text`)
+      }
+    }
     if (!Array.isArray(curriculum.units) || curriculum.units.length === 0) {
       errors.push(`${label} must contain at least one unit`)
       continue
@@ -212,6 +225,9 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
       if (!data.title) errors.push(`${label} is missing title`)
       if (collection === 'notes') {
         if (!data.summary) errors.push(`${label} is missing summary`)
+        if (data.toc !== undefined && (!Array.isArray(data.toc) || data.toc.some((heading) => typeof heading !== 'string' || !heading.trim()))) {
+          errors.push(`${label} toc must be a list of non-empty heading titles`)
+        }
         if (!body) errors.push(`${label} is missing a Markdown body`)
         const inlineBlocks = parseInlineBlocks(body, label, errors)
         validateInlineBlocks(inlineBlocks, label, resourceIds, errors)
@@ -292,6 +308,9 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
         validateIsoDate(data.date, `${label} date`, errors)
       }
       if (collection === 'quizzes') {
+        if (data.topic !== undefined && typeof data.topic !== 'string') errors.push(`${label} topic must be text`)
+        if (data.setLabel !== undefined && typeof data.setLabel !== 'string') errors.push(`${label} setLabel must be text`)
+        if (data.format !== undefined && !['theory', 'numerical', 'mixed'].includes(data.format)) errors.push(`${label} format must be theory, numerical, or mixed`)
         if (!Array.isArray(data.questions) || data.questions.length === 0) {
           errors.push(`${label} must contain at least one question`)
         } else {
@@ -327,8 +346,11 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
           })
         }
       }
-      if (collection === 'videos' && data.youtubeId && !/^[A-Za-z0-9_-]{6,}$/.test(data.youtubeId)) {
-        errors.push(`${label} has an invalid YouTube ID`)
+      if (collection === 'videos') {
+        if (data.topic !== undefined && typeof data.topic !== 'string') errors.push(`${label} topic must be text`)
+        if (data.youtubeId && !/^[A-Za-z0-9_-]{6,}$/.test(data.youtubeId)) {
+          errors.push(`${label} has an invalid YouTube ID`)
+        }
       }
     }
   }

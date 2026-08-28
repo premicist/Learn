@@ -58,7 +58,7 @@
                 ? ((data.xLabel || 'x') + ' against ' + (data.yLabel || 'y'))
                 : ((data.resourceType || 'resource') + ' · ' + (data.resourceId || 'Choose a resource'));
           return h('aside', { className: 'learn-preview-inline-block', key: index }, [
-            h('span', { className: 'learn-preview-kicker' }, 'Inline ' + block.type),
+            h('span', { className: 'learn-preview-kicker' }, block.type.charAt(0).toUpperCase() + block.type.slice(1)),
             h('strong', null, title),
             h('p', null, detail),
           ]);
@@ -179,7 +179,7 @@
             pattern: /^```learn-formula\n([\s\S]*?)\n```$/m,
             fromBlock: function (match) { return { formula: parseEditorBlock(match) }; },
             toBlock: function (data) { return inlineBlockMarkdown('formula', data.formula); },
-            toPreview: function (data) { return '<strong>Inline formula</strong><br>' + String((data.formula || {}).expression || 'Formula'); },
+            toPreview: function (data) { return '<strong>Formula</strong><br>' + String((data.formula || {}).expression || 'Formula'); },
           });
           CMS.registerEditorComponent({
             id: 'learn-table',
@@ -188,7 +188,7 @@
             pattern: /^```learn-table\n([\s\S]*?)\n```$/m,
             fromBlock: function (match) { return { table: parseEditorBlock(match) }; },
             toBlock: function (data) { return inlineBlockMarkdown('table', data.table); },
-            toPreview: function (data) { return '<strong>Inline table</strong><br>' + String((data.table || {}).title || 'Table'); },
+            toPreview: function (data) { return '<strong>Table</strong><br>' + String((data.table || {}).title || 'Table'); },
           });
           CMS.registerEditorComponent({
             id: 'learn-graph',
@@ -197,7 +197,7 @@
             pattern: /^```learn-graph\n([\s\S]*?)\n```$/m,
             fromBlock: function (match) { return { graph: parseEditorBlock(match) }; },
             toBlock: function (data) { return inlineBlockMarkdown('graph', data.graph); },
-            toPreview: function (data) { return '<strong>Inline graph</strong><br>' + String((data.graph || {}).title || 'Graph'); },
+            toPreview: function (data) { return '<strong>Graph</strong><br>' + String((data.graph || {}).title || 'Graph'); },
           });
           CMS.registerEditorComponent({
             id: 'learn-resource',
@@ -210,7 +210,7 @@
             pattern: /^```learn-resource\n([\s\S]*?)\n```$/m,
             fromBlock: function (match) { return parseEditorBlock(match); },
             toBlock: function (data) { return inlineBlockMarkdown('resource', data); },
-            toPreview: function (data) { return '<strong>Inline resource</strong><br>' + String(data.label || data.resourceId || 'Choose a resource'); },
+            toPreview: function (data) { return '<strong>Resource</strong><br>' + String(data.label || data.resourceId || 'Choose a resource'); },
           });
         }
 

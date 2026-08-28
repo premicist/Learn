@@ -117,7 +117,7 @@ function NoteMarkdown({ content }: { content: string }) {
             const block = parseInlineVisualBlock(inlineLanguage, String(children).trim())
             return <div data-inline-content="true">{block
               ? <NoteVisualBlock block={block} />
-              : <p className="note-inline-error">This inline {inlineLanguage} block could not be read.</p>}
+              : <p className="note-inline-error">This {inlineLanguage} block could not be read.</p>}
             </div>
           }
           if (inlineLanguage === 'resource') {
@@ -125,7 +125,7 @@ function NoteMarkdown({ content }: { content: string }) {
               const resource = JSON.parse(String(children).trim()) as InlineResourceData
               return <div data-inline-content="true"><InlineResource {...resource} /></div>
             } catch {
-              return <div data-inline-content="true"><p className="note-inline-error">This inline resource link could not be read.</p></div>
+              return <div data-inline-content="true"><p className="note-inline-error">This resource link could not be read.</p></div>
             }
           }
           return <code className={className} {...rest}>{children}</code>
