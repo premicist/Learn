@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import yaml from 'js-yaml'
 import { normalizeVisualBlocks } from './normalize-visual-blocks.mjs'
 
-const MARKDOWN_COLLECTIONS = ['notes', 'blogs', 'quizzes', 'videos', 'practice-sets']
+const MARKDOWN_COLLECTIONS = ['notes', 'blogs', 'quizzes', 'videos', 'practice-sets', 'scheduled-tests']
 
 function fail(errors) {
   if (errors.length === 0) return
@@ -306,6 +306,24 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
         if (!data.excerpt) errors.push(`${label} is missing excerpt`)
         if (!body) errors.push(`${label} is missing a Markdown body`)
         validateIsoDate(data.date, `${label} date`, errors)
+      }
+      if (collection === 'scheduled-tests') {
+        if (data.published !== undefined && typeof data.published !== 'boolean') errors.push(`${label} published must be a boolean`)
+        if (!data.opensAt || Number.isNaN(new Date(data.opensAt).getTime())) errors.push(`${label} needs a valid opensAt date`)
+        if (!data.closesAt || Number.isNaN(new Date(data.closesAt).getTime())) errors.push(`${label} needs a valid closesAt date`)
+        if (data.opensAt && data.closesAt && new Date(data.closesAt) <= new Date(data.opensAt)) errors.push(`${label} closesAt must be after opensAt`)
+        if (!Number.isInteger(data.durationMinutes) || data.durationMinutes < 1 || data.durationMinutes > 240) errors.push(`${label} durationMinutes must be an integer from 1 to 240`)
+        if (!Array.isArray(data.questions) || data.questions.length === 0) {
+          errors.push(`${label} must contain at least one numerical question`)
+        } else {
+          data.questions.forEach((question, index) => {
+            const questionLabel = `${label} question ${index + 1}`
+            if (!question.question) errors.push(`${questionLabel} is missing question text`)
+            if (typeof question.answer !== 'number' || !Number.isFinite(question.answer)) errors.push(`${questionLabel} needs a finite numeric answer`)
+            if (typeof question.tolerance !== 'number' || question.tolerance < 0) errors.push(`${questionLabel} needs a non-negative numeric tolerance`)
+            if (!Number.isInteger(question.points) || question.points < 1) errors.push(`${questionLabel} needs positive integer points`)
+          })
+        }
       }
       if (collection === 'quizzes') {
         if (data.topic !== undefined && typeof data.topic !== 'string') errors.push(`${label} topic must be text`)

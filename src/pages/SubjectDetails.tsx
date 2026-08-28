@@ -1,11 +1,12 @@
 import { Link, useParams } from 'react-router'
 import { getSubjectById, getLevelById, type Subject } from '../data/levels'
-import { blogPosts, getBlogPostsBySubject, getNotesBySubject, getPracticeSetsBySubject, getQuizzesBySubject, getVideosBySubject, notes, quizzes, videos } from '../data/content'
+import { blogPosts, getBlogPostsBySubject, getNotesBySubject, getPracticeSetsBySubject, getQuizzesBySubject, getScheduledTestsBySubject, getVideosBySubject, notes, quizzes, videos } from '../data/content'
 import { getCurriculumBySubject } from '../data/curriculum'
 import CurriculumPath from '../components/CurriculumPath'
 import ResourceCard, { type Resource, type ResourceKind } from '../components/ResourceCard'
 import ResourceRail from '../components/ResourceRail'
 import Seo from '../components/Seo'
+import ScheduledTestSummary from '../components/ScheduledTestSummary'
 
 type FeaturedSelection = Subject['featured'][number]
 type FeaturedEntry = { selection: FeaturedSelection; resource: Resource; kind: ResourceKind }
@@ -53,6 +54,7 @@ function SubjectDetails() {
   const subjectQuizzes = getQuizzesBySubject(subject.id)
   const subjectVideos = getVideosBySubject(subject.id)
   const subjectPracticeSets = getPracticeSetsBySubject(subject.id)
+  const subjectScheduledTests = getScheduledTestsBySubject(subject.id)
   const featured = resolveFeaturedResources(subject)
   const curriculum = getCurriculumBySubject(subject.id)
 
@@ -98,6 +100,16 @@ function SubjectDetails() {
       </section>
 
       {curriculum && <CurriculumPath curriculum={curriculum} />}
+
+      <section className="subject-scheduled-tests" aria-labelledby="subject-scheduled-tests-heading">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Occasional exam-style assessment</p>
+            <h2 id="subject-scheduled-tests-heading">Scheduled Tests</h2>
+          </div>
+        </div>
+        <ScheduledTestSummary subjectTitle={subject.title} tests={subjectScheduledTests} />
+      </section>
 
       <ResourceRail title="Notes" kind="notes" resources={subjectNotes} subject={subject} viewAllHref="/notes" viewAllLabel="View all notes" />
       <ResourceRail title="Blogs" kind="blogs" resources={subjectBlogs} subject={subject} viewAllHref="/blogs" viewAllLabel="View all blogs" />

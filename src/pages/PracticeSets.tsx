@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router'
-import { practiceSets as allPracticeSets } from '../data/content'
+import { practiceSets as allPracticeSets, scheduledTests } from '../data/content'
+import ScheduledTestSummary from '../components/ScheduledTestSummary'
 import { levels, subjects, getSubjectById, getSubjectsByLevel } from '../data/levels'
 import Seo from '../components/Seo'
 
@@ -22,12 +23,40 @@ function PracticeSets() {
   return (
     <section>
       <Seo
-        title="Practice sets | Prem Pokhrel"
-        description="Untimed practice sets with instantly scored numerical questions and teacher-graded writing questions."
+        title="Practice | Prem Pokhrel"
+        description="Self-paced Practice Sets and occasional Scheduled Tests for economics students."
       />
-      <span className="eyebrow">Work through problems at your own pace</span>
+      <span className="eyebrow">Self-paced practice and scheduled exams</span>
       <h2>Practice</h2>
-      <p>Numerical answers are scored the moment you submit. Writing answers are saved for your teacher to grade later.</p>
+      <p>Practice Sets are always available and untimed. Scheduled Tests appear here when a teacher publishes an exam window.</p>
+
+      <section className="scheduled-directory" aria-labelledby="scheduled-tests-heading">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Occasional exam-style assessment</p>
+            <h3 id="scheduled-tests-heading">Scheduled Tests</h3>
+          </div>
+          <span className="section-heading__note">Numerical questions · top 10 results</span>
+        </div>
+        <div className="scheduled-directory__grid">
+          {subjects.map((subject) => (
+            <ScheduledTestSummary
+              key={subject.id}
+              subjectTitle={subject.title}
+              tests={scheduledTests.filter((test) => test.subjectId === subject.id)}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="practice-sets-directory" aria-labelledby="practice-sets-heading">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Always available</p>
+            <h3 id="practice-sets-heading">Practice Sets</h3>
+          </div>
+          <span className="section-heading__note">No timer · writing answers saved for teacher review</span>
+        </div>
 
       <div className="content-filters" aria-label="Filter practice sets">
         <label>
@@ -47,7 +76,7 @@ function PracticeSets() {
       </div>
 
       {results.length === 0 ? (
-        <div className="no-results"><p className="empty-state">No practice sets match those filters yet.</p></div>
+        <div className="no-results"><p className="empty-state">No Practice Sets match those filters yet.</p></div>
       ) : (
         <div className="quizzes-list">
           {results.map((practiceSet) => {
@@ -65,6 +94,7 @@ function PracticeSets() {
           })}
         </div>
       )}
+      </section>
     </section>
   )
 }

@@ -239,6 +239,37 @@ collections:
           - { label: 'Tolerance (numerical only)', name: tolerance, widget: number, value_type: float, default: 0, required: false, hint: 'Accepted margin of error either side of the correct answer, e.g. 0.05.' }
           - { label: Points, name: points, widget: number, value_type: int, default: 10 }
 
+  - name: scheduled-tests
+    label: Scheduled Tests
+    folder: content/scheduled-tests
+    create: true
+    summary: '{{title}} · {{subjectId}}'
+    slug: '{{slug}}'
+    fields:
+      - label: Subject
+        name: subjectId
+        widget: relation
+        collection: subjects
+        file: subjects
+        search_fields: [subjects.*.id, subjects.*.title]
+        display_fields: [subjects.*.title, subjects.*.id]
+        value_field: subjects.*.id
+        hint: 'Search by subject title; the CMS stores the matching subject ID.'
+      - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive test title of at least 3 characters.'] }
+      - { label: Publish this test, name: published, widget: boolean, default: false, hint: 'Only published tests appear to students.' }
+      - { label: Instructions, name: instructions, widget: text, required: false, hint: 'Shown before the student starts the test.' }
+      - { label: Opens at, name: opensAt, widget: datetime, format: 'YYYY-MM-DDTHH:mm:ssZ', date_format: 'YYYY-MM-DD', time_format: 'HH:mm', hint: 'The test cannot be started before this time.' }
+      - { label: Closes at, name: closesAt, widget: datetime, format: 'YYYY-MM-DDTHH:mm:ssZ', date_format: 'YYYY-MM-DD', time_format: 'HH:mm', hint: 'The test closes at this time even if a student still has time remaining.' }
+      - { label: Duration in minutes, name: durationMinutes, widget: number, value_type: int, default: 40, min: 1, max: 240 }
+      - label: Numerical questions
+        name: questions
+        widget: list
+        fields:
+          - { label: Question, name: question, widget: text }
+          - { label: Correct answer, name: answer, widget: number, value_type: float }
+          - { label: Tolerance, name: tolerance, widget: number, value_type: float, default: 0 }
+          - { label: Points, name: points, widget: number, value_type: int, default: 10 }
+
   - name: videos
     label: Videos
     folder: content/videos

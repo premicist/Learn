@@ -213,6 +213,22 @@ const practiceSets = readMarkdownFolder('practice-sets').map((p) => ({
   ),
 }))
 
+const scheduledTests = readMarkdownFolder('scheduled-tests').filter((t) => t.published === true).map((t) => ({
+  id: t.id,
+  subjectId: t.subjectId,
+  title: t.title,
+  published: t.published === true,
+  instructions: t.instructions || '',
+  opensAt: t.opensAt || '',
+  closesAt: t.closesAt || '',
+  durationMinutes: Number.isFinite(t.durationMinutes) ? t.durationMinutes : 40,
+  questions: (t.questions || []).map((question) => ({
+    question: question.question,
+    answer: question.answer,
+    tolerance: Number.isFinite(question.tolerance) ? question.tolerance : 0,
+    points: Number.isFinite(question.points) ? question.points : 1,
+  })),
+}))
 const videos = readMarkdownFolder('videos').map((v) => ({
   id: v.id,
   subjectId: v.subjectId,
@@ -291,6 +307,23 @@ export type Quiz = {
   questions: QuizQuestion[]
 }
 
+export type ScheduledTestQuestion = {
+  question: string
+  answer: number
+  tolerance: number
+  points: number
+}
+export type ScheduledTest = {
+  id: string
+  subjectId: string
+  title: string
+  published: boolean
+  instructions: string
+  opensAt: string
+  closesAt: string
+  durationMinutes: number
+  questions: ScheduledTestQuestion[]
+}
 export type Video = {
   id: string
   subjectId: string
@@ -323,7 +356,7 @@ export const quizzes: Quiz[] = ${jsonString(quizzes)}
 export const videos: Video[] = ${jsonString(videos)}
 
 export const practiceSets: PracticeSet[] = ${jsonString(practiceSets)}
-
+export const scheduledTests: ScheduledTest[] = ${jsonString(scheduledTests)}
 export function getNoteById(noteId: string): Note | undefined {
   return notes.find((note) => note.id === noteId)
 }
@@ -355,7 +388,12 @@ export function getPracticeSetById(practiceSetId: string): PracticeSet | undefin
 export function getPracticeSetsBySubject(subjectId: string): PracticeSet[] {
   return practiceSets.filter((p) => p.subjectId === subjectId)
 }
-
+export function getScheduledTestById(scheduledTestId: string): ScheduledTest | undefined {
+  return scheduledTests.find((test) => test.id === scheduledTestId)
+}
+export function getScheduledTestsBySubject(subjectId: string): ScheduledTest[] {
+  return scheduledTests.filter((test) => test.subjectId === subjectId)
+}
 export function getVideoById(videoId: string): Video | undefined {
   return videos.find((video) => video.id === videoId)
 }

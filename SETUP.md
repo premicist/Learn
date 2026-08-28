@@ -50,3 +50,11 @@ The validator checks taxonomy references, duplicate IDs, required fields, dates,
 ## Common problems
 
 If the site shows a blank page under a repository URL, check that `vite.config.ts` has the correct `base` path. If content does not appear under a subject, check the exact `subjectId` and run `npm run validate-content`. If the admin panel looks outdated, confirm that `admin/config.yml` is the source of truth and rebuild so it is synchronized to `public/admin/config.yml`.
+
+## Scheduled Tests (Phase 2)
+
+Scheduled Tests are authored in the `/admin/` dashboard under **Scheduled Tests**. New tests are drafts by default; set **Publish this test** only when the availability window and numerical answer key are ready. The build publishes only records whose `published` field is `true`.
+
+Before publishing the first Scheduled Test, run `supabase/scheduled-tests.sql` in the Supabase SQL editor. This creates `scheduled_test_submissions`, allows the public anon key to insert submissions, blocks public table reads, and exposes only a sanitized top-10 leaderboard through the `get_scheduled_test_leaderboard` RPC. The RPC returns position, roll number, class, section, and numerical score; student names remain in the private table for teacher review.
+
+The deployed frontend needs `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` configured in the deployment environment. The site still renders and scores a test locally when those variables are absent, but the submission cannot be saved until Supabase is configured. The browser timer is intentionally a trust-based classroom control; it is not a secure server clock or an account-backed anti-cheating system.
