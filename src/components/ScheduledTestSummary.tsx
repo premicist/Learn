@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router'
 import type { ScheduledTest } from '../data/content'
 import { formatScheduledDate, getScheduledTestLeaderboard, getScheduledTestStatus, type ScheduledLeaderboardRow } from '../lib/scheduledTests'
+import LeaderboardModal from './LeaderboardModal'
 
 type ScheduledTestSummaryProps = { subjectTitle: string; tests: ScheduledTest[] }
 
@@ -21,6 +22,7 @@ function ScheduledTestSummary({ subjectTitle, tests }: ScheduledTestSummaryProps
   const [now, setNow] = useState(Date.now())
   const [leaderboard, setLeaderboard] = useState<ScheduledLeaderboardRow[]>([])
   const [leaderboardError, setLeaderboardError] = useState('')
+  const [leaderboardOpen, setLeaderboardOpen] = useState(false)
   const test = useMemo(() => chooseRelevantTest(tests, now), [now, tests])
   const status = test ? getScheduledTestStatus(test, now) : null
 
@@ -33,6 +35,7 @@ function ScheduledTestSummary({ subjectTitle, tests }: ScheduledTestSummaryProps
     if (!test || status !== 'closed') {
       setLeaderboard([])
       setLeaderboardError('')
+      setLeaderboardOpen(false)
       return
     }
     let active = true
@@ -52,6 +55,7 @@ function ScheduledTestSummary({ subjectTitle, tests }: ScheduledTestSummaryProps
           <h3>{subjectTitle}</h3>
         </div>
         {test && status === 'open' && <span className="scheduled-summary__status scheduled-summary__status--open">Open now</span>}
+        {test && status === 'closed' && <span className="scheduled-summary__status">Closed</span>}
       </div>
       {!test && <p className="empty-state">No test/exam scheduled yet.</p>}
       {test && status === 'upcoming' && (
@@ -70,11 +74,30 @@ function ScheduledTestSummary({ subjectTitle, tests }: ScheduledTestSummaryProps
         <>
           <p>Final results for <strong>{test.title}</strong> · closed {formatScheduledDate(test.closesAt)}.</p>
           {leaderboardError && <p className="scheduled-summary__error">Leaderboard is temporarily unavailable.</p>}
-          {leaderboard.length > 0 ? (
-            <div className="scheduled-leaderboard-wrap">
-              <table className="scheduled-leaderboard"><caption>Top 10 results</caption><thead><tr><th>Position</th><th>Roll No.</th><th>Class</th><th>Section</th><th>Score</th></tr></thead><tbody>{leaderboard.map((row) => <tr key={`${row.position}-${row.roll_no}`}><td>{row.position}</td><td>{row.roll_no}</td><td>{row.class}</td><td>{row.section}</td><td>{row.score}</td></tr>)}</tbody></table></div>
-          ) : (
+          {!leaderboardError && leaderboard.length > 0 && (
+            <p className="scheduled-summary__results-prompt">
+              Top 10 results (
+              <button
+                type="button"
+                className="scheduled-summary__click-here"
+                onClick={() => setLeaderboardOpen(true)}
+              >
+                click here
+              </button>
+              )!
+            </p>
+          )}
+          {!leaderboardError && leaderboard.length === 0 && (
             <p className="empty-state">No leaderboard results are available yet.</p>
+          )}
+          {leaderboardOpen && (
+            <LeaderboardModal
+              title={test.title}
+              closedAt={formatScheduledDate(test.closesAt)}
+              rows={leaderboard}
+              error={leaderboardError}
+              onClose={() => setLeaderboardOpen(false)}
+            />
           )}
         </>
       )}
