@@ -3465,6 +3465,21 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
   font-weight: 700;
 }
 
+.scheduled-test__confirm {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.65rem;
+  font-weight: 600;
+}
+
+.scheduled-test__confirm input {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.2rem;
+  padding: 0;
+  accent-color: var(--teal-deep);
+}
+
 .scheduled-test__student-form input,
 .scheduled-test__question input {
   width: 100%;
