@@ -23,6 +23,8 @@ export type ScheduledTestSubmission = {
   numerical_total: number
 }
 
+export type AttemptCheck = 'available' | 'taken' | 'unknown'
+
 export function getScheduledTestStatus(test: ScheduledTest, now = Date.now()): ScheduledTestStatus {
   const opensAt = Date.parse(test.opensAt)
   const closesAt = Date.parse(test.closesAt)
@@ -51,12 +53,30 @@ export function formatRemainingTime(milliseconds: number) {
   return `${String(minutes).padStart(2, '0')}:${String(remainder).padStart(2, '0')}`
 }
 
+export async function hasScheduledTestSubmission(
+  testId: string,
+  studentClass: string,
+  section: string,
+  rollNo: string,
+): Promise<AttemptCheck> {
+  if (!supabaseEnabled || !supabase) return 'unknown'
+  const { data, error } = await supabase.rpc('has_scheduled_test_submission', {
+    test_id: testId,
+    student_class: studentClass,
+    student_section: section,
+    student_roll_no: rollNo,
+  })
+  if (error) return 'unknown'
+  return data === true ? 'taken' : 'available'
+}
+
 export async function submitScheduledTest(submission: ScheduledTestSubmission): Promise<SubmitResult> {
   if (!supabase) {
     console.warn('Supabase is not configured — this scheduled-test submission was NOT saved.')
     return { ok: false, reason: 'not-configured' }
   }
   const { error } = await supabase.from('scheduled_test_submissions').insert(submission)
+  if (error?.code === '23505') return { ok: false, reason: 'duplicate' }
   if (error) return { ok: false, reason: 'error', message: error.message }
   return { ok: true }
 }

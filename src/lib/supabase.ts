@@ -23,7 +23,7 @@ export type PracticeSubmission = {
   numerical_total: number | null
 }
 
-export type SubmitResult = { ok: true } | { ok: false; reason: 'not-configured' | 'error'; message?: string }
+export type SubmitResult = { ok: true } | { ok: false; reason: 'not-configured' | 'error' | 'duplicate'; message?: string }
 
 // Fire-and-store: this is a write-only insert. Row Level Security on the
 // `practice_submissions` table means this anon key can add rows but can never

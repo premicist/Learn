@@ -55,6 +55,23 @@ If the site shows a blank page under a repository URL, check that `vite.config.t
 
 Scheduled Tests are authored in the `/admin/` dashboard under **Scheduled Tests**. New tests are drafts by default; set **Publish this test** only when the availability window and numerical answer key are ready. The build publishes only records whose `published` field is `true`.
 
-Before publishing the first Scheduled Test, run `supabase/scheduled-tests.sql` in the Supabase SQL editor. This creates `scheduled_test_submissions`, allows the public anon key to insert submissions, blocks public table reads, and exposes only a sanitized top-10 leaderboard through the `get_scheduled_test_leaderboard` RPC. The RPC returns position, roll number, class, section, and numerical score; student names remain in the private table for teacher review.
+Before publishing the first Scheduled Test, run `supabase/scheduled-tests.sql` in the Supabase SQL editor. Re-run the same file after pulling exam-integrity updates. It creates `scheduled_test_submissions`, allows the public anon key to insert submissions, blocks public table reads, enforces **one attempt per class + section + roll number**, and exposes only a sanitized top-10 leaderboard through the `get_scheduled_test_leaderboard` RPC. Duplicate rows from earlier tests are collapsed to the earliest submission. The RPC returns position, roll number, class, section, and numerical score; student names remain in the private table for teacher review.
 
-The deployed frontend needs `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` configured in the deployment environment. The site still renders and scores a test locally when those variables are absent, but the submission cannot be saved until Supabase is configured. The browser timer is intentionally a trust-based classroom control; it is not a secure server clock or an account-backed anti-cheating system.
+The deployed frontend needs `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` configured in the deployment environment. The site still renders and scores a test locally when those variables are absent, but the submission cannot be saved until Supabase is configured.
+
+### What the site can and cannot guarantee
+
+**Enforced after the SQL is applied**
+- One saved attempt per test for the same class, section, and roll number (`12` and `012` count as the same roll; `A` and `a` count as the same section).
+- Students are blocked at Start if that identity already submitted.
+- A second insert is rejected by the database, even if someone bypasses the page.
+- The leaderboard shows each identity once (the first attempt).
+- Correct answers stay hidden until the test window closes.
+
+**Still trust-based / classroom-supervised**
+- Identity is typed, not logged in. A student can still use someone else's unused roll number.
+- Questions and the answer key ship in the public website, so a determined student can read them from the page source.
+- The timer lives in the browser. Refreshing the same browser resumes the original start time; a different device can still start a fresh timer until the first successful submit.
+- The score is calculated in the browser. A student who knows how to call the API could submit a fake score once.
+
+For a high-stakes exam, supervise the room, publish a class roster, or add student sign-in. This site is built for a teacher-run classroom test, not an unproctored public contest.
