@@ -1,7 +1,7 @@
 ---
 subjectId: class-12
 title: test-exam
-published: true
+published: false
 instructions: test exam
 opensAt: 2026-08-28T20:26:00+05:45
 closesAt: 2026-08-28T20:40:00+05:45
