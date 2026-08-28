@@ -55,9 +55,39 @@ If the site shows a blank page under a repository URL, check that `vite.config.t
 
 Scheduled Tests are authored in the `/admin/` dashboard under **Scheduled Tests**. New tests are drafts by default; set **Publish this test** only when the availability window and numerical answer key are ready. The build publishes only records whose `published` field is `true`.
 
-Before publishing the first Scheduled Test, run `supabase/scheduled-tests.sql` in the Supabase SQL editor. Re-run the same file after pulling exam-integrity updates. It creates `scheduled_test_submissions`, allows the public anon key to insert submissions, blocks public table reads, enforces **one attempt per class + section + roll number**, and exposes only a sanitized top-10 leaderboard through the `get_scheduled_test_leaderboard` RPC. Duplicate rows from earlier tests are collapsed to the earliest submission. The RPC returns position, roll number, class, section, and numerical score; student names remain in the private table for teacher review.
+### Supabase setup (required for submissions + roster)
+
+Run these files in the Supabase SQL editor, in order:
+
+1. `supabase/scheduled-tests.sql` — submissions table, one-attempt rule, leaderboard RPC
+2. `supabase/class-roster.sql` — private class roster + eligibility RPC
+
+Re-run either file after pulling updates; both are written to be idempotent.
 
 The deployed frontend needs `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` configured in the deployment environment. The site still renders and scores a test locally when those variables are absent, but the submission cannot be saved until Supabase is configured.
+
+### Class roster (private — not in CMS)
+
+The roster lives **only** in Supabase. It is never committed to GitHub and never shipped to the public website.
+
+**How to edit (teacher only)**
+
+1. Open your [Supabase dashboard](https://supabase.com/dashboard) → project → **Table Editor** → `class_roster`.
+2. Add a row per student:
+   - `class` — e.g. `12`
+   - `section` — e.g. `A`
+   - `roll_no` — e.g. `5`
+   - `student_name` — optional (for your reference only; not shown on the site)
+   - `active` — leave `true`; set `false` to disable without deleting
+3. Matching is normalized: `12` = `012`, `A` = `a`, extra spaces ignored.
+
+**How enforcement works**
+
+- **Empty roster** (no active rows): tests stay open to anyone who types details (open mode).
+- **Roster has students**: only matching class + section + roll can start. Others see an error at Start.
+- The site only receives a yes/no answer from Supabase. Students cannot download the full list.
+
+**Bulk import tip:** In Table Editor, use **Insert → Import data from CSV** with columns `class,section,roll_no,student_name`.
 
 ### What the site can and cannot guarantee
 
@@ -67,11 +97,12 @@ The deployed frontend needs `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` con
 - A second insert is rejected by the database, even if someone bypasses the page.
 - The leaderboard shows each identity once (the first attempt).
 - Correct answers stay hidden until the test window closes.
+- When the class roster has active rows, only listed identities can start a scheduled test.
 
 **Still trust-based / classroom-supervised**
-- Identity is typed, not logged in. A student can still use someone else's unused roll number.
+- Identity is typed, not logged in. A listed student can still share their roll number with a classmate.
 - Questions and the answer key ship in the public website, so a determined student can read them from the page source.
 - The timer lives in the browser. Refreshing the same browser resumes the original start time; a different device can still start a fresh timer until the first successful submit.
 - The score is calculated in the browser. A student who knows how to call the API could submit a fake score once.
 
-For a high-stakes exam, supervise the room, publish a class roster, or add student sign-in. This site is built for a teacher-run classroom test, not an unproctored public contest.
+For a high-stakes exam, supervise the room and keep the roster accurate. This site is built for a teacher-run classroom test, not an unproctored public contest.

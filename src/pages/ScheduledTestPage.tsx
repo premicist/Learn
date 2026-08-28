@@ -9,6 +9,7 @@ import {
   getScheduledTestDeadline,
   getScheduledTestStatus,
   hasScheduledTestSubmission,
+  isOnClassRoster,
   submitScheduledTest,
 } from '../lib/scheduledTests'
 import type { PracticeAnswerValue } from '../lib/supabase'
@@ -127,12 +128,22 @@ function ScheduledTestPage() {
     if (getScheduledTestStatus(test, startTime) !== 'open') return
     setChecking(true)
     setIdentityError('')
-    const check = await hasScheduledTestSubmission(test.id, student.studentClass, student.section, student.rollNo)
+
+    const [roster, attempt] = await Promise.all([
+      isOnClassRoster(student.studentClass, student.section, student.rollNo),
+      hasScheduledTestSubmission(test.id, student.studentClass, student.section, student.rollNo),
+    ])
     setChecking(false)
-    if (check === 'taken') {
+
+    if (roster === 'not_listed') {
+      setIdentityError('These details are not on the class roster for this exam. Check class, section, and roll number with your teacher.')
+      return
+    }
+    if (attempt === 'taken') {
       setIdentityError('This class, section, and roll number already submitted this test. Only one attempt is allowed.')
       return
     }
+
     setStartedAt(startTime)
     setNow(startTime)
     setStarted(true)
@@ -242,11 +253,11 @@ function ScheduledTestPage() {
         <h2>{test.title}</h2>
         {test.instructions && <p className="scheduled-test__instructions">{test.instructions}</p>}
         <div className="scheduled-test__notice">
-          <strong>Important:</strong> the test timer begins when you start. Your personal timer and the closing time are both enforced; the earlier limit ends the attempt. Each class + section + roll number may submit <strong>once</strong>.
+          <strong>Important:</strong> the test timer begins when you start. Your personal timer and the closing time are both enforced; the earlier limit ends the attempt. Each class + section + roll number may submit <strong>once</strong>. If a class roster is active, only listed students can start.
         </div>
         <form className="scheduled-test__student-form" onSubmit={handleStart}>
           <h3>Student details</h3>
-          <p>Enter these exactly as your teacher records them. Changing a letter later will not create a second attempt if the roll number already submitted.</p>
+          <p>Enter these exactly as your teacher records them on the class roster. Class, section, and roll number are checked before the test starts.</p>
           <label>Name<input value={student.name} onChange={(event) => setStudent((current) => ({ ...current, name: event.target.value }))} required autoComplete="name" /></label>
           <label>Class<input value={student.studentClass} onChange={(event) => setStudent((current) => ({ ...current, studentClass: event.target.value }))} required /></label>
           <label>Section<input value={student.section} onChange={(event) => setStudent((current) => ({ ...current, section: event.target.value }))} required /></label>

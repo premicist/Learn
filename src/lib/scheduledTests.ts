@@ -24,6 +24,7 @@ export type ScheduledTestSubmission = {
 }
 
 export type AttemptCheck = 'available' | 'taken' | 'unknown'
+export type RosterCheck = 'allowed' | 'not_listed' | 'unknown'
 
 export function getScheduledTestStatus(test: ScheduledTest, now = Date.now()): ScheduledTestStatus {
   const opensAt = Date.parse(test.opensAt)
@@ -51,6 +52,21 @@ export function formatRemainingTime(milliseconds: number) {
   const minutes = Math.floor(seconds / 60)
   const remainder = seconds % 60
   return `${String(minutes).padStart(2, '0')}:${String(remainder).padStart(2, '0')}`
+}
+
+export async function isOnClassRoster(
+  studentClass: string,
+  section: string,
+  rollNo: string,
+): Promise<RosterCheck> {
+  if (!supabaseEnabled || !supabase) return 'unknown'
+  const { data, error } = await supabase.rpc('is_on_class_roster', {
+    student_class: studentClass,
+    student_section: section,
+    student_roll_no: rollNo,
+  })
+  if (error) return 'unknown'
+  return data === true ? 'allowed' : 'not_listed'
 }
 
 export async function hasScheduledTestSubmission(
