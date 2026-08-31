@@ -2,27 +2,31 @@ curricula:
   - id: class-11-economics
     subjectId: class-11
     title: Your guided Economics-I path
-    description: Follow a steady sequence from economic foundations to Nepal-focused applications and quantitative practice.
+    description: Follow a steady sequence from economic foundations to Nepal-focused
+      applications and quantitative practice.
     syllabusNote: Based on the latest NEB syllabus.
-    syllabusChapters: ''
+    syllabusChapters: ""
     syllabusChapterLinks: []
     units:
       - id: foundations
         order: 1
         title: Basic concepts and resources
-        summary: Build the vocabulary of economics and see how scarce resources shape choices.
+        summary: Build the vocabulary of economics and see how scarce resources shape
+          choices.
         estimatedMinutes: 75
         outcomes:
           - Define economics and explain its scope.
           - Distinguish microeconomics from macroeconomics.
-          - Identify land, labour, capital, and organisation as production resources.
+          - Identify land, labour, capital, and organisation as production
+            resources.
         lessons:
           - id: class11-foundations
             title: What economics studies
             resourceType: note
             resourceId: class11-economic-basics
             estimatedMinutes: 25
-            description: Start with scarcity, choice, opportunity cost, and the basic economic problem.
+            description: Start with scarcity, choice, opportunity cost, and the basic
+              economic problem.
           - id: class11-foundations-check
             title: Check your foundations
             resourceType: quiz
@@ -32,7 +36,8 @@ curricula:
       - id: demand-supply
         order: 2
         title: Demand, supply, and equilibrium
-        summary: Explain how buyers and sellers interact and how market equilibrium is formed.
+        summary: Explain how buyers and sellers interact and how market equilibrium is
+          formed.
         estimatedMinutes: 100
         outcomes:
           - Explain the laws of demand and supply.
@@ -54,7 +59,8 @@ curricula:
       - id: elasticity-consumer
         order: 3
         title: Elasticity and consumer behaviour
-        summary: Measure responsiveness and use utility ideas to understand consumer choice.
+        summary: Measure responsiveness and use utility ideas to understand consumer
+          choice.
         estimatedMinutes: 120
         outcomes:
           - Calculate and interpret basic price elasticity.
@@ -66,7 +72,8 @@ curricula:
             resourceType: note
             resourceId: class11-elasticity-consumer
             estimatedMinutes: 35
-            description: Connect percentage changes in demand with the logic of consumer choice.
+            description: Connect percentage changes in demand with the logic of consumer
+              choice.
           - id: class11-elasticity-consumer-check
             title: Elasticity and utility check
             resourceType: quiz
@@ -76,7 +83,8 @@ curricula:
       - id: production
         order: 4
         title: Production and cost
-        summary: Study how firms combine resources, how output changes, and why costs matter.
+        summary: Study how firms combine resources, how output changes, and why costs
+          matter.
         estimatedMinutes: 110
         outcomes:
           - Define production and production function.
@@ -98,7 +106,8 @@ curricula:
       - id: macroeconomics
         order: 5
         title: National income, money, and inflation
-        summary: Move from individual markets to economy-wide measures and monetary conditions.
+        summary: Move from individual markets to economy-wide measures and monetary
+          conditions.
         estimatedMinutes: 130
         outcomes:
           - Distinguish major national-income concepts and approaches.
@@ -110,22 +119,26 @@ curricula:
             resourceType: note
             resourceId: class11-national-income
             estimatedMinutes: 35
-            description: Organise the key aggregates and avoid common double-counting errors.
+            description: Organise the key aggregates and avoid common double-counting
+              errors.
           - id: class11-money-inflation
             title: Money and inflation
             resourceType: note
             resourceId: class11-money-inflation
             estimatedMinutes: 35
-            description: Connect money, prices, and purchasing power through simple examples.
+            description: Connect money, prices, and purchasing power through simple
+              examples.
       - id: development
         order: 6
         title: Development, growth, and human wellbeing
-        summary: Compare growth with broader development and examine poverty, inequality, employment, and human resources.
+        summary: Compare growth with broader development and examine poverty,
+          inequality, employment, and human resources.
         estimatedMinutes: 95
         outcomes:
           - Distinguish economic growth from economic development.
           - Use development indicators with appropriate care.
-          - Explain how poverty, inequality, employment, and human resources interact.
+          - Explain how poverty, inequality, employment, and human resources
+            interact.
         lessons:
           - id: class11-development
             title: Growth, development, and indicators
@@ -142,11 +155,13 @@ curricula:
       - id: nepal-economy
         order: 7
         title: Nepal’s economy and natural resources
-        summary: Apply economic ideas to Nepal’s resources, agriculture, industry, tourism, transport, and communication.
+        summary: Apply economic ideas to Nepal’s resources, agriculture, industry,
+          tourism, transport, and communication.
         estimatedMinutes: 130
         outcomes:
           - Describe major features of Nepal’s economy.
-          - Assess natural resources, agriculture, industry, and tourism with evidence.
+          - Assess natural resources, agriculture, industry, and tourism with
+            evidence.
           - Identify local examples and connect them to economic development.
         lessons:
           - id: class11-nepal-economy
@@ -164,7 +179,8 @@ curricula:
       - id: quantitative-methods
         order: 8
         title: Economic mathematics and problem solving
-        summary: Strengthen the mathematical habits needed for schedules, equations, and economic numericals.
+        summary: Strengthen the mathematical habits needed for schedules, equations, and
+          economic numericals.
         estimatedMinutes: 90
         outcomes:
           - Rearrange and solve simple linear equations.
@@ -176,26 +192,28 @@ curricula:
             resourceType: note
             resourceId: class11-economic-maths
             estimatedMinutes: 30
-            description: Practise equations, percentage changes, and a repeatable numerical method.
+            description: Practise equations, percentage changes, and a repeatable numerical
+              method.
           - id: class11-economic-maths-check
             title: Quantitative skills check
             resourceType: quiz
             resourceId: quiz-class11-maths
             estimatedMinutes: 12
             description: Consolidate the calculation patterns used throughout the course.
-
   - id: class-12-economics
     subjectId: class-12
     title: Your guided Economics-II path
-    description: Follow a steady sequence from resource allocation to macroeconomics, development, Nepal’s economy, and quantitative techniques.
+    description: Follow a steady sequence from resource allocation to
+      macroeconomics, development, Nepal’s economy, and quantitative techniques.
     syllabusNote: Based on the latest NEB syllabus.
-    syllabusChapters: ''
+    syllabusChapters: ""
     syllabusChapterLinks: []
     units:
       - id: class12-foundations
         order: 1
         title: Basic concepts and allocation of resources
-        summary: Revisit economic choice, compare economic systems, and use the production possibility curve.
+        summary: Revisit economic choice, compare economic systems, and use the
+          production possibility curve.
         estimatedMinutes: 90
         outcomes:
           - Explain the central allocation problems of an economy.
@@ -207,17 +225,20 @@ curricula:
             resourceType: note
             resourceId: class12-economic-system-ppc
             estimatedMinutes: 35
-            description: Compare economic systems and read choice, efficiency, and growth from a production possibility curve.
+            description: Compare economic systems and read choice, efficiency, and growth
+              from a production possibility curve.
           - id: class12-foundations-check
             title: Allocation and systems check
             resourceType: quiz
             resourceId: quiz-class12-foundations
             estimatedMinutes: 12
-            description: Test the core ideas of scarcity, systems, opportunity cost, and productive efficiency.
+            description: Test the core ideas of scarcity, systems, opportunity cost, and
+              productive efficiency.
       - id: class12-microeconomics
         order: 2
         title: Microeconomics and market analysis
-        summary: Build revenue and cost tables before studying how firms choose price and output.
+        summary: Build revenue and cost tables before studying how firms choose price
+          and output.
         estimatedMinutes: 190
         outcomes:
           - Calculate and interpret total, average, and marginal revenue.
@@ -235,21 +256,31 @@ curricula:
             resourceType: note
             resourceId: class12-cost-curves
             estimatedMinutes: 35
-            description: Build cost tables and explain the relationships among average and marginal costs.
+            description: Build cost tables and explain the relationships among average and
+              marginal costs.
           - id: class12-micro-check
             title: Microeconomics practice
             resourceType: quiz
             resourceId: quiz-class12-micro
             estimatedMinutes: 15
-            description: Practise revenue and cost calculations before moving to market structures.
+            description: Practise revenue and cost calculations before moving to market
+              structures.
+          - id: "class12-theory-of-interest "
+            title: "Theory of Interest "
+            resourceType: note
+            resourceId: classical-theory-of-interest
+            estimatedMinutes: 15
+            description: "Understanding the theory of Interest "
       - id: class12-price-output
         order: 3
         title: Price and output determination
-        summary: Compare perfect and imperfect competition using equilibrium, profit, and market-power reasoning.
+        summary: Compare perfect and imperfect competition using equilibrium, profit,
+          and market-power reasoning.
         estimatedMinutes: 170
         outcomes:
           - Explain the assumptions of perfect competition.
-          - Determine firm output using the marginal-revenue and marginal-cost condition.
+          - Determine firm output using the marginal-revenue and marginal-cost
+            condition.
           - Compare competitive and monopoly outcomes.
         lessons:
           - id: class12-perfect-competition
@@ -257,53 +288,62 @@ curricula:
             resourceType: note
             resourceId: class12-perfect-competition
             estimatedMinutes: 35
-            description: Use price, marginal revenue, marginal cost, and shutdown reasoning to explain firm equilibrium.
+            description: Use price, marginal revenue, marginal cost, and shutdown reasoning
+              to explain firm equilibrium.
           - id: class12-imperfect-competition
             title: Price and output under imperfect competition
             resourceType: note
             resourceId: class12-imperfect-competition
             estimatedMinutes: 35
-            description: Compare monopoly and other imperfectly competitive markets through demand and revenue curves.
+            description: Compare monopoly and other imperfectly competitive markets through
+              demand and revenue curves.
           - id: class12-price-output-check
             title: Price and output practice
             resourceType: quiz
             resourceId: quiz-class12-price-output
             estimatedMinutes: 15
-            description: Check equilibrium conditions, diagrams, and market-structure comparisons.
+            description: Check equilibrium conditions, diagrams, and market-structure
+              comparisons.
       - id: class12-factor-pricing
         order: 4
         title: Factor pricing and distribution
-        summary: Study how land, labour, capital, and entrepreneurship are rewarded in the distribution of income.
+        summary: Study how land, labour, capital, and entrepreneurship are rewarded in
+          the distribution of income.
         estimatedMinutes: 150
         outcomes:
           - Explain the meaning of factor pricing and distribution.
           - Distinguish rent, wages, interest, and profit.
-          - Explain and evaluate classical wage theories in simple economic situations.
+          - Explain and evaluate classical wage theories in simple economic
+            situations.
         lessons:
           - id: class12-factor-pricing-note
             title: Factor pricing and the Ricardian theory of rent
             resourceType: note
             resourceId: factor-pricing-rent-concept
             estimatedMinutes: 40
-            description: Review rent and the Ricardian theory, then connect them to wages, interest, and profit.
+            description: Review rent and the Ricardian theory, then connect them to wages,
+              interest, and profit.
           - id: class12-factor-pricing-extension
             title: Factor rewards and distribution
             resourceType: note
             resourceId: class12-factor-pricing
             estimatedMinutes: 30
-            description: Organise the main factor rewards and the forces that influence their differences.
+            description: Organise the main factor rewards and the forces that influence
+              their differences.
           - id: class12-subsistence-wage
             title: Subsistence theory of wage
             resourceType: note
             resourceId: class12-subsistence-theory-wage
             estimatedMinutes: 30
-            description: Explain the classical wage-adjustment mechanism and evaluate its assumptions and criticisms.
+            description: Explain the classical wage-adjustment mechanism and evaluate its
+              assumptions and criticisms.
           - id: class12-wage-fund-theory
             title: Wage Fund Theory of Wages
             resourceType: note
             resourceId: class12-wage-fund-theory
             estimatedMinutes: 30
-            description: Use the wage-fund formula to explain average wages and evaluate the theory’s assumptions and criticisms.
+            description: Use the wage-fund formula to explain average wages and evaluate the
+              theory’s assumptions and criticisms.
           - id: class12-factor-pricing-check
             title: Factor pricing practice
             resourceType: quiz
@@ -313,7 +353,8 @@ curricula:
       - id: class12-macro-policy
         order: 5
         title: Banking, public finance, and international trade
-        summary: Move to macroeconomic institutions and examine money, fiscal choices, and global exchange.
+        summary: Move to macroeconomic institutions and examine money, fiscal choices,
+          and global exchange.
         estimatedMinutes: 215
         outcomes:
           - Explain the functions of banks and the main tools of monetary policy.
@@ -325,33 +366,40 @@ curricula:
             resourceType: note
             resourceId: class12-banking-monetary-policy
             estimatedMinutes: 35
-            description: Understand money creation, central banking, and monetary-policy transmission.
+            description: Understand money creation, central banking, and monetary-policy
+              transmission.
           - id: class12-government-finance
             title: Government finance and fiscal policy
             resourceType: note
             resourceId: class12-government-finance
             estimatedMinutes: 35
-            description: Organise public revenue and expenditure and explain fiscal policy choices.
+            description: Organise public revenue and expenditure and explain fiscal policy
+              choices.
           - id: class12-international-trade
             title: International trade and trade policy
             resourceType: note
             resourceId: class12-international-trade
             estimatedMinutes: 35
-            description: Apply comparative advantage and evaluate tariffs, quotas, and exchange-rate links.
+            description: Apply comparative advantage and evaluate tariffs, quotas, and
+              exchange-rate links.
           - id: class12-macro-check
             title: Macro policy practice
             resourceType: quiz
             resourceId: quiz-class12-macro
             estimatedMinutes: 15
-            description: Consolidate banking, fiscal policy, and international-trade reasoning.
+            description: Consolidate banking, fiscal policy, and international-trade
+              reasoning.
       - id: class12-development-nepal
         order: 6
         title: Development, Nepal’s economy, and quantitative techniques
-        summary: Apply development ideas to Nepal and finish with data skills for economic interpretation.
+        summary: Apply development ideas to Nepal and finish with data skills for
+          economic interpretation.
         estimatedMinutes: 250
         outcomes:
-          - Evaluate poverty, inequality, unemployment, and human resources together.
-          - Explain Nepal’s trade, employment, planning, and sustainable-development priorities.
+          - Evaluate poverty, inequality, unemployment, and human resources
+            together.
+          - Explain Nepal’s trade, employment, planning, and
+            sustainable-development priorities.
           - Calculate and interpret basic dispersion and index-number measures.
         lessons:
           - id: class12-development
@@ -359,76 +407,90 @@ curricula:
             resourceType: note
             resourceId: class12-development-economics
             estimatedMinutes: 35
-            description: Distinguish growth from development and evaluate wellbeing and employment.
+            description: Distinguish growth from development and evaluate wellbeing and
+              employment.
           - id: class12-nepal-trade
             title: Nepal’s foreign trade and foreign employment
             resourceType: note
             resourceId: class12-nepal-trade-employment
             estimatedMinutes: 35
-            description: Connect trade, migration, remittances, and employment challenges in Nepal.
+            description: Connect trade, migration, remittances, and employment challenges in
+              Nepal.
           - id: class12-nepal-planning
             title: Development planning in Nepal
             resourceType: note
             resourceId: class12-nepal-development-planning
             estimatedMinutes: 30
-            description: Understand planning goals, resource allocation, implementation, and evaluation.
+            description: Understand planning goals, resource allocation, implementation, and
+              evaluation.
           - id: class12-nepal-sdgs
             title: Sustainable Development Goals and Nepal
             resourceType: note
             resourceId: class12-sdgs-nepal
             estimatedMinutes: 30
-            description: Connect economic, social, and environmental dimensions of sustainable development.
+            description: Connect economic, social, and environmental dimensions of
+              sustainable development.
           - id: class12-quantitative
             title: Quantitative techniques for economics
             resourceType: note
             resourceId: class12-quantitative-techniques
             estimatedMinutes: 35
-            description: Practise dispersion, index numbers, and clear interpretation of economic data.
+            description: Practise dispersion, index numbers, and clear interpretation of
+              economic data.
           - id: class12-development-check
             title: Development and quantitative skills check
             resourceType: quiz
             resourceId: quiz-class12-development-quantitative
             estimatedMinutes: 15
-            description: Review development indicators, Nepal-focused applications, and quantitative reasoning.
-
+            description: Review development indicators, Nepal-focused applications, and
+              quantitative reasoning.
   - id: sociology-guided
     subjectId: sociology
     title: Your guided Sociology path
-    description: Follow a structured sequence through sociological concepts, institutions, change, culture, demography, and urbanisation.
+    description: Follow a structured sequence through sociological concepts,
+      institutions, change, culture, demography, and urbanisation.
     syllabusNote: A structured Sociology study path.
-    syllabusChapters: ''
+    syllabusChapters: ""
     syllabusChapterLinks: []
     units:
       - id: sociology-overview
         order: 1
         title: Overview of Sociology
-        summary: Build a clear foundation in sociological thinking, social interaction, and the relevance of sociology to organisations and everyday life.
+        summary: Build a clear foundation in sociological thinking, social interaction,
+          and the relevance of sociology to organisations and everyday life.
         estimatedMinutes: 95
         outcomes:
           - Explain the meaning, nature, subject matter, and scope of sociology.
-          - Describe the origin and development of sociology, including its development in Nepal.
-          - Classify major forms of social interaction and connect sociology with business and management.
+          - Describe the origin and development of sociology, including its
+            development in Nepal.
+          - Classify major forms of social interaction and connect sociology
+            with business and management.
         lessons:
           - id: sociology-overview-note
             title: What Sociology studies
             resourceType: note
             resourceId: sociology-overview
             estimatedMinutes: 35
-            description: Learn the scope of sociology, its development, social interaction, and its practical relevance.
+            description: Learn the scope of sociology, its development, social interaction,
+              and its practical relevance.
           - id: sociology-overview-check
             title: Sociology foundations check
             resourceType: quiz
             resourceId: quiz-sociology-overview
             estimatedMinutes: 12
-            description: Test the basic vocabulary and applications of sociological thinking.
+            description: Test the basic vocabulary and applications of sociological
+              thinking.
       - id: sociology-theories
         order: 2
         title: Theoretical Perspectives of Sociology
-        summary: Compare major sociological perspectives and use them as different lenses for interpreting organisations and social life.
+        summary: Compare major sociological perspectives and use them as different
+          lenses for interpreting organisations and social life.
         estimatedMinutes: 100
         outcomes:
-          - Explain structural functionalism, conflict theory, symbolic interactionism, and postmodernism.
-          - Compare the assumptions and criticisms of major sociological perspectives.
+          - Explain structural functionalism, conflict theory, symbolic
+            interactionism, and postmodernism.
+          - Compare the assumptions and criticisms of major sociological
+            perspectives.
           - Apply theory to simple business, workplace, and social situations.
         lessons:
           - id: sociology-theories-note
@@ -436,21 +498,25 @@ curricula:
             resourceType: note
             resourceId: sociology-theoretical-perspectives
             estimatedMinutes: 40
-            description: Compare functionalist, conflict, interactionist, and postmodern approaches.
+            description: Compare functionalist, conflict, interactionist, and postmodern
+              approaches.
           - id: sociology-theories-check
             title: Sociological theory practice
             resourceType: quiz
             resourceId: quiz-sociology-theories
             estimatedMinutes: 12
-            description: Identify theoretical lenses, assumptions, and practical applications.
+            description: Identify theoretical lenses, assumptions, and practical
+              applications.
       - id: sociology-society
         order: 3
         title: The Foundations of Society
-        summary: Organise the building blocks of society, from community and culture to socialisation, institutions, norms, values, status, and roles.
+        summary: Organise the building blocks of society, from community and culture to
+          socialisation, institutions, norms, values, status, and roles.
         estimatedMinutes: 150
         outcomes:
           - Distinguish society, community, culture, and social institutions.
-          - Explain socialisation and the roles of family, education, religion, economy, and politics.
+          - Explain socialisation and the roles of family, education, religion,
+            economy, and politics.
           - Analyse how norms, values, status, and roles shape social behaviour.
         lessons:
           - id: sociology-society-note
@@ -458,13 +524,15 @@ curricula:
             resourceType: note
             resourceId: sociology-foundations-of-society
             estimatedMinutes: 50
-            description: Study society, community, culture, socialisation, institutions, norms, values, status, and roles.
+            description: Study society, community, culture, socialisation, institutions,
+              norms, values, status, and roles.
           - id: sociology-social-institutions
             title: Social institutions in everyday life
             resourceType: note
             resourceId: note-social-institutions
             estimatedMinutes: 20
-            description: Review how family, education, religion, and the state organise important social needs.
+            description: Review how family, education, religion, and the state organise
+              important social needs.
           - id: sociology-society-check
             title: Society and culture practice
             resourceType: quiz
@@ -474,41 +542,51 @@ curricula:
       - id: sociology-change
         order: 4
         title: Social Change and Social Movement
-        summary: Examine why societies change and how movements, technology, media, and global connections affect work and markets.
+        summary: Examine why societies change and how movements, technology, media, and
+          global connections affect work and markets.
         estimatedMinutes: 90
         outcomes:
           - Explain the meaning and nature of social change.
-          - Describe modernisation, diffusion, social media, technology, and globalisation as drivers of change.
-          - Classify social movements and evaluate their effects on workers and markets.
+          - Describe modernisation, diffusion, social media, technology, and
+            globalisation as drivers of change.
+          - Classify social movements and evaluate their effects on workers and
+            markets.
         lessons:
           - id: sociology-change-note
             title: How societies change
             resourceType: note
             resourceId: sociology-social-change-movements
             estimatedMinutes: 35
-            description: Connect social change, social movements, technology, and globalisation to working life.
+            description: Connect social change, social movements, technology, and
+              globalisation to working life.
           - id: sociology-change-check
             title: Social change practice
             resourceType: quiz
             resourceId: quiz-sociology-change
             estimatedMinutes: 12
-            description: Check the causes, types, and impacts of social change and movements.
+            description: Check the causes, types, and impacts of social change and
+              movements.
       - id: sociology-culture-business
         order: 5
         title: Business and Culture
-        summary: Understand how organisations adapt to cultural transformation and how cultural differences influence marketing, human resources, and negotiation.
+        summary: Understand how organisations adapt to cultural transformation and how
+          cultural differences influence marketing, human resources, and
+          negotiation.
         estimatedMinutes: 95
         outcomes:
           - Explain how business adapts to social and cultural transformation.
-          - Distinguish acculturation, enculturation, assimilation, and adaptation.
-          - Apply cultural dimensions to marketing, human resources, and negotiations.
+          - Distinguish acculturation, enculturation, assimilation, and
+            adaptation.
+          - Apply cultural dimensions to marketing, human resources, and
+            negotiations.
         lessons:
           - id: sociology-culture-business-note
             title: Culture in organisations and markets
             resourceType: note
             resourceId: sociology-business-and-culture
             estimatedMinutes: 35
-            description: Explore cultural processes and their implications for organisations, customers, and workplaces.
+            description: Explore cultural processes and their implications for
+              organisations, customers, and workplaces.
           - id: sociology-culture-business-check
             title: Business and culture practice
             resourceType: quiz
@@ -518,33 +596,42 @@ curricula:
       - id: sociology-demography
         order: 6
         title: Business Demography
-        summary: Use population concepts and demographic evidence to understand workforce planning, markets, inequality, and business opportunity.
+        summary: Use population concepts and demographic evidence to understand
+          workforce planning, markets, inequality, and business opportunity.
         estimatedMinutes: 155
         outcomes:
-          - Explain demography, population distribution, density, and composition.
-          - Distinguish census, surveys, and vital statistics as tools of demographic analysis.
-          - Evaluate population as a resource, demographic dividend, migration, ageing, and youth unemployment.
+          - Explain demography, population distribution, density, and
+            composition.
+          - Distinguish census, surveys, and vital statistics as tools of
+            demographic analysis.
+          - Evaluate population as a resource, demographic dividend, migration,
+            ageing, and youth unemployment.
         lessons:
           - id: sociology-demography-note
             title: Population, people, and business
             resourceType: note
             resourceId: sociology-business-demography
             estimatedMinutes: 50
-            description: Study population structure, demographic tools, human resources, inequality, and business planning.
+            description: Study population structure, demographic tools, human resources,
+              inequality, and business planning.
           - id: sociology-demography-check
             title: Demography practice
             resourceType: quiz
             resourceId: quiz-sociology-demography
             estimatedMinutes: 15
-            description: Check population measures and the implications of demographic change.
+            description: Check population measures and the implications of demographic
+              change.
       - id: sociology-urbanization
         order: 7
         title: Urbanization
-        summary: Examine urbanisation as a demographic, structural, and behavioural process and identify its effects on infrastructure, labour, markets, and enterprise.
+        summary: Examine urbanisation as a demographic, structural, and behavioural
+          process and identify its effects on infrastructure, labour, markets,
+          and enterprise.
         estimatedMinutes: 90
         outcomes:
           - Explain the meaning and causes of urbanisation.
-          - Distinguish behavioural, structural, and demographic views of urbanisation.
+          - Distinguish behavioural, structural, and demographic views of
+            urbanisation.
           - Evaluate opportunities and challenges created by urban growth.
         lessons:
           - id: sociology-urbanization-note
@@ -552,26 +639,29 @@ curricula:
             resourceType: note
             resourceId: sociology-urbanization
             estimatedMinutes: 35
-            description: Connect urban growth with infrastructure, labour, markets, and business opportunities.
+            description: Connect urban growth with infrastructure, labour, markets, and
+              business opportunities.
           - id: sociology-urbanization-check
             title: Urbanisation practice
             resourceType: quiz
             resourceId: quiz-sociology-urbanization
             estimatedMinutes: 12
-            description: Review the meanings, drivers, impacts, and opportunities of urbanisation.
-
+            description: Review the meanings, drivers, impacts, and opportunities of
+              urbanisation.
   - id: microeconomics-guided
     subjectId: microeconomics
     title: Your guided Microeconomics path
-    description: Follow a structured sequence through choice, markets, consumer behaviour, firms, pricing, and resource allocation.
+    description: Follow a structured sequence through choice, markets, consumer
+      behaviour, firms, pricing, and resource allocation.
     syllabusNote: A structured Microeconomics study path.
-    syllabusChapters: ''
+    syllabusChapters: ""
     syllabusChapterLinks: []
     units:
       - id: micro-foundations
         order: 1
         title: Introduction to Microeconomics
-        summary: Build the language of scarcity, choice, economic reasoning, and business decision-making.
+        summary: Build the language of scarcity, choice, economic reasoning, and
+          business decision-making.
         estimatedMinutes: 120
         outcomes:
           - Explain the meaning, scope, and uses of microeconomics.
@@ -583,19 +673,22 @@ curricula:
             resourceType: note
             resourceId: micro-introduction
             estimatedMinutes: 25
-            description: Understand what microeconomics studies and how it supports resource allocation and business decisions.
+            description: Understand what microeconomics studies and how it supports resource
+              allocation and business decisions.
           - id: micro-positive-normative
             title: Positive, normative, micro, and macro economics
             resourceType: note
             resourceId: micro-positive-normative
             estimatedMinutes: 25
-            description: Separate evidence, explanation, evaluation, and recommendation in economic reasoning.
+            description: Separate evidence, explanation, evaluation, and recommendation in
+              economic reasoning.
           - id: micro-scarcity-choice
             title: Scarcity, alternatives, and choice
             resourceType: note
             resourceId: micro-scarcity-choice
             estimatedMinutes: 25
-            description: Use scarcity, opportunity cost, incentives, and efficiency to explain decisions.
+            description: Use scarcity, opportunity cost, incentives, and efficiency to
+              explain decisions.
           - id: micro-foundations-check
             title: Microeconomics foundations practice
             resourceType: quiz
@@ -605,19 +698,24 @@ curricula:
       - id: micro-demand-supply
         order: 2
         title: Demand, Supply, Equilibrium, and Elasticity
-        summary: Move from demand and supply functions to equilibrium, government policy, efficiency, and elasticity applications.
+        summary: Move from demand and supply functions to equilibrium, government
+          policy, efficiency, and elasticity applications.
         estimatedMinutes: 220
         outcomes:
-          - Explain demand and supply functions and distinguish shifts from movements.
-          - Determine market equilibrium and evaluate taxes, subsidies, and price controls.
-          - Calculate and interpret price, income, cross, advertising, and supply elasticities.
+          - Explain demand and supply functions and distinguish shifts from
+            movements.
+          - Determine market equilibrium and evaluate taxes, subsidies, and
+            price controls.
+          - Calculate and interpret price, income, cross, advertising, and
+            supply elasticities.
         lessons:
           - id: micro-demand-function
             title: Demand function and the law of demand
             resourceType: note
             resourceId: micro-demand-function
             estimatedMinutes: 30
-            description: Define demand and relate quantity demanded to price, income, tastes, and related goods.
+            description: Define demand and relate quantity demanded to price, income,
+              tastes, and related goods.
           - id: micro-supply-function
             title: Supply function and the law of supply
             resourceType: note
@@ -629,25 +727,29 @@ curricula:
             resourceType: note
             resourceId: micro-equilibrium-policy
             estimatedMinutes: 35
-            description: Find equilibrium and examine taxes, subsidies, price controls, and efficiency.
+            description: Find equilibrium and examine taxes, subsidies, price controls, and
+              efficiency.
           - id: micro-price-elasticity
             title: Price elasticity of demand
             resourceType: note
             resourceId: note-elasticity
             estimatedMinutes: 30
-            description: Measure responsiveness to price and connect elasticity with revenue and decisions.
+            description: Measure responsiveness to price and connect elasticity with revenue
+              and decisions.
           - id: micro-elasticity-applications
             title: Other elasticities and business applications
             resourceType: note
             resourceId: micro-elasticity-applications
             estimatedMinutes: 30
-            description: Extend elasticity analysis to income, cross, advertising, and supply responses.
+            description: Extend elasticity analysis to income, cross, advertising, and
+              supply responses.
           - id: micro-demand-supply-check
             title: Demand, supply, and elasticity practice
             resourceType: quiz
             resourceId: quiz-micro-demand-supply
             estimatedMinutes: 15
-            description: Practise curve shifts, policy effects, and elasticity interpretation.
+            description: Practise curve shifts, policy effects, and elasticity
+              interpretation.
           - id: micro-elasticity-check
             title: Price elasticity check
             resourceType: quiz
@@ -657,10 +759,12 @@ curricula:
       - id: micro-consumer-cardinal
         order: 3
         title: "Consumer Behaviour I: Utility and Risk"
-        summary: Introduce cardinal utility, consumer equilibrium, and decision-making under risk.
+        summary: Introduce cardinal utility, consumer equilibrium, and decision-making
+          under risk.
         estimatedMinutes: 120
         outcomes:
-          - Explain total utility, marginal utility, and diminishing marginal utility.
+          - Explain total utility, marginal utility, and diminishing marginal
+            utility.
           - Apply the equi-marginal principle to a simple consumer choice.
           - Distinguish risk from uncertainty and compare basic risk preferences.
         lessons:
@@ -669,63 +773,77 @@ curricula:
             resourceType: note
             resourceId: micro-cardinal-utility
             estimatedMinutes: 35
-            description: Use total and marginal utility to explain consumer choice under a budget constraint.
+            description: Use total and marginal utility to explain consumer choice under a
+              budget constraint.
           - id: micro-risk-management
             title: Consumer choice under risk
             resourceType: note
             resourceId: micro-risk-management
             estimatedMinutes: 30
-            description: Introduce expected outcomes, risk preferences, insurance, and diversification.
+            description: Introduce expected outcomes, risk preferences, insurance, and
+              diversification.
       - id: micro-consumer-ordinal
         order: 4
         title: "Consumer Behaviour II: Preferences and Demand"
-        summary: Combine indifference curves and budget lines to explain equilibrium and the decomposition of price effects.
+        summary: Combine indifference curves and budget lines to explain equilibrium and
+          the decomposition of price effects.
         estimatedMinutes: 170
         outcomes:
-          - Explain ordinal preferences, indifference curves, and marginal rate of substitution.
+          - Explain ordinal preferences, indifference curves, and marginal rate
+            of substitution.
           - Use budget lines to locate consumer equilibrium.
-          - Distinguish income and substitution effects for normal and inferior goods.
+          - Distinguish income and substitution effects for normal and inferior
+            goods.
         lessons:
           - id: micro-indifference-curves
             title: Indifference curves and marginal rate of substitution
             resourceType: note
             resourceId: micro-indifference-curves
             estimatedMinutes: 35
-            description: Understand ordinal preferences and the properties of indifference curves.
+            description: Understand ordinal preferences and the properties of indifference
+              curves.
           - id: micro-budget-equilibrium
             title: Budget line and consumer equilibrium
             resourceType: note
             resourceId: micro-budget-equilibrium
             estimatedMinutes: 35
-            description: Combine preferences, income, and prices to identify an attainable optimum.
+            description: Combine preferences, income, and prices to identify an attainable
+              optimum.
           - id: micro-price-income-substitution
             title: Income, substitution, and price effects
             resourceType: note
             resourceId: micro-price-income-substitution
             estimatedMinutes: 40
-            description: Decompose a price change and connect it to normal and inferior goods.
+            description: Decompose a price change and connect it to normal and inferior
+              goods.
           - id: micro-consumer-check
             title: Consumer behaviour practice
             resourceType: quiz
             resourceId: quiz-micro-consumer
             estimatedMinutes: 15
-            description: Check utility, indifference curves, and income and substitution effects.
+            description: Check utility, indifference curves, and income and substitution
+              effects.
       - id: micro-production
         order: 5
         title: Production and Input Choice
-        summary: Study production functions, variable proportions, input combinations, and returns to scale.
+        summary: Study production functions, variable proportions, input combinations,
+          and returns to scale.
         estimatedMinutes: 210
         outcomes:
-          - Explain production functions and the short-run and long-run distinction.
-          - Interpret total, average, and marginal product under variable proportions.
-          - Use isoquant, isocost, and returns-to-scale reasoning for input decisions.
+          - Explain production functions and the short-run and long-run
+            distinction.
+          - Interpret total, average, and marginal product under variable
+            proportions.
+          - Use isoquant, isocost, and returns-to-scale reasoning for input
+            decisions.
         lessons:
           - id: micro-production-function
             title: Production function and Cobb-Douglas form
             resourceType: note
             resourceId: micro-production-function
             estimatedMinutes: 35
-            description: Introduce production functions, inputs, output, and the Cobb-Douglas form.
+            description: Introduce production functions, inputs, output, and the
+              Cobb-Douglas form.
           - id: micro-variable-proportions
             title: Law of variable proportions
             resourceType: note
@@ -737,13 +855,15 @@ curricula:
             resourceType: note
             resourceId: micro-isoquant-isocost
             estimatedMinutes: 40
-            description: Find least-cost input combinations and distinguish output and cost objectives.
+            description: Find least-cost input combinations and distinguish output and cost
+              objectives.
           - id: micro-returns-to-scale
             title: Returns to scale
             resourceType: note
             resourceId: micro-returns-to-scale
             estimatedMinutes: 30
-            description: Compare increasing, constant, and decreasing returns when all inputs change.
+            description: Compare increasing, constant, and decreasing returns when all
+              inputs change.
           - id: micro-production-check
             title: Production and input-choice practice
             resourceType: quiz
@@ -753,91 +873,110 @@ curricula:
       - id: micro-costs
         order: 6
         title: Cost Analysis, Scale, and Break-Even
-        summary: Build cost concepts and curves before using scale, scope, and break-even reasoning.
+        summary: Build cost concepts and curves before using scale, scope, and
+          break-even reasoning.
         estimatedMinutes: 170
         outcomes:
-          - Distinguish explicit, implicit, accounting, economic, fixed, and variable costs.
+          - Distinguish explicit, implicit, accounting, economic, fixed, and
+            variable costs.
           - Interpret short-run and long-run average and marginal cost curves.
-          - Explain economies of scale, economies of scope, and break-even output.
+          - Explain economies of scale, economies of scope, and break-even
+            output.
         lessons:
           - id: micro-cost-concepts
             title: Cost concepts and opportunity cost
             resourceType: note
             resourceId: micro-cost-concepts
             estimatedMinutes: 35
-            description: Organise the main cost categories and the importance of the time period.
+            description: Organise the main cost categories and the importance of the time
+              period.
           - id: micro-cost-curves
             title: Short-run and long-run cost curves
             resourceType: note
             resourceId: micro-cost-curves
             estimatedMinutes: 35
-            description: Read average and marginal cost curves and connect them to firm decisions.
+            description: Read average and marginal cost curves and connect them to firm
+              decisions.
           - id: micro-scale-scope-breakeven
             title: Economies of scale, scope, and break-even
             resourceType: note
             resourceId: micro-scale-scope-breakeven
             estimatedMinutes: 35
-            description: Explain scale and scope economies and introduce break-even analysis.
+            description: Explain scale and scope economies and introduce break-even
+              analysis.
           - id: micro-cost-check
             title: Cost analysis practice
             resourceType: quiz
             resourceId: quiz-micro-costs
             estimatedMinutes: 15
-            description: Revisit product and cost relationships before studying market structure.
+            description: Revisit product and cost relationships before studying market
+              structure.
       - id: micro-market-structures
         order: 7
         title: Market Structures
-        summary: Compare competition, monopoly, differentiated competition, duopoly, oligopoly, and cartels.
+        summary: Compare competition, monopoly, differentiated competition, duopoly,
+          oligopoly, and cartels.
         estimatedMinutes: 260
         outcomes:
-          - Classify markets using sellers, products, entry barriers, information, and price control.
-          - Determine short-run and long-run equilibrium in major market-structure models.
-          - Explain strategic interdependence, cartels, and the welfare effects of market power.
+          - Classify markets using sellers, products, entry barriers,
+            information, and price control.
+          - Determine short-run and long-run equilibrium in major
+            market-structure models.
+          - Explain strategic interdependence, cartels, and the welfare effects
+            of market power.
         lessons:
           - id: micro-market-structure
             title: Market structure and firm objectives
             resourceType: note
             resourceId: micro-market-structure
             estimatedMinutes: 30
-            description: Classify market structures and introduce profit maximisation and alternative objectives.
+            description: Classify market structures and introduce profit maximisation and
+              alternative objectives.
           - id: micro-perfect-competition
             title: Perfect competition
             resourceType: note
             resourceId: micro-perfect-competition
             estimatedMinutes: 40
-            description: Explain short-run and long-run equilibrium and the supply logic of competitive firms.
+            description: Explain short-run and long-run equilibrium and the supply logic of
+              competitive firms.
           - id: micro-monopoly
             title: Monopoly
             resourceType: note
             resourceId: micro-monopoly
             estimatedMinutes: 35
-            description: Use demand, revenue, and cost to explain monopoly equilibrium and market power.
+            description: Use demand, revenue, and cost to explain monopoly equilibrium and
+              market power.
           - id: micro-monopolistic-competition
             title: Monopolistic competition and selling cost
             resourceType: note
             resourceId: micro-monopolistic-competition
             estimatedMinutes: 35
-            description: Study product differentiation, long-run adjustment, selling cost, and advertising.
+            description: Study product differentiation, long-run adjustment, selling cost,
+              and advertising.
           - id: micro-oligopoly-cartel
             title: Duopoly, oligopoly, and cartels
             resourceType: note
             resourceId: micro-oligopoly-cartel
             estimatedMinutes: 35
-            description: Introduce strategic interdependence, cartel incentives, and competition concerns.
+            description: Introduce strategic interdependence, cartel incentives, and
+              competition concerns.
           - id: micro-markets-check
             title: Market structure practice
             resourceType: quiz
             resourceId: quiz-micro-markets
             estimatedMinutes: 15
-            description: Check the assumptions and equilibrium logic of major market structures.
+            description: Check the assumptions and equilibrium logic of major market
+              structures.
       - id: micro-pricing
         order: 8
         title: Pricing Techniques
-        summary: Apply market-power and cost concepts to practical pricing strategies and business decisions.
+        summary: Apply market-power and cost concepts to practical pricing strategies
+          and business decisions.
         estimatedMinutes: 250
         outcomes:
           - Explain price discrimination and the conditions that support it.
-          - Compare mark-up, cost-plus, incremental, transfer, peak-load, and two-part pricing.
+          - Compare mark-up, cost-plus, incremental, transfer, peak-load, and
+            two-part pricing.
           - Distinguish skimming, penetration, and predatory pricing strategies.
         lessons:
           - id: micro-price-discrimination
@@ -845,7 +984,8 @@ curricula:
             resourceType: note
             resourceId: micro-price-discrimination
             estimatedMinutes: 35
-            description: Identify forms of price discrimination, conditions, and possible effects.
+            description: Identify forms of price discrimination, conditions, and possible
+              effects.
           - id: micro-markup-pricing
             title: Mark-up and cost-plus pricing
             resourceType: note
@@ -857,19 +997,22 @@ curricula:
             resourceType: note
             resourceId: micro-incremental-transfer-pricing
             estimatedMinutes: 35
-            description: Use incremental cost and transfer pricing for internal and short-run decisions.
+            description: Use incremental cost and transfer pricing for internal and
+              short-run decisions.
           - id: micro-peak-load-two-part-pricing
             title: Peak-load and two-part pricing
             resourceType: note
             resourceId: micro-peak-load-two-part-pricing
             estimatedMinutes: 35
-            description: Explore pricing that responds to timing, capacity, access, and usage.
+            description: Explore pricing that responds to timing, capacity, access, and
+              usage.
           - id: micro-skimming-penetration-pricing
             title: Skimming, penetration, and predatory pricing
             resourceType: note
             resourceId: micro-skimming-penetration-pricing
             estimatedMinutes: 35
-            description: Compare launch-pricing strategies and the analysis of predatory pricing.
+            description: Compare launch-pricing strategies and the analysis of predatory
+              pricing.
           - id: micro-pricing-check
             title: Pricing techniques practice
             resourceType: quiz
@@ -879,62 +1022,71 @@ curricula:
       - id: micro-resource-markets
         order: 9
         title: Fundamentals of Resource Markets
-        summary: Study rent, wages, work and leisure, interest, and profit as returns to scarce resources.
+        summary: Study rent, wages, work and leisure, interest, and profit as returns to
+          scarce resources.
         estimatedMinutes: 220
         outcomes:
           - Explain rent and the derived demand for productive resources.
-          - Analyse wage determination, labour supply, wage differentials, and minimum wages.
-          - Distinguish interest-rate differentials and accounting from economic profit.
+          - Analyse wage determination, labour supply, wage differentials, and
+            minimum wages.
+          - Distinguish interest-rate differentials and accounting from economic
+            profit.
         lessons:
           - id: micro-rent
             title: Rent and the resource market
             resourceType: note
             resourceId: micro-rent
             estimatedMinutes: 30
-            description: Introduce rent, economic rent, resource scarcity, and derived demand.
+            description: Introduce rent, economic rent, resource scarcity, and derived
+              demand.
           - id: micro-wage-determination
             title: Wage determination and labour markets
             resourceType: note
             resourceId: micro-wage-determination
             estimatedMinutes: 40
-            description: Study labour demand, unions, minimum wages, pay, and wage differentials.
+            description: Study labour demand, unions, minimum wages, pay, and wage
+              differentials.
           - id: micro-work-leisure
             title: Choice between work and leisure
             resourceType: note
             resourceId: micro-work-leisure
             estimatedMinutes: 30
-            description: Use a labour-leisure model to explain the income and substitution effects of wages.
+            description: Use a labour-leisure model to explain the income and substitution
+              effects of wages.
           - id: micro-interest-rates
             title: Interest rates and differentials
             resourceType: note
             resourceId: micro-interest-rates
             estimatedMinutes: 30
-            description: Explain interest as a return to capital and why rates differ across decisions.
+            description: Explain interest as a return to capital and why rates differ across
+              decisions.
           - id: micro-profit
             title: Accounting profit and economic profit
             resourceType: note
             resourceId: micro-profit
             estimatedMinutes: 30
-            description: Distinguish accounting and economic profit and connect profit with resource allocation.
+            description: Distinguish accounting and economic profit and connect profit with
+              resource allocation.
           - id: micro-resources-check
             title: Resource markets practice
             resourceType: quiz
             resourceId: quiz-micro-resources
             estimatedMinutes: 15
             description: Review resource rewards, labour markets, interest, and profit.
-
   - id: macroeconomics-guided
     subjectId: macroeconomics
     title: Your guided Macroeconomics path
-    description: Follow a structured sequence through national income, employment, money, inflation, policy, development, and global issues.
+    description: Follow a structured sequence through national income, employment,
+      money, inflation, policy, development, and global issues.
     syllabusNote: A structured Macroeconomics study path.
-    syllabusChapters: ''
+    syllabusChapters: ""
     syllabusChapterLinks: []
     units:
       - id: macro-foundations
         order: 1
         title: Foundations of Macroeconomics
-        summary: Build the language of economy-wide analysis, circular flow, equilibrium, and the changing business environment.
+        summary: Build the language of economy-wide analysis, circular flow,
+          equilibrium, and the changing business environment.
         estimatedMinutes: 150
         outcomes:
           - Explain the scope and uses of macroeconomics.
@@ -980,7 +1132,8 @@ curricula:
       - id: macro-national-income
         order: 2
         title: National Income Accounting
-        summary: Measure output and income using national aggregates, accounting approaches, price indexes, and interpretation limits.
+        summary: Measure output and income using national aggregates, accounting
+          approaches, price indexes, and interpretation limits.
         estimatedMinutes: 170
         outcomes:
           - Explain the main national income aggregates.
@@ -998,7 +1151,8 @@ curricula:
             resourceType: note
             resourceId: macro-national-aggregates
             estimatedMinutes: 30
-            description: Relate gross, net, domestic, national, personal, and per-capita measures.
+            description: Relate gross, net, domestic, national, personal, and per-capita
+              measures.
           - id: macro-national-income-methods
             title: Methods and difficulties of national income measurement
             resourceType: note
@@ -1010,23 +1164,27 @@ curricula:
             resourceType: note
             resourceId: macro-real-nominal-green-gdp
             estimatedMinutes: 30
-            description: Separate price changes from output and introduce sustainability adjustments.
+            description: Separate price changes from output and introduce sustainability
+              adjustments.
           - id: macro-saving-wealth
             title: Saving, wealth, and macroeconomic accounting
             resourceType: note
             resourceId: macro-saving-wealth
             estimatedMinutes: 25
-            description: Distinguish saving flows from wealth stocks and connect them with investment.
+            description: Distinguish saving flows from wealth stocks and connect them with
+              investment.
           - id: macro-national-income-check
             title: National income accounting practice
             resourceType: quiz
             resourceId: quiz-macro-national-income
             estimatedMinutes: 12
-            description: Practise aggregates, approaches, and real-versus-nominal interpretation.
+            description: Practise aggregates, approaches, and real-versus-nominal
+              interpretation.
       - id: macro-consumption-investment
         order: 3
         title: Consumption, Saving, and Investment
-        summary: Explain household spending, saving behaviour, business investment, and the main investment theories.
+        summary: Explain household spending, saving behaviour, business investment, and
+          the main investment theories.
         estimatedMinutes: 170
         outcomes:
           - Interpret consumption and saving functions.
@@ -1044,7 +1202,8 @@ curricula:
             resourceType: note
             resourceId: macro-consumption-hypotheses
             estimatedMinutes: 30
-            description: Compare current-income and forward-looking explanations of consumption.
+            description: Compare current-income and forward-looking explanations of
+              consumption.
           - id: macro-saving-paradox-thrift
             title: Saving function and the paradox of thrift
             resourceType: note
@@ -1072,7 +1231,8 @@ curricula:
       - id: macro-employment
         order: 4
         title: Classical and Keynesian Employment
-        summary: Compare classical and Keynesian explanations of employment, effective demand, sector models, and income multipliers.
+        summary: Compare classical and Keynesian explanations of employment, effective
+          demand, sector models, and income multipliers.
         estimatedMinutes: 200
         outcomes:
           - Explain Say’s law and the classical employment model.
@@ -1084,7 +1244,8 @@ curricula:
             resourceType: note
             resourceId: macro-classical-employment
             estimatedMinutes: 35
-            description: Introduce classical assumptions about wages, prices, output, and employment.
+            description: Introduce classical assumptions about wages, prices, output, and
+              employment.
           - id: macro-says-law-classical-critique
             title: Say’s law and the classical employment debate
             resourceType: note
@@ -1108,13 +1269,15 @@ curricula:
             resourceType: note
             resourceId: macro-multiplier
             estimatedMinutes: 35
-            description: Compare investment, fiscal, balanced-budget, and foreign-trade multipliers.
+            description: Compare investment, fiscal, balanced-budget, and foreign-trade
+              multipliers.
           - id: macro-employment-evaluation
             title: "Classical and Keynesian employment: evaluation"
             resourceType: note
             resourceId: macro-employment-evaluation
             estimatedMinutes: 30
-            description: Compare the adjustment stories, policy implications, and limits of the two approaches.
+            description: Compare the adjustment stories, policy implications, and limits of
+              the two approaches.
           - id: macro-employment-check
             title: Classical and Keynesian employment practice
             resourceType: quiz
@@ -1124,7 +1287,8 @@ curricula:
       - id: macro-money-islm
         order: 5
         title: Money, Interest, and the IS-LM Model
-        summary: Explain money markets, interest rates, liquidity preference, and short-run closed-economy equilibrium.
+        summary: Explain money markets, interest rates, liquidity preference, and
+          short-run closed-economy equilibrium.
         estimatedMinutes: 150
         outcomes:
           - Explain money demand and money supply.
@@ -1164,7 +1328,8 @@ curricula:
       - id: macro-adas
         order: 6
         title: Aggregate Demand, Aggregate Supply, and Equilibrium
-        summary: Build the AD-AS framework and compare Keynesian and classical adjustment through output, prices, wages, and capacity.
+        summary: Build the AD-AS framework and compare Keynesian and classical
+          adjustment through output, prices, wages, and capacity.
         estimatedMinutes: 150
         outcomes:
           - Explain the derivation and shifts of aggregate demand.
@@ -1204,7 +1369,8 @@ curricula:
       - id: macro-inflation-cycles
         order: 7
         title: Inflation, Unemployment, and Business Cycles
-        summary: Diagnose price instability, labour-market slack, expectations, and cyclical fluctuations before choosing stabilisation tools.
+        summary: Diagnose price instability, labour-market slack, expectations, and
+          cyclical fluctuations before choosing stabilisation tools.
         estimatedMinutes: 180
         outcomes:
           - Distinguish inflation, deflation, and stagflation.
@@ -1256,7 +1422,8 @@ curricula:
       - id: macro-banking
         order: 8
         title: Banking, Monetary Policy, and Financial Innovation
-        summary: Study banks, central banking, monetary-policy transmission, financial inclusion, fintech, and digital money.
+        summary: Study banks, central banking, monetary-policy transmission, financial
+          inclusion, fintech, and digital money.
         estimatedMinutes: 170
         outcomes:
           - Explain commercial-bank and central-bank functions.
@@ -1268,7 +1435,8 @@ curricula:
             resourceType: note
             resourceId: macro-banking-central-bank
             estimatedMinutes: 35
-            description: Introduce deposit creation, banking functions, and central-bank roles.
+            description: Introduce deposit creation, banking functions, and central-bank
+              roles.
           - id: macro-monetary-policy
             title: "Monetary policy: objectives and instruments"
             resourceType: note
@@ -1302,12 +1470,14 @@ curricula:
       - id: macro-fiscal
         order: 9
         title: Fiscal Policy and Government Finance
-        summary: Organise public revenue, spending, budgets, deficits, fiscal policy, federal finance, and partnerships.
+        summary: Organise public revenue, spending, budgets, deficits, fiscal policy,
+          federal finance, and partnerships.
         estimatedMinutes: 150
         outcomes:
           - Classify public revenue and expenditure.
           - Explain budgets, deficits, and fiscal-policy instruments.
-          - Evaluate coordination across government levels and public–private projects.
+          - Evaluate coordination across government levels and public–private
+            projects.
         lessons:
           - id: macro-public-revenue
             title: Public revenue and government expenditure
@@ -1326,7 +1496,8 @@ curricula:
             resourceType: note
             resourceId: macro-fiscal-policy
             estimatedMinutes: 35
-            description: Explain fiscal stance, automatic stabilisers, and multiplier limits.
+            description: Explain fiscal stance, automatic stabilisers, and multiplier
+              limits.
           - id: macro-fiscal-federalism-ppp
             title: Fiscal federalism and public–private partnerships
             resourceType: note
@@ -1342,7 +1513,8 @@ curricula:
       - id: macro-open-growth
         order: 10
         title: Open Economy, Growth, Development, and Contemporary Issues
-        summary: Connect external accounts, exchange rates, global integration, growth, development, poverty, inequality, and sustainability.
+        summary: Connect external accounts, exchange rates, global integration, growth,
+          development, poverty, inequality, and sustainability.
         estimatedMinutes: 190
         outcomes:
           - Interpret balance-of-payments accounts and exchange-rate regimes.
@@ -1366,7 +1538,8 @@ curricula:
             resourceType: note
             resourceId: macro-mundell-fleming
             estimatedMinutes: 35
-            description: Compare fiscal and monetary policy under alternative exchange-rate regimes.
+            description: Compare fiscal and monetary policy under alternative exchange-rate
+              regimes.
           - id: macro-globalization-fdi
             title: Globalisation, foreign direct investment, and the global economy
             resourceType: note
@@ -1378,44 +1551,50 @@ curricula:
             resourceType: note
             resourceId: macro-growth-development-issues
             estimatedMinutes: 40
-            description: Connect productive capacity with wellbeing, distribution, and sustainability.
+            description: Connect productive capacity with wellbeing, distribution, and
+              sustainability.
           - id: macro-open-growth-check
             title: Open economy and global economy practice
             resourceType: quiz
             resourceId: quiz-macro-open-economy
             estimatedMinutes: 12
             description: Review external accounts, exchange rates, and development.
-
   - id: managerial-economics-guided
     subjectId: managerial-economics
     title: Your guided Managerial Economics path
-    description: Follow a structured sequence through decision tools, firm behaviour, demand, costs, strategy, pricing, and policy.
+    description: Follow a structured sequence through decision tools, firm
+      behaviour, demand, costs, strategy, pricing, and policy.
     syllabusNote: A structured Managerial Economics study path.
-    syllabusChapters: ''
+    syllabusChapters: ""
     syllabusChapterLinks: []
     units:
       - id: managerial-foundations
         order: 1
         title: Foundations of Managerial Economics and Decision Tools
-        summary: Build the language of scarcity, opportunity cost, marginal reasoning, profit, optimisation, and business analysis.
+        summary: Build the language of scarcity, opportunity cost, marginal reasoning,
+          profit, optimisation, and business analysis.
         estimatedMinutes: 150
         outcomes:
           - Explain the scope and practical uses of Managerial Economics.
-          - Apply opportunity-cost, marginal, incremental, and optimisation reasoning.
-          - Distinguish positive analysis, normative judgement, and economic profit.
+          - Apply opportunity-cost, marginal, incremental, and optimisation
+            reasoning.
+          - Distinguish positive analysis, normative judgement, and economic
+            profit.
         lessons:
           - id: managerial-introduction
             title: Managerial Economics scope and use
             resourceType: note
             resourceId: managerial-introduction
             estimatedMinutes: 25
-            description: Introduce economic reasoning for business decisions under constraints.
+            description: Introduce economic reasoning for business decisions under
+              constraints.
           - id: managerial-marginal-analysis
             title: Marginal analysis in decision-making
             resourceType: note
             resourceId: note-marginal-analysis
             estimatedMinutes: 30
-            description: Compare marginal benefits, marginal costs, and incremental alternatives.
+            description: Compare marginal benefits, marginal costs, and incremental
+              alternatives.
           - id: managerial-opportunity-cost
             title: Scarcity, opportunity cost, and the production possibility curve
             resourceType: note
@@ -1443,7 +1622,8 @@ curricula:
       - id: managerial-firms
         order: 2
         title: Firms, Managers, and Organisational Goals
-        summary: Compare profit, value, sales, growth, managerial discretion, agency, and behavioural views of the firm.
+        summary: Compare profit, value, sales, growth, managerial discretion, agency,
+          and behavioural views of the firm.
         estimatedMinutes: 130
         outcomes:
           - Compare common objectives of firms and managers.
@@ -1473,7 +1653,8 @@ curricula:
             resourceType: note
             resourceId: managerial-agency-behaviour
             estimatedMinutes: 30
-            description: Explain incentives, information, routines, and organisational behaviour.
+            description: Explain incentives, information, routines, and organisational
+              behaviour.
           - id: managerial-firms-check
             title: Firms, managers, and objectives practice
             resourceType: quiz
@@ -1483,7 +1664,8 @@ curricula:
       - id: managerial-demand-welfare
         order: 3
         title: Demand, Supply, Market Equilibrium, and Welfare
-        summary: Use market functions, elasticity, equilibrium, surplus, efficiency, and policy analysis for decisions.
+        summary: Use market functions, elasticity, equilibrium, surplus, efficiency, and
+          policy analysis for decisions.
         estimatedMinutes: 170
         outcomes:
           - Interpret demand, supply, and elasticity relationships.
@@ -1529,7 +1711,8 @@ curricula:
       - id: managerial-forecasting
         order: 4
         title: Demand Estimation and Forecasting
-        summary: Build practical forecasting skills using research, experiments, time series, indicators, and regression.
+        summary: Build practical forecasting skills using research, experiments, time
+          series, indicators, and regression.
         estimatedMinutes: 140
         outcomes:
           - Explain the purpose and limits of demand estimation.
@@ -1569,7 +1752,8 @@ curricula:
       - id: managerial-consumer-risk
         order: 5
         title: Consumer Choice, Risk, and Information
-        summary: Analyse preferences, constraints, price effects, risk attitudes, and information problems in business markets.
+        summary: Analyse preferences, constraints, price effects, risk attitudes, and
+          information problems in business markets.
         estimatedMinutes: 160
         outcomes:
           - Use consumer-choice tools to explain demand responses.
@@ -1615,7 +1799,8 @@ curricula:
       - id: managerial-production
         order: 6
         title: Production and Input Choice
-        summary: Study production functions, variable inputs, isoquants, isocosts, scale, scope, and learning.
+        summary: Study production functions, variable inputs, isoquants, isocosts,
+          scale, scope, and learning.
         estimatedMinutes: 170
         outcomes:
           - Explain production functions and time horizons.
@@ -1627,7 +1812,8 @@ curricula:
             resourceType: note
             resourceId: managerial-production-functions
             estimatedMinutes: 35
-            description: Introduce inputs, output, technology, and short-run or long-run choices.
+            description: Introduce inputs, output, technology, and short-run or long-run
+              choices.
           - id: managerial-variable-inputs
             title: One and two variable inputs
             resourceType: note
@@ -1661,7 +1847,8 @@ curricula:
       - id: managerial-costs
         order: 7
         title: Cost Analysis and Break-Even Decisions
-        summary: Build cost curves, cost estimates, break-even analysis, and relevant-cost decisions.
+        summary: Build cost curves, cost estimates, break-even analysis, and
+          relevant-cost decisions.
         estimatedMinutes: 160
         outcomes:
           - Distinguish major cost categories and time horizons.
@@ -1673,7 +1860,8 @@ curricula:
             resourceType: note
             resourceId: managerial-cost-concepts
             estimatedMinutes: 30
-            description: Organise explicit, implicit, fixed, variable, average, and marginal costs.
+            description: Organise explicit, implicit, fixed, variable, average, and marginal
+              costs.
           - id: managerial-cost-curves
             title: Short-run and long-run cost curves
             resourceType: note
@@ -1707,7 +1895,8 @@ curricula:
       - id: managerial-markets
         order: 8
         title: Market Structures and Strategic Behaviour
-        summary: Compare competition, monopoly, differentiated markets, oligopoly, cartels, and strategic games.
+        summary: Compare competition, monopoly, differentiated markets, oligopoly,
+          cartels, and strategic games.
         estimatedMinutes: 190
         outcomes:
           - Classify markets and identify sources of market power.
@@ -1759,7 +1948,8 @@ curricula:
       - id: managerial-pricing
         order: 9
         title: Pricing Practices and Strategy
-        summary: Apply cost-based, incremental, internal, multi-product, time-based, discriminatory, and value-based pricing.
+        summary: Apply cost-based, incremental, internal, multi-product, time-based,
+          discriminatory, and value-based pricing.
         estimatedMinutes: 190
         outcomes:
           - Compare cost-plus and incremental pricing decisions.
@@ -1811,11 +2001,14 @@ curricula:
       - id: managerial-market-failure
         order: 10
         title: Market Failure and Government Intervention
-        summary: Diagnose market failure and evaluate competition, environmental, information, and public-choice responses.
+        summary: Diagnose market failure and evaluate competition, environmental,
+          information, and public-choice responses.
         estimatedMinutes: 180
         outcomes:
-          - Identify market power, externalities, public goods, common resources, and information failure.
-          - Compare regulation, taxes, subsidies, patents, standards, and competition policy.
+          - Identify market power, externalities, public goods, common
+            resources, and information failure.
+          - Compare regulation, taxes, subsidies, patents, standards, and
+            competition policy.
           - Evaluate regulatory trade-offs and government failure.
         lessons:
           - id: managerial-market-failure
@@ -1847,13 +2040,15 @@ curricula:
             resourceType: note
             resourceId: managerial-regulation-competition
             estimatedMinutes: 35
-            description: Introduce antitrust, utility regulation, patents, and operating controls.
+            description: Introduce antitrust, utility regulation, patents, and operating
+              controls.
           - id: managerial-environment-public-choice
             title: Environmental policy and public choice
             resourceType: note
             resourceId: managerial-environment-public-choice
             estimatedMinutes: 35
-            description: Connect pollution policy, regulatory trade-offs, and government failure.
+            description: Connect pollution policy, regulatory trade-offs, and government
+              failure.
           - id: managerial-market-failure-check
             title: Market failure and government intervention practice
             resourceType: quiz
