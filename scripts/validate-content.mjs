@@ -121,6 +121,10 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
   const curriculumPath = path.join(contentDir, 'curriculum.yml')
   const curriculumTaxonomy = existsSync(curriculumPath) ? yaml.load(readFileSync(curriculumPath, 'utf8')) || {} : {}
   const curricula = Array.isArray(curriculumTaxonomy.curricula) ? curriculumTaxonomy.curricula : []
+  const unitIdsBySubject = new Map(curricula.map((curriculum) => [
+    curriculum.subjectId,
+    new Set(Array.isArray(curriculum.units) ? curriculum.units.map((unit) => unit.id) : []),
+  ]))
 
   if (levels.length === 0) errors.push('content/subjects.yml must define at least one level')
   if (subjects.length === 0) errors.push('content/subjects.yml must define at least one subject')
@@ -225,6 +229,13 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
       if (!data.title) errors.push(`${label} is missing title`)
       if (collection === 'notes') {
         if (!data.summary) errors.push(`${label} is missing summary`)
+        if (data.unitId !== undefined) {
+          if (typeof data.unitId !== 'string' || !data.unitId.trim()) {
+            errors.push(`${label} unitId must be a non-empty string`)
+          } else if (!unitIdsBySubject.get(data.subjectId)?.has(data.unitId)) {
+            errors.push(`${label} unitId ${data.unitId} does not belong to the curriculum for subject ${data.subjectId}`)
+          }
+        }
         if (data.toc !== undefined && (!Array.isArray(data.toc) || data.toc.some((heading) => typeof heading !== 'string' || !heading.trim()))) {
           errors.push(`${label} toc must be a list of non-empty heading titles`)
         }

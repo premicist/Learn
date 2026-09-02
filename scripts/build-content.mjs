@@ -147,6 +147,7 @@ const FALLBACK_NOTE_DATE = '2026-07-19'
 const notes = readMarkdownFolder('notes').map((n) => ({
   id: n.id,
   subjectId: n.subjectId,
+  unitId: typeof n.unitId === 'string' ? n.unitId : '',
   title: n.title,
   summary: n.summary,
   toc: Array.isArray(n.toc) ? n.toc.filter((item) => typeof item === 'string') : [],
@@ -268,6 +269,7 @@ export type NoteVisualBlock = {
 export type Note = {
   id: string
   subjectId: string
+  unitId: string
   title: string
   summary: string
   toc: string[]

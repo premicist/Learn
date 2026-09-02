@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router'
-import type { Curriculum, CurriculumChapterLink, CurriculumLesson, CurriculumResourceType } from '../data/curriculum'
+import type { Note } from '../data/content'
+import type { Curriculum, CurriculumChapterLink, CurriculumLesson, CurriculumResourceType, CurriculumUnit } from '../data/curriculum'
 
 const resourceLabels: Record<CurriculumResourceType, string> = {
   note: 'Note',
@@ -39,8 +40,32 @@ function getChapterLinks(curriculum: Curriculum, units: Curriculum['units']) {
   })
 }
 
-function CurriculumPath({ curriculum }: { curriculum: Curriculum }) {
-  const orderedUnits = useMemo(() => [...curriculum.units].sort((a, b) => a.order - b.order), [curriculum.units])
+function addAssignedNotesToUnits(units: CurriculumUnit[], notes: Note[]) {
+  const notesByUnit = new Map<string, Note[]>()
+  notes.forEach((note) => {
+    if (!note.unitId) return
+    const assigned = notesByUnit.get(note.unitId) || []
+    assigned.push(note)
+    notesByUnit.set(note.unitId, assigned)
+  })
+  return units.map((unit) => {
+    const existingNoteIds = new Set(unit.lessons.filter((lesson) => lesson.resourceType === 'note').map((lesson) => lesson.resourceId))
+    const assignedLessons = (notesByUnit.get(unit.id) || [])
+      .filter((note) => !existingNoteIds.has(note.id))
+      .map((note) => ({
+        id: `${unit.id}-${note.id}`,
+        title: note.title,
+        resourceType: 'note' as const,
+        resourceId: note.id,
+        estimatedMinutes: 15,
+        description: note.summary,
+      }))
+    return assignedLessons.length > 0 ? { ...unit, lessons: [...unit.lessons, ...assignedLessons] } : unit
+  })
+}
+
+function CurriculumPath({ curriculum, notes = [] }: { curriculum: Curriculum; notes?: Note[] }) {
+  const orderedUnits = useMemo(() => addAssignedNotesToUnits([...curriculum.units].sort((a, b) => a.order - b.order), notes), [curriculum.units, notes])
   const chapters = useMemo(() => getChapterLinks(curriculum, orderedUnits), [curriculum, orderedUnits])
   const [openUnitId, setOpenUnitId] = useState<string | null>(null)
 

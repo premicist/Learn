@@ -99,7 +99,7 @@ function SubjectDetails() {
         )}
       </section>
 
-      {curriculum && <CurriculumPath curriculum={curriculum} />}
+      {curriculum && <CurriculumPath curriculum={curriculum} notes={subjectNotes} />}
 
       <section className="subject-scheduled-tests" aria-labelledby="subject-scheduled-tests-heading">
         <div className="section-heading">
