@@ -2055,3 +2055,336 @@ curricula:
             resourceId: quiz-managerial-market-failure
             estimatedMinutes: 12
             description: Check market-failure mechanisms and policy responses.
+  - id: introduction-to-economics
+    subjectId: introduction-to-economics
+    title: Your guided Introduction to Economics path
+    description: Follow a steady sequence from basic economic concepts and business
+      economics through demand, supply, consumer behaviour, production, market
+      structure, and pricing techniques.
+    syllabusNote: Based on the ECO6701 course syllabus.
+    units:
+      - id: eco6701-u1
+        order: 1
+        title: "Economics: An Introduction"
+        summary: This unit provides a foundational introduction to economics by
+          exploring its evolving definitions, core scope, and basic economic
+          problems. It also establishes the essential distinction between
+          positive facts and normative values, as well as individual micro-level
+          and aggregate macro-level perspectives.
+        estimatedMinutes: 180
+        outcomes:
+          - Understand the core definitions of economics from classical to
+            modern perspectives.
+          - Identify fundamental economic problems arising from resource
+            scarcity.
+          - Differentiate between positive and normative economic statements.
+          - Compare microeconomic and macroeconomic branches.
+        lessons:
+          - id: eco6701-u1ch1
+            title: Meaning and Definitions
+            resourceType: note
+            estimatedMinutes: 60
+            description: Explores the origin and major definitions of economics, including
+              Adam Smith's wealth view, Marshall's welfare concept, Robbins'
+              scarcity perspective, and Samuelson's dynamic growth approach.
+          - id: eco6701-u1ch2
+            title: Nature and Scope
+            resourceType: note
+            estimatedMinutes: 30
+            description: Examines whether economics functions as a science, an art, or both,
+              while outlining the traditional and modern scope of economic study
+              across various sectors.
+          - id: eco6701-u1ch3
+            description: "Analyzes the central problems every economy faces due to scarce
+              resources: what to produce, how to produce efficiently, and for
+              whom to distribute the final goods."
+            title: Basic Economic Problems
+            resourceType: note
+            estimatedMinutes: 30
+          - id: eco6701-u1ch4
+            title: Positive and Normative Economics
+            resourceType: note
+            description: Differentiates between positive economics, which analyzes objective
+              facts and cause-and-effect relationships, and normative economics,
+              which involves value judgments, ethics, and policy
+              recommendations.
+            estimatedMinutes: 30
+          - id: eco6701-u1ch5
+            title: Micro and Macro Economics
+            resourceType: note
+            description: Compares microeconomics, which focuses on individual economic units
+              like households and firms, with macroeconomics, which studies
+              nationwide aggregate variables such as national income and general
+              inflation.
+            estimatedMinutes: 60
+      - id: eco6701-u2
+        order: 2
+        title: Intro to Business Economics
+        summary: This unit examines how business managers use microeconomic tools and
+          decision sciences to solve operational problems, forecast demand, and
+          manage risk.
+        estimatedMinutes: 120
+        outcomes:
+          - Define the applied nature and scope of business economics.
+          - Explain the strategic role of a business economist in managerial
+            decision-making.
+          - Evaluate technical efficiency and the time element in business
+            planning.
+          - Apply marginalism and opportunity cost concepts to business problems.
+        lessons:
+          - id: eco6701-u2ch1
+            title: Nature, Scope, and Role of Business Economics
+            resourceType: note
+            estimatedMinutes: 60
+            description: Examines how business economics integrates economic logic with
+              managerial policy-making, outlining the multidisciplinary scope
+              and key responsibilities of business economists in strategic
+              planning.
+          - title: Fundamental Concepts, Efficiency, and Time Element
+            id: eco6701-u2ch2
+            resourceType: note
+            estimatedMinutes: 60
+            description: Explains core economic principles used in business, including
+              opportunity cost, marginalism, discounting, production efficiency,
+              and the structural difference between short-run and long-run
+              planning horizons.
+      - id: eco6701-u3
+        order: 3
+        title: Demand
+        summary: Introduce demand, its key determinants, and the law of demand as the
+          foundation for market analysis.
+        estimatedMinutes: 120
+        outcomes:
+          - Explain the concept of demand and its key determinants.
+          - State the Law of Demand using schedules and curves.
+          - Analyze reasons for the downward-sloping demand curve.
+          - Distinguish between movements along and shifts in the demand curve.
+        lessons:
+          - title: Introduction to Demand
+            id: eco6701-u3ch1
+            resourceType: note
+            estimatedMinutes: 30
+            description: Defines economic demand as desire backed by purchasing power and
+              willingness to pay.
+          - id: eco6701-u3ch2
+            title: Law of Demand
+            resourceType: note
+            estimatedMinutes: 30
+            description: States the inverse price-quantity relationship under ceteris
+              paribus, illustrating demand schedules, downward-sloping curves,
+              underlying causes like income/substitution effects, and shift
+              determinants.
+          - id: eco6701-u3ch3
+            title: Shifts and Movement along in Demand Curve
+            resourceType: note
+            estimatedMinutes: 30
+            description: Understand causes behind movement along versus shift of the demand
+              curve.
+      - id: eco6701-u4
+        order: 4
+        title: Elasticity of Demand
+        summary: Measure how responsive quantity demanded is to price and other factors,
+          and why that matters.
+        estimatedMinutes: 210
+        outcomes:
+          - Calculate and interpret price elasticity of demand using various
+            measurement techniques.
+          - Identify key factors determining product price sensitivity.
+          - Explain income and cross-price elasticities of demand.
+          - Apply elasticity concepts to business pricing strategies and other
+            decisions.
+        lessons:
+          - id: eco6701-u4ch1
+            title: Meaning and Types of Elasticity of Demand
+            resourceType: note
+            estimatedMinutes: 30
+            description: Focuses on measuring how buyer demand responds to changes in
+              product price, consumer income, and substitute goods.
+          - id: eco6701-u4ch2
+            title: Measurement methods of Elasticity
+            resourceType: note
+            estimatedMinutes: 60
+            description: Examines mathematical techniques for measuring elasticity,
+              including percentage, total outlay, point, and arc methods across
+              various elasticity types.
+          - id: eco6701-u4ch3
+            title: Price Elasticity of Demand
+            resourceType: note
+            estimatedMinutes: 30
+            description: Meaning and types (degrees) of Price Elasticity of Demand.
+          - id: eco6701-u4ch4
+            title: Income Elasticity of Demand
+            resourceType: note
+            description: Meaning and types of Income Elasticity of Demand.
+            estimatedMinutes: 30
+          - id: eco6701-u4ch5
+            title: Cross Elasticity of Demand
+            resourceType: note
+            estimatedMinutes: 30
+            description: Meaning and Types of Cross Elasticity of Demand.
+          - title: Factors Determining Elasticity of Demand
+            resourceType: note
+            estimatedMinutes: 15
+            description: Analyzes key determinants influencing demand responsiveness, such
+              as substitute availability, product necessity versus luxury
+              status, budget proportion, consumer habits, and time reaction
+              horizons.
+            id: eco6701-u4ch6
+          - id: eco6701-u4ch7
+            title: Importance of Elasticity in Decision Making
+            resourceType: note
+            estimatedMinutes: 15
+            description: Demonstrates practical applications of elasticity in corporate
+              pricing strategies, total revenue maximization, monopoly price
+              discrimination, government tax policies, and international trade
+              regulation.
+      - id: eco6701-u5
+        order: 5
+        title: Supply
+        summary: This unit explores the supply side of the market by examining producer
+          behavior and price determination.
+        estimatedMinutes: 180
+        outcomes:
+          - Define market supply and state the Law of Supply.
+          - Calculate price elasticity of supply and identify its determinants.
+          - Explain how demand and supply interact to determine market
+            equilibrium.
+          - Analyze self-correcting market mechanisms during shortages and
+            surpluses.
+        lessons:
+          - title: Introduction to Supply, law of Supply
+            id: eco6701-u5ch1
+            resourceType: note
+            estimatedMinutes: 30
+            description: Introduces the concept of supply, law of supply while outlining key
+              determinants that influence producers' willingness to offer goods.
+          - id: eco6701-u5ch2
+            title: Elasticity of Supply
+            resourceType: note
+            estimatedMinutes: 30
+            description: Measures producer responsiveness to price changes, detailing
+              elasticity degrees.
+          - id: eco6701-u5ch3
+            title: Market Equilibrium
+            resourceType: note
+            estimatedMinutes: 60
+            description: Explains how intersecting market demand and supply curves determine
+              equilibrium price and quantity, demonstrating self-adjusting
+              market mechanisms that resolve excess supply and shortages.
+          - id: eco6701-u5ch4
+            title: Demand, Supply and Equilibrium Numericals
+            resourceType: note
+            estimatedMinutes: 60
+            description: Check demand and supply-curve reasoning and equilibrium
+              determination through numerical practice.
+      - id: eco6701-u6
+        order: 6
+        title: Theories of Consumer Behaviour I
+        summary: This unit investigates consumer choice through utility theory, focusing
+          primarily on cardinal utility analysis.
+        estimatedMinutes: 150
+        outcomes:
+          - Explain Utility and its cardinal and ordinal utility measurement
+            approaches.
+          - Explain the Law of Diminishing Marginal Utility and its relation to
+            the demand curve.
+          - Derive consumer equilibrium using the Law of Equi-Marginal Utility.
+          - Evaluate basic risk management concepts in consumer decision-making.
+        lessons:
+          - id: eco6701-u6ch1
+            title: Meaning of Utility, Cardinal and Ordinal Utility Approaches
+            resourceType: note
+            estimatedMinutes: 30
+            description: Understand Utility meaning, Compares Marshall's quantifiable
+              cardinal utility approach measured in utils with Hicks and Allen's
+              qualitative ordinal utility approach based on consumer ranking and
+              preference orders.
+          - id: eco6701-u6ch2
+            title: Law of Diminishing Marginal Utility
+            resourceType: note
+            estimatedMinutes: 45
+            description: Explains how additional satisfaction declines with successive unit
+              consumption, illustrating total and marginal utility schedules,
+              satiety points, and reasons for downward-sloping demand curves.
+          - id: eco6701-u6ch3
+            title: Law of Substitution or Equi-Marginal Utility
+            resourceType: note
+            estimatedMinutes: 45
+            description: Demonstrates how rational consumers allocate limited income across
+              multiple goods so that the marginal utility per rupee spent is
+              equalized to maximize total satisfaction.
+          - id: eco6701-u6ch4
+            title: Theories of Risk Management in Consumer Choice
+            resourceType: blog
+            estimatedMinutes: 30
+            description: Examines consumer rationality and decision-making behavior when
+              facing risk and uncertainty, exploring expected utility, risk
+              aversion, and consumer risk-mitigation strategies.
+          - id: eco6701-u6ch5
+            title: Consumer's Surplus and Producer's Surplus
+            resourceType: blog
+            estimatedMinutes: 30
+            description: Examines benefits gained by consumer and producer upon
+              participating in the market activities.
+      - id: eco6701-u8
+        order: 7
+        title: Theory of Production
+        summary: explore input-output relationships in the short and long run
+          production, analyzing how costs behave as output expands. The unit
+          also covers internal/external scale economies and break-even analysis
+          essential for business profitability and operational planning.
+        estimatedMinutes: 180
+        outcomes:
+          - Differentiate between short-run variable proportions and long-run
+            returns to scale.
+          - Analyze short-run and long-run cost curve behaviors.
+          - Explain internal and external economies of scale.
+          - Perform break-even analysis to determine profit-maximizing and
+            zero-profit output levels.
+        lessons:
+          - id: eco6701-u8ch1
+            title: Meaning of Production, Production Function
+            resourceType: note
+            estimatedMinutes: 30
+            description: defining production and production function, calculating total,
+              average and marginal production.
+            resourceId: managerial-production-functions
+          - id: eco6701-u8ch2
+            title: The Law of Variable Proportion
+            resourceType: note
+            estimatedMinutes: 30
+            description: Explore the short run production function through law of variable
+              proportion.
+            resourceId: micro-variable-proportions
+          - id: eco6701-u8ch3
+            title: The law of Returns to Scale
+            resourceType: note
+            estimatedMinutes: 30
+            description: Explore the long run production function through law of returns to
+              scale.
+            resourceId: micro-returns-to-scale
+          - id: eco6701-u8ch4
+            title: Short-Run and Long-Run Costs Curves
+            resourceType: note
+            estimatedMinutes: 60
+            description: Examines physical production functions, fixed versus variable
+              inputs, U-shaped short-run average cost curves, and long-run
+              envelope cost curves determined by input flexibility.
+            resourceId: micro-cost-curves
+          - id: eco6701-u8ch5
+            title: Economies and Diseconomies of Scale
+            resourceType: note
+            estimatedMinutes: 30
+            description: Analyzes cost advantages gained through large-scale long-run
+              production expansion, distinguishing between internal
+              managerial/technical efficiencies and external industry-wide cost
+              savings.
+            resourceId: micro-scale-scope-breakeven
+          - id: eco6701-u8ch6
+            title: Break-Even Analysis
+            resourceType: note
+            estimatedMinutes: 15
+            description: Explains the financial technique used to calculate the break-even
+              volume where total revenue equals total cost, helping managers
+              evaluate profit margins and target outputs.
+            resourceId: micro-scale-scope-breakeven
