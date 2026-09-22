@@ -76,3 +76,9 @@ subjects:
     featured:
       - type: note
         id: managerial-introduction
+  - id: introduction-to-economics
+    levelId: bachelors
+    title: Introduction to Economics
+    color: "#260101"
+    description: It covers introductory understanding of economics concepts for
+      bachelor's students.
