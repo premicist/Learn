@@ -102,8 +102,8 @@ export type CurriculumChapterLink = {
 export type CurriculumLesson = {
   id: string
   title: string
-  resourceType: CurriculumResourceType
-  resourceId: string
+  resourceType?: CurriculumResourceType
+  resourceId?: string
   estimatedMinutes: number
   description: string
 }
