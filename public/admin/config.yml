@@ -1,1 +1,112 @@
-SEE_FILE
+backend:
+  name: git-gateway
+  repo: premicist/Learn
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/afb8cc14-b7e5-4678-9382-d3136ac237a9
+  gateway_url: https://gateway.decapbridge.com
+  commit_messages:
+    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+site_url: https://prempokhrel.com.np
+media_folder: public/images/uploads
+public_folder: /images/uploads
+collections:
+  - name: subjects
+    label: Subjects & Levels
+    files:
+      - file: content/subjects.yml
+        label: Subjects & Levels
+        name: subjects
+        fields:
+          - label: Levels
+            name: levels
+            widget: list
+            fields:
+              - { label: 'ID (lowercase kebab-case, e.g. bachelors)', name: id, widget: string }
+              - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+              - { label: 'Short title (for menus)', name: shortTitle, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Subjects
+            name: subjects
+            widget: list
+            fields:
+              - { label: 'ID (lowercase kebab-case, e.g. microeconomics)', name: id, widget: string, pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase letters, numbers, and hyphens only.'] }
+              - label: Level
+                name: levelId
+                widget: relation
+                collection: subjects
+                file: subjects
+                search_fields: [levels.*.id, levels.*.title]
+                display_fields: [levels.*.title, levels.*.id]
+                value_field: levels.*.id
+              - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+              - { label: Description, name: description, widget: text }
+              - { label: Color (hex code), name: color, widget: color, allowInput: true }
+              - label: Featured resources
+                name: featured
+                widget: list
+                required: false
+                summary: '{{type}}: {{id}}'
+                hint: 'Add resources in the order they should appear. Use the exact Markdown filename without .md.'
+                fields:
+                  - { label: Type, name: type, widget: select, options: [note, blog, quiz, video] }
+                  - { label: Resource, name: id, widget: resource_id, hint: 'Search by title, subject, or resource ID. Choose the resource matching the selected type.' }
+
+  - name: curricula
+    label: Guided Curricula
+    files:
+      - file: content/curriculum.yml
+        label: Guided Curricula
+        name: curriculum
+        fields:
+          - label: Curricula
+            name: curricula
+            widget: list
+            fields:
+              - { label: 'ID (lowercase kebab-case)', name: id, widget: string, pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase letters, numbers, and hyphens only.'] }
+              - label: Subject
+                name: subjectId
+                widget: relation
+                collection: subjects
+                file: subjects
+                search_fields: [subjects.*.id, subjects.*.title]
+                display_fields: [subjects.*.title, subjects.*.id]
+                value_field: subjects.*.id
+              - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+              - { label: Description, name: description, widget: text }
+              - { label: Syllabus note, name: syllabusNote, widget: string, hint: 'Use simple wording such as Based on the latest NEB syllabus.' }
+              - { label: Syllabus chapter titles, name: syllabusChapters, widget: string, required: false, hint: 'Enter chapter titles separated by commas. Leave empty to use the unit titles.' }
+              - label: Syllabus chapter links
+                name: syllabusChapterLinks
+                widget: list
+                required: false
+                collapsed: true
+                fields:
+                  - { label: Chapter title, name: title, widget: string }
+                  - { label: Optional URL, name: url, widget: string, required: false, hint: 'Leave blank to scroll to the matching unit on this page.' }
+                  - { label: Optional unit ID, name: unitId, widget: string, required: false, hint: 'Use this when the chapter title differs from the unit title.' }
+              - label: Units
+                name: units
+                widget: list
+                fields:
+                  - { label: 'Unit ID', name: id, widget: string }
+                  - { label: Order, name: order, widget: number, value_type: int }
+                  - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+                  - { label: Summary, name: summary, widget: text }
+                  - { label: 'Estimated minutes', name: estimatedMinutes, widget: number, value_type: int }
+                  - { label: Outcomes, name: outcomes, widget: list }
+                  - label: Lessons
+                    name: lessons
+                    widget: list
+                    fields:
+                      - { label: 'Lesson ID', name: id, widget: string }
+                      - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+                      - { label: Resource type, name: resourceType, widget: select, options: [note, blog, quiz, video], required: false, hint: 'Optional until the note/blog/quiz/video exists. Leave blank for a coming-soon lesson.' }
+                      - { label: Resource, name: resourceId, widget: resource_id, required: false, hint: 'Optional. Search for the note, blog, quiz, or video once it exists. Leave blank while scaffolding the curriculum.' }
+                      - { label: 'Estimated minutes', name: estimatedMinutes, widget: number, value_type: int }
+                      - { label: Description, name: description, widget: text }
