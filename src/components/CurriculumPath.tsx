@@ -17,8 +17,13 @@ const resourceCollections: Record<CurriculumResourceType, string> = {
   video: 'videos',
 }
 
+function hasLinkedResource(lesson: CurriculumLesson) {
+  return Boolean(lesson.resourceType && lesson.resourceId)
+}
+
 function resourcePath(lesson: CurriculumLesson) {
-  return `/${resourceCollections[lesson.resourceType]}/${lesson.resourceId}`
+  if (!hasLinkedResource(lesson)) return null
+  return `/${resourceCollections[lesson.resourceType!]}/${lesson.resourceId}`
 }
 
 function getChapterLinks(curriculum: Curriculum, units: Curriculum['units']) {
@@ -49,7 +54,7 @@ function addAssignedNotesToUnits(units: CurriculumUnit[], notes: Note[]) {
     notesByUnit.set(note.unitId, assigned)
   })
   return units.map((unit) => {
-    const existingNoteIds = new Set(unit.lessons.filter((lesson) => lesson.resourceType === 'note').map((lesson) => lesson.resourceId))
+    const existingNoteIds = new Set(unit.lessons.filter((lesson) => lesson.resourceType === 'note' && lesson.resourceId).map((lesson) => lesson.resourceId))
     const assignedLessons = (notesByUnit.get(unit.id) || [])
       .filter((note) => !existingNoteIds.has(note.id))
       .map((note) => ({
@@ -130,20 +135,38 @@ function CurriculumPath({ curriculum, notes = [] }: { curriculum: Curriculum; no
                     </div>
                   )}
                   <div className="curriculum-lessons">
-                    {unit.lessons.map((lesson) => (
-                      <Link className="curriculum-lesson" to={resourcePath(lesson)} key={lesson.id}>
-                        <span className="curriculum-lesson__body">
-                          <span className="curriculum-lesson__meta">
-                            <span>{resourceLabels[lesson.resourceType]}</span>
-                            <span aria-hidden="true">·</span>
-                            <span>{lesson.estimatedMinutes} min</span>
+                    {unit.lessons.map((lesson) => {
+                      const path = resourcePath(lesson)
+                      const metaType = lesson.resourceType ? resourceLabels[lesson.resourceType] : 'Coming soon'
+                      const body = (
+                        <>
+                          <span className="curriculum-lesson__body">
+                            <span className="curriculum-lesson__meta">
+                              <span>{metaType}</span>
+                              <span aria-hidden="true">·</span>
+                              <span>{lesson.estimatedMinutes} min</span>
+                            </span>
+                            <strong>{lesson.title}</strong>
+                            <span>{lesson.description}</span>
                           </span>
-                          <strong>{lesson.title}</strong>
-                          <span>{lesson.description}</span>
-                        </span>
-                        <span className="curriculum-lesson__link">Open <span aria-hidden="true">→</span></span>
-                      </Link>
-                    ))}
+                          <span className="curriculum-lesson__link">
+                            {path ? <>Open <span aria-hidden="true">→</span></> : 'Coming soon'}
+                          </span>
+                        </>
+                      )
+                      if (path) {
+                        return (
+                          <Link className="curriculum-lesson" to={path} key={lesson.id}>
+                            {body}
+                          </Link>
+                        )
+                      }
+                      return (
+                        <div className="curriculum-lesson curriculum-lesson--pending" key={lesson.id} aria-disabled="true">
+                          {body}
+                        </div>
+                      )
+                    })}
                   </div>
                 </div>
               )}
