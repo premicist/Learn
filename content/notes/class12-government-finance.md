@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Government Finance and Fiscal Policy"
 summary: "Organise public revenue and expenditure and explain how fiscal policy can influence the economy."
 date: "2026-08-23"
+unitId: class12-u3-2
 ---
 
 ## Public finance

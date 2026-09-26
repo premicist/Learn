@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Quantitative Techniques for Economics"
 summary: "Build a repeatable method for averages, dispersion, index numbers, and clear economic interpretation."
 date: "2026-08-23"
+unitId: class12-u6-3
 ---
 
 ## Why quantitative techniques matter

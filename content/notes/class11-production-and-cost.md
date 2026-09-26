@@ -3,6 +3,7 @@ subjectId: class-11
 title: "Class 11 Economics: Production and Cost"
 summary: "Learn how firms transform inputs into output and how total, average, marginal, and cost measures fit together."
 date: "2026-08-23"
+unitId: class11-u2-4
 ---
 
 ## Production and the production function

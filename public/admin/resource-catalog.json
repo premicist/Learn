@@ -168,6 +168,14 @@
     "date": "2026-08-23"
   },
   {
+    "id": "class12-risk-bearing-theory-of-profit",
+    "type": "note",
+    "title": "Critically explain the Risk Bearing Theory of Profit.",
+    "subjectId": "class-12",
+    "summary": "The Risk Bearing Theory of Profit was propounded by Professor Hawley in 1907. ",
+    "date": "2026-09-02T00:00:00.000Z"
+  },
+  {
     "id": "class12-sdgs-nepal",
     "type": "note",
     "title": "Sustainable Development Goals and Nepal",
@@ -190,6 +198,22 @@
     "subjectId": "class-12",
     "summary": "Wage Fund Theory states that average wages are determined by dividing a predetermined wage fund by the number of workers employed: (W = Total Wage Fund / No. of Workers) . It explains why average wages fall when more workers share a fixed fund. However, the theory is unrealistic because the wage fund is not always fixed, workers are not homogeneous, wages are not perfectly flexible, and labour demand depends on product demand, productivity, and institutions. Thus, it is mainly important as a classical theory of wages.",
     "date": "2026-08-25T00:00:00.000Z"
+  },
+  {
+    "id": "classical-theory-of-interest",
+    "type": "note",
+    "title": "Classical Theory of Interest",
+    "subjectId": "class-12",
+    "summary": "The Classical Theory of Interest provides a foundational framework for understanding how interest rates are determined through the interaction of supply and demand for capital.",
+    "date": "2026-08-31T00:00:00.000Z"
+  },
+  {
+    "id": "differences-between-microeconomics-and-macroeconomics",
+    "type": "note",
+    "title": "DIFFERENCES BETWEEN MICROECONOMICS AND MACROECONOMICS",
+    "subjectId": "introduction-to-economics",
+    "summary": "Microeconomics examines individual units; macroeconomics studies national aggregates—both interdependent, complementary halves of one subject.",
+    "date": "2026-09-22T00:00:00.000Z"
   },
   {
     "id": "factor-pricing-rent-concept",
@@ -976,6 +1000,14 @@
     "date": "2026-08-23T00:00:00.000Z"
   },
   {
+    "id": "meaning-and-definitions-of-economics",
+    "type": "note",
+    "title": "Meaning and Definitions of Economics",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understanding origin and development of definitions of economics. Economics evolved from Smith's wealth focus, Marshall's welfare view, Robbins' scarcity-choice definition, to Samuelson's growth model. It's a social science studying human behavior scientifically. Microeconomics examines individual units; macroeconomics studies national aggregates—both interdependent, complementary halves of one subject.",
+    "date": "2026-09-22T00:00:00.000Z"
+  },
+  {
     "id": "micro-budget-equilibrium",
     "type": "note",
     "title": "Budget Line and Consumer Equilibrium",
@@ -1246,6 +1278,14 @@
     "subjectId": "microeconomics",
     "summary": "Use a simple labour-leisure model to explain how wages and income affect work decisions.",
     "date": "2026-08-23"
+  },
+  {
+    "id": "nature-and-scope-of-economics",
+    "type": "note",
+    "title": "Nature and Scope of Economics",
+    "subjectId": "introduction-to-economics",
+    "summary": "Economics is a social science and art analyzing human choices under scarcity, blending positive facts, normative goals, micro, and macro.",
+    "date": "2026-09-23T00:00:00.000Z"
   },
   {
     "id": "note-demand-supply",

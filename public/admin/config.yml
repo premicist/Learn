@@ -5,12 +5,12 @@ backend:
   identity_url: https://auth.decapbridge.com/sites/afb8cc14-b7e5-4678-9382-d3136ac237a9
   gateway_url: https://gateway.decapbridge.com
   commit_messages:
-    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
-    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
-    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
-    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
-    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
-    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+    create: 'Create {{collection}} "{{slug}}" - {{author-name}} via DecapBridge'
+    update: 'Update {{collection}} "{{slug}}" - {{author-name}} via DecapBridge'
+    delete: 'Delete {{collection}} "{{slug}}" - {{author-name}} via DecapBridge'
+    uploadMedia: 'Upload "{{path}}" - {{author-name}} via DecapBridge'
+    deleteMedia: 'Delete "{{path}}" - {{author-name}} via DecapBridge'
+    openAuthoring: 'Message {{message}} - {{author-name}} via DecapBridge'
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 site_url: https://prempokhrel.com.np
 media_folder: public/images/uploads
@@ -94,6 +94,7 @@ collections:
                 name: units
                 widget: list
                 fields:
+                  - { label: 'Main unit group (optional, e.g. Unit 2: Microeconomics)', name: unitGroup, widget: string, required: false, hint: 'Groups multiple sub-units under a prominent, sticky unit header.' }
                   - { label: 'Unit ID', name: id, widget: string }
                   - { label: Order, name: order, widget: number, value_type: int }
                   - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
@@ -106,7 +107,332 @@ collections:
                     fields:
                       - { label: 'Lesson ID', name: id, widget: string }
                       - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
-                      - { label: Resource type, name: resourceType, widget: select, options: [note, blog, quiz, video], required: false, hint: 'Optional until the note/blog/quiz/video exists. Leave blank for a coming-soon lesson.' }
-                      - { label: Resource, name: resourceId, widget: resource_id, required: false, hint: 'Optional. Search for the note, blog, quiz, or video once it exists. Leave blank while scaffolding the curriculum.' }
+                      - { label: Resource type, name: resourceType, widget: select, options: [note, blog, quiz, video] }
+                      - { label: Resource, name: resourceId, widget: resource_id, hint: 'Search for the note, blog, quiz, or video to place in this lesson.' }
                       - { label: 'Estimated minutes', name: estimatedMinutes, widget: number, value_type: int }
                       - { label: Description, name: description, widget: text }
+
+  - name: notes
+    label: Notes
+    folder: content/notes
+    create: true
+    summary: '{{title}} · {{subjectId}}'
+    slug: '{{slug}}'
+    fields:
+      - label: Subject
+        name: subjectId
+        widget: relation
+        collection: subjects
+        file: subjects
+        search_fields: [subjects.*.id, subjects.*.title]
+        display_fields: [subjects.*.title, subjects.*.id]
+        value_field: subjects.*.id
+        hint: 'Search by subject title; the CMS stores the matching subject ID.'
+      - label: Unit
+        name: unitId
+        widget: select
+        required: false
+        options:
+          - label: "Economics-I — Unit 1.1: Basic concepts of Economics and Allocation of Resources"
+            value: "class11-u1-1"
+          - label: "Economics-I — Unit 2.1: Demand, Supply and market Equilibrium"
+            value: "class11-u2-1"
+          - label: "Economics-I — Unit 2.2: Elasticity of Demand and supply"
+            value: "class11-u2-2"
+          - label: "Economics-I — Unit 2.3: Theory of consumer's Behaviour"
+            value: "class11-u2-3"
+          - label: "Economics-I — Unit 2.4: Theory of production"
+            value: "class11-u2-4"
+          - label: "Economics-I — Unit 3.1: Introduction to Macroeconomics"
+            value: "class11-u3-1"
+          - label: "Economics-I — Unit 3.2: National Income Accounting"
+            value: "class11-u3-2"
+          - label: "Economics-I — Unit 3.3: Money and Inflation"
+            value: "class11-u3-3"
+          - label: "Economics-I — Unit 4.1: Economic Development, Growth and capital formation"
+            value: "class11-u4-1"
+          - label: "Economics-I — Unit 5.1: Overview of Nepalese Economy"
+            value: "class11-u5-1"
+          - label: "Economics-I — Unit 5.2: Natural Resources of Nepal"
+            value: "class11-u5-2"
+          - label: "Economics-I — Unit 5.3: Agriculture"
+            value: "class11-u5-3"
+          - label: "Economics-I — Unit 5.4: Manufacturing and Tourism Industry in Nepal"
+            value: "class11-u5-4"
+          - label: "Economics-I — Unit 5.5: Transport and communication"
+            value: "class11-u5-5"
+          - label: "Economics-I — Unit 6.1: Basic Mathematics"
+            value: "class11-u6-1"
+          - label: "Economics-II — Unit 1.1: Basic Concepts & Allocation of Resources"
+            value: "class12-u1-1"
+          - label: "Economics-II — Unit 2.1: Market and Revenue Curve"
+            value: "class12-u2-1"
+          - label: "Economics-II — Unit 2.2: Cost Curves"
+            value: "class12-u2-2"
+          - label: "Economics-II — Unit 2.3: Theory of Price and Output Determination"
+            value: "class12-u2-3"
+          - label: "Economics-II — Unit 2.4: Price Determination of Factors of Production"
+            value: "class12-u2-4"
+          - label: "Economics-II — Unit 3.1: Banking System and Monetary Policy"
+            value: "class12-u3-1"
+          - label: "Economics-II — Unit 3.2: Government Finance"
+            value: "class12-u3-2"
+          - label: "Economics-II — Unit 3.3: International Trade"
+            value: "class12-u3-3"
+          - label: "Economics-II — Unit 4.1: Poverty, Inequality, Unemployment & Human Resource"
+            value: "class12-u4-1"
+          - label: "Economics-II — Unit 5.1: Foreign Trade and Foreign Employment of Nepal"
+            value: "class12-u5-1"
+          - label: "Economics-II — Unit 5.2: Development Planning in Nepal"
+            value: "class12-u5-2"
+          - label: "Economics-II — Unit 5.3: Sustainable Development Goals and Nepal"
+            value: "class12-u5-3"
+          - label: "Economics-II — Unit 6.1: Review of Basic Subject Matter of Statistics"
+            value: "class12-u6-1"
+          - label: "Economics-II — Unit 6.2: Data Collection"
+            value: "class12-u6-2"
+          - label: "Economics-II — Unit 6.3: Measures of Dispersion"
+            value: "class12-u6-3"
+          - label: "Economics-II — Unit 6.4: Index Number"
+            value: "class12-u6-4"
+          - label: "Your guided Sociology path — Overview of Sociology"
+            value: "sociology-overview"
+          - label: "Your guided Sociology path — Theoretical Perspectives of Sociology"
+            value: "sociology-theories"
+          - label: "Your guided Sociology path — The Foundations of Society"
+            value: "sociology-society"
+          - label: "Your guided Sociology path — Social Change and Social Movement"
+            value: "sociology-change"
+          - label: "Your guided Sociology path — Business and Culture"
+            value: "sociology-culture-business"
+          - label: "Your guided Sociology path — Business Demography"
+            value: "sociology-demography"
+          - label: "Your guided Sociology path — Urbanization"
+            value: "sociology-urbanization"
+          - label: "Your guided Microeconomics path — Introduction to Microeconomics"
+            value: "micro-foundations"
+          - label: "Your guided Microeconomics path — Demand, Supply, Equilibrium, and Elasticity"
+            value: "micro-demand-supply"
+          - label: "Your guided Microeconomics path — Consumer Behaviour I: Utility and Risk"
+            value: "micro-consumer-cardinal"
+          - label: "Your guided Microeconomics path — Consumer Behaviour II: Preferences and Demand"
+            value: "micro-consumer-ordinal"
+          - label: "Your guided Microeconomics path — Production and Input Choice"
+            value: "micro-production"
+          - label: "Your guided Microeconomics path — Cost Analysis, Scale, and Break-Even"
+            value: "micro-costs"
+          - label: "Your guided Microeconomics path — Market Structures"
+            value: "micro-market-structures"
+          - label: "Your guided Microeconomics path — Pricing Techniques"
+            value: "micro-pricing"
+          - label: "Your guided Microeconomics path — Fundamentals of Resource Markets"
+            value: "micro-resource-markets"
+          - label: "Your guided Macroeconomics path — Foundations of Macroeconomics"
+            value: "macro-foundations"
+          - label: "Your guided Macroeconomics path — National Income Accounting"
+            value: "macro-national-income"
+          - label: "Your guided Macroeconomics path — Consumption, Saving, and Investment"
+            value: "macro-consumption-investment"
+          - label: "Your guided Macroeconomics path — Classical and Keynesian Employment"
+            value: "macro-employment"
+          - label: "Your guided Macroeconomics path — Money, Interest, and the IS-LM Model"
+            value: "macro-money-islm"
+          - label: "Your guided Macroeconomics path — Aggregate Demand, Aggregate Supply, and Equilibrium"
+            value: "macro-adas"
+          - label: "Your guided Macroeconomics path — Inflation, Unemployment, and Business Cycles"
+            value: "macro-inflation-cycles"
+          - label: "Your guided Macroeconomics path — Banking, Monetary Policy, and Financial Innovation"
+            value: "macro-banking"
+          - label: "Your guided Macroeconomics path — Fiscal Policy and Government Finance"
+            value: "macro-fiscal"
+          - label: "Your guided Macroeconomics path — Open Economy, Growth, Development, and Contemporary Issues"
+            value: "macro-open-growth"
+          - label: "Your guided Managerial Economics path — Foundations of Managerial Economics and Decision Tools"
+            value: "managerial-foundations"
+          - label: "Your guided Managerial Economics path — Firms, Managers, and Organisational Goals"
+            value: "managerial-firms"
+          - label: "Your guided Managerial Economics path — Demand, Supply, Market Equilibrium, and Welfare"
+            value: "managerial-demand-welfare"
+          - label: "Your guided Managerial Economics path — Demand Estimation and Forecasting"
+            value: "managerial-forecasting"
+          - label: "Your guided Managerial Economics path — Consumer Choice, Risk, and Information"
+            value: "managerial-consumer-risk"
+          - label: "Your guided Managerial Economics path — Production and Input Choice"
+            value: "managerial-production"
+          - label: "Your guided Managerial Economics path — Cost Analysis and Break-Even Decisions"
+            value: "managerial-costs"
+          - label: "Your guided Managerial Economics path — Market Structures and Strategic Behaviour"
+            value: "managerial-markets"
+          - label: "Your guided Managerial Economics path — Pricing Practices and Strategy"
+            value: "managerial-pricing"
+          - label: "Your guided Managerial Economics path — Market Failure and Government Intervention"
+            value: "managerial-market-failure"
+        hint: 'Optional. Choose the curriculum unit where this note should appear. The selected unit must belong to the note subject.'
+      - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+      - { label: Summary, name: summary, widget: text, hint: 'Write 1–2 sentences describing what a learner will understand or do.' }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false, required: false }
+      - { label: Cover Image, name: image, widget: image, required: false }
+      - { label: Image alt text, name: imageAlt, widget: string, required: false, hint: 'Describe the image when it conveys meaning; leave blank for decorative images.' }
+      - { label: Enable slide viewer, name: slidesEnabled, widget: boolean, required: false, default: false, hint: 'Show a note-derived slide viewer at the top of this note.' }
+      - label: Slide controls
+        name: slideControls
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: Slide mode, name: mode, widget: select, options: [auto, text, bullets, recap], default: auto, hint: 'Use text for paragraph-heavy notes, bullets for compact points, or recap for a summary-focused deck.' }
+          - { label: Maximum points per slide, name: maxPoints, widget: number, value_type: int, min: 1, max: 6, default: 4, hint: 'Lower this for dense or numerical notes.' }
+          - { label: Include quick check, name: includeQuickCheck, widget: boolean, default: true }
+          - { label: Sections to include, name: sections, widget: list, required: false, hint: 'Optional exact H2 section titles. Leave empty to include all sections.' }
+          - { label: Deck title, name: title, widget: string, required: false, hint: 'Optional custom title for the slide viewer.' }
+      - { label: Legacy visual blocks, name: visualBlocks, widget: hidden, required: false }
+      - label: Table of contents headings
+        name: toc
+        widget: list
+        required: false
+        hint: 'Optional exact H1/H2 headings to show in note navigation. Leave empty to include all H1/H2 headings.'
+      - label: Body
+        name: body
+        widget: markdown
+        editor_components: [image, code-block, learn-formula, learn-table, learn-graph, learn-resource]
+        hint: 'Write your note and use the toolbar insert buttons to place formulas, tables, or graphs exactly where they belong.'
+
+  - name: blogs
+    label: Blog Posts
+    folder: content/blogs
+    create: true
+    summary: '{{title}} · {{subjectId}}'
+    slug: '{{slug}}'
+    fields:
+      - label: Subject
+        name: subjectId
+        widget: relation
+        collection: subjects
+        file: subjects
+        search_fields: [subjects.*.id, subjects.*.title]
+        display_fields: [subjects.*.title, subjects.*.id]
+        value_field: subjects.*.id
+        hint: 'Search by subject title; the CMS stores the matching subject ID.'
+      - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false }
+      - { label: Excerpt, name: excerpt, widget: text }
+      - { label: Cover Image, name: image, widget: image, required: false }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: quizzes
+    label: Quizzes
+    folder: content/quizzes
+    create: true
+    summary: '{{title}} · {{subjectId}}'
+    slug: '{{slug}}'
+    fields:
+      - label: Subject
+        name: subjectId
+        widget: relation
+        collection: subjects
+        file: subjects
+        search_fields: [subjects.*.id, subjects.*.title]
+        display_fields: [subjects.*.title, subjects.*.id]
+        value_field: subjects.*.id
+        hint: 'Search by subject title; the CMS stores the matching subject ID.'
+      - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+      - { label: Topic, name: topic, widget: string, required: false, hint: 'The topic card where this quiz set should appear. If blank, the curriculum unit is used.' }
+      - { label: Quiz set label, name: setLabel, widget: string, required: false, hint: 'For example Set 1, Numerical practice, or Theory check.' }
+      - { label: Question style, name: format, widget: select, options: [theory, numerical, mixed], default: mixed, required: false }
+      - label: Questions
+        name: questions
+        widget: list
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Options, name: options, widget: list }
+          - { label: 'Correct option number (0 = first option, 1 = second, etc.)', name: answerIndex, widget: number, value_type: int }
+          - { label: Explanation, name: explanation, widget: text }
+
+  - name: practice-sets
+    label: Practice Sets
+    folder: content/practice-sets
+    create: true
+    summary: '{{title}} · {{subjectId}}'
+    slug: '{{slug}}'
+    fields:
+      - label: Subject
+        name: subjectId
+        widget: relation
+        collection: subjects
+        file: subjects
+        search_fields: [subjects.*.id, subjects.*.title]
+        display_fields: [subjects.*.title, subjects.*.id]
+        value_field: subjects.*.id
+        hint: 'Search by subject title; the CMS stores the matching subject ID.'
+      - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+      - { label: Instructions, name: instructions, widget: text, required: false, hint: 'Shown above the questions, e.g. "Show your working on paper."' }
+      - label: Questions
+        name: questions
+        widget: list
+        fields:
+          - label: Type
+            name: type
+            widget: select
+            options: [{ label: 'Numerical (auto-graded)', value: numerical }, { label: 'Writing (graded by you later)', value: writing }]
+            default: numerical
+          - { label: Question, name: question, widget: text }
+          - { label: 'Correct answer (numerical only)', name: answer, widget: number, value_type: float, required: false, hint: 'Leave blank for writing questions.' }
+          - { label: 'Tolerance (numerical only)', name: tolerance, widget: number, value_type: float, default: 0, required: false, hint: 'Accepted margin of error either side of the correct answer, e.g. 0.05.' }
+          - { label: Points, name: points, widget: number, value_type: int, default: 10 }
+
+  - name: scheduled-tests
+    label: Scheduled Tests
+    folder: content/scheduled-tests
+    create: true
+    summary: '{{title}} · {{subjectId}}'
+    slug: '{{slug}}'
+    fields:
+      - label: Subject
+        name: subjectId
+        widget: relation
+        collection: subjects
+        file: subjects
+        search_fields: [subjects.*.id, subjects.*.title]
+        display_fields: [subjects.*.title, subjects.*.id]
+        value_field: subjects.*.id
+        hint: 'Search by subject title; the CMS stores the matching subject ID.'
+      - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive test title of at least 3 characters.'] }
+      - { label: Publish this test, name: published, widget: boolean, default: false, hint: 'Only published tests appear to students.' }
+      - { label: Instructions, name: instructions, widget: text, required: false, hint: 'Shown before the student starts the test.' }
+      - { label: Opens at, name: opensAt, widget: datetime, format: 'YYYY-MM-DDTHH:mm:ssZ', date_format: 'YYYY-MM-DD', time_format: 'HH:mm', hint: 'The test cannot be started before this time.' }
+      - { label: Closes at, name: closesAt, widget: datetime, format: 'YYYY-MM-DDTHH:mm:ssZ', date_format: 'YYYY-MM-DD', time_format: 'HH:mm', hint: 'The test closes at this time even if a student still has time remaining.' }
+      - { label: Duration in minutes, name: durationMinutes, widget: number, value_type: int, default: 40, min: 1, max: 240 }
+      - label: Numerical questions
+        name: questions
+        widget: list
+        fields:
+          - { label: Question, name: question, widget: text }
+          - { label: Correct answer, name: answer, widget: number, value_type: float }
+          - { label: Tolerance, name: tolerance, widget: number, value_type: float, default: 0 }
+          - { label: Points, name: points, widget: number, value_type: int, default: 10 }
+
+  - name: videos
+    label: Videos
+    folder: content/videos
+    create: true
+    summary: '{{title}} · {{subjectId}}'
+    slug: '{{slug}}'
+    fields:
+      - label: Subject
+        name: subjectId
+        widget: relation
+        collection: subjects
+        file: subjects
+        search_fields: [subjects.*.id, subjects.*.title]
+        display_fields: [subjects.*.title, subjects.*.id]
+        value_field: subjects.*.id
+        hint: 'Search by subject title; the CMS stores the matching subject ID.'
+      - { label: Title, name: title, widget: string, pattern: ['.{3,}', 'Use a descriptive title of at least 3 characters.'] }
+      - { label: Topic, name: topic, widget: string, required: false, hint: 'The topic card where this video should appear. If blank, the curriculum unit is used.' }
+      - { label: 'YouTube video ID', name: youtubeId, widget: string, required: false, pattern: ['^[A-Za-z0-9_-]{6,}$', 'Enter only the YouTube video ID, not the full URL.'], hint: 'From youtube.com/watch?v=THIS_PART' }
+      - { label: Description, name: description, widget: text }
+      - { label: Transcript, name: transcript, widget: text, required: false }
+      - label: Key takeaways
+        name: keyTakeaways
+        widget: list
+        required: false

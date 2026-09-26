@@ -33,6 +33,9 @@ function BlogPage() {
 
   const subject = getSubjectById(post.subjectId)
   const curriculum = getCurriculumBySubject(post.subjectId)
+  const blogUnit = curriculum?.units.find(
+    (unit) => unit.lessons.some((lesson) => lesson.resourceType === 'blog' && lesson.resourceId === post.id)
+  )
   const relatedNotes = notes
     .filter((note) => note.subjectId === post.subjectId)
     .slice(0, 3)
@@ -49,7 +52,18 @@ function BlogPage() {
         <span>{formatDate(post.date)}</span>
         <span aria-hidden="true">·</span>
         <span>{readingTime(post.body)}</span>
-        {subject && <Link to={`/subjects/${subject.id}`}>{subject.title}</Link>}
+        {subject && (
+          <>
+            <span aria-hidden="true">·</span>
+            <Link to={`/subjects/${subject.id}`}>{subject.title}</Link>
+          </>
+        )}
+        {blogUnit && (
+          <>
+            <span aria-hidden="true">·</span>
+            <span className="article-page__unit-tag">{blogUnit.title}</span>
+          </>
+        )}
       </div>
       <h1>{post.title}</h1>
       <p className="article-page__excerpt">{post.excerpt}</p>

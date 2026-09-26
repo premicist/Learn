@@ -11,6 +11,9 @@ function QuizPage() {
   const quiz = quizId ? getQuizById(quizId) : undefined
   const subject = quiz ? getSubjectById(quiz.subjectId) : undefined
   const curriculum = quiz ? getCurriculumBySubject(quiz.subjectId) : undefined
+  const quizUnit = curriculum?.units.find(
+    (unit) => unit.lessons.some((lesson) => lesson.resourceType === 'quiz' && lesson.resourceId === quiz?.id)
+  )
 
   if (!quiz || !subject) {
     return (
@@ -26,7 +29,17 @@ function QuizPage() {
     <section className="article-page">
       <Seo title={`${quiz.title} | Prem Pokhrel`} description={`${quiz.questions.length}-question economics quiz for ${subject.title}.`} type="article" />
       <p className="eyebrow">Practice quiz</p>
-      <div className="article-page__meta"><Link to={`/subjects/${subject.id}`}>{subject.title}</Link><span>{quiz.questions.length} questions</span></div>
+      <div className="article-page__meta">
+        <Link to={`/subjects/${subject.id}`}>{subject.title}</Link>
+        <span aria-hidden="true">·</span>
+        <span>{quiz.questions.length} questions</span>
+        {quizUnit && (
+          <>
+            <span aria-hidden="true">·</span>
+            <span className="article-page__unit-tag">{quizUnit.title}</span>
+          </>
+        )}
+      </div>
       <h1>{quiz.title}</h1>
       <p className="article-page__excerpt">Test your understanding and receive instant explanations after submitting.</p>
       <QuizCard quiz={quiz} />

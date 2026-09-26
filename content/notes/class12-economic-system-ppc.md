@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Economic Systems and the Production Possibility Curve"
 summary: "Compare ways of organising an economy and use the production possibility curve to explain choice and efficiency."
 date: "2026-08-23"
+unitId: class12-u1-1
 ---
 
 ## The central allocation problem

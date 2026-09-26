@@ -3,6 +3,7 @@ subjectId: class-11
 title: "Class 11 Economics: Money and Inflation"
 summary: "Understand the functions of money, money supply, inflation, deflation, and their effects on households and firms."
 date: "2026-08-23"
+unitId: class11-u3-3
 ---
 
 ## What money does

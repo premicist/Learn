@@ -3,6 +3,7 @@ subjectId: class-12
 title: "International Trade and Trade Policy"
 summary: "Use comparative advantage to explain trade and evaluate tariffs, quotas, and other trade-policy choices."
 date: "2026-08-23"
+unitId: class12-u3-3
 ---
 
 ## Why countries trade

@@ -3,6 +3,7 @@ subjectId: class-11
 title: "Class 11 Economics: Basic Concepts and Resources"
 summary: "A clear starting point for scarcity, choice, opportunity cost, and the resources used in production."
 date: "2026-08-23"
+unitId: class11-u1-1
 ---
 
 ## The basic economic problem

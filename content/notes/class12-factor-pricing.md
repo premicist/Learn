@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Factor Pricing: Rent, Wages, Interest, and Profit"
 summary: "Study how the factors of production are rewarded and use the existing rent note as the starting point for distribution theory."
 date: "2026-08-23"
+unitId: class12-u2-4
 ---
 
 ## Distribution and factor rewards

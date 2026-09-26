@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Development Planning in Nepal"
 summary: "Understand why development plans are prepared and how goals, resources, implementation, and evaluation fit together."
 date: "2026-08-23"
+unitId: class12-u5-2
 ---
 
 ## Why plan development

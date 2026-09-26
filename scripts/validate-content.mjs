@@ -195,6 +195,9 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
     curriculum.units.forEach((unit, unitIndex) => {
       const unitLabel = `${label} unit ${unitIndex + 1}`
       if (!unit.id || !unit.title || !unit.summary) errors.push(`${unitLabel} needs an id, title, and summary`)
+      if (unit.unitGroup !== undefined && (typeof unit.unitGroup !== 'string' || !unit.unitGroup.trim())) {
+        errors.push(`${unitLabel} unitGroup must be a non-empty string if provided`)
+      }
       if (unitIds.has(unit.id)) errors.push(`Duplicate unit ID in ${label}: ${unit.id}`)
       unitIds.add(unit.id)
       if (!Number.isInteger(unit.order) || unit.order < 1) errors.push(`${unitLabel} needs a positive integer order`)

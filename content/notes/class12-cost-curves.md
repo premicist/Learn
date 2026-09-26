@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Cost Concepts and Cost Curves"
 summary: "Build cost tables and explain the relationships among total, average, and marginal cost."
 date: "2026-08-23"
+unitId: class12-u2-2
 ---
 
 ## Fixed and variable cost

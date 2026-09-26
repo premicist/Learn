@@ -3,6 +3,7 @@ subjectId: class-11
 title: "Class 11 Economics: Mathematics for Economic Problems"
 summary: "A practical method for solving equations, percentage changes, tables, and common economics numericals."
 date: "2026-08-23"
+unitId: class11-u6-1
 ---
 
 ## Why mathematics matters

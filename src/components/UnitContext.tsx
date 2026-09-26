@@ -23,6 +23,7 @@ const resourceLabels: Record<CurriculumResourceType, string> = {
 }
 
 function resourcePath(lesson: CurriculumLesson) {
+  if (!lesson.resourceType || !lesson.resourceId) return ''
   return `/${resourceCollections[lesson.resourceType]}/${lesson.resourceId}`
 }
 
@@ -63,23 +64,34 @@ function UnitContext({ curriculum, currentResourceType, currentResourceId, subje
   if (currentPathIndex < 0) return null
 
   const current = sequence[currentPathIndex]
-  const sameTypeSequence = sequence.filter(({ lesson }) => lesson.resourceType === currentResourceType)
+  const sameTypeSequence = sequence.filter(({ lesson }) => lesson.resourceType === currentResourceType && lesson.resourceId)
   const currentIndex = sameTypeSequence.findIndex(({ lesson }) => lesson.resourceType === currentResourceType && lesson.resourceId === currentResourceId)
   const previous = sameTypeSequence[currentIndex - 1]
   const next = sameTypeSequence[currentIndex + 1]
+
+  const unitTitle = current.unit.unitGroup
+    ? current.unit.title
+    : current.unit.title.toLowerCase().startsWith('unit')
+      ? current.unit.title
+      : `Unit ${current.unit.order}: ${current.unit.title}`
+
+  const eyebrowText = current.unit.unitGroup ? current.unit.unitGroup : 'In this unit'
+  const countText = current.unit.unitGroup
+    ? `${current.unit.lessons.length} ${current.unit.lessons.length === 1 ? 'resource' : 'resources'}`
+    : `Unit ${current.unit.order} · ${current.unit.lessons.length} ${current.unit.lessons.length === 1 ? 'resource' : 'resources'}`
 
   return (
     <>
       <section className="unit-context" aria-labelledby="unit-context-heading">
         <div className="unit-context__header">
           <div>
-            <p className="eyebrow">In this unit</p>
-            <h2 id="unit-context-heading">Unit {current.unit.order}: {current.unit.title}</h2>
+            <p className="eyebrow">{eyebrowText}</p>
+            <h2 id="unit-context-heading">{unitTitle}</h2>
             <p>{current.unit.summary}</p>
           </div>
-          <span className="unit-context__count">Unit {current.unit.order} · {current.unit.lessons.length} resources</span>
+          <span className="unit-context__count">{countText}</span>
         </div>
-        <div className="unit-context__lessons" aria-label={`Lessons in Unit ${current.unit.order}`}>
+        <div className="unit-context__lessons" aria-label={`Lessons in ${unitTitle}`}>
           {current.unit.lessons.map((lesson, lessonIndex) => {
             const isCurrent = lesson.id === current.lesson.id
             return (
@@ -91,7 +103,7 @@ function UnitContext({ curriculum, currentResourceType, currentResourceId, subje
               >
                 <span className="unit-context__lesson-number">{lessonIndex + 1}</span>
                 <span className="unit-context__lesson-copy">
-                  <span className="unit-context__lesson-meta">{resourceLabels[lesson.resourceType]} · {lesson.estimatedMinutes} min</span>
+                  <span className="unit-context__lesson-meta">{lesson.resourceType ? resourceLabels[lesson.resourceType] : 'Coming soon'} · {lesson.estimatedMinutes} min</span>
                   <strong>{lesson.title}</strong>
                 </span>
                 <span className="unit-context__lesson-state">{isCurrent ? 'You are here' : 'Open'}</span>
@@ -112,7 +124,7 @@ function UnitContext({ curriculum, currentResourceType, currentResourceId, subje
               <span className="unit-sequence__position">{resourceLabels[currentResourceType]} {currentIndex + 1} of {sameTypeSequence.length}</span>
             </div>
             <div className="related-content__grid">
-              {next && (
+              {next && next.lesson.resourceType && (
                 <Link to={resourcePath(next.lesson)} className="related-content__card unit-sequence__card unit-sequence__card--next">
                   <span className="unit-sequence__label">Next topic</span>
                   <strong>{next.lesson.title}</strong>
@@ -120,7 +132,7 @@ function UnitContext({ curriculum, currentResourceType, currentResourceId, subje
                   <span className="unit-sequence__cta">Continue to {resourceLabels[next.lesson.resourceType].toLowerCase()} →</span>
                 </Link>
               )}
-              {previous && (
+              {previous && previous.lesson.resourceType && (
                 <Link to={resourcePath(previous.lesson)} className="related-content__card unit-sequence__card">
                   <span className="unit-sequence__label">Previous topic</span>
                   <strong>{previous.lesson.title}</strong>

@@ -1,6 +1,6 @@
 ---
 subjectId: introduction-to-economics
-unitId: null
+unitId: eco6701-u1
 title: DIFFERENCES BETWEEN MICROECONOMICS AND MACROECONOMICS
 summary: Microeconomics examines individual units; macroeconomics studies
   national aggregates—both interdependent, complementary halves of one subject.

@@ -2,15 +2,17 @@ curricula:
   - id: class-11-economics
     subjectId: class-11
     title: Your guided Economics-I path
-    description: Follow a steady sequence from economic foundations to Nepal-focused
-      applications and quantitative practice.
+    description: Follow a steady sequence from economic foundations to
+      microeconomics, macroeconomics, development economics, Nepal's economy, and
+      quantitative techniques.
     syllabusNote: Based on the latest NEB syllabus.
     syllabusChapters: ""
     syllabusChapterLinks: []
     units:
-      - id: foundations
+      - id: class11-u1-1
+        unitGroup: "Unit 1: Basic concepts of Economics and Allocation of Resources"
         order: 1
-        title: Basic concepts and resources
+        title: "Unit 1.1: Basic concepts of Economics and Allocation of Resources"
         summary: Build the vocabulary of economics and see how scarce resources shape
           choices.
         estimatedMinutes: 75
@@ -33,9 +35,10 @@ curricula:
             resourceId: quiz-class11-foundations
             estimatedMinutes: 10
             description: Test the essential terms before moving to markets.
-      - id: demand-supply
+      - id: class11-u2-1
+        unitGroup: "Unit 2: Microeconomics"
         order: 2
-        title: Demand, supply, and equilibrium
+        title: "Unit 2.1: Demand, Supply and market Equilibrium"
         summary: Explain how buyers and sellers interact and how market equilibrium is
           formed.
         estimatedMinutes: 100
@@ -56,33 +59,49 @@ curricula:
             resourceId: quiz-demand-supply
             estimatedMinutes: 10
             description: Check whether you can identify equilibrium and curve movements.
-      - id: elasticity-consumer
+      - id: class11-u2-2
+        unitGroup: "Unit 2: Microeconomics"
         order: 3
-        title: Elasticity and consumer behaviour
-        summary: Measure responsiveness and use utility ideas to understand consumer
-          choice.
-        estimatedMinutes: 120
+        title: "Unit 2.2: Elasticity of Demand and supply"
+        summary: Measure responsiveness of quantity demanded and supplied to price and
+          other factors.
+        estimatedMinutes: 60
         outcomes:
-          - Calculate and interpret basic price elasticity.
-          - Explain total and marginal utility.
-          - Apply diminishing marginal utility and consumer surplus.
+          - Calculate and interpret price, income, and cross elasticity of demand.
+          - Calculate price elasticity of supply and identify its determinants.
         lessons:
-          - id: class11-elasticity-consumer
-            title: Elasticity, utility, and consumer choice
+          - id: class11-elasticity-note
+            title: Elasticity of Demand and Supply
             resourceType: note
             resourceId: class11-elasticity-consumer
-            estimatedMinutes: 35
-            description: Connect percentage changes in demand with the logic of consumer
-              choice.
-          - id: class11-elasticity-consumer-check
-            title: Elasticity and utility check
+            estimatedMinutes: 30
+            description: Connect percentage changes in demand and supply with elasticity measurement.
+          - id: class11-elasticity-check
+            title: Elasticity check
             resourceType: quiz
             resourceId: quiz-class11-elasticity
             estimatedMinutes: 12
             description: Practise classification, interpretation, and short calculations.
-      - id: production
+      - id: class11-u2-3
+        unitGroup: "Unit 2: Microeconomics"
         order: 4
-        title: Production and cost
+        title: "Unit 2.3: Theory of consumer's Behaviour"
+        summary: Use cardinal utility ideas to understand consumer choice, diminishing marginal utility, and consumer surplus.
+        estimatedMinutes: 60
+        outcomes:
+          - Explain total and marginal utility.
+          - Apply diminishing marginal utility, equi-marginal utility, and consumer surplus.
+        lessons:
+          - id: class11-consumer-behavior
+            title: Utility and Consumer Choice
+            resourceType: note
+            resourceId: class11-elasticity-consumer
+            estimatedMinutes: 30
+            description: Explore the law of diminishing marginal utility and equi-marginal choice.
+      - id: class11-u2-4
+        unitGroup: "Unit 2: Microeconomics"
+        order: 5
+        title: "Unit 2.4: Theory of production"
         summary: Study how firms combine resources, how output changes, and why costs
           matter.
         estimatedMinutes: 110
@@ -103,16 +122,30 @@ curricula:
             resourceId: quiz-class11-production
             estimatedMinutes: 12
             description: Check your understanding of product and cost relationships.
-      - id: macroeconomics
-        order: 5
-        title: National income, money, and inflation
-        summary: Move from individual markets to economy-wide measures and monetary
-          conditions.
-        estimatedMinutes: 130
+      - id: class11-u3-1
+        unitGroup: "Unit 3: Macroeconomics"
+        order: 6
+        title: "Unit 3.1: Introduction to Macroeconomics"
+        summary: Introduce macroeconomic aggregates, scope, importance, and macroeconomic variables.
+        estimatedMinutes: 30
         outcomes:
-          - Distinguish major national-income concepts and approaches.
-          - Explain the functions of money and broad versus narrow money.
-          - Describe inflation, deflation, causes, and effects.
+          - Define macroeconomics and explain its scope and significance.
+          - Distinguish stock from flow variables.
+        lessons:
+          - id: class11-macro-intro
+            title: Scope and Significance of Macroeconomics
+            estimatedMinutes: 30
+            description: Understand economy-wide perspectives and the interdependence of micro and macroeconomics.
+      - id: class11-u3-2
+        unitGroup: "Unit 3: Macroeconomics"
+        order: 7
+        title: "Unit 3.2: National Income Accounting"
+        summary: Measure national output and income using core aggregates and accounting methods.
+        estimatedMinutes: 60
+        outcomes:
+          - Distinguish major national-income concepts (GDP, GNP, NDP, NNP).
+          - Explain product, income, and expenditure methods.
+          - Avoid common double-counting errors.
         lessons:
           - id: class11-national-income
             title: Measuring national income
@@ -121,6 +154,16 @@ curricula:
             estimatedMinutes: 35
             description: Organise the key aggregates and avoid common double-counting
               errors.
+      - id: class11-u3-3
+        unitGroup: "Unit 3: Macroeconomics"
+        order: 8
+        title: "Unit 3.3: Money and Inflation"
+        summary: Understand money functions, money supply, inflation causes, and effects.
+        estimatedMinutes: 60
+        outcomes:
+          - Explain the functions of money and narrow versus broad money.
+          - Describe inflation, deflation, causes, and consequences.
+        lessons:
           - id: class11-money-inflation
             title: Money and inflation
             resourceType: note
@@ -128,9 +171,10 @@ curricula:
             estimatedMinutes: 35
             description: Connect money, prices, and purchasing power through simple
               examples.
-      - id: development
-        order: 6
-        title: Development, growth, and human wellbeing
+      - id: class11-u4-1
+        unitGroup: "Unit 4: Development Economics"
+        order: 9
+        title: "Unit 4.1: Economic Development, Growth and capital formation"
         summary: Compare growth with broader development and examine poverty,
           inequality, employment, and human resources.
         estimatedMinutes: 95
@@ -152,17 +196,15 @@ curricula:
             resourceId: blog-class11-development-nepal
             estimatedMinutes: 15
             description: Apply the growth-versus-development distinction to Nepal’s economy.
-      - id: nepal-economy
-        order: 7
-        title: Nepal’s economy and natural resources
-        summary: Apply economic ideas to Nepal’s resources, agriculture, industry,
-          tourism, transport, and communication.
-        estimatedMinutes: 130
+      - id: class11-u5-1
+        unitGroup: "Unit 5: Nepalese Economy"
+        order: 10
+        title: "Unit 5.1: Overview of Nepalese Economy"
+        summary: Establish a country-level economic overview of Nepal's structure, growth, and challenges.
+        estimatedMinutes: 30
         outcomes:
           - Describe major features of Nepal’s economy.
-          - Assess natural resources, agriculture, industry, and tourism with
-            evidence.
-          - Identify local examples and connect them to economic development.
+          - Identify current macroeconomic trends and challenges.
         lessons:
           - id: class11-nepal-economy
             title: A quick overview of Nepal’s economy
@@ -170,18 +212,72 @@ curricula:
             resourceId: blog-nepal-economy-2026
             estimatedMinutes: 20
             description: Establish a country context for the topics that follow.
+      - id: class11-u5-2
+        unitGroup: "Unit 5: Nepalese Economy"
+        order: 11
+        title: "Unit 5.2: Natural Resources of Nepal"
+        summary: Examine Nepal's water, forest, mineral, and land resources and sustainable utilization.
+        estimatedMinutes: 45
+        outcomes:
+          - Assess natural resources, agriculture, industry, and tourism with
+            evidence.
+          - Identify local examples and connect them to economic development.
+        lessons:
           - id: class11-nepal-resources
             title: Resources, agriculture, and productive sectors
             resourceType: note
             resourceId: class11-nepal-economy-resources
             estimatedMinutes: 35
             description: Turn local observation into structured economic analysis.
-      - id: quantitative-methods
-        order: 8
-        title: Economic mathematics and problem solving
+      - id: class11-u5-3
+        unitGroup: "Unit 5: Nepalese Economy"
+        order: 12
+        title: "Unit 5.3: Agriculture"
+        summary: Explore agricultural structure, productivity, commercialization, and food security in Nepal.
+        estimatedMinutes: 35
+        outcomes:
+          - Explain the role and importance of agriculture in Nepal's economy.
+          - Identify problems and modernization measures for Nepalese agriculture.
+        lessons:
+          - id: class11-agriculture-nepal
+            title: "Agriculture in Nepal: Importance and Issues"
+            estimatedMinutes: 30
+            description: Analyze farming practices, productivity barriers, and government policy in Nepal.
+      - id: class11-u5-4
+        unitGroup: "Unit 5: Nepalese Economy"
+        order: 13
+        title: "Unit 5.4: Manufacturing and Tourism Industry in Nepal"
+        summary: Study industrial development, cottage industries, tourism potential, and economic linkages.
+        estimatedMinutes: 35
+        outcomes:
+          - Analyze the status and role of manufacturing industries in Nepal.
+          - Evaluate tourism potential, foreign exchange earnings, and employment creation.
+        lessons:
+          - id: class11-industry-tourism
+            title: Manufacturing and Tourism in Nepal
+            estimatedMinutes: 30
+            description: Explore industrial policies, SME growth, and tourism development opportunities.
+      - id: class11-u5-5
+        unitGroup: "Unit 5: Nepalese Economy"
+        order: 14
+        title: "Unit 5.5: Transport and communication"
+        summary: Understand infrastructure development, transportation modes, and digital communication networks.
+        estimatedMinutes: 30
+        outcomes:
+          - Explain the role of transport and communication in economic integration.
+          - Identify infrastructure bottlenecks and development priorities.
+        lessons:
+          - id: class11-transport-comm
+            title: Transport and Communication Infrastructure
+            estimatedMinutes: 30
+            description: Connect road networks, aviation, and digital communication to market expansion in Nepal.
+      - id: class11-u6-1
+        unitGroup: "Unit 6: Quantitative Techniques for Economics"
+        order: 15
+        title: "Unit 6.1: Basic Mathematics"
         summary: Strengthen the mathematical habits needed for schedules, equations, and
           economic numericals.
-        estimatedMinutes: 90
+        estimatedMinutes: 60
         outcomes:
           - Rearrange and solve simple linear equations.
           - Read tables and calculate changes carefully.
@@ -204,14 +300,16 @@ curricula:
     subjectId: class-12
     title: Your guided Economics-II path
     description: Follow a steady sequence from resource allocation to
-      macroeconomics, development, Nepal’s economy, and quantitative techniques.
+      microeconomics, macroeconomics, development economics, Nepal's economy, and
+      quantitative techniques.
     syllabusNote: Based on the latest NEB syllabus.
     syllabusChapters: ""
     syllabusChapterLinks: []
     units:
-      - id: class12-foundations
+      - id: class12-u1-1
+        unitGroup: "Unit 1: Basic Concepts of Economics and Allocation of Resources"
         order: 1
-        title: Basic concepts and allocation of resources
+        title: "Unit 1.1: Basic Concepts of Economics and Allocation of Resources"
         summary: Revisit economic choice, compare economic systems, and use the
           production possibility curve.
         estimatedMinutes: 90
@@ -234,16 +332,15 @@ curricula:
             estimatedMinutes: 12
             description: Test the core ideas of scarcity, systems, opportunity cost, and
               productive efficiency.
-      - id: class12-microeconomics
+      - id: class12-u2-1
+        unitGroup: "Unit 2: Microeconomics"
         order: 2
-        title: Microeconomics and market analysis
-        summary: Build revenue and cost tables before studying how firms choose price
-          and output.
-        estimatedMinutes: 190
+        title: "Unit 2.1: Market and Revenue Curve"
+        summary: Connect market demand with total, average, and marginal revenue.
+        estimatedMinutes: 35
         outcomes:
           - Calculate and interpret total, average, and marginal revenue.
-          - Distinguish fixed, variable, average, and marginal cost.
-          - Use revenue and cost relationships to explain firm decisions.
+          - Distinguish revenue curves across market structures.
         lessons:
           - id: class12-market-revenue
             title: Market and revenue curves
@@ -251,6 +348,17 @@ curricula:
             resourceId: class12-market-revenue
             estimatedMinutes: 35
             description: Connect market demand with total, average, and marginal revenue.
+      - id: class12-u2-2
+        unitGroup: "Unit 2: Microeconomics"
+        order: 3
+        title: "Unit 2.2: Cost Curves"
+        summary: Build cost tables and explain the relationships among average and
+          marginal costs.
+        estimatedMinutes: 50
+        outcomes:
+          - Distinguish fixed, variable, average, and marginal cost.
+          - Explain short-run and long-run cost curves and their relationships.
+        lessons:
           - id: class12-cost-curves
             title: Cost concepts and cost curves
             resourceType: note
@@ -265,23 +373,17 @@ curricula:
             estimatedMinutes: 15
             description: Practise revenue and cost calculations before moving to market
               structures.
-          - id: "class12-theory-of-interest "
-            title: "Theory of Interest "
-            resourceType: note
-            resourceId: classical-theory-of-interest
-            estimatedMinutes: 15
-            description: "Understanding the theory of Interest "
-      - id: class12-price-output
-        order: 3
-        title: Price and output determination
+      - id: class12-u2-3
+        unitGroup: "Unit 2: Microeconomics"
+        order: 4
+        title: "Unit 2.3: Theory of Price and Output Determination"
         summary: Compare perfect and imperfect competition using equilibrium, profit,
           and market-power reasoning.
-        estimatedMinutes: 170
+        estimatedMinutes: 85
         outcomes:
-          - Explain the assumptions of perfect competition.
-          - Determine firm output using the marginal-revenue and marginal-cost
-            condition.
-          - Compare competitive and monopoly outcomes.
+          - Explain the assumptions and equilibrium of perfect competition.
+          - Compare monopoly and other imperfectly competitive markets.
+          - Determine firm output using the marginal-revenue and marginal-cost condition.
         lessons:
           - id: class12-perfect-competition
             title: Price and output under perfect competition
@@ -304,17 +406,17 @@ curricula:
             estimatedMinutes: 15
             description: Check equilibrium conditions, diagrams, and market-structure
               comparisons.
-      - id: class12-factor-pricing
-        order: 4
-        title: Factor pricing and distribution
+      - id: class12-u2-4
+        unitGroup: "Unit 2: Microeconomics"
+        order: 5
+        title: "Unit 2.4: Price Determination of Factors of Production"
         summary: Study how land, labour, capital, and entrepreneurship are rewarded in
           the distribution of income.
-        estimatedMinutes: 150
+        estimatedMinutes: 195
         outcomes:
-          - Explain the meaning of factor pricing and distribution.
-          - Distinguish rent, wages, interest, and profit.
-          - Explain and evaluate classical wage theories in simple economic
-            situations.
+          - Explain rent and the Ricardian theory.
+          - Evaluate classical wage theories (subsistence and wage-fund).
+          - Explain classical interest rate determination and the risk-bearing theory of profit.
         lessons:
           - id: class12-factor-pricing-note
             title: Factor pricing and the Ricardian theory of rent
@@ -343,23 +445,36 @@ curricula:
             resourceId: class12-wage-fund-theory
             estimatedMinutes: 30
             description: Use the wage-fund formula to explain average wages and evaluate the
-              theory’s assumptions and criticisms.
+              theory's assumptions and criticisms.
+          - id: class12-classical-interest
+            title: Classical Theory of Interest
+            resourceType: note
+            resourceId: classical-theory-of-interest
+            estimatedMinutes: 30
+            description: Understand how interest rates are determined through the interaction
+              of demand and supply for capital in the classical framework.
+          - id: class12-risk-bearing-profit
+            title: Risk-Bearing Theory of Profit
+            resourceType: note
+            resourceId: class12-risk-bearing-theory-of-profit
+            estimatedMinutes: 30
+            description: Understand Hawley's risk-bearing theory of profit, types of business risk, and critical evaluations.
           - id: class12-factor-pricing-check
             title: Factor pricing practice
             resourceType: quiz
             resourceId: quiz-class12-factor-pricing
             estimatedMinutes: 15
             description: Practise rent, wages, interest, profit, and distribution reasoning.
-      - id: class12-macro-policy
-        order: 5
-        title: Banking, public finance, and international trade
-        summary: Move to macroeconomic institutions and examine money, fiscal choices,
-          and global exchange.
-        estimatedMinutes: 215
+      - id: class12-u3-1
+        unitGroup: "Unit 3: Macroeconomics"
+        order: 6
+        title: "Unit 3.1: Banking System and Monetary Policy"
+        summary: Understand money creation, commercial banking, central banking, and
+          monetary-policy transmission.
+        estimatedMinutes: 35
         outcomes:
-          - Explain the functions of banks and the main tools of monetary policy.
-          - Classify public revenue, expenditure, budgets, and fiscal policy.
-          - Use comparative advantage to evaluate international trade and policy.
+          - Explain the functions of banks and money creation.
+          - Compare monetary policy objectives and tools.
         lessons:
           - id: class12-banking
             title: Banking and monetary policy
@@ -368,6 +483,17 @@ curricula:
             estimatedMinutes: 35
             description: Understand money creation, central banking, and monetary-policy
               transmission.
+      - id: class12-u3-2
+        unitGroup: "Unit 3: Macroeconomics"
+        order: 7
+        title: "Unit 3.2: Government Finance"
+        summary: Organise public revenue and expenditure and explain fiscal policy
+          choices.
+        estimatedMinutes: 35
+        outcomes:
+          - Classify public revenue and expenditure.
+          - Explain government budgets and fiscal policy choices.
+        lessons:
           - id: class12-government-finance
             title: Government finance and fiscal policy
             resourceType: note
@@ -375,6 +501,17 @@ curricula:
             estimatedMinutes: 35
             description: Organise public revenue and expenditure and explain fiscal policy
               choices.
+      - id: class12-u3-3
+        unitGroup: "Unit 3: Macroeconomics"
+        order: 8
+        title: "Unit 3.3: International Trade"
+        summary: Apply comparative advantage and evaluate tariffs, quotas, and
+          exchange-rate links.
+        estimatedMinutes: 50
+        outcomes:
+          - Use comparative advantage to evaluate international trade and policy.
+          - Assess trade restrictions and exchange rate determinants.
+        lessons:
           - id: class12-international-trade
             title: International trade and trade policy
             resourceType: note
@@ -389,18 +526,16 @@ curricula:
             estimatedMinutes: 15
             description: Consolidate banking, fiscal policy, and international-trade
               reasoning.
-      - id: class12-development-nepal
-        order: 6
-        title: Development, Nepal’s economy, and quantitative techniques
-        summary: Apply development ideas to Nepal and finish with data skills for
-          economic interpretation.
-        estimatedMinutes: 250
+      - id: class12-u4-1
+        unitGroup: "Unit 4: Development Economics"
+        order: 9
+        title: "Unit 4.1: Poverty, Inequality, Unemployment and Human Resource"
+        summary: Distinguish growth from development and evaluate poverty, inequality,
+          unemployment, and human resources together.
+        estimatedMinutes: 35
         outcomes:
-          - Evaluate poverty, inequality, unemployment, and human resources
-            together.
-          - Explain Nepal’s trade, employment, planning, and
-            sustainable-development priorities.
-          - Calculate and interpret basic dispersion and index-number measures.
+          - Differentiate economic growth from development.
+          - Evaluate poverty, inequality, unemployment types, and human resources.
         lessons:
           - id: class12-development
             title: Development economics
@@ -409,6 +544,17 @@ curricula:
             estimatedMinutes: 35
             description: Distinguish growth from development and evaluate wellbeing and
               employment.
+      - id: class12-u5-1
+        unitGroup: "Unit 5: Nepalese Economy"
+        order: 10
+        title: "Unit 5.1: Foreign Trade and Foreign Employment of Nepal"
+        summary: Connect trade, migration, remittances, and employment challenges in
+          Nepal.
+        estimatedMinutes: 35
+        outcomes:
+          - Connect trade, migration, remittances, and employment challenges in Nepal.
+          - Evaluate policies for sustainable external sector growth.
+        lessons:
           - id: class12-nepal-trade
             title: Nepal’s foreign trade and foreign employment
             resourceType: note
@@ -416,6 +562,17 @@ curricula:
             estimatedMinutes: 35
             description: Connect trade, migration, remittances, and employment challenges in
               Nepal.
+      - id: class12-u5-2
+        unitGroup: "Unit 5: Nepalese Economy"
+        order: 11
+        title: "Unit 5.2: Development Planning in Nepal"
+        summary: Understand planning goals, resource allocation, implementation, and
+          evaluation in Nepal.
+        estimatedMinutes: 30
+        outcomes:
+          - Understand planning goals, resource allocation, implementation, and evaluation.
+          - Analyze the role of provincial and local governments in development planning.
+        lessons:
           - id: class12-nepal-planning
             title: Development planning in Nepal
             resourceType: note
@@ -423,6 +580,17 @@ curricula:
             estimatedMinutes: 30
             description: Understand planning goals, resource allocation, implementation, and
               evaluation.
+      - id: class12-u5-3
+        unitGroup: "Unit 5: Nepalese Economy"
+        order: 12
+        title: "Unit 5.3: Sustainable Development Goals and Nepal"
+        summary: Connect economic, social, and environmental dimensions of
+          sustainable development in Nepal.
+        estimatedMinutes: 30
+        outcomes:
+          - Connect economic, social, and environmental dimensions of sustainable development.
+          - Evaluate SDG targets and progress in the context of Nepal.
+        lessons:
           - id: class12-nepal-sdgs
             title: Sustainable Development Goals and Nepal
             resourceType: note
@@ -430,13 +598,66 @@ curricula:
             estimatedMinutes: 30
             description: Connect economic, social, and environmental dimensions of
               sustainable development.
-          - id: class12-quantitative
-            title: Quantitative techniques for economics
+      - id: class12-u6-1
+        unitGroup: "Unit 6: Quantitative Techniques for Economics"
+        order: 13
+        title: "Unit 6.1: Review of Basic Subject Matter of Statistics"
+        summary: Revisit core statistical concepts, data types, and notations used in economics.
+        estimatedMinutes: 25
+        outcomes:
+          - Define key statistical variables and data representations.
+          - Recall core descriptive statistical measures.
+        lessons:
+          - id: class12-stats-review
+            title: Basic Subject Matter of Statistics
+            estimatedMinutes: 25
+            description: Review fundamental statistical definitions, variables, and distributions.
+      - id: class12-u6-2
+        unitGroup: "Unit 6: Quantitative Techniques for Economics"
+        order: 14
+        title: "Unit 6.2: Data Collection"
+        summary: Explore primary and secondary data collection methods, sampling, and surveys.
+        estimatedMinutes: 25
+        outcomes:
+          - Distinguish primary and secondary data sources.
+          - Explain sampling methods and data collection instruments.
+        lessons:
+          - id: class12-data-collection
+            title: Data Collection Methods
+            estimatedMinutes: 25
+            description: Explore methods of gathering economic data, census, sampling, and questionnaires.
+      - id: class12-u6-3
+        unitGroup: "Unit 6: Quantitative Techniques for Economics"
+        order: 15
+        title: "Unit 6.3: Measures of Dispersion"
+        summary: Calculate and interpret range, quartile deviation, mean deviation, and standard deviation.
+        estimatedMinutes: 35
+        outcomes:
+          - Calculate and interpret basic dispersion measures.
+          - Compare standard deviation and variance for economic data.
+        lessons:
+          - id: class12-quantitative-dispersion
+            title: Measures of Dispersion in Economics
             resourceType: note
             resourceId: class12-quantitative-techniques
             estimatedMinutes: 35
-            description: Practise dispersion, index numbers, and clear interpretation of
-              economic data.
+            description: Practise range, mean deviation, standard deviation, and data interpretation.
+      - id: class12-u6-4
+        unitGroup: "Unit 6: Quantitative Techniques for Economics"
+        order: 16
+        title: "Unit 6.4: Index Number"
+        summary: Construct and interpret price and quantity index numbers for economic analysis.
+        estimatedMinutes: 45
+        outcomes:
+          - Construct simple and weighted price index numbers.
+          - Interpret inflation and purchasing power using index numbers.
+        lessons:
+          - id: class12-quantitative-index
+            title: Index Numbers in Economics
+            resourceType: note
+            resourceId: class12-quantitative-techniques
+            estimatedMinutes: 30
+            description: Practise simple and weighted index numbers and economic interpretation.
           - id: class12-development-check
             title: Development and quantitative skills check
             resourceType: quiz
@@ -2062,6 +2283,8 @@ curricula:
       economics through demand, supply, consumer behaviour, production, market
       structure, and pricing techniques.
     syllabusNote: Based on the ECO6701 course syllabus.
+    syllabusChapters: ""
+    syllabusChapterLinks: []
     units:
       - id: eco6701-u1
         order: 1
@@ -2082,7 +2305,6 @@ curricula:
         lessons:
           - id: eco6701-u1ch1
             title: Meaning and Definitions
-            resourceType: note
             estimatedMinutes: 60
             description: Explores the origin and major definitions of economics, including
               Adam Smith's wealth view, Marshall's welfare concept, Robbins'
@@ -2090,6 +2312,7 @@ curricula:
           - id: eco6701-u1ch2
             title: Nature and Scope
             resourceType: note
+            resourceId: nature-and-scope-of-economics
             estimatedMinutes: 30
             description: Examines whether economics functions as a science, an art, or both,
               while outlining the traditional and modern scope of economic study
@@ -2099,11 +2322,9 @@ curricula:
               resources: what to produce, how to produce efficiently, and for
               whom to distribute the final goods."
             title: Basic Economic Problems
-            resourceType: note
             estimatedMinutes: 30
           - id: eco6701-u1ch4
             title: Positive and Normative Economics
-            resourceType: note
             description: Differentiates between positive economics, which analyzes objective
               facts and cause-and-effect relationships, and normative economics,
               which involves value judgments, ethics, and policy
@@ -2112,6 +2333,7 @@ curricula:
           - id: eco6701-u1ch5
             title: Micro and Macro Economics
             resourceType: note
+            resourceId: differences-between-microeconomics-and-macroeconomics
             description: Compares microeconomics, which focuses on individual economic units
               like households and firms, with macroeconomics, which studies
               nationwide aggregate variables such as national income and general
@@ -2134,7 +2356,6 @@ curricula:
         lessons:
           - id: eco6701-u2ch1
             title: Nature, Scope, and Role of Business Economics
-            resourceType: note
             estimatedMinutes: 60
             description: Examines how business economics integrates economic logic with
               managerial policy-making, outlining the multidisciplinary scope
@@ -2142,7 +2363,6 @@ curricula:
               planning.
           - title: Fundamental Concepts, Efficiency, and Time Element
             id: eco6701-u2ch2
-            resourceType: note
             estimatedMinutes: 60
             description: Explains core economic principles used in business, including
               opportunity cost, marginalism, discounting, production efficiency,
@@ -2162,13 +2382,11 @@ curricula:
         lessons:
           - title: Introduction to Demand
             id: eco6701-u3ch1
-            resourceType: note
             estimatedMinutes: 30
             description: Defines economic demand as desire backed by purchasing power and
               willingness to pay.
           - id: eco6701-u3ch2
             title: Law of Demand
-            resourceType: note
             estimatedMinutes: 30
             description: States the inverse price-quantity relationship under ceteris
               paribus, illustrating demand schedules, downward-sloping curves,
@@ -2176,7 +2394,6 @@ curricula:
               determinants.
           - id: eco6701-u3ch3
             title: Shifts and Movement along in Demand Curve
-            resourceType: note
             estimatedMinutes: 30
             description: Understand causes behind movement along versus shift of the demand
               curve.
@@ -2196,34 +2413,28 @@ curricula:
         lessons:
           - id: eco6701-u4ch1
             title: Meaning and Types of Elasticity of Demand
-            resourceType: note
             estimatedMinutes: 30
             description: Focuses on measuring how buyer demand responds to changes in
               product price, consumer income, and substitute goods.
           - id: eco6701-u4ch2
             title: Measurement methods of Elasticity
-            resourceType: note
             estimatedMinutes: 60
             description: Examines mathematical techniques for measuring elasticity,
               including percentage, total outlay, point, and arc methods across
               various elasticity types.
           - id: eco6701-u4ch3
             title: Price Elasticity of Demand
-            resourceType: note
             estimatedMinutes: 30
             description: Meaning and types (degrees) of Price Elasticity of Demand.
           - id: eco6701-u4ch4
             title: Income Elasticity of Demand
-            resourceType: note
             description: Meaning and types of Income Elasticity of Demand.
             estimatedMinutes: 30
           - id: eco6701-u4ch5
             title: Cross Elasticity of Demand
-            resourceType: note
             estimatedMinutes: 30
             description: Meaning and Types of Cross Elasticity of Demand.
           - title: Factors Determining Elasticity of Demand
-            resourceType: note
             estimatedMinutes: 15
             description: Analyzes key determinants influencing demand responsiveness, such
               as substitute availability, product necessity versus luxury
@@ -2232,7 +2443,6 @@ curricula:
             id: eco6701-u4ch6
           - id: eco6701-u4ch7
             title: Importance of Elasticity in Decision Making
-            resourceType: note
             estimatedMinutes: 15
             description: Demonstrates practical applications of elasticity in corporate
               pricing strategies, total revenue maximization, monopoly price
@@ -2254,26 +2464,22 @@ curricula:
         lessons:
           - title: Introduction to Supply, law of Supply
             id: eco6701-u5ch1
-            resourceType: note
             estimatedMinutes: 30
             description: Introduces the concept of supply, law of supply while outlining key
               determinants that influence producers' willingness to offer goods.
           - id: eco6701-u5ch2
             title: Elasticity of Supply
-            resourceType: note
             estimatedMinutes: 30
             description: Measures producer responsiveness to price changes, detailing
               elasticity degrees.
           - id: eco6701-u5ch3
             title: Market Equilibrium
-            resourceType: note
             estimatedMinutes: 60
             description: Explains how intersecting market demand and supply curves determine
               equilibrium price and quantity, demonstrating self-adjusting
               market mechanisms that resolve excess supply and shortages.
           - id: eco6701-u5ch4
             title: Demand, Supply and Equilibrium Numericals
-            resourceType: note
             estimatedMinutes: 60
             description: Check demand and supply-curve reasoning and equilibrium
               determination through numerical practice.
@@ -2293,7 +2499,6 @@ curricula:
         lessons:
           - id: eco6701-u6ch1
             title: Meaning of Utility, Cardinal and Ordinal Utility Approaches
-            resourceType: note
             estimatedMinutes: 30
             description: Understand Utility meaning, Compares Marshall's quantifiable
               cardinal utility approach measured in utils with Hicks and Allen's
@@ -2301,28 +2506,24 @@ curricula:
               preference orders.
           - id: eco6701-u6ch2
             title: Law of Diminishing Marginal Utility
-            resourceType: note
             estimatedMinutes: 45
             description: Explains how additional satisfaction declines with successive unit
               consumption, illustrating total and marginal utility schedules,
               satiety points, and reasons for downward-sloping demand curves.
           - id: eco6701-u6ch3
             title: Law of Substitution or Equi-Marginal Utility
-            resourceType: note
             estimatedMinutes: 45
             description: Demonstrates how rational consumers allocate limited income across
               multiple goods so that the marginal utility per rupee spent is
               equalized to maximize total satisfaction.
           - id: eco6701-u6ch4
             title: Theories of Risk Management in Consumer Choice
-            resourceType: blog
             estimatedMinutes: 30
             description: Examines consumer rationality and decision-making behavior when
               facing risk and uncertainty, exploring expected utility, risk
               aversion, and consumer risk-mitigation strategies.
           - id: eco6701-u6ch5
             title: Consumer's Surplus and Producer's Surplus
-            resourceType: blog
             estimatedMinutes: 30
             description: Examines benefits gained by consumer and producer upon
               participating in the market activities.

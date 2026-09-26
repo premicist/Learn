@@ -60,7 +60,9 @@ function NotePage() {
   const curriculum = getCurriculumBySubject(note.subjectId)
   const noteBody = getNoteBody(note)
   const headings = getHeadings(note.body, note.toc)
-  const noteUnit = curriculum?.units.find((unit) => unit.lessons.some((lesson) => lesson.resourceType === 'note' && lesson.resourceId === note.id))
+  const noteUnit = curriculum?.units.find(
+    (unit) => (note.unitId && unit.id === note.unitId) || unit.lessons.some((lesson) => lesson.resourceType === 'note' && lesson.resourceId === note.id)
+  )
   const relatedNotes = notes
     .filter((item) => item.subjectId === note.subjectId && item.id !== note.id)
     .slice(0, 3)
@@ -75,7 +77,18 @@ function NotePage() {
           <time className="note-page__date" dateTime={note.date}>{formatDate(note.date)}</time>
           <span aria-hidden="true">·</span>
           <span>{readingTime(note.body)}</span>
-          {subject && <Link to={`/subjects/${subject.id}`} className="note-page__subject">{subject.title}</Link>}
+          {subject && (
+            <>
+              <span aria-hidden="true">·</span>
+              <Link to={`/subjects/${subject.id}`} className="note-page__subject">{subject.title}</Link>
+            </>
+          )}
+          {noteUnit && (
+            <>
+              <span aria-hidden="true">·</span>
+              <span className="note-page__unit-tag">{noteUnit.title}</span>
+            </>
+          )}
         </div>
         <h1>{note.title}</h1>
         <p className="note-page__summary">{note.summary}</p>

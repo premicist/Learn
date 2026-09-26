@@ -3,6 +3,7 @@ subjectId: class-11
 title: "Class 11 Economics: Growth and Development"
 summary: "Distinguish rising output from broader development and evaluate poverty, inequality, employment, and human resources together."
 date: "2026-08-23"
+unitId: class11-u4-1
 ---
 
 ## Growth and development are related but different

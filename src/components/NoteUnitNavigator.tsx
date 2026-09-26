@@ -33,10 +33,12 @@ function NoteUnitNavigator({ unit, headings }: NoteUnitNavigatorProps) {
     }
   }, [headings])
 
+  const eyebrowText = unit.unitGroup || `Unit ${unit.order}`
+
   return (
     <details className="note-unit-navigator" open>
       <summary>
-        <span className="note-unit-navigator__eyebrow">Unit {unit.order}</span>
+        <span className="note-unit-navigator__eyebrow">{eyebrowText}</span>
         <strong>{unit.title}</strong>
       </summary>
       <div className="note-unit-navigator__panel">
@@ -45,7 +47,7 @@ function NoteUnitNavigator({ unit, headings }: NoteUnitNavigatorProps) {
           {headings.map((heading, index) => (
             <li key={heading.id}>
               <a href={`#${heading.id}`} className={heading.id === activeId ? 'is-active' : undefined} aria-current={heading.id === activeId ? 'location' : undefined}>
-                <span>{unit.order}.{index + 1}</span>
+                <span>{index + 1}</span>
                 <strong>{heading.title}</strong>
               </a>
             </li>

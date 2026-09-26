@@ -8,6 +8,7 @@ summary: "Rent is payment for using production factors; contract rent is
   intensive cultivation. Critics note fertility changes, accessibility, uses,
   and scarcity."
 date: 2026-08-22
+unitId: class12-u2-4
 ---
 ## Define rent in economics.
 

@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Subsistence Theory of Wage"
 summary: "Explain why classical economists believed wages tend to return to the subsistence level and evaluate the theory’s limitations."
 date: "2026-08-25"
+unitId: class12-u2-4
 ---
 
 ## Meaning of the theory

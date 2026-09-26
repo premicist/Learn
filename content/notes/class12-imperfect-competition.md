@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Price and Output under Imperfect Competition"
 summary: "Compare monopoly and other imperfectly competitive markets through demand, revenue, and equilibrium output."
 date: "2026-08-23"
+unitId: class12-u2-3
 ---
 
 ## Imperfect competition

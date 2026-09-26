@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Sustainable Development Goals and Nepal"
 summary: "Use the SDG framework to connect economic, social, and environmental dimensions of development in Nepal."
 date: "2026-08-23"
+unitId: class12-u5-3
 ---
 
 ## Sustainable development

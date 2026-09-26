@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Nepal’s Foreign Trade and Foreign Employment"
 summary: "Connect trade, migration, remittances, and employment challenges to Nepal’s economic choices."
 date: "2026-08-23"
+unitId: class12-u5-1
 ---
 
 ## Nepal in the global economy

@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Price and Output under Perfect Competition"
 summary: "Explain firm equilibrium in perfect competition using revenue, cost, and profit conditions."
 date: "2026-08-23"
+unitId: class12-u2-3
 ---
 
 ## Features of perfect competition

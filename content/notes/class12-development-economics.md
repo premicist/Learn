@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Development Economics: Poverty, Inequality, and Employment"
 summary: "Distinguish growth from development and evaluate poverty, inequality, unemployment, and human resources together."
 date: "2026-08-23"
+unitId: class12-u4-1
 ---
 
 ## Growth and development

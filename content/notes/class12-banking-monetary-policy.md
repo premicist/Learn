@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Banking and Monetary Policy"
 summary: "Understand the banking system, money creation, and the tools used to influence monetary conditions."
 date: "2026-08-23"
+unitId: class12-u3-1
 ---
 
 ## What money does

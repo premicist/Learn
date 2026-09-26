@@ -10,6 +10,9 @@ function VideoPage() {
   const video = videoId ? getVideoById(videoId) : undefined
   const subject = video ? getSubjectById(video.subjectId) : undefined
   const curriculum = video ? getCurriculumBySubject(video.subjectId) : undefined
+  const videoUnit = curriculum?.units.find(
+    (unit) => unit.lessons.some((lesson) => lesson.resourceType === 'video' && lesson.resourceId === video?.id)
+  )
 
   if (!video || !subject) {
     return (
@@ -27,6 +30,12 @@ function VideoPage() {
       <p className="eyebrow">Video lesson</p>
       <div className="article-page__meta">
         <Link to={`/subjects/${subject.id}`}>{subject.title}</Link>
+        {videoUnit && (
+          <>
+            <span aria-hidden="true">·</span>
+            <span className="article-page__unit-tag">{videoUnit.title}</span>
+          </>
+        )}
       </div>
       <h1>{video.title}</h1>
       <p className="article-page__excerpt">{video.description}</p>

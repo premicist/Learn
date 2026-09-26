@@ -3,6 +3,7 @@ subjectId: class-11
 title: "Class 11 Economics: Nepal’s Economy and Resources"
 summary: "Use economic concepts to study Nepal’s natural resources, agriculture, industry, tourism, transport, and communication."
 date: "2026-08-23"
+unitId: class11-u5-2
 ---
 
 ## Start with an evidence-based picture

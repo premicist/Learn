@@ -3,6 +3,7 @@ subjectId: class-11
 title: "Class 11 Economics: National Income"
 summary: "Organise GDP and related income measures, compare the main approaches, and avoid double counting."
 date: "2026-08-23"
+unitId: class11-u3-2
 ---
 
 ## Why national income is measured

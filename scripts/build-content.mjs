@@ -110,6 +110,7 @@ export type CurriculumLesson = {
 
 export type CurriculumUnit = {
   id: string
+  unitGroup?: string
   order: number
   title: string
   summary: string
@@ -124,8 +125,8 @@ export type Curriculum = {
   title: string
   description: string
   syllabusNote: string
-  syllabusChapters: string
-  syllabusChapterLinks: CurriculumChapterLink[]
+  syllabusChapters?: string
+  syllabusChapterLinks?: CurriculumChapterLink[]
   units: CurriculumUnit[]
 }
 

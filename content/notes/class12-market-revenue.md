@@ -3,6 +3,7 @@ subjectId: class-12
 title: "Market and Revenue Curves"
 summary: "Read market demand and connect total, average, and marginal revenue for different sellers."
 date: "2026-08-23"
+unitId: class12-u2-1
 ---
 
 ## Market demand and the firm

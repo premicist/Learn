@@ -1,5 +1,6 @@
 ---
 subjectId: class-12
+unitId: class12-u2-4
 title: Classical Theory of Interest
 summary: The Classical Theory of Interest provides a foundational framework for
   understanding how interest rates are determined through the interaction of

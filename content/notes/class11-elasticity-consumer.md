@@ -3,6 +3,7 @@ subjectId: class-11
 title: "Class 11 Economics: Elasticity and Consumer Behaviour"
 summary: "Understand responsiveness, utility, consumer choice, and the meaning of consumer surplus."
 date: "2026-08-23"
+unitId: class11-u2-2
 ---
 
 ## What elasticity measures
