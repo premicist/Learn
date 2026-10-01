@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460" width="100%" height="auto" role="img" aria-label="Market Equilibrium with Surplus and Shortage Zones">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .demand-line { fill: none; stroke: #146b63; stroke-width: 3.5; stroke-linecap: round; }
+    .supply-line { fill: none; stroke: #b4872a; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #8098ab; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #122a3a; stroke: #ffffff; stroke-width: 2.5; }
+    .zone-surplus { fill: rgba(180, 135, 42, 0.12); stroke: #b4872a; stroke-width: 1; stroke-dasharray: 3 3; }
+    .zone-shortage { fill: rgba(20, 107, 99, 0.12); stroke: #146b63; stroke-width: 1; stroke-dasharray: 3 3; }
+    .text-title { font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; fill: #122a3a; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; fill: #122a3a; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #47607a; }
+    .zone-tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="34">बजार सन्तुलन, अतिरिक्त आपूर्ति र अतिरिक्त माग (Market Equilibrium)</text>
+  <text class="text-sub" x="40" y="52">Intersection of Demand (DD) &amp; Supply (SS) at Equilibrium Point E (Pe, Qe)</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="90" y1="390" x2="90" y2="70"/>
+  <line class="axis" x1="90" y1="390" x2="630" y2="390"/>
+  <text class="text-label" x="25" y="78">मूल्य (P)</text>
+  <text class="text-label" x="510" y="415">माग र आपूर्ति परिमाण (Q)</text>
+  <text class="text-label" x="72" y="405">O</text>
+
+  <!-- Demand Line DD: (140, 100) to (540, 360) -->
+  <line class="demand-line" x1="140" y1="100" x2="540" y2="360"/>
+  <text class="text-title" x="550" y="366" fill="#146b63">DD (माग रेखा)</text>
+
+  <!-- Supply Line SS: (140, 360) to (540, 100) -->
+  <line class="supply-line" x1="140" y1="360" x2="540" y2="100"/>
+  <text class="text-title" x="550" y="106" fill="#b4872a">SS (आपूर्ति रेखा)</text>
+
+  <!-- Equilibrium Point E at (340, 230) -->
+  <line class="guide-line" x1="90" y1="230" x2="340" y2="230"/>
+  <line class="guide-line" x1="340" y1="230" x2="340" y2="390"/>
+  <circle class="point-dot" cx="340" cy="230" r="7"/>
+  <text class="text-label" x="45" y="235">Pₑ (३०)</text>
+  <text class="text-label" x="330" y="410">Qₑ (३०)</text>
+  <text class="text-title" x="355" y="226" fill="#122a3a">E (सन्तुलन बिन्दु)</text>
+
+  <!-- Higher Price P1 (40) at Y=165 => Surplus Zone -->
+  <line class="guide-line" x1="90" y1="165" x2="440" y2="165"/>
+  <text class="text-label" x="45" y="170" fill="#b4872a">P₁ (४०)</text>
+  <circle cx="240" cy="165" r="5" fill="#146b63"/>
+  <circle cx="440" cy="165" r="5" fill="#b4872a"/>
+
+  <!-- Surplus polygon between Y=165 and E(340,230) -->
+  <polygon points="240,165 440,165 340,230" class="zone-surplus"/>
+  <text class="zone-tag" x="275" y="152" fill="#785206">अतिरिक्त आपूर्ति (Surplus: Qs &gt; Qd)</text>
+  <text class="text-sub" x="295" y="185" fill="#785206">मूल्य घट्ने दबाब ↓</text>
+
+  <!-- Lower Price P2 (20) at Y=295 => Shortage Zone -->
+  <line class="guide-line" x1="90" y1="295" x2="440" y2="295"/>
+  <text class="text-label" x="45" y="300" fill="#146b63">P₂ (२०)</text>
+  <circle cx="240" cy="295" r="5" fill="#b4872a"/>
+  <circle cx="440" cy="295" r="5" fill="#146b63"/>
+
+  <!-- Shortage polygon between E(340,230) and Y=295 -->
+  <polygon points="340,230 240,295 440,295" class="zone-shortage"/>
+  <text class="zone-tag" x="280" y="315" fill="#0e4a45">अतिरिक्त माग (Shortage: Qd &gt; Qs)</text>
+  <text class="text-sub" x="300" y="280" fill="#0e4a45">मूल्य बढ्ने दबाब ↑</text>
+</svg>

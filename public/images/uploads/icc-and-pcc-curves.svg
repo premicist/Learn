@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 390" width="100%" height="auto" role="img" aria-label="Income Consumption Curve and Price Consumption Curve">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .budget-line { stroke: #888888; stroke-width: 1.5; stroke-linecap: round; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 14px; font-weight: 800; fill: #111111; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; text-anchor: middle; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 8; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+
+  <!-- Left: Income Consumption Curve (ICC) -->
+  <g transform="translate(30, 20)">
+    <rect class="card" width="340" height="345"/>
+    <text class="text-title" x="170" y="28">Panel (a): Income Consumption Curve (ICC)</text>
+    <text class="text-sub" x="170" y="46">Locus of equilibrium points as income rises</text>
+
+    <line class="axis" x1="45" y1="290" x2="45" y2="70"/>
+    <line class="axis" x1="45" y1="290" x2="310" y2="290"/>
+    <text class="text-label" x="15" y="75">Good Y</text>
+    <text class="text-label" x="255" y="315">Good X</text>
+    <text class="text-label" x="30" y="305">O</text>
+
+    <!-- Parallel budget lines -->
+    <line class="budget-line" x1="45" y1="210" x2="160" y2="290"/>
+    <line class="budget-line" x1="45" y1="150" x2="225" y2="290"/>
+    <line class="budget-line" x1="45" y1="90" x2="290" y2="290"/>
+
+    <!-- Tangency points E1, E2, E3 -->
+    <circle class="point-dot" cx="100" cy="250" r="5"/><text class="text-label" x="108" y="248">E₁</text>
+    <circle class="point-dot" cx="140" cy="205" r="5"/><text class="text-label" x="148" y="203">E₂</text>
+    <circle class="point-dot" cx="185" cy="155" r="5"/><text class="text-label" x="193" y="153">E₃</text>
+
+    <!-- Upward ICC line connecting E1, E2, E3 -->
+    <path class="curve" d="M 45 290 L 100 250 L 140 205 L 185 155 L 240 100"/>
+    <text class="text-title" x="260" y="95">ICC</text>
+
+    <text class="text-sub" x="170" y="330">Normal Goods: ICC slopes upward to the right</text>
+  </g>
+
+  <!-- Right: Price Consumption Curve (PCC) -->
+  <g transform="translate(410, 20)">
+    <rect class="card" width="340" height="345"/>
+    <text class="text-title" x="170" y="28">Panel (b): Price Consumption Curve (PCC)</text>
+    <text class="text-sub" x="170" y="46">Locus of equilibrium points as Price of X falls</text>
+
+    <line class="axis" x1="45" y1="290" x2="45" y2="70"/>
+    <line class="axis" x1="45" y1="290" x2="310" y2="290"/>
+    <text class="text-label" x="15" y="75">Good Y</text>
+    <text class="text-label" x="255" y="315">Good X</text>
+    <text class="text-label" x="30" y="305">O</text>
+
+    <!-- Rotating budget lines from fixed A -->
+    <line class="budget-line" x1="45" y1="130" x2="140" y2="290"/>
+    <line class="budget-line" x1="45" y1="130" x2="210" y2="290"/>
+    <line class="budget-line" x1="45" y1="130" x2="290" y2="290"/>
+
+    <!-- Tangency points E1, E2, E3 -->
+    <circle class="point-dot" cx="95" cy="180" r="5"/><text class="text-label" x="103" y="175">E₁</text>
+    <circle class="point-dot" cx="135" cy="195" r="5"/><text class="text-label" x="143" y="190">E₂</text>
+    <circle class="point-dot" cx="190" cy="215" r="5"/><text class="text-label" x="198" y="210">E₃</text>
+
+    <!-- Downward/Flatter PCC line -->
+    <path class="curve" d="M 45 130 Q 95 175 135 195 T 260 230"/>
+    <text class="text-title" x="280" y="230">PCC</text>
+
+    <text class="text-sub" x="170" y="330">Derives the downward-sloping demand curve for X</text>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450" width="100%" height="auto" role="img" aria-label="Market Equilibrium and Price Determination">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .demand-curve { fill: none; stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .supply-curve { fill: none; stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .zone-line { stroke: #111111; stroke-width: 2; stroke-dasharray: 3 3; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 600; fill: #333333; }
+    .badge { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; font-weight: 800; fill: #111111; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">Market Equilibrium: Interaction of Demand and Supply</text>
+  <text class="text-sub" x="40" y="50">Equilibrium occurs at Point E where Quantity Demanded equals Quantity Supplied (Qd = Qs)</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="90" y1="390" x2="90" y2="70"/>
+  <line class="axis" x1="90" y1="390" x2="630" y2="390"/>
+  <text class="text-label" x="45" y="80">Price (P)</text>
+  <text class="text-label" x="520" y="415">Quantity (Q)</text>
+  <text class="text-label" x="75" y="405">O</text>
+
+  <!-- Demand Curve (DD) from (140, 90) to (560, 370) -->
+  <line class="demand-curve" x1="140" y1="90" x2="560" y2="370"/>
+  <text class="text-title" x="570" y="375">DD</text>
+
+  <!-- Supply Curve (SS) from (140, 370) to (560, 90) -->
+  <line class="supply-curve" x1="140" y1="370" x2="560" y2="90"/>
+  <text class="text-title" x="570" y="95">SS</text>
+
+  <!-- Equilibrium Point E at (350, 230) -->
+  <circle class="point-dot" cx="350" cy="230" r="7"/>
+  <line class="guide-line" x1="90" y1="230" x2="350" y2="230"/>
+  <line class="guide-line" x1="350" y1="230" x2="350" y2="390"/>
+  <text class="text-label" x="55" y="235">P* (Eq. Price)</text>
+  <text class="text-label" x="325" y="415">Q* (Eq. Quantity)</text>
+  <text class="badge" x="365" y="225">E (Qd = Qs)</text>
+
+  <!-- High Price (P1 = 150): Excess Supply (Surplus) -->
+  <line class="guide-line" x1="90" y1="150" x2="470" y2="150"/>
+  <text class="text-label" x="60" y="155">P₁</text>
+  <line class="zone-line" x1="230" y1="150" x2="470" y2="150"/>
+  <circle cx="230" cy="150" r="5" fill="#111111"/>
+  <circle cx="470" cy="150" r="5" fill="#111111"/>
+  <text class="badge" x="350" y="140" text-anchor="middle">Excess Supply (Surplus: Qs &gt; Qd)</text>
+  <text class="text-sub" x="350" y="170" text-anchor="middle">↓ Downward pressure on price toward P*</text>
+
+  <!-- Low Price (P2 = 310): Excess Demand (Shortage) -->
+  <line class="guide-line" x1="90" y1="310" x2="470" y2="310"/>
+  <text class="text-label" x="60" y="315">P₂</text>
+  <line class="zone-line" x1="230" y1="310" x2="470" y2="310"/>
+  <circle cx="230" cy="310" r="5" fill="#111111"/>
+  <circle cx="470" cy="310" r="5" fill="#111111"/>
+  <text class="badge" x="350" y="300" text-anchor="middle">Excess Demand (Shortage: Qd &gt; Qs)</text>
+  <text class="text-sub" x="350" y="330" text-anchor="middle">↑ Upward pressure on price toward P*</text>
+</svg>

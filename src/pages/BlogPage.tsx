@@ -5,6 +5,7 @@ import NoteMarkdown from '../components/NoteMarkdown'
 import Seo from '../components/Seo'
 import { getCurriculumBySubject } from '../data/curriculum'
 import UnitContext from '../components/UnitContext'
+import AccessibilityMenu from '../components/AccessibilityMenu'
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr)
@@ -88,6 +89,8 @@ function BlogPage() {
         </aside>
       )}
       <Link to="/blogs" className="back-link">← Back to all blogs</Link>
+
+      <AccessibilityMenu contentSelector=".article-page__body" contentTitle={post.title} />
     </article>
   )
 }

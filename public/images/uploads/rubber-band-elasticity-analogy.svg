@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="100%" height="auto" role="img" aria-label="Rubber Band Analogy for Elasticity">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .card-bg { fill: #f6f8f7; stroke: #dde5e2; stroke-width: 1.5; }
+    .elastic-band { fill: none; stroke: #146b63; stroke-width: 8; stroke-linecap: round; }
+    .inelastic-cord { fill: none; stroke: #b23a2b; stroke-width: 8; stroke-linecap: round; }
+    .arrow { stroke: #122a3a; stroke-width: 2.5; fill: #122a3a; }
+    .text-title { font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; fill: #122a3a; }
+    .text-card-title { font-family: 'Fraunces', Georgia, serif; font-size: 14.5px; font-weight: 700; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #122a3a; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #47607a; }
+    .tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="35" y="32">लोचको भौतिक दृष्टान्त: रबर ब्यान्डको उदाहरण (Rubber Band Analogy)</text>
+  <text class="text-sub" x="35" y="50">लोच (Elasticity) भनेको बाह्य बल (मूल्य) ले पार्ने प्रभाव अनुसार वस्तुको परिमाणमा आउने तन्काइ वा लचकता हो।</text>
+
+  <!-- Panel 1: Highly Elastic (Flexible Rubber) -->
+  <g transform="translate(35, 68)">
+    <rect class="card-bg" width="300" height="225" rx="8"/>
+    <text class="text-card-title" x="20" y="28" fill="#146b63">१. लोचदार अवस्था (Elastic: Ep &gt; 1)</text>
+    <text class="tag" x="20" y="46" fill="#0e4a45">नरम रबर ब्यान्ड (Highly Stretchable)</text>
+
+    <!-- Normal Band State -->
+    <text class="text-sub" x="20" y="80">सुरुको अवस्था (Initial):</text>
+    <path d="M 120 76 Q 150 60 180 76 Q 150 92 120 76" class="elastic-band" opacity="0.4"/>
+
+    <!-- Stretched Band State -->
+    <text class="text-sub" x="20" y="130">मूल्य परिवर्तन हुँदा (Stretched):</text>
+    <path d="M 60 135 Q 150 100 240 135 Q 150 170 60 135" class="elastic-band"/>
+
+    <!-- Pull arrows -->
+    <line x1="50" y1="135" x2="30" y2="135" class="arrow"/>
+    <polygon points="25,135 35,130 35,140" fill="#122a3a"/>
+    <line x1="250" y1="135" x2="270" y2="135" class="arrow"/>
+    <polygon points="275,135 265,130 265,140" fill="#122a3a"/>
+
+    <text class="text-label" x="20" y="195" fill="#146b63">सानो मूल्य परिवर्तन (ΔP) ⇒ धेरै ठूलो माग परिवर्तन (ΔQ)</text>
+    <text class="text-sub" x="20" y="212">उदाहरण: विलासिताका सामान (कार, सुन, स्मार्टफोन)</text>
+  </g>
+
+  <!-- Panel 2: Highly Inelastic (Stiff / Rigid Cord) -->
+  <g transform="translate(365, 68)">
+    <rect class="card-bg" width="300" height="225" rx="8"/>
+    <text class="text-card-title" x="20" y="28" fill="#b23a2b">२. बेलोचदार अवस्था (Inelastic: Ep &lt; 1)</text>
+    <text class="tag" x="20" y="46" fill="#781d13">कडा डोरी (Rigid Cord / Stiff Band)</text>
+
+    <!-- Normal Cord State -->
+    <text class="text-sub" x="20" y="80">सुरुको अवस्था (Initial):</text>
+    <path d="M 120 76 Q 150 60 180 76 Q 150 92 120 76" class="inelastic-cord" opacity="0.4"/>
+
+    <!-- Stretched Cord State (Hardly Stretches) -->
+    <text class="text-sub" x="20" y="130">मूल्य परिवर्तन हुँदा (Resists Stretch):</text>
+    <path d="M 110 135 Q 150 115 190 135 Q 150 155 110 135" class="inelastic-cord"/>
+
+    <!-- Pull arrows -->
+    <line x1="100" y1="135" x2="70" y2="135" class="arrow"/>
+    <polygon points="65,135 75,130 75,140" fill="#122a3a"/>
+    <line x1="200" y1="135" x2="230" y2="135" class="arrow"/>
+    <polygon points="235,135 225,130 225,140" fill="#122a3a"/>
+
+    <text class="text-label" x="20" y="195" fill="#b23a2b">ठूलो मूल्य परिवर्तन (ΔP) ⇒ थोरै मात्र माग परिवर्तन (ΔQ)</text>
+    <text class="text-sub" x="20" y="212">उदाहरण: अत्यावश्यक वस्तुहरू (नुन, खाद्यान्न, औषधि)</text>
+  </g>
+</svg>

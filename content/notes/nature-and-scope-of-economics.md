@@ -5,9 +5,9 @@ title: Nature and Scope of Economics
 summary: Economics is a social science and art analyzing human choices under
   scarcity, blending positive facts, normative goals, micro, and macro.
 date: 2026-09-23
-slidesEnabled: false
+slidesEnabled: true
 slideControls:
-  mode: auto
+  mode: bullets
   maxPoints: 4
   includeQuickCheck: true
 toc: []

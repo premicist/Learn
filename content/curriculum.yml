@@ -296,6 +296,344 @@ curricula:
             resourceId: quiz-class11-maths
             estimatedMinutes: 12
             description: Consolidate the calculation patterns used throughout the course.
+  - id: class-11-nepali-economics
+    subjectId: class-11-nepali
+    title: अर्थशास्त्र-१ (कक्षा ११) अध्ययन मार्ग
+    description: अर्थशास्त्रका आधारभूत अवधारणा, व्यष्टि अर्थशास्त्र, समष्टि अर्थशास्त्र, विकास अर्थशास्त्र, नेपाली अर्थतन्त्र र परिमाणात्मक विधिहरूको विस्तृत अध्ययन।
+    syllabusNote: राष्ट्रिय परीक्षा बोर्ड (NEB) को नयाँ पाठ्यक्रममा आधारित।
+    syllabusChapters: ""
+    syllabusChapterLinks: []
+    units:
+      - id: class11-np-u1-1
+        unitGroup: "एकाइ १: अर्थशास्त्रका आधारभूत अवधारणा र स्रोत बाँडफाँट"
+        order: 1
+        title: "एकाइ १.१: अर्थशास्त्रका आधारभूत अवधारणा र स्रोत बाँडफाँट"
+        summary: अर्थशास्त्रको उत्पत्ति, विभिन्न परिभाषाहरू, दुर्लभता र छनोट तथा उत्पादनका साधनहरूको अवधारणा बुझ्नुहोस्।
+        estimatedMinutes: 75
+        outcomes:
+          - अर्थशास्त्रको परिभाषा र यसको क्षेत्र (Scope) व्याख्या गर्न।
+          - व्यष्टि (Micro) र समष्टि (Macro) अर्थशास्त्र बीच भिन्नता छुट्याउन।
+          - भूमि, श्रम, पुँजी र सङ्गठनलाई उत्पादनका साधनका रूपमा पहिचान गर्न।
+        lessons:
+          - id: class11-np-foundations
+            title: अर्थशास्त्रको अर्थ र परिभाषाहरू (Meaning and Definitions)
+            resourceType: note
+            resourceId: class11-nepali-meaning-definitions
+            estimatedMinutes: 30
+            description: एडम स्मिथ, अल्फ्रेड मार्शल र लियोनेल रोबिन्सका परिभाषाहरू, दुर्लभता, छनोट र अवसर लागत।
+          - id: class11-np-foundations-check
+            title: आधारभूत अवधारणाहरूको मूल्याङ्कन (Foundations Check)
+            estimatedMinutes: 10
+            description: एकाइ १ का मुख्य प्राविधिक शब्दावली र अवधारणाहरूको अभ्यास।
+      - id: class11-np-u2-1
+        unitGroup: "एकाइ २: व्यष्टि अर्थशास्त्र"
+        order: 2
+        title: "एकाइ २.१: माग, आपूर्ति र बजार सन्तुलन"
+        summary: क्रेता र विक्रेताबीचको अन्तरक्रिया तथा बजार सन्तुलन निर्धारण प्रक्रिया।
+        estimatedMinutes: 100
+        outcomes:
+          - मागको नियम र आपूर्तिको नियम स्पष्ट पार्न।
+          - रेखाचित्रमा हुने चाल (Movement) र स्थानान्तरण (Shift) बीच भिन्नता देखाउन।
+          - बजार सन्तुलन मूल्य र परिमाण निर्धारण गर्न।
+        lessons:
+          - id: class11-np-demand-theory
+            title: मागको सिद्धान्त (Theory of Demand)
+            resourceType: note
+            resourceId: class11-nepali-demand-theory
+            estimatedMinutes: 30
+            description: प्रभावकारी माग, रैखिक माग समीकरण (Qd = a - bP), मागको नियम, तालिका, वक्ररेखा, र मागमा हुने परिवर्तन।
+          - id: class11-np-supply-theory
+            title: आपूर्तिको सिद्धान्त (Theory of Supply)
+            resourceType: note
+            resourceId: class11-nepali-supply-theory
+            estimatedMinutes: 30
+            description: आपूर्तिको अवधारणा, रैखिक आपूर्ति समीकरण (Qs = c + dP), आपूर्तिको नियम, तालिका, वक्ररेखा, र आपूर्तिमा हुने परिवर्तन।
+          - id: class11-np-market-equilibrium
+            title: बजार सन्तुलन र मूल्य निर्धारण (Market Equilibrium)
+            resourceType: note
+            resourceId: class11-nepali-market-equilibrium
+            estimatedMinutes: 30
+            description: माग र आपूर्तिको अन्तरक्रिया, सन्तुलन मूल्य र परिमाण, माग र आपूर्तिमा हुने स्थानान्तरणको प्रभाव।
+          - id: class11-np-equilibrium-numericals
+            title: बजार सन्तुलनका गणितीय समस्याहरू (Equilibrium Numericals)
+            resourceType: note
+            resourceId: class11-nepali-equilibrium-numericals
+            estimatedMinutes: 25
+            description: रैखिक माग र आपूर्ति समीकरणबाट सन्तुलन मूल्य, परिमाण, कर र मूल्य नियन्त्रणका गणितीय अभ्यास।
+          - id: class11-np-demand-supply-check
+            title: माग र आपूर्ति अभ्यास (Practice)
+            estimatedMinutes: 10
+            description: बजार सन्तुलन र वक्ररेखा स्थानान्तरणको अभ्यास।
+      - id: class11-np-u2-2
+        unitGroup: "एकाइ २: व्यष्टि अर्थशास्त्र"
+        order: 3
+        title: "एकाइ २.२: माग र आपूर्तिको लोच"
+        summary: मूल्य, आय र अन्य तत्वहरूमा आउने परिवर्तनले माग र आपूर्तिमा पार्ने प्रभावको मापन।
+        estimatedMinutes: 140
+        outcomes:
+          - मागको मूल्य, आय र छड्के लोचको गणना र व्याख्या गर्न।
+          - आपूर्तिको मूल्य लोच र यसका निर्धारक तत्वहरू पहिचान गर्न।
+          - लोच मापनका विभिन्न विधिहरू र गणितीय समस्याहरू समाधान गर्न।
+        lessons:
+          - id: class11-np-elasticity-meaning
+            title: "१. लोचको अर्थ र प्रकारहरू (Meaning of Elasticity)"
+            resourceType: note
+            resourceId: class11-nepali-elasticity-meaning
+            estimatedMinutes: 20
+            description: लोचको परिभाषा, रबर ब्यान्ड दृष्टान्त, सूत्र, मागको लोचका प्रकारहरू र आपूर्तिको लोच।
+          - id: class11-np-price-elasticity-degrees
+            title: "२. मागको मूल्य लोच र प्रकारहरू (Price Elasticity & Degrees)"
+            resourceType: note
+            resourceId: class11-nepali-price-elasticity-degrees
+            estimatedMinutes: 25
+            description: मागको मूल्य लोच, सूत्र, पाँच डिग्रीहरू र उदाहरणीय संख्यात्मक समाधान।
+          - id: class11-np-income-elasticity
+            title: "३. मागको आय लोच र प्रकारहरू (Income Elasticity & Types)"
+            resourceType: note
+            resourceId: class11-nepali-income-elasticity
+            estimatedMinutes: 25
+            description: मागको आय लोच, सामान्य, विलासी र निम्नस्तरीय वस्तुहरू, र संख्यात्मक उदाहरण।
+          - id: class11-np-cross-elasticity
+            title: "४. मागको छड्के लोच र प्रकारहरू (Cross Elasticity & Types)"
+            resourceType: note
+            resourceId: class11-nepali-cross-elasticity
+            estimatedMinutes: 25
+            description: मागको छड्के लोच, प्रतिस्थापक र पूरक वस्तुहरू, र २ वटा संख्यात्मक उदाहरणहरू।
+          - id: class11-np-elasticity-determinants
+            title: "५. मागको मूल्य लोचका निर्धारक तत्वहरू (Determinants of Elasticity)"
+            resourceType: note
+            resourceId: class11-nepali-elasticity-determinants
+            estimatedMinutes: 20
+            description: मागको मूल्य लोच निर्धारण गर्ने तत्वहरू र व्यावसायिक निर्णयमा लोचको महत्त्व।
+          - id: class11-np-supply-elasticity
+            title: "६. आपूर्तिको मूल्य लोच र प्रकारहरू (Supply Elasticity & Types)"
+            resourceType: note
+            resourceId: class11-nepali-supply-elasticity
+            estimatedMinutes: 25
+            description: आपूर्तिको मूल्य लोच, पाँच डिग्रीहरू, निर्धारक तत्वहरू र संख्यात्मक उदाहरण।
+          - id: class11-np-elasticity-numericals
+            title: "७. माग र आपूर्तिको लोचका गणितीय समस्याहरू (Elasticity Numericals)"
+            resourceType: note
+            resourceId: class11-nepali-elasticity-numericals
+            estimatedMinutes: 30
+            description: लोचका गणितीय समस्या समाधान गर्ने कार्यविधि फ्लोचार्ट, विस्तृत समाधान र अभ्यास प्रश्नहरू।
+          - id: class11-np-elasticity-check
+            title: लोचको अभ्यास र मूल्याङ्कन (Elasticity Practice)
+            estimatedMinutes: 12
+            description: माग र आपूर्तिको लोचका बहुवैकल्पिक तथा छोटो उत्तर प्रश्नहरूको अभ्यास।
+      - id: class11-np-u2-3
+        unitGroup: "एकाइ २: व्यष्टि अर्थशास्त्र"
+        order: 4
+        title: "एकाइ २.३: उपभोक्ताको व्यवहारको सिद्धान्त"
+        summary: उपभोक्ताको व्यवहार, उपयोगिताका दृष्टिकोणहरू, सीमान्त उपयोगिता ह्रास नियम, सम-सीमान्त उपयोगिता नियम र गणितीय समस्याहरू।
+        estimatedMinutes: 130
+        outcomes:
+          - उपभोक्ता र उपभोक्ताको व्यवहारको आधारभूत स्वरूप बुझ्न।
+          - गणनावाचक र क्रमवाचक उपयोगिता दृष्टिकोण बीच भिन्नता छुट्याउन।
+          - सीमान्त उपयोगिता ह्रास नियम र सम-सीमान्त उपयोगिता नियम लागू गर्न।
+          - TU, MU र उपभोक्ता सन्तुलनका गणितीय समस्याहरू समाधान गर्न।
+        lessons:
+          - id: class11-np-consumer-meaning
+            title: "१. उपभोक्ता र उपभोक्ताको व्यवहार (Meaning of Consumer & Behaviour)"
+            resourceType: note
+            resourceId: class11-nepali-consumer-meaning
+            estimatedMinutes: 20
+            description: उपभोक्ताको अर्थ, निर्णय प्रक्रिया, छनोट आयाम र आर्थिक विवेकशीलताको विश्लेषण।
+          - id: class11-np-utility-concepts
+            title: "२. उपयोगिताको अवधारणा र दृष्टिकोणहरू (Concept of Utility & Approaches)"
+            resourceType: note
+            resourceId: class11-nepali-utility-concepts
+            estimatedMinutes: 25
+            description: उपयोगिताको अर्थ, गणनावाचक र क्रमवाचक तुलना, TU र MU सम्बन्ध र गणना।
+          - id: class11-np-law-of-dmu
+            title: "३. सीमान्त उपयोगिता ह्रास नियम (Law of Diminishing Marginal Utility)"
+            resourceType: note
+            resourceId: class11-nepali-law-of-dmu
+            estimatedMinutes: 30
+            description: गोसेनको पहिलो नियम, मान्यताहरू, तालिका, रेखाचित्र, अपवाद र विस्तृत आलोचना।
+          - id: class11-np-law-of-equi-marginal-utility
+            title: "४. प्रतिस्थापन वा सम-सीमान्त उपयोगिताको नियम (Law of Substitution)"
+            resourceType: note
+            resourceId: class11-nepali-law-of-equi-marginal-utility
+            estimatedMinutes: 30
+            description: गोसेनको दोस्रो नियम, सन्तुलन सर्तहरू, तालिका र रेखाचित्र, सीमा र महत्त्व।
+          - id: class11-np-consumer-behavior-numericals
+            title: "५. उपभोक्ता व्यवहारका गणितीय समस्याहरू (Consumer Behaviour Numericals)"
+            resourceType: note
+            resourceId: class11-nepali-consumer-behavior-numericals
+            estimatedMinutes: 25
+            description: DMU का ३ वटा र सम-सीमान्त सन्तुलनका ३ वटा विस्तृत गणितीय समाधान र अभ्यास।
+          - id: class11-np-consumer-behavior-check
+            title: उपभोक्ता व्यवहार अभ्यास र मूल्याङ्कन (Practice Quiz)
+            estimatedMinutes: 10
+            description: उपयोगिता, DMU र सम-सीमान्त नियमसम्बन्धी बहुवैकल्पिक प्रश्नहरूको अभ्यास।
+      - id: class11-np-u2-4
+        unitGroup: "एकाइ २: व्यष्टि अर्थशास्त्र"
+        order: 5
+        title: "एकाइ २.४: उत्पादनको सिद्धान्त"
+        summary: उत्पादन फलन, परिवर्तनशील अनुपातको नियम र उत्पादन लागतका अवधारणाहरू।
+        estimatedMinutes: 110
+        outcomes:
+          - उत्पादन र उत्पादन फलनको परिभाषा दिन।
+          - कुल, औसत र सीमान्त उत्पादन छुट्याउन।
+          - परिवर्तनशील अनुपातको नियम र आधारभूत लागतहरू व्याख्या गर्न।
+        lessons:
+          - id: class11-np-production
+            title: उत्पादन फलन र नियमहरू (Production Function)
+            resourceType: note
+            resourceId: class11-nepali-production
+            estimatedMinutes: 35
+            description: कुल, औसत र सीमान्त उत्पादन तालिका र परिवर्तनशील अनुपातको नियम।
+          - id: class11-np-production-check
+            title: उत्पादन र लागत अभ्यास (Production & Cost Practice)
+            estimatedMinutes: 12
+            description: उत्पादन र लागतका सम्बन्धहरूको परीक्षण।
+      - id: class11-np-u3-1
+        unitGroup: "एकाइ ३: समष्टि अर्थशास्त्र"
+        order: 6
+        title: "एकाइ ३.१: समष्टि अर्थशास्त्रको परिचय"
+        summary: समष्टिगत चरहरू, यसको क्षेत्र, महत्त्व तथा व्यष्टि र समष्टिको अन्तरनिर्भरता।
+        estimatedMinutes: 30
+        outcomes:
+          - समष्टि अर्थशास्त्रको परिभाषा, क्षेत्र र महत्त्व स्पष्ट गर्न।
+          - स्टक (Stock) र प्रवाह (Flow) चरहरू छुट्याउन।
+        lessons:
+          - id: class11-np-macro-intro
+            title: समष्टि अर्थशास्त्रको क्षेत्र र महत्त्व (Scope & Significance)
+            estimatedMinutes: 30
+            description: अर्थतन्त्रव्यापी दृष्टिकोण र व्यष्टि-समष्टिको अन्तरसम्बन्ध।
+      - id: class11-np-u3-2
+        unitGroup: "एकाइ ३: समष्टि अर्थशास्त्र"
+        order: 7
+        title: "एकाइ ३.२: राष्ट्रिय आय लेखाविधि"
+        summary: GDP, GNP, NDP, NNP का अवधारणाहरू र राष्ट्रिय आय गणनाका विधिहरू।
+        estimatedMinutes: 60
+        outcomes:
+          - राष्ट्रिय आयका प्रमुख अवधारणाहरू छुट्याउन।
+          - उत्पादन, आय र खर्च विधिहरू व्याख्या गर्न तथा दोहोरो गणनाको समस्याबाट बच्न।
+        lessons:
+          - id: class11-np-national-income
+            title: राष्ट्रिय आयको मापन (Measuring National Income)
+            estimatedMinutes: 35
+            description: मुख्य सूचकहरू र राष्ट्रिय आय गणनाका विधिहरू।
+      - id: class11-np-u3-3
+        unitGroup: "एकाइ ३: समष्टि अर्थशास्त्र"
+        order: 8
+        title: "एकाइ ३.३: मुद्रा र मुद्रास्फीति"
+        summary: मुद्राका कार्यहरू, मुद्रा प्रदाय, मुद्रास्फीतिका कारण र असरहरू।
+        estimatedMinutes: 60
+        outcomes:
+          - मुद्राका कार्यहरू र मुद्रा प्रदाय बुझ्न।
+          - मुद्रास्फीति, मुद्रासङ्कुचन, कारण र असरहरू वर्णन गर्न।
+        lessons:
+          - id: class11-np-money-inflation
+            title: मुद्रा र मूल्यवृद्धि (Money and Inflation)
+            estimatedMinutes: 35
+            description: मुद्रा, मूल्यस्तर र क्रयशक्ति बीचको सम्बन्ध।
+      - id: class11-np-u4-1
+        unitGroup: "एकाइ ४: विकास अर्थशास्त्र"
+        order: 9
+        title: "एकाइ ४.१: आर्थिक विकास, वृद्धि र पुँजी निर्माण"
+        summary: आर्थिक वृद्धि र विकासको तुलना, गरिबी, असमानता, रोजगारी र मानव संसाधन।
+        estimatedMinutes: 95
+        outcomes:
+          - आर्थिक वृद्धि र आर्थिक विकास बीच भिन्नता देखाउन।
+          - विकासका सूचकहरूको सही प्रयोग गर्न।
+          - गरिबी, असमानता र मानव संसाधनको अन्तरक्रिया बुझ्न।
+        lessons:
+          - id: class11-np-development
+            title: वृद्धि, विकास र सूचकहरू (Growth, Development & Indicators)
+            estimatedMinutes: 30
+            description: प्रतिव्यक्ति आय, मानव विकास सूचकाङ्क र विकासका अवरोधहरू।
+      - id: class11-np-u5-1
+        unitGroup: "एकाइ ५: नेपाली अर्थतन्त्र"
+        order: 10
+        title: "एकाइ ५.१: नेपाली अर्थतन्त्रको संरचना"
+        summary: नेपालको अर्थतन्त्रका मुख्य विशेषताहरू, संरचना, वृद्धि र वर्तमान चुनौतीहरू।
+        estimatedMinutes: 30
+        outcomes:
+          - नेपालको अर्थतन्त्रका मुख्य विशेषताहरू वर्णन गर्न।
+          - वर्तमान समष्टिगत आर्थिक प्रवृत्ति र चुनौतीहरू पहिचान गर्न।
+        lessons:
+          - id: class11-np-nepal-economy
+            title: नेपालको अर्थतन्त्रको स्वरूप (Overview of Nepal's Economy)
+            estimatedMinutes: 20
+            description: नेपाली अर्थतन्त्रको ऐतिहासिक र वर्तमान अवस्थाको विश्लेषण।
+      - id: class11-np-u5-2
+        unitGroup: "एकाइ ५: नेपाली अर्थतन्त्र"
+        order: 11
+        title: "एकाइ ५.२: नेपालका प्राकृतिक स्रोतहरू"
+        summary: नेपालको जलस्रोत, वन, खनिज र भूमि स्रोत तथा दिगो उपयोग।
+        estimatedMinutes: 45
+        outcomes:
+          - प्राकृतिक स्रोतहरूको आर्थिक महत्त्व मूल्याङ्कन गर्न।
+          - आर्थिक विकासमा प्राकृतिक स्रोतहरूको दिगो उपयोगिता दर्शाउन।
+        lessons:
+          - id: class11-np-nepal-resources
+            title: स्रोत साधन र उत्पादक क्षेत्रहरू (Resources & Productive Sectors)
+            estimatedMinutes: 35
+            description: जलस्रोत, वन र खनिज साधनको विकास र दिगो व्यवस्थापन।
+      - id: class11-np-u5-3
+        unitGroup: "एकाइ ५: नेपाली अर्थतन्त्र"
+        order: 12
+        title: "एकाइ ५.३: कृषि क्षेत्र"
+        summary: नेपालको कृषि संरचना, उत्पादकत्व, व्यावसायीकरण र खाद्य सुरक्षा।
+        estimatedMinutes: 35
+        outcomes:
+          - नेपालको अर्थतन्त्रमा कृषिको भूमिका र महत्त्व स्पष्ट पार्न।
+          - कृषिका समस्या र आधुनिकीकरणका उपायहरू पहिचान गर्न।
+        lessons:
+          - id: class11-np-agriculture-nepal
+            title: "नेपालमा कृषि: महत्त्व र समस्या (Agriculture in Nepal)"
+            estimatedMinutes: 30
+            description: कृषि उत्पादकत्व, समस्या, भूमि सुधार र सरकारी नीतिहरू।
+      - id: class11-np-u5-4
+        unitGroup: "एकाइ ५: नेपाली अर्थतन्त्र"
+        order: 13
+        title: "एकाइ ५.४: उद्योग र पर्यटन"
+        summary: औद्योगिक विकास, साना तथा घरेलु उद्योग, पर्यटनको सम्भावना र आर्थिक सम्बन्ध।
+        estimatedMinutes: 35
+        outcomes:
+          - नेपालमा औद्योगिक विकास र रोजगारी सिर्जनाको स्थिति विश्लेषण गर्न।
+          - पर्यटन क्षेत्रको सम्भावना र विदेशी मुद्रा आर्जनको महत्त्व मूल्याङ्कन गर्न।
+        lessons:
+          - id: class11-np-industry-tourism
+            title: उद्योग र पर्यटन क्षेत्र (Industry & Tourism)
+            estimatedMinutes: 30
+            description: औद्योगिक नीतिहरू, साना उद्योग र पर्यटन विकासका अवसरहरू।
+      - id: class11-np-u5-5
+        unitGroup: "एकाइ ५: नेपाली अर्थतन्त्र"
+        order: 14
+        title: "एकाइ ५.५: यातायात र सञ्चार"
+        summary: पूर्वाधार विकास, यातायातका साधनहरू र डिजिटल सञ्चार सञ्जाल।
+        estimatedMinutes: 30
+        outcomes:
+          - बजार विस्तारमा यातायात र सञ्चारको भूमिका व्याख्या गर्न।
+          - पूर्वाधार विकासका अवरोध र प्राथमिकताहरू पहिचान गर्न।
+        lessons:
+          - id: class11-np-transport-comm
+            title: यातायात र सञ्चार पूर्वाधार (Transport & Communication)
+            estimatedMinutes: 30
+            description: सडक सञ्जाल, हवाई यातायात र डिजिटल सञ्चार पूर्वाधारको भूमिका।
+      - id: class11-np-u6-1
+        unitGroup: "एकाइ ६: परिमाणात्मक विधिहरू"
+        order: 15
+        title: "एकाइ ६.१: आधारभूत गणित"
+        summary: अर्थशास्त्रमा प्रयोग हुने समीकरण, तालिका, रेखाचित्र र प्रतिशत गणना।
+        estimatedMinutes: 60
+        outcomes:
+          - सरल रेखीय समीकरणहरू समाधान गर्न।
+          - तालिकाहरू अध्ययन गरी प्रतिशत परिवर्तन शुद्धताका साथ निकाल्न।
+          - आर्थिक तर्कलाई गणितीय रूपमा प्रस्तुत गर्न।
+        lessons:
+          - id: class11-np-economic-maths
+            title: अर्थशास्त्रका लागि गणित (Mathematics for Economics)
+            estimatedMinutes: 30
+            description: सरल समीकरण, प्रतिशत परिवर्तन र आर्थिक गणनाहरू।
+          - id: class11-np-economic-maths-check
+            title: परिमाणात्मक कौशल अभ्यास (Quantitative Skills Check)
+            estimatedMinutes: 12
+            description: पाठ्यक्रमभरि प्रयोग हुने गणितीय विधिहरूको अभ्यास।
   - id: class-12-economics
     subjectId: class-12
     title: Your guided Economics-II path
@@ -2305,6 +2643,8 @@ curricula:
         lessons:
           - id: eco6701-u1ch1
             title: Meaning and Definitions
+            resourceType: note
+            resourceId: meaning-and-definitions-of-economics
             estimatedMinutes: 60
             description: Explores the origin and major definitions of economics, including
               Adam Smith's wealth view, Marshall's welfare concept, Robbins'
@@ -2318,18 +2658,22 @@ curricula:
               while outlining the traditional and modern scope of economic study
               across various sectors.
           - id: eco6701-u1ch3
+            title: Basic Economic Problems
+            resourceType: note
+            resourceId: basic-economic-problems
+            estimatedMinutes: 30
             description: "Analyzes the central problems every economy faces due to scarce
               resources: what to produce, how to produce efficiently, and for
               whom to distribute the final goods."
-            title: Basic Economic Problems
-            estimatedMinutes: 30
           - id: eco6701-u1ch4
             title: Positive and Normative Economics
+            resourceType: note
+            resourceId: positive-and-normative-economics
+            estimatedMinutes: 30
             description: Differentiates between positive economics, which analyzes objective
               facts and cause-and-effect relationships, and normative economics,
               which involves value judgments, ethics, and policy
               recommendations.
-            estimatedMinutes: 30
           - id: eco6701-u1ch5
             title: Micro and Macro Economics
             resourceType: note
@@ -2356,13 +2700,17 @@ curricula:
         lessons:
           - id: eco6701-u2ch1
             title: Nature, Scope, and Role of Business Economics
+            resourceType: note
+            resourceId: nature-scope-and-role-of-business-economics
             estimatedMinutes: 60
             description: Examines how business economics integrates economic logic with
               managerial policy-making, outlining the multidisciplinary scope
               and key responsibilities of business economists in strategic
               planning.
-          - title: Fundamental Concepts, Efficiency, and Time Element
-            id: eco6701-u2ch2
+          - id: eco6701-u2ch2
+            title: Fundamental Concepts, Efficiency, and Time Element
+            resourceType: note
+            resourceId: fundamental-concepts-efficiency-and-time-element
             estimatedMinutes: 60
             description: Explains core economic principles used in business, including
               opportunity cost, marginalism, discounting, production efficiency,
@@ -2380,13 +2728,17 @@ curricula:
           - Analyze reasons for the downward-sloping demand curve.
           - Distinguish between movements along and shifts in the demand curve.
         lessons:
-          - title: Introduction to Demand
-            id: eco6701-u3ch1
+          - id: eco6701-u3ch1
+            title: Introduction to Demand
+            resourceType: note
+            resourceId: introduction-to-demand-concepts-and-determinants
             estimatedMinutes: 30
             description: Defines economic demand as desire backed by purchasing power and
               willingness to pay.
           - id: eco6701-u3ch2
             title: Law of Demand
+            resourceType: note
+            resourceId: law-of-demand-and-exceptions
             estimatedMinutes: 30
             description: States the inverse price-quantity relationship under ceteris
               paribus, illustrating demand schedules, downward-sloping curves,
@@ -2394,6 +2746,8 @@ curricula:
               determinants.
           - id: eco6701-u3ch3
             title: Shifts and Movement along in Demand Curve
+            resourceType: note
+            resourceId: movements-along-vs-shifts-in-demand-curve
             estimatedMinutes: 30
             description: Understand causes behind movement along versus shift of the demand
               curve.
@@ -2413,36 +2767,50 @@ curricula:
         lessons:
           - id: eco6701-u4ch1
             title: Meaning and Types of Elasticity of Demand
+            resourceType: note
+            resourceId: meaning-and-types-of-elasticity-of-demand
             estimatedMinutes: 30
             description: Focuses on measuring how buyer demand responds to changes in
               product price, consumer income, and substitute goods.
           - id: eco6701-u4ch2
             title: Measurement methods of Elasticity
+            resourceType: note
+            resourceId: measurement-methods-of-elasticity-of-demand
             estimatedMinutes: 60
             description: Examines mathematical techniques for measuring elasticity,
               including percentage, total outlay, point, and arc methods across
               various elasticity types.
           - id: eco6701-u4ch3
             title: Price Elasticity of Demand
+            resourceType: note
+            resourceId: price-elasticity-of-demand-degrees
             estimatedMinutes: 30
             description: Meaning and types (degrees) of Price Elasticity of Demand.
           - id: eco6701-u4ch4
             title: Income Elasticity of Demand
+            resourceType: note
+            resourceId: income-elasticity-of-demand
             description: Meaning and types of Income Elasticity of Demand.
             estimatedMinutes: 30
           - id: eco6701-u4ch5
             title: Cross Elasticity of Demand
+            resourceType: note
+            resourceId: cross-elasticity-of-demand
             estimatedMinutes: 30
             description: Meaning and Types of Cross Elasticity of Demand.
-          - title: Factors Determining Elasticity of Demand
+          - id: eco6701-u4ch6
+            title: Factors Determining Elasticity of Demand
+            resourceType: note
+            resourceId: factors-determining-elasticity-of-demand
             estimatedMinutes: 15
             description: Analyzes key determinants influencing demand responsiveness, such
               as substitute availability, product necessity versus luxury
               status, budget proportion, consumer habits, and time reaction
               horizons.
-            id: eco6701-u4ch6
           - id: eco6701-u4ch7
             title: Importance of Elasticity in Decision Making
+            resourceType: note
+            resourceId: importance-of-elasticity-in-decision-making
             estimatedMinutes: 15
             description: Demonstrates practical applications of elasticity in corporate
               pricing strategies, total revenue maximization, monopoly price
@@ -2462,24 +2830,32 @@ curricula:
           - Analyze self-correcting market mechanisms during shortages and
             surpluses.
         lessons:
-          - title: Introduction to Supply, law of Supply
-            id: eco6701-u5ch1
+          - id: eco6701-u5ch1
+            title: Introduction to Supply, law of Supply
+            resourceType: note
+            resourceId: introduction-to-supply-and-law-of-supply
             estimatedMinutes: 30
             description: Introduces the concept of supply, law of supply while outlining key
               determinants that influence producers' willingness to offer goods.
           - id: eco6701-u5ch2
             title: Elasticity of Supply
+            resourceType: note
+            resourceId: price-elasticity-of-supply
             estimatedMinutes: 30
             description: Measures producer responsiveness to price changes, detailing
               elasticity degrees.
           - id: eco6701-u5ch3
             title: Market Equilibrium
+            resourceType: note
+            resourceId: market-equilibrium-and-price-determination
             estimatedMinutes: 60
             description: Explains how intersecting market demand and supply curves determine
               equilibrium price and quantity, demonstrating self-adjusting
               market mechanisms that resolve excess supply and shortages.
           - id: eco6701-u5ch4
             title: Demand, Supply and Equilibrium Numericals
+            resourceType: note
+            resourceId: demand-supply-equilibrium-numericals
             estimatedMinutes: 60
             description: Check demand and supply-curve reasoning and equilibrium
               determination through numerical practice.
@@ -2499,6 +2875,8 @@ curricula:
         lessons:
           - id: eco6701-u6ch1
             title: Meaning of Utility, Cardinal and Ordinal Utility Approaches
+            resourceType: note
+            resourceId: meaning-of-utility-cardinal-and-ordinal-approaches
             estimatedMinutes: 30
             description: Understand Utility meaning, Compares Marshall's quantifiable
               cardinal utility approach measured in utils with Hicks and Allen's
@@ -2506,29 +2884,133 @@ curricula:
               preference orders.
           - id: eco6701-u6ch2
             title: Law of Diminishing Marginal Utility
+            resourceType: note
+            resourceId: law-of-diminishing-marginal-utility
             estimatedMinutes: 45
             description: Explains how additional satisfaction declines with successive unit
               consumption, illustrating total and marginal utility schedules,
               satiety points, and reasons for downward-sloping demand curves.
           - id: eco6701-u6ch3
             title: Law of Substitution or Equi-Marginal Utility
+            resourceType: note
+            resourceId: law-of-equi-marginal-utility
             estimatedMinutes: 45
             description: Demonstrates how rational consumers allocate limited income across
               multiple goods so that the marginal utility per rupee spent is
               equalized to maximize total satisfaction.
           - id: eco6701-u6ch4
             title: Theories of Risk Management in Consumer Choice
+            resourceType: note
+            resourceId: theories-of-risk-management-in-consumer-choice
             estimatedMinutes: 30
             description: Examines consumer rationality and decision-making behavior when
               facing risk and uncertainty, exploring expected utility, risk
               aversion, and consumer risk-mitigation strategies.
           - id: eco6701-u6ch5
             title: Consumer's Surplus and Producer's Surplus
+            resourceType: note
+            resourceId: consumer-surplus-and-producer-surplus
             estimatedMinutes: 30
             description: Examines benefits gained by consumer and producer upon
               participating in the market activities.
-      - id: eco6701-u8
+      - id: eco6701-u7
         order: 7
+        title: Theories of Consumer Behaviour II
+        summary: Analyze consumer choice through modern ordinal utility theory,
+          indifference curve analysis, budget constraints, and the decomposition
+          of price effects into income and substitution effects.
+        estimatedMinutes: 300
+        outcomes:
+          - Define the ordinal utility approach and compare it with cardinal utility.
+          - Construct and interpret indifference curves, indifference maps, and
+            the Marginal Rate of Substitution (MRS).
+          - Identify the core properties and exceptional shapes of indifference
+            curves.
+          - Construct budget lines and analyze shifts versus rotations.
+          - Derive consumer equilibrium using tangency between indifference
+            curves and budget lines.
+          - Decompose price effects into income and substitution effects,
+            deriving Income Consumption Curves (ICC) and Price Consumption
+            Curves (PCC).
+          - Solve consumer equilibrium numerical problems.
+        lessons:
+          - id: eco6701-u7ch1
+            title: Introduction to Ordinal Utility Analysis
+            resourceType: note
+            resourceId: introduction-to-ordinal-utility-analysis
+            estimatedMinutes: 30
+            description: Introduces Hicks and Allen's ordinal utility framework,
+              consumer preference ordering, and foundational behavioral axioms.
+          - id: eco6701-u7ch2
+            title: Indifference Curve & Indifference Map
+            resourceType: note
+            resourceId: indifference-curve-and-indifference-map
+            estimatedMinutes: 30
+            description: Explores the concept of indifference schedules, curves,
+              and maps representing equal satisfaction levels.
+          - id: eco6701-u7ch3
+            title: Marginal Rate of Substitution (MRS)
+            resourceType: note
+            resourceId: marginal-rate-of-substitution-mrs
+            estimatedMinutes: 30
+            description: Analyzes the rate at which a consumer is willing to trade
+              Good Y for Good X and the principle of Diminishing MRS.
+          - id: eco6701-u7ch4
+            title: Properties & Characteristics of Indifference Curves
+            resourceType: note
+            resourceId: properties-of-indifference-curves
+            estimatedMinutes: 30
+            description: Details the four core properties of indifference curves,
+              including downward slope, convexity to origin, and
+              non-intersection.
+          - id: eco6701-u7ch5
+            title: Exceptional Shapes of Indifference Curves
+            resourceType: note
+            resourceId: exceptional-shapes-of-indifference-curves
+            estimatedMinutes: 30
+            description: Examines non-standard indifference curves for perfect
+              substitutes (straight lines), perfect complements (L-shaped), and
+              economic bads.
+          - id: eco6701-u7ch6
+            title: Budget Line / Price Line
+            resourceType: note
+            resourceId: budget-line-and-price-line
+            estimatedMinutes: 30
+            description: Derives the consumer budget equation, slope of the price
+              line (-Px/Py), and graphical shifts versus rotations.
+          - id: eco6701-u7ch7
+            title: Determination of Consumer's Equilibrium
+            resourceType: note
+            resourceId: determination-of-consumers-equilibrium
+            estimatedMinutes: 30
+            description: Explains the two necessary and sufficient conditions for
+              consumer equilibrium under indifference curve analysis (tangency
+              MRSxy = Px/Py).
+          - id: eco6701-u7ch8
+            title: Income Effect, Price Effect, and Substitution Effect
+            resourceType: note
+            resourceId: income-price-and-substitution-effects
+            estimatedMinutes: 30
+            description: Decomposes the total price effect into substitution and
+              income effects for normal, inferior, and Giffen goods (Hicksian
+              and Slutsky methods).
+          - id: eco6701-u7ch9
+            title: Income (ICC) and Price Consumption Curve
+            resourceType: note
+            resourceId: income-and-price-consumption-curves
+            estimatedMinutes: 30
+            description: Traces the locus of consumer equilibrium points as income
+              changes (ICC) and as product price changes (PCC).
+          - id: eco6701-u7ch10
+            title: Consumer equilibrium Numerical
+            resourceType: note
+            resourceId: consumer-equilibrium-numericals
+            estimatedMinutes: 30
+            description: Solves mathematical and algebraic problems on budget lines,
+              MRS calculation, and optimal utility-maximizing consumption
+              baskets.
+      - id: eco6701-u8
+        order: 8
         title: Theory of Production
         summary: explore input-output relationships in the short and long run
           production, analyzing how costs behave as output expands. The unit
@@ -2546,46 +3028,197 @@ curricula:
           - id: eco6701-u8ch1
             title: Meaning of Production, Production Function
             resourceType: note
+            resourceId: meaning-of-production-and-production-function
             estimatedMinutes: 30
             description: defining production and production function, calculating total,
               average and marginal production.
-            resourceId: managerial-production-functions
           - id: eco6701-u8ch2
             title: The Law of Variable Proportion
             resourceType: note
+            resourceId: law-of-variable-proportions-short-run
             estimatedMinutes: 30
             description: Explore the short run production function through law of variable
               proportion.
-            resourceId: micro-variable-proportions
           - id: eco6701-u8ch3
             title: The law of Returns to Scale
             resourceType: note
+            resourceId: law-of-returns-to-scale-long-run
             estimatedMinutes: 30
             description: Explore the long run production function through law of returns to
               scale.
-            resourceId: micro-returns-to-scale
           - id: eco6701-u8ch4
             title: Short-Run and Long-Run Costs Curves
             resourceType: note
+            resourceId: short-run-and-long-run-cost-curves
             estimatedMinutes: 60
             description: Examines physical production functions, fixed versus variable
               inputs, U-shaped short-run average cost curves, and long-run
               envelope cost curves determined by input flexibility.
-            resourceId: micro-cost-curves
           - id: eco6701-u8ch5
             title: Economies and Diseconomies of Scale
             resourceType: note
+            resourceId: economies-and-diseconomies-of-scale
             estimatedMinutes: 30
             description: Analyzes cost advantages gained through large-scale long-run
               production expansion, distinguishing between internal
               managerial/technical efficiencies and external industry-wide cost
               savings.
-            resourceId: micro-scale-scope-breakeven
           - id: eco6701-u8ch6
             title: Break-Even Analysis
             resourceType: note
+            resourceId: break-even-analysis-and-cvp
             estimatedMinutes: 15
             description: Explains the financial technique used to calculate the break-even
               volume where total revenue equals total cost, helping managers
               evaluate profit margins and target outputs.
-            resourceId: micro-scale-scope-breakeven
+      - id: eco6701-u9
+        order: 9
+        title: Market Structure
+        summary: Classify market structures along the competitive spectrum,
+          exploring price and output determination, profit maximization,
+          efficiency, and strategic interactions under perfect competition,
+          monopoly, monopolistic competition, duopoly, and oligopoly.
+        estimatedMinutes: 240
+        outcomes:
+          - Classify market structures based on seller numbers, product
+            differentiation, entry barriers, and pricing power.
+          - Determine short-run and long-run equilibrium under perfect
+            competition and monopoly.
+          - Explain Chamberlin's monopolistic competition model and the excess
+            capacity theorem.
+          - Analyze duopoly interaction using Cournot and Bertrand models.
+          - Explain strategic interdependence, Sweezy's kinked demand curve, and
+            cartels under oligopoly.
+          - Solve market structure and profit maximization numerical exercises.
+        lessons:
+          - id: eco6701-u9ch1
+            title: Meaning of Market Structure
+            resourceType: note
+            resourceId: meaning-of-market-structure
+            estimatedMinutes: 30
+            description: Defines the concept of a market, structural parameters
+              for classification, and the master competitive spectrum.
+          - id: eco6701-u9ch2
+            title: Perfect Competition
+            resourceType: note
+            resourceId: perfect-competition-price-and-output-determination
+            estimatedMinutes: 40
+            description: Analyzes price-taking firms, short-run profit/loss
+              cases, shutdown rules, and long-run allocative/productive
+              efficiency.
+          - id: eco6701-u9ch3
+            title: Monopoly
+            resourceType: note
+            resourceId: monopoly-and-price-discrimination
+            estimatedMinutes: 40
+            description: Explores single-seller price makers, entry barriers,
+              deadweight loss, and first/second/third-degree price discrimination.
+          - id: eco6701-u9ch4
+            title: Monopolistic Competition
+            resourceType: note
+            resourceId: monopolistic-competition-and-excess-capacity
+            estimatedMinutes: 35
+            description: Examines product differentiation, selling costs,
+              long-run tangency equilibrium, and Chamberlin's excess capacity
+              theorem.
+          - id: eco6701-u9ch5
+            title: Oligopoly
+            resourceType: note
+            resourceId: oligopoly-kinked-demand-and-cartels
+            estimatedMinutes: 35
+            description: Analyzes strategic interdependence, Sweezy's kinked
+              demand curve model of price rigidity, collusive cartels, and price
+              leadership.
+          - id: eco6701-u9ch6
+            title: Duopoly
+            resourceType: note
+            resourceId: duopoly-cournot-and-bertrand-models
+            estimatedMinutes: 30
+            description: Compares Cournot's quantity competition model with
+              Bertrand's price competition model and the Bertrand paradox.
+          - id: eco6701-u9ch7
+            title: Numericals Exercises
+            resourceType: note
+            resourceId: market-structure-numerical-exercises
+            estimatedMinutes: 30
+            description: Solves mathematical exercises for profit-maximizing
+              output (MR = MC), competitive market price, monopoly pricing, and
+              Cournot output.
+      - id: eco6701-u10
+        order: 10
+        title: Pricing Practices and Strategies
+        summary: Examine commercial pricing policies, market power, and pricing
+          methods, including Pigou's degrees of price discrimination, cost-plus
+          and mark-up pricing, peak-load pricing, transfer pricing, price
+          skimming, and penetration pricing.
+        estimatedMinutes: 240
+        outcomes:
+          - Explain the business objectives and internal/external determinants
+            of pricing.
+          - Derive equilibrium conditions for third-degree price discrimination
+            and the Elasticity-Price Rule.
+          - Apply cost-plus and mark-up pricing formulas to retail and
+            hospitality operations.
+          - Analyze peak-load pricing for non-storable services with capacity
+            constraints.
+          - Evaluate transfer pricing rules for vertically integrated corporate
+            divisions.
+          - Contrast price skimming with penetration pricing for new product
+            launches.
+        lessons:
+          - id: eco6701-u10ch1
+            title: Meaning and Methods of Pricing
+            resourceType: note
+            resourceId: meaning-and-methods-of-pricing
+            estimatedMinutes: 30
+            description: Explores the meaning of pricing policy, six core
+              business objectives, internal/external determinants, and the master
+              taxonomy of pricing methods.
+          - id: eco6701-u10ch2
+            title: Price Discrimination
+            resourceType: note
+            resourceId: price-discrimination
+            estimatedMinutes: 45
+            description: Analyzes the meaning, necessary conditions, Pigou's
+              three degrees of price discrimination, and graphical price-output
+              determination in segmented markets.
+          - id: eco6701-u10ch3
+            title: Cost-Plus and Mark-Up Pricing
+            resourceType: note
+            resourceId: cost-plus-and-mark-up-pricing
+            estimatedMinutes: 30
+            description: Details the cost-plus pricing method, gross mark-up
+              formulas, Lerner index linkage with elasticity, and business
+              advantages/limitations.
+          - id: eco6701-u10ch4
+            title: Peak-Load Pricing
+            resourceType: note
+            resourceId: peak-load-pricing
+            estimatedMinutes: 30
+            description: Explores time-variant pricing for non-storable services
+              with fixed capacity constraints, balancing peak and off-peak
+              demand.
+          - id: eco6701-u10ch5
+            title: Transfer Pricing
+            resourceType: note
+            resourceId: transfer-pricing
+            estimatedMinutes: 35
+            description: Examines internal pricing of intermediate goods
+              between corporate divisions, avoiding double marginalization with
+              and without external markets.
+          - id: eco6701-u10ch6
+            title: Price Skimming
+            resourceType: note
+            resourceId: price-skimming
+            estimatedMinutes: 35
+            description: Details the high-initial-price strategy for innovative
+              products to extract early-adopter consumer surplus and recoup R&D
+              investments.
+          - id: eco6701-u10ch7
+            title: Penetration Pricing
+            resourceType: note
+            resourceId: penetration-pricing
+            estimatedMinutes: 35
+            description: Explores low-entry pricing strategies designed to
+              capture mass market share, achieve scale economies, and deter
+              competitor entry.

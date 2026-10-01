@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 420" width="100%" height="auto" role="img" aria-label="Returns to Scale along an Expansion Path">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 2.5; stroke-linecap: round; }
+    .scale-line { stroke: #111111; stroke-width: 3; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">Returns to Scale along the Expansion Path</text>
+  <text class="text-sub" x="40" y="50">Output changes when all factor inputs (Labor L and Capital K) expand proportionally</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="360" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="360" x2="660" y2="360"/>
+  <text class="text-label" x="25" y="80">Capital (K)</text>
+  <text class="text-label" x="580" y="385">Labor (L)</text>
+  <text class="text-label" x="65" y="375">O</text>
+
+  <!-- Isoquants IQ1=100, IQ2=200, IQ3=300, IQ4=400 -->
+  <path class="curve" d="M 100 230 Q 150 310 260 340"/><text class="text-label" x="265" y="340">IQ₁ = 100</text>
+  <path class="curve" d="M 130 160 Q 210 250 360 290"/><text class="text-label" x="365" y="290">IQ₂ = 200</text>
+  <path class="curve" d="M 180 110 Q 300 180 490 230"/><text class="text-label" x="495" y="230">IQ₃ = 300</text>
+  <path class="curve" d="M 250 75 Q 410 120 620 170"/><text class="text-label" x="625" y="170">IQ₄ = 400</text>
+
+  <!-- Scale Line / Expansion Path from Origin through (180, 260), (270, 205), (380, 145), (510, 95) -->
+  <line class="scale-line" x1="80" y1="360" x2="550" y2="75"/>
+  <text class="text-title" x="555" y="70">Expansion Path</text>
+
+  <!-- Points along Expansion Path -->
+  <circle class="point-dot" cx="180" cy="270" r="5"/><text class="text-label" x="190" y="270">A</text>
+  <circle class="point-dot" cx="265" cy="210" r="5"/><text class="text-label" x="275" y="210">B</text>
+  <circle class="point-dot" cx="370" cy="145" r="5"/><text class="text-label" x="380" y="145">C</text>
+  <circle class="point-dot" cx="500" cy="90" r="5"/><text class="text-label" x="510" y="90">D</text>
+
+  <!-- Legend Box -->
+  <g transform="translate(420, 245)">
+    <rect class="card" width="280" height="95"/>
+    <text class="text-label" x="14" y="24">1. Increasing Returns (IRS):</text>
+    <text class="text-sub" x="14" y="40">Distance AB &lt; OA (%ΔOutput &gt; %ΔInputs)</text>
+    <text class="text-label" x="14" y="60">2. Constant Returns (CRS):</text>
+    <text class="text-sub" x="14" y="74">Distance BC = AB (%ΔOutput = %ΔInputs)</text>
+  </g>
+</svg>

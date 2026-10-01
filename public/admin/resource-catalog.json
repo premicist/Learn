@@ -1,5 +1,29 @@
 [
   {
+    "id": "basic-economic-problems",
+    "type": "note",
+    "title": "Basic Economic Problems",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore the fundamental economic problem of resource scarcity, the four factors of production, the three central questions (What, How, and For Whom to Produce), and opportunity cost versus sunk costs.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "break-even-analysis-and-cvp",
+    "type": "note",
+    "title": "Break-Even Analysis and Cost-Volume-Profit",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master Break-Even Analysis (CVP Analysis), algebraic formulas for BEP, Margin of Safety, target profit planning, graphical charts, and step-by-step solved numericals.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "budget-line-and-price-line",
+    "type": "note",
+    "title": "Budget Line and Price Line",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand the consumer's budget constraint, the algebraic derivation of the budget line, vertical and horizontal intercepts, the price-ratio slope (-Px/Py), and graphical shifts versus rotations.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
     "id": "class11-development-growth",
     "type": "note",
     "title": "Class 11 Economics: Growth and Development",
@@ -54,6 +78,150 @@
     "subjectId": "class-11",
     "summary": "Use economic concepts to study Nepal’s natural resources, agriculture, industry, tourism, transport, and communication.",
     "date": "2026-08-23"
+  },
+  {
+    "id": "class11-nepali-consumer-behavior-numericals",
+    "type": "note",
+    "title": "उपभोक्ता व्यवहारका गणितीय समस्याहरू र समाधान (Consumer Behaviour Numerical Problems & Solutions)",
+    "subjectId": "class-11-nepali",
+    "summary": "सीमान्त उपयोगिता ह्रास नियम र सम-सीमान्त उपयोगिता नियमसम्बन्धी ६ वटा परीक्षा लक्षित संख्यात्मक समस्याहरूको चरणबद्ध समाधान तथा स्व-मूल्याङ्कन अभ्यास।",
+    "date": "2026-10-02T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-consumer-meaning",
+    "type": "note",
+    "title": "उपभोक्ता र उपभोक्ताको व्यवहार (Meaning of Consumer and Consumer Behaviour)",
+    "subjectId": "class-11-nepali",
+    "summary": "उपभोक्ताको अर्थ, उपभोक्ताको व्यवहारको परिभाषा, उपभोक्ताका प्रकारहरू, अध्ययनको आवश्यकता, निर्णय प्रक्रिया र आर्थिक विवेकशीलताको विस्तृत अध्ययन।",
+    "date": "2026-10-02T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-cross-elasticity",
+    "type": "note",
+    "title": "मागको छड्के लोच र यसका प्रकारहरू (Cross Elasticity of Demand & Types)",
+    "subjectId": "class-11-nepali",
+    "summary": "मागको छड्के लोचको अर्थ र सूत्र, प्रतिस्थापक, पूरक र असम्बन्धित वस्तुहरूको विश्लेषण, तथा २ वटा उदाहरणीय संख्यात्मक समस्याहरूको विस्तृत समाधान।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-demand-theory",
+    "type": "note",
+    "title": "मागको सिद्धान्त (Theory of Demand)",
+    "subjectId": "class-11-nepali",
+    "summary": "प्रभावकारी मागको अवधारणा, रैखिक माग समीकरण (Qd = a - bP) को विस्तृत व्याख्या, मागको नियम, माग वक्ररेखा तलतिर झुक्नुका कारणहरू, अपवादहरू, तथा माग रेखामा हुने चाल र स्थानान्तरण।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-elasticity-determinants",
+    "type": "note",
+    "title": "मागको मूल्य लोचका निर्धारक तत्वहरू र महत्त्व (Determinants & Importance of Price Elasticity)",
+    "subjectId": "class-11-nepali",
+    "summary": "कुनै वस्तुको माग किन लोचदार वा बेलोचदार हुन्छ भन्ने प्रमुख निर्धारक तत्वहरू, तथा व्यावसायिक निर्णय, मूल्य निर्धारण रणनीति र सरकारी आर्थिक नीतिमा मागको लोचको व्यावहारिक महत्त्व।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-elasticity-meaning",
+    "type": "note",
+    "title": "लोचको अर्थ र प्रकारहरू (Meaning of Elasticity)",
+    "subjectId": "class-11-nepali",
+    "summary": "लोचको सामान्य अवधारणा, रबर ब्यान्डको भौतिक दृष्टान्त, लोचको आधारभूत सूत्र, मागको लोचका प्रकारहरू (मूल्य, आय, र छड्के लोच), तथा आपूर्तिको लोचको संक्षिप्त परिचय।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-elasticity-numericals",
+    "type": "note",
+    "title": "माग र आपूर्तिको लोचका गणितीय समस्याहरू र समाधान (Elasticity Numerical Problems and Solutions)",
+    "subjectId": "class-11-nepali",
+    "summary": "प्रतिशत विधि, कुल खर्च विधि, बिन्दु विधि, आय लोच, छड्के लोच, तथा आपूर्ति लोचका परीक्षा लक्षित गणितीय समस्याहरूको चरणबद्ध समाधान र स्व-मूल्याङ्कन अभ्यास।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-equilibrium-numericals",
+    "type": "note",
+    "title": "बजार सन्तुलनका गणितीय समस्याहरू र समाधान (Market Equilibrium Numerical Problems and Solutions)",
+    "subjectId": "class-11-nepali",
+    "summary": "रैखिक माग र आपूर्ति समीकरणबाट सन्तुलन मूल्य र परिमाण गणना, तालिका निर्माण, रेखाचित्र विश्लेषण, तथा परीक्षा लक्षित अभ्यास प्रश्न र समाधान।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-income-elasticity",
+    "type": "note",
+    "title": "मागको आय लोच र यसका प्रकारहरू (Income Elasticity of Demand & Types)",
+    "subjectId": "class-11-nepali",
+    "summary": "मागको आय लोचको अर्थ, सूत्र, प्रकारहरू (धनात्मक, ऋणात्मक, र शून्य), वस्तुहरूको वर्गीकरण (सामान्य, विलासी र निम्नस्तरीय), तथा उदाहरणीय संख्यात्मक समाधान।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-law-of-dmu",
+    "type": "note",
+    "title": "सीमान्त उपयोगिता ह्रास नियम (Law of Diminishing Marginal Utility)",
+    "subjectId": "class-11-nepali",
+    "summary": "गोसेनको पहिलो नियम, सीमान्त उपयोगिता ह्रास नियमको अर्थ, मान्यताहरू, तालिका र रेखाचित्र, अपवादहरू, तथा विस्तृत आलोचना र महत्त्व।",
+    "date": "2026-10-02T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-law-of-equi-marginal-utility",
+    "type": "note",
+    "title": "प्रतिस्थापनको नियम वा सम-सीमान्त उपयोगिताको नियम (Law of Substitution / Equi-Marginal Utility)",
+    "subjectId": "class-11-nepali",
+    "summary": "गोसेनको दोस्रो नियम, सम-सीमान्त उपयोगिता नियमको अर्थ, उपभोक्ता सन्तुलनका सर्तहरू, तालिका र रेखाचित्रद्वारा विस्तृत व्याख्या, आलोचना र महत्त्व।",
+    "date": "2026-10-02T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-market-equilibrium",
+    "type": "note",
+    "title": "बजार सन्तुलन र मूल्य निर्धारण (Market Equilibrium and Price Determination)",
+    "subjectId": "class-11-nepali",
+    "summary": "माग र आपूर्तिको अन्तरक्रिया, सन्तुलन मूल्य र सन्तुलन परिमाणको निर्धारण, अतिरिक्त माग (अभाव) र अतिरिक्त आपूर्ति (बचत) को आत्म-समायोजन संयन्त्र, तथा माग र आपूर्तिमा हुने स्थानान्तरणको प्रभाव।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-meaning-definitions",
+    "type": "note",
+    "title": "अर्थशास्त्रको अर्थ र परिभाषाहरू (Meaning and Definitions of Economics)",
+    "subjectId": "class-11-nepali",
+    "summary": "अर्थशास्त्रको शाब्दिक उत्पत्ति, विकासक्रम तथा एडम स्मिथ (सम्पत्ति), अल्फ्रेड मार्शल (कल्याण), र लियोनेल रोबिन्स (दुर्लभता र छनोट) का प्रमुख परिभाषाहरूको तुलनात्मक र आलोचनात्मक विश्लेषण।",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-price-elasticity-degrees",
+    "type": "note",
+    "title": "मागको मूल्य लोच र यसका प्रकारहरू (Price Elasticity of Demand and Its Degrees)",
+    "subjectId": "class-11-nepali",
+    "summary": "मागको लोचको अर्थ, मागको मूल्य लोचको अवधारणा र सूत्र, तथा मूल्य लोचका पाँच प्रकारहरू वा डिग्रीहरूको विस्तृत व्याख्या, तालिका र रेखाचित्र।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-production",
+    "type": "note",
+    "title": "उत्पादनको सिद्धान्त (Theory of Production)",
+    "subjectId": "class-11-nepali",
+    "summary": "उत्पादनको अर्थ, उत्पादन फलन (अल्पकालीन र दीर्घकालीन), कुल, औसत र सीमान्त उत्पादन बीचको सम्बन्ध, परिवर्तनशील अनुपातको नियम (तीन चरणहरू), तथा पैमानाको प्रतिफलको नियमको विस्तृत अध्ययन।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-supply-elasticity",
+    "type": "note",
+    "title": "आपूर्तिको मूल्य लोच (Price Elasticity of Supply)",
+    "subjectId": "class-11-nepali",
+    "summary": "आपूर्तिको मूल्य लोचको अर्थ र सूत्र, आपूर्तिको लोचका पाँच प्रकारहरू वा डिग्रीहरू, ज्यामितीय व्याख्या, तथा आपूर्तिको लोच निर्धारण गर्ने प्रमुख तत्वहरूको विस्तृत अध्ययन।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-supply-theory",
+    "type": "note",
+    "title": "आपूर्तिको सिद्धान्त (Theory of Supply)",
+    "subjectId": "class-11-nepali",
+    "summary": "आपूर्तिको अवधारणा, मौज्दात र आपूर्ति बीचको भिन्नता, रैखिक आपूर्ति समीकरण (Qs = c + dP) को व्याख्या, आपूर्तिको नियम, तालिका, वक्ररेखा, निर्धारक तत्वहरू, तथा आपूर्तिमा हुने चाल र स्थानान्तरण।",
+    "date": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-utility-concepts",
+    "type": "note",
+    "title": "उपयोगिताको अवधारणा र दृष्टिकोणहरू (Concept of Utility and Approaches)",
+    "subjectId": "class-11-nepali",
+    "summary": "उपयोगिताको परिभाषा, गणनावाचक र क्रमवाचक दृष्टिकोणको तुलना, कुल उपयोगिता र सीमान्त उपयोगिता बीचको सम्बन्ध, तथा TU र MU गणना अभ्यास।",
+    "date": "2026-10-02T00:00:00.000Z"
   },
   {
     "id": "class11-production-and-cost",
@@ -208,12 +376,84 @@
     "date": "2026-08-31T00:00:00.000Z"
   },
   {
+    "id": "consumer-equilibrium-numericals",
+    "type": "note",
+    "title": "Consumer Equilibrium Numericals",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master mathematical problem-solving for consumer equilibrium under Indifference Curve analysis, budget line equations, MRS calculations, and utility-maximization baskets.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "consumer-surplus-and-producer-surplus",
+    "type": "note",
+    "title": "Consumer's Surplus and Producer's Surplus",
+    "subjectId": "introduction-to-economics",
+    "summary": "Learn the concepts of Consumer Surplus, Producer Surplus, and Total Economic Welfare, including graphical representations, measurement formulas, and practical business applications.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "cost-plus-and-mark-up-pricing",
+    "type": "note",
+    "title": "Cost-Plus and Mark-Up Pricing",
+    "subjectId": "introduction-to-economics",
+    "summary": "Learn the principles of Cost-Plus / Mark-Up Pricing, mathematical price formulas, linkage between optimal mark-ups and price elasticity, and practical hospitality applications.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "cross-elasticity-of-demand",
+    "type": "note",
+    "title": "Cross Elasticity of Demand",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore how the demand for one commodity responds to price changes in related goods, analyzing substitute goods, complementary goods, and unrelated goods with diagrams.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "demand-supply-equilibrium-numericals",
+    "type": "note",
+    "title": "Demand, Supply, and Market Equilibrium Numericals",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master mathematical solutions for linear demand and supply equations, market equilibrium determination, shortage/surplus calculations, and elasticity problems.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "determination-of-consumers-equilibrium",
+    "type": "note",
+    "title": "Determination of Consumer's Equilibrium",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master how consumer equilibrium is determined under Indifference Curve analysis, the first-order tangency condition (MRSxy = Px/Py), second-order convexity, and disequilibrium adjustments.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
     "id": "differences-between-microeconomics-and-macroeconomics",
     "type": "note",
-    "title": "DIFFERENCES BETWEEN MICROECONOMICS AND MACROECONOMICS",
+    "title": "Differences Between Microeconomics and Macroeconomics",
     "subjectId": "introduction-to-economics",
-    "summary": "Microeconomics examines individual units; macroeconomics studies national aggregates—both interdependent, complementary halves of one subject.",
-    "date": "2026-09-22T00:00:00.000Z"
+    "summary": "Compare microeconomics (individual consumer, firm, and market choices; Price Theory) and macroeconomics (economy-wide aggregates, GDP, inflation, unemployment, and monetary/fiscal policy; Income Theory).",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "duopoly-cournot-and-bertrand-models",
+    "type": "note",
+    "title": "Duopoly Cournot and Bertrand Models",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore duopoly market structures, comparing Augustin Cournot's quantity competition model and reaction curves with Joseph Bertrand's price competition model and the Bertrand Paradox.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "economies-and-diseconomies-of-scale",
+    "type": "note",
+    "title": "Economies and Diseconomies of Scale",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore internal and external economies and diseconomies of scale, their role in determining the shape of the Long-Run Average Cost curve, and strategic product pricing applications.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "exceptional-shapes-of-indifference-curves",
+    "type": "note",
+    "title": "Exceptional Shapes of Indifference Curves",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore non-standard indifference curves, including straight linear curves for perfect substitutes, L-shaped curves for perfect complements, upward-sloping curves for economic bads, and circular curves.",
+    "date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "factor-pricing-rent-concept",
@@ -222,6 +462,126 @@
     "subjectId": "class-12",
     "summary": "Rent is payment for using production factors; contract rent is tenant-landlord gross payment, while economic rent is surplus from fixed supply. Ricardo argued rent stems from fertility differences: superior land earns differential rent over marginal no-rent land, through extensive or intensive cultivation. Critics note fertility changes, accessibility, uses, and scarcity.",
     "date": "2026-08-22T00:00:00.000Z"
+  },
+  {
+    "id": "factors-determining-elasticity-of-demand",
+    "type": "note",
+    "title": "Factors Determining Elasticity of Demand",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore the primary economic and behavioral determinants that make consumer demand price-elastic or price-inelastic, with practical industry examples.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "fundamental-concepts-efficiency-and-time-element",
+    "type": "note",
+    "title": "Fundamental Concepts, Efficiency, and Time Element",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master core decision-making principles (opportunity cost, incremental reasoning, discounting), technical and economic efficiency, accounting vs. economic profit, and Marshallian time horizons.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "importance-of-elasticity-in-decision-making",
+    "type": "note",
+    "title": "Importance of Elasticity in Decision Making",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master how price, income, and cross elasticity guide business pricing strategies, Total Revenue maximization, monopoly price discrimination, taxation policies, and international trade.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "income-and-price-consumption-curves",
+    "type": "note",
+    "title": "Income Consumption Curve (ICC) and Price Consumption Curve (PCC)",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore the Income Consumption Curve (ICC) for normal and inferior goods, the Price Consumption Curve (PCC), and the ordinal derivation of the downward-sloping demand curve.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "income-elasticity-of-demand",
+    "type": "note",
+    "title": "Income Elasticity of Demand",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand how changes in consumer income affect the demand for goods, classifying commodities into normal, luxury, necessity, and inferior goods.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "income-price-and-substitution-effects",
+    "type": "note",
+    "title": "Income Effect, Price Effect, and Substitution Effect",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master the decomposition of the total price effect into substitution and income effects, exploring Hicksian and Slutsky methods across normal, inferior, and Giffen goods.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "indifference-curve-and-indifference-map",
+    "type": "note",
+    "title": "Indifference Curve and Indifference Map",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand the geometric concept of an Indifference Curve (Iso-Utility Curve), the construction of an indifference schedule, and how an Indifference Map represents a consumer's complete scale of preferences.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "introduction-to-demand-concepts-and-determinants",
+    "type": "note",
+    "title": "Introduction to Demand, Concepts, and Determinants",
+    "subjectId": "introduction-to-economics",
+    "summary": "Define effective economic demand, explore individual vs. market demand, derived vs. direct demand, the mathematical demand function, and key demand determinants.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "introduction-to-ordinal-utility-analysis",
+    "type": "note",
+    "title": "Introduction to Ordinal Utility Analysis",
+    "subjectId": "introduction-to-economics",
+    "summary": "Discover the foundations of modern Ordinal Utility Theory developed by Hicks and Allen, including historical evolution, core behavioral axioms, and superiority over cardinal utility.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "introduction-to-supply-and-law-of-supply",
+    "type": "note",
+    "title": "Introduction to Supply and the Law of Supply",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand the economic concept of supply, passive vs. active factors of production, the Law of Supply, movements along versus shifts in the supply curve, and key supply determinants.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "law-of-demand-and-exceptions",
+    "type": "note",
+    "title": "The Law of Demand and Its Exceptions",
+    "subjectId": "introduction-to-economics",
+    "summary": "State and explain the Law of Demand, its underlying assumptions, demand schedule, downward-sloping curve, why it slopes downwards, and key exceptions.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "law-of-diminishing-marginal-utility",
+    "type": "note",
+    "title": "Law of Diminishing Marginal Utility",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master Gossen's First Law of Consumption (Law of DMU), underlying assumptions, TU and MU schedules and curves, the Point of Satiety, consumer equilibrium, and real-world business applications.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "law-of-equi-marginal-utility",
+    "type": "note",
+    "title": "Law of Substitution or Equi-Marginal Utility",
+    "subjectId": "introduction-to-economics",
+    "summary": "Learn Gossen's Second Law (Law of Equi-Marginal Utility), its mathematical equilibrium condition, tabular schedule demonstration, and multi-commodity resource allocation.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "law-of-returns-to-scale-long-run",
+    "type": "note",
+    "title": "The Law of Returns to Scale (Long-Run Production)",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore long-run production dynamics using Isoquants, Isocost lines, Producer Equilibrium (Least-Cost Combination), the Expansion Path, and the three phases of Returns to Scale (IRS, CRS, and DRS).",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "law-of-variable-proportions-short-run",
+    "type": "note",
+    "title": "The Law of Variable Proportions (Short-Run Production)",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master the Law of Variable Proportions (Law of Diminishing Returns), its three operational stages, mathematical relationships between TP, AP, and MP, and why Stage II is the rational stage of production.",
+    "date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "macro-aggregate-demand",
@@ -1000,12 +1360,84 @@
     "date": "2026-08-23T00:00:00.000Z"
   },
   {
+    "id": "marginal-rate-of-substitution-mrs",
+    "type": "note",
+    "title": "Marginal Rate of Substitution (MRS)",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master the concept of Marginal Rate of Substitution (MRSxy), its mathematical derivation as the ratio of marginal utilities (MUx/MUy), and the Law of Diminishing MRS.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "market-equilibrium-and-price-determination",
+    "type": "note",
+    "title": "Market Equilibrium and Price Determination",
+    "subjectId": "introduction-to-economics",
+    "summary": "Learn how demand and supply interact to determine market equilibrium price and quantity, and examine the self-correcting price mechanism that resolves shortages and surpluses.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "market-structure-numerical-exercises",
+    "type": "note",
+    "title": "Market Structure Numerical Exercises",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master mathematical problem-solving across market structures, including competitive firm optimization, monopoly pricing, third-degree price discrimination, and Cournot duopoly reaction curves.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
     "id": "meaning-and-definitions-of-economics",
     "type": "note",
     "title": "Meaning and Definitions of Economics",
     "subjectId": "introduction-to-economics",
     "summary": "Understanding origin and development of definitions of economics. Economics evolved from Smith's wealth focus, Marshall's welfare view, Robbins' scarcity-choice definition, to Samuelson's growth model. It's a social science studying human behavior scientifically. Microeconomics examines individual units; macroeconomics studies national aggregates—both interdependent, complementary halves of one subject.",
     "date": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "meaning-and-methods-of-pricing",
+    "type": "note",
+    "title": "Meaning and Methods of Pricing",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore the foundations of commercial pricing policy, the six core business objectives of pricing, internal and external pricing determinants, and an overview of cost-based, demand-based, and competition-based pricing methods.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "meaning-and-types-of-elasticity-of-demand",
+    "type": "note",
+    "title": "Meaning and Types of Elasticity of Demand",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore the concept of elasticity of demand, the difference between slope and elasticity, and the three main types of elasticity (Price, Income, and Cross Elasticity).",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "meaning-of-market-structure",
+    "type": "note",
+    "title": "Meaning of Market Structure",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand what constitutes an economic market, the criteria used to classify market forms, and the master spectrum comparing Perfect Competition, Monopolistic Competition, Oligopoly, Duopoly, and Pure Monopoly.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "meaning-of-production-and-production-function",
+    "type": "note",
+    "title": "Meaning of Production and Production Function",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand the economic concept of production, the mathematical production function, the difference between short-run and long-run horizons, and the three physical product measures (TP, AP, and MP).",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "meaning-of-utility-cardinal-and-ordinal-approaches",
+    "type": "note",
+    "title": "Meaning of Utility, Cardinal and Ordinal Utility Approaches",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore the economic meaning and characteristics of utility, contrasting Alfred Marshall's quantitative cardinal utility approach with Hicks and Allen's qualitative ordinal utility theory.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "measurement-methods-of-elasticity-of-demand",
+    "type": "note",
+    "title": "Measurement Methods of Elasticity of Demand",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master the four methods of measuring price elasticity (Percentage, Total Outlay, Point/Geometric, and Arc methods) with step-by-step numerical solutions.",
+    "date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "micro-budget-equilibrium",
@@ -1280,12 +1712,44 @@
     "date": "2026-08-23"
   },
   {
+    "id": "monopolistic-competition-and-excess-capacity",
+    "type": "note",
+    "title": "Monopolistic Competition and Excess Capacity",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore Edward Chamberlin's model of monopolistic competition, product differentiation, selling costs, long-run tangency equilibrium, and the Excess Capacity Theorem.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "monopoly-and-price-discrimination",
+    "type": "note",
+    "title": "Monopoly and Price Discrimination",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand monopoly market structures, barriers to entry, profit maximization (MR = MC), persistent long-run supernormal profits, deadweight loss, and Pigou's three degrees of price discrimination.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "movements-along-vs-shifts-in-demand-curve",
+    "type": "note",
+    "title": "Movements Along vs. Shifts in the Demand Curve",
+    "subjectId": "introduction-to-economics",
+    "summary": "Distinguish clearly between movements along the demand curve (changes in quantity demanded) and shifts in the demand curve (changes in demand), including causes, graphical representations, and comparative tables.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
     "id": "nature-and-scope-of-economics",
     "type": "note",
     "title": "Nature and Scope of Economics",
     "subjectId": "introduction-to-economics",
     "summary": "Economics is a social science and art analyzing human choices under scarcity, blending positive facts, normative goals, micro, and macro.",
     "date": "2026-09-23T00:00:00.000Z"
+  },
+  {
+    "id": "nature-scope-and-role-of-business-economics",
+    "type": "note",
+    "title": "Nature, Scope, and Role of Business Economics",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand how business economics applies microeconomic tools and decision sciences to real-world business management, outlining its functional scope and the strategic role of a business economist.",
+    "date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "note-demand-supply",
@@ -1352,6 +1816,94 @@
     "date": "2026-08-23"
   },
   {
+    "id": "oligopoly-kinked-demand-and-cartels",
+    "type": "note",
+    "title": "Oligopoly, Kinked Demand Curve, and Cartels",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master oligopoly market structures, strategic mutual interdependence, Paul Sweezy's Kinked Demand Curve model of price rigidity, and collusive cartels and price leadership.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "peak-load-pricing",
+    "type": "note",
+    "title": "Peak-Load Pricing",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore Peak-Load Pricing for non-storable services with capacity constraints, analyzing how dual pricing across peak and off-peak periods rations capacity and maximizes operational efficiency.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "penetration-pricing",
+    "type": "note",
+    "title": "Penetration Pricing Strategy",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand Market Penetration Pricing, low-entry pricing tactics to capture mass market share, scale economies, and a comprehensive comparison with price skimming.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "perfect-competition-price-and-output-determination",
+    "type": "note",
+    "title": "Perfect Competition Price and Output Determination",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master price and output determination under perfect competition, price-taking behavior, short-run profit/loss cases, the shutdown rule, and long-run economic efficiency.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "positive-and-normative-economics",
+    "type": "note",
+    "title": "Positive and Normative Economics",
+    "subjectId": "introduction-to-economics",
+    "summary": "Differentiate between positive economics (objective facts, cause-and-effect, 'what is') and normative economics (value judgments, ethics, policy recommendations, 'what ought to be') with statement decoders.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "price-discrimination",
+    "type": "note",
+    "title": "Price Discrimination and Differential Pricing",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master the economics of price discrimination, necessary conditions, Pigou's three degrees, international dumping, and the mathematical elasticity-price rule with a 3-panel diagram.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "price-elasticity-of-demand-degrees",
+    "type": "note",
+    "title": "Price Elasticity of Demand and Its Degrees",
+    "subjectId": "introduction-to-economics",
+    "summary": "Learn the definition of price elasticity of demand, its algebraic formula, and explore the five distinct degrees of elasticity with diagrams and practical examples.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "price-elasticity-of-supply",
+    "type": "note",
+    "title": "Price Elasticity of Supply",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand how producer supply responds to price fluctuations, exploring the five degrees of supply elasticity, measurement formulas, graphical curves, and key determinants.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "price-skimming",
+    "type": "note",
+    "title": "Price Skimming Strategy",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master Market Skimming Pricing, exploring high-initial-price strategies for innovative products, favorable market conditions, lifecycle price trajectories, and real-world business examples.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "properties-of-indifference-curves",
+    "type": "note",
+    "title": "Properties and Characteristics of Indifference Curves",
+    "subjectId": "introduction-to-economics",
+    "summary": "Learn the five fundamental properties of indifference curves, including downward slope, convexity to the origin, non-intersection proofs, and why higher curves represent greater utility.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "short-run-and-long-run-cost-curves",
+    "type": "note",
+    "title": "Short-Run and Long-Run Cost Curves",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master short-run cost structures (TFC, TVC, TC, AFC, AVC, ATC, MC), understand why cost curves are U-shaped, and derive the Long-Run Average Cost (LAC) envelope planning curve.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
     "id": "sociology-business-and-culture",
     "type": "note",
     "title": "Culture in Organisations and Markets",
@@ -1406,6 +1958,22 @@
     "subjectId": "sociology",
     "summary": "Connect urban growth with infrastructure, labour, markets, and business opportunities and challenges.",
     "date": "2026-08-23"
+  },
+  {
+    "id": "theories-of-risk-management-in-consumer-choice",
+    "type": "note",
+    "title": "Theories of Risk Management in Consumer Choice",
+    "subjectId": "introduction-to-economics",
+    "summary": "Explore how consumers make decisions under uncertainty, analyzing Expected Utility theory, the three risk attitudes (averse, neutral, seeking), and practical consumer risk mitigation strategies.",
+    "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "transfer-pricing",
+    "type": "note",
+    "title": "Transfer Pricing in Vertically Integrated Firms",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand Transfer Pricing for intra-firm transactions between corporate divisions, avoiding double marginalization, and setting optimal transfer prices with and without external markets.",
+    "date": "2026-09-26T00:00:00.000Z"
   },
   {
     "id": "blog-behavioral-economics",

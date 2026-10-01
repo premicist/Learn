@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" width="100%" height="auto" role="img" aria-label="Peak-Load Pricing Diagram">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 3; stroke-linecap: round; }
+    .smc-curve { fill: none; stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">Peak-Load Pricing (Time-Variant Pricing)</text>
+  <text class="text-sub" x="40" y="50">Higher price P_Peak charged during capacity constraints; lower price P_OffPeak during excess capacity</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="370" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="370" x2="620" y2="370"/>
+  <text class="text-label" x="35" y="80">Price (P)</text>
+  <text class="text-label" x="540" y="395">Quantity (Q)</text>
+  <text class="text-label" x="65" y="385">O</text>
+
+  <!-- 1. Off-Peak Demand (D_OP) & MR_OP -->
+  <line class="curve" x1="80" y1="180" x2="330" y2="340"/>
+  <text class="text-label" x="335" y="345">D_OffPeak</text>
+
+  <line class="curve" stroke-width="2" stroke-dasharray="4 3" x1="80" y1="180" x2="220" y2="370"/>
+  <text class="text-label" x="225" y="375">MR_OP</text>
+
+  <!-- 2. Peak Demand (D_Peak) & MR_Peak -->
+  <line class="curve" x1="80" y1="90" x2="550" y2="330"/>
+  <text class="text-title" x="555" y="335">D_Peak</text>
+
+  <line class="curve" stroke-width="2" stroke-dasharray="4 3" x1="80" y1="90" x2="360" y2="370"/>
+  <text class="text-label" x="365" y="375">MR_Peak</text>
+
+  <!-- Short-Run Marginal Cost (SMC): Flat at first, surges near capacity -->
+  <path class="smc-curve" d="M 80 270 L 280 270 Q 400 260 480 80"/>
+  <text class="text-title" x="485" y="80">SMC (Capacity Limit)</text>
+
+  <!-- Off-Peak Equilibrium: MR_OP cuts SMC at (165, 270) -> Price P_OP on D_OP at (165, 235) -->
+  <circle class="point-dot" cx="165" cy="235" r="5"/>
+  <line class="guide-line" x1="80" y1="235" x2="165" y2="235"/>
+  <line class="guide-line" x1="165" y1="235" x2="165" y2="370"/>
+  <text class="text-label" x="30" y="240">P_OffPeak</text>
+  <text class="text-label" x="145" y="395">Q_OffPeak</text>
+
+  <!-- Peak Equilibrium: MR_Peak cuts SMC at (320, 270) -> Price P_Peak on D_Peak at (320, 195) -->
+  <circle class="point-dot" cx="320" cy="195" r="6"/>
+  <line class="guide-line" x1="80" y1="195" x2="320" y2="195"/>
+  <line class="guide-line" x1="320" y1="195" x2="320" y2="370"/>
+  <text class="text-label" x="30" y="200">P_Peak</text>
+  <text class="text-label" x="310" y="395">Q_Peak</text>
+
+  <!-- Summary Note Box -->
+  <g transform="translate(420, 150)">
+    <rect class="card" width="240" height="110"/>
+    <text class="text-label" x="14" y="24">Peak Pricing Rules:</text>
+    <text class="text-sub" x="14" y="44">1. High Season/Hours: P_Peak ↑</text>
+    <text class="text-sub" x="14" y="62">2. Low Season/Hours: P_OffPeak ↓</text>
+    <text class="text-sub" x="14" y="80">3. Rations limited capacity</text>
+    <text class="text-sub" x="14" y="98">4. Prevents congestion failure</text>
+  </g>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="auto" role="img" aria-label="Five Degrees of Price Elasticity of Demand">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 1.8; stroke-linecap: round; }
+    .line { fill: none; stroke: #111111; stroke-width: 2.5; stroke-linecap: round; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 800; fill: #111111; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #444444; text-anchor: middle; }
+  </style>
+
+  <!-- Panel 1: Perfectly Inelastic (Ep = 0) -->
+  <g transform="translate(10, 10)">
+    <rect class="bg" width="160" height="210" rx="8"/>
+    <text class="text-title" x="80" y="24">1. Perfectly Inelastic</text>
+    <text class="text-sub" x="80" y="38">Ep = 0 (Vertical Line)</text>
+    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
+    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
+    <text class="text-label" x="14" y="58">P</text>
+    <text class="text-label" x="140" y="195">Q</text>
+    <!-- Vertical demand line -->
+    <line class="line" x1="85" y1="65" x2="85" y2="180"/>
+    <text class="text-sub" x="85" y="202">Quantity fixed</text>
+  </g>
+
+  <!-- Panel 2: Relatively Inelastic (Ep < 1) -->
+  <g transform="translate(190, 10)">
+    <rect class="bg" width="160" height="210" rx="8"/>
+    <text class="text-title" x="80" y="24">2. Relatively Inelastic</text>
+    <text class="text-sub" x="80" y="38">Ep &lt; 1 (Steep Curve)</text>
+    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
+    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
+    <text class="text-label" x="14" y="58">P</text>
+    <text class="text-label" x="140" y="195">Q</text>
+    <!-- Steep demand line -->
+    <line class="line" x1="50" y1="65" x2="115" y2="180"/>
+    <text class="text-sub" x="80" y="202">%ΔQ &lt; %ΔP</text>
+  </g>
+
+  <!-- Panel 3: Unitary Elastic (Ep = 1) -->
+  <g transform="translate(370, 10)">
+    <rect class="bg" width="160" height="210" rx="8"/>
+    <text class="text-title" x="80" y="24">3. Unitary Elastic</text>
+    <text class="text-sub" x="80" y="38">Ep = 1 (Rect. Hyperbola)</text>
+    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
+    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
+    <text class="text-label" x="14" y="58">P</text>
+    <text class="text-label" x="140" y="195">Q</text>
+    <!-- Rectangular hyperbola arc -->
+    <path class="line" d="M 45 70 Q 75 110 135 170"/>
+    <text class="text-sub" x="80" y="202">%ΔQ = %ΔP (TR Constant)</text>
+  </g>
+
+  <!-- Panel 4: Relatively Elastic (Ep > 1) -->
+  <g transform="translate(550, 10)">
+    <rect class="bg" width="160" height="210" rx="8"/>
+    <text class="text-title" x="80" y="24">4. Relatively Elastic</text>
+    <text class="text-sub" x="80" y="38">Ep &gt; 1 (Flat Curve)</text>
+    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
+    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
+    <text class="text-label" x="14" y="58">P</text>
+    <text class="text-label" x="140" y="195">Q</text>
+    <!-- Flat demand line -->
+    <line class="line" x1="38" y1="95" x2="138" y2="155"/>
+    <text class="text-sub" x="80" y="202">%ΔQ &gt; %ΔP</text>
+  </g>
+
+  <!-- Panel 5: Perfectly Elastic (Ep = ∞) -->
+  <g transform="translate(730, 10)">
+    <rect class="bg" width="160" height="210" rx="8"/>
+    <text class="text-title" x="80" y="24">5. Perfectly Elastic</text>
+    <text class="text-sub" x="80" y="38">Ep = ∞ (Horizontal Line)</text>
+    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
+    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
+    <text class="text-label" x="14" y="58">P</text>
+    <text class="text-label" x="140" y="195">Q</text>
+    <!-- Horizontal demand line -->
+    <line class="line" x1="25" y1="110" x2="145" y2="110"/>
+    <text class="text-sub" x="80" y="202">Infinite Q at price P</text>
+  </g>
+</svg>

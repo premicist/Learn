@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="100%" height="auto" role="img" aria-label="Monopolistic Competition Long-Run Equilibrium and Excess Capacity">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 3; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">Monopolistic Competition: Long-Run Tangency &amp; Excess Capacity</text>
+  <text class="text-sub" x="40" y="50">Chamberlin's Excess Capacity Theorem: Tangency occurs on falling segment of LAC (qA &lt; qM)</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="360" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="360" x2="640" y2="360"/>
+  <text class="text-label" x="35" y="80">Price (P)</text>
+  <text class="text-label" x="560" y="385">Output (Q)</text>
+  <text class="text-label" x="65" y="375">O</text>
+
+  <!-- Downward AR & MR Lines (Elastic) -->
+  <line class="curve" stroke-width="2.5" x1="80" y1="120" x2="520" y2="300"/>
+  <text class="text-label" x="525" y="305">AR (d)</text>
+
+  <line class="curve" stroke-width="2.5" x1="80" y1="120" x2="340" y2="360"/>
+  <text class="text-label" x="345" y="375">MR</text>
+
+  <!-- U-shaped LAC Curve tangent to AR at T(260, 194), with minimum at M(380, 160) -->
+  <path class="curve" stroke-width="3.5" d="M 120 300 Q 260 170 380 160 T 580 230"/>
+  <text class="text-title" x="590" y="235">LAC</text>
+
+  <!-- LMC Curve cutting LAC min at (380, 160) and MR at (260, 280) -->
+  <path class="curve" stroke-width="2.5" d="M 160 350 Q 230 300 260 280 L 460 90"/>
+  <text class="text-title" x="470" y="95">LMC</text>
+
+  <!-- Tangency Point T at (260, 194) -->
+  <circle class="point-dot" cx="260" cy="194" r="6"/>
+  <line class="guide-line" x1="80" y1="194" x2="260" y2="194"/>
+  <line class="guide-line" x1="260" y1="194" x2="260" y2="360"/>
+  <text class="text-label" x="45" y="198">P*</text>
+  <text class="text-label" x="240" y="385">q_A (Actual)</text>
+  <text class="text-label" x="270" y="190">T (P = LAC, Normal Profit)</text>
+
+  <!-- Ideal Output Point M (Min LAC) at (380, 160) -->
+  <circle class="point-dot" cx="380" cy="160" r="6"/>
+  <line class="guide-line" x1="380" y1="160" x2="380" y2="360"/>
+  <text class="text-label" x="360" y="385">q_M (Ideal Output)</text>
+  <text class="text-label" x="390" y="155">Min LAC</text>
+
+  <!-- Excess Capacity Line Indicator -->
+  <line x1="265" y1="340" x2="375" y2="340" stroke="#111111" stroke-width="2.5"/>
+  <polygon points="260,340 270,336 270,344" fill="#111111"/>
+  <polygon points="380,340 370,336 370,344" fill="#111111"/>
+  <text class="text-sub" x="320" y="330">Excess Capacity = q_M - q_A</text>
+</svg>

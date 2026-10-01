@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" width="100%" height="auto" role="img" aria-label="Law of Diminishing Marginal Utility showing Total Utility and Marginal Utility curves">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 14px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .panel-bg { fill: #fafafa; stroke: #cccccc; stroke-width: 1; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+
+  <!-- ================= TOP PANEL: TOTAL UTILITY (TU) ================= -->
+  <g transform="translate(0, 0)">
+    <text class="text-title" x="40" y="28">Panel (a): Total Utility (TU) Curve</text>
+    
+    <!-- Axes -->
+    <line class="axis" x1="80" y1="210" x2="80" y2="40"/>
+    <line class="axis" x1="80" y1="210" x2="720" y2="210"/>
+    <text class="text-label" x="25" y="45">TU (Utils)</text>
+    <text class="text-label" x="65" y="222">O</text>
+
+    <!-- TU Curve points: (80,210), 1:(170,140), 2:(260,95), 3:(350,65), 4:(440,48), 5:(530,42), 6:(620,40), 7:(700,55) -->
+    <path class="curve" d="M 80 210 Q 250 80 530 42 T 620 40 Q 660 42 700 65"/>
+    <text class="text-title" x="710" y="70">TU</text>
+
+    <!-- Point of Satiety at Unit 6 (620, 40) -->
+    <circle class="point-dot" cx="620" cy="40" r="6"/>
+    <line class="guide-line" x1="620" y1="40" x2="620" y2="210"/>
+    <text class="text-label" x="540" y="32">Point of Satiety (Max TU = 60)</text>
+
+    <!-- Quantity ticks -->
+    <text class="text-label" x="165" y="226">1</text>
+    <text class="text-label" x="255" y="226">2</text>
+    <text class="text-label" x="345" y="226">3</text>
+    <text class="text-label" x="435" y="226">4</text>
+    <text class="text-label" x="525" y="226">5</text>
+    <text class="text-label" x="615" y="226">6</text>
+    <text class="text-label" x="695" y="226">7</text>
+  </g>
+
+  <!-- ================= BOTTOM PANEL: MARGINAL UTILITY (MU) ================= -->
+  <g transform="translate(0, 240)">
+    <text class="text-title" x="40" y="28">Panel (b): Marginal Utility (MU) Curve</text>
+    
+    <!-- Axes (X-axis at y=160, below is negative MU) -->
+    <line class="axis" x1="80" y1="210" x2="80" y2="40"/>
+    <line class="axis" x1="80" y1="160" x2="720" y2="160"/>
+    <text class="text-label" x="25" y="45">MU (Utils)</text>
+    <text class="text-label" x="660" y="152">Quantity (Q)</text>
+    <text class="text-label" x="65" y="165">O</text>
+
+    <!-- Zero line & Disutility label -->
+    <text class="text-sub" x="635" y="195">Negative Zone (Disutility)</text>
+
+    <!-- MU Curve: Line from (170, 60) down to (620, 160) and past into (700, 195) -->
+    <line class="curve" x1="120" y1="45" x2="700" y2="190"/>
+    <text class="text-title" x="710" y="195">MU</text>
+
+    <!-- Alignment with Point of Satiety (620, 160) -->
+    <line class="guide-line" x1="620" y1="-30" x2="620" y2="160"/>
+    <circle class="point-dot" cx="620" cy="160" r="6"/>
+    <text class="text-label" x="575" y="148">MU = 0 (Satiety)</text>
+
+    <!-- Quantity ticks -->
+    <text class="text-label" x="165" y="176">1</text>
+    <text class="text-label" x="255" y="176">2</text>
+    <text class="text-label" x="345" y="176">3</text>
+    <text class="text-label" x="435" y="176">4</text>
+    <text class="text-label" x="525" y="176">5</text>
+    <text class="text-label" x="615" y="176">6</text>
+    <text class="text-label" x="695" y="176">7</text>
+  </g>
+</svg>

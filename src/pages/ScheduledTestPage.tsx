@@ -261,7 +261,7 @@ function ScheduledTestPage() {
           <label>Name<input value={student.name} onChange={(event) => setStudent((current) => ({ ...current, name: event.target.value }))} required autoComplete="name" /></label>
           <label>Class<input value={student.studentClass} onChange={(event) => setStudent((current) => ({ ...current, studentClass: event.target.value }))} required /></label>
           <label>Section<input value={student.section} onChange={(event) => setStudent((current) => ({ ...current, section: event.target.value }))} required /></label>
-          <label>Roll No.<input value={student.rollNo} onChange={(event) => setStudent((current) => ({ ...current, rollNo: event.target.value }))} required /></label>
+          <label>Roll No.<input value={student.rollNo} inputMode="numeric" onChange={(event) => setStudent((current) => ({ ...current, rollNo: event.target.value }))} required /></label>
           <label className="scheduled-test__confirm">
             <input type="checkbox" checked={confirmed} onChange={(event) => setConfirmed(event.target.checked)} />
             <span>I confirm these details are mine, and I have not already taken this test.</span>
@@ -306,6 +306,7 @@ function ScheduledTestPage() {
               <input
                 type="number"
                 step="any"
+                inputMode="decimal"
                 value={answers[index] || ''}
                 disabled={submitted}
                 onChange={(event) => setAnswers((current) => current.map((answer, answerIndex) => answerIndex === index ? event.target.value : answer))}

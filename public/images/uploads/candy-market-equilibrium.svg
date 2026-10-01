@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="100%" height="auto" role="img" aria-label="Candy Market Equilibrium Diagram">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .demand-line { fill: none; stroke: #146b63; stroke-width: 3.5; stroke-linecap: round; }
+    .supply-line { fill: none; stroke: #b4872a; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #8098ab; stroke-width: 1.2; stroke-dasharray: 4 4; }
+    .point-dot { fill: #122a3a; stroke: #ffffff; stroke-width: 2.5; }
+    .point-d { fill: #146b63; stroke: #ffffff; stroke-width: 2; }
+    .point-s { fill: #b4872a; stroke: #ffffff; stroke-width: 2; }
+    .zone-surplus { fill: rgba(180, 135, 42, 0.12); stroke: #b4872a; stroke-width: 1; stroke-dasharray: 3 3; }
+    .zone-shortage { fill: rgba(20, 107, 99, 0.12); stroke: #146b63; stroke-width: 1; stroke-dasharray: 3 3; }
+    .text-title { font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; fill: #122a3a; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; fill: #122a3a; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #47607a; }
+    .point-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="34">चकलेटको बजार माग र आपूर्ति सन्तुलन (Market Equilibrium of Candy)</text>
+  <text class="text-sub" x="40" y="52">समीकरण: Qd = 300 - 20P र Qs = 20P - 100 ⇒ सन्तुलन बिन्दु E (Pe = रु. १०, Qe = १०० चकलेट)</text>
+
+  <!-- Axes: Origin O at (100, 400) -->
+  <line class="axis" x1="100" y1="400" x2="100" y2="60"/>
+  <line class="axis" x1="100" y1="400" x2="660" y2="400"/>
+  <text class="text-label" x="35" y="70">मूल्य (रु.)</text>
+  <text class="text-label" x="530" y="428">चकलेटको परिमाण (एकाइ)</text>
+  <text class="text-label" x="82" y="416">O</text>
+
+  <!-- Price Ticks on Y-axis (Y = 400 - P*18) -->
+  <line class="axis" x1="95" y1="310" x2="100" y2="310"/>
+  <text class="text-label" x="72" y="315">५</text>
+
+  <line class="axis" x1="95" y1="256" x2="100" y2="256"/>
+  <text class="text-label" x="72" y="261">८</text>
+
+  <line class="axis" x1="95" y1="220" x2="100" y2="220"/>
+  <text class="text-label" x="55" y="225" fill="#0e4a45">१० (Pe)</text>
+
+  <line class="axis" x1="95" y1="184" x2="100" y2="184"/>
+  <text class="text-label" x="70" y="189">१२</text>
+
+  <line class="axis" x1="95" y1="130" x2="100" y2="130"/>
+  <text class="text-label" x="70" y="135">१५</text>
+
+  <!-- Quantity Ticks on X-axis (X = 100 + Q*2.2) -->
+  <line class="axis" x1="232" y1="400" x2="232" y2="405"/>
+  <text class="text-label" x="224" y="422">६०</text>
+
+  <line class="axis" x1="320" y1="400" x2="320" y2="405"/>
+  <text class="text-label" x="305" y="422" fill="#0e4a45">१०० (Qe)</text>
+
+  <line class="axis" x1="408" y1="400" x2="408" y2="405"/>
+  <text class="text-label" x="398" y="422">१४०</text>
+
+  <line class="axis" x1="540" y1="400" x2="540" y2="405"/>
+  <text class="text-label" x="530" y="422">२००</text>
+
+  <!-- Demand Line DD: from (100, 130) to (584, 328) - DOES NOT TOUCH X-AXIS -->
+  <line class="demand-line" x1="100" y1="130" x2="584" y2="328"/>
+  <text class="text-title" x="595" y="334" fill="#146b63">DD (Qd = 300 - 20P)</text>
+
+  <!-- Supply Line SS: from (100, 310) to (584, 112) -->
+  <line class="supply-line" x1="100" y1="310" x2="584" y2="112"/>
+  <text class="text-title" x="595" y="118" fill="#b4872a">SS (Qs = 20P - 100)</text>
+
+  <!-- Surplus Shaded Polygon at P=12 (between Qd=60 and Qs=140 to Point E) -->
+  <polygon points="232,184 408,184 320,220" class="zone-surplus"/>
+  <text class="point-label" x="260" y="174" fill="#785206">अतिरिक्त आपूर्ति (Surplus = 80)</text>
+
+  <!-- Shortage Shaded Polygon at P=8 (between Point E and Qs=60 to Qd=140) -->
+  <polygon points="320,220 232,256 408,256" class="zone-shortage"/>
+  <text class="point-label" x="262" y="274" fill="#0e4a45">अतिरिक्त माग (Shortage = 80)</text>
+
+  <!-- Equilibrium Point E at (320, 220) => (Q=100, P=10) -->
+  <line class="guide-line" x1="100" y1="220" x2="320" y2="220"/>
+  <line class="guide-line" x1="320" y1="220" x2="320" y2="400"/>
+  <circle class="point-dot" cx="320" cy="220" r="7"/>
+  <text class="text-title" x="335" y="214" fill="#122a3a">E (100, 10)</text>
+  <text class="text-sub" x="335" y="230" fill="#0e4a45">सन्तुलन बिन्दु</text>
+
+  <!-- P = 12 Guide Lines: Qd=60 at (232, 184) and Qs=140 at (408, 184) -->
+  <line class="guide-line" x1="100" y1="184" x2="408" y2="184"/>
+  <line class="guide-line" x1="232" y1="184" x2="232" y2="400"/>
+  <line class="guide-line" x1="408" y1="184" x2="408" y2="400"/>
+  <circle class="point-d" cx="232" cy="184" r="5.5"/>
+  <circle class="point-s" cx="408" cy="184" r="5.5"/>
+
+  <!-- P = 8 Guide Lines: Qs=60 at (232, 256) and Qd=140 at (408, 256) -->
+  <line class="guide-line" x1="100" y1="256" x2="408" y2="256"/>
+  <line class="guide-line" x1="232" y1="256" x2="232" y2="400"/>
+  <line class="guide-line" x1="408" y1="256" x2="408" y2="400"/>
+  <circle class="point-s" cx="232" cy="256" r="5.5"/>
+  <circle class="point-d" cx="408" cy="256" r="5.5"/>
+
+  <!-- P = 15 Endpoints: Qd=0 at (100, 130), Qs=200 at (540, 130) -->
+  <line class="guide-line" x1="100" y1="130" x2="540" y2="130"/>
+  <line class="guide-line" x1="540" y1="130" x2="540" y2="400"/>
+  <circle class="point-d" cx="100" cy="130" r="5.5"/>
+  <circle class="point-s" cx="540" cy="130" r="5.5"/>
+
+  <!-- P = 5 Endpoints: Qs=0 at (100, 310), Qd=200 at (540, 310) -->
+  <line class="guide-line" x1="100" y1="310" x2="540" y2="310"/>
+  <line class="guide-line" x1="540" y1="310" x2="540" y2="400"/>
+  <circle class="point-s" cx="100" cy="310" r="5.5"/>
+  <circle class="point-d" cx="540" cy="310" r="5.5"/>
+</svg>

@@ -18,6 +18,12 @@ subjects:
     description: Microeconomics, Macroeconomics, and Nepal economy.
     color: "#2563eb"
     featured: []
+  - id: class-11-nepali
+    levelId: school
+    title: अर्थशास्त्र-१ (Economics-I)
+    description: कक्षा ११ को नयाँ पाठ्यक्रममा आधारित अर्थशास्त्र (नेपाली माध्यम) — व्यष्टि, समष्टि, विकास अर्थशास्त्र, नेपालको अर्थतन्त्र र परिमाणात्मक विधिहरू।
+    color: "#dc2626"
+    featured: []
   - levelId: school
     id: class-12
     title: Economics-II
@@ -26,6 +32,12 @@ subjects:
     featured:
       - type: note
         id: factor-pricing-rent-concept
+      - type: note
+        id: class12-cost-curves
+      - type: note
+        id: classical-theory-of-interest
+      - type: note
+        id: class12-banking-monetary-policy
   - id: microeconomics
     levelId: bachelors
     title: Microeconomics
@@ -82,3 +94,12 @@ subjects:
     color: "#260101"
     description: It covers introductory understanding of economics concepts for
       bachelor's students.
+    featured:
+      - type: note
+        id: meaning-and-definitions-of-economics
+      - type: note
+        id: basic-economic-problems
+      - type: note
+        id: price-elasticity-of-demand-degrees
+      - type: note
+        id: break-even-analysis-and-cvp

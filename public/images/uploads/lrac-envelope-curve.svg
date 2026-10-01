@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="100%" height="auto" role="img" aria-label="Long-Run Average Cost as an Envelope Planning Curve">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .sac-curve { fill: none; stroke: #555555; stroke-width: 2; stroke-linecap: round; }
+    .lac-curve { fill: none; stroke: #111111; stroke-width: 4; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 600; fill: #333333; text-anchor: middle; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">Long-Run Average Cost (LAC) as an Envelope Curve</text>
+  <text class="text-sub" x="390" y="50">LAC wraps tangent to family of Short-Run Average Cost (SAC) curves for various plant sizes</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="370" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="370" x2="720" y2="370"/>
+  <text class="text-label" x="25" y="80">Unit Cost (Rs.)</text>
+  <text class="text-label" x="650" y="395">Output (Q)</text>
+  <text class="text-label" x="65" y="385">O</text>
+
+  <!-- SAC 1 (Small plant) -->
+  <path class="sac-curve" d="M 100 200 Q 160 140 220 220"/><text class="text-label" x="145" y="145">SAC₁</text>
+
+  <!-- SAC 2 (Medium-small plant) -->
+  <path class="sac-curve" d="M 190 170 Q 260 110 330 190"/><text class="text-label" x="245" y="115">SAC₂</text>
+
+  <!-- SAC 3 (Optimal plant - MES) -->
+  <path class="sac-curve" stroke-width="2.5" d="M 300 150 Q 380 90 460 170"/><text class="text-label" x="370" y="95">SAC₃</text>
+
+  <!-- SAC 4 (Large plant) -->
+  <path class="sac-curve" d="M 430 170 Q 500 110 570 190"/><text class="text-label" x="485" y="115">SAC₄</text>
+
+  <!-- SAC 5 (Mega plant) -->
+  <path class="sac-curve" d="M 540 200 Q 600 140 660 220"/><text class="text-label" x="585" y="145">SAC₅</text>
+
+  <!-- Flatter Envelope LAC Curve tangent to SACs -->
+  <path class="lac-curve" d="M 100 220 Q 380 80 660 220"/>
+  <text class="text-title" x="670" y="225">LAC (Planning Curve)</text>
+
+  <!-- Optimum Scale / MES Point at (380, 160) -->
+  <circle class="point-dot" cx="380" cy="160" r="6"/>
+  <line class="guide-line" x1="380" y1="160" x2="380" y2="370"/>
+  <text class="text-label" x="340" y="395">Q* (Optimum Scale / MES)</text>
+
+  <!-- Economies and Diseconomies annotations -->
+  <text class="text-label" x="200" y="270">← Economies of Scale (Falling LAC)</text>
+  <text class="text-label" x="430" y="270">Diseconomies of Scale (Rising LAC) →</text>
+</svg>

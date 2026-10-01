@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" width="100%" height="auto" role="img" aria-label="Consumer Equilibrium under Indifference Curve Analysis">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .budget-line { stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .ic-curve { fill: none; stroke: #111111; stroke-width: 2.5; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 600; fill: #333333; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="30">Consumer Equilibrium: Tangency of Budget Line &amp; IC</text>
+  <text class="text-sub" x="40" y="48">Equilibrium Condition: MRSxy = Px / Py (Slope of IC = Slope of Budget Line)</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="360" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="360" x2="620" y2="360"/>
+  <text class="text-label" x="35" y="80">Good Y</text>
+  <text class="text-label" x="540" y="385">Good X</text>
+  <text class="text-label" x="65" y="375">O</text>
+
+  <!-- Budget Line AB from (80, 100) to (500, 360) -->
+  <line class="budget-line" x1="80" y1="100" x2="500" y2="360"/>
+  <text class="text-title" x="55" y="105">A (M/Py)</text>
+  <text class="text-title" x="495" y="385">B (M/Px)</text>
+
+  <!-- Indifference Curves -->
+  <!-- IC1 (Intersects Budget Line at R and S) -->
+  <path class="ic-curve" d="M 90 170 Q 150 290 380 340"/>
+  <text class="text-title" x="385" y="340">IC₁ (Sub-optimal)</text>
+
+  <!-- IC2 (Tangent at Point E) -->
+  <path class="ic-curve" stroke-width="3.5" d="M 120 120 Q 240 240 470 310"/>
+  <text class="text-title" x="475" y="310">IC₂ (Equilibrium)</text>
+
+  <!-- IC3 (Unattainable) -->
+  <path class="ic-curve" d="M 180 85 Q 320 180 560 270"/>
+  <text class="text-title" x="565" y="270">IC₃ (Unattainable)</text>
+
+  <!-- Equilibrium Point E at (255, 208) -->
+  <circle class="point-dot" cx="255" cy="208" r="7"/>
+  <line class="guide-line" x1="80" y1="208" x2="255" y2="208"/>
+  <line class="guide-line" x1="255" y1="208" x2="255" y2="360"/>
+  <text class="text-label" x="45" y="212">Ye*</text>
+  <text class="text-label" x="245" y="385">Xe*</text>
+  <text class="text-title" x="270" y="200">E (Tangency: MRSxy = Px/Py)</text>
+
+  <!-- Points R and S on IC1 -->
+  <circle cx="128" cy="130" r="4" fill="#111111"/><text class="text-label" x="135" y="130">R (MRS &gt; Px/Py)</text>
+  <circle cx="395" cy="295" r="4" fill="#111111"/><text class="text-label" x="405" y="295">S (MRS &lt; Px/Py)</text>
+</svg>

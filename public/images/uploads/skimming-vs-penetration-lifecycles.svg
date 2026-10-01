@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="100%" height="auto" role="img" aria-label="Skimming Pricing vs. Penetration Pricing Trajectories">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .skim-line { fill: none; stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .pen-line { fill: none; stroke: #111111; stroke-width: 3.5; stroke-dasharray: 6 5; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 600; fill: #333333; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 8; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">New Product Pricing Trajectories: Skimming vs. Penetration</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="320" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="320" x2="700" y2="320"/>
+  <text class="text-label" x="35" y="80">Price (P)</text>
+  <text class="text-label" x="620" y="345">Product Lifecycle / Time</text>
+  <text class="text-label" x="65" y="335">O</text>
+
+  <!-- 1. Skimming Trajectory (Starts High at y=90, drops to y=220) -->
+  <path class="skim-line" d="M 80 95 Q 220 105 400 180 T 680 230"/>
+  <text class="text-title" x="685" y="235">1. Skimming Pricing</text>
+  <text class="text-label" x="90" y="90">High Launch Price (Recoup R&amp;D)</text>
+
+  <!-- 2. Penetration Trajectory (Starts Low at y=270, rises slightly to y=230) -->
+  <path class="pen-line" d="M 80 270 Q 280 270 480 250 T 680 230"/>
+  <text class="text-title" x="685" y="275">2. Penetration Pricing</text>
+  <text class="text-label" x="90" y="290">Low Entry Price (Mass Market Share)</text>
+
+  <!-- Strategy Summary Cards -->
+  <!-- Skimming Card -->
+  <g transform="translate(180, 130)">
+    <rect class="card" width="220" height="65"/>
+    <text class="text-label" x="12" y="22">Skimming Strategy:</text>
+    <text class="text-sub" x="12" y="38">• Price-inelastic innovators</text>
+    <text class="text-sub" x="12" y="54">• High margin, low volume</text>
+  </g>
+
+  <!-- Penetration Card -->
+  <g transform="translate(420, 130)">
+    <rect class="card" width="220" height="65"/>
+    <text class="text-label" x="12" y="22">Penetration Strategy:</text>
+    <text class="text-sub" x="12" y="38">• Price-elastic mass market</text>
+    <text class="text-sub" x="12" y="54">• High volume, economies of scale</text>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380" width="100%" height="auto" role="img" aria-label="Exceptional Shapes of Indifference Curves">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 3; stroke-linecap: round; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 14px; font-weight: 800; fill: #111111; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; text-anchor: middle; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 8; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+
+  <!-- Left: Perfect Substitutes -->
+  <g transform="translate(30, 20)">
+    <rect class="card" width="340" height="335"/>
+    <text class="text-title" x="170" y="30">(a) Perfect Substitutes</text>
+    <text class="text-sub" x="170" y="48">Linear Straight Line (Constant MRS = 1)</text>
+    
+    <line class="axis" x1="45" y1="280" x2="45" y2="70"/>
+    <line class="axis" x1="45" y1="280" x2="310" y2="280"/>
+    <text class="text-label" x="15" y="75">Good Y</text>
+    <text class="text-label" x="255" y="305">Good X</text>
+    <text class="text-label" x="30" y="295">O</text>
+
+    <!-- Straight linear ICs -->
+    <line class="curve" x1="45" y1="180" x2="165" y2="280"/><text class="text-title" x="175" y="275">IC₁</text>
+    <line class="curve" x1="45" y1="120" x2="225" y2="280"/><text class="text-title" x="235" y="275">IC₂</text>
+    <line class="curve" x1="45" y1="75" x2="280" y2="280"/><text class="text-title" x="290" y="275">IC₃</text>
+    
+    <text class="text-sub" x="170" y="320">Example: 5-Rupee Coin vs. 5-Rupee Note</text>
+  </g>
+
+  <!-- Right: Perfect Complements -->
+  <g transform="translate(410, 20)">
+    <rect class="card" width="340" height="335"/>
+    <text class="text-title" x="170" y="30">(b) Perfect Complements</text>
+    <text class="text-sub" x="170" y="48">L-Shaped / Right-Angled (MRS = 0 or ∞)</text>
+    
+    <line class="axis" x1="45" y1="280" x2="45" y2="70"/>
+    <line class="axis" x1="45" y1="280" x2="310" y2="280"/>
+    <text class="text-label" x="10" y="75">Left Shoes</text>
+    <text class="text-label" x="240" y="305">Right Shoes</text>
+    <text class="text-label" x="30" y="295">O</text>
+
+    <!-- L-shaped curves -->
+    <polyline class="curve" points="110,90 110,220 280,220"/><text class="text-title" x="290" y="215">IC₁</text>
+    <polyline class="curve" points="170,90 170,160 280,160"/><text class="text-title" x="290" y="155">IC₂</text>
+    
+    <text class="text-sub" x="170" y="320">Example: Left Shoe &amp; Right Shoe (Fixed 1:1 Ratio)</text>
+  </g>
+</svg>

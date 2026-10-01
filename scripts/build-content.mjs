@@ -31,6 +31,30 @@ function readMarkdownFolder(folder) {
   })
 }
 
+function readSlideFiles() {
+  const dir = path.join(contentDir, 'slides')
+  let files = []
+  try {
+    files = readdirSync(dir).filter((f) => f.endsWith('.yml') || f.endsWith('.yaml'))
+  } catch {
+    return new Map()
+  }
+  const map = new Map()
+  for (const file of files) {
+    try {
+      const raw = readFileSync(path.join(dir, file), 'utf8')
+      const parsed = yaml.load(raw)
+      if (parsed && typeof parsed === 'object') {
+        const noteId = parsed.noteId || file.replace(/\.(yml|yaml)$/, '')
+        map.set(noteId, parsed)
+      }
+    } catch (err) {
+      console.warn(`Warning: failed to load slide file ${file}:`, err.message)
+    }
+  }
+  return map
+}
+
 function jsonString(value) {
   return JSON.stringify(value, null, 2)
 }
@@ -145,32 +169,59 @@ writeFileSync(path.join(outDir, 'curriculum.ts'), curriculumTs)
 const FALLBACK_NOTE_DATE = '2026-07-19'
 
 // --- notes, blogs, quizzes, videos ------------------------------------
-const notes = readMarkdownFolder('notes').map((n) => ({
-  id: n.id,
-  subjectId: n.subjectId,
-  unitId: typeof n.unitId === 'string' ? n.unitId : '',
-  title: n.title,
-  summary: n.summary,
-  toc: Array.isArray(n.toc) ? n.toc.filter((item) => typeof item === 'string') : [],
-  date:
-    typeof n.date === 'string'
-      ? n.date
-      : n.date
-        ? new Date(n.date).toISOString().slice(0, 10)
-        : FALLBACK_NOTE_DATE,
-  image: n.image || '',
-  imageAlt: n.imageAlt || '',
-  slidesEnabled: n.slidesEnabled === true,
-  slideControls: {
-    mode: n.slideControls?.mode || 'auto',
-    maxPoints: Number.isInteger(n.slideControls?.maxPoints) ? n.slideControls.maxPoints : 4,
-    includeQuickCheck: n.slideControls?.includeQuickCheck !== false,
-    sections: Array.isArray(n.slideControls?.sections) ? n.slideControls.sections : [],
-    title: n.slideControls?.title || '',
-  },
-  visualBlocks: normalizeVisualBlocks(Array.isArray(n.visualBlocks) ? n.visualBlocks : []),
-  body: n.body,
-}))
+const externalSlidesMap = readSlideFiles()
+
+const notes = readMarkdownFolder('notes').map((n) => {
+  const externalDeck = externalSlidesMap.get(n.id)
+  const rawSlides = (externalDeck && Array.isArray(externalDeck.slides) && externalDeck.slides.length > 0)
+    ? externalDeck.slides
+    : (Array.isArray(n.slides) ? n.slides : [])
+  const googleSlidesUrl = typeof externalDeck?.googleSlidesUrl === 'string' && externalDeck.googleSlidesUrl.trim()
+    ? externalDeck.googleSlidesUrl.trim()
+    : (typeof n.googleSlidesUrl === 'string' && n.googleSlidesUrl.trim() ? n.googleSlidesUrl.trim() : '')
+  const slidesEnabled = externalDeck?.slidesEnabled === true || n.slidesEnabled === true || Boolean(googleSlidesUrl) || rawSlides.length > 0
+
+  return {
+    id: n.id,
+    subjectId: n.subjectId,
+    unitId: typeof n.unitId === 'string' ? n.unitId : '',
+    title: n.title,
+    summary: n.summary,
+    toc: Array.isArray(n.toc) ? n.toc.filter((item) => typeof item === 'string') : [],
+    date:
+      typeof n.date === 'string'
+        ? n.date
+        : n.date
+          ? new Date(n.date).toISOString().slice(0, 10)
+          : FALLBACK_NOTE_DATE,
+    image: n.image || '',
+    imageAlt: n.imageAlt || '',
+    slidesEnabled,
+    googleSlidesUrl,
+    slideControls: {
+      mode: n.slideControls?.mode || externalDeck?.slideControls?.mode || 'auto',
+      maxPoints: Number.isInteger(n.slideControls?.maxPoints) ? n.slideControls.maxPoints : (Number.isInteger(externalDeck?.slideControls?.maxPoints) ? externalDeck.slideControls.maxPoints : 4),
+      includeQuickCheck: n.slideControls?.includeQuickCheck !== false && externalDeck?.slideControls?.includeQuickCheck !== false,
+      sections: Array.isArray(n.slideControls?.sections) ? n.slideControls.sections : (Array.isArray(externalDeck?.slideControls?.sections) ? externalDeck.slideControls.sections : []),
+      title: n.slideControls?.title || externalDeck?.title || '',
+    },
+    slides: rawSlides.map((s) => ({
+      layout: typeof s.layout === 'string' ? s.layout : 'concept',
+      title: typeof s.title === 'string' ? s.title : '',
+      eyebrow: typeof s.eyebrow === 'string' ? s.eyebrow : '',
+      badge: typeof s.badge === 'string' ? s.badge : '',
+      points: Array.isArray(s.points) ? s.points.map(String) : [],
+      table: s.table && Array.isArray(s.table.headers) ? {
+        headers: s.table.headers.map(String),
+        rows: Array.isArray(s.table.rows) ? s.table.rows.map((r) => (Array.isArray(r) ? r.map(String) : [])) : [],
+      } : undefined,
+      formula: typeof s.formula === 'string' ? s.formula : undefined,
+      note: typeof s.note === 'string' ? s.note : undefined,
+    })),
+    visualBlocks: normalizeVisualBlocks(Array.isArray(n.visualBlocks) ? n.visualBlocks : []),
+    body: n.body,
+  }
+})
 
 const blogPosts = readMarkdownFolder('blogs').map((b) => ({
   id: b.id,
@@ -254,6 +305,22 @@ export type NoteSlideControls = {
   title: string
 }
 
+export type ManualSlideTable = {
+  headers: string[]
+  rows: string[][]
+}
+
+export type ManualSlide = {
+  layout: 'hero' | 'concept' | 'bullets' | 'table' | 'formula' | 'steps' | 'comparison' | 'exam' | 'recap' | 'image'
+  title: string
+  eyebrow?: string
+  badge?: string
+  points?: string[]
+  table?: ManualSlideTable
+  formula?: string
+  note?: string
+}
+
 export type NoteVisualBlock = {
   type: 'formula' | 'table' | 'graph'
   title: string
@@ -278,7 +345,9 @@ export type Note = {
   image: string
   imageAlt: string
   slidesEnabled: boolean
+  googleSlidesUrl?: string
   slideControls: NoteSlideControls
+  slides: ManualSlide[]
   visualBlocks: NoteVisualBlock[]
   body: string
 }

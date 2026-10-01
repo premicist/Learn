@@ -4,23 +4,29 @@ import { notes as allNotes } from '../data/content'
 import { levels, subjects, getSubjectById, getSubjectsByLevel } from '../data/levels'
 import NoteCard from '../components/NoteCard'
 import Seo from '../components/Seo'
+import { useBookmarks } from '../utils/useBookmarks'
+import { useStudentProfile } from '../utils/useStudentProfile'
 
 function byDateDesc(a: { date: string }, b: { date: string }) {
   return new Date(b.date).getTime() - new Date(a.date).getTime()
 }
 
 function Notes() {
+  const { bookmarks } = useBookmarks()
+  const { profile } = useStudentProfile()
   const [keyword, setKeyword] = useState('')
-  const [levelId, setLevelId] = useState('')
-  const [subjectId, setSubjectId] = useState('')
+  const [levelId, setLevelId] = useState(() => profile?.levelId || '')
+  const [subjectId, setSubjectId] = useState(() => profile?.subjectId || '')
+  const [onlySaved, setOnlySaved] = useState(false)
 
-  const isSearching = keyword.trim() !== '' || levelId !== '' || subjectId !== ''
+  const isSearching = keyword.trim() !== '' || levelId !== '' || subjectId !== '' || onlySaved
   const availableSubjects = levelId ? getSubjectsByLevel(levelId) : subjects
 
   const searchResults = useMemo(() => {
     const kw = keyword.trim().toLowerCase()
     return allNotes
       .filter((note) => {
+        if (onlySaved && !bookmarks.includes(note.id)) return false
         const subject = getSubjectById(note.subjectId)
         const searchable = `${note.title} ${note.summary} ${note.body}`.toLowerCase()
         if (subjectId && note.subjectId !== subjectId) return false
@@ -29,12 +35,13 @@ function Notes() {
         return true
       })
       .sort(byDateDesc)
-  }, [keyword, levelId, subjectId])
+  }, [keyword, levelId, subjectId, onlySaved, bookmarks])
 
   function clearSearch() {
     setKeyword('')
     setLevelId('')
     setSubjectId('')
+    setOnlySaved(false)
   }
 
   return (
@@ -46,6 +53,23 @@ function Notes() {
       <span className="eyebrow">Every note, one place</span>
       <h2>Notes</h2>
       <p>Browse by level and subject below, or search titles, summaries, and note bodies.</p>
+
+      <div style={{ display: 'flex', gap: '8px', margin: '14px 0 10px', flexWrap: 'wrap' }}>
+        <button
+          type="button"
+          className={`reading-toolbar__btn ${!onlySaved ? 'is-active' : ''}`}
+          onClick={() => setOnlySaved(false)}
+        >
+          All Notes ({allNotes.length})
+        </button>
+        <button
+          type="button"
+          className={`reading-toolbar__btn ${onlySaved ? 'is-active' : ''}`}
+          onClick={() => setOnlySaved(true)}
+        >
+          ★ Saved Notes ({bookmarks.length})
+        </button>
+      </div>
 
       <div className="content-filters" aria-label="Filter notes">
         <label>

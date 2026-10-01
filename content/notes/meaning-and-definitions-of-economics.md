@@ -1,5 +1,6 @@
 ---
 subjectId: introduction-to-economics
+unitId: eco6701-u1
 title: Meaning and Definitions of Economics
 summary: Understanding origin and development of definitions of economics.
   Economics evolved from Smith's wealth focus, Marshall's welfare view, Robbins'
@@ -8,9 +9,9 @@ summary: Understanding origin and development of definitions of economics.
   units; macroeconomics studies national aggregates—both interdependent,
   complementary halves of one subject.
 date: 2026-09-22
-slidesEnabled: false
+slidesEnabled: true
 slideControls:
-  mode: auto
+  mode: bullets
   maxPoints: 4
   includeQuickCheck: true
 toc: []

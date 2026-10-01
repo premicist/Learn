@@ -1,3 +1,4 @@
+import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import { getSubjectById, getLevelById, type Subject } from '../data/levels'
 import { blogPosts, getBlogPostsBySubject, getNotesBySubject, getPracticeSetsBySubject, getQuizzesBySubject, getScheduledTestsBySubject, getVideosBySubject, notes, quizzes, videos } from '../data/content'
@@ -7,6 +8,7 @@ import ResourceCard, { type Resource, type ResourceKind } from '../components/Re
 import ResourceRail from '../components/ResourceRail'
 import Seo from '../components/Seo'
 import ScheduledTestSummary from '../components/ScheduledTestSummary'
+import { useLessonProgress } from '../utils/useLessonProgress'
 
 type FeaturedSelection = Subject['featured'][number]
 type FeaturedEntry = { selection: FeaturedSelection; resource: Resource; kind: ResourceKind }
@@ -36,6 +38,36 @@ function resolveFeaturedResources(subject: Subject): FeaturedEntry[] {
 function SubjectDetails() {
   const { subjectId } = useParams()
   const subject = subjectId ? getSubjectById(subjectId) : undefined
+  const { isCompleted } = useLessonProgress()
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const level = subject ? getLevelById(subject.levelId) : undefined
+  const subjectNotes = subject ? getNotesBySubject(subject.id) : []
+  const subjectBlogs = subject ? getBlogPostsBySubject(subject.id) : []
+  const subjectQuizzes = subject ? getQuizzesBySubject(subject.id) : []
+  const subjectVideos = subject ? getVideosBySubject(subject.id) : []
+  const subjectPracticeSets = subject ? getPracticeSetsBySubject(subject.id) : []
+  const subjectScheduledTests = subject ? getScheduledTestsBySubject(subject.id) : []
+  const featured = subject ? resolveFeaturedResources(subject) : []
+  const curriculum = subject ? getCurriculumBySubject(subject.id) : undefined
+
+  // Calculate overall syllabus progress
+  const allLessonIds = useMemo(() => {
+    if (!curriculum) return []
+    return curriculum.units.flatMap((u) => u.lessons.map((l) => l.id))
+  }, [curriculum])
+
+  const completedCount = allLessonIds.filter(isCompleted).length
+  const progressPercent = allLessonIds.length > 0 ? Math.round((completedCount / allLessonIds.length) * 100) : 0
+
+  // Filter notes and topics by search query
+  const filteredNotes = useMemo(() => {
+    if (!searchQuery.trim()) return []
+    const q = searchQuery.toLowerCase().trim()
+    return subjectNotes.filter(
+      (n) => n.title.toLowerCase().includes(q) || n.summary.toLowerCase().includes(q) || n.body.toLowerCase().includes(q)
+    )
+  }, [subjectNotes, searchQuery])
 
   if (!subject) {
     return (
@@ -48,19 +80,10 @@ function SubjectDetails() {
     )
   }
 
-  const level = getLevelById(subject.levelId)
-  const subjectNotes = getNotesBySubject(subject.id)
-  const subjectBlogs = getBlogPostsBySubject(subject.id)
-  const subjectQuizzes = getQuizzesBySubject(subject.id)
-  const subjectVideos = getVideosBySubject(subject.id)
-  const subjectPracticeSets = getPracticeSetsBySubject(subject.id)
-  const subjectScheduledTests = getScheduledTestsBySubject(subject.id)
-  const featured = resolveFeaturedResources(subject)
-  const curriculum = getCurriculumBySubject(subject.id)
-
   return (
     <section className="subject-hub">
       <Seo title={`${subject.title} | Prem Pokhrel`} description={subject.description} />
+      
       <div className="subject-header">
         <div className="subject-header__bar" style={{ backgroundColor: subject.color }} />
         <div>
@@ -71,6 +94,7 @@ function SubjectDetails() {
         </div>
       </div>
 
+      {/* Resource Count Summary */}
       <div className="subject-hub__summary" aria-label="Subject resource summary">
         <span>{formatCount(subjectNotes.length, 'note')}</span>
         <span>{formatCount(subjectBlogs.length, 'blog')}</span>
@@ -79,51 +103,125 @@ function SubjectDetails() {
         <span>{formatCount(subjectPracticeSets.length, 'practice set')}</span>
       </div>
 
-      <section className={`subject-featured ${featured.length === 0 ? 'subject-featured--empty' : ''}`} aria-labelledby="featured-heading">
-        <div className="subject-rail__header">
-          <div>
-            <p className="eyebrow">Start here</p>
-            <h2 id="featured-heading">Featured</h2>
-            <p className="subject-rail__hint">Hand-picked resources for this subject</p>
+      {/* Overall Syllabus Completion Progress Card */}
+      {allLessonIds.length > 0 && (
+        <div className="subject-progress-card">
+          <div className="subject-progress-card__info">
+            <div>
+              <span className="subject-progress-card__label">Course Progress</span>
+              <strong>{completedCount} of {allLessonIds.length} syllabus topics completed</strong>
+            </div>
+            <span className="subject-progress-card__pct">{progressPercent}%</span>
           </div>
-          <span className="featured-badge">{featured.length > 0 ? `${featured.length} pinned` : 'Coming soon'}</span>
+          <div className="subject-progress-card__track">
+            <div className="subject-progress-card__fill" style={{ width: `${progressPercent}%` }} />
+          </div>
         </div>
-        {featured.length > 0 ? (
+      )}
+
+      {/* Featured Resources (Only if pinned) */}
+      {featured.length > 0 && (
+        <section className="subject-featured" aria-labelledby="featured-heading">
+          <div className="subject-rail__header">
+            <div>
+              <p className="eyebrow">Start here</p>
+              <h2 id="featured-heading">Featured Highlights</h2>
+              <p className="subject-rail__hint">Hand-picked foundational topics for {subject.title}</p>
+            </div>
+            <span className="featured-badge">{featured.length} pinned</span>
+          </div>
           <div className="resource-rail resource-rail--featured" tabIndex={0} aria-label={`Featured resources for ${subject.title}`}>
             {featured.map(({ selection, resource, kind }) => (
               <ResourceCard key={`${selection.type}-${selection.id}`} resource={resource} kind={kind} subject={subject} featured />
             ))}
           </div>
-        ) : (
-          <p className="empty-state">Featured resources will appear here when they are pinned in the content manager.</p>
-        )}
-      </section>
+        </section>
+      )}
 
+      {/* In-Page Quick Lesson / Note Search Filter */}
+      <div className="subject-search-bar">
+        <span className="subject-search-bar__icon" aria-hidden="true">🔍</span>
+        <input
+          type="search"
+          placeholder={`Search ${subject.title} topics, notes, formulas...`}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="subject-search-bar__input"
+          aria-label={`Search within ${subject.title}`}
+        />
+        {searchQuery && (
+          <button
+            type="button"
+            className="subject-search-bar__clear"
+            onClick={() => setSearchQuery('')}
+            aria-label="Clear search"
+          >
+            ×
+          </button>
+        )}
+      </div>
+
+      {/* Instant Search Results (if searching) */}
+      {searchQuery.trim() && (
+        <section className="subject-search-results" aria-label="Search results">
+          <p className="subject-search-results__count">
+            Found <strong>{filteredNotes.length}</strong> matching notes for &ldquo;{searchQuery}&rdquo;:
+          </p>
+          {filteredNotes.length > 0 ? (
+            <div className="subject-search-grid">
+              {filteredNotes.map((note) => (
+                <Link to={`/notes/${note.id}`} key={note.id} className="subject-search-card">
+                  <div className="subject-search-card__eyebrow">Note</div>
+                  <strong>{note.title}</strong>
+                  <p>{note.summary}</p>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <p className="empty-state">No matching notes found for &ldquo;{searchQuery}&rdquo;.</p>
+          )}
+        </section>
+      )}
+
+      {/* Guided Curriculum Syllabus */}
       {curriculum && <CurriculumPath curriculum={curriculum} notes={subjectNotes} />}
 
-      <section className="subject-scheduled-tests" aria-labelledby="subject-scheduled-tests-heading">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">Occasional exam-style assessment</p>
-            <h2 id="subject-scheduled-tests-heading">Scheduled Tests</h2>
+      {/* Scheduled Tests (Only rendered if there are tests) */}
+      {subjectScheduledTests.length > 0 && (
+        <section className="subject-scheduled-tests" aria-labelledby="subject-scheduled-tests-heading">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Occasional exam-style assessment</p>
+              <h2 id="subject-scheduled-tests-heading">Scheduled Tests</h2>
+            </div>
           </div>
-        </div>
-        <ScheduledTestSummary subjectTitle={subject.title} tests={subjectScheduledTests} />
-      </section>
+          <ScheduledTestSummary subjectTitle={subject.title} tests={subjectScheduledTests} />
+        </section>
+      )}
 
-      <ResourceRail title="Notes" kind="notes" resources={subjectNotes} subject={subject} viewAllHref="/notes" viewAllLabel="View all notes" />
-      <ResourceRail title="Blogs" kind="blogs" resources={subjectBlogs} subject={subject} viewAllHref="/blogs" viewAllLabel="View all blogs" />
-      <ResourceRail title="Videos" kind="videos" resources={subjectVideos} subject={subject} viewAllHref="/videos" viewAllLabel="View all videos" />
-      <ResourceRail title="Quizzes" kind="quizzes" resources={subjectQuizzes} subject={subject} viewAllHref="/quizzes" viewAllLabel="View all quizzes" />
-      <ResourceRail
-        title="Practice"
-        kind="practiceSets"
-        resources={subjectPracticeSets}
-        subject={subject}
-        viewAllHref="/practice-sets"
-        viewAllLabel="View all practice sets"
-        emptyMessage="No practice sets for this subject yet."
-      />
+      {/* Resource Rails (Only rendered for non-empty categories) */}
+      {subjectNotes.length > 0 && (
+        <ResourceRail title="All Subject Notes" kind="notes" resources={subjectNotes} subject={subject} viewAllHref="/notes" viewAllLabel="View all notes catalog" />
+      )}
+      {subjectBlogs.length > 0 && (
+        <ResourceRail title="Articles & Explanations" kind="blogs" resources={subjectBlogs} subject={subject} viewAllHref="/blogs" viewAllLabel="View all blogs" />
+      )}
+      {subjectVideos.length > 0 && (
+        <ResourceRail title="Video Lessons" kind="videos" resources={subjectVideos} subject={subject} viewAllHref="/videos" viewAllLabel="View all videos" />
+      )}
+      {subjectQuizzes.length > 0 && (
+        <ResourceRail title="Quizzes" kind="quizzes" resources={subjectQuizzes} subject={subject} viewAllHref="/quizzes" viewAllLabel="View all quizzes" />
+      )}
+      {subjectPracticeSets.length > 0 && (
+        <ResourceRail
+          title="Practice Sets"
+          kind="practiceSets"
+          resources={subjectPracticeSets}
+          subject={subject}
+          viewAllHref="/practice-sets"
+          viewAllLabel="View all practice sets"
+        />
+      )}
 
       <Link to="/subjects" className="back-link">← Back to subjects</Link>
     </section>

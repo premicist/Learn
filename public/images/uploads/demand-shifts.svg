@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" width="100%" height="auto" role="img" aria-label="Shift in Demand Curve">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .d0-line { fill: none; stroke: #122a3a; stroke-width: 3; stroke-linecap: round; }
+    .d1-line { fill: none; stroke: #146b63; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 6 3; }
+    .d2-line { fill: none; stroke: #b23a2b; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 6 3; }
+    .guide-line { stroke: #8098ab; stroke-width: 1.2; stroke-dasharray: 4 4; }
+    .point-dot { stroke: #ffffff; stroke-width: 2; }
+    .text-title { font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; fill: #122a3a; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; fill: #122a3a; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #47607a; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="34">माग रेखाको स्थानान्तरण (Shift in Demand Curve)</text>
+  <text class="text-sub" x="40" y="52">मूल्य स्थिर रही अन्य तत्वहरू (आम्दानी, रुचि) का कारण मागमा वृद्धि र कमी</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="90" y1="360" x2="90" y2="70"/>
+  <line class="axis" x1="90" y1="360" x2="610" y2="360"/>
+  <text class="text-label" x="35" y="78">मूल्य (P)</text>
+  <text class="text-label" x="520" y="388">माग परिमाण (Q)</text>
+  <text class="text-label" x="72" y="378">O</text>
+
+  <!-- Constant Price Line P0 -->
+  <line stroke="#b4872a" stroke-width="2" stroke-dasharray="5 5" x1="90" y1="210" x2="560" y2="210"/>
+  <text class="text-label" x="45" y="215" fill="#b4872a">P₀ (स्थिर)</text>
+
+  <!-- D2 (Decrease - Leftward Shift) -->
+  <line class="d2-line" x1="90" y1="140" x2="370" y2="330"/>
+  <text class="text-title" x="380" y="336" fill="#b23a2b">D₂D₂</text>
+  <circle class="point-dot" fill="#b23a2b" cx="210" cy="210" r="5.5"/>
+  <line class="guide-line" x1="210" y1="210" x2="210" y2="360"/>
+  <text class="text-label" x="205" y="380" fill="#b23a2b">Q₂</text>
+
+  <!-- D0 (Initial Demand Curve) -->
+  <line class="d0-line" x1="170" y1="100" x2="490" y2="330"/>
+  <text class="text-title" x="500" y="336" fill="#122a3a">D₀D₀</text>
+  <circle class="point-dot" fill="#122a3a" cx="330" cy="210" r="5.5"/>
+  <line class="guide-line" x1="330" y1="210" x2="330" y2="360"/>
+  <text class="text-label" x="325" y="380">Q₀</text>
+
+  <!-- D1 (Increase - Rightward Shift) -->
+  <line class="d1-line" x1="250" y1="100" x2="570" y2="330"/>
+  <text class="text-title" x="580" y="336" fill="#146b63">D₁D₁</text>
+  <circle class="point-dot" fill="#146b63" cx="450" cy="210" r="5.5"/>
+  <line class="guide-line" x1="450" y1="210" x2="450" y2="360"/>
+  <text class="text-label" x="445" y="380" fill="#146b63">Q₁</text>
+
+  <!-- Shift Arrows -->
+  <!-- Right shift arrow -->
+  <line x1="350" y1="150" x2="410" y2="150" stroke="#146b63" stroke-width="2.5"/>
+  <polygon points="418,150 406,145 406,155" fill="#146b63"/>
+  <text class="text-sub" x="425" y="154" fill="#146b63">मागमा वृद्धि (दायाँतर्फ)</text>
+
+  <!-- Left shift arrow -->
+  <line x1="290" y1="280" x2="230" y2="280" stroke="#b23a2b" stroke-width="2.5"/>
+  <polygon points="222,280 234,275 234,285" fill="#b23a2b"/>
+  <text class="text-sub" x="120" y="284" fill="#b23a2b">मागमा कमी (बायाँतर्फ)</text>
+</svg>

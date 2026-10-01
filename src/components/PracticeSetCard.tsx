@@ -97,7 +97,7 @@ function PracticeSetCard({ practiceSet }: PracticeSetCardProps) {
           </label>
           <label>
             Roll No.
-            <input value={student.rollNo} onChange={(e) => setStudent((s) => ({ ...s, rollNo: e.target.value }))} required />
+            <input value={student.rollNo} inputMode="numeric" onChange={(e) => setStudent((s) => ({ ...s, rollNo: e.target.value }))} required />
           </label>
           <button type="submit" className="practice-card__start" disabled={!studentReady}>
             Start practice set
@@ -124,6 +124,7 @@ function PracticeSetCard({ practiceSet }: PracticeSetCardProps) {
             <input
               type="number"
               step="any"
+              inputMode="decimal"
               className="practice-question__numeric-input"
               value={answers[index]}
               onChange={(e) => updateAnswer(index, e.target.value)}

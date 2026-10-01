@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import { notes } from '../data/content'
 import type { Note } from '../data/content'
@@ -8,6 +9,9 @@ import { getCurriculumBySubject } from '../data/curriculum'
 import UnitContext from '../components/UnitContext'
 import NoteUnitNavigator from '../components/NoteUnitNavigator'
 import NoteSlideViewer from '../components/NoteSlideViewer'
+import DictionaryPopover from '../components/DictionaryPopover'
+import AccessibilityMenu from '../components/AccessibilityMenu'
+import NoteEndActions from '../components/NoteEndActions'
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr)
@@ -45,6 +49,37 @@ function getHeadings(content: string, selectedTitles: string[] = []) {
 function NotePage() {
   const { noteId } = useParams()
   const note = notes.find((item) => item.id === noteId)
+  const [isDictOpen, setIsDictOpen] = useState(false)
+  const [dictQuery, setDictQuery] = useState('')
+  const [dictPos, setDictPos] = useState<{ x: number; y: number } | null>(null)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && note) {
+      try {
+        localStorage.setItem('learn:lastStudiedNoteId', note.id)
+        localStorage.setItem('learn:lastStudiedSubjectId', note.subjectId)
+      } catch {
+        // ignore localStorage errors
+      }
+    }
+  }, [note])
+
+  const handleTextSelection = () => {
+    if (typeof window === 'undefined') return
+    const selection = window.getSelection()
+    const selectedText = selection ? selection.toString().trim() : ''
+    if (selectedText && selectedText.length >= 2 && selectedText.length <= 50) {
+      const range = selection?.rangeCount ? selection.getRangeAt(0) : null
+      const rect = range?.getBoundingClientRect()
+      if (rect) {
+        setDictPos({ x: rect.left + rect.width / 2, y: rect.bottom })
+      } else {
+        setDictPos(null)
+      }
+      setDictQuery(selectedText)
+      setIsDictOpen(true)
+    }
+  }
 
   if (!note) {
     return (
@@ -70,7 +105,7 @@ function NotePage() {
   return (
     <article className="note-page">
       <Seo title={`${note.title} | Prem Pokhrel`} description={note.summary} type="article" image={note.image || undefined} />
-      {note.image && <img className="note-page__image" src={note.image} alt={note.imageAlt || ''} />}
+      {note.image && <img className="note-page__image" src={note.image} alt={note.imageAlt || ''} loading="lazy" decoding="async" />}
 
       <section className="note-page__content">
         <div className="note-page__meta">
@@ -94,7 +129,6 @@ function NotePage() {
         <p className="note-page__summary">{note.summary}</p>
         <NoteSlideViewer note={note} />
 
-
         {noteUnit && headings.length > 0 && <NoteUnitNavigator unit={noteUnit} headings={headings} />}
 
         {!noteUnit && headings.length > 0 && (
@@ -106,7 +140,30 @@ function NotePage() {
           </nav>
         )}
 
-        <div className="note-page__body"><NoteMarkdown content={noteBody} /></div>
+        <div
+          className="note-page__body"
+          onMouseUp={handleTextSelection}
+          onTouchEnd={handleTextSelection}
+        >
+          <NoteMarkdown content={noteBody} />
+        </div>
+
+        <NoteEndActions
+          noteId={note.id}
+          title={note.title}
+          summary={note.summary}
+        />
+
+        <DictionaryPopover
+          isOpen={isDictOpen}
+          initialQuery={dictQuery}
+          position={dictPos}
+          onClose={() => {
+            setIsDictOpen(false)
+            setDictQuery('')
+            setDictPos(null)
+          }}
+        />
 
         {curriculum ? (
           <UnitContext curriculum={curriculum} currentResourceType="note" currentResourceId={note.id} subjectTitle={subject?.title || 'this subject'} />
@@ -126,6 +183,17 @@ function NotePage() {
 
         <Link to="/notes" className="back-link">← Back to all notes</Link>
       </section>
+
+      <AccessibilityMenu
+        contentSelector=".note-page__body"
+        contentTitle={note.title}
+        noteId={note.id}
+        onOpenDictionary={() => {
+          setDictQuery('')
+          setDictPos(null)
+          setIsDictOpen(true)
+        }}
+      />
     </article>
   )
 }

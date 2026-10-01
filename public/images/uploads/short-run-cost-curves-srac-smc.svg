@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="100%" height="auto" role="img" aria-label="Short Run Average Cost and Marginal Cost Curves">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 600; fill: #333333; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">Short-Run Cost Curves: AFC, AVC, ATC, and MC</text>
+  <text class="text-sub" x="40" y="50">MC cuts both AVC and ATC at their respective minimum points from below</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="370" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="370" x2="660" y2="370"/>
+  <text class="text-label" x="25" y="80">Cost (Rs.)</text>
+  <text class="text-label" x="590" y="395">Output (Q)</text>
+  <text class="text-label" x="65" y="385">O</text>
+
+  <!-- 1. AFC (Rectangular Hyperbola) -->
+  <path class="curve" stroke-width="2.5" d="M 110 120 Q 150 310 580 345"/>
+  <text class="text-label" x="590" y="345">AFC</text>
+
+  <!-- 2. AVC (U-Shaped, min at 280, 240) -->
+  <path class="curve" stroke-width="3" d="M 120 280 Q 280 230 580 150"/>
+  <text class="text-label" x="590" y="150">AVC</text>
+  <circle class="point-dot" cx="280" cy="240" r="5"/>
+  <text class="text-sub" x="240" y="260">Min AVC</text>
+
+  <!-- 3. ATC / AC (U-Shaped, min at 380, 175) -->
+  <path class="curve" stroke-width="3.5" d="M 130 180 Q 380 160 580 90"/>
+  <text class="text-label" x="590" y="90">ATC (AC)</text>
+  <circle class="point-dot" cx="380" cy="175" r="5"/>
+  <text class="text-sub" x="350" y="195">Min ATC</text>
+
+  <!-- 4. MC (U-Shaped, cuts AVC min at 280,240 and ATC min at 380,175) -->
+  <path class="curve" stroke-width="4" d="M 120 330 Q 200 280 280 240 T 380 175 L 530 65"/>
+  <text class="text-title" x="540" y="65">MC</text>
+</svg>

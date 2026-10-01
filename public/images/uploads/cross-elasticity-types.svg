@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 260" width="100%" height="auto" role="img" aria-label="Types of Cross Elasticity of Demand">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 1.8; stroke-linecap: round; }
+    .line { fill: none; stroke: #111111; stroke-width: 2.5; stroke-linecap: round; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 14px; font-weight: 800; fill: #111111; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #444444; text-anchor: middle; }
+  </style>
+
+  <!-- Panel 1: Substitutes (Exy > 0) -->
+  <g transform="translate(15, 10)">
+    <rect class="bg" width="230" height="235" rx="8"/>
+    <text class="text-title" x="115" y="26">(a) Substitute Goods</text>
+    <text class="text-sub" x="115" y="42">Exy &gt; 0 (Upward Sloping)</text>
+    <line class="axis" x1="35" y1="195" x2="35" y2="60"/>
+    <line class="axis" x1="35" y1="195" x2="205" y2="195"/>
+    <text class="text-label" x="12" y="65">Py</text>
+    <text class="text-label" x="195" y="212">Qx</text>
+    <!-- Upward sloping curve -->
+    <line class="line" x1="55" y1="175" x2="185" y2="85"/>
+    <text class="text-sub" x="115" y="224">Example: Tea vs. Coffee</text>
+  </g>
+
+  <!-- Panel 2: Complements (Exy < 0) -->
+  <g transform="translate(275, 10)">
+    <rect class="bg" width="230" height="235" rx="8"/>
+    <text class="text-title" x="115" y="26">(b) Complementary Goods</text>
+    <text class="text-sub" x="115" y="42">Exy &lt; 0 (Downward Sloping)</text>
+    <line class="axis" x1="35" y1="195" x2="35" y2="60"/>
+    <line class="axis" x1="35" y1="195" x2="205" y2="195"/>
+    <text class="text-label" x="12" y="65">Py</text>
+    <text class="text-label" x="195" y="212">Qx</text>
+    <!-- Downward sloping curve -->
+    <line class="line" x1="55" y1="85" x2="185" y2="175"/>
+    <text class="text-sub" x="115" y="224">Example: Car and Petrol</text>
+  </g>
+
+  <!-- Panel 3: Unrelated (Exy = 0) -->
+  <g transform="translate(535, 10)">
+    <rect class="bg" width="230" height="235" rx="8"/>
+    <text class="text-title" x="115" y="26">(c) Unrelated Goods</text>
+    <text class="text-sub" x="115" y="42">Exy = 0 (Vertical Straight Line)</text>
+    <line class="axis" x1="35" y1="195" x2="35" y2="60"/>
+    <line class="axis" x1="35" y1="195" x2="205" y2="195"/>
+    <text class="text-label" x="12" y="65">Py</text>
+    <text class="text-label" x="195" y="212">Qx</text>
+    <!-- Vertical line -->
+    <line class="line" x1="120" y1="75" x2="120" y2="195"/>
+    <text class="text-sub" x="115" y="224">Example: Shoes and Butter</text>
+  </g>
+</svg>

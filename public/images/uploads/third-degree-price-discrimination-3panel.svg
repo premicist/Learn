@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%" height="auto" role="img" aria-label="Third-Degree Price Discrimination across Two Sub-Markets">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 2.5; stroke-linecap: round; }
+    .mc-line { fill: none; stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 14px; font-weight: 800; fill: #111111; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; text-anchor: middle; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 8; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+
+  <!-- Panel 1: Market A (Inelastic Demand) -->
+  <g transform="translate(20, 20)">
+    <rect class="card" width="280" height="335"/>
+    <text class="text-title" x="140" y="26">Market A (Inelastic Demand)</text>
+    <text class="text-sub" x="140" y="42">Steep Curves ⇒ Higher Price (P_A)</text>
+    
+    <line class="axis" x1="40" y1="270" x2="40" y2="60"/>
+    <line class="axis" x1="40" y1="270" x2="255" y2="270"/>
+    <text class="text-label" x="10" y="65">P_A</text>
+    <text class="text-label" x="235" y="290">Q_A</text>
+    <text class="text-label" x="25" y="285">O</text>
+
+    <!-- Steep AR_A and MR_A -->
+    <line class="curve" stroke-width="3" x1="40" y1="75" x2="210" y2="250"/><text class="text-label" x="215" y="255">AR_A</text>
+    <line class="curve" x1="40" y1="75" x2="135" y2="270"/><text class="text-label" x="140" y="285">MR_A</text>
+
+    <!-- Marginal Cost MC* line across at y=190 -->
+    <line class="guide-line" x1="40" y1="190" x2="250" y2="190"/>
+    
+    <!-- Equilibrium in Market A: MR_A = MC* at x=88, y=190 -->
+    <circle class="point-dot" cx="88" cy="190" r="5"/>
+    <line class="guide-line" x1="88" y1="125" x2="88" y2="270"/>
+    <circle class="point-dot" cx="88" cy="125" r="5"/>
+    <line class="guide-line" x1="40" y1="125" x2="88" y2="125"/>
+
+    <text class="text-label" x="10" y="130">P_A*</text>
+    <text class="text-label" x="78" y="290">Q_A*</text>
+    <text class="text-sub" x="140" y="320">Inelastic: Higher Price P_A</text>
+  </g>
+
+  <!-- Panel 2: Market B (Elastic Demand) -->
+  <g transform="translate(320, 20)">
+    <rect class="card" width="280" height="335"/>
+    <text class="text-title" x="140" y="26">Market B (Elastic Demand)</text>
+    <text class="text-sub" x="140" y="42">Flat Curves ⇒ Lower Price (P_B)</text>
+    
+    <line class="axis" x1="40" y1="270" x2="40" y2="60"/>
+    <line class="axis" x1="40" y1="270" x2="255" y2="270"/>
+    <text class="text-label" x="10" y="65">P_B</text>
+    <text class="text-label" x="235" y="290">Q_B</text>
+    <text class="text-label" x="25" y="285">O</text>
+
+    <!-- Flatter AR_B and MR_B -->
+    <line class="curve" stroke-width="3" x1="40" y1="100" x2="245" y2="230"/><text class="text-label" x="245" y="245">AR_B</text>
+    <line class="curve" x1="40" y1="100" x2="185" y2="270"/><text class="text-label" x="190" y="285">MR_B</text>
+
+    <!-- Marginal Cost MC* line across at y=190 -->
+    <line class="guide-line" x1="40" y1="190" x2="250" y2="190"/>
+    
+    <!-- Equilibrium in Market B: MR_B = MC* at x=115, y=190 -->
+    <circle class="point-dot" cx="115" cy="190" r="5"/>
+    <line class="guide-line" x1="115" y1="150" x2="115" y2="270"/>
+    <circle class="point-dot" cx="115" cy="150" r="5"/>
+    <line class="guide-line" x1="40" y1="150" x2="115" y2="150"/>
+
+    <text class="text-label" x="10" y="155">P_B*</text>
+    <text class="text-label" x="105" y="290">Q_B*</text>
+    <text class="text-sub" x="140" y="320">Elastic: Lower Price P_B</text>
+  </g>
+
+  <!-- Panel 3: Combined Market & MC -->
+  <g transform="translate(620, 20)">
+    <rect class="card" width="280" height="335"/>
+    <text class="text-title" x="140" y="26">Combined Industry Output</text>
+    <text class="text-sub" x="140" y="42">Condition: MR_Total = MC_Total</text>
+    
+    <line class="axis" x1="40" y1="270" x2="40" y2="60"/>
+    <line class="axis" x1="40" y1="270" x2="255" y2="270"/>
+    <text class="text-label" x="10" y="65">Cost</text>
+    <text class="text-label" x="235" y="290">Q_Total</text>
+    <text class="text-label" x="25" y="285">O</text>
+
+    <!-- Combined MR curve -->
+    <line class="curve" x1="40" y1="85" x2="235" y2="270"/><text class="text-label" x="235" y="285">ΣMR</text>
+
+    <!-- MC Curve cutting ΣMR at (150, 190) -->
+    <path class="mc-line" d="M 60 260 Q 110 210 150 190 L 230 110"/><text class="text-label" x="235" y="110">MC</text>
+
+    <!-- Equilibrium intersection at (150, 190) -->
+    <circle class="point-dot" cx="150" cy="190" r="6"/>
+    <line class="guide-line" x1="40" y1="190" x2="150" y2="190"/>
+    <line class="guide-line" x1="150" y1="190" x2="150" y2="270"/>
+    <text class="text-label" x="10" y="195">MC*</text>
+    <text class="text-label" x="135" y="290">Q_Total*</text>
+    <text class="text-sub" x="140" y="320">Q_Total = Q_A + Q_B</text>
+  </g>
+</svg>

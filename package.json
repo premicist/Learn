@@ -13,14 +13,16 @@
     "sync-admin": "node scripts/sync-admin.mjs",
     "build-sitemap": "node scripts/build-sitemap.mjs",
     "validate-content": "node scripts/validate-content.mjs",
+    "generate-slides": "node scripts/generate-slides.mjs",
     "check": "npm run build-content && tsc -b && npm run lint",
     "build": "npm run sync-admin && npm run build-sitemap && npm run build-content && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
-    "katex": "^0.18.4",
     "@supabase/supabase-js": "^2.112.4",
+    "katex": "^0.18.4",
+    "mermaid": "^12.0.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-markdown": "^9.0.1",

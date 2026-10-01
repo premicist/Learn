@@ -1,0 +1,100 @@
+# Slide Deck for: Class 11 Economics: Elasticity and Consumer Behaviour
+noteId: class11-elasticity-consumer
+title: "Elasticity and Consumer Behaviour"
+slidesEnabled: true
+# Optional Google Slides embed URL:
+# googleSlidesUrl: "https://docs.google.com/presentation/d/e/.../embed"
+
+slides:
+  - layout: hero
+    title: "Elasticity and Consumer Behaviour"
+    eyebrow: "Unit 2 • Microeconomics"
+    badge: "📘 Chapter Foundation"
+    points:
+      - "Understand responsiveness of demand, utility concepts, equi-marginal choice, and consumer surplus."
+
+  - layout: formula
+    title: "Price Elasticity of Demand (PED)"
+    eyebrow: "Demand Responsiveness"
+    badge: "📐 Key Formula"
+    formula: "E_d = \\frac{\\text{\\% change in quantity demanded}}{\\text{\\% change in price}}"
+    points:
+      - "The coefficient is normally negative because price and quantity demanded move in opposite directions."
+      - "In economic analysis, we evaluate the **absolute value** $|E_d|$ for classification."
+    note: "Slope uses absolute changes (ΔP/ΔQ), whereas elasticity uses percentage changes (%ΔQ/%ΔP)."
+
+  - layout: table
+    title: "Classification of Price Elasticity"
+    eyebrow: "Elasticity Spectrum"
+    badge: "📊 Classification Table"
+    table:
+      headers: ["Classification", "Value (|Ed|)", "Description", "Typical Goods"]
+      rows:
+        - ["**Elastic**", "$|E_d| > 1$", "Quantity changes by a larger percentage than price", "Luxury items, electronics, branded clothing"]
+        - ["**Inelastic**", "$|E_d| < 1$", "Quantity changes by a smaller percentage than price", "Necessities, salt, life-saving medicines"]
+        - ["**Unit Elastic**", "$|E_d| = 1$", "Percentage change in quantity equals percentage change in price", "Normal goods along the midpoint of linear demand"]
+        - ["**Perfectly Inelastic**", "$|E_d| = 0$", "Quantity demanded does not change when price changes", "Essential medications (e.g., insulin)"]
+        - ["**Perfectly Elastic**", "$|E_d| = \\infty$", "Infinite change in quantity at a given market price", "Pure commodity markets (theoretical extreme)"]
+    note: "Higher availability of close substitutes directly increases price elasticity."
+
+  - layout: concept
+    title: "Key Determinants of Demand Elasticity"
+    eyebrow: "Factors Influencing Ed"
+    badge: "💡 Core Concept"
+    points:
+      - "**Availability of Substitutes:** More close substitutes = higher elasticity (consumers can easily switch)."
+      - "**Proportion of Income Spent:** Goods taking a large share of budget (e.g., cars) are more elastic than low-cost staples."
+      - "**Nature of the Commodity:** Necessities are inelastic; luxury goods are highly elastic."
+      - "**Time Horizon:** Demand is more elastic in the **long run** as consumers find alternatives and adjust habits."
+
+  - layout: formula
+    title: "Total Utility vs Marginal Utility"
+    eyebrow: "Cardinal Utility Theory"
+    badge: "📐 Utility Analysis"
+    formula: "MU_n = TU_n - TU_{n-1} = \\frac{\\Delta TU}{\\Delta Q}"
+    points:
+      - "**Total Utility ($TU$):** Aggregate psychological satisfaction gained from consuming all units."
+      - "**Marginal Utility ($MU$):** Additional satisfaction derived from consuming one extra unit."
+      - "**Law of Diminishing Marginal Utility:** As more units of a good are consumed, the marginal utility from each successive unit declines."
+    note: "When MU = 0, Total Utility (TU) reaches its maximum saturation point."
+
+  - layout: formula
+    title: "Law of Equi-Marginal Utility"
+    eyebrow: "Consumer Equilibrium"
+    badge: "⚖️ Equilibrium Condition"
+    formula: "\\frac{MU_x}{P_x} = \\frac{MU_y}{P_y} = MU_m"
+    points:
+      - "A rational consumer allocates limited income such that **marginal utility per rupee spent** is equal across all purchased goods."
+      - "If $\\frac{MU_x}{P_x} > \\frac{MU_y}{P_y}$, the consumer reallocates budget toward good $X$ until parity is restored."
+    note: "Assumes cardinal utility measurement, constant marginal utility of money, and rational behavior."
+
+  - layout: concept
+    title: "Consumer Surplus Explained"
+    eyebrow: "Welfare Economics"
+    badge: "📈 Welfare Concept"
+    points:
+      - "**Definition:** The economic welfare difference between what a consumer is *willing to pay* and what they *actually pay*."
+      - "**Formula:** $\\text{Consumer Surplus} = \\text{Total Willingness to Pay} - \\text{Actual Market Expenditure}$."
+      - "**Graphical Representation:** The triangular area **below the demand curve and above the market price line** up to equilibrium quantity."
+    note: "Crucial for government taxation policies, price discrimination, and welfare impact assessments."
+
+  - layout: exam
+    title: "Worked Exam Problem: Calculating PED"
+    eyebrow: "Exam Technique & Numerical"
+    badge: "🎯 Solved Example"
+    points:
+      - "**Given:** Price falls from Rs. 20 to Rs. 18 ($\\Delta P = -10\\%$), Quantity demanded rises from 100 to 120 units ($\\Delta Q = +20\\%$)."
+      - "**Calculation:** $E_d = \\frac{+20\\%}{-10\\%} = -2.0 \\implies |E_d| = 2.0$."
+      - "**Classification:** Since $|E_d| = 2.0 > 1$, demand is **Price Elastic**."
+      - "**Exam Tip:** Always state the numerical formula first, show steps clearly, and interpret whether demand is elastic or inelastic."
+
+  - layout: recap
+    title: "Unit 2 Key Takeaways"
+    eyebrow: "Quick Review"
+    badge: "🎓 Chapter Mastery"
+    points:
+      - "Elasticity measures sensitivity: $|E_d| > 1$ (elastic), $|E_d| < 1$ (inelastic), $|E_d| = 1$ (unit elastic)."
+      - "Substitutes and longer adjustment periods make demand significantly more elastic."
+      - "Diminishing marginal utility explains the downward-sloping demand curve."
+      - "Equi-marginal rule guarantees maximum consumer satisfaction: $\\frac{MU_x}{P_x} = \\frac{MU_y}{P_y}$."
+      - "Consumer surplus measures net economic benefit gained by buyers in the market."

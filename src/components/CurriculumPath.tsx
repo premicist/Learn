@@ -1,7 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router'
 import type { Note } from '../data/content'
 import type { Curriculum, CurriculumChapterLink, CurriculumLesson, CurriculumResourceType, CurriculumUnit } from '../data/curriculum'
+import { useLessonProgress } from '../utils/useLessonProgress'
 
 const resourceLabels: Record<CurriculumResourceType, string> = {
   note: 'Note',
@@ -32,6 +33,26 @@ function hasLinkedResource(lesson: CurriculumLesson) {
 function resourcePath(lesson: CurriculumLesson) {
   if (!hasLinkedResource(lesson)) return null
   return `/${resourceCollections[lesson.resourceType!]}/${lesson.resourceId}`
+}
+
+function parseUnitDisplay(unit: CurriculumUnit) {
+  const match = unit.title.match(/^(?:Unit\s+)?(\d+(?:\.\d+)?)\s*:\s*(.+)$/i)
+  if (match) {
+    const num = match[1]
+    const cleanTitle = match[2].trim()
+    return {
+      marker: num,
+      eyebrow: unit.unitGroup ? `Sub-unit ${num}` : `Unit ${num}`,
+      title: cleanTitle,
+    }
+  }
+
+  const cleanTitle = unit.title.replace(/^Unit\s+\d+\s*:\s*/i, '').trim()
+  return {
+    marker: String(unit.order).padStart(2, '0'),
+    eyebrow: unit.unitGroup ? 'Sub-unit' : `Unit ${unit.order}`,
+    title: cleanTitle,
+  }
 }
 
 function getChapterLinks(curriculum: Curriculum, units: Curriculum['units']) {
@@ -88,6 +109,7 @@ function addAssignedNotesToUnits(units: CurriculumUnit[], notes: Note[]) {
 }
 
 function CurriculumPath({ curriculum, notes = [] }: { curriculum: Curriculum; notes?: Note[] }) {
+  const { isCompleted, toggleLesson, getUnitProgress } = useLessonProgress()
   const orderedUnits = useMemo(() => addAssignedNotesToUnits([...curriculum.units].sort((a, b) => a.order - b.order), notes), [curriculum.units, notes])
   const chapters = useMemo(() => getChapterLinks(curriculum, orderedUnits), [curriculum, orderedUnits])
   const groupedUnits = useMemo(() => {
@@ -107,8 +129,82 @@ function CurriculumPath({ curriculum, notes = [] }: { curriculum: Curriculum; no
   }, [orderedUnits])
   const [openUnitId, setOpenUnitId] = useState<string | null>(null)
 
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash
+      if (!hash) return
+      
+      const unitMatch = hash.match(/^#curriculum-unit-(.+)$/)
+      if (unitMatch && unitMatch[1]) {
+        setOpenUnitId(unitMatch[1])
+        setTimeout(() => {
+          const el = document.getElementById(`curriculum-unit-${unitMatch[1]}`)
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 60)
+        return
+      }
+
+      const groupMatch = hash.match(/^#curriculum-unit-group-(.+)$/)
+      if (groupMatch && groupMatch[1]) {
+        const groupSlug = groupMatch[1]
+        const matchingGroup = groupedUnits.find((g) => g.groupName && slugify(g.groupName) === groupSlug)
+        if (matchingGroup && matchingGroup.units[0]) {
+          setOpenUnitId(matchingGroup.units[0].id)
+        }
+        setTimeout(() => {
+          const el = document.getElementById(`curriculum-unit-group-${groupSlug}`)
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 60)
+      }
+    }
+    handleHash()
+    window.addEventListener('hashchange', handleHash)
+    return () => window.removeEventListener('hashchange', handleHash)
+  }, [groupedUnits])
+
   function toggleUnit(unitId: string) {
-    setOpenUnitId((current) => current === unitId ? null : unitId)
+    setOpenUnitId((current) => {
+      const next = current === unitId ? null : unitId
+      if (next) {
+        setTimeout(() => {
+          const el = document.getElementById(`curriculum-unit-${unitId}`)
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 50)
+      }
+      return next
+    })
+  }
+
+  function handleChapterClick(chapter: { unit?: CurriculumUnit; group?: string }) {
+    if (chapter.group) {
+      const matchingGroup = groupedUnits.find((g) => g.groupName === chapter.group)
+      if (matchingGroup && matchingGroup.units[0]) {
+        setOpenUnitId(matchingGroup.units[0].id)
+      }
+      setTimeout(() => {
+        const el = document.getElementById(`curriculum-unit-group-${slugify(chapter.group!)}`)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 50)
+      return
+    }
+
+    if (chapter.unit) {
+      setOpenUnitId(chapter.unit.id)
+      setTimeout(() => {
+        const el = document.getElementById(`curriculum-unit-${chapter.unit?.id}`)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 50)
+    }
   }
 
   return (
@@ -127,7 +223,12 @@ function CurriculumPath({ curriculum, notes = [] }: { curriculum: Curriculum; no
           {chapters.map((chapter) => {
             const href = chapter.url || (chapter.group ? `#curriculum-unit-group-${slugify(chapter.group)}` : chapter.unit ? `#curriculum-unit-${chapter.unit.id}` : '#curriculum-path-heading')
             return (
-              <a className="curriculum-chapter" href={href} key={`${chapter.title}-${href}`}>
+              <a
+                className="curriculum-chapter"
+                href={href}
+                key={`${chapter.title}-${href}`}
+                onClick={() => handleChapterClick(chapter)}
+              >
                 <span className="curriculum-chapter__dot" aria-hidden="true" />
                 <span>{chapter.title}</span>
               </a>
@@ -151,6 +252,8 @@ function CurriculumPath({ curriculum, notes = [] }: { curriculum: Curriculum; no
             <div className="curriculum-unit-group__units">
               {group.units.map((unit) => {
                 const isOpen = openUnitId === unit.id
+                const unitProgress = getUnitProgress(unit.lessons.map((l) => l.id))
+                const { marker, eyebrow, title } = parseUnitDisplay(unit)
                 return (
                   <article className={`curriculum-unit ${isOpen ? 'is-open' : ''}`} id={`curriculum-unit-${unit.id}`} key={unit.id}>
                     <button
@@ -160,11 +263,16 @@ function CurriculumPath({ curriculum, notes = [] }: { curriculum: Curriculum; no
                       aria-controls={`curriculum-unit-panel-${unit.id}`}
                       onClick={() => toggleUnit(unit.id)}
                     >
-                      <span className="curriculum-unit__marker" aria-hidden="true">{String(unit.order).padStart(2, '0')}</span>
+                      <span className="curriculum-unit__marker" aria-hidden="true">{marker}</span>
                       <span className="curriculum-unit__trigger-copy">
-                        <span className="eyebrow">{unit.unitGroup ? 'Sub-unit' : `Unit ${unit.order}`}</span>
-                        <strong>{unit.title}</strong>
+                        <span className="eyebrow">{eyebrow}</span>
+                        <strong>{title}</strong>
                       </span>
+                      {unitProgress.total > 0 && (
+                        <span className="curriculum-unit__progress-pill" title={`${unitProgress.completed} of ${unitProgress.total} lessons completed`}>
+                          {unitProgress.completed}/{unitProgress.total} done ({unitProgress.percent}%)
+                        </span>
+                      )}
                       <span className="curriculum-unit__toggle" aria-hidden="true">{isOpen ? '−' : '+'}</span>
                     </button>
 
@@ -183,6 +291,22 @@ function CurriculumPath({ curriculum, notes = [] }: { curriculum: Curriculum; no
                           {unit.lessons.map((lesson) => {
                             const path = resourcePath(lesson)
                             const metaType = lesson.resourceType ? resourceLabels[lesson.resourceType] : 'Coming soon'
+                            const done = isCompleted(lesson.id)
+                            const checkButton = (
+                              <button
+                                type="button"
+                                className={`curriculum-lesson__check ${done ? 'is-checked' : ''}`}
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  e.stopPropagation()
+                                  toggleLesson(lesson.id)
+                                }}
+                                aria-label={done ? 'Mark lesson incomplete' : 'Mark lesson complete'}
+                                title={done ? 'Completed' : 'Mark Complete'}
+                              >
+                                {done ? '✓' : ''}
+                              </button>
+                            )
                             const body = (
                               <>
                                 <span className="curriculum-lesson__body">
@@ -194,8 +318,11 @@ function CurriculumPath({ curriculum, notes = [] }: { curriculum: Curriculum; no
                                   <strong>{lesson.title}</strong>
                                   <span>{lesson.description}</span>
                                 </span>
-                                <span className="curriculum-lesson__link">
-                                  {path ? <>Open <span aria-hidden="true">→</span></> : 'Coming soon'}
+                                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                                  {checkButton}
+                                  <span className="curriculum-lesson__link">
+                                    {path ? <>Open <span aria-hidden="true">→</span></> : 'Coming soon'}
+                                  </span>
                                 </span>
                               </>
                             )

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" width="100%" height="auto" role="img" aria-label="Monopoly Price and Output Determination">
+  <defs>
+    <!-- Pattern for Supernormal Profit -->
+    <pattern id="profit-hatch" width="8" height="8" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#333333" stroke-width="1.5" />
+    </pattern>
+  </defs>
+
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="30">Monopoly Price &amp; Output Determination</text>
+  <text class="text-sub" x="40" y="48">Profit Maximizing Rule: MR = MC (Price P* charged from AR Demand curve)</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="370" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="370" x2="620" y2="370"/>
+  <text class="text-label" x="35" y="80">Price / Cost (Rs.)</text>
+  <text class="text-label" x="540" y="395">Output (Q)</text>
+  <text class="text-label" x="65" y="385">O</text>
+
+  <!-- Downward AR Demand Line from (80, 110) to (540, 340) -->
+  <line class="curve" x1="80" y1="110" x2="540" y2="340"/>
+  <text class="text-title" x="550" y="345">AR (Demand)</text>
+
+  <!-- Downward MR Line from (80, 110) to (340, 370) -->
+  <line class="curve" x1="80" y1="110" x2="340" y2="370"/>
+  <text class="text-title" x="345" y="385">MR</text>
+
+  <!-- U-shaped AC Curve (min at 320, 210) -->
+  <path class="curve" stroke-width="2.5" d="M 120 280 Q 300 180 500 240"/>
+  <text class="text-label" x="510" y="245">AC</text>
+
+  <!-- U-shaped MC Curve cutting MR at e(225, 230) -->
+  <path class="curve" stroke-width="3.5" d="M 120 340 Q 180 270 225 230 L 380 90"/>
+  <text class="text-title" x="390" y="95">MC</text>
+
+  <!-- Equilibrium MR = MC point e at (225, 230) -->
+  <circle class="point-dot" cx="225" cy="230" r="6"/>
+  <text class="text-label" x="235" y="235">e (MR = MC)</text>
+
+  <!-- Vertical line from Q* (x=225) up to AR (y=182) and AC (y=215) -->
+  <line class="guide-line" x1="225" y1="182" x2="225" y2="370"/>
+  <text class="text-label" x="215" y="395">Q*</text>
+
+  <!-- Supernormal Profit Box: (80, 182) to (225, 182) to (225, 215) to (80, 215) -->
+  <polygon points="80,182 225,182 225,215 80,215" fill="url(#profit-hatch)" opacity="0.85"/>
+  <circle class="point-dot" cx="225" cy="182" r="6"/>
+  <circle class="point-dot" cx="225" cy="215" r="5"/>
+  <line class="guide-line" x1="80" y1="182" x2="225" y2="182"/>
+  <line class="guide-line" x1="80" y1="215" x2="225" y2="215"/>
+  <text class="text-label" x="50" y="186">P*</text>
+  <text class="text-label" x="50" y="219">C</text>
+
+  <!-- Legend Box -->
+  <g transform="translate(360, 140)">
+    <rect class="card" width="280" height="90"/>
+    <rect x="14" y="15" width="22" height="22" fill="url(#profit-hatch)" stroke="#111111"/>
+    <text class="text-label" x="45" y="30">Supernormal Profit Area</text>
+    <text class="text-sub" x="45" y="46">Rectangle P*-A-B-C = (P* - C) × Q*</text>
+    <text class="text-sub" x="14" y="72">High entry barriers protect long-run profits</text>
+  </g>
+</svg>

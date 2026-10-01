@@ -270,8 +270,8 @@ export function validateContent(root = path.resolve(import.meta.dirname, '..')) 
             if (controls.mode !== undefined && !['auto', 'text', 'bullets', 'recap'].includes(controls.mode)) {
               errors.push(`${label} slideControls.mode must be auto, text, bullets, or recap`)
             }
-            if (controls.maxPoints !== undefined && (!Number.isInteger(controls.maxPoints) || controls.maxPoints < 1 || controls.maxPoints > 6)) {
-              errors.push(`${label} slideControls.maxPoints must be an integer from 1 to 6`)
+            if (controls.maxPoints !== undefined && (!Number.isInteger(controls.maxPoints) || controls.maxPoints < 1 || controls.maxPoints > 8)) {
+              errors.push(`${label} slideControls.maxPoints must be an integer from 1 to 8`)
             }
             if (controls.includeQuickCheck !== undefined && typeof controls.includeQuickCheck !== 'boolean') {
               errors.push(`${label} slideControls.includeQuickCheck must be a boolean`)

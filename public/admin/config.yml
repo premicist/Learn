@@ -274,6 +274,7 @@ collections:
       - { label: Cover Image, name: image, widget: image, required: false }
       - { label: Image alt text, name: imageAlt, widget: string, required: false, hint: 'Describe the image when it conveys meaning; leave blank for decorative images.' }
       - { label: Enable slide viewer, name: slidesEnabled, widget: boolean, required: false, default: false, hint: 'Show a note-derived slide viewer at the top of this note.' }
+      - { label: 'Google Slides Embed URL', name: googleSlidesUrl, widget: string, required: false, hint: 'Paste a Google Slides link (e.g. https://docs.google.com/presentation/d/.../embed) to display interactive Google Slides.' }
       - label: Slide controls
         name: slideControls
         widget: object
@@ -436,3 +437,30 @@ collections:
         name: keyTakeaways
         widget: list
         required: false
+
+  - name: slides
+    label: Slide Decks
+    folder: content/slides
+    extension: yml
+    format: yaml
+    create: true
+    summary: '{{title}} ({{noteId}})'
+    slug: '{{noteId}}'
+    fields:
+      - { label: 'Note ID (exact Markdown filename without .md)', name: noteId, widget: string, hint: 'e.g. class11-elasticity-consumer' }
+      - { label: 'Deck Title', name: title, widget: string }
+      - { label: 'Enable Slides', name: slidesEnabled, widget: boolean, default: true }
+      - { label: 'Google Slides Embed URL', name: googleSlidesUrl, widget: string, required: false, hint: 'Optional Google Slides URL (e.g. https://docs.google.com/presentation/d/.../embed).' }
+      - label: Slides
+        name: slides
+        widget: list
+        required: false
+        fields:
+          - { label: Layout, name: layout, widget: select, options: [hero, concept, bullets, table, formula, steps, comparison, exam, recap] }
+          - { label: Title, name: title, widget: string }
+          - { label: Eyebrow, name: eyebrow, widget: string, required: false }
+          - { label: Badge, name: badge, widget: string, required: false }
+          - { label: Points, name: points, widget: list, required: false }
+          - { label: Formula (LaTeX), name: formula, widget: string, required: false }
+          - { label: Footnote, name: note, widget: string, required: false }
+

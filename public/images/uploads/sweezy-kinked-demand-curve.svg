@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" width="100%" height="auto" role="img" aria-label="Sweezy's Kinked Demand Curve Model of Oligopoly">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .kink-line { fill: none; stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .mr-line { fill: none; stroke: #111111; stroke-width: 2.5; stroke-linecap: round; }
+    .mr-gap { stroke: #111111; stroke-width: 2; stroke-dasharray: 4 4; }
+    .mc-curve { fill: none; stroke: #555555; stroke-width: 2.5; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #111111; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">Paul Sweezy's Kinked Demand Curve (Oligopoly Price Rigidity)</text>
+  <text class="text-sub" x="40" y="50">Rivals ignore price increases (elastic dk) but match price cuts (inelastic kD)</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="370" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="370" x2="620" y2="370"/>
+  <text class="text-label" x="35" y="80">Price (P)</text>
+  <text class="text-label" x="540" y="395">Output (Q)</text>
+  <text class="text-label" x="65" y="385">O</text>
+
+  <!-- Kinked Demand Curve: Elastic segment from (80, 110) to K(300, 190), Inelastic segment from K(300, 190) to (540, 360) -->
+  <line class="kink-line" x1="80" y1="110" x2="300" y2="190"/>
+  <line class="kink-line" x1="300" y1="190" x2="520" y2="360"/>
+  <text class="text-label" x="150" y="140">Elastic Segment (d-k)</text>
+  <text class="text-label" x="420" y="310">Inelastic Segment (k-D)</text>
+  <text class="text-title" x="530" y="365">dKD (Demand)</text>
+
+  <!-- Discontinuous MR Curve -->
+  <!-- Upper MR from (80, 110) to (300, 240) -->
+  <line class="mr-line" x1="80" y1="110" x2="300" y2="240"/>
+  <text class="text-label" x="275" y="235">a</text>
+
+  <!-- Vertical Discontinuous Gap (a to b) from y=240 to y=300 -->
+  <line class="mr-gap" x1="300" y1="240" x2="300" y2="300"/>
+  <text class="text-label" x="275" y="305">b</text>
+
+  <!-- Lower MR from (300, 300) to (420, 370) -->
+  <line class="mr-line" x1="300" y1="300" x2="420" y2="370"/>
+  <text class="text-title" x="425" y="385">MR</text>
+
+  <!-- Marginal Cost curves shifting within the gap (SMC1 and SMC2) -->
+  <path class="mc-curve" d="M 170 320 Q 240 270 300 255 T 450 150"/><text class="text-label" x="455" y="150">MC₁</text>
+  <path class="mc-curve" d="M 190 340 Q 250 290 300 280 T 470 170"/><text class="text-label" x="475" y="170">MC₂</text>
+
+  <!-- Kink Point K at (300, 190) -->
+  <circle class="point-dot" cx="300" cy="190" r="7"/>
+  <line class="guide-line" x1="80" y1="190" x2="300" y2="190"/>
+  <line class="guide-line" x1="300" y1="190" x2="300" y2="370"/>
+  <text class="text-label" x="40" y="195">P* (Rigid Price)</text>
+  <text class="text-label" x="280" y="395">Q* (Rigid Output)</text>
+  <text class="text-title" x="315" y="185">K (The Kink)</text>
+
+  <!-- Explanation note -->
+  <text class="text-sub" x="320" y="270">Discontinuous MR Gap (a-b)</text>
+  <text class="text-sub" x="320" y="285">Price P* stays rigid as MC shifts</text>
+</svg>

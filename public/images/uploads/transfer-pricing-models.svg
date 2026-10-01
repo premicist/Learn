@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" width="100%" height="auto" role="img" aria-label="Transfer Pricing Mechanisms in Vertically Integrated Firms">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 3; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 14px; font-weight: 800; fill: #111111; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; text-anchor: middle; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; rx: 8; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+
+  <!-- Left: Transfer Pricing with NO External Market -->
+  <g transform="translate(30, 20)">
+    <rect class="card" width="330" height="345"/>
+    <text class="text-title" x="165" y="28">Scenario 1: No External Market</text>
+    <text class="text-sub" x="165" y="46">Rule: Set Transfer Price = Upstream MC (Pt = MCu)</text>
+
+    <line class="axis" x1="45" y1="290" x2="45" y2="70"/>
+    <line class="axis" x1="45" y1="290" x2="300" y2="290"/>
+    <text class="text-label" x="15" y="75">Price</text>
+    <text class="text-label" x="250" y="310">Quantity</text>
+
+    <!-- Upstream MC line -->
+    <line class="curve" x1="45" y1="210" x2="280" y2="120"/>
+    <text class="text-label" x="285" y="125">MC_u (Pt)</text>
+
+    <!-- Total Marginal Cost (MC_Total = MC_u + MC_d) -->
+    <line class="curve" stroke-width="3.5" x1="45" y1="150" x2="280" y2="60"/>
+    <text class="text-title" x="285" y="65">MC_Total</text>
+
+    <text class="text-sub" x="165" y="330">Avoids double marginalization</text>
+  </g>
+
+  <!-- Right: Transfer Pricing WITH Competitive External Market -->
+  <g transform="translate(400, 20)">
+    <rect class="card" width="330" height="345"/>
+    <text class="text-title" x="165" y="28">Scenario 2: Competitive External Market</text>
+    <text class="text-sub" x="165" y="46">Rule: Set Transfer Price = External Market Price (Pt = Pm)</text>
+
+    <line class="axis" x1="45" y1="290" x2="45" y2="70"/>
+    <line class="axis" x1="45" y1="290" x2="300" y2="290"/>
+    <text class="text-label" x="15" y="75">Price</text>
+    <text class="text-label" x="250" y="310">Quantity</text>
+
+    <!-- Horizontal External Market Price line Pt = Pm -->
+    <line class="curve" stroke-width="3.5" x1="45" y1="160" x2="280" y2="160"/>
+    <text class="text-title" x="285" y="165">P_t = P_m</text>
+
+    <!-- Upstream MC curve -->
+    <path class="curve" d="M 55 250 Q 150 200 260 90"/>
+    <text class="text-label" x="265" y="95">MC_u</text>
+
+    <text class="text-sub" x="165" y="330">Divisions buy/sell excess on open market</text>
+  </g>
+</svg>

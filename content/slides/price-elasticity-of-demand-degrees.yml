@@ -1,0 +1,108 @@
+# Slide Deck for: Price Elasticity of Demand and Its Degrees
+noteId: price-elasticity-of-demand-degrees
+title: "Price Elasticity of Demand & Five Degrees"
+slidesEnabled: true
+googleSlidesUrl: "https://docs.google.com/presentation/d/e/2PACX-1vRenC3GYESNQNYgiJSX-cuNYt11dv5Q-POdM1o5bOZ9wQpznJaOR7jDc2KdQMdJMg/pub?start=false&loop=false&delayms=3000"
+
+
+slides:
+  - layout: hero
+    title: "Price Elasticity of Demand & Five Degrees"
+    eyebrow: "Unit 4 • Elasticity of Demand"
+    badge: "📘 Chapter Foundation"
+    points:
+      - "Master the quantitative measurement of price responsiveness, the algebraic formula, and the five distinct degrees of price elasticity."
+
+  - layout: formula
+    title: "Definition & Algebraic Formula"
+    eyebrow: "Price Elasticity Formula"
+    badge: "📐 Key Formula"
+    formula: "E_p = \\frac{\\% \\text{ Change in Quantity Demanded}}{\\% \\text{ Change in Price}} = -\\left(\\frac{\\Delta Q}{\\Delta P} \\times \\frac{P}{Q}\\right)"
+    points:
+      - "**Elastic Demand:** When a small price change leads to a relatively large change in quantity demanded ($|E_p| > 1$)."
+      - "**Inelastic Demand:** When a large price change leads to only a small change in quantity demanded ($|E_p| < 1$)."
+    note: "The negative sign reflects the inverse relationship between price and quantity (Law of Demand)."
+
+  - layout: table
+    title: "Comprehensive Table: The Five Degrees"
+    eyebrow: "Degrees Comparison"
+    badge: "📊 Five Degrees Matrix"
+    table:
+      headers: ["Degree", "Coefficient", "Curve Shape", "Relationship", "Real-World Examples"]
+      rows:
+        - ["**1. Perfectly Inelastic**", "$E_p = 0$", "Vertical straight line", "$\\Delta Q = 0$", "Life-saving insulin, emergency surgeries, salt"]
+        - ["**2. Relatively Inelastic**", "$E_p < 1$", "Steep downward slope", "$\\% \\Delta Q < \\% \\Delta P$", "Rice, wheat, electricity, cooking gas, tap water"]
+        - ["**3. Unitary Elastic**", "$E_p = 1$", "Rectangular Hyperbola", "$\\% \\Delta Q = \\% \\Delta P$", "General consumer durables, footwear (TR constant)"]
+        - ["**4. Relatively Elastic**", "$E_p > 1$", "Flat downward slope", "$\\% \\Delta Q > \\% \\Delta P$", "Smartphones, motorbikes, luxury hotel rooms"]
+        - ["**5. Perfectly Elastic**", "$E_p = \\infty$", "Horizontal line", "Infinite at market $P$", "Individual farmer's wheat in Perfect Competition"]
+    note: "TR (Total Revenue = P × Q) remains unchanged when elasticity is unitary (Ep = 1)."
+
+  - layout: concept
+    title: "Degree 1: Perfectly Inelastic ($E_p = 0$)"
+    eyebrow: "Zero Responsiveness"
+    badge: "📌 Vertical Curve"
+    points:
+      - "**Mechanism:** Quantity demanded remains completely fixed regardless of price increases or cuts ($\\% \\Delta Q = 0$)."
+      - "**Demand Curve:** A **vertical straight line** parallel to the price ($Y$) axis."
+      - "**Examples:** Essential medicines (insulin for diabetics), emergency antidote, salt."
+      - "**Business Implication:** Seller has maximum pricing power; buyers must pay any price."
+
+  - layout: concept
+    title: "Degree 2: Relatively Inelastic ($E_p < 1$)"
+    eyebrow: "Low Responsiveness"
+    badge: "📌 Steep Curve"
+    points:
+      - "**Mechanism:** Percentage change in quantity is smaller than the percentage change in price."
+      - "**Demand Curve:** A **steep downward-sloping** line."
+      - "**Examples:** Essential food staples (rice, flour), electricity utility, daily public transport."
+      - "**Business Implication:** Increasing price increases total revenue ($TR \\uparrow$ when $P \\uparrow$)."
+
+  - layout: concept
+    title: "Degree 3: Unitary Elastic ($E_p = 1$)"
+    eyebrow: "Proportional Responsiveness"
+    badge: "📌 Rectangular Hyperbola"
+    points:
+      - "**Mechanism:** Percentage change in quantity exactly equals the percentage change in price ($\\% \\Delta Q = \\% \\Delta P$)."
+      - "**Demand Curve:** A **Rectangular Hyperbola** asymptotic to both axes."
+      - "**Total Revenue Rule:** Total outlay ($P \\times Q$) remains constant at all price levels."
+      - "**Examples:** Normal consumer electronics, clothing, and footwear."
+
+  - layout: concept
+    title: "Degree 4: Relatively Elastic ($E_p > 1$)"
+    eyebrow: "High Responsiveness"
+    badge: "📌 Flatter Curve"
+    points:
+      - "**Mechanism:** Percentage change in quantity is greater than the percentage change in price."
+      - "**Demand Curve:** A **flatter downward-sloping** curve."
+      - "**Examples:** Luxury items, branded smartphones, vacation flights, branded apparel."
+      - "**Business Implication:** Price cuts boost total revenue by attracting large sales volume."
+
+  - layout: concept
+    title: "Degree 5: Perfectly Elastic ($E_p = \\infty$)"
+    eyebrow: "Infinite Responsiveness"
+    badge: "📌 Horizontal Curve"
+    points:
+      - "**Mechanism:** Buyers will buy all available output at the prevailing price, but demand drops to zero if price rises even a fraction."
+      - "**Demand Curve:** A **horizontal straight line** parallel to the quantity ($X$) axis."
+      - "**Examples:** Perfectly competitive commodity markets (e.g., standard wheat, agricultural auctions)."
+      - "**Business Implication:** Individual firm is a pure price-taker."
+
+  - layout: exam
+    title: "High-Yield Exam Questions & Q&A"
+    eyebrow: "Exam Focus"
+    badge: "🎯 Exam Solutions"
+    points:
+      - "**Q1: Shape of perfectly inelastic curve?** $\\rightarrow$ Vertical straight line parallel to Y-axis ($E_p = 0$)."
+      - "**Q2: Price falls 4%, demand rises 8%?** $\\rightarrow$ $E_p = \\frac{+8\\%}{-4\\%} = -2.0 \\implies |E_p| = 2.0 > 1$ (Relatively Elastic)."
+      - "**Q3: What happens to TR when $E_p = 1$?** $\\rightarrow$ Total Revenue remains strictly constant."
+      - "**Q4: Why are necessities inelastic?** $\\rightarrow$ Lack of close substitutes and urgent survival needs."
+
+  - layout: recap
+    title: "Key Takeaways: Five Degrees of PED"
+    eyebrow: "Chapter Review"
+    badge: "🎓 Lesson Mastery"
+    points:
+      - "Price elasticity measures buyer sensitivity to price changes: $E_p = \\frac{\\% \\Delta Q}{\\% \\Delta P}$."
+      - "The five degrees range from $E_p = 0$ (vertical) to $E_p = \\infty$ (horizontal)."
+      - "Steeper demand curves indicate lower elasticity; flatter curves indicate higher elasticity."
+      - "Total Revenue rises with price hikes for inelastic goods, and falls for elastic goods."

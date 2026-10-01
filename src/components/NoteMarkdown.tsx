@@ -6,6 +6,7 @@ import rehypeKatex from 'rehype-katex'
 import type { NoteVisualBlock as VisualBlock } from '../data/content'
 import InlineResource from './InlineResource'
 import NoteVisualBlock from './NoteVisualBlock'
+import MermaidDiagram from './MermaidDiagram'
 import 'katex/dist/katex.min.css'
 
 const CHART_COLORS = ['#146b63', '#b4872a', '#b23a2b', '#47607a', '#0e4a45']
@@ -18,12 +19,31 @@ type InlineResourceData = {
 }
 
 function normalizeMathDelimiters(content: string) {
+  if (!content) return ''
   const slash = String.fromCharCode(92)
-  return content
-    .split(`${slash}[`).join('$$\n')
-    .split(`${slash}]`).join('\n$$')
+  let text = content.replace(/\r\n/g, '\n')
+
+  // Convert \[ ... \] to display math blocks
+  text = text
+    .split(`${slash}[`).join('\n\n$$\n')
+    .split(`${slash}]`).join('\n$$\n\n')
     .split(`${slash}(`).join('$')
     .split(`${slash})`).join('$')
+
+  // Convert any line that starts and ends with $$ into true multiline block math
+  const lines = text.split('\n')
+  const newLines: string[] = []
+  for (const line of lines) {
+    const trimmed = line.trim()
+    if (trimmed.startsWith('$$') && trimmed.endsWith('$$') && trimmed.length > 4 && !trimmed.slice(2, -2).includes('$$')) {
+      const math = trimmed.slice(2, -2).trim()
+      newLines.push('', '$$', math, '$$', '')
+    } else {
+      newLines.push(line)
+    }
+  }
+
+  return newLines.join('\n')
 }
 
 function slugify(children: ReactNode) {
@@ -99,10 +119,17 @@ function NoteMarkdown({ content }: { content: string }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm, remarkMath]}
-      rehypePlugins={[rehypeKatex]}
+      rehypePlugins={[[rehypeKatex, { output: 'html' }]]}
       components={{
         h2({ children, ...props }) { return <h2 id={slugify(children)} {...props}>{children}</h2> },
         h3({ children, ...props }) { return <h3 id={slugify(children)} {...props}>{children}</h3> },
+        table({ children, ...props }) {
+          return (
+            <div className="note-table-wrap">
+              <table {...props}>{children}</table>
+            </div>
+          )
+        },
         pre({ children }) {
           const child = Children.toArray(children)[0]
           if (isValidElement(child) && (child.props as { 'data-inline-content'?: boolean })['data-inline-content']) return child
@@ -112,6 +139,9 @@ function NoteMarkdown({ content }: { content: string }) {
           const { className, children, ...rest } = props
           const language = className?.replace(/^language-/, '')
           const inlineLanguage = language?.replace(/^learn-/, '')
+          if (language === 'mermaid') {
+            return <MermaidDiagram chart={String(children).trim()} />
+          }
           if (inlineLanguage === 'chart') return <div data-inline-content="true"><NoteChart json={String(children).trim()} /></div>
           if (inlineLanguage && INLINE_VISUAL_TYPES.has(inlineLanguage)) {
             const block = parseInlineVisualBlock(inlineLanguage, String(children).trim())
