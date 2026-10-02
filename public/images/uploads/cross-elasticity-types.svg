@@ -1,52 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 260" width="100%" height="auto" role="img" aria-label="Types of Cross Elasticity of Demand">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 300" width="100%" height="auto" role="img" aria-label="Types of Cross Elasticity of Demand">
   <style>
     .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
-    .axis { stroke: #111111; stroke-width: 1.8; stroke-linecap: round; }
-    .line { fill: none; stroke: #111111; stroke-width: 2.5; stroke-linecap: round; }
-    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 14px; font-weight: 800; fill: #111111; text-anchor: middle; }
-    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 700; fill: #111111; }
-    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #444444; text-anchor: middle; }
+    .card { fill: #fafafa; stroke: #dde5e2; stroke-width: 1.2; rx: 8; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .line-sub { fill: none; stroke: #146b63; stroke-width: 3.5; stroke-linecap: round; }
+    .line-comp { fill: none; stroke: #b23a2b; stroke-width: 3.5; stroke-linecap: round; }
+    .line-unrel { fill: none; stroke: #47607a; stroke-width: 3.5; stroke-linecap: round; }
+    .text-title { font-family: 'Fraunces', Georgia, serif; font-size: 14.5px; font-weight: 700; fill: #122a3a; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 700; fill: #122a3a; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 10.5px; font-weight: 600; fill: #47607a; text-anchor: middle; }
+    .tag { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; text-anchor: middle; }
   </style>
 
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+
   <!-- Panel 1: Substitutes (Exy > 0) -->
-  <g transform="translate(15, 10)">
-    <rect class="bg" width="230" height="235" rx="8"/>
-    <text class="text-title" x="115" y="26">(a) Substitute Goods</text>
-    <text class="text-sub" x="115" y="42">Exy &gt; 0 (Upward Sloping)</text>
-    <line class="axis" x1="35" y1="195" x2="35" y2="60"/>
-    <line class="axis" x1="35" y1="195" x2="205" y2="195"/>
-    <text class="text-label" x="12" y="65">Py</text>
-    <text class="text-label" x="195" y="212">Qx</text>
-    <!-- Upward sloping curve -->
-    <line class="line" x1="55" y1="175" x2="185" y2="85"/>
-    <text class="text-sub" x="115" y="224">Example: Tea vs. Coffee</text>
+  <g transform="translate(20, 15)">
+    <rect class="card" width="250" height="270"/>
+    <text class="text-title" x="125" y="28">१. प्रतिस्थापक वस्तुहरू (Substitutes)</text>
+    <text class="tag" x="125" y="48" fill="#146b63">Exy &gt; 0 (धनात्मक / Upward)</text>
+    <line class="axis" x1="45" y1="220" x2="45" y2="70"/>
+    <line class="axis" x1="45" y1="220" x2="225" y2="220"/>
+    <text class="text-label" x="15" y="75">Py (चिया)</text>
+    <text class="text-label" x="175" y="240">Qx (कफी)</text>
+    <text class="text-label" x="30" y="235">O</text>
+    <!-- Upward line from (65,195) to (205,95) -->
+    <line class="line-sub" x1="65" y1="195" x2="205" y2="95"/>
+    <text class="text-sub" x="125" y="255">Py बढ्दा Qx बढ्छ (चिया महँगो ⇒ कफीको माग ↑)</text>
   </g>
 
   <!-- Panel 2: Complements (Exy < 0) -->
-  <g transform="translate(275, 10)">
-    <rect class="bg" width="230" height="235" rx="8"/>
-    <text class="text-title" x="115" y="26">(b) Complementary Goods</text>
-    <text class="text-sub" x="115" y="42">Exy &lt; 0 (Downward Sloping)</text>
-    <line class="axis" x1="35" y1="195" x2="35" y2="60"/>
-    <line class="axis" x1="35" y1="195" x2="205" y2="195"/>
-    <text class="text-label" x="12" y="65">Py</text>
-    <text class="text-label" x="195" y="212">Qx</text>
-    <!-- Downward sloping curve -->
-    <line class="line" x1="55" y1="85" x2="185" y2="175"/>
-    <text class="text-sub" x="115" y="224">Example: Car and Petrol</text>
+  <g transform="translate(300, 15)">
+    <rect class="card" width="250" height="270"/>
+    <text class="text-title" x="125" y="28">२. पूरक वस्तुहरू (Complements)</text>
+    <text class="tag" x="125" y="48" fill="#b23a2b">Exy &lt; 0 (ऋणात्मक / Downward)</text>
+    <line class="axis" x1="45" y1="220" x2="45" y2="70"/>
+    <line class="axis" x1="45" y1="220" x2="225" y2="220"/>
+    <text class="text-label" x="12" y="75">Py (पेट्रोल)</text>
+    <text class="text-label" x="170" y="240">Qx (गाडी)</text>
+    <text class="text-label" x="30" y="235">O</text>
+    <!-- Downward line from (65,95) to (205,195) -->
+    <line class="line-comp" x1="65" y1="95" x2="205" y2="195"/>
+    <text class="text-sub" x="125" y="255">Py बढ्दा Qx घट्छ (पेट्रोल महँगो ⇒ गाडीको माग ↓)</text>
   </g>
 
-  <!-- Panel 3: Unrelated (Exy = 0) -->
-  <g transform="translate(535, 10)">
-    <rect class="bg" width="230" height="235" rx="8"/>
-    <text class="text-title" x="115" y="26">(c) Unrelated Goods</text>
-    <text class="text-sub" x="115" y="42">Exy = 0 (Vertical Straight Line)</text>
-    <line class="axis" x1="35" y1="195" x2="35" y2="60"/>
-    <line class="axis" x1="35" y1="195" x2="205" y2="195"/>
-    <text class="text-label" x="12" y="65">Py</text>
-    <text class="text-label" x="195" y="212">Qx</text>
-    <!-- Vertical line -->
-    <line class="line" x1="120" y1="75" x2="120" y2="195"/>
-    <text class="text-sub" x="115" y="224">Example: Shoes and Butter</text>
+  <!-- Panel 3: Unrelated Goods (Exy = 0) -->
+  <g transform="translate(580, 15)">
+    <rect class="card" width="250" height="270"/>
+    <text class="text-title" x="125" y="28">३. असम्बन्धित वस्तुहरू (Unrelated)</text>
+    <text class="tag" x="125" y="48" fill="#47607a">Exy = 0 (ठाडो रेखा / Vertical)</text>
+    <line class="axis" x1="45" y1="220" x2="45" y2="70"/>
+    <line class="axis" x1="45" y1="220" x2="225" y2="220"/>
+    <text class="text-label" x="15" y="75">Py (चिया)</text>
+    <text class="text-label" x="175" y="240">Qx (जुत्ता)</text>
+    <text class="text-label" x="30" y="235">O</text>
+    <!-- Vertical line at X=135 -->
+    <line class="line-unrel" x1="135" y1="80" x2="135" y2="220"/>
+    <text class="text-sub" x="125" y="255">Py ले Qx मा कुनै असर गर्दैन (Exy = 0)</text>
   </g>
 </svg>

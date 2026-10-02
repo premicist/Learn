@@ -1,80 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="auto" role="img" aria-label="Five Degrees of Price Elasticity of Demand">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 260" width="100%" height="auto" role="img" aria-label="Five Degrees of Price Elasticity of Demand">
   <style>
     .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .card { fill: #fafafa; stroke: #dde5e2; stroke-width: 1.2; rx: 8; }
     .axis { stroke: #111111; stroke-width: 1.8; stroke-linecap: round; }
-    .line { fill: none; stroke: #111111; stroke-width: 2.5; stroke-linecap: round; }
-    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 800; fill: #111111; text-anchor: middle; }
-    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 700; fill: #111111; }
-    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #444444; text-anchor: middle; }
+    .line { fill: none; stroke: #146b63; stroke-width: 3; stroke-linecap: round; }
+    .text-title { font-family: 'Fraunces', Georgia, serif; font-size: 13px; font-weight: 700; fill: #122a3a; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 700; fill: #122a3a; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #47607a; text-anchor: middle; }
+    .tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; fill: #0e4a45; text-anchor: middle; }
   </style>
 
-  <!-- Panel 1: Perfectly Inelastic (Ep = 0) -->
-  <g transform="translate(10, 10)">
-    <rect class="bg" width="160" height="210" rx="8"/>
-    <text class="text-title" x="80" y="24">1. Perfectly Inelastic</text>
-    <text class="text-sub" x="80" y="38">Ep = 0 (Vertical Line)</text>
-    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
-    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
-    <text class="text-label" x="14" y="58">P</text>
-    <text class="text-label" x="140" y="195">Q</text>
-    <!-- Vertical demand line -->
-    <line class="line" x1="85" y1="65" x2="85" y2="180"/>
-    <text class="text-sub" x="85" y="202">Quantity fixed</text>
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+
+  <!-- Panel 1: Ep = 0 -->
+  <g transform="translate(15, 12)">
+    <rect class="card" width="170" height="235"/>
+    <text class="text-title" x="85" y="24">१. पूर्ण बेलोचदार</text>
+    <text class="tag" x="85" y="40">Ep = 0 (ठाडो रेखा)</text>
+    <line class="axis" x1="30" y1="195" x2="30" y2="60"/>
+    <line class="axis" x1="30" y1="195" x2="155" y2="195"/>
+    <text class="text-label" x="15" y="65">P</text>
+    <text class="text-label" x="150" y="210">Q</text>
+    <!-- Vertical line at X=90 -->
+    <line class="line" x1="90" y1="70" x2="90" y2="195"/>
+    <text class="text-sub" x="85" y="222">माग स्थिर (नुन, औषधि)</text>
   </g>
 
-  <!-- Panel 2: Relatively Inelastic (Ep < 1) -->
-  <g transform="translate(190, 10)">
-    <rect class="bg" width="160" height="210" rx="8"/>
-    <text class="text-title" x="80" y="24">2. Relatively Inelastic</text>
-    <text class="text-sub" x="80" y="38">Ep &lt; 1 (Steep Curve)</text>
-    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
-    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
-    <text class="text-label" x="14" y="58">P</text>
-    <text class="text-label" x="140" y="195">Q</text>
-    <!-- Steep demand line -->
-    <line class="line" x1="50" y1="65" x2="115" y2="180"/>
-    <text class="text-sub" x="80" y="202">%ΔQ &lt; %ΔP</text>
+  <!-- Panel 2: Ep < 1 -->
+  <g transform="translate(200, 12)">
+    <rect class="card" width="170" height="235"/>
+    <text class="text-title" x="85" y="24">२. सापेक्षिक बेलोचदार</text>
+    <text class="tag" x="85" y="40">Ep &lt; 1 (बढी ठाडो)</text>
+    <line class="axis" x1="30" y1="195" x2="30" y2="60"/>
+    <line class="axis" x1="30" y1="195" x2="155" y2="195"/>
+    <text class="text-label" x="15" y="65">P</text>
+    <text class="text-label" x="150" y="210">Q</text>
+    <!-- Steep line from (60,70) to (125,195) -->
+    <line class="line" x1="60" y1="70" x2="125" y2="195"/>
+    <text class="text-sub" x="85" y="222">%ΔQ &lt; %ΔP (खाद्यान्न)</text>
   </g>
 
-  <!-- Panel 3: Unitary Elastic (Ep = 1) -->
-  <g transform="translate(370, 10)">
-    <rect class="bg" width="160" height="210" rx="8"/>
-    <text class="text-title" x="80" y="24">3. Unitary Elastic</text>
-    <text class="text-sub" x="80" y="38">Ep = 1 (Rect. Hyperbola)</text>
-    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
-    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
-    <text class="text-label" x="14" y="58">P</text>
-    <text class="text-label" x="140" y="195">Q</text>
-    <!-- Rectangular hyperbola arc -->
-    <path class="line" d="M 45 70 Q 75 110 135 170"/>
-    <text class="text-sub" x="80" y="202">%ΔQ = %ΔP (TR Constant)</text>
+  <!-- Panel 3: Ep = 1 -->
+  <g transform="translate(385, 12)">
+    <rect class="card" width="170" height="235"/>
+    <text class="text-title" x="85" y="24">३. एकाइ लोचदार</text>
+    <text class="tag" x="85" y="40">Ep = 1 (अतिपरवलय)</text>
+    <line class="axis" x1="30" y1="195" x2="30" y2="60"/>
+    <line class="axis" x1="30" y1="195" x2="155" y2="195"/>
+    <text class="text-label" x="15" y="65">P</text>
+    <text class="text-label" x="150" y="210">Q</text>
+    <!-- Rectangular hyperbola path -->
+    <path class="line" d="M 50 75 Q 85 115 145 180"/>
+    <text class="text-sub" x="85" y="222">%ΔQ = %ΔP (खर्च स्थिर)</text>
   </g>
 
-  <!-- Panel 4: Relatively Elastic (Ep > 1) -->
-  <g transform="translate(550, 10)">
-    <rect class="bg" width="160" height="210" rx="8"/>
-    <text class="text-title" x="80" y="24">4. Relatively Elastic</text>
-    <text class="text-sub" x="80" y="38">Ep &gt; 1 (Flat Curve)</text>
-    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
-    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
-    <text class="text-label" x="14" y="58">P</text>
-    <text class="text-label" x="140" y="195">Q</text>
-    <!-- Flat demand line -->
-    <line class="line" x1="38" y1="95" x2="138" y2="155"/>
-    <text class="text-sub" x="80" y="202">%ΔQ &gt; %ΔP</text>
+  <!-- Panel 4: Ep > 1 -->
+  <g transform="translate(570, 12)">
+    <rect class="card" width="170" height="235"/>
+    <text class="text-title" x="85" y="24">४. सापेक्षिक लोचदार</text>
+    <text class="tag" x="85" y="40">Ep &gt; 1 (कम ठाडो/चेप्टो)</text>
+    <line class="axis" x1="30" y1="195" x2="30" y2="60"/>
+    <line class="axis" x1="30" y1="195" x2="155" y2="195"/>
+    <text class="text-label" x="15" y="65">P</text>
+    <text class="text-label" x="150" y="210">Q</text>
+    <!-- Flatter line from (45,100) to (145,165) -->
+    <line class="line" x1="45" y1="100" x2="145" y2="165"/>
+    <text class="text-sub" x="85" y="222">%ΔQ &gt; %ΔP (विलासी वस्तु)</text>
   </g>
 
-  <!-- Panel 5: Perfectly Elastic (Ep = ∞) -->
-  <g transform="translate(730, 10)">
-    <rect class="bg" width="160" height="210" rx="8"/>
-    <text class="text-title" x="80" y="24">5. Perfectly Elastic</text>
-    <text class="text-sub" x="80" y="38">Ep = ∞ (Horizontal Line)</text>
-    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
-    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
-    <text class="text-label" x="14" y="58">P</text>
-    <text class="text-label" x="140" y="195">Q</text>
-    <!-- Horizontal demand line -->
-    <line class="line" x1="25" y1="110" x2="145" y2="110"/>
-    <text class="text-sub" x="80" y="202">Infinite Q at price P</text>
+  <!-- Panel 5: Ep = infinity -->
+  <g transform="translate(755, 12)">
+    <rect class="card" width="170" height="235"/>
+    <text class="text-title" x="85" y="24">५. पूर्ण लोचदार</text>
+    <text class="tag" x="85" y="40">Ep = ∞ (तेर्सो रेखा)</text>
+    <line class="axis" x1="30" y1="195" x2="30" y2="60"/>
+    <line class="axis" x1="30" y1="195" x2="155" y2="195"/>
+    <text class="text-label" x="15" y="65">P</text>
+    <text class="text-label" x="150" y="210">Q</text>
+    <!-- Horizontal line at Y=125 -->
+    <line class="line" x1="30" y1="125" x2="155" y2="125"/>
+    <text class="text-sub" x="85" y="222">अनन्त माग (प्रतिस्पर्धा)</text>
   </g>
 </svg>

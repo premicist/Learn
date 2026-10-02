@@ -35,16 +35,7 @@ $$E_{xy} = \frac{\Delta Q_x}{\Delta P_y} \times \frac{P_y}{Q_x}$$
 
 वस्तुहरू बीचको आपसी सम्बन्धका आधारमा छड्के लोचलाई तीन प्रकारमा वर्गीकरण गरिन्छ:
 
-```mermaid
-graph TD
-    A["<b>मागको छड्के लोच (Exy)</b>"] --> B["<b>१. धनात्मक छड्के लोच (Exy &gt; 0)</b> <br> प्रतिस्थापक वस्तुहरू (Substitute Goods)"]
-    A --> C["<b>२. ऋणात्मक छड्के लोच (Exy &lt; 0)</b> <br> पूरक वस्तुहरू (Complementary Goods)"]
-    A --> D["<b>३. शून्य छड्के लोच (Exy = 0)</b> <br> असम्बन्धित वस्तुहरू (Unrelated Goods)"]
-
-    B --> B1["चिया र कफी, कोक र पेप्सी <br> (Py ↑ ⇒ Qx ↑)"]
-    C --> C1["गाडी र पेट्रोल, कलम र मसी <br> (Py ↑ ⇒ Qx ↓)"]
-    D --> D1["चिया र जुत्ता, नुन र कलम <br> (No Relationship)"]
-```
+![मागको छड्के लोचका प्रकारहरू रेखाचित्र](/images/uploads/cross-elasticity-types.svg)
 
 ---
 

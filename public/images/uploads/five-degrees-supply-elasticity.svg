@@ -1,80 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="auto" role="img" aria-label="Five Degrees of Price Elasticity of Supply">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 260" width="100%" height="auto" role="img" aria-label="Five Degrees of Price Elasticity of Supply">
   <style>
     .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .card { fill: #fafafa; stroke: #dde5e2; stroke-width: 1.2; rx: 8; }
     .axis { stroke: #111111; stroke-width: 1.8; stroke-linecap: round; }
-    .line { fill: none; stroke: #111111; stroke-width: 2.5; stroke-linecap: round; }
-    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 800; fill: #111111; text-anchor: middle; }
-    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 700; fill: #111111; }
-    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #444444; text-anchor: middle; }
+    .line { fill: none; stroke: #b4872a; stroke-width: 3; stroke-linecap: round; }
+    .text-title { font-family: 'Fraunces', Georgia, serif; font-size: 13px; font-weight: 700; fill: #122a3a; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 700; fill: #122a3a; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #47607a; text-anchor: middle; }
+    .tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; fill: #785206; text-anchor: middle; }
   </style>
 
-  <!-- Panel 1: Perfectly Inelastic (Es = 0) -->
-  <g transform="translate(10, 10)">
-    <rect class="bg" width="160" height="210" rx="8"/>
-    <text class="text-title" x="80" y="24">1. Perfectly Inelastic</text>
-    <text class="text-sub" x="80" y="38">Es = 0 (Vertical Line)</text>
-    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
-    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
-    <text class="text-label" x="14" y="58">P</text>
-    <text class="text-label" x="140" y="195">Q</text>
-    <!-- Vertical supply line -->
-    <line class="line" x1="85" y1="65" x2="85" y2="180"/>
-    <text class="text-sub" x="80" y="202">Fixed Output</text>
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+
+  <!-- Panel 1: Es = 0 -->
+  <g transform="translate(15, 12)">
+    <rect class="card" width="170" height="235"/>
+    <text class="text-title" x="85" y="24">१. पूर्ण बेलोचदार</text>
+    <text class="tag" x="85" y="40">Es = 0 (ठाडो रेखा)</text>
+    <line class="axis" x1="30" y1="195" x2="30" y2="60"/>
+    <line class="axis" x1="30" y1="195" x2="155" y2="195"/>
+    <text class="text-label" x="15" y="65">P</text>
+    <text class="text-label" x="150" y="210">Q</text>
+    <!-- Vertical line at X=90 -->
+    <line class="line" x1="90" y1="70" x2="90" y2="195"/>
+    <text class="text-sub" x="85" y="222">आपूर्ति स्थिर (दुर्लभ वस्तु)</text>
   </g>
 
-  <!-- Panel 2: Relatively Inelastic (Es < 1) -->
-  <g transform="translate(190, 10)">
-    <rect class="bg" width="160" height="210" rx="8"/>
-    <text class="text-title" x="80" y="24">2. Relatively Inelastic</text>
-    <text class="text-sub" x="80" y="38">Es &lt; 1 (Steep, Cuts X-axis)</text>
-    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
-    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
-    <text class="text-label" x="14" y="58">P</text>
-    <text class="text-label" x="140" y="195">Q</text>
-    <!-- Steep line starting on X-axis -->
-    <line class="line" x1="65" y1="180" x2="125" y2="65"/>
-    <text class="text-sub" x="80" y="202">%ΔQs &lt; %ΔP</text>
+  <!-- Panel 2: Es < 1 -->
+  <g transform="translate(200, 12)">
+    <rect class="card" width="170" height="235"/>
+    <text class="text-title" x="85" y="24">२. सापेक्षिक बेलोचदार</text>
+    <text class="tag" x="85" y="40">Es &lt; 1 (X-अक्षबाट सुरु)</text>
+    <line class="axis" x1="30" y1="195" x2="30" y2="60"/>
+    <line class="axis" x1="30" y1="195" x2="155" y2="195"/>
+    <text class="text-label" x="15" y="65">P</text>
+    <text class="text-label" x="150" y="210">Q</text>
+    <!-- Line intersecting X-axis at (65,195) to (140,80) -->
+    <line class="line" x1="65" y1="195" x2="140" y2="80"/>
+    <text class="text-sub" x="85" y="222">%ΔQs &lt; %ΔP (कृषि उपज)</text>
   </g>
 
-  <!-- Panel 3: Unitary Elastic (Es = 1) -->
-  <g transform="translate(370, 10)">
-    <rect class="bg" width="160" height="210" rx="8"/>
-    <text class="text-title" x="80" y="24">3. Unitary Elastic</text>
-    <text class="text-sub" x="80" y="38">Es = 1 (Passes Origin)</text>
-    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
-    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
-    <text class="text-label" x="14" y="58">P</text>
-    <text class="text-label" x="140" y="195">Q</text>
-    <!-- 45-degree ray through origin -->
-    <line class="line" x1="25" y1="180" x2="135" y2="70"/>
-    <text class="text-sub" x="80" y="202">%ΔQs = %ΔP</text>
+  <!-- Panel 3: Es = 1 -->
+  <g transform="translate(385, 12)">
+    <rect class="card" width="170" height="235"/>
+    <text class="text-title" x="85" y="24">३. एकाइ लोचदार</text>
+    <text class="tag" x="85" y="40">Es = 1 (उद्गम बिन्दु O)</text>
+    <line class="axis" x1="30" y1="195" x2="30" y2="60"/>
+    <line class="axis" x1="30" y1="195" x2="155" y2="195"/>
+    <text class="text-label" x="15" y="65">P</text>
+    <text class="text-label" x="150" y="210">Q</text>
+    <!-- Line from origin (30,195) to (140,85) 45 deg -->
+    <line class="line" x1="30" y1="195" x2="140" y2="85"/>
+    <text class="text-sub" x="85" y="222">%ΔQs = %ΔP (४५° रेखा)</text>
   </g>
 
-  <!-- Panel 4: Relatively Elastic (Es > 1) -->
-  <g transform="translate(550, 10)">
-    <rect class="bg" width="160" height="210" rx="8"/>
-    <text class="text-title" x="80" y="24">4. Relatively Elastic</text>
-    <text class="text-sub" x="80" y="38">Es &gt; 1 (Flat, Cuts Y-axis)</text>
-    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
-    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
-    <text class="text-label" x="14" y="58">P</text>
-    <text class="text-label" x="140" y="195">Q</text>
-    <!-- Flat line starting on Y-axis -->
-    <line class="line" x1="25" y1="140" x2="140" y2="75"/>
-    <text class="text-sub" x="80" y="202">%ΔQs &gt; %ΔP</text>
+  <!-- Panel 4: Es > 1 -->
+  <g transform="translate(570, 12)">
+    <rect class="card" width="170" height="235"/>
+    <text class="text-title" x="85" y="24">४. सापेक्षिक लोचदार</text>
+    <text class="tag" x="85" y="40">Es &gt; 1 (Y-अक्षबाट सुरु)</text>
+    <line class="axis" x1="30" y1="195" x2="30" y2="60"/>
+    <line class="axis" x1="30" y1="195" x2="155" y2="195"/>
+    <text class="text-label" x="15" y="65">P</text>
+    <text class="text-label" x="150" y="210">Q</text>
+    <!-- Line intersecting Y-axis at (30,150) to (145,85) -->
+    <line class="line" x1="30" y1="150" x2="145" y2="85"/>
+    <text class="text-sub" x="85" y="222">%ΔQs &gt; %ΔP (कारखाना उत्पादन)</text>
   </g>
 
-  <!-- Panel 5: Perfectly Elastic (Es = ∞) -->
-  <g transform="translate(730, 10)">
-    <rect class="bg" width="160" height="210" rx="8"/>
-    <text class="text-title" x="80" y="24">5. Perfectly Elastic</text>
-    <text class="text-sub" x="80" y="38">Es = ∞ (Horizontal Line)</text>
-    <line class="axis" x1="25" y1="180" x2="25" y2="55"/>
-    <line class="axis" x1="25" y1="180" x2="145" y2="180"/>
-    <text class="text-label" x="14" y="58">P</text>
-    <text class="text-label" x="140" y="195">Q</text>
-    <!-- Horizontal supply line -->
-    <line class="line" x1="25" y1="110" x2="145" y2="110"/>
-    <text class="text-sub" x="80" y="202">Infinite supply at price P</text>
+  <!-- Panel 5: Es = infinity -->
+  <g transform="translate(755, 12)">
+    <rect class="card" width="170" height="235"/>
+    <text class="text-title" x="85" y="24">५. पूर्ण लोचदार</text>
+    <text class="tag" x="85" y="40">Es = ∞ (तेर्सो रेखा)</text>
+    <line class="axis" x1="30" y1="195" x2="30" y2="60"/>
+    <line class="axis" x1="30" y1="195" x2="155" y2="195"/>
+    <text class="text-label" x="15" y="65">P</text>
+    <text class="text-label" x="150" y="210">Q</text>
+    <!-- Horizontal line at Y=125 -->
+    <line class="line" x1="30" y1="125" x2="155" y2="125"/>
+    <text class="text-sub" x="85" y="222">अनन्त आपूर्ति</text>
   </g>
 </svg>

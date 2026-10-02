@@ -354,10 +354,6 @@ curricula:
             resourceId: class11-nepali-factors-of-production
             estimatedMinutes: 25
             description: भूमि, श्रम, पुँजी, सङ्गठनका विशेषताहरू, प्रतिफल (लगान, ज्याला, ब्याज, नाफा) र उत्पादन फलन।
-          - id: class11-np-foundations-check
-            title: आधारभूत अवधारणाहरूको मूल्याङ्कन (Foundations Check)
-            estimatedMinutes: 10
-            description: एकाइ १ का मुख्य प्राविधिक शब्दावली, परिभाषाहरू र अवधारणाहरूको अभ्यास।
       - id: class11-np-u2-1
         unitGroup: "एकाइ २: व्यष्टि अर्थशास्त्र"
         order: 2
