@@ -393,13 +393,99 @@ def generate_rubber_band_svg() -> str:
 </svg>"""
 
 
+def generate_consumer_producer_surplus_nepali_svg() -> str:
+    return """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="100%" height="auto" role="img" aria-label="Consumer Surplus and Producer Surplus in Market Equilibrium">
+  <defs>
+    <pattern id="pat-cs" width="8" height="8" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#146b63" stroke-width="1.8" />
+    </pattern>
+    <pattern id="pat-ps" width="8" height="8" patternTransform="rotate(-45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#b4872a" stroke-width="1.8" />
+    </pattern>
+  </defs>
+
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .demand-line { fill: none; stroke: #146b63; stroke-width: 3.5; stroke-linecap: round; }
+    .supply-line { fill: none; stroke: #b4872a; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #8098ab; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #122a3a; stroke: #ffffff; stroke-width: 2.5; }
+    .zone-cs { fill: url(#pat-cs); opacity: 0.85; }
+    .zone-ps { fill: url(#pat-ps); opacity: 0.85; }
+    .text-title { font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; fill: #122a3a; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; fill: #122a3a; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #47607a; }
+    .legend-box { fill: #f6f8f7; stroke: #dde5e2; stroke-width: 1.2; rx: 8; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="34">बजार सन्तुलनमा उपभोक्ताको बचत र उत्पादकको बचत (CS &amp; PS in Equilibrium)</text>
+  <text class="text-sub" x="40" y="52">कुल सामाजिक कल्याण (Total Social Welfare) = उपभोक्ताको बचत (CS) + उत्पादकको बचत (PS)</text>
+
+  <!-- Axes: Origin at (90, 390) -->
+  <line class="axis" x1="90" y1="390" x2="90" y2="70"/>
+  <line class="axis" x1="90" y1="390" x2="640" y2="390"/>
+  <text class="text-label" x="25" y="78">मूल्य (P)</text>
+  <text class="text-label" x="510" y="415">माग र आपूर्ति परिमाण (Q)</text>
+  <text class="text-label" x="72" y="405">O</text>
+
+  <!-- Intercepts: Demand from (90, 90) to (530, 370), Supply from (90, 370) to (530, 90) -->
+  <!-- Equilibrium Point E at (310, 230) -->
+
+  <!-- Shaded Triangle 1: Consumer Surplus (90, 90) -> (310, 230) -> (90, 230) -->
+  <polygon points="90,90 310,230 90,230" class="zone-cs"/>
+
+  <!-- Shaded Triangle 2: Producer Surplus (90, 370) -> (310, 230) -> (90, 230) -->
+  <polygon points="90,370 310,230 90,230" class="zone-ps"/>
+
+  <!-- Demand Line DD -->
+  <line class="demand-line" x1="90" y1="90" x2="520" y2="365"/>
+  <text class="text-title" x="530" y="372" fill="#146b63">DD (माग रेखा)</text>
+  <text class="text-label" x="65" y="95">A (P_max)</text>
+
+  <!-- Supply Line SS -->
+  <line class="supply-line" x1="90" y1="370" x2="520" y2="95"/>
+  <text class="text-title" x="530" y="102" fill="#b4872a">SS (आपूर्ति रेखा)</text>
+  <text class="text-label" x="65" y="375">B (P_min)</text>
+
+  <!-- Equilibrium Guide Lines -->
+  <line class="guide-line" x1="90" y1="230" x2="310" y2="230"/>
+  <line class="guide-line" x1="310" y1="230" x2="310" y2="390"/>
+  <circle class="point-dot" cx="310" cy="230" r="7"/>
+  <text class="text-title" x="325" y="224" fill="#122a3a">E (सन्तुलन बिन्दु)</text>
+  <text class="text-label" x="42" y="235">Pₑ (सन्तुलन मूल्य)</text>
+  <text class="text-label" x="270" y="415">Qₑ (सन्तुलन परिमाण)</text>
+
+  <!-- Legend Box -->
+  <g transform="translate(390, 150)">
+    <rect class="legend-box" width="280" height="145"/>
+    <text class="text-label" x="18" y="24">कुल आर्थिक बचतको बाँडफाँट:</text>
+
+    <!-- CS Legend -->
+    <rect x="18" y="38" width="22" height="22" class="zone-cs" stroke="#146b63"/>
+    <text class="text-label" x="48" y="48" fill="#0e4a45">१. उपभोक्ताको बचत (CS)</text>
+    <text class="text-sub" x="48" y="62">क्षेत्रफल: त्रिभुज A-E-Pₑ (क्रेताको फाइदा)</text>
+
+    <!-- PS Legend -->
+    <rect x="18" y="80" width="22" height="22" class="zone-ps" stroke="#b4872a"/>
+    <text class="text-label" x="48" y="90" fill="#785206">२. उत्पादकको बचत (PS)</text>
+    <text class="text-sub" x="48" y="104">क्षेत्रफल: त्रिभुज Pₑ-E-B (बिक्रेताको फाइदा)</text>
+
+    <!-- Total Welfare Line -->
+    <text class="text-label" x="18" y="132" fill="#122a3a">कुल सामाजिक कल्याण = CS + PS (त्रिभुज A-E-B)</text>
+  </g>
+</svg>"""
+
+
 def main():
     (OUTPUT_DIR / "supply-curve-schedule.svg").write_text(generate_supply_curve_schedule_svg(), encoding="utf-8")
     (OUTPUT_DIR / "supply-movement-along-curve.svg").write_text(generate_supply_movement_svg(), encoding="utf-8")
     (OUTPUT_DIR / "market-equilibrium-detailed.svg").write_text(generate_market_equilibrium_detailed_svg(), encoding="utf-8")
     (OUTPUT_DIR / "candy-market-equilibrium.svg").write_text(generate_candy_equilibrium_svg(), encoding="utf-8")
     (OUTPUT_DIR / "rubber-band-elasticity-analogy.svg").write_text(generate_rubber_band_svg(), encoding="utf-8")
-    print("Generated unit 2.1 and 2.2 detailed SVG diagrams successfully.")
+    (OUTPUT_DIR / "consumer-producer-surplus-nepali.svg").write_text(generate_consumer_producer_surplus_nepali_svg(), encoding="utf-8")
+    print("Generated unit 2.1, 2.2 and 2.3 detailed SVG diagrams successfully.")
 
 
 if __name__ == "__main__":

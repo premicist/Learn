@@ -431,6 +431,7 @@ curricula:
           - उपभोक्ता र उपभोक्ताको व्यवहारको आधारभूत स्वरूप बुझ्न।
           - गणनावाचक र क्रमवाचक उपयोगिता दृष्टिकोण बीच भिन्नता छुट्याउन।
           - सीमान्त उपयोगिता ह्रास नियम र सम-सीमान्त उपयोगिता नियम लागू गर्न।
+          - उपभोक्ताको बचत (CS), उत्पादकको बचत (PS) र कुल सामाजिक कल्याण विश्लेषण गर्न।
           - TU, MU र उपभोक्ता सन्तुलनका गणितीय समस्याहरू समाधान गर्न।
         lessons:
           - id: class11-np-consumer-meaning
@@ -457,8 +458,14 @@ curricula:
             resourceId: class11-nepali-law-of-equi-marginal-utility
             estimatedMinutes: 30
             description: गोसेनको दोस्रो नियम, सन्तुलन सर्तहरू, तालिका र रेखाचित्र, सीमा र महत्त्व।
+          - id: class11-np-consumer-producer-surplus
+            title: "५. उपभोक्ताको बचत र उत्पादकको बचत (Consumer & Producer Surplus)"
+            resourceType: note
+            resourceId: class11-nepali-consumer-producer-surplus
+            estimatedMinutes: 25
+            description: CS र PS को अवधारणा, बजार सन्तुलनमा कुल सामाजिक कल्याण, रेखाचित्र र संख्यात्मक समस्याहरू।
           - id: class11-np-consumer-behavior-numericals
-            title: "५. उपभोक्ता व्यवहारका गणितीय समस्याहरू (Consumer Behaviour Numericals)"
+            title: "६. उपभोक्ता व्यवहारका गणितीय समस्याहरू (Consumer Behaviour Numericals)"
             resourceType: note
             resourceId: class11-nepali-consumer-behavior-numericals
             estimatedMinutes: 25
@@ -466,7 +473,7 @@ curricula:
           - id: class11-np-consumer-behavior-check
             title: उपभोक्ता व्यवहार अभ्यास र मूल्याङ्कन (Practice Quiz)
             estimatedMinutes: 10
-            description: उपयोगिता, DMU र सम-सीमान्त नियमसम्बन्धी बहुवैकल्पिक प्रश्नहरूको अभ्यास।
+            description: उपयोगिता, DMU, सम-सीमान्त नियम र बचतसम्बन्धी बहुवैकल्पिक प्रश्नहरूको अभ्यास।
       - id: class11-np-u2-4
         unitGroup: "एकाइ २: व्यष्टि अर्थशास्त्र"
         order: 5
