@@ -3194,15 +3194,64 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
 
 @media (max-width: 640px) {
   .unit-sequence-dock {
-    padding: 0.45rem 0.55rem calc(0.45rem + env(safe-area-inset-bottom));
+    padding: 0.35rem 0.6rem calc(0.35rem + env(safe-area-inset-bottom)) !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
   }
 
-  .unit-sequence-dock__inner { gap: 0.3rem; }
-  .unit-sequence-dock__item { padding: 0.3rem 0.35rem; }
-  .unit-sequence-dock__item strong { font-size: 0.8rem; }
-  .unit-sequence-dock__action { display: none; }
-  .unit-sequence-dock__progress { font-size: 0.58rem; }
-  main:has(.unit-sequence-dock) { padding-bottom: 140px; }
+  .unit-sequence-dock__inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.35rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .unit-sequence-dock__item {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-width: 44% !important;
+    padding: 0.25rem 0.45rem !important;
+    overflow: hidden !important;
+    border-radius: 6px !important;
+    background: var(--paper) !important;
+  }
+
+  .unit-sequence-dock__item strong {
+    font-size: 0.74rem !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
+    max-width: 100% !important;
+  }
+
+  .unit-sequence-dock__label {
+    font-size: 0.58rem !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    margin-bottom: 2px !important;
+  }
+
+  .unit-sequence-dock__action {
+    display: none !important;
+  }
+
+  .unit-sequence-dock__progress {
+    flex: none !important;
+    font-size: 0.62rem !important;
+    padding: 0 4px !important;
+    color: var(--ink-faint) !important;
+  }
+
+  main:has(.unit-sequence-dock) {
+    padding-bottom: 110px !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -5329,7 +5378,7 @@ body:has(.unit-sequence-dock) .a11y-floating-anchor {
   }
 }
 
-/* Mobile Layout Padding Breakpoints */
+/* Mobile Layout Padding & Typography Breakpoints */
 @media (max-width: 640px) {
   main {
     padding: 10px 8px 36px;
@@ -5341,6 +5390,123 @@ body:has(.unit-sequence-dock) .a11y-floating-anchor {
     margin-bottom: 14px;
     border-radius: 10px;
   }
+
+  /* ─── Global Mobile Typography Auto-Adjustment (Notes, Blogs, Quizzes) ─── */
+  .note-page h1,
+  .note-page__content h1,
+  .article-page h1 {
+    font-size: clamp(1.45rem, 5.5vw, 1.85rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  .note-page__summary,
+  .article-page__summary {
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .note-page__body,
+  .article-page__body {
+    font-size: 0.92rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .note-page__body h2,
+  .article-page__body h2 {
+    font-size: 1.18rem !important;
+    line-height: 1.35 !important;
+    margin: 1.4rem 0 0.5rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .note-page__body h3,
+  .article-page__body h3 {
+    font-size: 1.02rem !important;
+    line-height: 1.4 !important;
+    margin: 1.1rem 0 0.4rem !important;
+  }
+
+  .note-page__body p,
+  .article-page__body p,
+  .note-page__body li,
+  .article-page__body li {
+    margin-bottom: 0.75rem !important;
+    font-size: 0.92rem !important;
+    line-height: 1.62 !important;
+  }
+
+  blockquote {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    padding: 0.75rem 1rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  /* Quizzes on mobile */
+  .quiz-card {
+    padding: 14px 12px !important;
+  }
+
+  .quiz-question__text {
+    font-size: 0.92rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .quiz-option {
+    padding: 8px 10px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .quiz-score {
+    font-size: 0.92rem !important;
+  }
+
+  /* Math & Formulas on mobile */
+  .math-display,
+  .katex-display,
+  .note-math--display,
+  .note-formula {
+    padding: 0.75rem 0.85rem !important;
+    margin: 1rem auto !important;
+    border-radius: 8px !important;
+  }
+
+  .katex-display > .katex,
+  .note-math--display .katex {
+    font-size: 1.02em !important;
+  }
+
+  /* Tables on mobile */
+  .note-page__body table,
+  .note-visual-block--table table {
+    font-size: 0.78rem !important;
+  }
+
+  .note-page__body th,
+  .note-page__body td {
+    padding: 6px 8px !important;
+  }
+
+  /* Hero & Home sections on mobile */
+  .hero-copy h1 {
+    font-size: clamp(1.75rem, 6vw, 2.15rem) !important;
+  }
+
+  .hero-copy p {
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .home-note-card__title {
+    font-size: 0.98rem !important;
+  }
+
+  .home-note-card__summary {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+  }
 }
 
 @media (max-width: 400px) {
@@ -5351,6 +5517,14 @@ body:has(.unit-sequence-dock) .a11y-floating-anchor {
   .note-page__content,
   .article-page {
     padding: 12px 8px !important;
+  }
+
+  .note-page__body,
+  .article-page__body,
+  .note-page__body p,
+  .note-page__body li {
+    font-size: 0.88rem !important;
+    line-height: 1.58 !important;
   }
 }
 
@@ -5689,6 +5863,36 @@ body:has(.unit-sequence-dock) .a11y-floating-anchor {
 
 .home-note-card__link:hover {
   text-decoration: underline;
+}
+
+.home-view-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.home-view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  background: var(--paper-card);
+  border: 1.5px solid var(--teal);
+  border-radius: 999px;
+  color: var(--teal-deep);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(20, 107, 99, 0.08);
+  transition: all 0.2s ease;
+}
+
+.home-view-more-btn:hover {
+  background: var(--teal);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(20, 107, 99, 0.2);
 }
 
 .resume-empty {

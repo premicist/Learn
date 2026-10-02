@@ -30,19 +30,16 @@ function resourcePath(lesson: CurriculumLesson) {
 function SequenceLink({
   direction,
   item,
-  resourceType,
 }: {
   direction: 'previous' | 'next'
   item?: { lesson: CurriculumLesson }
-  resourceType: CurriculumResourceType
 }) {
   if (!item) {
     return <span className="unit-sequence-dock__item unit-sequence-dock__item--empty" aria-hidden="true" />
   }
 
   const isNext = direction === 'next'
-  const label = isNext ? 'Next topic' : 'Previous topic'
-  const action = isNext ? 'Continue to' : 'Review'
+  const label = isNext ? 'Next topic →' : '← Previous topic'
 
   return (
     <Link
@@ -51,8 +48,7 @@ function SequenceLink({
       aria-label={`${label}: ${item.lesson.title}`}
     >
       <span className="unit-sequence-dock__label">{label}</span>
-      <strong>{item.lesson.title}</strong>
-      <span className="unit-sequence-dock__action">{action} {resourceLabels[resourceType].toLowerCase()} <span aria-hidden="true">→</span></span>
+      <strong title={item.lesson.title}>{item.lesson.title}</strong>
     </Link>
   )
 }
@@ -68,6 +64,12 @@ function UnitContext({ curriculum, currentResourceType, currentResourceId, subje
   const currentIndex = sameTypeSequence.findIndex(({ lesson }) => lesson.resourceType === currentResourceType && lesson.resourceId === currentResourceId)
   const previous = sameTypeSequence[currentIndex - 1]
   const next = sameTypeSequence[currentIndex + 1]
+
+  const currentUnitIndex = units.findIndex((u) => u.id === current.unit.id)
+  const prevUnit = units[currentUnitIndex - 1]
+  const nextUnit = units[currentUnitIndex + 1]
+  const prevUnitFirstLesson = prevUnit?.lessons[0]
+  const nextUnitFirstLesson = nextUnit?.lessons[0]
 
   const unitTitle = current.unit.unitGroup
     ? current.unit.title
@@ -113,44 +115,44 @@ function UnitContext({ curriculum, currentResourceType, currentResourceId, subje
         </div>
       </section>
 
-      {(previous || next) && (
-        <>
-          <aside className="related-content unit-sequence" aria-labelledby="unit-sequence-heading">
-            <div className="unit-sequence__header">
-              <div>
-                <p className="eyebrow">Keep learning</p>
-                <h2 id="unit-sequence-heading">More in {subjectTitle}</h2>
-              </div>
-              <span className="unit-sequence__position">{resourceLabels[currentResourceType]} {currentIndex + 1} of {sameTypeSequence.length}</span>
+      {(prevUnit || nextUnit) && (
+        <aside className="related-content unit-sequence" aria-labelledby="unit-sequence-heading">
+          <div className="unit-sequence__header">
+            <div>
+              <p className="eyebrow">Keep learning</p>
+              <h2 id="unit-sequence-heading">Course Units · {subjectTitle}</h2>
             </div>
-            <div className="related-content__grid">
-              {next && next.lesson.resourceType && (
-                <Link to={resourcePath(next.lesson)} className="related-content__card unit-sequence__card unit-sequence__card--next">
-                  <span className="unit-sequence__label">Next topic</span>
-                  <strong>{next.lesson.title}</strong>
-                  <span>{next.lesson.description}</span>
-                  <span className="unit-sequence__cta">Continue to {resourceLabels[next.lesson.resourceType].toLowerCase()} →</span>
-                </Link>
-              )}
-              {previous && previous.lesson.resourceType && (
-                <Link to={resourcePath(previous.lesson)} className="related-content__card unit-sequence__card">
-                  <span className="unit-sequence__label">Previous topic</span>
-                  <strong>{previous.lesson.title}</strong>
-                  <span>{previous.lesson.description}</span>
-                  <span className="unit-sequence__cta">Review {resourceLabels[previous.lesson.resourceType].toLowerCase()} →</span>
-                </Link>
-              )}
-            </div>
-          </aside>
+            <span className="unit-sequence__position">Unit {currentUnitIndex + 1} of {units.length}</span>
+          </div>
+          <div className="related-content__grid">
+            {nextUnit && nextUnitFirstLesson && (
+              <Link to={resourcePath(nextUnitFirstLesson)} className="related-content__card unit-sequence__card unit-sequence__card--next">
+                <span className="unit-sequence__label">Next Unit (Unit {nextUnit.order})</span>
+                <strong>{nextUnit.title}</strong>
+                <span>{nextUnit.summary}</span>
+                <span className="unit-sequence__cta">Jump to Next Unit →</span>
+              </Link>
+            )}
+            {prevUnit && prevUnitFirstLesson && (
+              <Link to={resourcePath(prevUnitFirstLesson)} className="related-content__card unit-sequence__card">
+                <span className="unit-sequence__label">Previous Unit (Unit {prevUnit.order})</span>
+                <strong>{prevUnit.title}</strong>
+                <span>{prevUnit.summary}</span>
+                <span className="unit-sequence__cta">← Review Previous Unit</span>
+              </Link>
+            )}
+          </div>
+        </aside>
+      )}
 
-          <nav className="unit-sequence-dock" aria-label={`Navigate through ${resourceLabels[currentResourceType].toLowerCase()}s in ${subjectTitle}`}>
-            <div className="unit-sequence-dock__inner">
-              <SequenceLink direction="previous" item={previous} resourceType={currentResourceType} />
-              <span className="unit-sequence-dock__progress" aria-hidden="true">{currentIndex + 1} / {sameTypeSequence.length}</span>
-              <SequenceLink direction="next" item={next} resourceType={currentResourceType} />
-            </div>
-          </nav>
-        </>
+      {(previous || next) && (
+        <nav className="unit-sequence-dock" aria-label={`Navigate through ${resourceLabels[currentResourceType].toLowerCase()}s in ${subjectTitle}`}>
+          <div className="unit-sequence-dock__inner">
+            <SequenceLink direction="previous" item={previous} />
+            <span className="unit-sequence-dock__progress" aria-hidden="true">{currentIndex + 1} / {sameTypeSequence.length}</span>
+            <SequenceLink direction="next" item={next} />
+          </div>
+        </nav>
       )}
     </>
   )

@@ -214,12 +214,12 @@ function Home() {
     return getUnitProgress(subjNoteIds)
   }
 
-  // Display notes based on selected tab
+  // Display notes based on selected tab (showing top 3 under Up Next)
   const displayNotes = activeTab === 'completed'
     ? completedNotes
     : activeTab === 'bookmarked'
     ? bookmarkedNotes
-    : upNextNotes
+    : upNextNotes.slice(0, 3)
 
   return (
     <>
@@ -471,6 +471,17 @@ function Home() {
             )
           })}
         </div>
+
+        {activeTab === 'continue' && activeSubject && activeSubjectNotes.length > 0 && (
+          <div className="home-view-more-wrap">
+            <Link
+              to={`/subjects/${activeSubject.id}`}
+              className="home-view-more-btn"
+            >
+              View all {activeSubject.title} notes ({subjectTotalNotes}) →
+            </Link>
+          </div>
+        )}
 
         {displayNotes.length === 0 && (
           <div className="resume-empty">
