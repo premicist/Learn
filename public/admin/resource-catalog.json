@@ -112,6 +112,14 @@
     "date": "2026-10-01T00:00:00.000Z"
   },
   {
+    "id": "class11-nepali-definitions-of-economics",
+    "type": "note",
+    "title": "अर्थशास्त्रका प्रमुख परिभाषाहरू (Definitions of Economics)",
+    "subjectId": "class-11-nepali",
+    "summary": "एडम स्मिथको सम्पत्ति केन्द्रित परिभाषा, अल्फ्रेड मार्शलको कल्याणकारी परिभाषा, लियोनेल रोबिन्सको दुर्लभता र छनोटको परिभाषा, मार्शल र रोबिन्स बीचको तुलना तथा रोबिन्सको परिभाषाको श्रेष्ठता।",
+    "date": "2026-10-02T00:00:00.000Z"
+  },
+  {
     "id": "class11-nepali-demand-theory",
     "type": "note",
     "title": "मागको सिद्धान्त (Theory of Demand)",
@@ -152,6 +160,22 @@
     "date": "2026-10-01T00:00:00.000Z"
   },
   {
+    "id": "class11-nepali-factors-of-production",
+    "type": "note",
+    "title": "उत्पादनका साधनहरू र उत्पादन फलन (Factors of Production & Production Function)",
+    "subjectId": "class-11-nepali",
+    "summary": "भूमि, श्रम, पुँजी र सङ्गठनका अवधारणाहरू, तिनीहरूका मुख्य विशेषताहरू, प्रतिफलहरू (लगान, ज्याला, ब्याज, नाफा), तथा उत्पादन फलनको विस्तृत अध्ययन।",
+    "date": "2026-10-02T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-goods-and-services",
+    "type": "note",
+    "title": "वस्तु तथा सेवाहरू र तिनको वर्गीकरण (Goods and Services and Their Classification)",
+    "subjectId": "class-11-nepali",
+    "summary": "वस्तु र सेवाको अर्थ, उदाहरण, भिन्नताहरू, तथा निःशुल्क, आर्थिक, उपभोग्य, पुँजीगत, निजी, सार्वजनिक, मध्यवर्ती र अन्तिम वस्तुहरूको विस्तृत वर्गीकरण।",
+    "date": "2026-10-02T00:00:00.000Z"
+  },
+  {
     "id": "class11-nepali-income-elasticity",
     "type": "note",
     "title": "मागको आय लोच र यसका प्रकारहरू (Income Elasticity of Demand & Types)",
@@ -184,12 +208,28 @@
     "date": "2026-10-01T00:00:00.000Z"
   },
   {
-    "id": "class11-nepali-meaning-definitions",
+    "id": "class11-nepali-micro-macro",
     "type": "note",
-    "title": "अर्थशास्त्रको अर्थ र परिभाषाहरू (Meaning and Definitions of Economics)",
+    "title": "व्यष्टि र समष्टि अर्थशास्त्र (Microeconomics and Macroeconomics)",
     "subjectId": "class-11-nepali",
-    "summary": "अर्थशास्त्रको शाब्दिक उत्पत्ति, विकासक्रम तथा एडम स्मिथ (सम्पत्ति), अल्फ्रेड मार्शल (कल्याण), र लियोनेल रोबिन्स (दुर्लभता र छनोट) का प्रमुख परिभाषाहरूको तुलनात्मक र आलोचनात्मक विश्लेषण।",
-    "date": "2026-09-26T00:00:00.000Z"
+    "summary": "व्यष्टि अर्थशास्त्र (मूल्य सिद्धान्त) र समष्टि अर्थशास्त्र (आय र रोजगारीको सिद्धान्त) को अर्थ, क्षेत्र, विस्तृत तुलनात्मक तालिका, अन्तरनिर्भरता, तथा समष्टिगत विरोधाभासको विश्लेषण।",
+    "date": "2026-10-02T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-origin-of-economics",
+    "type": "note",
+    "title": "अर्थशास्त्रको परिचय र उत्पत्ति (Introduction and Origin of Economics)",
+    "subjectId": "class-11-nepali",
+    "summary": "अर्थशास्त्रको शाब्दिक उत्पत्ति (Oikonomia), सामाजिक विज्ञानका रूपमा विकासक्रम, अध्ययनको आवश्यकता र महत्त्व, दुर्लभता र छनोट, आधारभूत आर्थिक समस्याहरू, तथा अर्थशास्त्रको प्रकृति।",
+    "date": "2026-10-02T00:00:00.000Z"
+  },
+  {
+    "id": "class11-nepali-positive-normative",
+    "type": "note",
+    "title": "वास्तविक र आर्दश अर्थशास्त्र (Positive and Normative Economics)",
+    "subjectId": "class-11-nepali",
+    "summary": "वास्तविक अर्थशास्त्र (के हो?) र आर्दश अर्थशास्त्र (के हुनुपर्छ?) को अवधारणा, विशेषताहरू, तुलनात्मक तालिका, तथा कथनहरू पहिचान गर्ने बृहत् अभ्यास र व्याख्या।",
+    "date": "2026-10-02T00:00:00.000Z"
   },
   {
     "id": "class11-nepali-price-elasticity-degrees",

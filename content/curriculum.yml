@@ -308,23 +308,56 @@ curricula:
         unitGroup: "एकाइ १: अर्थशास्त्रका आधारभूत अवधारणा र स्रोत बाँडफाँट"
         order: 1
         title: "एकाइ १.१: अर्थशास्त्रका आधारभूत अवधारणा र स्रोत बाँडफाँट"
-        summary: अर्थशास्त्रको उत्पत्ति, विभिन्न परिभाषाहरू, दुर्लभता र छनोट तथा उत्पादनका साधनहरूको अवधारणा बुझ्नुहोस्।
-        estimatedMinutes: 75
+        summary: अर्थशास्त्रको उत्पत्ति, परिभाषाहरू, वास्तविक र आर्दश अर्थशास्त्र, व्यष्टि र समष्टि, वस्तु तथा सेवाहरू, र उत्पादनका साधनहरूको विस्तृत अध्ययन।
+        estimatedMinutes: 150
         outcomes:
-          - अर्थशास्त्रको परिभाषा र यसको क्षेत्र (Scope) व्याख्या गर्न।
-          - व्यष्टि (Micro) र समष्टि (Macro) अर्थशास्त्र बीच भिन्नता छुट्याउन।
-          - भूमि, श्रम, पुँजी र सङ्गठनलाई उत्पादनका साधनका रूपमा पहिचान गर्न।
+          - अर्थशास्त्रको शाब्दिक उत्पत्ति र अध्ययनको आवश्यकता बुझ्न।
+          - एडम स्मिथ, अल्फ्रेड मार्शल र लियोनेल रोबिन्सका परिभाषाहरू तुलना गर्न।
+          - वास्तविक र आर्दश अर्थशास्त्रका कथनहरू पहिचान गर्न।
+          - व्यष्टि र समष्टि अर्थशास्त्र बीच भिन्नता छुट्याउन।
+          - वस्तु तथा सेवाहरूको वर्गीकरण गर्न।
+          - उत्पादनका चार साधनहरू र उत्पादन फलन व्याख्या गर्न।
         lessons:
-          - id: class11-np-foundations
-            title: अर्थशास्त्रको अर्थ र परिभाषाहरू (Meaning and Definitions)
+          - id: class11-np-origin-of-economics
+            title: "१. अर्थशास्त्रको परिचय र उत्पत्ति (Introduction & Origin)"
             resourceType: note
-            resourceId: class11-nepali-meaning-definitions
+            resourceId: class11-nepali-origin-of-economics
+            estimatedMinutes: 20
+            description: Oikonomia को शाब्दिक अर्थ, दुर्लभता र छनोट, समाजका ३ आधारभूत प्रश्नहरू।
+          - id: class11-np-definitions-of-economics
+            title: "२. अर्थशास्त्रका प्रमुख परिभाषाहरू (Definitions of Economics)"
+            resourceType: note
+            resourceId: class11-nepali-definitions-of-economics
             estimatedMinutes: 30
-            description: एडम स्मिथ, अल्फ्रेड मार्शल र लियोनेल रोबिन्सका परिभाषाहरू, दुर्लभता, छनोट र अवसर लागत।
+            description: एडम स्मिथ (सम्पत्ति), अल्फ्रेड मार्शल (कल्याण), लियोनेल रोबिन्स (दुर्लभता र छनोट), तुलना र रोबिन्सको श्रेष्ठता।
+          - id: class11-np-positive-normative
+            title: "३. वास्तविक र आर्दश अर्थशास्त्र (Positive & Normative Economics)"
+            resourceType: note
+            resourceId: class11-nepali-positive-normative
+            estimatedMinutes: 25
+            description: के हो बनाम के हुनुपर्छ, तुलनात्मक तालिका, तथा कथन पहिचान गर्ने अभ्यास।
+          - id: class11-np-micro-macro
+            title: "४. व्यष्टि र समष्टि अर्थशास्त्र (Micro & Macroeconomics)"
+            resourceType: note
+            resourceId: class11-nepali-micro-macro
+            estimatedMinutes: 25
+            description: मूल्य सिद्धान्त बनाम आय सिद्धान्त, तुलनात्मक तालिका, अन्तरनिर्भरता र बचतको विरोधाभास।
+          - id: class11-np-goods-and-services
+            title: "५. वस्तु तथा सेवाहरू र तिनको वर्गीकरण (Goods & Services)"
+            resourceType: note
+            resourceId: class11-nepali-goods-and-services
+            estimatedMinutes: 25
+            description: वस्तु र सेवाको अर्थ, भिन्नता, तथा निःशुल्क, आर्थिक, उपभोग्य, पुँजीगत, निजी, सार्वजनिक वस्तुहरूको वर्गीकरण।
+          - id: class11-np-factors-of-production
+            title: "६. उत्पादनका साधनहरू र उत्पादन फलन (Factors of Production)"
+            resourceType: note
+            resourceId: class11-nepali-factors-of-production
+            estimatedMinutes: 25
+            description: भूमि, श्रम, पुँजी, सङ्गठनका विशेषताहरू, प्रतिफल (लगान, ज्याला, ब्याज, नाफा) र उत्पादन फलन।
           - id: class11-np-foundations-check
             title: आधारभूत अवधारणाहरूको मूल्याङ्कन (Foundations Check)
             estimatedMinutes: 10
-            description: एकाइ १ का मुख्य प्राविधिक शब्दावली र अवधारणाहरूको अभ्यास।
+            description: एकाइ १ का मुख्य प्राविधिक शब्दावली, परिभाषाहरू र अवधारणाहरूको अभ्यास।
       - id: class11-np-u2-1
         unitGroup: "एकाइ २: व्यष्टि अर्थशास्त्र"
         order: 2
