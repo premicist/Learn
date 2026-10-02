@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router'
 import { useTheme } from '../utils/useTheme'
+import { useSmartboard } from '../utils/useSmartboard'
 import QuickSearchModal from './QuickSearchModal'
 
 const links = [
@@ -18,6 +19,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const { theme, toggleNextTheme } = useTheme()
+  const { isSmartboard, toggleSmartboard } = useSmartboard()
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -25,10 +27,14 @@ function Navbar() {
         e.preventDefault()
         setIsSearchOpen((prev) => !prev)
       }
+      if (e.altKey && e.key.toLowerCase() === 'b') {
+        e.preventDefault()
+        toggleSmartboard()
+      }
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [])
+  }, [toggleSmartboard])
 
   return (
     <>
@@ -49,6 +55,18 @@ function Navbar() {
           >
             <span>🔍</span>
             <span className="navbar__search-hint">Ctrl+K</span>
+          </button>
+
+          <button
+            type="button"
+            className={`navbar__icon-btn ${isSmartboard ? 'is-active navbar__icon-btn--board' : ''}`}
+            onClick={toggleSmartboard}
+            title={isSmartboard ? 'Exit Smart-board Mode (Alt+B)' : 'Smart-board Presentation Mode (Alt+B)'}
+            aria-label="Toggle Smart-board Presentation Mode"
+            aria-pressed={isSmartboard}
+          >
+            <span>🖥️</span>
+            <span className="navbar__mode-text">{isSmartboard ? 'Board On' : 'Board'}</span>
           </button>
 
           <button

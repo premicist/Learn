@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useTheme } from '../utils/useTheme'
 import { useBookmarks } from '../utils/useBookmarks'
+import { useSmartboard } from '../utils/useSmartboard'
 
 export type FontSize = 'small' | 'normal' | 'large' | 'xlarge'
 export type FontFamily = 'default' | 'serif' | 'sans' | 'dyslexic'
@@ -30,6 +31,7 @@ export default function AccessibilityMenu({
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const { isBookmarked, toggleBookmark } = useBookmarks()
+  const { isSmartboard, toggleSmartboard, toggleFullscreen } = useSmartboard()
 
   useEffect(() => {
     setMounted(true)
@@ -312,6 +314,32 @@ export default function AccessibilityMenu({
                     title="Print article or save as PDF document"
                   >
                     🖨️ Export PDF / Print
+                  </button>
+                </div>
+              </div>
+
+              {/* 2. Classroom & Smart-Board Mode */}
+              <div className="a11y-section">
+                <div className="a11y-section__header">
+                  <span className="a11y-section__icon" aria-hidden="true">🖥️</span>
+                  <span className="a11y-section__label">Classroom &amp; Smart-Board</span>
+                </div>
+                <div className="a11y-segmented">
+                  <button
+                    type="button"
+                    className={`a11y-btn ${isSmartboard ? 'is-active' : ''}`}
+                    onClick={toggleSmartboard}
+                    title="Maximize width and scale typography for smart-boards and projectors"
+                  >
+                    {isSmartboard ? '✓ Smart-Board Mode (Active)' : '🖥️ Smart-Board Mode'}
+                  </button>
+                  <button
+                    type="button"
+                    className="a11y-btn"
+                    onClick={toggleFullscreen}
+                    title="Toggle full screen projection"
+                  >
+                    ⛶ Fullscreen
                   </button>
                 </div>
               </div>
