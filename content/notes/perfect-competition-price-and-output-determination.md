@@ -33,7 +33,7 @@ flowchart LR
 
 ## 2. Industry Price Determination vs. Firm's Demand Curve
 
-![Perfect Competition: Industry Price Determination and Firm Equilibrium](/images/uploads/perfect-competition-firm-industry.svg)
+![Perfect Competition: The industry's demand and supply determine price P*, which becomes the individual firm's horizontal demand curve](/images/uploads/perfect-competition-industry-firm-demand.svg)
 
 * **Industry (Price Maker):** Aggregate market demand ($DD$) and supply ($SS$) intersect to establish the market-clearing equilibrium price **$P^*$**.
 * **Individual Firm (Price Taker):** The firm can sell any quantity at price $P^*$. Therefore, the firm's demand curve ($d$), Average Revenue ($AR$), and Marginal Revenue ($MR$) are all identical and form a **horizontal straight line**:
@@ -52,12 +52,14 @@ In the short run, plant capacity is fixed. The firm maximizes profit by satisfyi
 
 ```mermaid
 flowchart TD
-    S[Short-Run Equilibrium State: P = MC] --> S1[<b>1. Supernormal Profit (P &gt; SAC)</b><br>Profit = (P* - SAC) × q*]
-    S --> S2[<b>2. Normal Profit (P = Min SAC)</b><br>Zero economic profit (Break-Even)]
-    S --> S3[<b>3. Economic Loss (P &lt; SAC)</b><br>Loss = (SAC - P*) × q*]
-    S3 --> SH1[Operate if P &gt;= SAVC to cover variable costs]
-    S3 --> SH2[SHUTDOWN if P &lt; Min SAVC]
+    S["Short-Run Equilibrium State: P = MC"] --> S1["<b>1. Supernormal Profit (P &gt; SAC)</b><br>Profit = (P* - SAC) × q*"]
+    S --> S2["<b>2. Normal Profit (P = Min SAC)</b><br>Zero economic profit (Break-Even)"]
+    S --> S3["<b>3. Economic Loss (P &lt; SAC)</b><br>Loss = (SAC - P*) × q*"]
+    S3 --> SH1["Operate if P &gt;= SAVC to cover variable costs"]
+    S3 --> SH2["SHUTDOWN if P &lt; Min SAVC"]
 ```
+
+![Short-run outcomes for a perfectly competitive firm: supernormal profit, normal profit, economic loss, and the shutdown point](/images/uploads/perfect-competition-short-run-three-states.svg)
 
 1. **Supernormal Profit ($P > SAC$):** When market price $P^*$ is above the Short-Run Average Cost curve at equilibrium output $q^*$.
 2. **Normal Profit ($P = \text{Min } SAC$):** Total revenue covers all explicit and implicit production costs (Break-Even point).
@@ -79,6 +81,8 @@ In the long run, all inputs are variable and firms can enter or exit freely:
 $$\mathbf{P = AR = MR = LMC = SMC = \text{Min } LAC = \text{Min } SAC}$$
 
 Every firm in the industry operates at the **absolute minimum point of its Long-Run Average Cost curve ($LAC$)** and earns strictly **Normal Profit** (zero economic profit).
+
+![Long-run equilibrium: all curves meet at the minimum of LAC, and LAC is the envelope of the short-run SAC curves](/images/uploads/perfect-competition-long-run-equilibrium.svg)
 
 ---
 

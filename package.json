@@ -13,8 +13,9 @@
     "sync-admin": "node scripts/sync-admin.mjs",
     "build-sitemap": "node scripts/build-sitemap.mjs",
     "validate-content": "node scripts/validate-content.mjs",
+    "validate-mermaid": "node scripts/validate-mermaid.mjs",
     "generate-slides": "node scripts/generate-slides.mjs",
-    "check": "npm run build-content && tsc -b && npm run lint",
+    "check": "npm run validate-mermaid && npm run build-content && tsc -b && npm run lint",
     "build": "npm run sync-admin && npm run build-sitemap && npm run build-content && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
@@ -40,6 +41,7 @@
     "@vitejs/plugin-react": "^6.0.3",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
+    "jsdom": "^30.1.1",
     "oxlint": "^1.73.0",
     "typescript": "~6.0.2",
     "vite": "^8.1.4"

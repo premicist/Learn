@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 445" width="100%" height="auto" role="img" aria-label="Long-Run Equilibrium of a Perfectly Competitive Firm and the Long-Run Average Cost Envelope">
+  <defs>
+    <pattern id="shading" width="8" height="8" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#333333" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #111111; stroke-width: 2; stroke-linecap: round; }
+    .curve { fill: none; stroke: #111111; stroke-width: 3; stroke-linecap: round; }
+    .curve-thin { fill: none; stroke: #111111; stroke-width: 2.5; stroke-linecap: round; }
+    .curve-mid { fill: none; stroke: #444444; stroke-width: 2.2; stroke-linecap: round; }
+    .price-line { stroke: #111111; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #111111; stroke: #ffffff; stroke-width: 2; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 14px; font-weight: 800; fill: #111111; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #111111; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; text-anchor: middle; }
+    .card { fill: #ffffff; stroke: #111111; stroke-width: 1.2; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+
+  <!-- Left Panel: Firm in long-run equilibrium -->
+  <g transform="translate(20, 20)">
+    <rect class="card" width="365" height="405" rx="8"/>
+    <text class="text-title" x="182" y="30">Long-Run Equilibrium</text>
+    <text class="text-sub" x="182" y="48">All curves meet at P = Min LAC</text>
+
+    <line class="axis" x1="55" y1="330" x2="55" y2="75"/>
+    <line class="axis" x1="55" y1="330" x2="340" y2="330"/>
+    <text class="text-sub" x="20" y="205" transform="rotate(-90 20 205)">Price / Cost</text>
+    <text class="text-label" x="42" y="346">O</text>
+
+    <!-- LAC: min at (200,210) -->
+    <path class="curve" d="M 95 90 Q 200 330 305 90"/>
+    <text class="text-label" x="309" y="94">LAC</text>
+    <!-- SAC: tangent to LAC at (200,210) -->
+    <path class="curve" d="M 130 90 Q 200 330 270 90"/>
+    <text class="text-label" x="129" y="84">SAC</text>
+    <!-- SMC: steep, rising through (200,210) -->
+    <path class="curve-mid" d="M 160 300 Q 192 245 200 210 Q 206 175 222 78"/>
+    <text class="text-label" x="226" y="74">SMC</text>
+    <!-- LMC: shallow, rising through (200,210) -->
+    <path class="curve-mid" d="M 140 300 Q 175 258 200 210 Q 225 162 265 90"/>
+    <text class="text-label" x="246" y="124">LMC</text>
+
+    <!-- Price / AR / MR line at the long-run equilibrium -->
+    <line class="price-line" x1="55" y1="210" x2="322" y2="210"/>
+    <text class="text-label" x="60" y="203">P = AR = MR</text>
+
+    <circle class="point-dot" cx="200" cy="210" r="5"/>
+    <text class="text-label" x="209" y="226">e</text>
+    <line class="guide-line" x1="200" y1="210" x2="200" y2="330"/>
+    <text class="text-label" x="200" y="346" text-anchor="middle">q*</text>
+
+    <text class="text-sub" x="182" y="372">P = Min LAC = LMC = SMC = Min SAC</text>
+    <text class="text-sub" x="182" y="390">Zero economic profit (normal profit)</text>
+  </g>
+
+  <!-- Right Panel: LAC as the envelope of short-run SAC curves -->
+  <g transform="translate(400, 20)">
+    <rect class="card" width="360" height="405" rx="8"/>
+    <text class="text-title" x="180" y="30">LAC Envelope of SAC Curves</text>
+    <text class="text-sub" x="180" y="48">Each SAC is tangent to LAC at one point</text>
+
+    <line class="axis" x1="40" y1="330" x2="40" y2="75"/>
+    <line class="axis" x1="40" y1="330" x2="340" y2="330"/>
+    <text class="text-sub" x="18" y="205" transform="rotate(-90 18 205)">Cost</text>
+    <text class="text-label" x="28" y="346">O</text>
+    <text class="text-label" x="330" y="352" text-anchor="end">Output (q)</text>
+
+    <!-- LAC: min at (180,210) -->
+    <path class="curve" d="M 55 90 Q 180 330 305 90"/>
+    <text class="text-label" x="312" y="96">LAC</text>
+
+    <!-- SAC 1 (small scale): tangent at (130, 190.8) -->
+    <path class="curve-thin" d="M 76.7 84.3 Q 146.7 310.1 216.7 84.3"/>
+    <text class="text-label" x="221" y="86">SAC1</text>
+    <!-- SAC 2 (optimal scale): tangent at (180, 210) -->
+    <path class="curve-thin" d="M 110 97.1 Q 180 322.9 250 97.1"/>
+    <text class="text-label" x="254" y="103">SAC2</text>
+    <!-- SAC 3 (large scale): tangent at (230, 190.8) -->
+    <path class="curve-thin" d="M 143.3 84.3 Q 213.3 310.1 283.3 84.3"/>
+    <text class="text-label" x="286" y="86">SAC3</text>
+
+    <!-- Min LAC reference -->
+    <line class="guide-line" x1="40" y1="210" x2="300" y2="210"/>
+    <text class="text-label" x="44" y="205">Min LAC</text>
+
+    <!-- Tangency points -->
+    <circle class="point-dot" cx="130" cy="190.8" r="4"/>
+    <circle class="point-dot" cx="180" cy="210" r="4"/>
+    <circle class="point-dot" cx="230" cy="190.8" r="4"/>
+
+    <!-- Optimal scale marker -->
+    <line class="guide-line" x1="180" y1="210" x2="180" y2="330"/>
+    <text class="text-label" x="180" y="346" text-anchor="middle">q*(optimum scale)</text>
+
+    <text class="text-sub" x="180" y="372">SAC2 = the plant that survives in the long run</text>
+    <text class="text-sub" x="180" y="390">LAC touches each SAC from above</text>
+  </g>
+</svg>

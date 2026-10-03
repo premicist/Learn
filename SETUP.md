@@ -37,11 +37,14 @@ You can also edit files under `content/` directly. Run the following before comm
 
 ```bash
 npm run validate-content
+npm run validate-mermaid
 npm run build
 npm run lint
 ```
 
 The validator checks taxonomy references, duplicate IDs, required fields, dates, quiz answer indexes, and YouTube IDs. The build will stop if validation fails.
+
+`npm run validate-mermaid` parses every ` ```mermaid ` block under `content/` with the real Mermaid parser and reports the file, line, and failing token. It runs first in `npm run check`, so a broken diagram fails CI instead of silently showing "(Diagram could not be rendered)" on the site. The usual cause is a node label that contains `( ) [ ] { } , :` or HTML without being wrapped in double quotes: write `S1["Profit (P > SAC)"]`, not `S1[Profit (P > SAC)]`.
 
 ## Deployment workflow
 
@@ -49,7 +52,7 @@ The validator checks taxonomy references, duplicate IDs, required fields, dates,
 
 ## Common problems
 
-If the site shows a blank page under a repository URL, check that `vite.config.ts` has the correct `base` path. If content does not appear under a subject, check the exact `subjectId` and run `npm run validate-content`. If the admin panel looks outdated, confirm that `admin/config.yml` is the source of truth and rebuild so it is synchronized to `public/admin/config.yml`.
+If the site shows a blank page under a repository URL, check that `vite.config.ts` has the correct `base` path. If content does not appear under a subject, check the exact `subjectId` and run `npm run validate-content`. If a diagram shows "(Diagram could not be rendered)", run `npm run validate-mermaid` to find the offending block, then quote the label. If the admin panel looks outdated, confirm that `admin/config.yml` is the source of truth and rebuild so it is synchronized to `public/admin/config.yml`.
 
 ## Scheduled Tests (Phase 2)
 

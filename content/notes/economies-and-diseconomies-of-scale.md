@@ -60,8 +60,8 @@ When an enterprise expands beyond its optimal capacity, organizational friction 
 
 ```mermaid
 flowchart TD
-    EXT[External Scale Forces] --> EX1[<b>External Economies (Industry Clusters)</b><br>• Skilled regional labor pools<br>• Specialized supplier hubs<br>• Shared transport infrastructure]
-    EXT --> EX2[<b>External Diseconomies (Congestion)</b><br>• Bidding wars for local labor &amp; land<br>• Traffic congestion &amp; pollution costs]
+    EXT["External Scale Forces"] --> EX1["<b>External Economies (Industry Clusters)</b><br>• Skilled regional labor pools<br>• Specialized supplier hubs<br>• Shared transport infrastructure"]
+    EXT --> EX2["<b>External Diseconomies (Congestion)</b><br>• Bidding wars for local labor &amp; land<br>• Traffic congestion &amp; pollution costs"]
 ```
 
 ### A. External Economies:

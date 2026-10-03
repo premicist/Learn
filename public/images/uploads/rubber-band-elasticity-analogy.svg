@@ -1,66 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="100%" height="auto" role="img" aria-label="Rubber Band Analogy for Elasticity">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 454" role="img" aria-labelledby="t d" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo4M2JiYjI2Ny00ZjllLTQyOTktODc3NC03Mjk2ZGE5MDExZmMAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaGbz4q21uTiSHvN0M1dJxu4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDplZGQ1ZjM2OS04M2ZiLTQ2NDYtODc4ZC0wZDQ3MDg2YzUwMmJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoqxXG+MLh9RjrU+VMt5k+BAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggJTAl+dTqzb30AnVus5hDKhBPymJm0daRD0fSABVN0wmkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJcpthCqOcU+N2HK0eyiDNMAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDYAFabedOfG7PCjW+NsAwS7yGgWGkWs9JMzT+vuiMTeWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBieZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjgzYmJiMjY3LTRmOWUtNDI5OS04Nzc0LTcyOTZkYTkwMTFmYy9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmNjYjNiMGQzLTUzNTMtNDE5NS1hMWE3LWM5MzU2MmYxNTRkZHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAlMCX51OrNvfQCdW6zmEMqEE/KYmbR1pEPR9IAFU3TCaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggwQfj/9Fqq2hPh8fYdrjeLQvK6CubRQ+oiOQ1empA/NeiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg4rkoBHtyEHQSwsZI4hBBrmq5zY3z4utfZyMHYMritVF0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPOLRBRv3hR4GtNaCXlQfLYl+8VBktQNPgDzQjiOXXU0sJOCXIm6HavEbT1HdOPjbzMlLmdIUE7Z5+EF4lW0FAs=</c2pa:manifest></metadata>
+  <title id="t">लोचको भौतिक दृष्टान्त: रबर ब्यान्डको उदाहरण (Rubber Band Analogy)</title>
+  <desc id="d">उही बल (मूल्य परिवर्तन २०%) लगाउँदा नरम रबर ब्यान्ड ४०% तानिन्छ (Ep = २) तर कडा डोरी १०% मात्र तानिन्छ (Ep = ०.५)। Same pull stretches a soft rubber band 40% but a stiff cord only 10%.</desc>
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#e2e8f0"/><line x1="0" y1="0" x2="0" y2="6" stroke="#94a3b8" stroke-width="2"/>
+    </pattern>
+    <marker id="arrP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0 1 L9 5 L0 9 z" fill="#c2410c"/>
+    </marker>
+  </defs>
   <style>
-    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
-    .card-bg { fill: #f6f8f7; stroke: #dde5e2; stroke-width: 1.5; }
-    .elastic-band { fill: none; stroke: #146b63; stroke-width: 8; stroke-linecap: round; }
-    .inelastic-cord { fill: none; stroke: #b23a2b; stroke-width: 8; stroke-linecap: round; }
-    .arrow { stroke: #122a3a; stroke-width: 2.5; fill: #122a3a; }
-    .text-title { font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; fill: #122a3a; }
-    .text-card-title { font-family: 'Fraunces', Georgia, serif; font-size: 14.5px; font-weight: 700; }
-    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #122a3a; }
-    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #47607a; }
-    .tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; }
+    text { font-family: 'Noto Sans Devanagari', 'Mukta', 'Nirmala UI', 'Mangal', 'Segoe UI', sans-serif; }
+    .main { font-size: 18px; font-weight: 700; fill: #122a3a; }
+    .sub { font-size: 12.5px; font-weight: 500; fill: #475569; }
+    .card { fill: #f6f8f7; stroke: #d3dedb; stroke-width: 1.3; }
+    .ct { font-size: 15.5px; font-weight: 700; }
+    .tg { font-size: 12.5px; font-weight: 600; }
+    .rl { font-size: 12px; font-weight: 600; fill: #475569; }
+    .gd { stroke: #64748b; stroke-width: 1.2; stroke-dasharray: 4 4; }
+    .pull { stroke: #c2410c; stroke-width: 3; stroke-linecap: round; }
+    .dp { font-size: 12.5px; font-weight: 700; fill: #c2410c; text-anchor: middle; }
+    .bq { stroke: #1d4ed8; stroke-width: 1.8; stroke-linecap: round; }
+    .dq { font-size: 12.5px; font-weight: 700; fill: #1d4ed8; text-anchor: middle; }
+    .rs { font-size: 14.5px; font-weight: 700; }
+    .sm { font-size: 12px; font-weight: 700; fill: #122a3a; }
+    .eg { font-size: 11.5px; font-weight: 500; fill: #52667a; }
+    .fn { font-size: 11px; font-weight: 500; fill: #64748b; }
   </style>
 
-  <rect class="bg" width="100%" height="100%" rx="10"/>
-  <text class="text-title" x="35" y="32">लोचको भौतिक दृष्टान्त: रबर ब्यान्डको उदाहरण (Rubber Band Analogy)</text>
-  <text class="text-sub" x="35" y="50">लोच (Elasticity) भनेको बाह्य बल (मूल्य) ले पार्ने प्रभाव अनुसार वस्तुको परिमाणमा आउने तन्काइ वा लचकता हो।</text>
+  <rect x="0.75" y="0.75" width="778.5" height="452.5" rx="12" fill="#ffffff" stroke="#d3dedb" stroke-width="1.5"/>
+  <text class="main" x="30" y="36">लोचको भौतिक दृष्टान्त: रबर ब्यान्डको उदाहरण (Rubber Band Analogy)</text>
+  <text class="sub" x="30" y="59">लोच (Elasticity) भनेको बाह्य बल (मूल्य) ले पार्ने प्रभाव अनुसार वस्तुको परिमाणमा आउने तन्काइ वा लचकता हो।</text>
+  <text class="sub" x="30" y="77"><tspan fill="#c2410c" font-weight="700">सुन्तला: बल = मूल्य परिवर्तन (ΔP)</tspan>   <tspan fill="#1d4ed8" font-weight="700">निलो: तन्काइ = माग परिवर्तन (ΔQ)</tspan></text>
+  
+  <g transform="translate(30, 90)">
+    <rect class="card" width="345" height="328" rx="10"/>
+    <text class="ct" x="20" y="31" fill="#146b63">१. लोचदार अवस्था (Elastic: Ep &gt; 1)</text>
+    <text class="tg" x="20" y="51" fill="#0e4a45">नरम रबर ब्यान्ड (Highly Stretchable)</text>
 
-  <!-- Panel 1: Highly Elastic (Flexible Rubber) -->
-  <g transform="translate(35, 68)">
-    <rect class="card-bg" width="300" height="225" rx="8"/>
-    <text class="text-card-title" x="20" y="28" fill="#146b63">१. लोचदार अवस्था (Elastic: Ep &gt; 1)</text>
-    <text class="tag" x="20" y="46" fill="#0e4a45">नरम रबर ब्यान्ड (Highly Stretchable)</text>
+    <!-- BEFORE -->
+    <text class="rl" x="20" y="84">सुरुको अवस्था (Initial)</text>
+    <rect x="22" y="92" width="12" height="40" rx="2" fill="url(#hatch)" stroke="#64748b" stroke-width="1.2"/><line x1="34" y1="112" x2="46" y2="112" stroke="#64748b" stroke-width="2"/>
+    <path d="M 46 103.5 H 166 A 8.5 8.5 0 0 1 166 120.5 H 46 A 8.5 8.5 0 0 1 46 103.5 Z" fill="none" stroke="#146b63" stroke-width="5" stroke-linejoin="round" opacity="1.0"/><path d="M 46 103.5 H 166 A 8.5 8.5 0 0 1 166 120.5 H 46 A 8.5 8.5 0 0 1 46 103.5 Z" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.35"/>
+    <circle cx="46" cy="112" r="5.5" fill="#ffffff" stroke="#334155" stroke-width="2"/><circle cx="166" cy="112" r="5.5" fill="#ffffff" stroke="#334155" stroke-width="2"/>
 
-    <!-- Normal Band State -->
-    <text class="text-sub" x="20" y="80">सुरुको अवस्था (Initial):</text>
-    <path d="M 120 76 Q 150 60 180 76 Q 150 92 120 76" class="elastic-band" opacity="0.4"/>
+    <!-- guide marking the relaxed length -->
+    <line class="gd" x1="166" y1="126" x2="166" y2="222"/>
 
-    <!-- Stretched Band State -->
-    <text class="text-sub" x="20" y="130">मूल्य परिवर्तन हुँदा (Stretched):</text>
-    <path d="M 60 135 Q 150 100 240 135 Q 150 170 60 135" class="elastic-band"/>
+    <!-- AFTER (same pull) -->
+    <text class="rl" x="20" y="152">मूल्य परिवर्तन हुँदा (Stretched)</text>
+    <rect x="22" y="164" width="12" height="40" rx="2" fill="url(#hatch)" stroke="#64748b" stroke-width="1.2"/><line x1="34" y1="184" x2="46" y2="184" stroke="#64748b" stroke-width="2"/>
+    <path d="M 46 175.5 H 214 A 8.5 8.5 0 0 1 214 192.5 H 46 A 8.5 8.5 0 0 1 46 175.5 Z" fill="none" stroke="#146b63" stroke-width="3.4" stroke-linejoin="round" opacity="1.0"/><path d="M 46 175.5 H 214 A 8.5 8.5 0 0 1 214 192.5 H 46 A 8.5 8.5 0 0 1 46 175.5 Z" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.35"/>
+    <circle cx="46" cy="184" r="5.5" fill="#ffffff" stroke="#334155" stroke-width="2"/><circle cx="214" cy="184" r="5.5" fill="#fde7d8" stroke="#334155" stroke-width="2"/>
 
-    <!-- Pull arrows -->
-    <line x1="50" y1="135" x2="30" y2="135" class="arrow"/>
-    <polygon points="25,135 35,130 35,140" fill="#122a3a"/>
-    <line x1="250" y1="135" x2="270" y2="135" class="arrow"/>
-    <polygon points="275,135 265,130 265,140" fill="#122a3a"/>
+    <!-- pull arrow: identical in both cards (orange = price change) -->
+    <line class="pull" x1="232" y1="184" x2="294" y2="184" marker-end="url(#arrP)"/>
+    <text class="dp" x="263" y="174">ΔP +२०%</text>
 
-    <text class="text-label" x="20" y="195" fill="#146b63">सानो मूल्य परिवर्तन (ΔP) ⇒ धेरै ठूलो माग परिवर्तन (ΔQ)</text>
-    <text class="text-sub" x="20" y="212">उदाहरण: विलासिताका सामान (कार, सुन, स्मार्टफोन)</text>
+    <!-- stretch bracket (blue = quantity change) -->
+    <line class="bq" x1="166" y1="218" x2="214" y2="218"/>
+    <line class="bq" x1="166" y1="212" x2="166" y2="224"/>
+    <line class="bq" x1="214" y1="212" x2="214" y2="224"/>
+    <text class="dq" x="190.0" y="239">ΔQ +४०%</text>
+
+    <!-- result -->
+    <line x1="20" y1="256" x2="325" y2="256" stroke="#dbe4e0" stroke-width="1.2"/>
+    <text class="rs" x="20" y="277" fill="#146b63">Ep = ४० ÷ २० = २  (&gt; १)</text>
+    <text class="sm" x="20" y="297">उही मूल्य परिवर्तन (ΔP) ⇒ ठूलो माग परिवर्तन (ΔQ)</text>
+    <text class="eg" x="20" y="315">उदाहरण: विलासिताका सामान (कार, सुन, स्मार्टफोन)</text>
   </g>
+  
+  <g transform="translate(405, 90)">
+    <rect class="card" width="345" height="328" rx="10"/>
+    <text class="ct" x="20" y="31" fill="#b23a2b">२. बेलोचदार अवस्था (Inelastic: Ep &lt; 1)</text>
+    <text class="tg" x="20" y="51" fill="#781d13">कडा डोरी (Rigid Cord / Stiff Band)</text>
 
-  <!-- Panel 2: Highly Inelastic (Stiff / Rigid Cord) -->
-  <g transform="translate(365, 68)">
-    <rect class="card-bg" width="300" height="225" rx="8"/>
-    <text class="text-card-title" x="20" y="28" fill="#b23a2b">२. बेलोचदार अवस्था (Inelastic: Ep &lt; 1)</text>
-    <text class="tag" x="20" y="46" fill="#781d13">कडा डोरी (Rigid Cord / Stiff Band)</text>
+    <!-- BEFORE -->
+    <text class="rl" x="20" y="84">सुरुको अवस्था (Initial)</text>
+    <rect x="22" y="92" width="12" height="40" rx="2" fill="url(#hatch)" stroke="#64748b" stroke-width="1.2"/><line x1="34" y1="112" x2="46" y2="112" stroke="#64748b" stroke-width="2"/>
+    <path d="M 46 103.5 H 166 A 8.5 8.5 0 0 1 166 120.5 H 46 A 8.5 8.5 0 0 1 46 103.5 Z" fill="none" stroke="#b23a2b" stroke-width="8" stroke-linejoin="round" opacity="1.0"/><path d="M 46 103.5 H 166 A 8.5 8.5 0 0 1 166 120.5 H 46 A 8.5 8.5 0 0 1 46 103.5 Z" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-dasharray="3 5" opacity="0.55"/>
+    <circle cx="46" cy="112" r="5.5" fill="#ffffff" stroke="#334155" stroke-width="2"/><circle cx="166" cy="112" r="5.5" fill="#ffffff" stroke="#334155" stroke-width="2"/>
 
-    <!-- Normal Cord State -->
-    <text class="text-sub" x="20" y="80">सुरुको अवस्था (Initial):</text>
-    <path d="M 120 76 Q 150 60 180 76 Q 150 92 120 76" class="inelastic-cord" opacity="0.4"/>
+    <!-- guide marking the relaxed length -->
+    <line class="gd" x1="166" y1="126" x2="166" y2="222"/>
 
-    <!-- Stretched Cord State (Hardly Stretches) -->
-    <text class="text-sub" x="20" y="130">मूल्य परिवर्तन हुँदा (Resists Stretch):</text>
-    <path d="M 110 135 Q 150 115 190 135 Q 150 155 110 135" class="inelastic-cord"/>
+    <!-- AFTER (same pull) -->
+    <text class="rl" x="20" y="152">मूल्य परिवर्तन हुँदा (Resists Stretch)</text>
+    <rect x="22" y="164" width="12" height="40" rx="2" fill="url(#hatch)" stroke="#64748b" stroke-width="1.2"/><line x1="34" y1="184" x2="46" y2="184" stroke="#64748b" stroke-width="2"/>
+    <path d="M 46 175.5 H 178 A 8.5 8.5 0 0 1 178 192.5 H 46 A 8.5 8.5 0 0 1 46 175.5 Z" fill="none" stroke="#b23a2b" stroke-width="8" stroke-linejoin="round" opacity="1.0"/><path d="M 46 175.5 H 178 A 8.5 8.5 0 0 1 178 192.5 H 46 A 8.5 8.5 0 0 1 46 175.5 Z" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-dasharray="3 5" opacity="0.55"/>
+    <circle cx="46" cy="184" r="5.5" fill="#ffffff" stroke="#334155" stroke-width="2"/><circle cx="178" cy="184" r="5.5" fill="#fde7d8" stroke="#334155" stroke-width="2"/>
 
-    <!-- Pull arrows -->
-    <line x1="100" y1="135" x2="70" y2="135" class="arrow"/>
-    <polygon points="65,135 75,130 75,140" fill="#122a3a"/>
-    <line x1="200" y1="135" x2="230" y2="135" class="arrow"/>
-    <polygon points="235,135 225,130 225,140" fill="#122a3a"/>
+    <!-- pull arrow: identical in both cards (orange = price change) -->
+    <line class="pull" x1="196" y1="184" x2="258" y2="184" marker-end="url(#arrP)"/>
+    <text class="dp" x="227" y="174">ΔP +२०%</text>
 
-    <text class="text-label" x="20" y="195" fill="#b23a2b">ठूलो मूल्य परिवर्तन (ΔP) ⇒ थोरै मात्र माग परिवर्तन (ΔQ)</text>
-    <text class="text-sub" x="20" y="212">उदाहरण: अत्यावश्यक वस्तुहरू (नुन, खाद्यान्न, औषधि)</text>
+    <!-- stretch bracket (blue = quantity change) -->
+    <line class="bq" x1="166" y1="218" x2="178" y2="218"/>
+    <line class="bq" x1="166" y1="212" x2="166" y2="224"/>
+    <line class="bq" x1="178" y1="212" x2="178" y2="224"/>
+    <text class="dq" x="172.0" y="239">ΔQ +१०%</text>
+
+    <!-- result -->
+    <line x1="20" y1="256" x2="325" y2="256" stroke="#dbe4e0" stroke-width="1.2"/>
+    <text class="rs" x="20" y="277" fill="#b23a2b">Ep = १० ÷ २० = ०.५  (&lt; १)</text>
+    <text class="sm" x="20" y="297">उही मूल्य परिवर्तन (ΔP) ⇒ थोरै मात्र माग परिवर्तन (ΔQ)</text>
+    <text class="eg" x="20" y="315">उदाहरण: अत्यावश्यक वस्तुहरू (नुन, खाद्यान्न, औषधि)</text>
   </g>
+  <text class="fn" x="30" y="440">नोट: मूल्य बढ्दा माग घट्छ; यहाँ परिवर्तनको आकार (निरपेक्ष मान) मात्र देखाइएको छ। Ep = |%ΔQ ÷ %ΔP|। उदाहरणात्मक मान।</text>
 </svg>
