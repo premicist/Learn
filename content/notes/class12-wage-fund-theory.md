@@ -1,103 +1,132 @@
 ---
 subjectId: class-12
-title: Wage Fund Theory of Wages
-summary: "Wage Fund Theory states that average wages are determined by dividing
-  a predetermined wage fund by the number of workers employed: (W = Total Wage
-  Fund / No. of Workers) . It explains why average wages fall when more workers
-  share a fixed fund. However, the theory is unrealistic because the wage fund
-  is not always fixed, workers are not homogeneous, wages are not perfectly
-  flexible, and labour demand depends on product demand, productivity, and
-  institutions. Thus, it is mainly important as a classical theory of wages."
-date: 2026-08-25
-slidesEnabled: false
-slideControls:
-  mode: bullets
-  maxPoints: 3
-  includeQuickCheck: false
+title: "The Wage Fund Theory of Wages"
+summary: "Understand J.S. Mill's classical Wage Fund Theory of Wages, formula, tabular schedule, inverse relationship between workers and wage rate, assumptions, and critical evaluation in question-answer format."
+date: "2026-10-03"
 unitId: class12-u2-4
 ---
-## What it is?
 
-The **Wage Fund Theory** is a classical theory of wage determination mainly associated with **J. S. Mill**. It assumes that employers set aside a fixed amount of capital or wealth for paying workers during a particular period. This predetermined amount is called the **wage fund**.
+## Overview
 
-The theory says that the average wage depends on two things: the total wage fund and the number of workers employed. When the wage fund is fixed, employing more workers means that the same amount must be shared among more people. The average wage therefore falls.
+The **Wage Fund Theory of Wages** is a prominent classical theory of wage determination developed by the British economist **John Stuart Mill (J. S. Mill)** in his book *Principles of Political Economy* (1848), building upon ideas from Adam Smith. The theory explains how average wages are determined by the ratio between a fixed capital fund and the total working population.
 
-> **Average wage = Total wage fund ÷ Number of workers employed**
-
-In symbols:
-
-```learn-formula
-{"title":"Average wage","expression":"W = \\frac{WF}{N}","explanation":"Average wage equals the total wage fund divided by the number of workers employed."}
+```mermaid
+flowchart TD
+    WF["<b>Wage Fund Theory (J.S. Mill - 1848)</b>"]
+    WF --> Formula["<b>Core Formula:</b><br>Average Wage Rate (AWR) = Total Wage Fund (WF) / Number of Workers (NW)"]
+    WF --> Inverse["<b>Inverse Relationship:</b><br>If Wage Fund is FIXED:<br>More Workers ? Lower Average Wage<br>Fewer Workers ? Higher Average Wage"]
+    WF --> TradeUnion["<b>Implication on Trade Unions:</b><br>One group of workers can gain higher wages ONLY at the expense of others"]
 ```
 
-Here, **W** means average wage, **WF** means the wage fund, and **N** means the number of workers employed.
+---
 
-## How the theory works?
+## Part 1: Meaning and Mathematical Formula
 
-Suppose a total wage fund of Rs. 1,00,00,000 is available. If 50,000 workers are employed, each worker receives an average wage of Rs. 200. If employment rises to 1,00,000 workers while the fund remains unchanged, the average wage falls to Rs. 100.
+### Q1. What is the Wage Fund Theory of Wages? State its formula.
+**Answer:**
+**Definition:**
+> The **Wage Fund Theory** states that wages depend on the proportion between the physical capital and funds set aside by employers for the direct payment of labour (**the Wage Fund**) and the total number of labourers seeking employment (**Number of Workers**).
 
-```learn-table
-{"title":"Wage fund and average wage","columns":["Total wage fund","Number of workers","Average wage"],"rows":[["Rs. 1,00,00,000",50000,"Rs. 200.00"],["Rs. 1,00,00,000",100000,"Rs. 100.00"],["Rs. 1,00,00,000",150000,"Rs. 66.67"]]}
+#### The Formula:
+$$\mathbf{	ext{Average Wage Rate (AWR)} = rac{	ext{Total Wage Fund (WF)}}{	ext{Number of Workers (NW)}}}$$
+$$	ext{or} \quad W = rac{WF}{N}$$
+
+Where:
+* **$W$ (or $AWR$):** Average Wage Rate per worker
+* **$WF$:** Predetermined Total Wage Fund allocated by capitalists
+* **$N$ (or $NW$):** Total number of workers employed in the economy
+
+---
+
+## Part 2: Working Mechanism and Schedule
+
+### Q2. Explain the working mechanism of the Wage Fund Theory with the help of a schedule and diagram.
+**Answer:**
+According to J.S. Mill, the total wage fund is fixed in advance at the beginning of the production period. Therefore, there is an **exact inverse relationship** between the size of the working population and the average wage rate:
+
+#### Schedule Demonstrating the Wage Fund Mechanism:
+
+Suppose the predetermined Wage Fund is fixed at **Rs. 20,000**:
+
+| Total Wage Fund ($WF$) [Rs.] | Number of Workers ($NW$) | Average Wage Rate ($W = rac{WF}{NW}$) [Rs.] | Impact on Living Standard |
+| :---: | :---: | :---: | :---: |
+| **Rs. 20,000** | $100$ | $rac{20,000}{100} = \mathbf{	ext{Rs. 200}}$ | High living standard |
+| **Rs. 20,000** | $200$ | $rac{20,000}{200} = \mathbf{	ext{Rs. 100}}$ | Moderate living standard |
+| **Rs. 20,000** | $400$ | $rac{20,000}{400} = \mathbf{	ext{Rs. 50}}$ | Low living standard |
+
+```
+Average Wage (Rs.)
+   |
+200 +  * (100, 200)
+    |   100 +    \   * (200, 100)
+    |      50 +      \--------* (400, 50)  Downward-Sloping Wage Curve
+    |
+  0 +------+--------+--------+----------> Number of Workers (NW)
+    0     100      200      400
 ```
 
-The table shows an **inverse relationship** between the number of workers and the average wage when the wage fund remains constant.
-
-```learn-graph
-{"title":"Average wage falls as employment rises","xLabel":"Number of workers","yLabel":"Average wage","points":[[50000,200],[100000,100],[150000,66.67]]}
+```mermaid
+flowchart LR
+    WFFixed["<b>Fixed Wage Fund = Rs. 20,000</b>"]
+    WFFixed -->|100 Workers| W200["Wage = Rs. 200/worker"]
+    WFFixed -->|200 Workers| W100["Wage = Rs. 100/worker"]
+    WFFixed -->|400 Workers| W50["Wage = Rs. 50/worker"]
 ```
 
-The graph places average wage on the vertical axis and the number of workers on the horizontal axis. The curve slopes downward: as employment increases, the average wage decreases.
+#### Ways to Increase Wages (According to Mill):
+Under this theory, the average wage rate can be increased in only two ways:
+1. **By expanding the Total Wage Fund ($WF$):** Accumulating more national capital and savings.
+2. **By reducing the Number of Workers ($NW$):** Controlling population growth or family size.
 
-## Main assumptions
+---
 
-The theory depends on several restrictive assumptions. 
+## Part 3: Key Assumptions of the Theory
 
-* First, it assumes that the wage fund is determined before workers are employed and remains fixed for the relevant period. 
-* Second, it assumes that labour is homogeneous, so workers have equal skills and efficiency and receive equal wages. 
-* Third, wages are assumed to be flexible enough to rise or fall whenever the number of workers changes.
+### Q3. State the main assumptions of the Wage Fund Theory.
+**Answer:**
+1. **Fixed Wage Fund in Advance:** The total fund available for paying wages is predetermined and fixed before hiring takes place.
+2. **Homogeneous Labour:** All labourers are identical in physical capability, skill, and productivity.
+3. **Uniform Wage Rate:** Every worker receives an identical average wage rate ($W$).
+4. **Perfect Wage Flexibility:** Wages can adjust freely up or down to ensure all available workers are employed.
+5. **Money as a Medium of Exchange:** Money functions solely as a means to distribute the predetermined physical fund.
 
-The theory also treats money mainly as a medium of exchange. It gives little attention to how money, credit, investment, expected sales, and productivity can affect employment and wage payments in a modern economy.
+---
 
-## Why the theory is important
+## Part 4: Critical Evaluation of the Theory
 
-Wage Fund Theory is historically important because it connects **capital accumulation**, **employment**, and **wages**. Its basic lesson is that an expanding labour force alone cannot raise average wages when the resources available for wage payment do not expand at the same time.
+### Q4. What are the major criticisms of the Wage Fund Theory? Why did J. S. Mill himself recant it?
+**Answer:**
 
-It also provides a simple formula that helps learners distinguish a direct relationship from an inverse relationship. The average wage rises when the wage fund rises, but falls when the number of workers rises while the fund remains unchanged.
-
-
-
-## Criticisms of the theory
-
-### 1. The wage fund is not fixed
-
-In real economies, employers do not usually keep one permanently predetermined fund for wages. Wage payments can change with output, sales expectations, productivity, prices, savings, investment, and access to credit.
-
-### 2. Labour is not homogeneous
-
-Workers differ in education, skill, experience, health, training, occupation, and efficiency. As a result, they do not receive equal wages, even when they work in the same organisation.
-
-### 3. Wages are not perfectly flexible
-
-Wages do not always fall easily when the labour supply increases. Employment contracts, minimum-wage laws, trade unions, collective bargaining, and workers’ resistance can prevent or slow wage reductions.
-
-### 4. Demand for labour depends on product demand
-
-Firms employ labour because they expect to sell goods and services. Therefore, labour demand is influenced by the demand for the final product, productivity, technology, and expected profit—not only by a fixed wage fund.
-
-### 5. It ignores bargaining power and institutions
-
-Actual wage rates are influenced by negotiations between workers and employers, labour legislation, social security, working conditions, and the bargaining power of trade unions. These influences are absent from the theory.
-
-## Conclusion
-
-Wage Fund Theory states that average wages are determined by dividing a predetermined wage fund by the number of workers employed: (W = \frac{WF}{N} ). It explains why average wages fall when more workers share a fixed fund. However, the theory is unrealistic because the wage fund is not always fixed, workers are not homogeneous, wages are not perfectly flexible, and labour demand depends on product demand, productivity, and institutions. Thus, it is mainly important as a classical theory of wages.
-
-## Quick check
-
-If a wage fund of Rs. 60,00,000 is shared by 30,000 workers, what is the average wage? Explain what happens to the average wage if the number of workers doubles while the wage fund stays unchanged.
-
-For a related foundation note, review:
-
-```learn-resource
-{"resourceType":"note","resourceId":"class11-economic-basics","label":"Class 11 economic basics"}
+```mermaid
+flowchart TD
+    Crit["<b>Major Criticisms of Wage Fund Theory</b>"]
+    Crit --> C1["<b>1. Wage Fund is NOT Fixed:</b> Wages are paid from current output/revenue, not a static pot"]
+    Crit --> C2["<b>2. Ignores Labour Productivity & Skill:</b> Skilled workers earn more than unskilled workers"]
+    Crit --> C3["<b>3. Ignores Labour Demand:</b> Focuses solely on dividing a fund among labour supply"]
+    Crit --> C4["<b>4. Anti-Trade Union Bias:</b> Disproved by collective bargaining success"]
+    Crit --> C5["<b>5. Recantation by Mill:</b> Mill himself admitted in 1869 that the fund is flexible"]
 ```
+
+1. **The Wage Fund is Not Fixed:**
+   * In modern business, wages are paid out of **current production and sales revenues**, not from an unchangeable, rigid fund set aside in advance. When business expands, the wage bill expands.
+2. **Ignores Labour Productivity and Skill Differences:**
+   * It assumes all workers receive the same wage. In reality, a surgeon, pilot, or software architect earns significantly more than an unskilled labourer because of differences in **education, productivity, and skill**.
+3. **One-Sided Supply Approach:**
+   * The theory treats labour demand as a passive arithmetic division, ignoring that the demand for labour depends on **Marginal Revenue Productivity ($MRP$)** and consumer demand for the final goods.
+4. **False Belief on Trade Unions:**
+   * The theory claimed trade unions could never raise overall wages (arguing that higher wages for one union would leave less for non-union workers). Modern history proves collective bargaining can increase labour's share of national income by reducing excessive corporate profits.
+5. **J. S. Mill's Recantation (1869):**
+   * In 1869, J. S. Mill publicly retracted his own theory after economist W. T. Thornton demonstrated that capital funds are flexible and employers can adjust profits and prices to accommodate higher wages.
+
+---
+
+## Quick Revision Check
+
+1. **Who formulated the Wage Fund Theory of Wages?**  
+   *John Stuart Mill (J. S. Mill) in 1848.*
+2. **What is the mathematical formula of the Wage Fund Theory?**  
+   *$	ext{Average Wage Rate} = rac{	ext{Total Wage Fund}}{	ext{Number of Workers}}$.*
+3. **According to the theory, what happens to wages when the labour force doubles under a constant fund?**  
+   *The average wage rate is cut in half ($50\%$ decrease).*
+4. **Why did J.S. Mill recant the theory in 1869?**  
+   *Because he recognized that the wage fund is not fixed and employers can adjust profits to pay higher wages.*

@@ -684,21 +684,45 @@ curricula:
         unitGroup: "Unit 1: Basic Concepts of Economics and Allocation of Resources"
         order: 1
         title: "Unit 1.1: Basic Concepts of Economics and Allocation of Resources"
-        summary: Revisit economic choice, compare economic systems, and use the
-          production possibility curve.
-        estimatedMinutes: 90
+        summary: Study the origin and definitions of economics, central allocation problems, opportunity cost and PPC, division of labour, and economic systems.
+        estimatedMinutes: 150
         outcomes:
-          - Explain the central allocation problems of an economy.
-          - Compare market, command, and mixed economic systems.
-          - Interpret production possibility curves and opportunity cost.
+          - Explain the origin and major definitions of economics.
+          - Identify the central allocation problems of an economy (What, How, and For Whom to produce).
+          - Calculate opportunity cost and interpret the production possibility curve (PPC).
+          - Explain the forms, advantages, and disadvantages of division and specialization of labour.
+          - Compare market, command, and mixed economic systems, and explain the mixed economic system of Nepal.
         lessons:
-          - id: class12-foundations-note
-            title: Economic systems and the production possibility curve
+          - id: class12-introduction-origin
+            title: "1. Introduction and Origin of Economics"
             resourceType: note
-            resourceId: class12-economic-system-ppc
-            estimatedMinutes: 35
-            description: Compare economic systems and read choice, efficiency, and growth
-              from a production possibility curve.
+            resourceId: class12-introduction-and-origin
+            estimatedMinutes: 25
+            description: Explore Greek etymology, the four definitions (Smith, Marshall, Robbins, Samuelson), and micro vs macroeconomics.
+          - id: class12-central-economic-problems
+            title: "2. Central Economic Problems & Resource Allocation"
+            resourceType: note
+            resourceId: class12-central-economic-problems
+            estimatedMinutes: 25
+            description: Understand scarcity, choice, resource allocation, and What, How, and For Whom to Produce.
+          - id: class12-opportunity-cost-ppc
+            title: "3. Opportunity Cost and Production Possibility Curve (PPC)"
+            resourceType: note
+            resourceId: class12-opportunity-cost-and-ppc
+            estimatedMinutes: 30
+            description: Master opportunity cost, PPC assumptions, schedule, MRT calculation, concavity, and causes of PPC shifts.
+          - id: class12-division-specialization-labour
+            title: "4. Division and Specialization of Labour"
+            resourceType: note
+            resourceId: class12-division-and-specialization-of-labour
+            estimatedMinutes: 25
+            description: Study forms of division of labour, worker specialization, merits, demerits, and determinants of labour efficiency.
+          - id: class12-economic-systems
+            title: "5. Economic Systems and the Nepalese Economic System"
+            resourceType: note
+            resourceId: class12-economic-systems
+            estimatedMinutes: 30
+            description: Compare Capitalism, Socialism, and Mixed Economies, and examine Nepal's three-pillar mixed economic system.
           - id: class12-foundations-check
             title: Allocation and systems check
             resourceType: quiz
@@ -710,36 +734,94 @@ curricula:
         unitGroup: "Unit 2: Microeconomics"
         order: 2
         title: "Unit 2.1: Market and Revenue Curve"
-        summary: Connect market demand with total, average, and marginal revenue.
-        estimatedMinutes: 35
+        summary: Study market concepts, market structures, formulas and relationships of TR, AR, and MR under perfect competition and monopoly, with worked numerical problems.
+        estimatedMinutes: 140
         outcomes:
-          - Calculate and interpret total, average, and marginal revenue.
-          - Distinguish revenue curves across market structures.
+          - Define a market in economics and classify markets by area, time, and competition.
+          - Calculate and interpret Total Revenue (TR), Average Revenue (AR), and Marginal Revenue (MR).
+          - Derive and explain the shapes and relationships of revenue curves under Perfect Competition.
+          - Derive and explain downward-sloping revenue curves and inverted U-shaped TR under Monopoly.
+          - Solve table completions, missing value puzzles, and revenue optimization problems accurately.
         lessons:
-          - id: class12-market-revenue
-            title: Market and revenue curves
+          - id: class12-market-concept-classification
+            title: "1. Concept and Classification of Market"
             resourceType: note
-            resourceId: class12-market-revenue
+            resourceId: class12-market-concept-and-classification
+            estimatedMinutes: 25
+            description: Explore the economic definition of market, essential elements, and classifications (Area, Time, Competition structures).
+          - id: class12-revenue-concepts-tr-ar-mr
+            title: "2. Concept of TR, AR, and MR"
+            resourceType: note
+            resourceId: class12-revenue-concepts-tr-ar-mr
+            estimatedMinutes: 25
+            description: Master formulas, derivations, schedules, and general interrelationships of Total, Average, and Marginal Revenue.
+          - id: class12-revenue-curves-perfect-competition
+            title: "3. Revenue Curves Under Perfect Competition"
+            resourceType: note
+            resourceId: class12-revenue-curves-perfect-competition
+            estimatedMinutes: 25
+            description: Understand constant price, horizontal AR=MR=P curve, linear TR ray, and competitive revenue relationships.
+          - id: class12-revenue-curves-monopoly
+            title: "4. Revenue Curves Under Monopoly"
+            resourceType: note
+            resourceId: class12-revenue-curves-monopoly
+            estimatedMinutes: 30
+            description: Learn why price falls with output, inverted U-shaped TR, downward-sloping AR/MR, and why MR lies below AR.
+          - id: class12-revenue-numerical-problems
+            title: "5. Numerical Problems on Revenue Curves"
+            resourceType: note
+            resourceId: class12-revenue-numerical-problems
             estimatedMinutes: 35
-            description: Connect market demand with total, average, and marginal revenue.
+            description: Solve table completions, missing value puzzles, optimization equations, and elasticity problems step-by-step.
       - id: class12-u2-2
         unitGroup: "Unit 2: Microeconomics"
         order: 3
         title: "Unit 2.2: Cost Curves"
-        summary: Build cost tables and explain the relationships among average and
-          marginal costs.
-        estimatedMinutes: 50
+        summary: Study basic cost concepts, short-run costs (TC, AC, MC), curve interrelationships, geometric derivations, and long-run envelope curves.
+        estimatedMinutes: 135
         outcomes:
-          - Distinguish fixed, variable, average, and marginal cost.
-          - Explain short-run and long-run cost curves and their relationships.
+          - Distinguish explicit, implicit, economic, accounting, fixed, and variable costs.
+          - Calculate and interpret TFC, TVC, TC, AFC, AVC, AC, and MC using formulas and schedules.
+          - Explain why MC cuts AC and AVC at their minimum points and why cost curves are U-shaped.
+          - Derive short-run total and per-unit cost curves geometrically.
+          - Derive the Long-Run Average Cost (LAC) envelope curve and explain economies of scale.
         lessons:
-          - id: class12-cost-curves
-            title: Cost concepts and cost curves
+          - id: class12-cost-basic-concepts
+            title: "1. Basic Concepts of Cost"
             resourceType: note
-            resourceId: class12-cost-curves
-            estimatedMinutes: 35
-            description: Build cost tables and explain the relationships among average and
-              marginal costs.
+            resourceId: class12-cost-basic-concepts
+            estimatedMinutes: 25
+            description: Explore money cost, real cost, explicit vs implicit costs, accounting vs economic profit, and fixed vs variable costs.
+          - id: class12-cost-tc-mc-ac
+            title: "2. The Concepts of TC, MC, and AC"
+            resourceType: note
+            resourceId: class12-cost-tc-mc-ac
+            estimatedMinutes: 25
+            description: Master formulas, schedules, and definitions of TFC, TVC, TC, AFC, AVC, AC, and MC.
+          - id: class12-cost-relation-mc-avc-ac
+            title: "3. Relationship Between MC, AVC, and AC"
+            resourceType: note
+            resourceId: class12-cost-relation-mc-avc-ac
+            estimatedMinutes: 25
+            description: Understand why MC cuts AC and AVC at their lowest points, why curves never touch, and the Law of Variable Proportions.
+          - id: class12-cost-short-run-curves
+            title: "4. Short-Run Cost Curves and Derivations"
+            resourceType: note
+            resourceId: class12-cost-short-run-curves
+            estimatedMinutes: 30
+            description: Derive TFC, TVC, TC, AFC, AVC, AC, and MC geometrically and examine their short-run shapes.
+          - id: class12-cost-long-run-curves
+            title: "5. The Long-Run Cost Curves"
+            resourceType: note
+            resourceId: class12-cost-long-run-curves
+            estimatedMinutes: 30
+            description: Examine the planning horizon, derivation of the LAC envelope curve, LMC, and economies/diseconomies of scale.
+          - id: class12-cost-numerical-problems
+            title: "6. Numerical Problems on Cost Curves"
+            resourceType: note
+            resourceId: class12-cost-numerical-problems
+            estimatedMinutes: 30
+            description: Solve short-run cost table completions, missing value puzzles, and cost function derivatives step-by-step.
           - id: class12-micro-check
             title: Microeconomics practice
             resourceType: quiz
@@ -751,28 +833,45 @@ curricula:
         unitGroup: "Unit 2: Microeconomics"
         order: 4
         title: "Unit 2.3: Theory of Price and Output Determination"
-        summary: Compare perfect and imperfect competition using equilibrium, profit,
-          and market-power reasoning.
-        estimatedMinutes: 85
+        summary: Master firm and industry equilibrium concepts, TR-TC and MR-MC approaches, short-run and long-run price determination under Perfect Competition and Monopoly, and numerical optimization.
+        estimatedMinutes: 140
         outcomes:
-          - Explain the assumptions and equilibrium of perfect competition.
-          - Compare monopoly and other imperfectly competitive markets.
-          - Determine firm output using the marginal-revenue and marginal-cost condition.
+          - Define equilibrium and distinguish between a firm and an industry.
+          - Apply the TR-TC and MR-MC approaches to find the profit-maximizing output of a firm.
+          - Determine short-run (supernormal profit, normal profit, loss, shutdown) and long-run equilibrium under Perfect Competition.
+          - Determine short-run and long-run equilibrium under Monopoly and evaluate monopoly power.
+          - Solve mathematical and algebraic problems on firm equilibrium and shutdown criteria.
         lessons:
-          - id: class12-perfect-competition
-            title: Price and output under perfect competition
+          - id: class12-price-output-concept-equilibrium
+            title: "1. Concept of Equilibrium"
             resourceType: note
-            resourceId: class12-perfect-competition
-            estimatedMinutes: 35
-            description: Use price, marginal revenue, marginal cost, and shutdown reasoning
-              to explain firm equilibrium.
-          - id: class12-imperfect-competition
-            title: Price and output under imperfect competition
+            resourceId: class12-price-output-concept-of-equilibrium
+            estimatedMinutes: 20
+            description: Explore the economic meaning of equilibrium, firm vs industry, partial vs general equilibrium, and market price balance.
+          - id: class12-price-output-firm-equilibrium-approaches
+            title: "2. Equilibrium of the Firm (TR-TC & MR-MC Approaches)"
             resourceType: note
-            resourceId: class12-imperfect-competition
+            resourceId: class12-price-output-firm-equilibrium-approaches
+            estimatedMinutes: 25
+            description: Master profit maximization under the TR-TC gap method and the MR=MC necessary and sufficient conditions.
+          - id: class12-price-output-perfect-competition
+            title: "3. Price and Output Determination: Perfect Competition"
+            resourceType: note
+            resourceId: class12-price-output-perfect-competition
+            estimatedMinutes: 30
+            description: Analyze short-run supernormal profit, normal profit, loss, shutdown points, and long-run competitive equilibrium.
+          - id: class12-price-output-monopoly
+            title: "4. Price and Output Determination: Monopoly"
+            resourceType: note
+            resourceId: class12-price-output-monopoly
+            estimatedMinutes: 30
+            description: Examine monopoly pricing power, short-run profit states, sustained long-run supernormal profit, and comparison with competition.
+          - id: class12-price-output-numerical-problems
+            title: "5. Numerical Problems on Price and Output Determination"
+            resourceType: note
+            resourceId: class12-price-output-numerical-problems
             estimatedMinutes: 35
-            description: Compare monopoly and other imperfectly competitive markets through
-              demand and revenue curves.
+            description: Calculate equilibrium outputs, shutdown decisions, profit maximization, and calculus-based revenue-cost models.
           - id: class12-price-output-check
             title: Price and output practice
             resourceType: quiz
@@ -784,61 +883,58 @@ curricula:
         unitGroup: "Unit 2: Microeconomics"
         order: 5
         title: "Unit 2.4: Price Determination of Factors of Production"
-        summary: Study how land, labour, capital, and entrepreneurship are rewarded in
-          the distribution of income.
-        estimatedMinutes: 195
+        summary: Study the four factors of production, factor reward types (Rent, Wages, Interest, Profit), the Ricardian theory of rent, classical wage theories, classical interest theory, and profit theories.
+        estimatedMinutes: 205
         outcomes:
-          - Explain rent and the Ricardian theory.
-          - Evaluate classical wage theories (subsistence and wage-fund).
-          - Explain classical interest rate determination and the risk-bearing theory of profit.
+          - Explain the four factors of production and the concept of functional distribution.
+          - Distinguish Economic vs Contract Rent, Nominal vs Real Wage, Gross vs Net Interest, and Gross vs Net Profit.
+          - Explain the Ricardian Theory of Rent under extensive and intensive cultivation.
+          - Evaluate the Subsistence Theory of Wages and the Wage Fund Theory of Wages.
+          - Explain the Classical Theory of Interest and Keynesian criticisms.
+          - Compare Hawley's Risk-Bearing Theory with Knight's Uncertainty-Bearing Theory of Profit.
         lessons:
-          - id: class12-factor-pricing-note
-            title: Factor pricing and the Ricardian theory of rent
+          - id: class12-factors-of-production-concepts
+            title: "1. Basic Concepts of Factors of Production"
             resourceType: note
-            resourceId: factor-pricing-rent-concept
-            estimatedMinutes: 40
-            description: Review rent and the Ricardian theory, then connect them to wages,
-              interest, and profit.
-          - id: class12-factor-pricing-extension
-            title: Factor rewards and distribution
+            resourceId: class12-factors-of-production-concepts
+            estimatedMinutes: 25
+            description: Explore the four factors of production (Land, Labour, Capital, Organisation), derived demand, and functional distribution.
+          - id: class12-factor-rewards-rent-wage-interest-profit
+            title: "2. Rent, Wages, Interest, and Profit: Concepts and Types"
             resourceType: note
-            resourceId: class12-factor-pricing
+            resourceId: class12-factor-rewards-rent-wage-interest-profit
             estimatedMinutes: 30
-            description: Organise the main factor rewards and the forces that influence
-              their differences.
-          - id: class12-subsistence-wage
-            title: Subsistence theory of wage
+            description: Rigorous breakdown of Economic vs Contract Rent, Nominal vs Real Wage, Gross vs Net Interest, and Gross vs Net Profit.
+          - id: class12-ricardian-theory-rent
+            title: "3. The Ricardian Theory of Rent"
+            resourceType: note
+            resourceId: class12-ricardian-theory-of-rent
+            estimatedMinutes: 30
+            description: Understand David Ricardo's differential rent theory under extensive and intensive cultivation with schedules and criticisms.
+          - id: class12-subsistence-theory-wage
+            title: "4. The Subsistence Theory of Wages"
             resourceType: note
             resourceId: class12-subsistence-theory-wage
             estimatedMinutes: 30
-            description: Explain the classical wage-adjustment mechanism and evaluate its
-              assumptions and criticisms.
+            description: Examine the Iron Law of Wages, Malthusian population adjustment mechanism, assumptions, and critical evaluation.
           - id: class12-wage-fund-theory
-            title: Wage Fund Theory of Wages
+            title: "5. The Wage Fund Theory of Wages"
             resourceType: note
             resourceId: class12-wage-fund-theory
             estimatedMinutes: 30
-            description: Use the wage-fund formula to explain average wages and evaluate the
-              theory's assumptions and criticisms.
-          - id: class12-classical-interest
-            title: Classical Theory of Interest
+            description: Master J.S. Mill's wage fund formula, inverse relationship between workers and wages, and critical evaluation.
+          - id: class12-classical-theory-interest
+            title: "6. The Classical Theory of Interest"
             resourceType: note
             resourceId: classical-theory-of-interest
             estimatedMinutes: 30
-            description: Understand how interest rates are determined through the interaction
-              of demand and supply for capital in the classical framework.
-          - id: class12-risk-bearing-profit
-            title: Risk-Bearing Theory of Profit
+            description: Explore the equilibrium between Demand for Capital (Investment) and Supply of Capital (Savings) and Keynesian critique.
+          - id: class12-profit-theories-risk-uncertainty
+            title: "7. Risk-Bearing and Uncertainty-Bearing Theories of Profit"
             resourceType: note
-            resourceId: class12-risk-bearing-theory-of-profit
+            resourceId: class12-profit-theories-risk-uncertainty
             estimatedMinutes: 30
-            description: Understand Hawley's risk-bearing theory of profit, types of business risk, and critical evaluations.
-          - id: class12-factor-pricing-check
-            title: Factor pricing practice
-            resourceType: quiz
-            resourceId: quiz-class12-factor-pricing
-            estimatedMinutes: 15
-            description: Practise rent, wages, interest, profit, and distribution reasoning.
+            description: Compare Hawley's Risk-Bearing Theory with Frank Knight's Uncertainty-Bearing Theory and insurable vs uninsurable risks.
       - id: class12-u3-1
         unitGroup: "Unit 3: Macroeconomics"
         order: 6
