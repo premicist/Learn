@@ -67,7 +67,7 @@ flowchart TD
 
 ## 5. Third-Degree Price Discrimination: Equilibrium and the Elasticity-Price Rule
 
-![Third-Degree Price Discrimination across Two Sub-Markets](/images/uploads/third-degree-price-discrimination-3panel.svg)
+![Third-Degree Price Discrimination across Two Sub-Markets](/images/uploads/Price_discrimination_third_degree.png)
 
 ### Dual Equilibrium Conditions:
 1. **Equal Marginal Revenue Condition:**  
