@@ -2,7 +2,7 @@
 subjectId: introduction-to-economics
 unitId: eco6701-u10
 title: Transfer Pricing in Vertically Integrated Firms
-summary: Understand Transfer Pricing for intra-firm transactions between corporate divisions, avoiding double marginalization, and setting optimal transfer prices with and without external markets.
+summary: Understand Transfer Pricing for intra-firm transactions between corporate divisions, avoiding the double marginalization trap, and setting optimal transfer prices with and without external markets.
 date: 2026-09-26
 slidesEnabled: false
 slideControls:
@@ -22,22 +22,27 @@ flowchart LR
     B --> C["<b>External Consumer Market</b><br>Final Output Sold"]
 ```
 
-> **Definition:** **Transfer Price ($P_t$)** is the internal accounting price charged by one autonomous division (upstream) to another division (downstream) of the **same parent company** for intermediate goods or services.
+> **Definition:** **Transfer Price ($P_t$)** is the internal accounting price charged by one autonomous division (upstream) to another division (downstream) of the **same parent enterprise** for intermediate goods or services.
 
 ---
 
 ## 2. The Problem of Double Marginalization
 
-If central management allows both divisional managers to add their own independent profit mark-ups:
-* Upstream adds a mark-up above cost ($P_t = MC_u + \text{mark-up}$).
-* Downstream adds another mark-up to the final consumer price.
-* **The Result (Double Marginalization):** The final retail price becomes excessively inflated, reducing unit sales volume and shrinking **total corporate profit**.
+When autonomous divisions each attempt to maximize their individual accounting profits independently, a serious corporate inefficiency arises:
+
+| Step in Supply Chain | Divisional Action | Pricing Impact |
+| :--- | :--- | :--- |
+| **1. Upstream Division** | Adds an independent 30% profit mark-up over its manufacturing cost. | Internal transfer price is inflated ($P_t = MC_u + 30\%$). |
+| **2. Downstream Division** | Treats the inflated $P_t$ as its input cost and adds another 30% mark-up. | Final consumer retail price becomes severely distorted and overpriced. |
+| **⚠️ The Outcome** | **Double Marginalization Trap** | High retail price destroys customer sales volume, and **total corporate profit shrinks**. |
+
+> **The Solution:** Central management eliminates double marginalization by setting the internal transfer price equal to the **Upstream Marginal Cost ($P_t = MC_u$)** when no external market exists.
 
 ---
 
 ## 3. Optimal Transfer Pricing Rules Across Market Scenarios
 
-To maximize total corporate profit, central management sets transfer prices based on external market conditions:
+To maximize total corporate profit, central management enforces transfer prices based on external market conditions:
 
 ![Transfer Pricing Mechanisms in Vertically Integrated Firms](/images/uploads/transfer-pricing-models.svg)
 
@@ -76,16 +81,9 @@ A large luxury hotel chain operates a **centralized commercial bakery** (upstrea
 
 ---
 
-## 6. Review & Exam Practice Questions
+## 📌 Exam Summary Points
+* **Purpose of Transfer Pricing:** Coordinate internal divisions to avoid **Double Marginalization**.
+* **Rule without External Market:** $P_t = MC_u$ (Transfer at upstream marginal cost).
+* **Rule with Competitive External Market:** $P_t = P_m$ (Transfer at external market price).
 
-### Very Short Questions (1-2 Marks):
-1. **Define Transfer Price.**  
-   *Answer:* The internal price charged for goods and services transferred between divisions of the same parent company.
-2. **What is Double Marginalization?**  
-   *Answer:* The problem where multiple autonomous divisions each add a profit mark-up, inflating the final retail price and reducing total corporate profit.
-3. **What is the optimal transfer price when no external market exists?**  
-   *Answer:* Upstream Marginal Cost ($P_t = MC_u$).
-
-### Short Questions (3-5 Marks):
-1. Explain how transfer prices are determined with and without an external competitive market.
 2. Discuss the four common methods of setting transfer prices in large business corporations.

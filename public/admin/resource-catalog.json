@@ -444,7 +444,7 @@
     "type": "note",
     "title": "Cost-Plus and Mark-Up Pricing",
     "subjectId": "introduction-to-economics",
-    "summary": "Learn the principles of Cost-Plus / Mark-Up Pricing, mathematical price formulas, linkage between optimal mark-ups and price elasticity, and practical hospitality applications.",
+    "summary": "Learn the principles of Cost-Plus / Mark-Up Pricing, mathematical price formulas, step-by-step conversion between mark-up on cost and margin on price, elasticity linkage, and solved numerical problems.",
     "date": "2026-09-26T00:00:00.000Z"
   },
   {
@@ -1874,17 +1874,9 @@
   {
     "id": "peak-load-pricing",
     "type": "note",
-    "title": "Peak-Load Pricing",
+    "title": "Peak-Load Pricing Strategy",
     "subjectId": "introduction-to-economics",
-    "summary": "Explore Peak-Load Pricing for non-storable services with capacity constraints, analyzing how dual pricing across peak and off-peak periods rations capacity and maximizes operational efficiency.",
-    "date": "2026-09-26T00:00:00.000Z"
-  },
-  {
-    "id": "penetration-pricing",
-    "type": "note",
-    "title": "Penetration Pricing Strategy",
-    "subjectId": "introduction-to-economics",
-    "summary": "Understand Market Penetration Pricing, low-entry pricing tactics to capture mass market share, scale economies, and a comprehensive comparison with price skimming.",
+    "summary": "Explore Peak-Load Pricing for non-storable services with fixed capacity constraints, analyzing how dual pricing across peak and off-peak periods rations capacity and maximizes operational efficiency.",
     "date": "2026-09-26T00:00:00.000Z"
   },
   {
@@ -1928,12 +1920,20 @@
     "date": "2026-09-26T00:00:00.000Z"
   },
   {
-    "id": "price-skimming",
+    "id": "price-skimming-and-penetration-pricing",
     "type": "note",
-    "title": "Price Skimming Strategy",
+    "title": "Price Skimming vs. Penetration Pricing Strategies",
     "subjectId": "introduction-to-economics",
-    "summary": "Master Market Skimming Pricing, exploring high-initial-price strategies for innovative products, favorable market conditions, lifecycle price trajectories, and real-world business examples.",
+    "summary": "Master the two foundational new-product pricing strategies, comparing price skimming (high launch price) with penetration pricing (low launch price), lifecycle price paths, favorable market conditions, and a 10-point comparison matrix.",
     "date": "2026-09-26T00:00:00.000Z"
+  },
+  {
+    "id": "pricing-strategies-master-summary",
+    "type": "note",
+    "title": "Pricing Strategies Master Summary & Formula Cheat-Sheet",
+    "subjectId": "introduction-to-economics",
+    "summary": "Master summary and quick-reference cheat-sheet for Unit 10, covering the 3Cs pricing compass, master decision tree, complete formula cheat-sheet, practical real-world case snippets, and 5 solved model exam questions.",
+    "date": "2026-10-03T00:00:00.000Z"
   },
   {
     "id": "properties-of-indifference-curves",
@@ -2020,7 +2020,7 @@
     "type": "note",
     "title": "Transfer Pricing in Vertically Integrated Firms",
     "subjectId": "introduction-to-economics",
-    "summary": "Understand Transfer Pricing for intra-firm transactions between corporate divisions, avoiding double marginalization, and setting optimal transfer prices with and without external markets.",
+    "summary": "Understand Transfer Pricing for intra-firm transactions between corporate divisions, avoiding the double marginalization trap, and setting optimal transfer prices with and without external markets.",
     "date": "2026-09-26T00:00:00.000Z"
   },
   {

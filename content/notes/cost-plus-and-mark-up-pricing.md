@@ -2,7 +2,7 @@
 subjectId: introduction-to-economics
 unitId: eco6701-u10
 title: Cost-Plus and Mark-Up Pricing
-summary: Learn the principles of Cost-Plus / Mark-Up Pricing, mathematical price formulas, linkage between optimal mark-ups and price elasticity, and practical hospitality applications.
+summary: Learn the principles of Cost-Plus / Mark-Up Pricing, mathematical price formulas, step-by-step conversion between mark-up on cost and margin on price, elasticity linkage, and solved numerical problems.
 date: 2026-09-26
 slidesEnabled: false
 slideControls:
@@ -14,63 +14,93 @@ toc: []
 
 ## 1. What is Cost-Plus / Mark-Up Pricing?
 
-**Cost-Plus Pricing** (also called **Mark-Up Pricing**, **Full-Cost Pricing**, or **Average Cost Pricing**) is the most widely practiced pricing method in manufacturing, retail, and hospitality management.
+**Cost-Plus Pricing** (also termed **Mark-Up Pricing**, **Full-Cost Pricing**, or **Average-Cost Pricing**) is the most common practical pricing technique used in manufacturing, retailing, restaurant catering, and construction contracting.
 
-Under this method, the business estimates the average cost of producing a standard level of output and adds a pre-determined percentage profit margin (**mark-up**) to establish the selling price.
+Under this method, a business estimates the average variable cost of producing a standard unit of output and adds a pre-determined percentage profit margin (**the mark-up**) to establish the final selling price.
 
 ```mermaid
 flowchart LR
-    A["Estimate Average Variable Cost (AVC)"] --> B["Add Gross Mark-up Margin (m)"]
-    B --> C["<b>Selling Price: P = AVC × (1 + m)</b><br>Covers Fixed Overheads (AFC) + Net Profit"]
+    A["<b>1. Estimate Unit Cost (AVC)</b><br>Raw Materials + Direct Labour"] --> B["<b>2. Add Gross Mark-up (m)</b><br>Covers Overheads + Net Profit"]
+    B --> C["<b>3. Final Selling Price (P)</b><br>P = AVC × (1 + m)"]
 ```
+
+> **Definition:** **Cost-Plus Pricing** is the practice of setting prices by calculating unit cost of production and adding a fixed percentage mark-up to guarantee the recovery of fixed overheads and earn a target rate of return.
 
 ---
 
-## 2. Fundamental Algebraic Formulas
+## 2. Fundamental Algebraic Formulas & Step-by-Step Conversion
 
-1. **Price Equation:**
-   $$P = AVC + \text{Gross Margin} = AVC(1 + m)$$
-   *(Where $P = \text{Price}$, $AVC = \text{Average Variable Cost}$, and $m = \text{Mark-up percentage on cost}$).*
-2. **Mark-Up Percentage on Cost ($m$):**
-   $$m = \left(\dfrac{P - AVC}{AVC}\right) \times 100\%$$
-3. **Mark-Up Percentage on Price (Profit Margin):**
-   $$\text{Margin on Price} = \left(\dfrac{P - AVC}{P}\right) \times 100\%$$
+### Core Price Equation:
+$$P = AVC + \text{Gross Mark-Up} = AVC(1 + m)$$
 
-> **Purpose of the Mark-Up ($m$):** The gross mark-up is calculated to cover **Average Fixed Costs ($AFC$)** plus a targeted **Net Profit Margin ($NPM$)**:
+Where:
+* $P$ = Selling Price per unit
+* $AVC$ = Average Variable Cost per unit
+* $m$ = Percentage mark-up on cost (expressed as a decimal)
+
+---
+
+### 💡 Mark-Up on Cost vs. Profit Margin on Price (Quick Comparison):
+
+Students often confuse **Mark-up on Cost** with **Profit Margin on Price**. Here is the clear mathematical distinction:
+
+$$\text{Mark-Up on Cost } (m) = \frac{P - AVC}{AVC} \times 100\%$$
+
+$$\text{Profit Margin on Price} = \frac{P - AVC}{P} \times 100\%$$
+
+| Basis | Calculation Formula | Example (Cost = Rs. 100, Price = Rs. 125) |
+| :--- | :---: | :---: |
+| **Mark-Up on Cost ($m$)** | $\frac{P - AVC}{AVC} \times 100\%$ | $\frac{125 - 100}{100} \times 100\% = \mathbf{25\%}$ |
+| **Profit Margin on Price** | $\frac{P - AVC}{P} \times 100\%$ | $\frac{125 - 100}{125} \times 100\% = \mathbf{20\%}$ |
+
+> **Key Rule:** A 25% mark-up on cost corresponds to a 20% margin on the final selling price. The gross mark-up covers **Average Fixed Overheads ($AFC$)** plus target **Net Profit Margin ($NPM$)**:
 > $$AVC \times m = AFC + NPM$$
 
 ---
 
-## 3. Optimal Mark-Up and Price Elasticity of Demand
+## 3. Optimal Mark-Up and Price Elasticity of Demand (Lerner Index)
 
-In economic theory, profit maximization requires $MR = MC$. We can link the profit-maximizing mark-up directly to the price elasticity of demand ($E_d$):
+In economic theory, profit maximization occurs where **Marginal Revenue equals Marginal Cost ($MR = MC$)**. By relating marginal revenue to the price elasticity of demand ($E_d$), we derive the **Optimal Economic Mark-Up Rule**:
 
-$$MR = P \left(1 + \dfrac{1}{E_d}\right) = MC \implies \mathbf{P = \dfrac{MC}{1 + \dfrac{1}{E_d}}}$$
+$$MR = P \left(1 + \dfrac{1}{E_d}\right) = MC \implies \mathbf{P = \dfrac{MC}{1 + \dfrac{1}{E_d}}} = \mathbf{\dfrac{MC}{1 - \dfrac{1}{|E_d|}}}$$
 
-Expressed as the **Lerner Index of Monopoly Power**:
+Rearranging this gives the famous **Lerner Index of Market Power**:
 
-$$\mathbf{\dfrac{P - MC}{P} = -\dfrac{1}{E_d}}$$
+$$\mathbf{\dfrac{P - MC}{P} = \dfrac{1}{|E_d|}}$$
 
-### Strategic Rule of Thumb:
-* **Inelastic Market Demand ($|E_d| = 1.5$):** The firm applies a **high mark-up** ($P = 3.0 \times MC$, e.g., luxury restaurant dining, designer cosmetics).
-* **Highly Elastic Market Demand ($|E_d| = 10$):** The firm applies a **small mark-up** ($P = 1.11 \times MC$, e.g., retail supermarket groceries).
+### Strategic Rule of Thumb for Managers:
+* **Highly Elastic Demand ($|E_d| = 10$, e.g., Supermarket Groceries):**  
+  Consumers have many close substitutes. The firm must apply a **very small mark-up** ($P = 1.11 \times MC \implies 11\%$ mark-up).
+* **Inelastic Demand ($|E_d| = 1.5$, e.g., Luxury Designer Perfume, Boutique Restaurant):**  
+  Consumers have few alternatives. The firm can apply a **very high mark-up** ($P = 3.0 \times MC \implies 200\%$ mark-up).
 
 ---
 
-## 4. Step-by-Step Solved Numerical Problem
+## 4. Solved Numerical Problems
 
-**Question:**  
-A hotel restaurant prepares a buffet dinner package. The variable cost per guest plate is **Rs. 500**. The hotel management applies a **40% mark-up on cost** to cover restaurant fixed overheads and earn target profit.
-1. Calculate the selling price of the buffet dinner.
+### 📌 Problem 1: Restaurant Buffet Menu Pricing
+**Question:** A hotel restaurant calculates the variable cost per guest dinner plate as **Rs. 600**. The management applies a **50% mark-up on cost** to cover restaurant fixed overheads and earn target profit.
+1. Calculate the final selling price of the buffet dinner.
 2. Calculate the profit margin percentage on the selling price.
 
-### Solution:
+#### 💡 Solution:
+1. **Selling Price ($P$):**
+   $$P = AVC(1 + m) = 600 \times (1 + 0.50) = 600 \times 1.50 = \mathbf{\text{Rs. } 900\text{ per guest}}$$
+2. **Profit Margin on Selling Price:**
+   $$\text{Margin on Price} = \left(\dfrac{P - AVC}{P}\right) \times 100\% = \left(\dfrac{900 - 600}{900}\right) \times 100\% = \left(\dfrac{300}{900}\right) \times 100\% = \mathbf{33.33\%}$$
 
-**Part (1): Calculate Selling Price**  
-$$P = AVC(1 + m) = 500 \times (1 + 0.40) = 500 \times 1.40 = \mathbf{\text{Rs. } 700\text{ per guest}}$$
+---
 
-**Part (2): Calculate Margin on Selling Price**  
-$$\text{Margin on Price} = \left(\dfrac{P - AVC}{P}\right) \times 100\% = \left(\dfrac{700 - 500}{700}\right) \times 100\% = \left(\dfrac{200}{700}\right) \times 100\% = \mathbf{28.57\%}$$
+### 📌 Problem 2: Electronics Retailer Elasticity Mark-Up
+**Question:** A consumer electronics retailer estimates that the marginal cost of a branded wireless headphone is **Rs. 4,000**. The price elasticity of demand for this model is **$|E_d| = 2.0$**.
+1. What is the profit-maximizing optimal selling price?
+2. What is the percentage mark-up over marginal cost?
+
+#### 💡 Solution:
+1. **Optimal Selling Price ($P$):**
+   $$P = \dfrac{MC}{1 - \dfrac{1}{|E_d|}} = \dfrac{4000}{1 - \dfrac{1}{2.0}} = \dfrac{4000}{0.5} = \mathbf{\text{Rs. } 8,000}$$
+2. **Mark-up on Cost ($m$):**
+   $$m = \left(\dfrac{P - MC}{MC}\right) \times 100\% = \left(\dfrac{8000 - 4000}{4000}\right) \times 100\% = \mathbf{100\%}$$
 
 ---
 
@@ -78,23 +108,15 @@ $$\text{Margin on Price} = \left(\dfrac{P - AVC}{P}\right) \times 100\% = \left(
 
 | Advantages | Limitations &amp; Criticisms |
 | :--- | :--- |
-| **Simplicity &amp; Ease of Calculation:** Relies on readily available internal accounting cost data. | **Ignores Demand &amp; Buyer Elasticity:** Completely ignores customer willingness to pay and competitive market conditions. |
-| **Price Stability:** When all firms in an industry use similar mark-up rules, destructive price wars are minimized. | **Historical Cost Fallacy:** Relies on historical accounting book values rather than forward-looking opportunity costs. |
-| **Fairness Perception:** Consumers and regulatory agencies view cost-justified price increases as ethical and fair. | **Circular Logic:** Average cost depends on output volume ($AC = TC/Q$), but sales volume depends on price ($Q = f(P)$). |
-| **Guarantees Overhead Recovery:** Ensures fixed costs are fully recovered at standard operating volume. | **Inflexible in Recessions:** Maintaining rigid mark-ups during market downturns can destroy sales volume. |
+| **Simplicity &amp; Practicality:** Relies on readily available internal accounting data without requiring complex econometric demand estimations. | **Ignores Demand &amp; Elasticity:** Assumes buyers will purchase whatever is produced at the cost-plus price, ignoring competition. |
+| **Price Stability:** When all firms in an industry use similar mark-up conventions, destructive price wars are minimized. | **Circular Logic Fallacy:** Average cost depends on volume ($AC = TC/Q$), but sales volume depends on price ($Q = f(P)$). |
+| **Fairness &amp; Transparency:** Buyers and regulatory bodies accept cost-justified price increases as ethical and reasonable. | **Historical Cost Bias:** Uses historical accounting book values rather than forward-looking opportunity costs. |
+| **Guarantees Overhead Recovery:** Ensures fixed operating costs are recovered when planned sales volume targets are met. | **Inflexible in Downturns:** Maintaining rigid mark-ups during recessions leads to severe sales drops and unsold inventory. |
 
 ---
 
-## 6. Review & Exam Practice Questions
+## 📌 Exam Summary Points
+* **Formula:** $P = AVC(1 + m)$ where $m$ is mark-up percentage on cost.
+* **Mark-up on Cost $\ne$ Margin on Price:** $m = \frac{P - AVC}{AVC} \times 100\%$, whereas $\text{Margin} = \frac{P - AVC}{P} \times 100\%$.
+* **Elasticity Linkage:** Inelastic products command high mark-ups; highly elastic products command low mark-ups.
 
-### Very Short Questions (1-2 Marks):
-1. **What is Mark-Up Pricing?**  
-   *Answer:* A cost-based method where selling price is set by adding a fixed profit percentage to average cost ($P = AVC(1+m)$).
-2. **In cost-plus pricing, what is the mark-up added to?**  
-   *Answer:* Average Variable Cost (or Average Total Cost).
-3. **State the formula connecting optimal price with price elasticity of demand.**  
-   *Answer:* $P = \dfrac{MC}{1 + 1/E_d}$.
-
-### Short Questions (3-5 Marks):
-1. Explain the procedure and formulas used in Cost-Plus / Mark-Up pricing with a numerical example.
-2. Discuss the main advantages and limitations of Cost-Plus pricing in business decision-making.

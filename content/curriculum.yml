@@ -3243,18 +3243,16 @@ curricula:
               between corporate divisions, avoiding double marginalization with
               and without external markets.
           - id: eco6701-u10ch6
-            title: Price Skimming
+            title: Price Skimming vs. Penetration Pricing
             resourceType: note
-            resourceId: price-skimming
+            resourceId: price-skimming-and-penetration-pricing
             estimatedMinutes: 35
-            description: Details the high-initial-price strategy for innovative
-              products to extract early-adopter consumer surplus and recoup R&D
-              investments.
+            description: Compares new-product launch strategies, price trajectories,
+              favorable market conditions, and a 10-point comparison matrix.
           - id: eco6701-u10ch7
-            title: Penetration Pricing
+            title: Master Summary & Formula Cheat-Sheet
             resourceType: note
-            resourceId: penetration-pricing
+            resourceId: pricing-strategies-master-summary
             estimatedMinutes: 35
-            description: Explores low-entry pricing strategies designed to
-              capture mass market share, achieve scale economies, and deter
-              competitor entry.
+            description: Master 3Cs compass, pricing decision tree, complete formula
+              cheat-sheet, real-world case snippets, and 5 solved exam problems.

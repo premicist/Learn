@@ -50,12 +50,14 @@ $$E_p = \frac{\Delta Q}{\Delta P} \times \frac{P}{Q}$$
 
 मागको मूल्य लोचको मान $0$ देखि $\infty$ (अनन्त) सम्म हुन सक्छ। यसका आधारमा मूल्य लोचलाई ५ वटा डिग्रीहरूमा वर्गीकरण गरिन्छ:
 
-![मागको मूल्य लोचका पाँच डिग्रीहरू](/images/uploads/five-degrees-price-elasticity.svg)
 
 ---
 
 ### १. पूर्ण लोचदार माग (Perfectely Elastic Demand: $E_p = \infty$)
 * **अवधारणा:** जब वस्तुको मूल्यमा अत्यन्तै सूक्ष्म वा शून्य परिवर्तन हुँदा पनि माग परिमाणमा असीमित वा अनन्त परिवर्तन आउँछ भने त्यसलाई पूर्ण लोचदार माग भनिन्छ।
+
+![Perfectely Elastic Demand](/images/uploads/elasticity-5-perfectly-elastic-ne.svg)
+
 * **माग वक्ररेखाको प्रकृति:** यो X-अक्षसँग समानान्तर हुने **तेर्सो क्षितिज रेखा (Horizontal Line)** हुन्छ।
 * **तालिका:**
 
@@ -71,6 +73,9 @@ $$E_p = \frac{\Delta Q}{\Delta P} \times \frac{P}{Q}$$
 
 ### २. पूर्ण बेलोचदार माग (Perfectely Inelastic Demand: $E_p = 0$)
 * **अवधारणा:** जब वस्तुको मूल्यमा जतिसुकै ठूलो प्रतिशत परिवर्तन भए तापनि माग परिमाणमा कुनै पनि परिवर्तन आउँदैन (माग स्थिर रहन्छ) भने त्यसलाई पूर्ण बेलोचदार माग भनिन्छ।
+
+![Perfectely Inelastic Demand](/images/uploads/elasticity-1-perfectly-inelastic-ne.svg)
+
 * **माग वक्ररेखाको प्रकृति:** यो Y-अक्षसँग समानान्तर हुने **ठाडो लम्ब रेखा (Vertical Line)** हुन्छ।
 * **तालिका:**
 
@@ -86,6 +91,9 @@ $$E_p = \frac{\Delta Q}{\Delta P} \times \frac{P}{Q}$$
 
 ### ३. एकाइ लोचदार माग (Unitary Elastic Demand: $E_p = 1$)
 * **अवधारणा:** जब वस्तुको मूल्यमा जति प्रतिशतले परिवर्तन हुन्छ, त्यस वस्तुको माग परिमाणमा पनि **ठ्याक्कै त्यति नै प्रतिशतले** परिवर्तन आउँछ भने त्यसलाई एकाइ लोचदार माग भनिन्छ ($\%\Delta Q = \%\Delta P$)।
+
+![Unitary elastic Demand](/images/uploads/elasticity-3-unitary-elastic-ne.svg)
+
 * **माग वक्ररेखाको प्रकृति:** यो **आयताकार अतिपरवलय (Rectangular Hyperbola)** आकारको हुन्छ, जहाँ प्रत्येक बिन्दुमा कुल खर्च स्थिर रहन्छ।
 * **तालिका:**
 
@@ -98,6 +106,9 @@ $$E_p = \frac{\Delta Q}{\Delta P} \times \frac{P}{Q}$$
 
 ### ४. सापेक्षिक लोचदार माग (Relatively Elastic Demand: $E_p > 1$)
 * **अवधारणा:** जब मूल्यको प्रतिशत परिवर्तनको तुलनामा **माग परिमाणको प्रतिशत परिवर्तन बढी** हुन्छ भने त्यसलाई सापेक्षिक लोचदार माग भनिन्छ ($\%\Delta Q > \%\Delta P$)।
+
+![Relatively elastic Demand](/images/uploads/elasticity-4-relatively-elastic-ne.svg)
+
 * **माग वक्ररेखाको प्रकृति:** यो कम ठाडो अर्थात् **चेप्टो वा समथर (Flatter Demand Curve)** हुन्छ।
 * **तालिका:**
 
@@ -112,6 +123,9 @@ $$E_p = \frac{\Delta Q}{\Delta P} \times \frac{P}{Q}$$
 
 ### ५. सापेक्षिक बेलोचदार माग (Relatively Inelastic Demand: $E_p < 1$)
 * **अवधारणा:** जब मूल्यको प्रतिशत परिवर्तनको तुलनामा **माग परिमाणको प्रतिशत परिवर्तन कम** हुन्छ भने त्यसलाई सापेक्षिक बेलोचदार माग भनिन्छ ($\%\Delta Q < \%\Delta P$)।
+
+![Relatively inelastic Demand](/images/uploads/elasticity-2-relatively-inelastic-ne.svg)
+
 * **माग वक्ररेखाको प्रकृति:** यो बढी **ठाडो (Steeper Demand Curve)** हुन्छ।
 * **तालिका:**
 

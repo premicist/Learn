@@ -1,8 +1,8 @@
 ---
 subjectId: introduction-to-economics
 unitId: eco6701-u10
-title: Peak-Load Pricing
-summary: Explore Peak-Load Pricing for non-storable services with capacity constraints, analyzing how dual pricing across peak and off-peak periods rations capacity and maximizes operational efficiency.
+title: Peak-Load Pricing Strategy
+summary: Explore Peak-Load Pricing for non-storable services with fixed capacity constraints, analyzing how dual pricing across peak and off-peak periods rations capacity and maximizes operational efficiency.
 date: 2026-09-26
 slidesEnabled: false
 slideControls:
@@ -18,68 +18,60 @@ toc: []
 
 ```mermaid
 flowchart TD
-    P[Peak-Load Pricing Principles] --> P1["<b>1. High Peak Demand (D_Peak)</b><br>Operating near full capacity<br>High Marginal Cost (SMC) ⇒ Charge High Price (P_Peak)"]
-    P --> P2["<b>2. Low Off-Peak Demand (D_OffPeak)</b><br>Excess capacity available<br>Low Marginal Cost (SMC) ⇒ Charge Low Price (P_OffPeak)"]
+    P["<b>Peak-Load Pricing Framework</b>"] --> P1["<b>1. High Peak Demand (D_Peak)</b><br>Operating at 100% capacity<br>High Marginal Cost ⇒ Charge Premium Price (P_Peak)"]
+    P --> P2["<b>2. Low Off-Peak Demand (D_OffPeak)</b><br>Excess idle capacity available<br>Low Marginal Cost ⇒ Charge Discount Price (P_OffPeak)"]
 ```
 
-> **Definition:** **Peak-Load Pricing** is the commercial practice of charging a **higher price during peak demand periods** (when capacity is fully utilized and marginal cost is high) and a **lower price during off-peak periods** (when idle capacity exists and marginal cost is low).
+> **Definition:** **Peak-Load Pricing** is the practice of charging a **higher price during peak demand periods** (when capacity is fully utilized and marginal cost is high) and a **lower price during off-peak periods** (when idle capacity exists and marginal cost is low).
 
 ---
 
-## 2. Why is Peak-Load Pricing Necessary?
+## 2. The Two Essential Pre-Conditions for Peak-Load Pricing
 
-1. **Non-Storability of Services:**  
-   Unlike physical manufactured goods, services (such as hotel room nights, airline seats, and electricity) **cannot be produced and stored** during quiet off-peak times to be sold later during peak periods.
-2. **Fixed Short-Run Capacity:**  
-   A hotel cannot instantly build 50 extra rooms for a single festival weekend, and an electricity utility cannot quickly build a new power plant for a few hot summer afternoons.
-3. **Surging Marginal Cost ($SMC$):**  
-   Serving additional customers when capacity is nearly 100% full imposes heavy congestion costs, overtime labor wages, and equipment strain, causing short-run marginal cost to rise steeply.
+Peak-load pricing is economically viable and necessary only when two specific conditions are satisfied:
+
+| Pre-Condition | Operational Reality | Business Impact |
+| :--- | :--- | :--- |
+| **1. Non-Storability of Service** | Services cannot be produced in advance and stored in inventory during quiet periods to be sold during rush hours. | An empty hotel room or empty flight seat tonight represents permanently lost revenue that cannot be recovered. |
+| **2. Fixed Short-Run Capacity** | Physical facilities (hotel rooms, aircraft seats, power generation capacity) cannot be instantly expanded during demand spikes. | Operating near 100% capacity creates congestion, equipment strain, and sharp increases in short-run marginal cost ($SMC$). |
 
 ---
 
-## 3. Graphical Model and Equilibrium Determination
+## 3. Graphical Model & Equilibrium Determination
 
 ![Peak-Load Pricing Diagram](/images/uploads/peak-load-pricing-diagram.svg)
 
 ### Dual Equilibrium Conditions:
 1. **Off-Peak Period Equilibrium:**  
-   The firm equates off-peak marginal revenue with operating marginal cost:
+   The firm equates off-peak marginal revenue with operating variable marginal cost:
    $$MR_{\text{OffPeak}} = SMC \implies \text{Charge Lower Price } P_{\text{OffPeak}}, \text{ Output } Q_{\text{OffPeak}}$$
 2. **Peak Period Equilibrium:**  
    During peak demand, the firm equates peak marginal revenue with capacity-constrained marginal cost:
-   $$MR_{\text{Peak}} = SMC \implies \text{Charge Higher Price } P_{\text{Peak}}, \text{ Output } Q_{\text{Peak}}$$
+   $$MR_{\text{Peak}} = SMC + \text{Capacity Cost} \implies \text{Charge Higher Price } P_{\text{Peak}}, \text{ Output } Q_{\text{Peak}}$$
 
 ---
 
-## 4. Real-World and Hospitality Industry Applications
+## 4. Real-World & Industry Applications
 
-* **Hospitality Industry (Hotels &amp; Resorts):**  
-  Hotels charge premium rates during peak holiday seasons (October–November in Nepal, Christmas/New Year) and wedding seasons, while offering steep 40–50% discounts during off-peak monsoon months.
+* **Hospitality (Hotels &amp; Resorts):**  
+  Hotels charge premium rates during peak tourist seasons (October–November trekking season in Nepal, New Year celebrations) and offer 40–50% discounts during monsoon off-peak months.
 * **Aviation &amp; Passenger Transport:**  
-  Airlines and express commuter rail charge higher fares for peak Friday evening flights and peak morning rush hours.
-* **Public Utilities (Electricity &amp; Water):**  
-  Power companies charge higher per-kWh tariffs during evening peak hours (6 PM – 10 PM) and discounted rates during off-peak night hours.
+  Airlines charge premium fares for Friday evening and Monday morning business travel, with cheaper fares on Tuesday/Wednesday mid-day flights.
+* **Public Utilities (Electricity &amp; Power Grids):**  
+  Power utilities apply time-of-day (TOD) tariffs: high rates during evening peak hours (6 PM – 10 PM) to reduce grid overload, and low rates during night hours.
 
 ---
 
 ## 5. Economic Advantages of Peak-Load Pricing
 
-1. **Rations Scarce Capacity:** High peak prices prevent severe crowding, blackout surges, and service failure.
-2. **Shifts Demand to Off-Peak:** Encourages price-sensitive consumers to shift their consumption to off-peak periods (e.g., traveling on weekdays or running laundry at night).
-3. **Maximizes Economic Efficiency:** Aligns market prices with true short-run marginal opportunity costs ($P \approx MC$), ensuring optimal resource allocation.
+1. **Rations Scarce Capacity:** High peak prices prevent overcrowding, power blackouts, and service degradation.
+2. **Shifts Demand to Off-Peak:** Encourages price-sensitive consumers to travel on off-peak days or run energy-intensive machinery at night.
+3. **Maximizes Economic Efficiency:** Aligns market prices with true short-run marginal opportunity costs ($P \approx MC$).
 
 ---
 
-## 6. Review & Exam Practice Questions
+## 📌 Exam Summary Points
+* **Target Services:** Applied strictly to **non-storable services** with **fixed capacity constraints**.
+* **Pricing Rule:** $P_{\text{Peak}} > P_{\text{OffPeak}}$ because marginal cost and capacity strain are higher during peak periods.
+* **Purpose:** Balances capacity utilization, covers capital costs, and prevents service congestion.
 
-### Very Short Questions (1-2 Marks):
-1. **Define Peak-Load Pricing.**  
-   *Answer:* Charging higher prices during high-demand peak periods and lower prices during low-demand off-peak periods for non-storable services.
-2. **What types of goods are subject to peak-load pricing?**  
-   *Answer:* Non-storable services with fixed capacity constraints (hotel rooms, electricity, airline flights).
-3. **Why is marginal cost higher during peak periods?**  
-   *Answer:* Because operating near full capacity causes congestion, overtime costs, and steep short-run marginal costs.
-
-### Short Questions (3-5 Marks):
-1. Explain the economic rationale and graphical determination of Peak-Load Pricing with a diagram.
-2. Discuss how hotel managers use peak-load pricing to manage seasonal room occupancy and revenue.

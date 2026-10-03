@@ -3561,11 +3561,35 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
 .article-page__body th,
 .article-page__body td {
   border: 1px solid var(--line);
-  padding: 12px 16px;
+  padding: 14px 18px;
   text-align: left;
-  vertical-align: top;
-  line-height: 1.55;
+  vertical-align: middle;
+  line-height: normal;
   color: var(--ink);
+}
+
+.note-page__body table td .katex,
+.article-page__body table td .katex {
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.note-page__body table td ul,
+.article-page__body table td ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.note-page__body table td li,
+.article-page__body table td li {
+  margin-bottom: 0.35rem;
+  line-height: 1.45;
+}
+
+.note-page__body table td li:last-child,
+.article-page__body table td li:last-child {
+  margin-bottom: 0;
 }
 
 .note-visual-block--table th,

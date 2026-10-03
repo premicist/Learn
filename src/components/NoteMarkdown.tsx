@@ -2,6 +2,7 @@ import { Children, isValidElement, type ReactNode } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
+import rehypeRaw from 'rehype-raw'
 import rehypeKatex from 'rehype-katex'
 import type { NoteVisualBlock as VisualBlock } from '../data/content'
 import InlineResource from './InlineResource'
@@ -119,7 +120,7 @@ function NoteMarkdown({ content }: { content: string }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm, remarkMath]}
-      rehypePlugins={[[rehypeKatex, { output: 'html' }]]}
+      rehypePlugins={[rehypeRaw, [rehypeKatex, { output: 'html' }]]}
       components={{
         h2({ children, ...props }) { return <h2 id={slugify(children)} {...props}>{children}</h2> },
         h3({ children, ...props }) { return <h3 id={slugify(children)} {...props}>{children}</h3> },
