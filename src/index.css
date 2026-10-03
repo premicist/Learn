@@ -4633,6 +4633,217 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
   opacity: 0.5;
 }
 
+/* Practice Sets --------------------------------------------------------- */
+.practice-card {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--paper-card);
+  box-shadow: 0 4px 16px rgba(18, 42, 58, 0.04);
+}
+
+.practice-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+
+.practice-card__instructions {
+  margin: 0.5rem 0 1.25rem;
+  padding: 0.85rem 1.1rem;
+  border-left: 4px solid var(--teal);
+  border-radius: 0.5rem;
+  background: var(--teal-tint);
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.practice-card__student-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--paper);
+}
+
+.practice-card__student-form label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.practice-card__student-form input {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--paper-card);
+  color: var(--ink);
+  font: inherit;
+}
+
+.practice-card__start,
+.practice-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.7rem;
+  padding: 0.65rem 1.25rem;
+  border: 0;
+  border-radius: 0.6rem;
+  color: #fff;
+  background: var(--teal-deep);
+  font-weight: 800;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: transform 160ms ease-out, background 160ms ease-out;
+}
+
+.practice-card__start:hover:not(:disabled),
+.practice-submit:hover:not(:disabled) {
+  background: var(--teal);
+  transform: translateY(-1px);
+}
+
+.practice-card__start:disabled,
+.practice-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.practice-progress {
+  display: inline-block;
+  margin: 0.5rem 0 1.25rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--teal-tint);
+  color: var(--teal-deep);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.practice-question {
+  margin: 0 0 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--paper-card);
+}
+
+.practice-question__text {
+  max-width: 100%;
+  padding: 0 0.35rem;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.practice-question__points {
+  color: var(--teal-deep);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.practice-question__numeric-input {
+  width: 100%;
+  max-width: 20rem;
+  margin-top: 0.8rem;
+  padding: 0.7rem 0.85rem;
+  border: 1.5px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.practice-question__text-input {
+  width: 100%;
+  margin-top: 0.8rem;
+  padding: 0.75rem 0.95rem;
+  border: 1.5px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.practice-question__numeric-input:focus,
+.practice-question__text-input:focus {
+  outline: none;
+  border-color: var(--teal);
+  background: var(--paper-card);
+}
+
+.practice-feedback {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.practice-feedback--correct {
+  color: #13755d;
+  background: var(--teal-tint);
+  border-left: 3px solid var(--teal);
+}
+
+.practice-feedback--incorrect {
+  color: var(--red);
+  background: var(--red-tint);
+  border-left: 3px solid var(--red);
+}
+
+.practice-feedback--pending {
+  color: #785206;
+  background: var(--gold-tint);
+  border-left: 3px solid var(--gold);
+}
+
+.practice-card__actions {
+  margin-top: 1.5rem;
+}
+
+.practice-score {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--teal-deep);
+  margin-bottom: 0.75rem;
+}
+
+.practice-save-status {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: var(--ink-soft);
+}
+
+.practice-save-status--ok {
+  color: #13755d;
+}
+
+.practice-save-status--error {
+  color: var(--red);
+}
+
 /* ==========================================================================
    Student-Friendly UI/UX & Reading Controls
    ========================================================================== */
