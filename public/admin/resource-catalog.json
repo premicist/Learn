@@ -288,12 +288,60 @@
     "date": "2026-08-23"
   },
   {
-    "id": "class12-cost-curves",
+    "id": "class12-central-economic-problems",
     "type": "note",
-    "title": "Cost Concepts and Cost Curves",
+    "title": "Central Economic Problems and Allocation of Resources",
     "subjectId": "class-12",
-    "summary": "Build cost tables and explain the relationships among total, average, and marginal cost.",
-    "date": "2026-08-23"
+    "summary": "Understand scarcity, the problem of choice, resource allocation, and the three fundamental economic questions (What, How, and For Whom to Produce) in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-cost-basic-concepts",
+    "type": "note",
+    "title": "Basic Concepts of Cost of Production",
+    "subjectId": "class-12",
+    "summary": "Explore the economic meaning of cost, explicit vs implicit costs, economic vs accounting costs, fixed vs variable costs, and opportunity costs in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-cost-long-run-curves",
+    "type": "note",
+    "title": "The Long-Run Cost Curves and Returns to Scale",
+    "subjectId": "class-12",
+    "summary": "Understand the long-run planning horizon, the derivation of the Long-Run Average Cost (LAC) envelope curve, LMC, and internal and external economies and diseconomies of scale in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-cost-numerical-problems",
+    "type": "note",
+    "title": "Numerical Problems on Cost Curves",
+    "subjectId": "class-12",
+    "summary": "A complete step-by-step student guide to solving short-run cost tables, missing value puzzles, cost function derivations, and calculus-based optimization problems with fully worked solutions.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-cost-relation-mc-avc-ac",
+    "type": "note",
+    "title": "Relationship Between Marginal Cost (MC), Average Cost (AC), and Average Variable Cost (AVC)",
+    "subjectId": "class-12",
+    "summary": "Detailed analysis of why MC cuts AC and AVC at their minimum points, why cost curves are U-shaped, and how the Law of Variable Proportions governs short-run cost behavior in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-cost-short-run-curves",
+    "type": "note",
+    "title": "Short-Run Cost Curves and Their Derivations",
+    "subjectId": "class-12",
+    "summary": "Understand the geometric and tabular derivations of short-run total cost curves (TFC, TVC, TC) and per-unit cost curves (AFC, AVC, AC, MC) in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-cost-tc-mc-ac",
+    "type": "note",
+    "title": "The Concepts of Total, Average, and Marginal Cost (TC, AC, MC)",
+    "subjectId": "class-12",
+    "summary": "Understand short-run total costs (TFC, TVC, TC), per-unit average costs (AFC, AVC, AC), and marginal cost (MC), with complete formulas, mathematical proofs, and comprehensive schedules in question-answer format.",
+    "date": "2026-10-03"
   },
   {
     "id": "class12-development-economics",
@@ -304,6 +352,14 @@
     "date": "2026-08-23"
   },
   {
+    "id": "class12-division-and-specialization-of-labour",
+    "type": "note",
+    "title": "Division and Specialization of Labour",
+    "subjectId": "class-12",
+    "summary": "Understand division of labour, forms, specialization, advantages, disadvantages, and factors determining the efficiency of labour in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
     "id": "class12-economic-system-ppc",
     "type": "note",
     "title": "Economic Systems and the Production Possibility Curve",
@@ -312,12 +368,28 @@
     "date": "2026-08-23"
   },
   {
-    "id": "class12-factor-pricing",
+    "id": "class12-economic-systems",
     "type": "note",
-    "title": "Factor Pricing: Rent, Wages, Interest, and Profit",
+    "title": "Economic Systems and the Nepalese Economic System",
     "subjectId": "class-12",
-    "summary": "Study how the factors of production are rewarded and use the existing rent note as the starting point for distribution theory.",
-    "date": "2026-08-23"
+    "summary": "Examine Capitalism, Socialism, and Mixed Economies, their comparative features, and understand the mixed economic system adopted by Nepal in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-factor-rewards-rent-wage-interest-profit",
+    "type": "note",
+    "title": "Rent, Wages, Interest, and Profit: Concepts and Types",
+    "subjectId": "class-12",
+    "summary": "Rigorous study of the four factor rewards, including detailed differences between Economic vs Contract Rent, Nominal vs Real Wage, Gross vs Net Interest, and Gross vs Net Profit in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-factors-of-production-concepts",
+    "type": "note",
+    "title": "Basic Concepts of Factors of Production and Factor Pricing",
+    "subjectId": "class-12",
+    "summary": "Understand the four factors of production (Land, Labour, Capital, Organisation), their rewards (Rent, Wages, Interest, Profit), and the theory of distribution in question-answer format.",
+    "date": "2026-10-03"
   },
   {
     "id": "class12-government-finance",
@@ -328,20 +400,28 @@
     "date": "2026-08-23"
   },
   {
-    "id": "class12-imperfect-competition",
-    "type": "note",
-    "title": "Price and Output under Imperfect Competition",
-    "subjectId": "class-12",
-    "summary": "Compare monopoly and other imperfectly competitive markets through demand, revenue, and equilibrium output.",
-    "date": "2026-08-23"
-  },
-  {
     "id": "class12-international-trade",
     "type": "note",
     "title": "International Trade and Trade Policy",
     "subjectId": "class-12",
     "summary": "Use comparative advantage to explain trade and evaluate tariffs, quotas, and other trade-policy choices.",
     "date": "2026-08-23"
+  },
+  {
+    "id": "class12-introduction-and-origin",
+    "type": "note",
+    "title": "Introduction and Origin of Economics",
+    "subjectId": "class-12",
+    "summary": "Understand the origin, etymology, major definitions (Smith, Marshall, Robbins, Samuelson), and the core branches of economics in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-market-concept-and-classification",
+    "type": "note",
+    "title": "Concept and Classification of Market",
+    "subjectId": "class-12",
+    "summary": "Understand the economic concept of a market, its essential elements, and detailed classification based on area, time, transaction, and competition structures in question-answer format.",
+    "date": "2026-10-03"
   },
   {
     "id": "class12-market-revenue",
@@ -368,12 +448,60 @@
     "date": "2026-08-23"
   },
   {
-    "id": "class12-perfect-competition",
+    "id": "class12-opportunity-cost-and-ppc",
     "type": "note",
-    "title": "Price and Output under Perfect Competition",
+    "title": "Opportunity Cost and the Production Possibility Curve (PPC)",
     "subjectId": "class-12",
-    "summary": "Explain firm equilibrium in perfect competition using revenue, cost, and profit conditions.",
-    "date": "2026-08-23"
+    "summary": "Master the concept of opportunity cost, the production possibility curve, assumptions, schedule, graphical analysis, MRT, and causes of PPC shifts in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-price-output-concept-of-equilibrium",
+    "type": "note",
+    "title": "Concept of Equilibrium in Economics",
+    "subjectId": "class-12",
+    "summary": "Understand the economic meaning of equilibrium, the difference between firm and industry, partial vs general equilibrium, and market equilibrium determination in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-price-output-firm-equilibrium-approaches",
+    "type": "note",
+    "title": "Equilibrium of the Firm: TR-TC and MR-MC Approaches",
+    "subjectId": "class-12",
+    "summary": "Master the two analytical methods of firm equilibrium—the Total Revenue-Total Cost (TR-TC) approach and the Marginal Revenue-Marginal Cost (MR-MC) approach—with necessary and sufficient conditions in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-price-output-monopoly",
+    "type": "note",
+    "title": "Price and Output Determination Under Monopoly",
+    "subjectId": "class-12",
+    "summary": "Understand short-run equilibrium states, long-run supernormal profit determination, and compare Monopoly with Perfect Competition in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-price-output-numerical-problems",
+    "type": "note",
+    "title": "Numerical Problems on Price and Output Determination",
+    "subjectId": "class-12",
+    "summary": "A comprehensive step-by-step student guide to solving equilibrium output, profit maximization, shutdown decisions, and pricing equations under perfect competition and monopoly with fully worked solutions.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-price-output-perfect-competition",
+    "type": "note",
+    "title": "Price and Output Determination Under Perfect Competition",
+    "subjectId": "class-12",
+    "summary": "Understand short-run equilibrium states (supernormal profit, normal profit, loss, shutdown point) and long-run equilibrium of a competitive firm and industry in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-profit-theories-risk-uncertainty",
+    "type": "note",
+    "title": "Risk-Bearing and Uncertainty-Bearing Theories of Profit",
+    "subjectId": "class-12",
+    "summary": "Understand Hawley's Risk-Bearing Theory (1907) and Knight's Uncertainty-Bearing Theory (1921), insurable vs uninsurable risks, and why profit is the reward for bearing non-calculable uncertainty in question-answer format.",
+    "date": "2026-10-03"
   },
   {
     "id": "class12-quantitative-techniques",
@@ -384,12 +512,44 @@
     "date": "2026-08-23"
   },
   {
-    "id": "class12-risk-bearing-theory-of-profit",
+    "id": "class12-revenue-concepts-tr-ar-mr",
     "type": "note",
-    "title": "Critically explain the Risk Bearing Theory of Profit.",
+    "title": "Concept of Total, Average, and Marginal Revenue (TR, AR, MR)",
     "subjectId": "class-12",
-    "summary": "The Risk Bearing Theory of Profit was propounded by Professor Hawley in 1907. ",
-    "date": "2026-09-02T00:00:00.000Z"
+    "summary": "Master the fundamental concepts, mathematical formulas, schedules, and general interrelationships of Total Revenue (TR), Average Revenue (AR), and Marginal Revenue (MR) in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-revenue-curves-monopoly",
+    "type": "note",
+    "title": "Revenue Curves Under Monopoly and Imperfect Competition",
+    "subjectId": "class-12",
+    "summary": "Understand why price falls with higher sales, construct revenue schedules, derive inverted U-shaped TR, downward-sloping AR and MR curves, and analyze their interrelationships in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-revenue-curves-perfect-competition",
+    "type": "note",
+    "title": "Revenue Curves Under Perfect Competition Market",
+    "subjectId": "class-12",
+    "summary": "Understand why price remains constant for a competitive firm, construct revenue schedules, derive TR, AR, and MR curves, and analyze their interrelationships in question-answer format.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-revenue-numerical-problems",
+    "type": "note",
+    "title": "Numerical Problems on Market and Revenue Curves",
+    "subjectId": "class-12",
+    "summary": "A complete step-by-step student guide to solving table completions, missing value puzzles, demand equation problems, and elasticity-revenue calculations with fully worked solutions and practice exercises.",
+    "date": "2026-10-03"
+  },
+  {
+    "id": "class12-ricardian-theory-of-rent",
+    "type": "note",
+    "title": "The Ricardian Theory of Rent",
+    "subjectId": "class-12",
+    "summary": "Understand David Ricardo's classical theory of rent, assumptions, extensive and intensive cultivation mechanisms, differential rent calculation, and critical evaluation in question-answer format.",
+    "date": "2026-10-03"
   },
   {
     "id": "class12-sdgs-nepal",
@@ -402,26 +562,26 @@
   {
     "id": "class12-subsistence-theory-wage",
     "type": "note",
-    "title": "Subsistence Theory of Wage",
+    "title": "The Subsistence Theory of Wages (Iron Law of Wages)",
     "subjectId": "class-12",
-    "summary": "Explain why classical economists believed wages tend to return to the subsistence level and evaluate the theory’s limitations.",
-    "date": "2026-08-25"
+    "summary": "Understand the classical Subsistence Theory of Wages (Iron Law of Wages) developed by Quesnay and Ricardo, its Malthusian population mechanism, assumptions, and critical evaluation in question-answer format.",
+    "date": "2026-10-03"
   },
   {
     "id": "class12-wage-fund-theory",
     "type": "note",
-    "title": "Wage Fund Theory of Wages",
+    "title": "The Wage Fund Theory of Wages",
     "subjectId": "class-12",
-    "summary": "Wage Fund Theory states that average wages are determined by dividing a predetermined wage fund by the number of workers employed: (W = Total Wage Fund / No. of Workers) . It explains why average wages fall when more workers share a fixed fund. However, the theory is unrealistic because the wage fund is not always fixed, workers are not homogeneous, wages are not perfectly flexible, and labour demand depends on product demand, productivity, and institutions. Thus, it is mainly important as a classical theory of wages.",
-    "date": "2026-08-25T00:00:00.000Z"
+    "summary": "Understand J.S. Mill's classical Wage Fund Theory of Wages, formula, tabular schedule, inverse relationship between workers and wage rate, assumptions, and critical evaluation in question-answer format.",
+    "date": "2026-10-03"
   },
   {
     "id": "classical-theory-of-interest",
     "type": "note",
-    "title": "Classical Theory of Interest",
+    "title": "The Classical Theory of Interest",
     "subjectId": "class-12",
-    "summary": "The Classical Theory of Interest provides a foundational framework for understanding how interest rates are determined through the interaction of supply and demand for capital.",
-    "date": "2026-08-31T00:00:00.000Z"
+    "summary": "Understand the classical real theory of interest developed by Marshall, Pigou, and Cassel, the equilibrium between Demand for Capital (Investment) and Supply of Capital (Savings), and Keynesian criticisms in question-answer format.",
+    "date": "2026-10-03"
   },
   {
     "id": "consumer-equilibrium-numericals",
@@ -502,14 +662,6 @@
     "subjectId": "introduction-to-economics",
     "summary": "Explore non-standard indifference curves, including straight linear curves for perfect substitutes, L-shaped curves for perfect complements, upward-sloping curves for economic bads, and circular curves.",
     "date": "2026-09-26T00:00:00.000Z"
-  },
-  {
-    "id": "factor-pricing-rent-concept",
-    "type": "note",
-    "title": "FACTOR PRICING: RENT CONCEPT",
-    "subjectId": "class-12",
-    "summary": "Rent is payment for using production factors; contract rent is tenant-landlord gross payment, while economic rent is surplus from fixed supply. Ricardo argued rent stems from fertility differences: superior land earns differential rent over marginal no-rent land, through extensive or intensive cultivation. Critics note fertility changes, accessibility, uses, and scarcity.",
-    "date": "2026-08-22T00:00:00.000Z"
   },
   {
     "id": "factors-determining-elasticity-of-demand",

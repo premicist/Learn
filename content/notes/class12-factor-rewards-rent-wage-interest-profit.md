@@ -75,7 +75,7 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    NW["<b>Money Wage (Cash Rs.)</b>"] -->|Divided by Price Level (P)| RW["<b>Real Wage</b><br>(Actual Goods, Services &amp; Living Standard)"]
+    NW["<b>Money Wage (Cash Rs.)</b>"] -->|"Divided by Price Level (P)"| RW["<b>Real Wage</b><br>(Actual Goods, Services &amp; Living Standard)"]
     FB["<b>+ Fringe Benefits</b><br>(Free Housing, Healthcare, Transport)"] --> RW
 ```
 

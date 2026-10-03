@@ -159,9 +159,9 @@ $$AR = MR \left( \frac{E_d}{E_d - 1} \right)$$
 ```mermaid
 flowchart LR
     E["<b>Elasticity of Demand (E_d)</b>"]
-    E -->|E_d &gt; 1 (Elastic)| MRpos["<b>MR &gt; 0</b><br>(Positive)"]
-    E -->|E_d = 1 (Unitary)| MRzero["<b>MR = 0</b><br>(TR is Maximum)"]
-    E -->|E_d &lt; 1 (Inelastic)| MRneg["<b>MR &lt; 0</b><br>(Negative)"]
+    E -->|"E_d > 1 (Elastic)"| MRpos["<b>MR &gt; 0</b><br>(Positive)"]
+    E -->|"E_d = 1 (Unitary)"| MRzero["<b>MR = 0</b><br>(TR is Maximum)"]
+    E -->|"E_d < 1 (Inelastic)"| MRneg["<b>MR &lt; 0</b><br>(Negative)"]
 ```
 
 1. **When Demand is Elastic ($E_d > 1$):**
