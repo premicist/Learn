@@ -2725,7 +2725,7 @@ curricula:
         summary: This unit examines how business managers use microeconomic tools and
           decision sciences to solve operational problems, forecast demand, and
           manage risk.
-        estimatedMinutes: 120
+        estimatedMinutes: 165
         outcomes:
           - Define the applied nature and scope of business economics.
           - Explain the strategic role of a business economist in managerial
@@ -2733,6 +2733,7 @@ curricula:
           - Evaluate technical efficiency and the time element in business
             planning.
           - Apply marginalism and opportunity cost concepts to business problems.
+          - Construct and interpret the Production Possibility Curve (PPC) and its shifts.
         lessons:
           - id: eco6701-u2ch1
             title: Nature, Scope, and Role of Business Economics
@@ -2752,6 +2753,14 @@ curricula:
               opportunity cost, marginalism, discounting, production efficiency,
               and the structural difference between short-run and long-run
               planning horizons.
+          - id: eco6701-u2ch3
+            title: Production Possibility Curve
+            resourceType: note
+            resourceId: production-possibility-curve
+            estimatedMinutes: 45
+            description: Explores the production possibility curve (PPC), opportunity cost,
+              derivation from production schedules, efficiency points, and
+              inward and outward curve shifts.
       - id: eco6701-u3
         order: 3
         title: Demand

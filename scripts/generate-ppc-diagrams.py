@@ -1,10 +1,139 @@
-"""Generate detailed, accessible SVG diagrams for PPC Points and PPC Shifts.
+"""Generate detailed, accessible SVG diagrams for PPC Points, PPC Schedule, and PPC Shifts.
 """
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "public" / "images" / "uploads"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def generate_ppc_from_schedule_svg() -> str:
+    return """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540" width="100%" height="auto" role="img" aria-label="PPC curve derived from production schedule table">
+  <defs>
+    <marker id="arrow-sched" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#146b63"/>
+    </marker>
+    <filter id="sched-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: var(--paper-card, #ffffff); }
+    .axis { stroke: var(--ink, #122a3a); stroke-width: 2.5; stroke-linecap: round; }
+    .grid { stroke: var(--line, #dde5e2); stroke-width: 1; stroke-dasharray: 4 4; }
+    .curve { fill: none; stroke: #146b63; stroke-width: 4; stroke-linecap: round; }
+    .proj-line { stroke: #94a3b8; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .title-text { font-family: 'Manrope', system-ui, sans-serif; font-size: 16px; font-weight: 800; fill: var(--ink, #122a3a); }
+    .axis-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: var(--ink, #122a3a); }
+    .tick-label { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; fill: var(--ink-soft, #47607a); }
+    .point-tag { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 800; fill: #146b63; }
+    .card-box { fill: var(--paper, #f8fafc); stroke: var(--line, #cbd5e1); stroke-width: 1.5; rx: 8; }
+    .card-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 800; fill: #146b63; }
+    .card-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 600; fill: var(--ink-soft, #47607a); }
+    .point-dot { stroke-width: 3; stroke: #ffffff; fill: #146b63; }
+  </style>
+
+  <!-- Background Card -->
+  <rect class="bg" width="100%" height="100%" rx="14"/>
+
+  <!-- Graph Axes -->
+  <!-- Y-Axis (Food in tonnes) -->
+  <line class="axis" x1="110" y1="450" x2="110" y2="45" marker-end="url(#arrow-sched)"/>
+  <!-- X-Axis (Clothing in '000 units) -->
+  <line class="axis" x1="110" y1="450" x2="750" y2="450" marker-end="url(#arrow-sched)"/>
+
+  <!-- Axis Titles -->
+  <text class="axis-label" x="25" y="38" text-anchor="start">Food Production (Tonnes)</text>
+  <text class="axis-label" x="750" y="480" text-anchor="end">Clothing Production ('000 Units)</text>
+  <text class="tick-label" x="92" y="468">0</text>
+
+  <!-- X-Axis Ticks &amp; Values -->
+  <line class="axis" x1="218" y1="450" x2="218" y2="456"/>
+  <text class="tick-label" x="218" y="474" text-anchor="middle">10</text>
+
+  <line class="axis" x1="326" y1="450" x2="326" y2="456"/>
+  <text class="tick-label" x="326" y="474" text-anchor="middle">20</text>
+
+  <line class="axis" x1="434" y1="450" x2="434" y2="456"/>
+  <text class="tick-label" x="434" y="474" text-anchor="middle">30</text>
+
+  <line class="axis" x1="542" y1="450" x2="542" y2="456"/>
+  <text class="tick-label" x="542" y="474" text-anchor="middle">40</text>
+
+  <line class="axis" x1="650" y1="450" x2="650" y2="456"/>
+  <text class="tick-label" x="650" y="474" text-anchor="middle">50</text>
+
+  <!-- Y-Axis Ticks &amp; Values -->
+  <line class="axis" x1="104" y1="342" x2="110" y2="342"/>
+  <text class="tick-label" x="98" y="346" text-anchor="end">60</text>
+
+  <line class="axis" x1="104" y1="252" x2="110" y2="252"/>
+  <text class="tick-label" x="98" y="256" text-anchor="end">110</text>
+
+  <line class="axis" x1="104" y1="180" x2="110" y2="180"/>
+  <text class="tick-label" x="98" y="184" text-anchor="end">150</text>
+
+  <line class="axis" x1="104" y1="126" x2="110" y2="126"/>
+  <text class="tick-label" x="98" y="130" text-anchor="end">180</text>
+
+  <line class="axis" x1="104" y1="90" x2="110" y2="90"/>
+  <text class="tick-label" x="98" y="94" text-anchor="end">200</text>
+
+  <!-- Projection Grid Lines for Points B, C, D, E -->
+  <!-- Point B (10, 180) -> (218, 126) -->
+  <line class="proj-line" x1="110" y1="126" x2="218" y2="126"/>
+  <line class="proj-line" x1="218" y1="450" x2="218" y2="126"/>
+
+  <!-- Point C (20, 150) -> (326, 180) -->
+  <line class="proj-line" x1="110" y1="180" x2="326" y2="180"/>
+  <line class="proj-line" x1="326" y1="450" x2="326" y2="180"/>
+
+  <!-- Point D (30, 110) -> (434, 252) -->
+  <line class="proj-line" x1="110" y1="252" x2="434" y2="252"/>
+  <line class="proj-line" x1="434" y1="450" x2="434" y2="252"/>
+
+  <!-- Point E (40, 60) -> (542, 342) -->
+  <line class="proj-line" x1="110" y1="342" x2="542" y2="342"/>
+  <line class="proj-line" x1="542" y1="450" x2="542" y2="342"/>
+
+  <!-- PPC Smooth Curve through Points A(110,90) -> B(218,126) -> C(326,180) -> D(434,252) -> E(542,342) -> F(650,450) -->
+  <path class="curve" d="M 110 90 C 240 100, 480 200, 650 450"/>
+
+  <!-- Points and Badges -->
+  <!-- Point A -->
+  <circle class="point-dot" cx="110" cy="90" r="6"/>
+  <text class="point-tag" x="122" y="86">A (0, 200)</text>
+
+  <!-- Point B -->
+  <circle class="point-dot" cx="218" cy="126" r="6"/>
+  <text class="point-tag" x="230" y="122">B (10, 180)</text>
+
+  <!-- Point C -->
+  <circle class="point-dot" cx="326" cy="180" r="6"/>
+  <text class="point-tag" x="338" y="176">C (20, 150)</text>
+
+  <!-- Point D -->
+  <circle class="point-dot" cx="434" cy="252" r="6"/>
+  <text class="point-tag" x="446" y="248">D (30, 110)</text>
+
+  <!-- Point E -->
+  <circle class="point-dot" cx="542" cy="342" r="6"/>
+  <text class="point-tag" x="554" y="338">E (40, 60)</text>
+
+  <!-- Point F -->
+  <circle class="point-dot" cx="650" cy="450" r="6"/>
+  <text class="point-tag" x="656" y="440">F (50, 0)</text>
+
+  <!-- Callout Legend Box -->
+  <g filter="url(#sched-shadow)">
+    <rect class="card-box" x="460" y="60" width="330" height="80"/>
+    <circle cx="478" cy="82" r="5" fill="#146b63"/>
+    <text class="card-title" x="492" y="86">Concave to Origin (Bowed-Out)</text>
+    <text class="card-sub" x="492" y="106">Steeper slope = Increasing Opportunity Cost</text>
+    <text class="card-sub" x="492" y="124">MRT increases as more clothing is produced</text>
+  </g>
+</svg>"""
 
 
 def generate_ppc_points_svg() -> str:
@@ -206,9 +335,10 @@ def generate_ppc_shifts_svg() -> str:
 
 
 def main():
+    (OUTPUT_DIR / "ppc-from-schedule.svg").write_text(generate_ppc_from_schedule_svg(), encoding="utf-8")
     (OUTPUT_DIR / "ppc-efficiency-points.svg").write_text(generate_ppc_points_svg(), encoding="utf-8")
     (OUTPUT_DIR / "ppc-shifts.svg").write_text(generate_ppc_shifts_svg(), encoding="utf-8")
-    print("Generated ppc-efficiency-points.svg and ppc-shifts.svg successfully in public/images/uploads/")
+    print("Generated ppc-from-schedule.svg, ppc-efficiency-points.svg, and ppc-shifts.svg successfully in public/images/uploads/")
 
 
 if __name__ == "__main__":

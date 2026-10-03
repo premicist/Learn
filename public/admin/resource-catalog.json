@@ -1936,6 +1936,14 @@
     "date": "2026-10-03T00:00:00.000Z"
   },
   {
+    "id": "production-possibility-curve",
+    "type": "note",
+    "title": "Production Possibility Curve (PPC)",
+    "subjectId": "introduction-to-economics",
+    "summary": "Understand how the Production Possibility Curve shows the trade-offs an economy faces when it has limited resources, with PPC schedules, diagrams of efficient/inefficient/unattainable points, and causes of inward and outward shifts.",
+    "date": "2026-10-03"
+  },
+  {
     "id": "properties-of-indifference-curves",
     "type": "note",
     "title": "Properties and Characteristics of Indifference Curves",
