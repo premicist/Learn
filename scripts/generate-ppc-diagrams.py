@@ -337,8 +337,7 @@ def generate_ppc_shifts_svg() -> str:
 def main():
     (OUTPUT_DIR / "ppc-from-schedule.svg").write_text(generate_ppc_from_schedule_svg(), encoding="utf-8")
     (OUTPUT_DIR / "ppc-efficiency-points.svg").write_text(generate_ppc_points_svg(), encoding="utf-8")
-    (OUTPUT_DIR / "ppc-shifts.svg").write_text(generate_ppc_shifts_svg(), encoding="utf-8")
-    print("Generated ppc-from-schedule.svg, ppc-efficiency-points.svg, and ppc-shifts.svg successfully in public/images/uploads/")
+    print("Generated ppc-from-schedule.svg and ppc-efficiency-points.svg successfully in public/images/uploads/")
 
 
 if __name__ == "__main__":

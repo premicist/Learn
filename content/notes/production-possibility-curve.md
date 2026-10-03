@@ -58,7 +58,7 @@ Suppose a country can produce Food (in tonnes) and Clothing (in thousands of uni
 - At combination **F**, it puts everything into clothing and produces 50,000 units of clothing with zero food.
 - Between A and F, the country gives up some food to get more clothing.
 
-Notice that the **opportunity cost of each additional 10,000 units of clothing keeps increasing** (20 → 30 → 40 → 50 → 60 tonnes of food). This is called **increasing opportunity cost**, and it is the reason the PPC curves outward.
+Notice that the **opportunity cost of each additional 10,000 units of clothing keeps increasing** (20 → 30 → 40 → 50 → 60 tonnes of food). This is called **increasing opportunity cost**, and it is the reason the PPC curves non-linear.
 
 ---
 
@@ -131,7 +131,7 @@ The PPC is **concave to the origin** (bowed outward) because of the **Law of Inc
 
 The PPC is not fixed forever. It can shift **outward (rightward)** or **inward (leftward)** depending on changes in resources or technology.
 
-![Outward and inward shifts of the PPC](/images/uploads/ppc-shifts.svg)
+![Outward and inward shifts of the PPC](/images/uploads/PPC-shift.png)
 
 ### (a) Outward Shift (Economic Growth)
 
