@@ -3,9 +3,17 @@ import type { PracticeSet } from '../data/content'
 import {
   submitPracticeAnswers,
   uploadPracticeAnswerImage,
+  supabaseEnabled,
   type PracticeAnswerValue,
   type WritingAnswerData,
 } from '../lib/supabase'
+import {
+  fileToBase64,
+  googleDriveEnabled,
+  submitToGoogleDrive,
+  type GooglePracticeSubmission,
+  type GoogleSubmissionAnswer,
+} from '../lib/googleDriveSubmission'
 
 type PracticeSetCardProps = {
   practiceSet: PracticeSet
@@ -153,11 +161,12 @@ function PracticeSetCard({ practiceSet }: PracticeSetCardProps) {
 
     try {
       const answersById: Record<string, PracticeAnswerValue> = {}
+      const googleAnswers: Record<string, GoogleSubmissionAnswer | number | string> = {}
       const writingIndices = practiceSet.questions
         .map((q, idx) => (q.type === 'writing' ? idx : -1))
         .filter((idx) => idx !== -1)
 
-      // Step 1: Upload images if any
+      // Step 1: Process writing images & base64 conversions
       let uploadedCount = 0
       const totalImagesToUpload = writingIndices.filter((idx) => writingAnswers[idx]?.imageFile).length
 
@@ -165,20 +174,34 @@ function PracticeSetCard({ practiceSet }: PracticeSetCardProps) {
         const writing = writingAnswers[idx]
         const qKey = `q${idx + 1}`
         let finalImageUrl = writing.uploadedUrl
+        let base64Obj: { base64: string; mimeType: string } | null = null
 
         if (writing.imageFile) {
           uploadedCount++
-          setUploadStatus(`Uploading handwritten sheets (${uploadedCount}/${totalImagesToUpload})…`)
-          const uploadRes = await uploadPracticeAnswerImage(
-            writing.imageFile,
-            practiceSet.id,
-            idx,
-            student.rollNo.trim(),
-          )
-          if (uploadRes.ok) {
-            finalImageUrl = uploadRes.url
-          } else {
-            console.warn(`Could not upload image for ${qKey}:`, uploadRes.error)
+          setUploadStatus(`Preparing handwritten sheets (${uploadedCount}/${totalImagesToUpload})…`)
+
+          // Convert to base64 for Google Apps Script Webhook
+          if (googleDriveEnabled) {
+            try {
+              base64Obj = await fileToBase64(writing.imageFile)
+            } catch (b64Err) {
+              console.warn('Base64 encoding error:', b64Err)
+            }
+          }
+
+          // Upload to Supabase Storage if Supabase is enabled
+          if (supabaseEnabled) {
+            const uploadRes = await uploadPracticeAnswerImage(
+              writing.imageFile,
+              practiceSet.id,
+              idx,
+              student.rollNo.trim(),
+            )
+            if (uploadRes.ok) {
+              finalImageUrl = uploadRes.url
+            } else {
+              console.warn(`Could not upload image for ${qKey} to Supabase:`, uploadRes.error)
+            }
           }
         }
 
@@ -188,6 +211,17 @@ function PracticeSetCard({ practiceSet }: PracticeSetCardProps) {
 
         answersById[qKey] =
           Object.keys(writingPayload).length > 0 ? writingPayload : { text: '(No response provided)' }
+
+        // Google Drive Payload for this question
+        const gAns: GoogleSubmissionAnswer = {}
+        if (writing.text.trim()) gAns.text = writing.text.trim()
+        if (base64Obj) {
+          gAns.image_base64 = base64Obj.base64
+          gAns.image_mime = base64Obj.mimeType
+        } else if (finalImageUrl) {
+          gAns.image_url = finalImageUrl
+        }
+        googleAnswers[qKey] = Object.keys(gAns).length > 0 ? gAns : '(No response provided)'
       }
 
       // Step 2: Add numerical answers
@@ -195,25 +229,55 @@ function PracticeSetCard({ practiceSet }: PracticeSetCardProps) {
         if (q.type === 'numerical') {
           const qKey = `q${idx + 1}`
           const numVal = Number.parseFloat(numericalAnswers[idx] || '0')
-          answersById[qKey] = Number.isNaN(numVal) ? 0 : numVal
+          const finalNum = Number.isNaN(numVal) ? 0 : numVal
+          answersById[qKey] = finalNum
+          googleAnswers[qKey] = finalNum
         }
       })
 
-      // Step 3: Submit record to Supabase
-      setUploadStatus('Saving your complete submission…')
-      const result = await submitPracticeAnswers({
-        practice_set_id: practiceSet.id,
-        subject_id: practiceSet.subjectId,
-        student_name: student.name.trim(),
-        class: student.studentClass.trim(),
-        section: student.section.trim(),
-        roll_no: student.rollNo.trim(),
-        answers: answersById,
-        numerical_score: numericalTotal > 0 ? numericalScore : null,
-        numerical_total: numericalTotal > 0 ? numericalTotal : null,
-      })
+      let anySuccess = false
 
-      setSaveState(result.ok ? 'saved' : 'failed')
+      // Step 3A: Submit to Google Drive & Google Sheets if enabled
+      if (googleDriveEnabled) {
+        setUploadStatus('Saving to Google Drive & Google Sheets…')
+        const gPayload: GooglePracticeSubmission = {
+          practice_set_id: practiceSet.id,
+          subject_id: practiceSet.subjectId,
+          student_name: student.name.trim(),
+          class: student.studentClass.trim(),
+          section: student.section.trim(),
+          roll_no: student.rollNo.trim(),
+          answers: googleAnswers,
+          numerical_score: numericalTotal > 0 ? numericalScore : null,
+          numerical_total: numericalTotal > 0 ? numericalTotal : null,
+        }
+        const gResult = await submitToGoogleDrive(gPayload)
+        if (gResult.ok) anySuccess = true
+      }
+
+      // Step 3B: Submit to Supabase if enabled
+      if (supabaseEnabled) {
+        setUploadStatus('Saving to database…')
+        const sResult = await submitPracticeAnswers({
+          practice_set_id: practiceSet.id,
+          subject_id: practiceSet.subjectId,
+          student_name: student.name.trim(),
+          class: student.studentClass.trim(),
+          section: student.section.trim(),
+          roll_no: student.rollNo.trim(),
+          answers: answersById,
+          numerical_score: numericalTotal > 0 ? numericalScore : null,
+          numerical_total: numericalTotal > 0 ? numericalTotal : null,
+        })
+        if (sResult.ok) anySuccess = true
+      }
+
+      // If neither is configured (local dev without keys), still treat as preview success
+      if (!supabaseEnabled && !googleDriveEnabled) {
+        anySuccess = true
+      }
+
+      setSaveState(anySuccess ? 'saved' : 'failed')
     } catch (err) {
       console.error('Submission failed:', err)
       setSaveState('failed')

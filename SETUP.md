@@ -54,6 +54,34 @@ The validator checks taxonomy references, duplicate IDs, required fields, dates,
 
 If the site shows a blank page under a repository URL, check that `vite.config.ts` has the correct `base` path. If content does not appear under a subject, check the exact `subjectId` and run `npm run validate-content`. If a diagram shows "(Diagram could not be rendered)", run `npm run validate-mermaid` to find the offending block, then quote the label. If the admin panel looks outdated, confirm that `admin/config.yml` is the source of truth and rebuild so it is synchronized to `public/admin/config.yml`.
 
+## Practice Sets & Google Drive / Google Sheets Integration
+
+Practice sets allow students to complete self-paced numerical questions (auto-graded instantly) and writing questions (typed or handwritten photos).
+
+### Option A: Google Drive (5 TB) + Google Sheets Workflow
+
+Use your Google account to automatically store student handwritten sheets in Google Drive and log grades into Google Sheets without database setup.
+
+1. Create a new Google Sheet named **Economics Student Submissions**.
+2. In the Google Sheet, go to **Extensions → Apps Script**.
+3. Copy and paste the script from `google-scripts/practice-submissions-webhook.gs`.
+4. Click **Deploy → New deployment**.
+   - Select type: **Web app**
+   - Execute as: **Me**
+   - Who has access: **Anyone**
+5. Click **Deploy**, authorize permissions, and copy the Web App URL (`https://script.google.com/macros/s/.../exec`).
+6. Add the URL to your environment variables or `.env.local`:
+   ```bash
+   VITE_GOOGLE_SCRIPT_URL="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec"
+   ```
+
+### Option B: Supabase Workflow
+
+1. Run `supabase/practice-submissions.sql` in your Supabase SQL editor.
+2. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in `.env.local`.
+
+*Note: You can enable both simultaneously — the site will post to Google Sheets/Drive and Supabase at the same time.*
+
 ## Scheduled Tests (Phase 2)
 
 Scheduled Tests are authored in the `/admin/` dashboard under **Scheduled Tests**. New tests are drafts by default; set **Publish this test** only when the availability window and numerical answer key are ready. The build publishes only records whose `published` field is `true`.
