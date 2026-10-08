@@ -4,54 +4,71 @@ import { Excalidraw, convertToExcalidrawElements } from '@excalidraw/excalidraw'
 import { useTheme } from '../utils/useTheme'
 
 // Pre-defined economics curve templates — cast as any[] to bypass strict typing
-const CURVE_TEMPLATES: Record<string, () => any[]> = {
-  axes: () => convertToExcalidrawElements([
-    { type: 'line', x: 120, y: 520, points: [[0, 0], [0, -480]], strokeColor: '#111', strokeWidth: 2 },
-    { type: 'line', x: 120, y: 520, points: [[0, 0], [800, 0]], strokeColor: '#111', strokeWidth: 2 },
-    { type: 'text', x: 100, y: 60, text: 'P', fontSize: 22, strokeWidth: 1 },
-    { type: 'text', x: 860, y: 510, text: 'Q', fontSize: 22, strokeWidth: 1 },
-    { type: 'text', x: 60, y: 480, text: 'Price (P)', fontSize: 14, strokeWidth: 1 },
-    { type: 'text', x: 680, y: 560, text: 'Output (Q)', fontSize: 14, strokeWidth: 1 },
+const CURVE_TEMPLATES: Record<string, (axisColor: string, mutedColor: string) => any[]> = {
+  axes: (axisColor) => convertToExcalidrawElements([
+    { type: 'line', x: 100, y: 100, points: [[0, 0], [0, 400]], strokeColor: axisColor, strokeWidth: 2 },
+    { type: 'line', x: 100, y: 500, points: [[0, 0], [600, 0]], strokeColor: axisColor, strokeWidth: 2 },
+    { type: 'text', x: 75, y: 75, text: 'P', fontSize: 22, strokeColor: axisColor },
+    { type: 'text', x: 715, y: 490, text: 'Q', fontSize: 22, strokeColor: axisColor },
+    { type: 'text', x: 45, y: 95, text: 'Price (P)', fontSize: 14, strokeColor: axisColor },
+    { type: 'text', x: 610, y: 525, text: 'Output / Quantity (Q)', fontSize: 14, strokeColor: axisColor },
+    { type: 'text', x: 80, y: 505, text: '0', fontSize: 16, strokeColor: axisColor },
   ]) as any[],
-  // @ts-ignore - Excalidraw skeleton types are overly strict for our use case
+
   demand: () => convertToExcalidrawElements([
-    { type: 'freedraw', x: 160, y: 180, points: [[0, 0], [60, -20], [120, -45], [200, -100], [300, -180], [420, -280]], strokeColor: '#e63946', strokeWidth: 3 },
-    { type: 'text', x: 460, y: -320, text: 'D', fontSize: 20, strokeColor: '#e63946' },
+    { type: 'line', x: 140, y: 140, points: [[0, 0], [440, 320]], strokeColor: '#e63946', strokeWidth: 3 },
+    { type: 'text', x: 595, y: 455, text: 'D', fontSize: 20, strokeColor: '#e63946' },
+    { type: 'text', x: 125, y: 115, text: 'D', fontSize: 20, strokeColor: '#e63946' },
   ]) as any[],
-  // @ts-ignore
+
   supply: () => convertToExcalidrawElements([
-    { type: 'freedraw', x: 180, y: 460, points: [[0, 0], [40, -30], [100, -80], [180, -160], [280, -270], [400, -400]], strokeColor: '#2a9d8f', strokeWidth: 3 },
-    { type: 'text', x: 440, y: -440, text: 'S', fontSize: 20, strokeColor: '#2a9d8f' },
+    { type: 'line', x: 140, y: 460, points: [[0, 0], [440, -320]], strokeColor: '#2a9d8f', strokeWidth: 3 },
+    { type: 'text', x: 595, y: 125, text: 'S', fontSize: 20, strokeColor: '#2a9d8f' },
+    { type: 'text', x: 125, y: 465, text: 'S', fontSize: 20, strokeColor: '#2a9d8f' },
   ]) as any[],
-  // @ts-ignore
-  dd_supply: () => convertToExcalidrawElements([
-    { type: 'freedraw', x: 160, y: 180, points: [[0, 0], [60, -20], [120, -45], [200, -100], [300, -180], [420, -280]], strokeColor: '#e63946', strokeWidth: 3 },
-    { type: 'text', x: 460, y: -320, text: 'D', fontSize: 20, strokeColor: '#e63946' },
-    { type: 'freedraw', x: 180, y: 460, points: [[0, 0], [40, -30], [100, -80], [180, -160], [280, -270], [400, -400]], strokeColor: '#2a9d8f', strokeWidth: 3 },
-    { type: 'text', x: 440, y: -440, text: 'S', fontSize: 20, strokeColor: '#2a9d8f' },
+
+  dd_supply: (_axisColor, mutedColor) => convertToExcalidrawElements([
+    // Demand Curve
+    { type: 'line', x: 140, y: 140, points: [[0, 0], [440, 320]], strokeColor: '#e63946', strokeWidth: 3 },
+    { type: 'text', x: 595, y: 455, text: 'D', fontSize: 20, strokeColor: '#e63946' },
+    // Supply Curve
+    { type: 'line', x: 140, y: 460, points: [[0, 0], [440, -320]], strokeColor: '#2a9d8f', strokeWidth: 3 },
+    { type: 'text', x: 595, y: 125, text: 'S', fontSize: 20, strokeColor: '#2a9d8f' },
+    // Equilibrium lines
+    { type: 'line', x: 360, y: 300, points: [[0, 0], [-260, 0]], strokeColor: mutedColor, strokeWidth: 1.5, strokeStyle: 'dashed' },
+    { type: 'line', x: 360, y: 300, points: [[0, 0], [0, 200]], strokeColor: mutedColor, strokeWidth: 1.5, strokeStyle: 'dashed' },
+    { type: 'text', x: 370, y: 280, text: 'E', fontSize: 18, strokeColor: '#e63946' },
+    { type: 'text', x: 65, y: 290, text: 'Pe', fontSize: 16, strokeColor: mutedColor },
+    { type: 'text', x: 350, y: 510, text: 'Qe', fontSize: 16, strokeColor: mutedColor },
   ]) as any[],
-  // @ts-ignore
+
   cost_curves: () => convertToExcalidrawElements([
-    { type: 'freedraw', x: 140, y: 300, points: [[0, 0], [30, 10], [60, 15], [100, 12], [150, 0], [200, -20], [260, -30], [320, -25], [380, -10]], strokeColor: '#e76f51', strokeWidth: 2 },
-    { type: 'text', x: 400, y: -10, text: 'MC', fontSize: 16, strokeColor: '#e76f51' },
-    { type: 'freedraw', x: 120, y: 280, points: [[0, -20], [40, -10], [80, -5], [130, -2], [180, -5], [240, -15], [300, -30], [360, -35]], strokeColor: '#f4a261', strokeWidth: 2 },
-    { type: 'text', x: 380, y: -40, text: 'AC', fontSize: 16, strokeColor: '#f4a261' },
-    { type: 'freedraw', x: 150, y: 320, points: [[0, 10], [50, 15], [100, 10], [160, 0], [220, -15], [280, -30], [340, -35]], strokeColor: '#2a9d8f', strokeWidth: 2 },
-    { type: 'text', x: 360, y: -45, text: 'AVC', fontSize: 16, strokeColor: '#2a9d8f' },
+    // AC curve (U-shaped)
+    { type: 'freedraw', x: 160, y: 220, points: [[0, 0], [60, 50], [120, 75], [200, 80], [280, 65], [360, 25]], strokeColor: '#f4a261', strokeWidth: 2 },
+    { type: 'text', x: 535, y: 235, text: 'AC', fontSize: 16, strokeColor: '#f4a261' },
+    // AVC curve (U-shaped below AC)
+    { type: 'freedraw', x: 160, y: 300, points: [[0, 0], [60, 30], [150, 40], [240, 25], [340, -15]], strokeColor: '#2a9d8f', strokeWidth: 2 },
+    { type: 'text', x: 515, y: 275, text: 'AVC', fontSize: 16, strokeColor: '#2a9d8f' },
+    // MC curve (Cuts AVC and AC at their minimum points)
+    { type: 'freedraw', x: 180, y: 380, points: [[0, 0], [50, 10], [130, -40], [180, -100], [240, -200], [300, -290]], strokeColor: '#e76f51', strokeWidth: 3 },
+    { type: 'text', x: 490, y: 80, text: 'MC', fontSize: 16, strokeColor: '#e76f51' },
   ]) as any[],
-  // @ts-ignore
+
   revenue_curves: () => convertToExcalidrawElements([
-    { type: 'line', x: 120, y: 480, points: [[0, 0], [700, 0]], strokeColor: '#457b9d', strokeWidth: 2 },
-    { type: 'text', x: 720, y: -20, text: 'AR = MR = P', fontSize: 14, strokeColor: '#457b9d' },
-    { type: 'freedraw', x: 140, y: 300, points: [[0, 0], [50, -10], [100, -30], [160, -65], [230, -110], [310, -165], [400, -230]], strokeColor: '#e63946', strokeWidth: 2 },
-    { type: 'text', x: 420, y: -250, text: 'TR', fontSize: 16, strokeColor: '#e63946' },
+    // AR = MR = P (Horizontal in perfect competition)
+    { type: 'line', x: 100, y: 280, points: [[0, 0], [550, 0]], strokeColor: '#457b9d', strokeWidth: 2.5 },
+    { type: 'text', x: 660, y: 270, text: 'AR = MR = P', fontSize: 14, strokeColor: '#457b9d' },
+    // TR (Total Revenue ray from origin)
+    { type: 'line', x: 100, y: 500, points: [[0, 0], [420, -340]], strokeColor: '#e63946', strokeWidth: 2.5 },
+    { type: 'text', x: 530, y: 150, text: 'TR', fontSize: 16, strokeColor: '#e63946' },
   ]) as any[],
-  // @ts-ignore
+
   ppc: () => convertToExcalidrawElements([
-    { type: 'freedraw', x: 160, y: 480, points: [[0, 0], [30, -15], [60, -35], [100, -60], [150, -90], [210, -120], [280, -145], [360, -165]], strokeColor: '#6a4c93', strokeWidth: 3 },
-    { type: 'text', x: 380, y: -180, text: 'PPC', fontSize: 16, strokeColor: '#6a4c93' },
-    { type: 'text', x: 100, y: 520, text: 'Good X', fontSize: 14 },
-    { type: 'text', x: 20, y: 380, text: 'Good Y', fontSize: 14 },
+    // Concave to origin
+    { type: 'freedraw', x: 100, y: 140, points: [[0, 0], [120, 20], [240, 70], [340, 160], [410, 250], [440, 360]], strokeColor: '#6a4c93', strokeWidth: 3 },
+    { type: 'text', x: 410, y: 230, text: 'PPC', fontSize: 18, strokeColor: '#6a4c93' },
+    { type: 'text', x: 45, y: 120, text: 'Good Y', fontSize: 14, strokeColor: '#6a4c93' },
+    { type: 'text', x: 510, y: 515, text: 'Good X', fontSize: 14, strokeColor: '#6a4c93' },
   ]) as any[],
 }
 
@@ -59,7 +76,7 @@ const BUTTONS: { key: string; label: string; emoji: string; desc: string; color:
   { key: 'axes',        label: 'Axes',          emoji: '📐',  desc: 'P & Q axes',               color: '#111' },
   { key: 'demand',      label: 'Demand',        emoji: '📉',  desc: 'Downward D curve',         color: '#e63946' },
   { key: 'supply',      label: 'Supply',        emoji: '📈',  desc: 'Upward S curve',           color: '#2a9d8f' },
-  { key: 'dd_supply',   label: 'D & S',         emoji: '⚖️',  desc: 'Both curves together',     color: '#111' },
+  { key: 'dd_supply',   label: 'D & S',         emoji: '⚖️',  desc: 'Both curves together',     color: '#457b9d' },
   { key: 'cost_curves', label: 'Cost Curves',   emoji: '💰',  desc: 'MC, AC, AVC',              color: '#e76f51' },
   { key: 'revenue_curves', label: 'Revenue',    emoji: '📊',  desc: 'TR, AR = MR = P',          color: '#457b9d' },
   { key: 'ppc',         label: 'PPC',           emoji: '🔄',  desc: 'Production frontier',      color: '#6a4c93' },
@@ -71,21 +88,29 @@ interface WhiteboardCanvasProps {
   clearCanvas: () => void
 }
 
-function WhiteboardCanvas({ initialData, handleChange, clearCanvas }: WhiteboardCanvasProps) {
+function WhiteboardCanvas({ initialData, onChange, clearCanvas }: WhiteboardCanvasProps) {
   const { theme } = useTheme()
   const excalidrawAPIRef = useRef<any>(null)
 
   const themeMap: Record<string, 'light' | 'dark'> = { light: 'light', dark: 'dark', warm: 'light' }
+  const isDark = theme === 'dark'
+  const axisColor = isDark ? '#f1f5f9' : '#1e293b'
+  const mutedColor = isDark ? '#94a3b8' : '#64748b'
 
   const handleInsert = (key: string) => {
     if (!excalidrawAPIRef.current) return
-    const elements = CURVE_TEMPLATES[key]()
-    excalidrawAPIRef.current.updateScene({ elements: [...(initialData?.elements || []), ...elements] })
+    const elements = CURVE_TEMPLATES[key](axisColor, mutedColor)
+    const currentElements = excalidrawAPIRef.current.getSceneElements?.() || []
+    excalidrawAPIRef.current.updateScene({
+      elements: [...currentElements, ...elements],
+    })
   }
 
   const handleClear = () => {
-    clearCanvas()
-    excalidrawAPIRef.current?.updateScene({ elements: [] })
+    if (window.confirm('Are you sure you want to clear the canvas? All drawings and curves will be removed.')) {
+      clearCanvas()
+      excalidrawAPIRef.current?.updateScene({ elements: [] })
+    }
   }
 
   return (
@@ -119,9 +144,16 @@ function WhiteboardCanvas({ initialData, handleChange, clearCanvas }: Whiteboard
         <Excalidraw
           excalidrawAPI={(api) => { excalidrawAPIRef.current = api }}
           initialData={initialData}
-          onChange={handleChange}
+          onChange={onChange}
           theme={themeMap[theme] || 'light'}
-          UIOptions={{ canvasActions: { export: false, saveToActiveFile: true, clearCanvas: false, toggleTheme: false } }}
+          UIOptions={{
+            canvasActions: {
+              export: { saveFileToDisk: true },
+              saveToActiveFile: false,
+              clearCanvas: false,
+              toggleTheme: false,
+            },
+          }}
           name="Economics Diagram"
         />
       </div>
