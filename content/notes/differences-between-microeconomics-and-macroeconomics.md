@@ -16,11 +16,7 @@ toc: []
 
 In 1933, Norwegian economist and Nobel Laureate **Sir Ragnar Frisch** formally bifurcated the discipline of economics into two distinct branches: **Microeconomics** and **Macroeconomics**.
 
-```mermaid
-flowchart TD
-    A["<b>ECONOMICS</b>"] --> B["<b>Microeconomics</b><br>Price Theory · Individual units"]
-    A --> C["<b>Macroeconomics</b><br>Income Theory · Economy as a whole"]
-```
+![differences between microeconomics and macroeconomics diagram 1](/flowcharts/introduction-to-economics/differences-between-microeconomics-and-macroeconomics-diagram-1.svg)
 
 * **Micro** comes from the Greek word *'Mikros'* (meaning small).
 * **Macro** comes from the Greek word *'Makros'* (meaning large).

@@ -10,14 +10,7 @@ unitId: class12-u2-2
 
 In microeconomic cost theory, the curves for **Average Total Cost ($AC$)**, **Average Variable Cost ($AVC$)**, and **Marginal Cost ($MC$)** all exhibit a distinct **U-shape**. Understanding how Marginal Cost interacts with Average Cost and Average Variable Cost is one of the most fundamental principles in production and firm equilibrium analysis.
 
-```mermaid
-flowchart TD
-    Rel["<b>Interrelationship of Short-Run Cost Curves</b>"]
-    Rel --> AC_MC["<b>AC &amp; MC Relationship</b><br>• MC &lt; AC → AC falls<br>• MC = AC → AC is at MINIMUM<br>• MC &gt; AC → AC rises"]
-    Rel --> AVC_MC["<b>AVC &amp; MC Relationship</b><br>• MC &lt; AVC → AVC falls<br>• MC = AVC → AVC is at MINIMUM<br>• MC &gt; AVC → AVC rises"]
-    Rel --> AC_AVC["<b>AC &amp; AVC Relationship</b><br>• Vertical distance = AFC<br>• Curves get closer but NEVER touch"]
-    Rel --> UShape["<b>Why U-Shaped?</b><br>Law of Variable Proportions"]
-```
+![class12 cost relation mc avc ac diagram 1](/flowcharts/class-12/class12-cost-relation-mc-avc-ac-diagram-1.svg)
 
 ---
 
@@ -27,10 +20,7 @@ flowchart TD
 **Answer:**
 The relationship between $AC$ and $MC$ follows three universal mathematical rules:
 
-```mermaid
-flowchart LR
-    MC1["<b>When MC &lt; AC</b><br>AC is FALLING<br>(MC pulls AC down)"] --> MC2["<b>When MC = AC</b><br>AC is at MINIMUM<br>(Optimum Cost Point)"] --> MC3["<b>When MC &gt; AC</b><br>AC is RISING<br>(MC pulls AC up)"]
-```
+![class12 cost relation mc avc ac diagram 2](/flowcharts/class-12/class12-cost-relation-mc-avc-ac-diagram-2.svg)
 
 #### The 5 Key Relationship Rules:
 1. **When $MC < AC$, Average Cost is Falling:**
@@ -48,28 +38,9 @@ flowchart LR
 
 ### Q2. Graphical Diagram of $AC, AVC$, and $MC$ Curves
 
-```
-Cost (Rs.)
-   |
-   |           MC           AC
-   |           /           /
-   |          /    AVC    /
-   |         /     /---\ /
-   |        /     /     * E2 (Min AC: MC = AC)
-   |       /     /     /
-   |      /     * E1  /
-   |     /     / (Min AVC: MC = AVC)
-   |    /     /
-   |   /-----/
-   0 +----------------------------------> Output (Q)
-```
+![Relationship between Short-Run Cost Curves: AC, AVC, and MC](/images/uploads/short-run-cost-curves-srac-smc.svg)
 
-```mermaid
-flowchart TD
-    Points["<b>Key Intersection Points on Diagram</b>"]
-    Points --> E1["<b>Point E1: Minimum of AVC</b><br>• MC intersects AVC from below<br>• MC = AVC at its lowest point"]
-    Points --> E2["<b>Point E2: Minimum of AC</b><br>• MC intersects AC from below<br>• MC = AC at its lowest point<br>• Occurs at a higher output than E1"]
-```
+![class12 cost relation mc avc ac diagram 3](/flowcharts/class-12/class12-cost-relation-mc-avc-ac-diagram-3.svg)
 
 ---
 
@@ -91,12 +62,7 @@ Because Marginal Cost is purely derived from variable costs ($MC = \frac{\Delta 
 ### Q4. What is the relationship between the $AC$ curve and the $AVC$ curve? Why do they never intersect?
 **Answer:**
 
-```mermaid
-flowchart LR
-    AC["<b>AC = AFC + AVC</b>"] --> Diff["<b>Vertical Difference = AFC</b><br>(AC − AVC = AFC)"]
-    Diff --> Close["<b>As Output Increases:</b><br>AFC falls → Curves get closer"]
-    Diff --> Never["<b>Curves NEVER Touch:</b><br>Because AFC &gt; 0 always"]
-```
+![class12 cost relation mc avc ac diagram 4](/flowcharts/class-12/class12-cost-relation-mc-avc-ac-diagram-4.svg)
 
 1. **Vertical Distance Equals $AFC$:**
    * Since $AC = AFC + AVC$, the vertical gap between the $AC$ curve and the $AVC$ curve at any output level is exactly equal to **Average Fixed Cost ($AFC$)**:
@@ -120,13 +86,7 @@ flowchart LR
 **Answer:**
 The U-shape of short-run cost curves is explained by the **Law of Variable Proportions (Law of Diminishing Returns)**.
 
-```mermaid
-flowchart TD
-    LVP["<b>Law of Variable Proportions</b>"]
-    LVP --> Stage1["<b>Stage 1: Increasing Returns to Variable Factor</b><br>• Marginal &amp; Average Product RISE<br>• MC, AVC, and AC <b>FALL</b>"]
-    LVP --> Stage2["<b>Stage 2: Optimum / Constant Returns</b><br>• Productivity reaches MAXIMUM<br>• MC, AVC, and AC reach <b>MINIMUM (Bottom of U)</b>"]
-    LVP --> Stage3["<b>Stage 3: Diminishing Returns to Variable Factor</b><br>• Overcrowding on fixed machines; MP &amp; AP FALL<br>• MC, AVC, and AC <b>RISE RAPIDLY</b>"]
-```
+![class12 cost relation mc avc ac diagram 5](/flowcharts/class-12/class12-cost-relation-mc-avc-ac-diagram-5.svg)
 
 #### The Three Phases Explained:
 1. **Initial Phase (Falling Costs / Left Side of U):**

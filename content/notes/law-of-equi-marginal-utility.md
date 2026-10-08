@@ -18,12 +18,7 @@ While the Law of Diminishing Marginal Utility explains consumer choice for a sin
 
 The **Law of Equi-Marginal Utility** (also called **Gossen's Second Law**, the **Law of Substitution**, or the **Principle of Maximum Satisfaction**) explains how a rational consumer maximizes total utility when choosing among various goods.
 
-```mermaid
-flowchart TD
-    M["<b>Limited Consumer Budget (M)</b>"] --> X["Good X Allocation<br>(MUx / Px)"]
-    M --> Y["Good Y Allocation<br>(MUy / Py)"]
-    X & Y --> E["<b>Equi-Marginal Equilibrium:</b><br>(MUx / Px) = (MUy / Py) = MUm<br><b>Maximum Total Satisfaction</b>"]
-```
+![law of equi marginal utility diagram 1](/flowcharts/introduction-to-economics/law-of-equi-marginal-utility-diagram-1.svg)
 
 ---
 

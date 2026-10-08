@@ -28,13 +28,7 @@ toc: []
 
 ### बजार सन्तुलनका निर्णय नियमहरू (Equilibrium Decision Rules):
 
-```mermaid
-flowchart TD
-    Cond{"<b>बजार मूल्य (P) र सन्तुलन मूल्य (Pe) को तुलना</b>"}
-    Cond -- "P = Pe" --> Eq["<b>सन्तुलन अवस्था (Market Equilibrium)</b><br>Qd = Qs (बजार स्थिर रहन्छ)"]
-    Cond -- "P < Pe (मूल्य कम हुँदा)" --> Short["<b>अतिरिक्त माग वा अभाव (Shortage)</b><br>Qd > Qs ⇒ अभाव = Qd - Qs (मूल्य बढ्ने दबाब ↑)"]
-    Cond -- "P > Pe (मूल्य बढी हुँदा)" --> Surp["<b>अतिरिक्त आपूर्ति वा बचत (Surplus)</b><br>Qs > Qd ⇒ बचत = Qs - Qd (मूल्य घट्ने दबाब ↓)"]
-```
+![class11 nepali equilibrium numericals diagram 1](/flowcharts/class-11-nepali/class11-nepali-equilibrium-numericals-diagram-1.svg)
 
 ---
 

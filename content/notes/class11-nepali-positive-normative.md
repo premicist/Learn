@@ -16,11 +16,7 @@ toc: []
 
 अर्थशास्त्रमा आर्थिक समस्याहरू, कथनहरू र नीतिहरूको विश्लेषण गर्दा अर्थशास्त्रीहरूले दुई फरक दृष्टिकोण अपनाउँछन्:
 
-```mermaid
-flowchart TD
-    A["<b>आर्थिक विश्लेषण र कथनहरू</b>"] --> B["<b>१. वास्तविक अर्थशास्त्र (Positive Economics)</b> <br> 'के हो?' (What is) · तथ्य र कारण-प्रभाव सम्बन्ध"]
-    A --> C["<b>२. आर्दश अर्थशास्त्र (Normative Economics)</b> <br> 'के हुनुपर्छ?' (What ought to be) · मूल्य, मान्यता र सुझाव"]
-```
+![class11 nepali positive normative diagram 1](/flowcharts/class-11-nepali/class11-nepali-positive-normative-diagram-1.svg)
 
 ---
 
@@ -65,12 +61,7 @@ flowchart TD
 
 तल विभिन्न आर्थिक कथनहरू दिइएका छन्। ती कथनहरू **वास्तविक (Positive)** हुन् कि **आर्दश (Normative)** हुन्, कारणसहित पहिचान गर्नुहोस्:
 
-```mermaid
-flowchart LR
-    S["<b>कथनको विश्लेषण</b>"] --> Q1{"तथ्य वा तथ्यांकमा आधारित छ?<br>('What is')"}
-    Q1 -- "हो (Yes)" --> P["<b>वास्तविक कथन (Positive)</b>"]
-    Q1 -- "होइन (सुझाव/राय)" --> N["<b>आर्दश कथन (Normative)</b>"]
-```
+![class11 nepali positive normative diagram 2](/flowcharts/class-11-nepali/class11-nepali-positive-normative-diagram-2.svg)
 
 ---
 

@@ -16,13 +16,7 @@ toc: []
 
 An **Oligopoly** is a market structure in which a **small number of large, powerful firms** dominate the entire industry, selling either homogeneous products (e.g., crude oil, steel, cement) or differentiated products (e.g., passenger airlines, automobiles, smartphones, telecommunications).
 
-```mermaid
-flowchart TD
-    O["<b>Oligopoly Market Structure</b>"] --> F1["<b>Few Large Dominant Sellers</b><br>Substantial market share per firm"]
-    O --> F2["<b>Strategic Interdependence</b><br>Each firm must anticipate rival reactions"]
-    O --> F3["<b>High Entry Barriers</b><br>Massive capital, scale economies, patents"]
-    O --> F4["<b>Non-Price Competition</b><br>Brand advertising, loyalty perks, feature upgrades"]
-```
+![oligopoly kinked demand and cartels diagram 1](/flowcharts/introduction-to-economics/oligopoly-kinked-demand-and-cartels-diagram-1.svg)
 
 > **The Key Defining Feature — Mutual Interdependence:** In an oligopoly, no firm can make a pricing or advertising decision in isolation. Every action (such as a price cut or a new loyalty campaign) triggers an immediate reaction and counter-strategy from competing rivals.
 
@@ -51,11 +45,7 @@ This dual behavior creates a **kink (bend)** in the demand curve at the prevaili
 
 When oligopolists realize that price wars harm everyone's profits, they often form collusive arrangements:
 
-```mermaid
-flowchart LR
-    A["<b>Collusive Oligopoly</b>"] --> B["<b>1. Explicit Collusion: Cartels</b><br>Formal written agreement on price and quotas (e.g. OPEC)"]
-    A --> C["<b>2. Implicit Collusion: Price Leadership</b><br>Informal coordination following a dominant or reputable firm"]
-```
+![oligopoly kinked demand and cartels diagram 2](/flowcharts/introduction-to-economics/oligopoly-kinked-demand-and-cartels-diagram-2.svg)
 
 ### 1. Explicit Collusion (Cartels):
 Firms form a formal agreement to fix market prices, divide market sales quotas, and restrict output (e.g., **OPEC** in the global petroleum industry). The cartel acts as a joint multi-plant monopoly to maximize combined industry profit:

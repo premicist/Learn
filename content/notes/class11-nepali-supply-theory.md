@@ -21,11 +21,7 @@ toc: []
 
 $$\text{आपूर्ति (Supply)} \le \text{मौज्दात (Stock)}$$
 
-```mermaid
-flowchart LR
-    A["कुल उत्पादन <br>(Total Output)"] --> B["गोदाममा मौज्दात <br>(Total Stock)"]
-    B --> C["<b>बजारमा आपूर्ति <br>(Market Supply)</b> <br> (बिक्रीका लागि तयार अंश)"]
-```
+![class11 nepali supply theory diagram 1](/flowcharts/class-11-nepali/class11-nepali-supply-theory-diagram-1.svg)
 
 > **परिभाषा:** कुनै निश्चित समयमा, तोकिएको मूल्यमा बिक्रेता वा उत्पादकले बजारमा बिक्रीका लागि प्रस्तुत गरेको वस्तुको परिमाणलाई **आपूर्ति (Supply)** भनिन्छ।
 
@@ -58,14 +54,7 @@ $$Q_s = f(P, P_i, T, G_p, N, E_p)$$
 
 $$Q_s = c + dP \quad \text{वा} \quad Q_s = -c + dP$$
 
-```mermaid
-graph LR
-    A["<b>Qs = c + dP</b>"] --> B["<b>Qs</b>: आपूर्ति परिमाण (आश्रित चर)"]
-    A --> C["<b>c</b>: स्वायत्त आपूर्ति (Intercept)"]
-    A --> D["<b>+ (प्लस)</b>: मूल्य र आपूर्तिबीच प्रत्यक्ष सम्बन्ध"]
-    A --> E["<b>d</b>: आपूर्ति रेखाको ढाल (Slope = ΔQs / ΔP)"]
-    A --> F["<b>P</b>: बजार मूल्य (स्वतन्त्र चर)"]
-```
+![class11 nepali supply theory diagram 2](/flowcharts/class-11-nepali/class11-nepali-supply-theory-diagram-2.svg)
 
 #### १. $Q_s$ (Quantity Supplied):
 यो **आश्रित चर (Dependent Variable)** हो। यसले बजार मूल्यमा आउने परिवर्तन अनुसार आपूर्ति कसरी बदलिन्छ भन्ने देखाउँछ।

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="auto" role="img" aria-label="Shifts in the Production Possibility Curve showing Outward and Inward shifts">
+  <defs>
+    <marker id="arrow-axis" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#122a3a"/>
+    </marker>
+    <marker id="shift-right" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="shift-left" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: var(--paper-card, #ffffff); }
+    .axis { stroke: var(--ink, #122a3a); stroke-width: 2.5; stroke-linecap: round; }
+    .curve-base { fill: none; stroke: #146b63; stroke-width: 3.5; stroke-linecap: round; }
+    .curve-outward { fill: none; stroke: #16a34a; stroke-width: 3.5; stroke-linecap: round; }
+    .curve-inward { fill: none; stroke: #dc2626; stroke-width: 3.5; stroke-dasharray: 6 5; stroke-linecap: round; }
+    .shift-arrow-right { stroke: #16a34a; stroke-width: 2.2; }
+    .shift-arrow-left { stroke: #dc2626; stroke-width: 2.2; }
+    .title-text { font-family: 'Manrope', system-ui, sans-serif; font-size: 16px; font-weight: 800; }
+    .axis-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: var(--ink, #122a3a); }
+    .legend-box { fill: var(--paper, #f8fafc); stroke: var(--line, #cbd5e1); stroke-width: 1.5; rx: 8; }
+    .legend-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 800; }
+    .legend-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: var(--ink-soft, #47607a); }
+  </style>
+
+  <!-- Background Card -->
+  <rect class="bg" width="100%" height="100%" rx="14"/>
+
+  <!-- Graph Axes -->
+  <line class="axis" x1="100" y1="420" x2="100" y2="50" marker-end="url(#arrow-axis)"/>
+  <line class="axis" x1="100" y1="420" x2="720" y2="420" marker-end="url(#arrow-axis)"/>
+
+  <!-- Axis Labels -->
+  <text class="axis-label" x="25" y="42" text-anchor="start">Capital Goods (Y)</text>
+  <text class="axis-label" x="720" y="445" text-anchor="end">Consumer Goods (X)</text>
+  <text class="axis-label" x="85" y="438">O</text>
+
+  <!-- 1. Leftward / Inward Shift (PPC3 - Economic Contraction) -->
+  <path class="curve-inward" d="M 100 160 Q 250 180 370 280 T 470 420"/>
+  <text x="475" y="415" class="title-text" fill="#dc2626">PPC₃</text>
+
+  <!-- 2. Baseline Curve (PPC1 - Initial Equilibrium) -->
+  <path class="curve-base" d="M 100 100 Q 320 120 480 240 T 590 420"/>
+  <text x="595" y="415" class="title-text" fill="#146b63">PPC₁</text>
+
+  <!-- 3. Rightward / Outward Shift (PPC2 - Economic Growth) -->
+  <path class="curve-outward" d="M 100 50 Q 380 70 570 210 T 700 420"/>
+  <text x="705" y="415" class="title-text" fill="#16a34a">PPC₂</text>
+
+  <!-- Directional Shift Arrows -->
+  <!-- Outward shift arrows -->
+  <line class="shift-arrow-right" x1="330" y1="175" x2="385" y2="135" marker-end="url(#shift-right)"/>
+  <line class="shift-arrow-right" x1="450" y1="280" x2="510" y2="245" marker-end="url(#shift-right)"/>
+
+  <!-- Inward shift arrows -->
+  <line class="shift-arrow-left" x1="310" y1="190" x2="255" y2="225" marker-end="url(#shift-left)"/>
+  <line class="shift-arrow-left" x1="430" y1="300" x2="370" y2="335" marker-end="url(#shift-left)"/>
+
+  <!-- Legend Cards -->
+  <!-- PPC2: Outward Shift Card -->
+  <g filter="url(#card-shadow)">
+    <rect class="legend-box" x="430" y="30" width="340" height="52"/>
+    <circle cx="448" cy="56" r="6" fill="#16a34a"/>
+    <text x="462" y="49" class="legend-title" fill="#16a34a">PPC₂ : Rightward / Outward Shift</text>
+    <text x="462" y="68" class="legend-sub">Economic Growth, Tech Advances &amp; More Resources</text>
+  </g>
+
+  <!-- PPC1: Baseline Card -->
+  <g filter="url(#card-shadow)">
+    <rect class="legend-box" x="430" y="90" width="340" height="46"/>
+    <circle cx="448" cy="113" r="6" fill="#146b63"/>
+    <text x="462" y="109" class="legend-title" fill="#146b63">PPC₁ : Initial Frontier (Base Level)</text>
+    <text x="462" y="125" class="legend-sub">Existing Resources &amp; Current Technology</text>
+  </g>
+
+  <!-- PPC3: Inward Shift Card -->
+  <g filter="url(#card-shadow)">
+    <rect class="legend-box" x="430" y="144" width="340" height="52"/>
+    <circle cx="448" cy="170" r="6" fill="#dc2626"/>
+    <text x="462" y="163" class="legend-title" fill="#dc2626">PPC₃ : Leftward / Inward Shift</text>
+    <text x="462" y="182" class="legend-sub">Resource Depletion, Natural Disasters &amp; War</text>
+  </g>
+</svg>

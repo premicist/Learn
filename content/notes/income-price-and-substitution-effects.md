@@ -56,11 +56,7 @@ The direction of the income effect depends on the nature of the commodity:
 
 Economists use two primary analytical methods to separate the substitution effect from the income effect:
 
-```mermaid
-flowchart TD
-    D["<b>Price Effect Decomposition Methods</b>"] --> H["<b>1. Hicksian Approach (Compensating Variation)</b><br>Reduces income to keep consumer on original IC1"]
-    D --> S["<b>2. Slutsky Approach (Cost Difference)</b><br>Reduces income to enable buying original bundle"]
-```
+![income price and substitution effects diagram 1](/flowcharts/introduction-to-economics/income-price-and-substitution-effects-diagram-1.svg)
 
 ### 1. Hicksian Compensating Variation Approach (J.R. Hicks)
 * After the price of Good X falls, the consumer's nominal income is hypothetically reduced (taxed away) just enough to bring them back to their **original indifference curve ($IC_1$)**.

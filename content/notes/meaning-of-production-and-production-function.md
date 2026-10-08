@@ -16,11 +16,7 @@ toc: []
 
 In economics, **production** is the process of transforming physical and intangible factor inputs (land, labour, capital, and entrepreneurship) into finished goods and services that create utility to satisfy human wants.
 
-```mermaid
-flowchart LR
-    A["<b>Factor Inputs</b><br>Land, Labour, Capital &amp; Management"] --> B["<b>Production Process</b><br>Transformation &amp; Technology"]
-    B --> C["<b>Finished Output</b><br>Goods &amp; Services creating Utility"]
-```
+![meaning of production and production function diagram 1](/flowcharts/introduction-to-economics/meaning-of-production-and-production-function-diagram-1.svg)
 
 > **Definition:** **Production** is the creation or addition of value and utility in goods and services through the application of human effort, machinery, and natural resources.
 

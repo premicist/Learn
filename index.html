@@ -1,15 +1,19 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; connect-src 'self' https://*.supabase.co https://*.googleapis.com; img-src 'self' data: https: blob:; frame-src https://www.youtube.com https://docs.google.com; media-src https:; object-src 'none'; base-uri 'self'; form-action 'self' https://forms.gle; upgrade-insecure-requests;">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <title>Prem Pokhrel — Economics, Explained</title>
     <meta name="description" content="Notes, articles, quizzes, and videos in economics — from Class 11 & 12 through Bachelor's and Master's level." />
     <meta name="theme-color" content="#122a3a" />
     <meta property="og:site_name" content="Prem Pokhrel ECON" />
     <meta property="og:title" content="Prem Pokhrel — Economics, Explained" />
-    <meta property="og:description" content="Notes, articles, quizzes, and videos in economics for school, bachelor’s, and master’s level learners." />
+    <meta property="og:description" content="Notes, articles, quizzes, and videos in economics for school, bachelor's, and master's level learners." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,9 +22,24 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Prevent flash of unstyled text while fonts load */
+      html { opacity: 0; transition: opacity 0.15s ease; }
+      html.loaded { opacity: 1; }
+      @media (prefers-reduced-motion: reduce) {
+        html { opacity: 1; transition: none; }
+      }
+    </style>
+    <script>
+      // Show content immediately, then apply fonts after first paint
+      document.documentElement.classList.add('loaded');
+      window.addEventListener('load', () => document.documentElement.classList.add('loaded'));
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+
+

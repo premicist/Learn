@@ -35,7 +35,7 @@
 
   <!-- Axis Titles -->
   <text class="axis-label" x="25" y="38" text-anchor="start">Food Production (Tonnes)</text>
-  <text class="axis-label" x="750" y="500" text-anchor="end">Clothing Production ('000 Units)</text>
+  <text class="axis-label" x="750" y="480" text-anchor="end">Clothing Production ('000 Units)</text>
   <text class="tick-label" x="92" y="468">0</text>
 
   <!-- X-Axis Ticks &amp; Values -->
@@ -88,7 +88,7 @@
   <line class="proj-line" x1="542" y1="450" x2="542" y2="342"/>
 
   <!-- PPC Smooth Curve through Points A(110,90) -> B(218,126) -> C(326,180) -> D(434,252) -> E(542,342) -> F(650,450) -->
-  <path class="curve" d="M 110 90 C 210 115, 455 215, 650 450"/>
+  <path class="curve" d="M 110 90 C 240 100, 480 200, 650 450"/>
 
   <!-- Points and Badges -->
   <!-- Point A -->
@@ -108,7 +108,7 @@
   <text class="point-tag" x="446" y="248">D (30, 110)</text>
 
   <!-- Point E -->
-  <circle class="point-dot" cx="542" cy="340" r="6"/>
+  <circle class="point-dot" cx="542" cy="342" r="6"/>
   <text class="point-tag" x="554" y="338">E (40, 60)</text>
 
   <!-- Point F -->

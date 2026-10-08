@@ -16,11 +16,7 @@ toc: []
 
 Modern corporations are frequently **vertically integrated** — divided into autonomous operating divisions where an **upstream division** (e.g., central bakery, raw material mill, engine plant) manufactures intermediate components and transfers them to a **downstream division** (e.g., hotel restaurants, car assembly line) for final marketing to consumers.
 
-```mermaid
-flowchart LR
-    A["<b>Upstream Division (Parent Mill)</b><br>Produces Intermediate Good<br>Cost: MCu"] -->|Internal Transfer Price Pt| B["<b>Downstream Division (Assembly)</b><br>Adds Assembly Cost MCd<br>Sells Final Product at P"]
-    B --> C["<b>External Consumer Market</b><br>Final Output Sold"]
-```
+![transfer pricing diagram 1](/flowcharts/introduction-to-economics/transfer-pricing-diagram-1.svg)
 
 > **Definition:** **Transfer Price ($P_t$)** is the internal accounting price charged by one autonomous division (upstream) to another division (downstream) of the **same parent enterprise** for intermediate goods or services.
 

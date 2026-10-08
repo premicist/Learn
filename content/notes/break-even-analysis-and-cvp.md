@@ -16,13 +16,7 @@ toc: []
 
 **Break-Even Analysis (BEA)** (also called **Cost-Volume-Profit / CVP Analysis**) is a crucial managerial economics tool that examines the mathematical relationship between a firm's production volume, operational costs, sales revenue, and net profit.
 
-```mermaid
-flowchart LR
-    A["Sales Output Volume (Q)"] --> B["<b>Cost-Volume-Profit Analysis</b>"]
-    C["Fixed &amp; Variable Costs (TFC + TVC)"] --> B
-    D["Selling Price &amp; Revenue (P × Q)"] --> B
-    B --> E["<b>Break-Even Point (BEP)</b><br>TR = TC (Zero Profit, Zero Loss)"]
-```
+![break even analysis and cvp diagram 1](/flowcharts/introduction-to-economics/break-even-analysis-and-cvp-diagram-1.svg)
 
 > **Definition:** The **Break-Even Point (BEP)** is the operational sales volume at which **Total Revenue ($TR$) exactly equals Total Cost ($TC$)**. At this point, the firm earns **zero economic profit and incurs zero loss** (the *No-Profit, No-Loss* point).
 

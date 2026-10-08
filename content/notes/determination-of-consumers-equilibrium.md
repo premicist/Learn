@@ -18,11 +18,7 @@ Under Ordinal Utility Analysis, a consumer is in **equilibrium** when they alloc
 
 Once equilibrium is reached, the consumer has no incentive to change or reallocate their expenditure.
 
-```mermaid
-flowchart TD
-    A["<b>Consumer Preferences</b><br>Indifference Map (What is desired)"] --> C["<b>Consumer Equilibrium (Point E)</b><br>Tangency: MRSxy = Px / Py<br>Maximum Attainable Satisfaction"]
-    B["<b>Budget Constraint</b><br>Budget Line AB (What is affordable)"] --> C
-```
+![determination of consumers equilibrium diagram 1](/flowcharts/introduction-to-economics/determination-of-consumers-equilibrium-diagram-1.svg)
 
 ---
 
@@ -61,11 +57,7 @@ The Indifference Curve must be **strictly convex to the origin** at the point of
 
 What happens if the consumer is not at the tangency point? Rational adjustments automatically restore equilibrium:
 
-```mermaid
-flowchart TD
-    C1["<b>If MRSxy &gt; Px / Py (Point R)</b><br>Consumer values X more than market price"] --> A1["Buys more Good X and less Good Y"] --> E["<b>Restores Equilibrium at Point E</b><br>(MRSxy = Px / Py)"]
-    C2["<b>If MRSxy &lt; Px / Py (Point S)</b><br>Consumer values Y more than market price"] --> A2["Buys less Good X and more Good Y"] --> E
-```
+![determination of consumers equilibrium diagram 2](/flowcharts/introduction-to-economics/determination-of-consumers-equilibrium-diagram-2.svg)
 
 * **Case 1: $MRS_{xy} > \dfrac{P_x}{P_y}$ (Point R):**  
   The consumer values an extra unit of X more than the market price ratio. The consumer buys **more of Good X** and **less of Good Y**. As X consumption increases, $MU_x$ falls and $MU_y$ rises, causing $MRS_{xy}$ to diminish until $MRS_{xy} = \frac{P_x}{P_y}$ at Point E.

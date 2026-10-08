@@ -10,13 +10,7 @@ unitId: class12-u2-2
 
 Numerical problems on costs test your mastery of short-run cost formulas, table reconstruction, and algebraic cost functions ($TC, TVC, TFC, AC, AVC, AFC, MC$). This lesson provides the master formula bank, golden rules of calculation, step-by-step worked examples, and self-practice exercises with solutions.
 
-```mermaid
-flowchart TD
-    FB["<b>Master Cost Formula Bank</b>"]
-    FB --> F1["<b>Total Costs</b><br>TC = TFC + TVC<br>TFC = TC (at Q=0)<br>TVC = Σ MC = AVC × Q"]
-    FB --> F2["<b>Average Costs</b><br>AFC = TFC / Q<br>AVC = TVC / Q<br>AC = TC / Q = AFC + AVC"]
-    FB --> F3["<b>Marginal Cost</b><br>MCₙ = TCₙ − TCₙ₋₁<br>MC = ΔTC / ΔQ = ΔTVC / ΔQ<br>MC = d(TC) / dQ"]
-```
+![class12 cost numerical problems diagram 1](/flowcharts/class-12/class12-cost-numerical-problems-diagram-1.svg)
 
 ---
 

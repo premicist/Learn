@@ -10,13 +10,7 @@ unitId: class12-u2-3
 
 The concept of **Equilibrium** is the central unifying principle in microeconomic theory. Originating from physics, equilibrium describes a state of balance where opposing economic forces (such as demand and supply, or revenue and cost) are equalized, so that there is no internal tendency to change. This lesson covers the concept of equilibrium, the distinction between a firm and an industry, and the various classifications of economic equilibrium.
 
-```mermaid
-flowchart TD
-    Eq["<b>Concept of Equilibrium</b><br>State of Balance (No Tendency to Change)"]
-    Eq --> Levels["<b>1. Scope of Decision Unit</b><br>• Firm Equilibrium (Max Profit)<br>• Industry Equilibrium (D = S)"]
-    Eq --> Methods["<b>2. Analytical Approach</b><br>• Partial Equilibrium (One Market)<br>• General Equilibrium (All Markets Interconnected)"]
-    Eq --> Time["<b>3. Time Horizon</b><br>• Short-Run vs Long-Run Equilibrium"]
-```
+![class12 price output concept of equilibrium diagram 1](/flowcharts/class-12/class12-price-output-concept-of-equilibrium-diagram-1.svg)
 
 ---
 
@@ -36,13 +30,7 @@ Think of a pair of weighing scales: when equal weights are placed on both pans, 
 ### Q2. Distinguish between a 'Firm' and an 'Industry'.
 **Answer:**
 
-```mermaid
-flowchart TD
-    Ind["<b>INDUSTRY</b><br>(Group of all competing producers of a good, e.g., Cement Industry)"]
-    Ind --> F1["<b>Firm A</b> (e.g., Shivam Cement)"]
-    Ind --> F2["<b>Firm B</b> (e.g., Hetauda Cement)"]
-    Ind --> F3["<b>Firm C</b> (e.g., Arghakhanchi Cement)"]
-```
+![class12 price output concept of equilibrium diagram 2](/flowcharts/class-12/class12-price-output-concept-of-equilibrium-diagram-2.svg)
 
 #### Detailed Comparison Table:
 
@@ -71,18 +59,7 @@ Market equilibrium is established at the price where **Market Demand ($Q_d$) equ
 | $20$ | $400$ | $200$ | Excess Demand ($-200$) | Price rises $\uparrow$ |
 | $10$ | $500$ | $100$ | Excess Demand ($-400$) | Price rises $\uparrow$ |
 
-```
-Price (Rs.)
-   |         S
-50 + \      /  Excess Supply (Surplus)
-40 +  \    /
-30 +---*--E--*---------------- Equilibrium Price (P* = 30, Q* = 300)
-20 +  /    \
-10 + /      \  Excess Demand (Shortage)
-   |/        \ D
- 0 +---+---+---+---+---+---> Quantity (Q)
-   0  100 200 300 400 500
-```
+![Market Equilibrium Price Determination (Demand and Supply)](/images/uploads/market-equilibrium-price-determination.svg)
 
 #### Explanation:
 1. **At Price Rs. 30 (Point E):** $Q_d = Q_s = 300 \text{ units}$. There is neither shortage nor surplus. The market clears at equilibrium price **Rs. 30**.
@@ -98,11 +75,7 @@ Price (Rs.)
 ### Q4. Distinguish between Partial Equilibrium and General Equilibrium.
 **Answer:**
 
-```mermaid
-flowchart LR
-    A["<b>Analytical Scope</b>"] --> B["<b>Partial Equilibrium (Alfred Marshall)</b><br>• Focuses on one single market/firm in isolation<br>• Assumes 'Ceteris Paribus' (Other things remain equal)"]
-    A --> C["<b>General Equilibrium (Leon Walras)</b><br>• Focuses on all interrelated markets simultaneously<br>• Analyzes mutual spillover effects across whole economy"]
-```
+![class12 price output concept of equilibrium diagram 3](/flowcharts/class-12/class12-price-output-concept-of-equilibrium-diagram-3.svg)
 
 | Basis | Partial Equilibrium | General Equilibrium |
 | :--- | :--- | :--- |
@@ -117,13 +90,7 @@ flowchart LR
 ### Q5. Distinguish between Stable, Unstable, and Neutral Equilibrium.
 **Answer:**
 
-```mermaid
-flowchart TD
-    Types["<b>Types of Equilibrium States</b>"]
-    Types --> S["<b>1. Stable Equilibrium</b><br>Disturbed forces automatically pull the system back to original position (e.g., ball inside a bowl)"]
-    Types --> U["<b>2. Unstable Equilibrium</b><br>A small disturbance drives the system further away from original position (e.g., ball on top of an inverted bowl)"]
-    Types --> N["<b>3. Neutral Equilibrium</b><br>A disturbance moves the system to a new resting position without moving further or returning (e.g., ball on flat table)"]
-```
+![class12 price output concept of equilibrium diagram 4](/flowcharts/class-12/class12-price-output-concept-of-equilibrium-diagram-4.svg)
 
 ---
 

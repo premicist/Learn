@@ -72,13 +72,7 @@ toc: []
 
 $$\text{उपभोक्ताको मुख्य लक्ष्य: } \max U(X, Y) \quad \text{Subject to: } P_x X + P_y Y \le M$$
 
-```mermaid
-flowchart LR
-    A["सीमित आम्दानी (Budget Limit)"] --> D["<b>विवेकशील छनोट (Rational Choice)</b>"]
-    B["वस्तुहरूको बजार मूल्य (Prices)"] --> D
-    C["व्यक्तिगत प्राथमिकता (Preferences)"] --> D
-    D --> E["<b>अधिकतम सन्तुष्टि (Maximum Utility)</b>"]
-```
+![class11 nepali consumer meaning diagram 1](/flowcharts/class-11-nepali/class11-nepali-consumer-meaning-diagram-1.svg)
 
 1. **सीमान्त लाभ र सीमान्त लागतको तुलना गरेर:** उपभोक्ताले कुनै वस्तुको थप एकाइ खरिद गर्दा त्यसबाट प्राप्त हुने **सीमान्त सन्तुष्टि ($MU$)** र त्यसका लागि तिर्नुपर्ने **मूल्य ($P$)** बीच तुलना गर्छ।
 2. **प्रतिस्थापनको नियम प्रयोग गरेर:** एउटा वस्तु महँगो भएमा सस्तो प्रतिस्थापक वस्तु छनोट गर्छ।

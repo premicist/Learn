@@ -16,14 +16,7 @@ toc: []
 
 In economic analysis, it is essential to distinguish between a change in **Quantity Demanded** and a change in **Demand**:
 
-```mermaid
-flowchart TD
-    A["<b>Changes in Consumer Buying</b>"] --> B["<b>Movement Along Curve</b><br>Change in Quantity Demanded"]
-    A --> C["<b>Shift of the Curve</b><br>Change in Demand"]
-
-    B --> B1["• Caused solely by Own Price Px<br>• Other factors constant (ceteris paribus)<br>• Expansion or Contraction"]
-    C --> C1["• Caused by Non-Price Determinants<br>• Price remains constant<br>• Rightward or Leftward Shift"]
-```
+![movements along vs shifts in demand curve diagram 1](/flowcharts/introduction-to-economics/movements-along-vs-shifts-in-demand-curve-diagram-1.svg)
 
 ---
 
@@ -109,14 +102,7 @@ A **shift of the demand curve** occurs when the quantity demanded changes at the
 
 Economic theory forms an interconnected logical chain:
 
-```mermaid
-flowchart LR
-    A[Scarcity] --> B[Choice]
-    B --> C[Opportunity Cost]
-    C --> D[PPC: Macro Trade-offs]
-    C --> E[Budget Line: Micro Consumer Constraint]
-    E --> F[Law of Demand: Downward Slope]
-```
+![movements along vs shifts in demand curve diagram 2](/flowcharts/introduction-to-economics/movements-along-vs-shifts-in-demand-curve-diagram-2.svg)
 
 1. **Consumer Budget Constraint as a Micro-PPC:**  
    Just as a nation faces a Production Possibility Curve (PPC), an individual consumer faces a financial budget constraint:

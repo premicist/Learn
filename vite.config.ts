@@ -7,4 +7,9 @@ export default defineConfig({
   // This must match exactly (including the slashes) or the deployed site will
   // show a blank page. Leave as '/' only if you set up a custom domain.
   base: '/',
+  define: {
+    // Excalidraw reads this to choose its build (React vs Preact).
+    // Must be present since Vite strips env vars by default.
+    'process.env.IS_PREACT': JSON.stringify('false'),
+  },
 })

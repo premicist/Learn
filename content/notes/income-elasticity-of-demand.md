@@ -27,15 +27,7 @@ $$E_y = \frac{\% \text{ Change in Quantity Demanded}}{\% \text{ Change in Consum
 
 Economists use the sign and magnitude of $E_y$ to classify commodities into distinct categories:
 
-```mermaid
-flowchart TD
-    Y["<b>Income Elasticity (Ey)</b>"] --> Y1["<b>Positive Ey &gt; 0 (Normal Goods)</b>"]
-    Y --> Y2["<b>Negative Ey &lt; 0 (Inferior Goods)</b>"]
-    Y --> Y3["<b>Zero Ey = 0 (Inexpensive Essentials)</b>"]
-
-    Y1 --> Y1A["<b>Luxuries (Ey &gt; 1)</b><br>5-Star Hotels, Luxury Cars"]
-    Y1 --> Y1B["<b>Necessities (0 &lt; Ey &lt; 1)</b><br>Staple Grains, Milk"]
-```
+![income elasticity of demand diagram 1](/flowcharts/introduction-to-economics/income-elasticity-of-demand-diagram-1.svg)
 
 ### 1. Luxury Goods ($E_y > 1$ — High Positive Elasticity)
 * **Behavior:** When consumer income rises by 10%, the demand for luxury goods increases by **more than 10%**.

@@ -10,13 +10,7 @@ unitId: class12-u2-4
 
 The **Classical Theory of Interest** (also known as the **Demand and Supply Theory of Capital** or **Real Theory of Interest**) was formulated by classical economists and refined by neoclassical thinkers like **Alfred Marshall**, **A. C. Pigou**, **F. W. Taussig**, and **Gustav Cassel**. The theory treats interest as a purely real economic phenomenon determined by the equilibrium between the **Demand for Capital (Investment)** and the **Supply of Capital (Savings)**.
 
-```mermaid
-flowchart TD
-    Interest["<b>Classical Theory of Interest</b>"]
-    Interest --> Demand["<b>Demand for Capital (Investment - I)</b><br>? Driven by Marginal Productivity of Capital<br>? <b>Inverse Relationship</b> with Interest Rate (Downward Sloping)"]
-    Interest --> Supply["<b>Supply of Capital (Savings - S)</b><br>? Driven by Time Preference &amp; Waiting<br>? <b>Direct Relationship</b> with Interest Rate (Upward Sloping)"]
-    Interest --> Eq["<b>Market Equilibrium:</b><br>Investment (I) = Savings (S) ? Equilibrium Rate of Interest (r*)"]
-```
+![classical theory of interest diagram 1](/flowcharts/class-12/classical-theory-of-interest-diagram-1.svg)
 
 ---
 
@@ -69,24 +63,9 @@ $$\mathbf{\text{Investment (I)} = \text{Savings (S)}}$$
 | **$8\%$** | **$3,000$** | **$3,000$** | **Equilibrium ($I = S$)** | **Stable ($r^* = 8\%$)** |
 | **$6\%$** | $4,000$ | $2,000$ | Excess Demand ($-2,000$) | Rate rises $\uparrow$ |
 
-```
-Interest Rate (%)
-   |         S (Savings)
-10 + \      /
-   |  \    /  Excess Supply of Savings (S > I)
- 8 +---*-E-*--------------------- Equilibrium Rate (r* = 8%, I = S = 3,000)
-   |  /    \
- 6 + /      \ Excess Demand for Investment (I > S)
-   |/        \ I (Investment Demand)
- 0 +---+---+---+---+---> Capital (I & S)
-   0 1000 2000 3000 4000
-```
+![Equilibrium Rate of Interest (Savings and Investment)](/images/uploads/classical-interest-rate-equilibrium.svg)
 
-```mermaid
-flowchart LR
-    HighRate["<b>At r = 10% (High):</b><br>Savings (4,000) &gt; Investment (2,000)<br>Excess Funds ? Lenders lower interest rate"] --> Eq["<b>At r = 8% (Equilibrium):</b><br>Investment (3,000) = Savings (3,000)<br>Market Clears"]
-    LowRate["<b>At r = 6% (Low):</b><br>Investment (4,000) &gt; Savings (2,000)<br>Shortage of Funds ? Borrowers bid up interest rate"] --> Eq
-```
+![classical theory of interest diagram 2](/flowcharts/class-12/classical-theory-of-interest-diagram-2.svg)
 
 #### Diagrammatic Explanation:
 * **Equilibrium Point ($E$):** The Investment Demand curve ($I$) and Savings Supply curve ($S$) intersect at point $E$, establishing the **equilibrium interest rate of $8\%$** and **equilibrium capital volume of Rs. 3,000 Crores**.
@@ -114,14 +93,7 @@ flowchart LR
 **Answer:**
 The British economist **John Maynard Keynes** severely criticized the classical theory in his *General Theory* (1936):
 
-```mermaid
-flowchart TD
-    Crit["<b>Major Criticisms by J. M. Keynes</b>"]
-    Crit --> C1["<b>1. Ignores Monetary Factors:</b> Interest is a monetary phenomenon (Liquidity Preference), not purely real"]
-    Crit --> C2["<b>2. Indeterminate Theory:</b> Savings depend on Income (Y), but Income cannot be known without Interest rate"]
-    Crit --> C3["<b>3. Unrealistic Full Employment:</b> Real economies regularly operate with idle resources and unemployment"]
-    Crit --> C4["<b>4. Ignores Bank Credit Creation:</b> Commercial banks create credit out of nothing, not just from prior savings"]
-```
+![classical theory of interest diagram 3](/flowcharts/class-12/classical-theory-of-interest-diagram-3.svg)
 
 1. **Ignores Monetary Influences and Bank Credit:**
    * Classical theory treats money merely as a "veil". In reality, the **money supply, central bank monetary policy, and commercial bank credit creation** directly determine market interest rates.

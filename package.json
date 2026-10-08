@@ -14,6 +14,7 @@
     "build-sitemap": "node scripts/build-sitemap.mjs",
     "validate-content": "node scripts/validate-content.mjs",
     "validate-mermaid": "node scripts/validate-mermaid.mjs",
+    "convert-mermaid": "node scripts/convert-mermaid-to-svg.mjs",
     "generate-slides": "node scripts/generate-slides.mjs",
     "check": "npm run validate-mermaid && npm run build-content && tsc -b && npm run lint",
     "build": "npm run sync-admin && npm run build-sitemap && npm run build-content && tsc -b && vite build",
@@ -21,6 +22,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@excalidraw/excalidraw": "^0.18.1",
     "@supabase/supabase-js": "^2.112.4",
     "katex": "^0.18.4",
     "mermaid": "^12.0.0",

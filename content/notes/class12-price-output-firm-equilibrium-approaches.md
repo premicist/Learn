@@ -15,12 +15,7 @@ A firm is said to be in **Equilibrium** when it produces that specific level of 
 1. The **Total Revenue – Total Cost (TR-TC) Approach**
 2. The **Marginal Revenue – Marginal Cost (MR-MC) Approach**
 
-```mermaid
-flowchart TD
-    Eq["<b>Approaches to Firm Equilibrium</b><br>Objective: Maximize Profit π = TR − TC"]
-    Eq --> TRTC["<b>1. TR–TC Approach</b><br>• Maximize vertical gap (TR − TC)<br>• Identifies Break-Even Points"]
-    Eq --> MRMC["<b>2. MR–MC Approach (Superior)</b><br>• Condition 1: MR = MC (Necessary)<br>• Condition 2: MC cuts MR from below (Sufficient)"]
-```
+![class12 price output firm equilibrium approaches diagram 1](/flowcharts/class-12/class12-price-output-firm-equilibrium-approaches-diagram-1.svg)
 
 ---
 
@@ -37,21 +32,7 @@ Under the **TR-TC approach**, firm profit is analyzed by directly plotting the T
 4. **Equilibrium Point (Maximum Profit):** The firm reaches equilibrium at output **$Q_2$**, where the **positive vertical distance between the $TR$ curve and the $TC$ curve is at its greatest**.
    * Mathematically, this maximum distance occurs where the **tangent to the $TC$ curve is parallel to the $TR$ curve** ($\text{Slope of } TC = \text{Slope of } TR \implies MC = MR$).
 
-```
-Revenue/Cost (Rs.)
-   |                          / TC
-   |             TR         /
-   |           /           /
-   |         /  [MAX GAP] /
-   |        /    |       /
-   |       * B1  |      * B2 (Break-Even Points: TR = TC)
-   |     /  \    |     /
-   |   /     \   |    /
-   | /        \--|---/
- 0 +-------------+----+----+----------------> Output (Q)
-   0            Q1   Q2   Q3
-                (Loss) (MAX PROFIT) (Loss)
-```
+![Equilibrium of Firm under TR-TC Approach](/images/uploads/firm-equilibrium-tr-tc-approach.svg)
 
 #### Limitations of the TR-TC Approach:
 * It is difficult to visually identify the exact maximum vertical distance on a graph without drawing tangent lines.
@@ -67,12 +48,7 @@ Revenue/Cost (Rs.)
 **Answer:**
 The **MR-MC approach** (pioneered by Joan Robinson and Alfred Marshall) is the standard and most precise tool for determining firm equilibrium.
 
-```mermaid
-flowchart TD
-    Cond["<b>The Two Essential Equilibrium Conditions</b>"]
-    Cond --> C1["<b>Condition 1: Necessary (First-Order)</b><br>MR = MC<br>Marginal Revenue must equal Marginal Cost"]
-    Cond --> C2["<b>Condition 2: Sufficient (Second-Order)</b><br>MC cuts MR from BELOW<br>Slope of MC &gt; Slope of MR at equilibrium output"]
-```
+![class12 price output firm equilibrium approaches diagram 2](/flowcharts/class-12/class12-price-output-firm-equilibrium-approaches-diagram-2.svg)
 
 #### Condition 1: Necessary Condition (First-Order Condition - FOC):
 $$\mathbf{MR = MC}$$
@@ -93,24 +69,9 @@ $$\text{or} \quad \frac{d(MC)}{dQ} > \frac{d(MR)}{dQ} \quad (\text{Slope of } MC
 ### Q3. Illustrate the MR-MC Equilibrium Conditions with a Diagram.
 **Answer:**
 
-```
-Revenue / Cost (Rs.)
-   |             MC Curve
-   |            \       /
- P +------*------\-----*----------------- AR = MR = P (Demand)
-   |     / E1     \   / E2 (TRUE EQUILIBRIUM: MR = MC & MC cuts from below)
-   |    /          \ /
-   |   /------------/
- 0 +---+--------------+------------------> Output (Q)
-   0   Q1             Q2
-   (Loss/Not Eq)  (MAX PROFIT EQUILIBRIUM)
-```
+![Equilibrium of Firm under MR-MC Approach](/images/uploads/firm-equilibrium-mr-mc-approach.svg)
 
-```mermaid
-flowchart LR
-    E1["<b>Point E1 (Output Q1)</b><br>• MR = MC (Condition 1 holds)<br>• MC cuts MR from ABOVE (Fails Condition 2)<br>• <b>Point of Minimum Profit / Loss</b>"]
-    E2["<b>Point E2 (Output Q2)</b><br>• MR = MC (Condition 1 holds)<br>• MC cuts MR from BELOW (Satisfies Condition 2)<br>• <b>TRUE PROFIT-MAXIMIZING EQUILIBRIUM</b>"]
-```
+![class12 price output firm equilibrium approaches diagram 3](/flowcharts/class-12/class12-price-output-firm-equilibrium-approaches-diagram-3.svg)
 
 #### Interpretation of Points:
 1. **At Output $Q_1$ (Point $E_1$):** $MR = MC$, but $MC$ is cutting $MR$ from above. If the firm produces beyond $Q_1$, $MR$ exceeds $MC$, adding to total profit. Hence, $Q_1$ is unstable and not an equilibrium.

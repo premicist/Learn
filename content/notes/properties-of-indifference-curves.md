@@ -16,14 +16,7 @@ toc: []
 
 Standard indifference curves possess five fundamental geometric and economic properties:
 
-```mermaid
-flowchart TD
-    P["<b>Core Properties of Indifference Curves</b>"] --> P1["<b>1. Downward Sloping</b><br>Negative slope (dY/dX &lt; 0)"]
-    P --> P2["<b>2. Strictly Convex to Origin</b><br>Diminishing MRSxy"]
-    P --> P3["<b>3. Higher IC = Higher Utility</b><br>Non-satiety (More is better)"]
-    P --> P4["<b>4. Never Intersect</b><br>Logical transitivity"]
-    P --> P5["<b>5. Do Not Touch Axes</b><br>Positive consumption of both goods"]
-```
+![properties of indifference curves diagram 1](/flowcharts/introduction-to-economics/properties-of-indifference-curves-diagram-1.svg)
 
 ---
 

@@ -16,11 +16,7 @@ toc: []
 
 A **Duopoly** is a specialized market structure in which there are **exactly two sellers** competing against each other. It represents the simplest form of an oligopoly and serves as the theoretical bridge between monopoly and oligopoly.
 
-```mermaid
-flowchart TD
-    D["<b>Duopoly: Exactly Two Sellers</b>"] --> C["<b>1. Cournot Model (1838)</b><br>Quantity Competition (Firms choose Output)"]
-    D --> B["<b>2. Bertrand Model (1883)</b><br>Price Competition (Firms choose Price)"]
-```
+![duopoly cournot and bertrand models diagram 1](/flowcharts/introduction-to-economics/duopoly-cournot-and-bertrand-models-diagram-1.svg)
 
 ---
 

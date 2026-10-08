@@ -55,17 +55,7 @@ $$E = \frac{\%\Delta Q}{\%\Delta Z} = \frac{\Delta Q}{\Delta Z} \times \frac{Z}{
 
 अर्थशास्त्रमा लोचको अध्ययनलाई मुख्यतया दुई भागमा विभाजन गरिन्छ:
 
-```mermaid
-graph TD
-    A["<b>लोचको अध्ययन (Study of Elasticity)</b>"] --> B["<b>१. मागको लोच (Elasticity of Demand)</b>"]
-    A --> C["<b>२. आपूर्तिको लोच (Elasticity of Supply)</b>"]
-
-    B --> B1["क) मागको मूल्य लोच (Price Elasticity)"]
-    B --> B2["ख) मागको आय लोच (Income Elasticity)"]
-    B --> B3["ग) मागको छड्के लोच (Cross Elasticity)"]
-
-    C --> C1["आपूर्तिको मूल्य लोच (Price Elasticity of Supply)"]
-```
+![class11 nepali elasticity meaning diagram 1](/flowcharts/class-11-nepali/class11-nepali-elasticity-meaning-diagram-1.svg)
 
 ---
 

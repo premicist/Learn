@@ -84,12 +84,7 @@ $$MP_n = TP_n - TP_{n-1} \quad \text{वा} \quad MP = \frac{\Delta TP}{\Delta 
 
 ## ५. उत्पादनका तीन चरणहरू (Three Stages of Production)
 
-```mermaid
-graph TD
-    A[उत्पादनका तीन चरणहरू] --> B["<b>१. पहिलो चरण (Stage I):</b> <br> बढ्दो प्रतिफलको चरण <br> (AP बढ्छ, MP > AP)"]
-    A --> C["<b>२. दोस्रो चरण (Stage II):</b> <br> घट्दो प्रतिफलको चरण <br> (विवेकशील उत्पादकको चरण, MP = 0 सम्म)"]
-    A --> D["<b>३. तेस्रो चरण (Stage III):</b> <br> ऋणात्मक प्रतिफलको चरण <br> (TP घट्छ, MP ऋणात्मक)"]
-```
+![class11 nepali production diagram 1](/flowcharts/class-11-nepali/class11-nepali-production-diagram-1.svg)
 
 ### क) पहिलो चरण (Stage I: Increasing Returns)
 * यस चरणमा $TP$ बढ्दो दरमा बढ्छ, $MP$ र $AP$ दुवै बढ्छन् र $MP > AP$ हुन्छ।

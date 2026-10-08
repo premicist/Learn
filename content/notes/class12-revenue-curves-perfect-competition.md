@@ -10,13 +10,7 @@ unitId: class12-u2-1
 
 Under **Perfect Competition**, a very large number of firms sell identical products. Because no individual firm produces enough to influence the market price, the price is determined by the whole industry and accepted by every firm. This lesson explains how this constant price shapes the **Total Revenue ($TR$)**, **Average Revenue ($AR$)**, and **Marginal Revenue ($MR$)** curves.
 
-```mermaid
-flowchart LR
-    A["<b>Industry Demand &amp; Supply</b>"] -->|Determines| P["<b>Fixed Market Price (P)</b>"]
-    P -->|Firm is Price Taker| B["<b>Individual Firm</b><br>P = Constant"]
-    B --> C["<b>AR = MR = P</b><br>Horizontal Line"]
-    B --> D["<b>TR Curve</b><br>Straight Ray from Origin"]
-```
+![class12 revenue curves perfect competition diagram 1](/flowcharts/class-12/class12-revenue-curves-perfect-competition-diagram-1.svg)
 
 ---
 
@@ -30,15 +24,7 @@ flowchart LR
 * Therefore, no individual firm has the power to raise or lower the market price.
 * The price is determined in the market by the equilibrium of **Industry Demand and Industry Supply**. Every individual firm must accept this price as given and can sell as much output as it wishes at this constant price.
 
-```mermaid
-flowchart TD
-    subgraph Industry ["<b>Industry Level</b>"]
-        D["Market Demand"] & S["Market Supply"] --> Eq["Equilibrium Price (P = Rs. 10)"]
-    end
-    subgraph Firm ["<b>Individual Firm Level</b>"]
-        Eq --> PT["Firm takes Price as Given (P = Rs. 10)<br>Firm Demand Curve is Perfectly Elastic (Ed = ∞)"]
-    end
-```
+![class12 revenue curves perfect competition diagram 2](/flowcharts/class-12/class12-revenue-curves-perfect-competition-diagram-2.svg)
 
 ---
 
@@ -73,25 +59,9 @@ Suppose the market price determined by the industry is fixed at **Rs. 10 per uni
 ### Q3. Draw and explain the shapes of $TR$, $AR$, and $MR$ curves under Perfect Competition.
 **Answer:**
 
-```
-Panel A: Total Revenue (TR) Curve      Panel B: AR and MR Curves
-Revenue (Rs.)                          Revenue (Rs.)
-   |                                      |
-50 +                 / TR                 |
-40 +               /                      |
-30 +             /                     10 +------------------- P = AR = MR = d
-20 +           /                          | (Perfectly Elastic, Ed = ∞)
-10 +         /                            |
- 0 +--------+----+----+----+----+-> Q     0 +----+----+----+----+----+---> Q
-   0        1    2    3    4    5           0    1    2    3    4    5
-```
+![Revenue Curves Under Perfect Competition: Linear TR and Horizontal AR=MR](/images/uploads/perfect-competition-revenue-curves-tr-ar-mr.svg)
 
-```mermaid
-flowchart TD
-    PC["<b>Revenue Curves under Perfect Competition</b>"]
-    PC --> TR["<b>TR Curve (Panel A)</b><br>• Straight upward-sloping ray from origin (0,0)<br>• Constant positive slope (= P = MR)<br>• Increases at a constant rate"]
-    PC --> ARMR["<b>AR and MR Curves (Panel B)</b><br>• Perfectly horizontal straight line parallel to X-axis<br>• P = AR = MR at all output levels<br>• Price Elasticity is Infinite (Ed = ∞)"]
-```
+![class12 revenue curves perfect competition diagram 3](/flowcharts/class-12/class12-revenue-curves-perfect-competition-diagram-3.svg)
 
 #### Detailed Diagrammatic Explanation:
 1. **Total Revenue ($TR$) Curve:**

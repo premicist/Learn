@@ -14,14 +14,7 @@ toc: []
 
 ## १. उपभोक्ता व्यवहारका प्रमुख गणितीय सूत्रहरू (Formula Reference)
 
-```mermaid
-graph TD
-    A["<b>उपभोक्ता व्यवहारका मुख्य सूत्रहरू</b>"] --> B["<b>१. कुल उपयोगिता:</b> <br> TU = ΣMU"]
-    A --> C["<b>२. सीमान्त उपयोगिता:</b> <br> MU = TUn - TUn-1"]
-    A --> D["<b>३. एकल वस्तु सन्तुलन:</b> <br> MUx = Px × MUm"]
-    A --> E["<b>४. सम-सीमान्त सन्तुलन:</b> <br> (MUx / Px) = (MUy / Py) = MUm"]
-    A --> F["<b>५. बजेट सर्त:</b> <br> Px·Qx + Py·Qy = M"]
-```
+![class11 nepali consumer behavior numericals diagram 1](/flowcharts/class-11-nepali/class11-nepali-consumer-behavior-numericals-diagram-1.svg)
 
 ---
 

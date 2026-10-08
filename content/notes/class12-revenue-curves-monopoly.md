@@ -10,13 +10,7 @@ unitId: class12-u2-1
 
 Unlike a firm in perfect competition, a **Monopolist** (or any firm in imperfect competition) is a **Price Maker**. Because the monopolist is the sole supplier in the entire market, the firm’s demand curve is the industry market demand curve. To sell a larger quantity of output, the monopolist must lower its price. This downward price adjustment gives rise to downward-sloping $AR$ and $MR$ curves and an inverted U-shaped $TR$ curve.
 
-```mermaid
-flowchart TD
-    M["<b>Monopoly Market</b><br>Firm is Price Maker"] --> P["<b>To Sell More Units</b><br>Price (P) Must Fall"]
-    P --> AR["<b>AR Curve (= Price)</b><br>Slopes Downward"]
-    P --> MR["<b>MR Curve</b><br>Slopes Downward &amp; Lies Below AR (AR &gt; MR)"]
-    P --> TR["<b>TR Curve</b><br>Inverted U-Shape (Rises → Peaks → Falls)"]
-```
+![class12 revenue curves monopoly diagram 1](/flowcharts/class-12/class12-revenue-curves-monopoly-diagram-1.svg)
 
 ---
 
@@ -64,38 +58,9 @@ Suppose a monopolist can sell more output only by reducing the unit price progre
 ### Q3. Draw and explain the shapes of $TR$, $AR$, and $MR$ curves under Monopoly.
 **Answer:**
 
-```
-Panel A: Total Revenue (TR) Curve
-Revenue (Rs.)
-   |                 Peak (TR Max = 30)
-30 +                  /------\
-   |                 /        \
-20 +                /          \   TR Curve (Inverted U-shape)
-   |               /            \
-10 +              /              \
- 0 +-------------+---+---+---+---+---+---> Q (Output)
-   0             1   2   3   4   5   6   7
+![Revenue Curves Under Monopoly: TR, AR, and MR Relationships](/images/uploads/monopoly-revenue-curves-tr-ar-mr.svg)
 
-Panel B: AR and MR Curves
-Revenue (Rs.)
-   |
-10 + \
- 8 +   \           AR Curve (Demand, P = AR)
- 6 +     \       \
- 4 +       \       \
- 2 +         \       \
- 0 +----------\-------+------------------> Q (Output)
-   |           \ 3    5   6 (MR = 0)
--2 +             \ MR Curve (MR < 0)
-```
-
-```mermaid
-flowchart TD
-    Curves["<b>Shapes of Revenue Curves under Monopoly</b>"]
-    Curves --> TR["<b>TR Curve (Panel A)</b><br>• Inverted U-shape (Parabolic)<br>• Rises at a diminishing rate when MR &gt; 0<br>• Reaches maximum peak when MR = 0<br>• Declines when MR &lt; 0"]
-    Curves --> AR["<b>AR Curve (Panel B)</b><br>• Slopes downward from left to right<br>• Represents firm's demand curve<br>• Remains positive as long as P &gt; 0"]
-    Curves --> MR["<b>MR Curve (Panel B)</b><br>• Slopes downward twice as steeply as AR<br>• Lies below AR at all output levels (AR &gt; MR)<br>• Intersects horizontal axis at Q = 6 where TR is maximum<br>• Dips into negative territory when TR declines"]
-```
+![class12 revenue curves monopoly diagram 2](/flowcharts/class-12/class12-revenue-curves-monopoly-diagram-2.svg)
 
 ---
 
@@ -144,10 +109,7 @@ $$MR = \frac{d(TR)}{dQ} = a - 2bQ$$
 ### Q6. Explain the 3-Phase relationship between $TR$ and $MR$ under Monopoly.
 **Answer:**
 
-```mermaid
-flowchart LR
-    P1["<b>Phase 1: MR &gt; 0</b><br>TR is Rising<br>(Diminishing rate)"] --> P2["<b>Phase 2: MR = 0</b><br>TR is at its Maximum Peak<br>(Elasticity Ed = 1)"] --> P3["<b>Phase 3: MR &lt; 0</b><br>TR is Falling<br>(Elasticity Ed &lt; 1)"]
-```
+![class12 revenue curves monopoly diagram 3](/flowcharts/class-12/class12-revenue-curves-monopoly-diagram-3.svg)
 
 1. **Phase 1: When $MR$ is Positive ($MR > 0$):**
    * As long as $MR$ is greater than zero (from $Q = 1$ to $5$), Total Revenue **continues to increase**, but at a decreasing rate because $MR$ is diminishing.

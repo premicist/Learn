@@ -10,13 +10,7 @@ unitId: class12-u2-4
 
 The **Subsistence Theory of Wages** is one of the earliest classical explanations of wage determination. First suggested by the French Physiocrat **Fran?ois Quesnay** and later formulated systematically by **David Ricardo** (1817), it asserts that in the long run, the market wage rate of labour always gravitates towards the **subsistence level**?the bare minimum required for workers to survive and reproduce.
 
-```mermaid
-flowchart TD
-    ST["<b>Subsistence Theory of Wages (Iron Law of Wages)</b>"]
-    ST --> High["<b>If Wage > Subsistence:</b><br>Living standards rise ? Population & Labour Supply grow ? Competition among workers ? <b>Wage FALLS to Subsistence</b>"]
-    ST --> Low["<b>If Wage < Subsistence:</b><br>Poverty & Malnutrition rise ? Labour Supply contracts ? Employers compete for scarce labour ? <b>Wage RISES to Subsistence</b>"]
-    ST --> Eq["<b>Long-Run Equilibrium:</b><br>Wage Rate = Bare Minimum Subsistence Level"]
-```
+![class12 subsistence theory wage diagram 1](/flowcharts/class-12/class12-subsistence-theory-wage-diagram-1.svg)
 
 ---
 
@@ -39,21 +33,7 @@ flowchart TD
 **Answer:**
 The theory relies heavily on **Thomas Malthus's Theory of Population** to explain wage adjustments through two scenarios:
 
-```mermaid
-flowchart TD
-    subgraph Case1 ["<b>Case 1: Wage Rate Above Subsistence</b>"]
-        W1["Wage Rises Above Subsistence"] --> P1["Workers Marry Earlier & Have Larger Families"]
-        P1 --> S1["Population & Labour Supply Increase"]
-        S1 --> C1["Intense Competition Among Job Seekers"]
-        C1 --> W1Down["Wage Falls Back to Subsistence"]
-    end
-    subgraph Case2 ["<b>Case 2: Wage Rate Below Subsistence</b>"]
-        W2["Wage Falls Below Subsistence"] --> P2["Poverty, Malnutrition & High Infant Mortality"]
-        P2 --> S2["Population & Labour Supply Decrease"]
-        S2 --> C2["Shortage of Workers / Competition Among Employers"]
-        C2 --> W2Up["Wage Rises Back to Subsistence"]
-    end
-```
+![class12 subsistence theory wage diagram 2](/flowcharts/class-12/class12-subsistence-theory-wage-diagram-2.svg)
 
 #### Summary Table of Adjustment:
 
@@ -82,15 +62,7 @@ flowchart TD
 ### Q4. What are the major criticisms of the Subsistence Theory of Wages?
 **Answer:**
 
-```mermaid
-flowchart TD
-    Crit["<b>Major Criticisms of Subsistence Theory</b>"]
-    Crit --> C1["<b>1. Ignores Labour Demand & Productivity:</b> Wages depend on MRP, not just survival costs"]
-    Crit --> C2["<b>2. Flawed Population Assumption:</b> Higher income actually leads to smaller family sizes"]
-    Crit --> C3["<b>3. Ignores Role of Trade Unions:</b> Collective bargaining secures higher living wages"]
-    Crit --> C4["<b>4. Historical Reality Disproves It:</b> Real wages have risen continuously in developed nations"]
-    Crit --> C5["<b>5. Long Time Lag:</b> Population takes 15?20 years to affect the labour market"]
-```
+![class12 subsistence theory wage diagram 3](/flowcharts/class-12/class12-subsistence-theory-wage-diagram-3.svg)
 
 1. **One-Sided Theory (Ignores Labour Demand & Productivity):**
    * The theory focuses purely on the supply of labour. In reality, wages depend on the **Marginal Revenue Productivity ($MRP$)** of labour. A highly productive software engineer or doctor earns far above subsistence because their output value is high.

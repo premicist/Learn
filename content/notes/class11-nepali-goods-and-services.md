@@ -16,11 +16,7 @@ toc: []
 
 मानिसका आवश्यकताहरू पूरा गर्न उत्पादन गरिने आर्थिक उत्पादनहरूलाई मुख्यतया दुई भागमा विभाजन गरिन्छ:
 
-```mermaid
-flowchart LR
-    A["<b>आर्थिक उत्पादनहरू (Economic Outputs)</b>"] --> B["<b>१. वस्तुहरू (Goods)</b> <br> भौतिक र छुन सकिने (Tangible)"]
-    A --> C["<b>२. सेवाहरू (Services)</b> <br> अभौतिक र अनुभव गरिने (Intangible)"]
-```
+![class11 nepali goods and services diagram 1](/flowcharts/class-11-nepali/class11-nepali-goods-and-services-diagram-1.svg)
 
 ---
 
@@ -50,29 +46,7 @@ flowchart LR
 
 अर्थशास्त्रमा वस्तुहरूलाई विभिन्न आधारमा वर्गीकरण गरिन्छ:
 
-```mermaid
-graph TD
-    Root["<b>वस्तुहरूको वर्गीकरण (Classification of Goods)</b>"] --> G1["१. मूल्य र प्रकृतिका आधारमा"]
-    Root --> G2["२. उपभोग र प्रयोगका आधारमा"]
-    Root --> G3["३. स्वामित्वका आधारमा"]
-    Root --> G4["४. उत्पादन प्रक्रियाका आधारमा"]
-    Root --> G5["५. टिकाउपनका आधारमा"]
-
-    G1 --> G1A["निःशुल्क वस्तुहरू (Free Goods)"]
-    G1 --> G1B["आर्थिक वस्तुहरू (Economic Goods)"]
-
-    G2 --> G2A["उपभोग्य वस्तुहरू (Consumer Goods)"]
-    G2 --> G2B["पुँजीगत वस्तुहरू (Capital Goods)"]
-
-    G3 --> G3A["निजी वस्तुहरू (Private Goods)"]
-    G3 --> G3B["सार्वजनिक वस्तुहरू (Public Goods)"]
-
-    G4 --> G4A["मध्यवर्ती वस्तुहरू (Intermediate Goods)"]
-    G4 --> G4B["अन्तिम वस्तुहरू (Final Goods)"]
-
-    G5 --> G5A["टिकाउ वस्तुहरू (Durable Goods)"]
-    G5 --> G5B["चाँडै नाशवान वस्तुहरू (Perishable Goods)"]
-```
+![class11 nepali goods and services diagram 2](/flowcharts/class-11-nepali/class11-nepali-goods-and-services-diagram-2.svg)
 
 ---
 

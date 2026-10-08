@@ -16,15 +16,7 @@ toc: []
 
 The concept of elasticity of demand is not just an abstract economic formula; it is one of the most practical decision-making tools used by **business executives, hotel managers, finance ministers, and central bankers**.
 
-```mermaid
-flowchart TD
-    E["<b>Applications of Elasticity</b>"] --> A1["<b>1. Pricing Strategy</b><br>TR maximization"]
-    E --> A2["<b>2. Price Discrimination</b><br>Higher price in inelastic markets"]
-    E --> A3["<b>3. Taxation Policy</b><br>Excise taxes on inelastic goods"]
-    E --> A4["<b>4. Trade Devaluation</b><br>Marshall-Lerner condition"]
-    E --> A5["<b>5. Wage Negotiations</b><br>Inelastic derived labour demand"]
-    E --> A6["<b>6. Public Utilities</b><br>Subsidies and tariffs"]
-```
+![importance of elasticity in decision making diagram 1](/flowcharts/introduction-to-economics/importance-of-elasticity-in-decision-making-diagram-1.svg)
 
 ---
 

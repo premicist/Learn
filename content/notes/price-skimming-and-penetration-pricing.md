@@ -18,11 +18,7 @@ When an enterprise introduces a new product or service into the market, it faces
 
 In business economics, this choice represents the two core new-product pricing strategies:
 
-```mermaid
-flowchart TD
-    Launch["<b>Launching a New Product or Service</b>"] --> S["<b>1. Price Skimming Strategy</b><br>• High initial launch price<br>• Target price-inelastic early adopters<br>• Example: Apple iPhone, Sony PlayStation"]
-    Launch --> P["<b>2. Penetration Pricing Strategy</b><br>• Low initial launch price<br>• Target price-sensitive mass market<br>• Example: Jio 4G Telecom, OYO Rooms"]
-```
+![price skimming and penetration pricing diagram 1](/flowcharts/introduction-to-economics/price-skimming-and-penetration-pricing-diagram-1.svg)
 
 ---
 
@@ -31,11 +27,7 @@ flowchart TD
 ### What is Price Skimming?
 **Price Skimming** (or **Market Skimming Pricing**) is a strategy where a firm sets a **very high initial price** when a new, innovative product is first launched, and then **gradually reduces the price step-by-step** over time as the market matures and competing substitutes emerge.
 
-```mermaid
-flowchart LR
-    A["<b>Stage 1: Launch at High Price</b><br>Target early adopters with inelastic demand<br>'Skim the cream' of consumer surplus"] --> B["<b>Stage 2: Moderate Price Cuts</b><br>Expand into mainstream middle segments<br>Respond to emerging competitors"]
-    B --> C["<b>Stage 3: Mass Market Pricing</b><br>Lower price for price-sensitive buyers<br>Mature product lifecycle"]
-```
+![price skimming and penetration pricing diagram 2](/flowcharts/introduction-to-economics/price-skimming-and-penetration-pricing-diagram-2.svg)
 
 > **Definition:** **Price Skimming** is the practice of charging the highest possible price during product introduction to extract maximum consumer surplus from early adopters before catering to broader, price-sensitive mass markets.
 
@@ -52,11 +44,7 @@ flowchart LR
 ### What is Penetration Pricing?
 **Penetration Pricing** is a strategy where a firm sets a **very low initial price** (often near or slightly above average variable cost) to penetrate the market rapidly, capture a dominant market share, build customer loyalty, and deter rivals from entering.
 
-```mermaid
-flowchart LR
-    A["<b>Low Initial Price (P_Pen)</b><br>Attract price-sensitive mass consumers"] --> B["<b>Massive Sales Volume &amp; Scale</b><br>Drives down long-run average cost (LAC ↓)"]
-    B --> C["<b>Market Dominance &amp; Entry Barrier</b><br>High scale locks out competitors"]
-```
+![price skimming and penetration pricing diagram 3](/flowcharts/introduction-to-economics/price-skimming-and-penetration-pricing-diagram-3.svg)
 
 > **Definition:** **Penetration Pricing** is the practice of setting low introductory prices to stimulate rapid adoption, achieve high unit sales volumes, and establish long-run cost leadership through economies of scale.
 

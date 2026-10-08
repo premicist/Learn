@@ -16,10 +16,7 @@ toc: []
 
 **Perfect Competition** is a theoretical market structure characterized by total absence of individual market power or direct rivalry. The market price is determined strictly by aggregate market demand and market supply, and individual firms act as pure **Price Takers**.
 
-```mermaid
-flowchart LR
-    A["<b>Whole Industry</b><br>Market Demand &amp; Supply Intersect<br>Determines Market Price P*"] --> B["<b>Individual Firm</b><br>Price Taker (Zero Power)<br>Faces Horizontal Demand: P* = AR = MR"]
-```
+![perfect competition price and output determination diagram 1](/flowcharts/introduction-to-economics/perfect-competition-price-and-output-determination-diagram-1.svg)
 
 ### Key Assumptions and Characteristics:
 1. **Very Large Number of Buyers and Sellers:** Individual firm sales are an insignificant fraction of total market volume; no single firm can alter the market price.
@@ -50,14 +47,7 @@ In the short run, plant capacity is fixed. The firm maximizes profit by satisfyi
 
 ### Three Possible Short-Run Profit States:
 
-```mermaid
-flowchart TD
-    S["Short-Run Equilibrium State: P = MC"] --> S1["<b>1. Supernormal Profit (P &gt; SAC)</b><br>Profit = (P* - SAC) × q*"]
-    S --> S2["<b>2. Normal Profit (P = Min SAC)</b><br>Zero economic profit (Break-Even)"]
-    S --> S3["<b>3. Economic Loss (P &lt; SAC)</b><br>Loss = (SAC - P*) × q*"]
-    S3 --> SH1["Operate if P &gt;= SAVC to cover variable costs"]
-    S3 --> SH2["SHUTDOWN if P &lt; Min SAVC"]
-```
+![perfect competition price and output determination diagram 2](/flowcharts/introduction-to-economics/perfect-competition-price-and-output-determination-diagram-2.svg)
 
 ![Short-run outcomes for a perfectly competitive firm: supernormal profit, normal profit, economic loss, and the shutdown point](/images/uploads/perfect-competition-short-run-three-states.svg)
 

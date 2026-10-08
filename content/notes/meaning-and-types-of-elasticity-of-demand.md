@@ -44,12 +44,7 @@ It is important not to confuse the **slope** of the demand curve with its **elas
 
 Economists categorize elasticity of demand into three primary types based on which determinant is changing:
 
-```mermaid
-flowchart TD
-    E["<b>Types of Elasticity of Demand</b>"] --> E1["<b>1. Price Elasticity (Ep)</b><br>Responsiveness to own price"]
-    E --> E2["<b>2. Income Elasticity (Ey)</b><br>Responsiveness to buyer income"]
-    E --> E3["<b>3. Cross Elasticity (Exy)</b><br>Responsiveness to related prices"]
-```
+![meaning and types of elasticity of demand diagram 1](/flowcharts/introduction-to-economics/meaning-and-types-of-elasticity-of-demand-diagram-1.svg)
 
 ### 1. Price Elasticity of Demand ($E_p$)
 Measures the percentage change in the quantity demanded of a commodity resulting from a percentage change in its **own price**:

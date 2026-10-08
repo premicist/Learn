@@ -10,14 +10,7 @@ unitId: class12-u2-3
 
 Numerical problems on price and output determination require applying the **profit-maximization conditions ($MR = MC$)**, distinguishing between competitive price-taking ($P = MC$) and monopoly pricing, and making rational **short-run shutdown decisions ($TR \ge TVC$)**. This guide provides the master formula bank, step-by-step worked solutions, and practice exercises with full answer keys.
 
-```mermaid
-flowchart TD
-    FB["<b>Master Equilibrium Formula Bank</b>"]
-    FB --> F1["<b>Profit Maximization Rule</b><br>MR = MC &amp; MC is rising"]
-    FB --> F2["<b>Perfect Competition</b><br>P = MR = MC<br>Find Q where P = MC"]
-    FB --> F3["<b>Monopoly Market</b><br>MR = d(TR)/dQ &amp; MC = d(TC)/dQ<br>Equate MR = MC → Find Q* → Plug in P(Q) for P*"]
-    FB --> F4["<b>Shutdown Rule</b><br>If TR ≥ TVC (P ≥ AVC) → Continue<br>If TR &lt; TVC (P &lt; AVC) → Shut Down"]
-```
+![class12 price output numerical problems diagram 1](/flowcharts/class-12/class12-price-output-numerical-problems-diagram-1.svg)
 
 ---
 

@@ -42,12 +42,7 @@ When facing a risky gamble or uncertain choice:
 
 Depending on how a consumer's marginal utility of wealth behaves, consumers fall into **three behavioral categories**:
 
-```mermaid
-flowchart TD
-    R[Consumer Risk Attitudes] --> R1[<b>1. Risk-Averse Consumer</b><br>Prefers certainty; buys insurance<br>Diminishing MU of Wealth]
-    R --> R2[<b>2. Risk-Neutral Consumer</b><br>Focuses strictly on expected monetary value<br>Constant MU of Wealth]
-    R --> R3[<b>3. Risk-Seeking Consumer</b><br>Prefers gambles and lotteries<br>Increasing MU of Wealth]
-```
+![theories of risk management in consumer choice diagram 1](/flowcharts/introduction-to-economics/theories-of-risk-management-in-consumer-choice-diagram-1.svg)
 
 ### 1. Risk-Averse Consumer (The Majority of Consumers)
 * **Behavior:** Prefers a guaranteed sure payoff over a risky gamble with the exact same expected value.
@@ -82,13 +77,7 @@ flowchart TD
 
 In everyday life, risk-averse consumers use four primary methods to manage and reduce economic risk:
 
-```mermaid
-flowchart TD
-    S[Consumer Risk Management Methods] --> M1[<b>1. Insurance &amp; Risk Transfer</b><br>Pay premium to transfer catastrophic risk]
-    S --> M2[<b>2. Diversification</b><br>Spread wealth across varied assets]
-    S --> M3[<b>3. Information Gathering</b><br>Research reviews and test ratings]
-    S --> M4[<b>4. Brand Loyalty &amp; Warranties</b><br>Rely on proven quality and return policies]
-```
+![theories of risk management in consumer choice diagram 2](/flowcharts/introduction-to-economics/theories-of-risk-management-in-consumer-choice-diagram-2.svg)
 
 1. **Insurance and Risk Transfer:**  
    Consumers pay a small, certain insurance premium to protect themselves against the risk of a rare, catastrophic financial loss (e.g., fire insurance, car accident insurance, travel health insurance).

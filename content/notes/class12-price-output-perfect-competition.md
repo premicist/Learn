@@ -10,16 +10,7 @@ unitId: class12-u2-3
 
 Under **Perfect Competition**, a very large number of firms sell identical products. The market price is determined solely by the interaction of **Industry Demand and Industry Supply**. Each individual firm takes this industry price as given ($P = AR = MR$). This lesson explains how a competitive firm determines its profit-maximizing price and output in both the **short run** and the **long run**.
 
-```mermaid
-flowchart TD
-    PC["<b>Price &amp; Output in Perfect Competition</b>"]
-    PC --> Ind["<b>1. Industry Price Determination</b><br>Market Demand (D) = Market Supply (S) → Price P*"]
-    PC --> SR["<b>2. Short-Run Firm Equilibrium</b><br>MR = MC &amp; MC cuts MR from below"]
-    SR --> P1["<b>Supernormal Profit:</b> AR &gt; AC"]
-    SR --> P2["<b>Normal Profit:</b> AR = AC"]
-    SR --> P3["<b>Loss / Shutdown:</b> AR &lt; AC (P ≥ AVC)"]
-    PC --> LR["<b>3. Long-Run Firm Equilibrium</b><br>Free Entry &amp; Exit → <b>Normal Profit Only</b><br>P = AR = MR = LMC = Min LAC"]
-```
+![class12 price output perfect competition diagram 1](/flowcharts/class-12/class12-price-output-perfect-competition-diagram-1.svg)
 
 ---
 
@@ -31,17 +22,7 @@ flowchart TD
 * **At the Individual Firm Level:** The individual firm is a **price taker**. It cannot alter the price. It faces a **perfectly elastic horizontal demand curve** where:
   $$\mathbf{P = AR = MR}$$
 
-```
-Panel A: Industry (Price Maker)        Panel B: Firm (Price Taker)
-Price (Rs.)                            Price (Rs.)
-   |         SS                           |             SMC
-   | \      /                             |            \   /
- P +--\-*E-/-*-------------------------- P +------------\-/---------- P = AR = MR
-   |   / \                                |              * E (MR = MC)
-   |  /   \ DD                            |             /
- 0 +---+---+--------------------------> Q 0 +----------+-------------> Q
-   0       Q (Industry Output)            0            Q* (Firm Output)
-```
+![Industry Price Determination and Firm Demand Under Perfect Competition](/images/uploads/perfect-competition-industry-firm-demand.svg)
 
 ---
 
@@ -61,13 +42,7 @@ A competitive firm maximizes profit and reaches short-run equilibrium when:
 **Answer:**
 In the short run, fixed plant capacity cannot be changed, and new firms cannot enter. Depending on its cost efficiency relative to the market price, a firm may experience one of **three profit states**:
 
-```mermaid
-flowchart TD
-    States["<b>Three Short-Run Profit States</b>"]
-    States --> S1["<b>1. Supernormal Profit</b><br>AR &gt; AC at equilibrium Q*<br>(TR &gt; TC)"]
-    States --> S2["<b>2. Normal Profit (Break-Even)</b><br>AR = AC at equilibrium Q*<br>(TR = TC)"]
-    States --> S3["<b>3. Subnormal Profit (Loss)</b><br>AR &lt; AC at equilibrium Q*<br>(TC &gt; TR)"]
-```
+![class12 price output perfect competition diagram 2](/flowcharts/class-12/class12-price-output-perfect-competition-diagram-2.svg)
 
 #### 1. Supernormal (Abnormal) Profit ($AR > AC$):
 * **Condition:** When the prevailing market price ($P = AR$) is **higher than the Average Cost ($AC$)** at the equilibrium output ($Q^*$).
@@ -75,34 +50,11 @@ flowchart TD
   $$\text{Per-unit Profit} = AR - AC = P - C$$
   $$\text{Total Supernormal Profit} = \text{Area of Rectangle } P E C B = (P - C) \times Q^*$$
 
-```
-Price / Cost
-   |                SMC
-   |               /     SAC
- P +--------------* E ------------- AR = MR = P
-   |             /|
- C +-------* B--/ |                 (Supernormal Profit = Area PECB)
-   |       |   /  |
- 0 +-------+---+--+---------------> Output (Q)
-   0              Q*
-```
-
 #### 2. Normal Profit / Break-Even State ($AR = AC$):
 * **Condition:** When market price ($P = AR$) is **exactly equal to the minimum of Average Cost ($AC$)** at equilibrium output.
 * **Profit Calculation:**
   $$\text{Total Revenue (TR)} = \text{Total Cost (TC)} \implies \text{Economic Profit } \pi = 0$$
 * *(Note: Normal profit is already included in $AC$ as the minimum reward for entrepreneurship).*
-
-```
-Price / Cost
-   |                SMC
-   |               /     SAC
- P +--------------* E ------------- AR = MR = P = Min SAC
-   |             /|
-   |            / |                 (Normal Profit: TR = TC)
- 0 +-----------+--+---------------> Output (Q)
-   0              Q*
-```
 
 #### 3. Minimum Loss ($AR < AC$):
 * **Condition:** When market price ($P = AR$) is **lower than Average Cost ($AC$)** at equilibrium output ($Q^*$).
@@ -110,16 +62,7 @@ Price / Cost
   $$\text{Per-unit Loss} = AC - AR = C - P$$
   $$\text{Total Loss} = \text{Area of Rectangle } C B E P = (C - P) \times Q^*$$
 
-```
-Price / Cost
-   |                SMC    SAC
- C +-------* B-----/------/
-   |       |      /      /
- P +-------+-----* E ---/---------- AR = MR = P
-   |       |    /|                  (Loss Area = Area CBEP)
- 0 +-------+---+-+----------------> Output (Q)
-   0             Q*
-```
+![Three Short-Run Equilibrium Profit States Under Perfect Competition](/images/uploads/perfect-competition-short-run-three-states.svg)
 
 ---
 
@@ -127,13 +70,7 @@ Price / Cost
 **Answer:**
 In the short run, a firm with fixed costs cannot avoid $TFC$ even if it shuts down ($Q = 0$).
 
-```mermaid
-flowchart TD
-    Decision["<b>Short-Run Operating Decision during Loss</b>"]
-    Decision --> D1["<b>P &gt; AVC: Continue Operating</b><br>Covers 100% of variable costs + part of fixed costs<br>Loss is LESS than TFC"]
-    Decision --> D2["<b>P = Min AVC: SHUTDOWN POINT</b><br>Covers only variable costs; Loss = TFC<br>Indifferent between running and closing"]
-    Decision --> D3["<b>P &lt; AVC: Shut Down Immediately</b><br>Cannot even cover daily variable costs<br>Loss would EXCEED TFC"]
-```
+![class12 price output perfect competition diagram 3](/flowcharts/class-12/class12-price-output-perfect-competition-diagram-3.svg)
 
 * **Rule 1 (Continue Business if $P > AVC$):** The firm covers all its variable costs and has surplus revenue left over to pay off part of its fixed costs. Closing down would produce a bigger loss (all of $TFC$).
 * **Rule 2 (The Shutdown Point if $P = \text{Min } AVC$):** The price barely covers average variable cost. Total loss equals Total Fixed Cost ($TFC$). This is the critical minimum threshold called the **Shutdown Point**.
@@ -149,27 +86,13 @@ flowchart TD
 **Answer:**
 In the **long run**, all inputs are variable, and there is **completely free entry and exit of firms**.
 
-```mermaid
-flowchart TD
-    Adj["<b>Long-Run Industry Adjustment Mechanism</b>"]
-    Adj --> Case1["<b>If Firms Earn Supernormal Profits (AR &gt; LAC):</b><br>• New firms enter the industry<br>• Total market supply increases (Supply shifts right)<br>• Market price FALLS until AR = Min LAC"]
-    Adj --> Case2["<b>If Firms Incur Losses (AR &lt; LAC):</b><br>• Inefficient firms exit the industry<br>• Total market supply decreases (Supply shifts left)<br>• Market price RISES until AR = Min LAC"]
-```
+![class12 price output perfect competition diagram 4](/flowcharts/class-12/class12-price-output-perfect-competition-diagram-4.svg)
 
 #### Long-Run Equilibrium Condition:
 Through this automatic entry-and-exit process, the long-run equilibrium is established where:
 $$\mathbf{P = AR = MR = LMC = \text{Minimum } LAC = SMC = \text{Minimum } SAC}$$
 
-```
-Price / Cost (Rs.)
-   |                 LMC
-   |                /     LAC
- P +---------------* E ------------- P = AR = MR = Min LAC = LMC
-   |              /|
-   |             / |                 (Long-Run Normal Profit Only)
- 0 +------------+--+---------------> Output (Q)
-   0               Q* (Optimum Scale)
-```
+![Long-Run Competitive Equilibrium of the Firm and Industry](/images/uploads/perfect-competition-long-run-equilibrium.svg)
 
 #### Why Only Normal Profit is Earned in the Long Run:
 * Any supernormal profit is competed away by new entrants.

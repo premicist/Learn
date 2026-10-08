@@ -18,12 +18,7 @@ In everyday language, a "market" refers to a physical bazaar, shopping mall, or 
 
 > **Definition:** A **market** is any arrangement, mechanism, or network of communication through which potential buyers and sellers interact to determine the price and quantity of a specific good or service traded.
 
-```mermaid
-flowchart LR
-    A["Buyers (Demand Side)"] --> C["<b>Market Mechanism &amp; Price System</b>"]
-    B["Sellers (Supply Side)"] --> C
-    C --> D["<b>Equilibrium Price &amp; Quantity Traded</b>"]
-```
+![meaning of market structure diagram 1](/flowcharts/introduction-to-economics/meaning-of-market-structure-diagram-1.svg)
 
 A market does not require a physical location. Global foreign exchange (Forex), stock markets, online e-commerce platforms, and wholesale grain markets are all economic markets.
 
@@ -33,13 +28,7 @@ A market does not require a physical location. Global foreign exchange (Forex), 
 
 Economists classify markets along a competitive continuum based on **four fundamental structural parameters**:
 
-```mermaid
-flowchart TD
-    M["<b>Market Classification Criteria</b>"] --> C1["<b>1. Number of Sellers &amp; Buyers</b><br>Infinite small sellers to single monopoly"]
-    M --> C2["<b>2. Nature of Product</b><br>Homogeneous, differentiated, or unique"]
-    M --> C3["<b>3. Entry &amp; Exit Freedom</b><br>Completely free to absolute legal barriers"]
-    M --> C4["<b>4. Control Over Price</b><br>Price taker (P = MR) to Price maker (P &gt; MC)"]
-```
+![meaning of market structure diagram 2](/flowcharts/introduction-to-economics/meaning-of-market-structure-diagram-2.svg)
 
 1. **Number and Size Distribution of Sellers:** Ranges from an infinite number of small price-taking firms to a single price-making monopolist.
 2. **Nature of the Product:** Whether goods are identical (homogeneous / perfect substitutes), differentiated (branding / close substitutes), or unique (no close substitutes).

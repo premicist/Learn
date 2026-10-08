@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 450" width="100%" height="auto" role="img" aria-label="Ricardian Theory of Rent: Extensive and Intensive Cultivation">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.2; }
+    .axis { stroke: #1e293b; stroke-width: 2; stroke-linecap: round; }
+    .bar-rent { fill: #dcfce7; stroke: #16a34a; stroke-width: 1.5; }
+    .bar-cost { fill: #f1f5f9; stroke: #64748b; stroke-width: 1.5; }
+    .guide-line { stroke: #94a3b8; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #0f172a; }
+    .text-panel-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 13.5px; font-weight: 800; fill: #1e293b; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 700; fill: #1e293b; text-anchor: middle; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 10.5px; font-weight: 600; fill: #475569; text-anchor: middle; }
+    .tag-box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; rx: 4; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="35" y="32">David Ricardo's Theory of Rent: Differential Surplus</text>
+
+  <!-- Panel A: Extensive Cultivation (Grades A, B, C, D) -->
+  <g transform="translate(30, 50)">
+    <rect class="card" width="370" height="370" rx="8"/>
+    <text class="text-panel-title" x="185" y="26">Panel A: Extensive Cultivation</text>
+    <text class="text-sub" x="185" y="42">Different grades of land brought into production</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="45" y1="310" x2="45" y2="60"/>
+    <line class="axis" x1="45" y1="310" x2="350" y2="310"/>
+    <text class="text-label" x="45" y="52" text-anchor="start">Output (Qtl)</text>
+    <text class="text-label" x="300" y="328">Grades of Land</text>
+    <text class="text-label" x="32" y="322">O</text>
+
+    <!-- Baseline Cost / Marginal Land Output line at Output = 20 (y = 230) -->
+    <line class="guide-line" x1="45" y1="230" x2="330" y2="230"/>
+    <text class="text-label" x="25" y="234" text-anchor="end">20 Qtl</text>
+
+    <!-- Grade A: Total = 60 (y = 70 to 310) -->
+    <rect class="bar-rent" x="65" y="70" width="55" height="160"/>
+    <rect class="bar-cost" x="65" y="230" width="55" height="80"/>
+    <text class="text-label" x="92" y="150" fill="#15803d">Rent<br/>40 Qtl</text>
+    <text class="text-label" x="92" y="275" fill="#64748b">Cost</text>
+    <text class="text-label" x="92" y="328">Grade A</text>
+
+    <!-- Grade B: Total = 40 (y = 150 to 310) -->
+    <rect class="bar-rent" x="135" y="150" width="55" height="80"/>
+    <rect class="bar-cost" x="135" y="230" width="55" height="80"/>
+    <text class="text-label" x="162" y="195" fill="#15803d">Rent 20</text>
+    <text class="text-label" x="162" y="275" fill="#64748b">Cost</text>
+    <text class="text-label" x="162" y="328">Grade B</text>
+
+    <!-- Grade C: Total = 30 (y = 190 to 310) -->
+    <rect class="bar-rent" x="205" y="190" width="55" height="40"/>
+    <rect class="bar-cost" x="205" y="230" width="55" height="80"/>
+    <text class="text-label" x="232" y="215" fill="#15803d">10</text>
+    <text class="text-label" x="232" y="275" fill="#64748b">Cost</text>
+    <text class="text-label" x="232" y="328">Grade C</text>
+
+    <!-- Grade D: Marginal Land / Total = 20 (y = 230 to 310) -->
+    <rect class="bar-cost" x="275" y="230" width="55" height="80"/>
+    <text class="text-label" x="302" y="275" fill="#64748b">Cost</text>
+    <text class="text-label" x="302" y="328">Grade D</text>
+    <text class="text-sub" x="302" y="215" fill="#b91c1c">No Rent</text>
+  </g>
+
+  <!-- Panel B: Intensive Cultivation (Doses on Same Land) -->
+  <g transform="translate(435, 50)">
+    <rect class="card" width="370" height="370" rx="8"/>
+    <text class="text-panel-title" x="185" y="26">Panel B: Intensive Cultivation</text>
+    <text class="text-sub" x="185" y="42">Successive doses of L &amp; K applied on the same plot</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="45" y1="310" x2="45" y2="60"/>
+    <line class="axis" x1="45" y1="310" x2="350" y2="310"/>
+    <text class="text-label" x="45" y="52" text-anchor="start">Output (Qtl)</text>
+    <text class="text-label" x="300" y="328">Doses of L &amp; K</text>
+    <text class="text-label" x="32" y="322">O</text>
+
+    <!-- Baseline Cost / Marginal Dose Output at Output = 15 (y = 250) -->
+    <line class="guide-line" x1="45" y1="250" x2="330" y2="250"/>
+    <text class="text-label" x="25" y="254" text-anchor="end">15 Qtl</text>
+
+    <!-- 1st Dose: Output = 45 (y = 90 to 310) -->
+    <rect class="bar-rent" x="65" y="90" width="55" height="160"/>
+    <rect class="bar-cost" x="65" y="250" width="55" height="60"/>
+    <text class="text-label" x="92" y="170" fill="#15803d">Rent<br/>30 Qtl</text>
+    <text class="text-label" x="92" y="285" fill="#64748b">Cost</text>
+    <text class="text-label" x="92" y="328">1st Dose</text>
+
+    <!-- 2nd Dose: Output = 35 (y = 150 to 310) -->
+    <rect class="bar-rent" x="135" y="150" width="55" height="100"/>
+    <rect class="bar-cost" x="135" y="250" width="55" height="60"/>
+    <text class="text-label" x="162" y="200" fill="#15803d">Rent 20</text>
+    <text class="text-label" x="162" y="285" fill="#64748b">Cost</text>
+    <text class="text-label" x="162" y="328">2nd Dose</text>
+
+    <!-- 3rd Dose: Output = 25 (y = 200 to 310) -->
+    <rect class="bar-rent" x="205" y="200" width="55" height="50"/>
+    <rect class="bar-cost" x="205" y="250" width="55" height="60"/>
+    <text class="text-label" x="232" y="230" fill="#15803d">10</text>
+    <text class="text-label" x="232" y="285" fill="#64748b">Cost</text>
+    <text class="text-label" x="232" y="328">3rd Dose</text>
+
+    <!-- 4th Dose: Marginal Dose / Output = 15 (y = 250 to 310) -->
+    <rect class="bar-cost" x="275" y="250" width="55" height="60"/>
+    <text class="text-label" x="302" y="285" fill="#64748b">Cost</text>
+    <text class="text-label" x="302" y="328">4th Dose</text>
+    <text class="text-sub" x="302" y="230" fill="#b91c1c">Marginal</text>
+  </g>
+</svg>

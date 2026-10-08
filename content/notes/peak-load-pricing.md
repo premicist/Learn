@@ -16,11 +16,7 @@ toc: []
 
 **Peak-Load Pricing** is a form of time-variant price discrimination applied to **non-storable goods and services** that experience periodic, recurring fluctuations in demand (peaks and off-peaks) within fixed short-run physical capacities.
 
-```mermaid
-flowchart TD
-    P["<b>Peak-Load Pricing Framework</b>"] --> P1["<b>1. High Peak Demand (D_Peak)</b><br>Operating at 100% capacity<br>High Marginal Cost ⇒ Charge Premium Price (P_Peak)"]
-    P --> P2["<b>2. Low Off-Peak Demand (D_OffPeak)</b><br>Excess idle capacity available<br>Low Marginal Cost ⇒ Charge Discount Price (P_OffPeak)"]
-```
+![peak load pricing diagram 1](/flowcharts/introduction-to-economics/peak-load-pricing-diagram-1.svg)
 
 > **Definition:** **Peak-Load Pricing** is the practice of charging a **higher price during peak demand periods** (when capacity is fully utilized and marginal cost is high) and a **lower price during off-peak periods** (when idle capacity exists and marginal cost is low).
 

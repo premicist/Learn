@@ -18,12 +18,7 @@ toc: []
 
 In simple terms, traditional economics tells us how markets work in theory, while business economics gives managers the analytical tools to solve day-to-day business problems, set optimal prices, minimize operational costs, and make profitable decisions under market uncertainty.
 
-```mermaid
-flowchart LR
-    A["<b>Economic Theory</b><br>Demand, Cost, Pricing &amp; Market Models"] --> C["<b>Business Economics</b><br>Applied Decision Science"]
-    B["<b>Decision Science Tools</b><br>Mathematics, Statistics &amp; Accounting"] --> C
-    C --> D["<b>Practical Solutions</b><br>Optimal Pricing, Cost Control &amp; Strategic Planning"]
-```
+![nature scope and role of business economics diagram 1](/flowcharts/introduction-to-economics/nature-scope-and-role-of-business-economics-diagram-1.svg)
 
 ### Notable Definitions:
 * **Spencer and Siegelman:** *"Managerial economics is the integration of economic theory with business practice for the purpose of facilitating decision-making and forward planning by management."*
@@ -67,14 +62,7 @@ The scope refers to the functional areas where economic tools are applied in a b
 
 A **business economist** acts as an internal economic advisor to senior corporate management. Their primary role is to replace guesswork with objective, data-driven analysis.
 
-```mermaid
-flowchart TD
-    E["<b>Role of a Business Economist</b>"] --> R1["<b>1. Sales &amp; Demand Forecasting</b><br>Predicting product and service demand"]
-    E --> R2["<b>2. Pricing Strategy</b><br>Setting optimal prices and tariffs"]
-    E --> R3["<b>3. Cost Control &amp; Break-Even</b><br>Managing input costs and leverage"]
-    E --> R4["<b>4. Capital Appraisal</b><br>Evaluating investments with DCF and NPV"]
-    E --> R5["<b>5. Macro Risk Scanning</b><br>Tracking inflation, rates, and tax policies"]
-```
+![nature scope and role of business economics diagram 2](/flowcharts/introduction-to-economics/nature-scope-and-role-of-business-economics-diagram-2.svg)
 
 ### Key Responsibilities:
 1. **Sales and Demand Forecasting:**  

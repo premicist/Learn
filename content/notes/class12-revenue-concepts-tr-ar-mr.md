@@ -10,13 +10,7 @@ unitId: class12-u2-1
 
 In economics and business, a firm incurs costs to produce goods and sells them in the market to earn income. The money received by a producer from selling its output is called **Revenue**. Understanding the three revenue concepts—**Total Revenue ($TR$)**, **Average Revenue ($AR$)**, and **Marginal Revenue ($MR$)**—is essential for analyzing firm profits and market behavior.
 
-```mermaid
-flowchart TD
-    R["<b>Revenue Concepts</b><br>Sales Income of a Firm"]
-    R --> TR["<b>Total Revenue (TR)</b><br>TR = Price × Quantity<br>TR = Σ MR"]
-    R --> AR["<b>Average Revenue (AR)</b><br>AR = TR / Q = Price<br>(Firm's Demand Curve)"]
-    R --> MR["<b>Marginal Revenue (MR)</b><br>MR = ΔTR / ΔQ<br>MR = TRₙ − TRₙ₋₁"]
-```
+![class12 revenue concepts tr ar mr diagram 1](/flowcharts/class-12/class12-revenue-concepts-tr-ar-mr-diagram-1.svg)
 
 ---
 
@@ -126,13 +120,7 @@ Let us consider a firm selling units of a commodity where price is lowered to se
 **Answer:**
 The relationship between $TR$ and $MR$ follows three universal phases:
 
-```mermaid
-flowchart TD
-    Rel["<b>Interrelationship Between TR and MR</b>"]
-    Rel --> P1["<b>Phase 1: MR is Positive (MR &gt; 0)</b><br>• Total Revenue (TR) increases<br>• If MR is constant → TR rises at constant rate<br>• If MR is falling → TR rises at diminishing rate"]
-    Rel --> P2["<b>Phase 2: MR is Zero (MR = 0)</b><br>• Total Revenue (TR) reaches its MAXIMUM (Peak)"]
-    Rel --> P3["<b>Phase 3: MR is Negative (MR &lt; 0)</b><br>• Total Revenue (TR) declines / falls"]
-```
+![class12 revenue concepts tr ar mr diagram 2](/flowcharts/class-12/class12-revenue-concepts-tr-ar-mr-diagram-2.svg)
 
 #### Summary Table of Relationships:
 
@@ -156,13 +144,7 @@ $$AR = MR \left( \frac{E_d}{E_d - 1} \right)$$
 
 #### Key Insights from the Formula:
 
-```mermaid
-flowchart LR
-    E["<b>Elasticity of Demand (E_d)</b>"]
-    E -->|"E_d > 1 (Elastic)"| MRpos["<b>MR &gt; 0</b><br>(Positive)"]
-    E -->|"E_d = 1 (Unitary)"| MRzero["<b>MR = 0</b><br>(TR is Maximum)"]
-    E -->|"E_d < 1 (Inelastic)"| MRneg["<b>MR &lt; 0</b><br>(Negative)"]
-```
+![class12 revenue concepts tr ar mr diagram 3](/flowcharts/class-12/class12-revenue-concepts-tr-ar-mr-diagram-3.svg)
 
 1. **When Demand is Elastic ($E_d > 1$):**
    * $\left(1 - \frac{1}{E_d}\right)$ is positive $\implies \mathbf{MR > 0}$. Lowering price increases Total Revenue.

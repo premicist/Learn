@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="100%" height="auto" role="img" aria-label="Firm Equilibrium: MR-MC Necessary and Sufficient Conditions">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #1e293b; stroke-width: 2; stroke-linecap: round; }
+    .mr-line { stroke: #2563eb; stroke-width: 3.5; stroke-linecap: round; }
+    .mc-curve { fill: none; stroke: #dc2626; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #64748b; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #1e293b; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #0f172a; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #1e293b; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 600; fill: #475569; }
+    .tag-box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">Equilibrium of the Firm: MR-MC Approach</text>
+  <text class="text-sub" x="40" y="50">Equilibrium requires: (1) MR = MC, and (2) MC cuts MR from below (Sufficient Condition)</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="380" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="380" x2="700" y2="380"/>
+  <text class="text-label" x="15" y="80">Price / Cost</text>
+  <text class="text-label" x="620" y="405">Output (Q)</text>
+  <text class="text-label" x="65" y="395">O</text>
+
+  <!-- Horizontal Demand / MR Line (P = AR = MR) at y = 200 -->
+  <line class="mr-line" x1="80" y1="200" x2="660" y2="200"/>
+  <text class="text-label" x="25" y="205">P</text>
+  <text class="text-label" x="520" y="185" fill="#2563eb">AR = MR = P (Demand)</text>
+
+  <!-- U-Shaped MC Curve -->
+  <!-- Starts high at (120, 100), drops to (220, 200) [E1], troughs at (340, 280), rises through (480, 200) [E2] to (580, 90) -->
+  <path class="mc-curve" d="M 120 100 C 170 150, 190 190, 220 200 C 260 220, 310 280, 360 280 C 420 280, 450 230, 480 200 C 510 160, 540 120, 580 80"/>
+  <text class="text-label" x="590" y="85" fill="#dc2626">MC Curve</text>
+
+  <!-- Point E1 (MC cuts MR from above - NOT Equilibrium) -->
+  <circle class="point-dot" cx="220" cy="200" r="5" fill="#dc2626"/>
+  <line class="guide-line" x1="220" y1="200" x2="220" y2="380"/>
+  <text class="text-label" x="200" y="180" fill="#dc2626">E1 (MC cuts from above)</text>
+  <text class="text-label" x="215" y="400">Q1</text>
+  <text class="text-sub" x="150" y="235" fill="#dc2626">Loss if stop at Q1</text>
+
+  <!-- Point E2 (MC cuts MR from below - TRUE EQUILIBRIUM) -->
+  <circle class="point-dot" cx="480" cy="200" r="6" fill="#16a34a"/>
+  <line class="guide-line" x1="480" y1="70" x2="480" y2="380"/>
+  <text class="text-label" x="460" y="180" fill="#16a34a">E2 (TRUE EQUILIBRIUM)</text>
+  <text class="text-label" x="475" y="400" fill="#16a34a">Q* (Optimal Output)</text>
+
+  <!-- Middle zone where MR > MC -->
+  <text class="text-sub" x="310" y="240" fill="#16a34a"><b>MR &gt; MC (Profits Expand)</b></text>
+  <text class="text-sub" x="510" y="250" fill="#dc2626">MC &gt; MR (Losses Incurred)</text>
+
+  <!-- Explanatory Box -->
+  <g transform="translate(100, 80)">
+    <rect class="tag-box" width="240" height="75"/>
+    <text class="text-sub" x="10" y="20">• <b>Point E1:</b> 1st condition met, 2nd fails</text>
+    <text class="text-sub" x="10" y="40">• <b>Beyond E1:</b> MR &gt; MC, so output expands</text>
+    <text class="text-sub" x="10" y="60">• <b>Point E2:</b> Both conditions met (Max Profit)</text>
+  </g>
+</svg>

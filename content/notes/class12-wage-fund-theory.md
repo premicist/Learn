@@ -10,13 +10,7 @@ unitId: class12-u2-4
 
 The **Wage Fund Theory of Wages** is a prominent classical theory of wage determination developed by the British economist **John Stuart Mill (J. S. Mill)** in his book *Principles of Political Economy* (1848), building upon ideas from Adam Smith. The theory explains how average wages are determined by the ratio between a fixed capital fund and the total working population.
 
-```mermaid
-flowchart TD
-    WF["<b>Wage Fund Theory (J.S. Mill - 1848)</b>"]
-    WF --> Formula["<b>Core Formula:</b><br>Average Wage Rate (AWR) = Total Wage Fund (WF) / Number of Workers (NW)"]
-    WF --> Inverse["<b>Inverse Relationship:</b><br>If Wage Fund is FIXED:<br>More Workers ? Lower Average Wage<br>Fewer Workers ? Higher Average Wage"]
-    WF --> TradeUnion["<b>Implication on Trade Unions:</b><br>One group of workers can gain higher wages ONLY at the expense of others"]
-```
+![class12 wage fund theory diagram 1](/flowcharts/class-12/class12-wage-fund-theory-diagram-1.svg)
 
 ---
 
@@ -48,30 +42,15 @@ According to J.S. Mill, the total wage fund is fixed in advance at the beginning
 
 Suppose the predetermined Wage Fund is fixed at **Rs. 20,000**:
 
-| Total Wage Fund ($WF$) [Rs.] | Number of Workers ($NW$) | Average Wage Rate ($W = rac{WF}{NW}$) [Rs.] | Impact on Living Standard |
+| Total Wage Fund ($WF$) [Rs.] | Number of Workers ($NW$) | Average Wage Rate ($W = \frac{WF}{NW}$) [Rs.] | Impact on Living Standard |
 | :---: | :---: | :---: | :---: |
-| **Rs. 20,000** | $100$ | $rac{20,000}{100} = \mathbf{	ext{Rs. 200}}$ | High living standard |
-| **Rs. 20,000** | $200$ | $rac{20,000}{200} = \mathbf{	ext{Rs. 100}}$ | Moderate living standard |
-| **Rs. 20,000** | $400$ | $rac{20,000}{400} = \mathbf{	ext{Rs. 50}}$ | Low living standard |
+| **Rs. 20,000** | $100$ | $\frac{20,000}{100} = \mathbf{\text{Rs. 200}}$ | High living standard |
+| **Rs. 20,000** | $200$ | $\frac{20,000}{200} = \mathbf{\text{Rs. 100}}$ | Moderate living standard |
+| **Rs. 20,000** | $400$ | $\frac{20,000}{400} = \mathbf{\text{Rs. 50}}$ | Low living standard |
 
-```
-Average Wage (Rs.)
-   |
-200 +  * (100, 200)
-    |   100 +    \   * (200, 100)
-    |      50 +      \--------* (400, 50)  Downward-Sloping Wage Curve
-    |
-  0 +------+--------+--------+----------> Number of Workers (NW)
-    0     100      200      400
-```
+![Inverse Relationship Between Working Population and Wage Rate (Wage Fund Curve)](/images/uploads/wage-fund-theory-curve.svg)
 
-```mermaid
-flowchart LR
-    WFFixed["<b>Fixed Wage Fund = Rs. 20,000</b>"]
-    WFFixed -->|100 Workers| W200["Wage = Rs. 200/worker"]
-    WFFixed -->|200 Workers| W100["Wage = Rs. 100/worker"]
-    WFFixed -->|400 Workers| W50["Wage = Rs. 50/worker"]
-```
+![class12 wage fund theory diagram 2](/flowcharts/class-12/class12-wage-fund-theory-diagram-2.svg)
 
 #### Ways to Increase Wages (According to Mill):
 Under this theory, the average wage rate can be increased in only two ways:
@@ -97,15 +76,7 @@ Under this theory, the average wage rate can be increased in only two ways:
 ### Q4. What are the major criticisms of the Wage Fund Theory? Why did J. S. Mill himself recant it?
 **Answer:**
 
-```mermaid
-flowchart TD
-    Crit["<b>Major Criticisms of Wage Fund Theory</b>"]
-    Crit --> C1["<b>1. Wage Fund is NOT Fixed:</b> Wages are paid from current output/revenue, not a static pot"]
-    Crit --> C2["<b>2. Ignores Labour Productivity & Skill:</b> Skilled workers earn more than unskilled workers"]
-    Crit --> C3["<b>3. Ignores Labour Demand:</b> Focuses solely on dividing a fund among labour supply"]
-    Crit --> C4["<b>4. Anti-Trade Union Bias:</b> Disproved by collective bargaining success"]
-    Crit --> C5["<b>5. Recantation by Mill:</b> Mill himself admitted in 1869 that the fund is flexible"]
-```
+![class12 wage fund theory diagram 3](/flowcharts/class-12/class12-wage-fund-theory-diagram-3.svg)
 
 1. **The Wage Fund is Not Fixed:**
    * In modern business, wages are paid out of **current production and sales revenues**, not from an unchangeable, rigid fund set aside in advance. When business expands, the wage bill expands.

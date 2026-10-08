@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="100%" height="auto" role="img" aria-label="Classical Theory of Interest: Investment Demand and Savings Supply Equilibrium">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #1e293b; stroke-width: 2; stroke-linecap: round; }
+    .i-curve { fill: none; stroke: #2563eb; stroke-width: 3.5; stroke-linecap: round; }
+    .s-curve { fill: none; stroke: #16a34a; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #64748b; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #1e293b; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #0f172a; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #1e293b; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 600; fill: #475569; }
+    .tag-box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">Determination of Interest Rate: Classical Theory (Investment = Savings)</text>
+  <text class="text-sub" x="40" y="50">Equilibrium interest rate r* is established at the intersection of Investment Demand (I) and Savings Supply (S)</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="380" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="380" x2="700" y2="380"/>
+  <text class="text-label" x="15" y="80">Interest Rate (r %)</text>
+  <text class="text-label" x="580" y="405">Capital (Savings &amp; Investment)</text>
+  <text class="text-label" x="65" y="395">O</text>
+
+  <!-- Investment Demand Curve (Downward Sloping, Blue) -->
+  <line class="i-curve" x1="120" y1="110" x2="620" y2="340"/>
+  <text class="text-label" x="630" y="345" fill="#2563eb">I (Investment Demand)</text>
+
+  <!-- Savings Supply Curve (Upward Sloping, Green) -->
+  <line class="s-curve" x1="120" y1="340" x2="620" y2="110"/>
+  <text class="text-label" x="630" y="115" fill="#16a34a">S (Savings Supply)</text>
+
+  <!-- Equilibrium Point E at (370, 225) -->
+  <circle class="point-dot" cx="370" cy="225" r="6" fill="#1e293b"/>
+  <line class="guide-line" x1="80" y1="225" x2="370" y2="225"/>
+  <line class="guide-line" x1="370" y1="70" x2="370" y2="380"/>
+  <text class="text-label" x="380" y="218">E (I = S)</text>
+  <text class="text-label" x="42" y="230">r* (8%)</text>
+  <text class="text-label" x="350" y="400">K* (3,000 Cr)</text>
+
+  <!-- Higher Rate r1 = 10% (y = 150) -->
+  <line class="guide-line" x1="80" y1="150" x2="530" y2="150"/>
+  <circle class="point-dot" cx="210" cy="150" r="4" fill="#2563eb"/>
+  <circle class="point-dot" cx="530" cy="150" r="4" fill="#16a34a"/>
+  <text class="text-label" x="35" y="154">r1 (10%)</text>
+  <text class="text-sub" x="290" y="142" fill="#16a34a">Excess Savings (S &gt; I) → Rate Falls ↓</text>
+
+  <!-- Lower Rate r2 = 6% (y = 300) -->
+  <line class="guide-line" x1="80" y1="300" x2="530" y2="300"/>
+  <circle class="point-dot" cx="530" cy="300" r="4" fill="#2563eb"/>
+  <circle class="point-dot" cx="210" cy="300" r="4" fill="#16a34a"/>
+  <text class="text-label" x="42" y="304">r2 (6%)</text>
+  <text class="text-sub" x="270" y="292" fill="#2563eb">Excess Demand (I &gt; S) → Rate Rises ↑</text>
+
+  <!-- Key Explanations Box -->
+  <g transform="translate(100, 75)">
+    <rect class="tag-box" width="220" height="55"/>
+    <text class="text-sub" x="10" y="18">• <b>Investment (I):</b> Marginal productivity</text>
+    <text class="text-sub" x="10" y="36">• <b>Savings (S):</b> Waiting / Time preference</text>
+  </g>
+</svg>

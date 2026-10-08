@@ -16,12 +16,7 @@ toc: []
 
 The **Marginal Rate of Substitution of X for Y ($MRS_{xy}$)** measures the quantity of **Good Y** that a consumer is willing to give up or sacrifice in order to obtain **one additional unit of Good X**, while keeping their total satisfaction completely unchanged (remaining on the exact same indifference curve).
 
-```mermaid
-flowchart LR
-    A["Gain of 1 Extra Unit of Good X (+ΔX)"] --> B["<b>Trade-off Rate (MRSxy)</b>"]
-    C["Sacrifice of Units of Good Y (-ΔY)"] --> B
-    B --> D["<b>Total Utility Stays Constant (ΔTU = 0)</b>"]
-```
+![marginal rate of substitution mrs diagram 1](/flowcharts/introduction-to-economics/marginal-rate-of-substitution-mrs-diagram-1.svg)
 
 ### Mathematical Formula:
 

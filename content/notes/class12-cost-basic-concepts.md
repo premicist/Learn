@@ -10,14 +10,7 @@ unitId: class12-u2-2
 
 To produce goods and services, a business must employ factors of production (land, labour, capital, entrepreneurship) and raw materials. The total expenditure incurred on these productive resources is known as the **Cost of Production**. Understanding different cost concepts is vital for pricing decisions, measuring profitability, and determining the optimal output level of a firm.
 
-```mermaid
-flowchart TD
-    Cost["<b>Cost Concepts in Economics</b>"]
-    Cost --> C1["<b>Explicit vs Implicit Cost</b><br>Out-of-pocket payments vs Self-owned inputs"]
-    Cost --> C2["<b>Economic vs Accounting Cost</b><br>Explicit + Implicit vs Explicit only"]
-    Cost --> C3["<b>Fixed vs Variable Cost</b><br>Short-run overheads vs Output-dependent costs"]
-    Cost --> C4["<b>Opportunity Cost</b><br>Value of the next best alternative foregone"]
-```
+![class12 cost basic concepts diagram 1](/flowcharts/class-12/class12-cost-basic-concepts-diagram-1.svg)
 
 ---
 
@@ -35,12 +28,7 @@ It includes payments for raw materials, wages for workers, rent for land/factory
 ### Q2. Distinguish between Money Cost, Real Cost, and Opportunity Cost.
 **Answer:**
 
-```mermaid
-flowchart LR
-    A["<b>Nature of Cost</b>"] --> B["<b>Money Cost</b><br>Actual cash expenses"]
-    A --> C["<b>Real Cost</b><br>Mental &amp; physical toil/sacrifices"]
-    A --> D["<b>Opportunity Cost</b><br>Sacrificed alternative earnings"]
-```
+![class12 cost basic concepts diagram 2](/flowcharts/class-12/class12-cost-basic-concepts-diagram-2.svg)
 
 1. **Money Cost (Nominal Cost):**
    * The actual total cash expenditure incurred by a firm in producing a commodity, expressed in monetary units (e.g., spending Rs. 50,000 on raw materials and Rs. 30,000 on wages).
@@ -58,12 +46,7 @@ flowchart LR
 ### Q3. What is the difference between Explicit Cost and Implicit Cost?
 **Answer:**
 
-```mermaid
-flowchart TD
-    EC["<b>Total Economic Cost</b>"]
-    EC --> Exp["<b>Explicit Costs (Paid Out-of-Pocket)</b><br>• Wages to hired labour<br>• Rent to landlord<br>• Electricity &amp; Raw materials<br>• Bank interest"]
-    EC --> Imp["<b>Implicit Costs (Imputed Self-Owned)</b><br>• Salary of self-employed owner<br>• Rent of self-owned building<br>• Interest on owner's invested savings<br>• Normal profit"]
-```
+![class12 cost basic concepts diagram 3](/flowcharts/class-12/class12-cost-basic-concepts-diagram-3.svg)
 
 #### Detailed Comparison Table:
 
@@ -114,11 +97,7 @@ Suppose a business owner earns **Total Revenue of Rs. 10,00,000**.
 **Answer:**
 In the short run, production inputs are divided into **fixed inputs** (which cannot be changed quickly) and **variable inputs** (which can be increased or decreased immediately with output).
 
-```mermaid
-flowchart LR
-    A["<b>Short-Run Costs</b>"] --> B["<b>Fixed Costs (TFC)</b><br>Constant at all output levels<br>Exists even at Zero Output"]
-    A --> C["<b>Variable Costs (TVC)</b><br>Changes with Output level<br>Zero when Output is Zero"]
-```
+![class12 cost basic concepts diagram 4](/flowcharts/class-12/class12-cost-basic-concepts-diagram-4.svg)
 
 #### Detailed Comparison Table:
 

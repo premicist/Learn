@@ -18,11 +18,7 @@ In the short run, because some factor inputs are fixed while others are variable
 
 $$\mathbf{TC = TFC + TVC}$$
 
-```mermaid
-flowchart TD
-    TC["<b>Total Cost (TC)</b>"] --> TFC["<b>Total Fixed Cost (TFC)</b><br>Factory rent, machine depreciation, insurance<br>Constant at all output levels (TFC &gt; 0 at Q=0)"]
-    TC --> TVC["<b>Total Variable Cost (TVC)</b><br>Raw materials, hourly labor, electricity<br>Increases with output (TVC = 0 at Q=0)"]
-```
+![short run and long run cost curves diagram 1](/flowcharts/introduction-to-economics/short-run-and-long-run-cost-curves-diagram-1.svg)
 
 ---
 
@@ -57,11 +53,7 @@ $$MC = \dfrac{\Delta TC}{\Delta Q} = \dfrac{\Delta TVC}{\Delta Q} = \dfrac{d(TC)
 
 The U-shape of the SRAC curve is explained by the interaction between $AFC$ and $AVC$, governed by the **Law of Diminishing Marginal Returns**:
 
-```mermaid
-flowchart LR
-    P1["<b>Phase 1: Falling AC</b><br>AFC falls steeply + AVC falls<br>Increasing Marginal Returns"] --> P2["<b>Phase 2: Minimum AC</b><br>Optimal plant output (MES)<br>MC = AC"]
-    P2 --> P3["<b>Phase 3: Rising AC</b><br>Law of Diminishing Returns sets in<br>Rising AVC overtakes falling AFC"]
-```
+![short run and long run cost curves diagram 2](/flowcharts/introduction-to-economics/short-run-and-long-run-cost-curves-diagram-2.svg)
 
 1. **Initial Declining Phase (Left side of 'U'):**  
    At low output levels, $AFC$ drops steeply as fixed plant capacity is utilized. $AVC$ also falls due to labor specialization. Consequently, overall $AC$ falls rapidly.

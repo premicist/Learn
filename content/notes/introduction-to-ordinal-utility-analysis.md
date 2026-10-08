@@ -16,11 +16,7 @@ toc: []
 
 In economic literature, the analysis of consumer behavior is broadly divided into two major schools of thought:
 
-```mermaid
-flowchart TD
-    A["<b>1. Cardinal Utility Approach</b><br>Alfred Marshall (1890)<br>Utility is measurable in quantitative 'Utils'"] --> C["<b>Critique:</b> Satisfaction is psychological and cannot be measured in exact numbers"]
-    B["<b>2. Ordinal Utility Approach</b><br>J.R. Hicks &amp; R.G.D. Allen (1934)<br>Utility is qualitative and ranked by preference"] --> D["<b>Modern Standard:</b> Uses Indifference Curves and Budget Constraints"]
-```
+![introduction to ordinal utility analysis diagram 1](/flowcharts/introduction-to-economics/introduction-to-ordinal-utility-analysis-diagram-1.svg)
 
 ### Key Pioneers & Timeline:
 1. **Francis Y. Edgeworth (1881):** First introduced the concept of indifference curves in *Mathematical Psychics* to illustrate bilateral exchange.

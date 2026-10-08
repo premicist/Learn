@@ -22,6 +22,9 @@ const Videos = lazy(() => import('./pages/Videos'))
 const VideoPage = lazy(() => import('./pages/VideoPage'))
 const About = lazy(() => import('./pages/About'))
 const NotFound = lazy(() => import('./pages/NotFound'))
+// Whiteboard loads lazily so the 2–4 MB Excalidraw bundle never blocks
+// other pages. Lazy-load the inner canvas too so it renders in its own chunk.
+const Whiteboard = lazy(() => import('./pages/Whiteboard'))
 
 function App() {
   return (
@@ -47,6 +50,7 @@ function App() {
             <Route path="/videos" element={<Videos />} />
             <Route path="/videos/:videoId" element={<VideoPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/whiteboard" element={<Whiteboard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

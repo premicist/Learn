@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="100%" height="auto" role="img" aria-label="Total Revenue, Average Revenue, and Marginal Revenue Curves under Monopoly">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.2; }
+    .axis { stroke: #1e293b; stroke-width: 2; stroke-linecap: round; }
+    .tr-curve { fill: none; stroke: #2563eb; stroke-width: 3.5; stroke-linecap: round; }
+    .ar-curve { fill: none; stroke: #16a34a; stroke-width: 3.5; stroke-linecap: round; }
+    .mr-curve { fill: none; stroke: #dc2626; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #64748b; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #1e293b; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #0f172a; }
+    .text-panel-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 13.5px; font-weight: 700; fill: #1e293b; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #1e293b; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #475569; }
+    .tag-box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; rx: 4; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="35" y="32">Revenue Curves under Monopoly: TR, AR, and MR</text>
+
+  <!-- Panel A: Total Revenue (TR) Curve -->
+  <g transform="translate(30, 50)">
+    <rect class="card" width="365" height="400" rx="8"/>
+    <text class="text-panel-title" x="182" y="28">Panel A: Total Revenue (TR)</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="50" y1="330" x2="50" y2="55"/>
+    <line class="axis" x1="50" y1="330" x2="340" y2="330"/>
+    <text class="text-label" x="15" y="60">TR (Rs.)</text>
+    <text class="text-label" x="275" y="352">Output (Q)</text>
+    <text class="text-label" x="35" y="345">O</text>
+
+    <!-- Inverted U-Shaped TR Curve -->
+    <path class="tr-curve" d="M 50 330 Q 200 90 325 310"/>
+    <text class="text-label" x="315" y="295" fill="#2563eb">TR</text>
+
+    <!-- Peak TR Point -->
+    <circle class="point-dot" cx="200" cy="145" r="5" fill="#2563eb"/>
+    <line class="guide-line" x1="200" y1="145" x2="200" y2="330"/>
+    <line class="guide-line" x1="50" y1="145" x2="200" y2="145"/>
+    <text class="text-label" x="12" y="150">TR_max</text>
+    <text class="text-label" x="195" y="348">Q*</text>
+    <text class="text-sub" x="135" y="130">Peak (Slope = MR = 0)</text>
+
+    <!-- TR Stages Annotations -->
+    <g transform="translate(60, 240)">
+      <rect class="tag-box" width="105" height="42"/>
+      <text class="text-sub" x="6" y="16" fill="#2563eb">MR &gt; 0</text>
+      <text class="text-sub" x="6" y="32">TR Increases</text>
+    </g>
+    <g transform="translate(235, 240)">
+      <rect class="tag-box" width="95" height="42"/>
+      <text class="text-sub" x="6" y="16" fill="#dc2626">MR &lt; 0</text>
+      <text class="text-sub" x="6" y="32">TR Declines</text>
+    </g>
+  </g>
+
+  <!-- Panel B: Average Revenue (AR) and Marginal Revenue (MR) Curves -->
+  <g transform="translate(425, 50)">
+    <rect class="card" width="365" height="400" rx="8"/>
+    <text class="text-panel-title" x="182" y="28">Panel B: AR and MR Curves</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="50" y1="280" x2="50" y2="55"/>
+    <line class="axis" x1="50" y1="280" x2="340" y2="280"/>
+    <line class="axis" x1="50" y1="280" x2="50" y2="360" stroke-dasharray="2 2"/>
+    <text class="text-label" x="8" y="60">AR, MR (Rs.)</text>
+    <text class="text-label" x="275" y="272">Output (Q)</text>
+    <text class="text-label" x="35" y="295">O</text>
+
+    <!-- Downward Sloping AR Curve (Demand Curve) -->
+    <line class="ar-curve" x1="50" y1="85" x2="320" y2="235"/>
+    <text class="text-label" x="325" y="238" fill="#16a34a">AR = P (Demand)</text>
+
+    <!-- Downward Sloping MR Curve (Twice as steep) -->
+    <line class="mr-curve" x1="50" y1="85" x2="275" y2="355"/>
+    <text class="text-label" x="282" y="360" fill="#dc2626">MR</text>
+
+    <!-- MR = 0 Intersection at Q* (x = 200, matching Panel A) -->
+    <circle class="point-dot" cx="200" cy="280" r="5" fill="#dc2626"/>
+    <line class="guide-line" x1="200" y1="70" x2="200" y2="280"/>
+    <text class="text-label" x="195" y="298">Q*</text>
+    <text class="text-sub" x="145" y="268">MR = 0 (TR Maximum)</text>
+
+    <!-- Negative MR Area -->
+    <text class="text-sub" x="210" y="325" fill="#dc2626">MR &lt; 0 (Negative)</text>
+
+    <!-- Key Insights Box -->
+    <g transform="translate(60, 315)">
+      <rect class="tag-box" width="130" height="42"/>
+      <text class="text-sub" x="6" y="16">1. AR &gt; MR at all Q &gt; 0</text>
+      <text class="text-sub" x="6" y="32">2. MR falls 2x faster than AR</text>
+    </g>
+  </g>
+</svg>

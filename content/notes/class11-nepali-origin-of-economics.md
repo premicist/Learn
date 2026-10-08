@@ -16,12 +16,7 @@ toc: []
 
 अंग्रेजी शब्द **'Economics'** प्राचीन ग्रीक भाषाका दुई शब्दहरू मिलेर बनेको हो:
 
-```mermaid
-flowchart LR
-    A["<b>Oikos (ओइकोस)</b> <br> अर्थ: घर वा परिवार (Household)"] --> C["<b>Oikonomia (ओइकोनोमिया)</b> <br> अर्थ: <b>घरपरिवारको व्यवस्थापन</b> (Household Management)"]
-    B["<b>Nemein (नेमिन)</b> <br> अर्थ: व्यवस्थापन वा नियम (To Manage / Rules)"] --> C
-    C --> D["<b>Economics (अर्थशास्त्र)</b> <br> आधुनिक सामाजिक विज्ञान"]
-```
+![class11 nepali origin of economics diagram 1](/flowcharts/class-11-nepali/class11-nepali-origin-of-economics-diagram-1.svg)
 
 * **'Oikos' (ओइकोस):** जसको अर्थ **घर वा परिवार (Household)** हुन्छ।
 * **'Nemein' (नेमिन):** जसको अर्थ **व्यवस्थापन गर्नु (To Manage)** वा नियम हुन्छ।
@@ -45,14 +40,7 @@ flowchart LR
 
 मानव समाजको आधारभूत वास्तविकता के हो भने **हाम्रा आवश्यकताहरू असीमित छन् तर ती पूरा गर्ने स्रोतसाधनहरू सीमित छन्**। यसै बेमेललाई व्यवस्थापन गर्न अर्थशास्त्रको अध्ययन गरिन्छ:
 
-```mermaid
-flowchart TD
-    A["<b>असीमित मानव चाहनाहरू (Unlimited Wants)</b>"] --> C["<b>दुर्लभता (Scarcity)</b> <br> स्रोतसाधनको अभाव"]
-    B["<b>सीमित स्रोतसाधनहरू (Limited Resources)</b>"] --> C
-    C --> D["<b>छनोटको समस्या (Problem of Choice)</b>"]
-    D --> E["<b>अवसर लागत (Opportunity Cost)</b> <br> उत्तम विकल्पको त्याग"]
-    E --> F["<b>कुशल बाँडफाँट र अधिकतम सन्तुष्टि</b>"]
-```
+![class11 nepali origin of economics diagram 2](/flowcharts/class-11-nepali/class11-nepali-origin-of-economics-diagram-2.svg)
 
 1. **दुर्लभता र छनोटको व्यवस्थापन (Managing Scarcity & Choice):** सीमित साधनबाट कुन-कुन आवश्यकता पहिला पूरा गर्ने भन्ने विवेकशील निर्णय लिन।
 2. **अवसर लागतको सही मूल्यांकन (Understanding Opportunity Cost):** कुनै एउटा काम गर्दा वा वस्तु खरिद गर्दा गुम्ने दोस्रो उत्तम विकल्पको मूल्य बुझ्न।
@@ -66,12 +54,7 @@ flowchart TD
 
 स्रोतसाधनको दुर्लभता र बहुउपयोगिताका कारण प्रत्येक देशको अर्थतन्त्रले तीनवटा आधारभूत प्रश्नहरूको सामना गर्नुपर्छ:
 
-```mermaid
-flowchart LR
-    P["<b>आधारभूत आर्थिक समस्याहरू</b>"] --> P1["<b>१. के उत्पादन गर्ने? (What to produce?)</b> <br> उपभोग्य कि पुँजीगत वस्तु?"]
-    P --> P2["<b>२. कसरी उत्पादन गर्ने? (How to produce?)</b> <br> श्रमप्रधान कि पुँजीप्रधान प्रविधि?"]
-    P --> P3["<b>३. कसका लागि उत्पादन गर्ने? (For whom to produce?)</b> <br> राष्ट्रिय आयको वितरण कसरी गर्ने?"]
-```
+![class11 nepali origin of economics diagram 3](/flowcharts/class-11-nepali/class11-nepali-origin-of-economics-diagram-3.svg)
 
 1. **के उत्पादन गर्ने र कति परिमाणमा गर्ने? (What to produce and in what quantities?):**  
    सीमित स्रोतबाट खाद्यान्न र कपडा (उपभोग्य वस्तु) उत्पादन गर्ने कि मेसिन र कारखाना (पुँजीगत वस्तु)? विद्यालय र अस्पताल बनाउने कि सैन्य हतियार?

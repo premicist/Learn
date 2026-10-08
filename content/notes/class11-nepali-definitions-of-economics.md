@@ -16,12 +16,7 @@ toc: []
 
 अर्थशास्त्रको परिभाषा समय, आर्थिक परिवेश र विचारधारा अनुसार परिमार्जित हुँदै आएको छ। अर्थशास्त्रका परिभाषाहरूलाई मुख्य तीन ऐतिहासिक चरणमा विभाजन गरी अध्ययन गरिन्छ:
 
-```mermaid
-graph TD
-    A["<b>अर्थशास्त्रका प्रमुख परिभाषाहरू</b>"] --> B["<b>१. सम्पत्तिको परिभाषा (Wealth Definition)</b> <br> एडम स्मिथ (Adam Smith) - १७७६"]
-    A --> C["<b>२. भौतिक कल्याणको परिभाषा (Welfare Definition)</b> <br> अल्फ्रेड मार्शल (Alfred Marshall) - १८९०"]
-    A --> D["<b>३. दुर्लभता र छनोटको परिभाषा (Scarcity Definition)</b> <br> लियोनेल रोबिन्स (Lionel Robbins) - १९३२"]
-```
+![class11 nepali definitions of economics diagram 1](/flowcharts/class-11-nepali/class11-nepali-definitions-of-economics-diagram-1.svg)
 
 ---
 
@@ -32,13 +27,7 @@ graph TD
 > **परिभाषा:** *"अर्थशास्त्र राष्ट्रहरूको सम्पत्तिको प्रकृति र कारणहरूको खोजी गर्ने विज्ञान हो।"*  
 > *(Economics is an inquiry into the nature and causes of the wealth of nations.)*
 
-```mermaid
-flowchart LR
-    A["सम्पत्तिको उत्पादन <br>(Production)"] --> E["<b>सम्पत्ति (Wealth)</b>"]
-    B["सम्पत्तिको उपभोग <br>(Consumption)"] --> E
-    C["सम्पत्तिको विनिमय <br>(Exchange)"] --> E
-    D["सम्पत्तिको वितरण <br>(Distribution)"] --> E
-```
+![class11 nepali definitions of economics diagram 2](/flowcharts/class-11-nepali/class11-nepali-definitions-of-economics-diagram-2.svg)
 
 ### मुख्य विशेषताहरू (Main Features):
 1. **सम्पत्तिमाथि अत्यधिक जोड (Emphasis on Wealth):** अर्थशास्त्रको मुख्य विषयवस्तु सम्पत्तिको उत्पादन, उपभोग, विनिमय र वितरण हो।
@@ -80,13 +69,7 @@ flowchart LR
 > **परिभाषा:** *"अर्थशास्त्र त्यो विज्ञान हो, जसले असीमित आवश्यकताहरू र वैकल्पिक प्रयोग हुन सक्ने दुर्लभ साधनहरू बीचको सम्बन्धका रूपमा मानव व्यवहारको अध्ययन गर्दछ।"*  
 > *(Economics is the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses.)*
 
-```mermaid
-flowchart TD
-    A["<b>१. असीमित चाहनाहरू (Unlimited Ends)</b>"] --> D["<b>मानव व्यवहार / छनोटको समस्या (Problem of Choice)</b>"]
-    B["<b>२. दुर्लभ साधनहरू (Scarce Means)</b>"] --> D
-    C["<b>३. साधनहरूको वैकल्पिक प्रयोग (Alternative Uses)</b>"] --> D
-    D --> E["<b>४. आवश्यकताहरूको तीव्रतामा भिन्नता (Gradation of Needs)</b>"]
-```
+![class11 nepali definitions of economics diagram 3](/flowcharts/class-11-nepali/class11-nepali-definitions-of-economics-diagram-3.svg)
 
 ### रोबिन्सको परिभाषाका चार आधारभूत स्तम्भहरू (Four Pillars):
 1. **असीमित साध्यहरू वा चाहनाहरू (Unlimited Ends / Wants):** मानव चाहनाहरू अनगिन्ती हुन्छन्। एउटा आवश्यकता पूरा हुनासाथ अर्को उत्पन्न हुन्छ।

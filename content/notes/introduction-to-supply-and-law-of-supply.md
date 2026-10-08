@@ -16,12 +16,7 @@ toc: []
 
 In economics, **supply** refers to the supply side of the market — all producing firms, manufacturers, service enterprises, and farmers who are willing and able to offer goods and services for sale at various price levels during a specific period of time.
 
-```mermaid
-flowchart LR
-    A["Desire to Sell &amp; Profit Motive"] --> D["<b>Economic Supply</b>"]
-    B["Production Capacity &amp; Stock"] --> D
-    C["Willingness to Offer at Specific Price"] --> D
-```
+![introduction to supply and law of supply diagram 1](/flowcharts/introduction-to-economics/introduction-to-supply-and-law-of-supply-diagram-1.svg)
 
 > **Definition:** **Supply** is the total quantity of a commodity that sellers are **willing and able to offer for sale** at different prices over a specific period of time, holding other factors constant (*ceteris paribus*).
 

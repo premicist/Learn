@@ -10,15 +10,7 @@ unitId: class12-u2-4
 
 The **Ricardian Theory of Rent** is one of the most famous classical theories of distribution, propounded by the British classical economist **David Ricardo** in his book *Principles of Political Economy and Taxation* (1817). Ricardo explained that rent is a **differential surplus** arising from natural variations in the fertility and location of land.
 
-```mermaid
-flowchart TD
-    Ricardo["<b>Ricardian Theory of Rent (1817)</b>"]
-    Ricardo --> Core["<b>Core Principle</b><br>Rent is paid for the 'original and indestructible powers of the soil'"]
-    Ricardo --> Forms["<b>Two Forms of Cultivation</b>"]
-    Forms --> Ext["<b>1. Extensive Cultivation</b><br>Bringing new grades of land (A, B, C, D) under cultivation"]
-    Forms --> Int["<b>2. Intensive Cultivation</b><br>Applying more doses of labour &amp; capital on the same land"]
-    Ricardo --> Diff["<b>Differential Surplus</b><br>Rent = Output of Intramarginal Land − Output of Marginal Land"]
-```
+![class12 ricardian theory of rent diagram 1](/flowcharts/class-12/class12-ricardian-theory-of-rent-diagram-1.svg)
 
 ---
 
@@ -67,13 +59,7 @@ Suppose four equal-sized plots of land (Grades A, B, C, and D) are cultivated us
 | **Grade C** | Low Fertile | $30$ | Rs. $2,000$ | $30 - 20 = \mathbf{10 \text{ Quintals}}$ |
 | **Grade D** | **Marginal Land** | $20$ | Rs. $2,000$ | $20 - 20 = \mathbf{0 \text{ Quintal (No-Rent)}}$ |
 
-```mermaid
-flowchart LR
-    A["<b>Grade A (60 Qtl)</b><br>Rent = 40 Qtl"]
-    B["<b>Grade B (40 Qtl)</b><br>Rent = 20 Qtl"]
-    C["<b>Grade C (30 Qtl)</b><br>Rent = 10 Qtl"]
-    D["<b>Grade D (20 Qtl)</b><br>Marginal / No-Rent Land"]
-```
+![class12 ricardian theory of rent diagram 2](/flowcharts/class-12/class12-ricardian-theory-of-rent-diagram-2.svg)
 
 #### Explanation of Extensive Cultivation:
 * **Initial Stage:** When population is small, only **Grade A** land is cultivated. Since abundant fertile land is freely available, no rent exists.
@@ -112,15 +98,7 @@ flowchart LR
 **Answer:**
 While historically influential, modern economists have criticized several of Ricardo's assumptions:
 
-```mermaid
-flowchart TD
-    Crit["<b>Major Criticisms of Ricardian Rent</b>"]
-    Crit --> C1["<b>1. No Indestructible Power:</b> Continuous cultivation depletes soil fertility"]
-    Crit --> C2["<b>2. Historical Order of Cultivation is Wrong:</b> Settlements cultivate accessible land first, not most fertile"]
-    Crit --> C3["<b>3. Marginal (No-Rent) Land Does Not Exist:</b> Even inferior land earns some rent in reality"]
-    Crit --> C4["<b>4. Narrow Scope:</b> Rent arises on all scarce factors, not just agricultural land"]
-    Crit --> C5["<b>5. Assumes Single Use:</b> Ignores alternative uses (housing, industries, commercial parks)"]
-```
+![class12 ricardian theory of rent diagram 3](/flowcharts/class-12/class12-ricardian-theory-of-rent-diagram-3.svg)
 
 1. **Soil Powers are Not "Indestructible":** Continuous farming depletes natural nutrients, whereas chemical fertilizers and irrigation artificially boost soil productivity.
 2. **Incorrect Historical Order of Cultivation:** The American economist **Henry Carey** showed that early settlers cultivated easily accessible light soil on hill slopes first, rather than dense, marshy fertile river valleys.

@@ -16,11 +16,7 @@ toc: []
 
 In economics, statements, models, and arguments fall into two major categories depending on whether they describe **actual facts** or express **opinions and ethical values**:
 
-```mermaid
-flowchart TD
-    A["<b>Economic Statements &amp; Analysis</b>"] --> B["<b>Positive Economics</b><br>'What is' · Objective facts"]
-    A --> C["<b>Normative Economics</b><br>'What ought to be' · Values &amp; goals"]
-```
+![positive and normative economics diagram 1](/flowcharts/introduction-to-economics/positive-and-normative-economics-diagram-1.svg)
 
 ---
 
@@ -41,13 +37,7 @@ flowchart TD
 Consider the statement:  
 > *"A 10% increase in the tax on cigarettes leads to an 8% decrease in cigarette consumption."*
 
-```mermaid
-flowchart LR
-    S["<b>Statement:</b> '10% tax hike reduces smoking by 8%'"] --> R1["1. Objective &amp; Fact-Based ('What is')"]
-    S --> R2["2. Empirically Testable with Sales Data"]
-    S --> R3["3. Direct Cause-and-Effect Relationship"]
-    S --> R4["4. Value-Neutral (No Moral Opinion)"]
-```
+![positive and normative economics diagram 2](/flowcharts/introduction-to-economics/positive-and-normative-economics-diagram-2.svg)
 
 ### Why this is a Positive Economic Statement:
 1. **Factual Cause-and-Effect Relationship:** It identifies a measurable link between an economic cause (tax increase) and an effect (consumption drop).
@@ -74,13 +64,7 @@ flowchart LR
 Consider the statement:  
 > *"The government ought to provide free healthcare and subsidized medicines to all low-income citizens."*
 
-```mermaid
-flowchart LR
-    N["<b>Statement:</b> 'Government ought to provide free healthcare'"] --> M1["1. Value Judgment &amp; Ethical Stance"]
-    N --> M2["2. Prescriptive Language ('Ought to / Should')"]
-    N --> M3["3. Untestable with Data Alone"]
-    N --> M4["4. Sets a Societal Policy Goal"]
-```
+![positive and normative economics diagram 3](/flowcharts/introduction-to-economics/positive-and-normative-economics-diagram-3.svg)
 
 ### Why this is a Normative Economic Statement:
 1. **Expresses a Value Judgment:** It reflects a moral belief about social justice, fairness, and human rights rather than a cold statistical fact.
@@ -122,15 +106,7 @@ The distinction between Positive and Normative Economics can be summarized acros
 
 Although positive and normative economics are distinct, effective economic decision-making requires **both**:
 
-```mermaid
-flowchart LR
-    S1["<b>Step 1: Normative Goal (Societal Value)</b><br>Society establishes a desired goal:<br><i>'We should reduce child poverty and school dropouts.'</i>"]
-    S2["<b>Step 2: Positive Analysis (Factual Science)</b><br>Economists test data &amp; cause-effect:<br><i>'Providing subsidized school meals increases attendance by 18%.'</i>"]
-    S3["<b>Step 3: Public Policy Execution (Action)</b><br>Government implements targeted meal subsidies to achieve the normative goal."]
-
-    S1 -->|Guides Desired Objectives| S2
-    S2 -->|Provides Evidence &amp; Policy Tools| S3
-```
+![positive and normative economics diagram 4](/flowcharts/introduction-to-economics/positive-and-normative-economics-diagram-4.svg)
 
 1. **Positive Economics provides the tools:** It informs policymakers of the real-world trade-offs, costs, and consequences of any action.
 2. **Normative Economics sets the goals:** It helps society decide which economic objectives (such as reducing unemployment, controlling inflation, or protecting the environment) are most desirable.

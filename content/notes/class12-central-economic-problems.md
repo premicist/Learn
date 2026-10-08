@@ -10,16 +10,7 @@ unitId: class12-u1-1
 
 Every society faces the reality that human desires are infinite, while the physical and human resources available to fulfill those desires are limited. This lesson explains why scarcity forces choices and how economies address the central problems of resource allocation.
 
-```mermaid
-flowchart TD
-    A["<b>Unlimited Human Wants</b><br>Desires for food, housing, technology, health"] --- C["<b>Scarcity</b><br>Imbalance between wants and means"]
-    B["<b>Limited Productive Resources</b><br>Finite Land, Labour, Capital, Enterprise"] --- C
-    C --> D["<b>Need for Choice</b><br>Selecting priorities"]
-    D --> E["<b>Central Economic Problems</b>"]
-    E --> E1["<b>1. What to Produce?</b><br>Types & Quantities of Goods"]
-    E --> E2["<b>2. How to Produce?</b><br>Labour vs Capital Intensive"]
-    E --> E3["<b>3. For Whom to Produce?</b><br>Distribution of National Income"]
-```
+![class12 central economic problems diagram 1](/flowcharts/class-12/class12-central-economic-problems-diagram-1.svg)
 
 ---
 
@@ -47,10 +38,7 @@ If resources were abundant and available in unlimited amounts like air to breath
 3. **Alternative Uses of Resources:** Resources can be allocated to different competing ends (e.g., a plot of fertile land can be used to grow wheat, build a hospital, construct a highway, or set up a factory).
 4. **Forces Decision-Making (Choice):** Because we cannot have everything, society must choose which wants to satisfy first and which to postpone. Every choice involves giving up an alternative.
 
-```mermaid
-flowchart LR
-    S["<b>Scarcity</b>"] --> C["<b>Choice</b>"] --> O["<b>Opportunity Cost</b><br>(Sacrifice of Next Best Alternative)"]
-```
+![class12 central economic problems diagram 2](/flowcharts/class-12/class12-central-economic-problems-diagram-2.svg)
 
 ---
 
@@ -71,13 +59,7 @@ flowchart LR
 
 Because of resource scarcity and alternative uses, every economic system—whether capitalist, socialist, or mixed—must continuously solve three basic allocation problems:
 
-```mermaid
-flowchart TD
-    CP["<b>Central Allocation Problems</b>"]
-    CP --> W["<b>1. What to Produce?</b><br>• Consumer Goods vs Capital Goods<br>• Necessities vs Luxuries<br>• Civilian Goods vs Defense Goods"]
-    CP --> H["<b>2. How to Produce?</b><br>• Labour-Intensive Technique<br>• Capital-Intensive Technique<br>• Minimizing Cost of Production"]
-    CP --> F["<b>3. For Whom to Produce?</b><br>• Functional Distribution (Factor Rewards)<br>• Personal Distribution (Household Income)<br>• Equity & Social Welfare"]
-```
+![class12 central economic problems diagram 3](/flowcharts/class-12/class12-central-economic-problems-diagram-3.svg)
 
 ---
 
@@ -114,11 +96,7 @@ Goods can be produced using two main technological methods:
    * Uses relatively more advanced machinery, automation, and capital goods, and fewer human workers.
    * *Advantage:* Produces goods on a mass scale, achieves high speed, and lowers per-unit production cost; ideal for countries with high capital and high wage rates.
 
-```mermaid
-flowchart LR
-    A["<b>Production Technique Decision</b>"] --> B["<b>Labour-Intensive (LIT)</b><br>More Workers + Less Machinery<br>High Employment"]
-    A --> C["<b>Capital-Intensive (CIT)</b><br>More Machines + Fewer Workers<br>High Output & Efficiency"]
-```
+![class12 central economic problems diagram 4](/flowcharts/class-12/class12-central-economic-problems-diagram-4.svg)
 
 #### Criteria for Decision:
 An economy chooses the technique that **minimizes the cost of production** while utilizing its abundant resources most effectively.

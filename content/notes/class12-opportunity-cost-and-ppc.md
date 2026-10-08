@@ -10,13 +10,7 @@ unitId: class12-u1-1
 
 Because resources are scarce, producing more of one good inevitably requires sacrificing some quantity of another good. The **Production Possibility Curve (PPC)** is the primary analytical tool used by economists to illustrate scarcity, choice, opportunity cost, and economic growth.
 
-```mermaid
-flowchart LR
-    A["<b>Limited Resources</b>"] --> B["<b>Production Choices</b><br>Good X vs Good Y"]
-    B --> C["<b>Trade-off &amp; Sacrifice</b><br>Opportunity Cost"]
-    C --> D["<b>PPC Model</b><br>Concave Curve showing Maximum Output"]
-    D --> E["<b>Shifts in PPC</b><br>Economic Growth / Contraction"]
-```
+![class12 opportunity cost and ppc diagram 1](/flowcharts/class-12/class12-opportunity-cost-and-ppc-diagram-1.svg)
 
 ---
 
@@ -47,12 +41,7 @@ Whenever resources (money, time, land, labour) are committed to one use, the opp
 
 ### Q3. Difference between Opportunity Cost and Sunk Cost
 
-```mermaid
-flowchart TD
-    D["<b>Types of Costs in Decision Making</b>"]
-    D --> OC["<b>Opportunity Cost</b><br>• Future alternative sacrificed<br>• <b>Relevant</b> for current choices"]
-    D --> SC["<b>Sunk Cost</b><br>• Past unrecoverable expense<br>• <b>Irrelevant</b> for future choices"]
-```
+![class12 opportunity cost and ppc diagram 2](/flowcharts/class-12/class12-opportunity-cost-and-ppc-diagram-2.svg)
 
 | Comparison Basis | Opportunity Cost | Sunk Cost |
 | :--- | :--- | :--- |
@@ -118,36 +107,41 @@ Suppose an economy uses all its fixed resources to produce varying combinations 
 * The PPC is **downward sloping from left to right** because resources are scarce; producing more of Good X requires reducing the output of Good Y.
 * The PPC is **concave to the origin** because of the **Law of Increasing Marginal Opportunity Cost**.
 * Resources are specialized and **not equally efficient in all employments**. When resources are initially transferred from Mobile manufacturing to Laptop manufacturing, the most adaptable workers and tools are transferred first (low sacrifice). As more Laptops are demanded, less suitable workers and machinery must be transferred, resulting in progressively higher sacrifices of Mobile Phones for each extra unit of Laptops.
+### Q7. What is Marginal Rate of Transformation (MRT) / Marginal Opportunity Cost (MOC)? Why is the PPC Concave to the Origin?
+**Answer:**
+**Definition of MRT:**
+> **Marginal Rate of Transformation ($MRT$)** measures the amount of Good Y that must be sacrificed to produce one additional unit of Good X:
+> $$MRT_{xy} = \frac{\Delta Y}{\Delta X} = \frac{\text{Loss of Good Y}}{\text{Gain of Good X}}$$
+
+**Why the PPC is Concave (Bowed Outward) to the Origin:**
+* The PPC is **downward sloping from left to right** because resources are scarce; producing more of Good X requires reducing the output of Good Y.
+* The PPC is **concave to the origin** because of the **Law of Increasing Marginal Opportunity Cost**.
+* Resources are specialized and **not equally efficient in all employments**. When resources are initially transferred from Mobile manufacturing to Laptop manufacturing, the most adaptable workers and tools are transferred first (low sacrifice). As more Laptops are demanded, less suitable workers and machinery must be transferred, resulting in progressively higher sacrifices of Mobile Phones for each extra unit of Laptops.
 * As $MRT$ increases ($1 \rightarrow 2 \rightarrow 3 \rightarrow 4 \rightarrow 5$), the slope of the curve becomes steeper, giving the PPC its characteristic **concave shape**.
 
 ---
 
-### Q8. Graphical Diagram of PPC and Interpretation of Points
+### Q8. Linear PPC vs. Concave PPC: Constant vs. Increasing Opportunity Cost
+**Answer:**
 
-```
- Mobile Phones (Y)
-    |
- 15 + A
-    |  \
- 12 +   \  B
-    |    \
-  9 +     \   C
-    |      * G (Inefficient / Underemployment)
-  6 +       \
-    |        \   D          * H (Unattainable / Scarcity)
-  3 +         \
-    |          \   E
-  0 +-----------+----+----+----+----+----+---> Laptops (X)
-    0           1    2    3    4    5    6 (F)
-```
+The shape of the Production Possibility Curve directly reflects the nature of opportunity cost in the economy:
 
-```mermaid
-flowchart TD
-    PPC["<b>Points on the PPC Graph</b>"]
-    PPC --> ON["<b>Points on the Curve (A, B, C, D, E, F)</b><br>• Full Employment of Resources<br>• Productive Efficiency"]
-    PPC --> IN["<b>Points Inside the Curve (Point G)</b><br>• Underutilization of Resources<br>• Unemployment / Inefficiency"]
-    PPC --> OUT["<b>Points Outside the Curve (Point H)</b><br>• Unattainable with Current Resources<br>• Scarcity Barrier"]
-```
+![Comparison of Linear PPC (Constant Opportunity Cost) and Concave PPC (Increasing Opportunity Cost)](/images/uploads/ppc-linear-opportunity-cost.svg)
+
+| Feature | Linear PPC (Straight Line) | Concave PPC (Bowed-Out) |
+| :--- | :--- | :--- |
+| **Slope / MRT** | **Constant slope** ($MRT_{xy} = \text{constant}$). | **Increasing slope** ($MRT_{xy}$ increases). |
+| **Opportunity Cost** | **Constant Opportunity Cost**: Sacrificing the same amount of Good Y for each additional unit of Good X. | **Increasing Opportunity Cost**: Sacrificing progressively more of Good Y for each extra unit of Good X. |
+| **Resource Nature** | Resources are **perfect substitutes** and equally adaptable in producing both goods (e.g., black pens vs. blue pens). | Resources are **specialized / imperfect substitutes** (e.g., manufacturing laptops vs. producing agricultural goods). |
+| **Real-world Occurrence**| Rare theoretical condition. | Standard reality across modern economies. |
+
+---
+
+### Q9. Graphical Diagram of PPC and Interpretation of Points
+
+![Production Possibility Curve showing optimal combinations, underutilization point G, and unattainable point H](/images/uploads/ppc-efficiency-points.svg)
+
+![Production Possibility Schedule and Graph](/images/uploads/PPC_SCHEDULE.png)
 
 #### Interpretation of Points:
 1. **Points on the Curve ($A, B, C, D, E, F$):** Represent **optimum combinations**, full employment of resources, and maximum productive efficiency.
@@ -156,52 +150,40 @@ flowchart TD
 
 ---
 
-## Part 3: Shifts and Rotations of the PPC
+## Part 3: Movements, Shifts, and Rotations of the PPC
 
 ---
 
-### Q9. Explain the causes and effects of Shifts in the PPC.
+### Q10. Distinguish between Movements along the PPC, Shifts in the PPC, and Rotations of the PPC.
 **Answer:**
-A shift occurs when there is a change in the economy's total productive capacity that affects the production of **both goods**.
 
-```mermaid
-flowchart TD
-    Shift["<b>Shifts in PPC</b>"]
-    Shift --> RS["<b>Rightward (Outward) Shift</b><br>• Economic Growth<br>• Technological Progress<br>• Inflow of Capital &amp; Skills"]
-    Shift --> LS["<b>Leftward (Inward) Shift</b><br>• Natural Disasters (Earthquakes, Floods)<br>• Wars &amp; Pandemics<br>• Resource Depletion"]
-```
+Understanding the difference between a movement along a single frontier, a shift of the whole curve, and a rotation around an axis is essential for economic policy analysis:
 
-#### 1. Rightward / Outward Shift (Economic Growth):
-* **Meaning:** The entire curve shifts to the right (from $AB$ to $A'B'$), indicating an expansion of national productive capacity.
-* **Causes:**
-  * Discovery of new natural resources (e.g., minerals, hydropower).
-  * Advancement in technology in both sectors.
-  * Increase in the size and skill level of the labour force.
-  * Growth in capital stock (factories, infrastructure, modern machinery).
+![Movements along curve vs Shifts vs Rotations of PPC](/images/uploads/ppc-movements-and-shifts.svg)
 
-#### 2. Leftward / Inward Shift (Economic Contraction):
-* **Meaning:** The entire curve shifts to the left (from $AB$ to $A''B''$), indicating a destruction or decline in productive capacity.
-* **Causes:**
-  * Severe natural disasters (earthquakes, devastating floods, landslides).
-  * Outbreak of war or civil unrest destroying factories and infrastructure.
-  * Major epidemic or pandemic causing loss of labour force.
+![Shifts in the Production Possibility Curve](/images/uploads/PPC-shift.png)
+
+#### 1. Movement Along the PPC (Resource Reallocation):
+* **Meaning:** Changing production combination from one point on the curve (e.g., Point A) to another point on the **same existing curve** (e.g., Point B or C).
+* **Cause:** Society decides to reallocate its given, fixed resources—producing more of Good X at the opportunity cost of Good Y.
+* **Key Point:** The economy's **total productive capacity does not change**.
+
+#### 2. Parallel Shifts in the PPC (Overall Capacity Change):
+* **Rightward / Outward Shift (Economic Growth):** The whole curve shifts outward (from $PPC_1$ to $PPC_2$). Occurs when productive capacity expands for **both goods** due to:
+  * Discovery of new natural resources (oil, minerals, hydropower).
+  * Overall technological advancement in both industries.
+  * Increase in the quantity and skill level of the labour force.
+  * Capital accumulation (new infrastructure, machinery, and research).
+* **Leftward / Inward Shift (Economic Contraction):** The whole curve shifts inward (from $PPC_1$ to $PPC_3$). Occurs when productive capacity shrinks for **both goods** due to:
+  * Severe natural disasters (earthquakes, devastating floods).
+  * War, civil conflict, and physical destruction of factories/infrastructure.
+  * Epidemics causing major population and labour loss.
   * Severe brain drain and capital flight.
 
----
-
-### Q10. What is a Rotation of the PPC? How does it differ from a Shift?
-**Answer:**
-
-```mermaid
-flowchart LR
-    R["<b>Rotation of PPC</b>"] --> RX["<b>Rotation on X-axis only</b><br>Tech progress in Good X alone"]
-    R --> RY["<b>Rotation on Y-axis only</b><br>Tech progress in Good Y alone"]
-```
-
-* **Shift in PPC:** Occurs when resource changes or technological improvements affect **both goods simultaneously**, moving the entire curve parallel outward or inward.
-* **Rotation in PPC:** Occurs when technological progress or resource growth happens in the production of **only one specific good**, keeping the other good's maximum output unchanged:
-  * *Rotation on X-axis (Laptops):* If a technological breakthrough occurs only in Laptop manufacturing, the PPC pivots outward along the horizontal axis while remaining fixed at point A on the vertical axis.
-  * *Rotation on Y-axis (Mobiles):* If a breakthrough occurs only in Mobile manufacturing, the PPC pivots outward along the vertical axis while remaining fixed at point F on the horizontal axis.
+#### 3. Rotations of the PPC (Unilateral Technological Change):
+* **Meaning:** The PPC pivots along one axis while remaining anchored at the intercept of the other axis.
+* **Rotation on X-axis (Good X / Laptops):** Occurs when a technological breakthrough or resource increase benefits **only Good X**. The maximum output of Good X increases from $B$ to $B'$, while maximum output of Good Y remains unchanged at point $A$.
+* **Rotation on Y-axis (Good Y / Mobile Phones):** Occurs when technological advancement happens **only in Good Y**. The maximum output of Good Y increases from $A$ to $A'$, while Good X remains unchanged at point $B$.
 
 ---
 
@@ -213,5 +195,7 @@ flowchart LR
    *Underutilization of resources or economic inefficiency/unemployment.*
 3. **Why is the PPC concave to the origin?**  
    *Due to increasing Marginal Rate of Transformation (MRT) / increasing opportunity cost.*
-4. **Name two factors that cause the PPC to shift to the right.**  
-   *Technological advancement and an increase in productive resources (labour, capital, raw materials).*
+4. **When is the PPC a straight line?**  
+   *When resources are perfect substitutes and the Marginal Rate of Transformation (MRT) is constant.*
+5. **What is the difference between a movement along the PPC and a shift of the PPC?**  
+   *A movement along the curve reflects reallocation of fixed resources between two goods, whereas a shift reflects a change in the economy's total productive capacity (economic growth or contraction).*

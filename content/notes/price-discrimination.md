@@ -16,11 +16,7 @@ toc: []
 
 **Price Discrimination** (also called **Differential Pricing**) is the commercial practice of selling the exact same product or service to different buyers at **different prices**, or charging different prices for different units of output, for reasons **not justified by differences in production cost**.
 
-```mermaid
-flowchart LR
-    A["<b>Single Producer / Firm</b><br>Identical Cost of Production"] --> B["<b>Market Segmentation</b><br>Prevent Resale (Arbitrage)"]
-    B --> C["<b>Differential Prices</b><br>Higher Price in Inelastic Market<br>Lower Price in Elastic Market"]
-```
+![price discrimination diagram 1](/flowcharts/introduction-to-economics/price-discrimination-diagram-1.svg)
 
 > **Prof. Joan Robinson's Definition:** *"Price discrimination refers to the act of selling the same article produced under a single control at different prices to different consumers."*
 
@@ -33,12 +29,7 @@ In a uniform single-price market, consumers who are willing to pay more enjoy **
 
 Price discrimination is feasible and profitable only when three conditions are satisfied simultaneously:
 
-```mermaid
-flowchart TD
-    C["<b>Conditions for Price Discrimination</b>"] --> C1["<b>1. Monopoly / Market Power</b><br>Firm must be a Price Maker (P &gt; MC)"]
-    C --> C2["<b>2. Market Separation &amp; No Arbitrage</b><br>Must prevent low-price buyers from reselling"]
-    C --> C3["<b>3. Differences in Demand Elasticity</b><br>Price elasticity must differ across sub-markets (|EA| ≠ |EB|)"]
-```
+![price discrimination diagram 2](/flowcharts/introduction-to-economics/price-discrimination-diagram-2.svg)
 
 1. **Market Power (Price Maker):** The seller must operate in an imperfectly competitive market (Monopoly, Oligopoly, or Monopolistic Competition). A price-taker in perfect competition cannot discriminate ($P = MR$).
 2. **Market Separation and Prevention of Resale (Arbitrage):** The seller must be able to segment customers and strictly prevent low-price buyers from reselling the product to high-price buyers.

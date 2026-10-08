@@ -55,11 +55,7 @@ Consider the following hypothetical market schedule for Commodity X:
 
 What happens if the market price deviates from the equilibrium price? Free competitive markets naturally self-correct through price adjustments:
 
-```mermaid
-flowchart TD
-    D1["<b>If Price is Too High (P &gt; P*)</b><br>Excess Supply / Surplus (Qs &gt; Qd)"] --> R1["Sellers cut prices to clear unsold stock"] --> E["<b>Market Equilibrium Restored (P*)</b>"]
-    D2["<b>If Price is Too Low (P &lt; P*)</b><br>Excess Demand / Shortage (Qd &gt; Qs)"] --> R2["Buyers bid prices up for scarce goods"] --> E
-```
+![market equilibrium and price determination diagram 1](/flowcharts/introduction-to-economics/market-equilibrium-and-price-determination-diagram-1.svg)
 
 ### Case 1: When Price is Above Equilibrium ($P > P^*$) $\implies$ Excess Supply (Surplus)
 * At price $P_1$ (Rs. 50), producers supply 70 units, but consumers buy only 10 units.

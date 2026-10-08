@@ -10,14 +10,7 @@ unitId: class12-u2-1
 
 Numerical problems on revenue test your understanding of the mathematical relationships between **Price ($P$)**, **Quantity ($Q$)**, **Total Revenue ($TR$)**, **Average Revenue ($AR$)**, and **Marginal Revenue ($MR$)**. This guide provides the core formula bank, step-by-step worked solutions for every standard problem type, and targeted practice exercises with answers.
 
-```mermaid
-flowchart TD
-    FB["<b>Master Formula Bank</b>"]
-    FB --> F1["<b>TR = P × Q</b><br>or TR = Σ MR"]
-    FB --> F2["<b>AR = TR / Q = P</b><br>AR always equals Price"]
-    FB --> F3["<b>MR = ΔTR / ΔQ</b><br>or MRₙ = TRₙ − TRₙ₋₁"]
-    FB --> F4["<b>MR = AR × (1 − 1/E_d)</b><br>Elasticity connection"]
-```
+![class12 revenue numerical problems diagram 1](/flowcharts/class-12/class12-revenue-numerical-problems-diagram-1.svg)
 
 ---
 

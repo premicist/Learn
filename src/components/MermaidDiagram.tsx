@@ -1,87 +1,73 @@
-import { useEffect, useState } from 'react'
-import mermaid from 'mermaid'
+import { lazy, Suspense, useEffect, useState } from 'react'
 
-mermaid.initialize({
-  startOnLoad: false,
-  theme: 'neutral',
-  securityLevel: 'loose',
-  fontFamily: 'inherit',
-  fontSize: 14,
-  flowchart: {
-    useMaxWidth: true,
-    htmlLabels: true,
-    curve: 'basis',
-    nodeSpacing: 35,
-    rankSpacing: 40,
-    padding: 12,
-  },
-})
+// Lazy-load the inner Mermaid diagram component to keep the main bundle light
+const MermaidDiagramInner = lazy(() => import('./MermaidDiagramInner'))
 
 type MermaidDiagramProps = {
   chart: string
+  title?: string
+  caption?: string
 }
 
-export default function MermaidDiagram({ chart }: MermaidDiagramProps) {
-  const [svg, setSvg] = useState<string>('')
-  const [error, setError] = useState<string | null>(null)
+export default function MermaidDiagram({ chart, title, caption }: MermaidDiagramProps) {
+  const [loadError, setLoadError] = useState<string | null>(null)
 
-  useEffect(() => {
-    let isMounted = true
-    const cleanId = `mermaid-${Math.random().toString(36).substring(2, 9)}-${Date.now()}`
-
-    async function renderChart() {
-      try {
-        setError(null)
-        const trimmed = chart.trim()
-        if (!trimmed) return
-        const { svg: renderedSvg } = await mermaid.render(cleanId, trimmed)
-        if (isMounted) {
-          setSvg(renderedSvg)
-        }
-      } catch (err) {
-        if (isMounted) {
-          const tempNode = document.getElementById(cleanId) || document.getElementById(`d${cleanId}`)
-          if (tempNode && tempNode.parentNode) {
-            tempNode.parentNode.removeChild(tempNode)
-          }
-          setError(err instanceof Error ? err.message : 'Failed to render diagram')
-        }
-      }
-    }
-
-    renderChart()
-    return () => {
-      isMounted = false
-      const tempNode = document.getElementById(cleanId) || document.getElementById(`d${cleanId}`)
-      if (tempNode && tempNode.parentNode) {
-        tempNode.parentNode.removeChild(tempNode)
-      }
-    }
-  }, [chart])
-
-  if (error) {
+  if (loadError) {
     return (
-      <div className="mermaid-diagram mermaid-diagram--error" data-inline-content="true">
-        <p className="note-chart-error">(Diagram could not be rendered)</p>
-        <pre><code>{chart}</code></pre>
-      </div>
-    )
-  }
-
-  if (!svg) {
-    return (
-      <div className="mermaid-diagram mermaid-diagram--loading" data-inline-content="true">
-        <span className="mermaid-diagram__placeholder">Rendering diagram...</span>
+      <div className="diagram-card diagram-card--error" data-inline-content="true">
+        <div className="diagram-card__header">
+          <span className="diagram-card__badge">Diagram</span>
+          <h4 className="diagram-card__title">{title || 'Mermaid Diagram'}</h4>
+        </div>
+        <div className="diagram-card__canvas">
+          <p className="note-chart-error">(Diagram could not be rendered)</p>
+          <pre><code>{chart}</code></pre>
+        </div>
       </div>
     )
   }
 
   return (
-    <figure className="mermaid-diagram" data-inline-content="true">
-      <div
-        className="mermaid-diagram__canvas"
-        dangerouslySetInnerHTML={{ __html: svg }}
-      />
-    </figure>
+    <Suspense
+      fallback={
+        <div className="diagram-card diagram-card--loading" data-inline-content="true">
+          <div className="diagram-card__header">
+            <span className="diagram-card__badge">Diagram</span>
+            <h4 className="diagram-card__title">{title || 'Diagram'}</h4>
+          </div>
+          <div className="diagram-card__canvas">
+            <span className="mermaid-diagram__placeholder">Loading diagram...</span>
+          </div>
+        </div>
+      }
+    >
+      <MermaidDiagramFallback onError={setLoadError}>
+        <MermaidDiagramInner chart={chart} title={title} caption={caption} />
+      </MermaidDiagramFallback>
+    </Suspense>
   )
 }
+
+// Custom simple fallback/error handler in case of network or component failures
+function MermaidDiagramFallback({
+  children,
+  onError,
+}: {
+  children: React.ReactNode
+  onError: (err: string) => void
+}) {
+  useEffect(() => {
+    const handleError = (e: ErrorEvent) => {
+      if (e?.error?.message?.includes('mermaid') || e?.message?.includes('mermaid')) {
+        onError('Diagram failed to load')
+      }
+    }
+    window.addEventListener('error', handleError)
+    return () => window.removeEventListener('error', handleError)
+  }, [onError])
+
+  return children
+}
+
+
+

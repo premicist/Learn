@@ -19,12 +19,7 @@ Every society, whether rich or poor, capitalist or socialist, faces one fundamen
 * **Unlimited Human Wants:** Human desires for food, housing, education, entertainment, healthcare, and luxury goods are virtually infinite. As soon as one want is satisfied, new ones emerge.
 * **Limited Productive Resources (Means):** The resources needed to produce these goods and services are strictly limited in quantity and availability.
 
-```mermaid
-flowchart LR
-    A["<b>Unlimited Wants</b><br>Infinite human desires"] --> C["<b>Scarcity</b><br>Imbalance of wants &amp; means"]
-    B["<b>Limited Resources</b><br>Finite land, labor, capital"] --> C
-    C --> D["<b>Choice &amp; Trade-offs</b><br>Allocating scarce means"]
-```
+![basic economic problems diagram 1](/flowcharts/introduction-to-economics/basic-economic-problems-diagram-1.svg)
 
 Because resources are scarce, society cannot produce enough goods and services to satisfy everyone's desires. This forces individuals, businesses, and governments to make **choices** about how best to allocate their limited means.
 
@@ -45,12 +40,7 @@ To produce any economic good or service, society combines four basic categories 
 
 Because resources are scarce and have alternative uses, every economic system must answer **three basic questions**:
 
-```mermaid
-flowchart TD
-    A["<b>Central Economic Problems</b>"] --> B["<b>1. What to produce?</b><br>Consumer vs. Capital Goods"]
-    A --> C["<b>2. How to produce?</b><br>Labour vs. Capital Intensive"]
-    A --> D["<b>3. For whom to produce?</b><br>Distribution of Output &amp; Income"]
-```
+![basic economic problems diagram 2](/flowcharts/introduction-to-economics/basic-economic-problems-diagram-2.svg)
 
 ### 1. What to Produce? (Selection of Goods and Quantities)
 An economy must decide which goods and services to produce and in what quantities:

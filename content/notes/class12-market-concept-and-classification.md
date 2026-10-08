@@ -10,18 +10,7 @@ unitId: class12-u2-1
 
 In ordinary language, a "market" refers to a specific physical shopping centre or bazaar. In economics, however, a market is defined much more broadly as the entire mechanism or network through which buyers and sellers interact to determine prices and exchange goods. This lesson covers the definition, essential elements, and structural classifications of markets.
 
-```mermaid
-flowchart TD
-    A["<b>Market in Economics</b><br>Network of Buyers &amp; Sellers"] --> B["<b>Basis of Classification</b>"]
-    B --> B1["<b>Geographical Area:</b> Local, National, Global"]
-    B --> B2["<b>Time Period:</b> Very Short, Short, Long, Secular"]
-    B --> B3["<b>Transactions:</b> Spot vs Future"]
-    B --> B4["<b>Competition Structure</b>"]
-    B4 --> C1["<b>Perfect Competition:</b> Price Taker, Homogeneous Goods"]
-    B4 --> C2["<b>Monopoly:</b> Single Seller, No Close Substitutes"]
-    B4 --> C3["<b>Monopolistic Competition:</b> Differentiated Products"]
-    B4 --> C4["<b>Oligopoly:</b> Few Dominant Firms"]
-```
+![class12 market concept and classification diagram 1](/flowcharts/class-12/class12-market-concept-and-classification-diagram-1.svg)
 
 ---
 
@@ -43,13 +32,7 @@ flowchart TD
 **Answer:**
 An economic market requires four fundamental components:
 
-```mermaid
-flowchart LR
-    E1["<b>1. A Commodity</b><br>Goods, Services, or Assets"] --- M["<b>MARKET</b>"]
-    E2["<b>2. Buyers &amp; Sellers</b><br>Willingness to Trade"] --- M
-    E3["<b>3. Contact / Communication</b><br>Physical, Phone, Online"] --- M
-    E4["<b>4. Determination of Price</b><br>Mutually Agreed Value"] --- M
-```
+![class12 market concept and classification diagram 2](/flowcharts/class-12/class12-market-concept-and-classification-diagram-2.svg)
 
 1. **A Commodity or Service:** There must be a specific good, service, raw material, or financial asset (e.g., rice, smartphones, medical care, shares) to be bought and sold.
 2. **Presence of Buyers and Sellers:** There must be economic agents willing to purchase (demand) and sell (supply) the commodity.
@@ -65,13 +48,7 @@ flowchart LR
 ### Q3. Explain the classification of markets on the basis of Area, Time, and Nature of Transactions.
 **Answer:**
 
-```mermaid
-flowchart TD
-    Class["<b>Classification of Markets</b>"]
-    Class --> A["<b>1. By Area</b><br>• Local Market<br>• Regional Market<br>• National Market<br>• International Market"]
-    Class --> T["<b>2. By Time Period</b><br>• Very Short Period (Market Period)<br>• Short Period<br>• Long Period<br>• Very Long Period (Secular)"]
-    Class --> Tr["<b>3. By Transactions</b><br>• Spot / Cash Market<br>• Future / Forward Market"]
-```
+![class12 market concept and classification diagram 3](/flowcharts/class-12/class12-market-concept-and-classification-diagram-3.svg)
 
 #### 1. On the Basis of Geographical Area:
 * **Local Market:** Limited to a specific local village, town, or district. Usually involves perishable or bulky goods with high transport costs (e.g., fresh milk, leafy vegetables, clay bricks).
@@ -95,16 +72,7 @@ flowchart TD
 
 The most important economic classification of markets is based on the **degree of competition** among sellers.
 
-```mermaid
-flowchart TD
-    MS["<b>Market Structures</b>"]
-    MS --> PC["<b>Perfect Competition</b><br>Infinite sellers, Homogeneous goods, Price Taker"]
-    MS --> IC["<b>Imperfect Competition</b>"]
-    IC --> M["<b>Monopoly</b><br>Single seller, No close substitutes, Price Maker"]
-    IC --> MC["<b>Monopolistic Competition</b><br>Many sellers, Differentiated products"]
-    IC --> O["<b>Oligopoly</b><br>Few dominant sellers, Interdependence"]
-    IC --> D["<b>Duopoly</b><br>Exactly two sellers"]
-```
+![class12 market concept and classification diagram 4](/flowcharts/class-12/class12-market-concept-and-classification-diagram-4.svg)
 
 ---
 

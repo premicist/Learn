@@ -10,13 +10,7 @@ unitId: class12-u2-2
 
 In the short run, a firm's costs are divided into **Total Costs**, **Average (Per-Unit) Costs**, and **Marginal (Incremental) Costs**. Mastering these definitions, mathematical formulas, and tabular relationships is fundamental to understanding production behavior and profit maximization.
 
-```mermaid
-flowchart TD
-    Cost["<b>Short-Run Cost Framework</b>"]
-    Cost --> Totals["<b>1. Total Costs</b><br>• Total Fixed Cost (TFC)<br>• Total Variable Cost (TVC)<br>• Total Cost (TC = TFC + TVC)"]
-    Cost --> Averages["<b>2. Average Costs</b><br>• Average Fixed Cost (AFC = TFC/Q)<br>• Average Variable Cost (AVC = TVC/Q)<br>• Average Total Cost (AC = TC/Q = AFC + AVC)"]
-    Cost --> Marginal["<b>3. Marginal Cost</b><br>• MC = ΔTC / ΔQ<br>• MC = ΔTVC / ΔQ<br>• MCₙ = TCₙ − TCₙ₋₁"]
-```
+![class12 cost tc mc ac diagram 1](/flowcharts/class-12/class12-cost-tc-mc-ac-diagram-1.svg)
 
 ---
 
@@ -48,13 +42,7 @@ flowchart TD
 ### Q2. Define Average Fixed Cost ($AFC$), Average Variable Cost ($AVC$), and Average Total Cost ($AC$).
 **Answer:**
 
-```mermaid
-flowchart LR
-    TC["<b>Total Cost (TC)</b>"] -->|Divide by Q| AC["<b>Average Cost (AC)</b>"]
-    TFC["<b>Total Fixed Cost (TFC)</b>"] -->|Divide by Q| AFC["<b>Average Fixed Cost (AFC)</b>"]
-    TVC["<b>Total Variable Cost (TVC)</b>"] -->|Divide by Q| AVC["<b>Average Variable Cost (AVC)</b>"]
-    AFC & AVC -->|Add Together| AC
-```
+![class12 cost tc mc ac diagram 2](/flowcharts/class-12/class12-cost-tc-mc-ac-diagram-2.svg)
 
 #### 1. Average Fixed Cost ($AFC$):
 * **Definition:** Fixed cost per unit of output produced.

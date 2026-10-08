@@ -57,13 +57,7 @@ $$PS = (P \times Q) - \sum MC$$
 
 मुक्त बजार अर्थतन्त्रमा जब **माग रेखा ($DD$)** र **आपूर्ति रेखा ($SS$)** सन्तुलन बिन्दु **$E$** मा आपसमा काटिन्छन्, तब सन्तुलन मूल्य ($P_e$) र सन्तुलन परिमाण ($Q_e$) निर्धारण हुन्छ। यस बिन्दुमा बजारले **कुल सामाजिक कल्याण वा कुल आर्थिक अधिशेष (Total Economic Surplus / Social Welfare)** लाई अधिकतम बनाउँछ।
 
-```mermaid
-flowchart TD
-    A["<b>बजार सन्तुलन (Equilibrium Point E)</b> <br> Qd = Qs"] --> B["<b>१. उपभोक्ताको बचत / अधिशेष (CS):</b> <br> माग रेखा मुनि र सन्तुलन मूल्य रेखा माथिको क्षेत्र (Δ A-E-Pe)"]
-    A --> C["<b>२. उत्पादकको बचत / अधिशेष (PS):</b> <br> सन्तुलन मूल्य रेखा मुनि र आपूर्ति रेखा माथिको क्षेत्र (Δ Pe-E-B)"]
-    B --> D["<b>कुल आर्थिक अधिशेष / सामाजिक कल्याण:</b> <br> Total Surplus = CS + PS (त्रिभुज A-E-B)"]
-    C --> D
-```
+![class11 nepali consumer producer surplus diagram 1](/flowcharts/class-11-nepali/class11-nepali-consumer-producer-surplus-diagram-1.svg)
 
 ---
 

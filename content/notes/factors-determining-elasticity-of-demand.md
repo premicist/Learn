@@ -18,29 +18,7 @@ Why does a 10% price increase cause a sharp 30% drop in restaurant dining, but a
 
 The price elasticity of demand is governed by **eight core economic and behavioral factors**:
 
-```mermaid
-flowchart LR
-    Root["<b>Determinants of<br>Price Elasticity</b>"]
-
-    subgraph HighElasticity ["Factors Causing High Elasticity (Ep > 1)"]
-        direction TB
-        F1["<b>1. Close Substitutes:</b> Many alternatives available"]
-        F3["<b>3. Large Budget Share:</b> Big-ticket luxury purchases"]
-        F4["<b>4. Multi-Purpose Uses:</b> Multi-use goods (electricity, milk)"]
-        F5["<b>5. Long-Run Horizon:</b> Ample time to adjust consumption"]
-        F6["<b>6. Postponable:</b> Purchases can be safely deferred"]
-    end
-
-    subgraph LowElasticity ["Factors Causing Low Elasticity (Ep < 1)"]
-        direction TB
-        F2["<b>2. Basic Necessities:</b> Food staples & life-saving drugs"]
-        F7["<b>7. Addictive Habits:</b> Tobacco, caffeine & routines"]
-        F8["<b>8. Low Price Share:</b> Salt, matchbox & small staples"]
-    end
-
-    Root --> HighElasticity
-    Root --> LowElasticity
-```
+![factors determining elasticity of demand diagram 1](/flowcharts/introduction-to-economics/factors-determining-elasticity-of-demand-diagram-1.svg)
 
 ---
 

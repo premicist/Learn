@@ -16,11 +16,7 @@ toc: []
 
 The **Law of Diminishing Marginal Utility (DMU)** is the foundational cornerstone of Cardinal Utility Theory and classical microeconomics. It explains a universal psychological tendency of human consumers: **as a person consumes more units of a specific good, the extra satisfaction gained from each additional unit declines.**
 
-```mermaid
-flowchart LR
-    A["<b>H.H. Gossen (1854)</b><br>First formulated as Gossen's First Law"] --> B["<b>W.S. Jevons (1871)</b><br>Popularized during Marginalist Revolution"]
-    B --> C["<b>Alfred Marshall (1890)</b><br>Formalized as basis for Demand &amp; Consumer Surplus"]
-```
+![law of diminishing marginal utility diagram 1](/flowcharts/introduction-to-economics/law-of-diminishing-marginal-utility-diagram-1.svg)
 
 ### Formal Statement of the Law (Alfred Marshall):
 > *"The additional benefit which a person derives from a given increase of his stock of a thing diminishes with every increase in the stock that he already has."*

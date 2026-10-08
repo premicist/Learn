@@ -16,14 +16,7 @@ toc: []
 
 Business managers rely on five fundamental economic principles to guide rational operational and strategic choices:
 
-```mermaid
-flowchart TD
-    P["<b>Core Decision-Making Principles</b>"] --> P1["<b>1. Opportunity Cost</b><br>Sacrifice of next best alternative"]
-    P --> P2["<b>2. Incremental Principle</b><br>Compare extra revenue vs extra cost"]
-    P --> P3["<b>3. Equi-Marginal</b><br>Equalize marginal returns across uses"]
-    P --> P4["<b>4. Time Perspective</b><br>Balance short-run and long-run viability"]
-    P --> P5["<b>5. Discounting</b><br>Account for time value of money"]
-```
+![fundamental concepts efficiency and time element diagram 1](/flowcharts/introduction-to-economics/fundamental-concepts-efficiency-and-time-element-diagram-1.svg)
 
 ### 1. Opportunity Cost Principle
 Every business choice involves trade-offs. The **opportunity cost** of choosing one project is the profit or return sacrificed by not pursuing the next best alternative.
@@ -86,11 +79,7 @@ Understanding the difference between accounting profit and economic profit is es
 
 In business economics, **efficiency** means producing the maximum possible output at the lowest feasible cost:
 
-```mermaid
-flowchart LR
-    A["<b>Economic Efficiency</b>"] --> B["<b>Technical Efficiency</b><br>Max physical output from given physical inputs"]
-    A --> C["<b>Allocative Efficiency</b><br>Least-cost monetary combination of inputs"]
-```
+![fundamental concepts efficiency and time element diagram 2](/flowcharts/introduction-to-economics/fundamental-concepts-efficiency-and-time-element-diagram-2.svg)
 
 1. **Technical Efficiency:**  
    A firm is technically efficient if it produces the maximum physical quantity of goods with a given set of inputs (labor, machines, raw materials) without wasting resources.
@@ -105,13 +94,7 @@ flowchart LR
 
 Pioneered by **Alfred Marshall**, the time element is crucial because a firm's ability to adjust its production capacity depends on the length of time available:
 
-```mermaid
-flowchart TD
-    T["<b>Marshallian Time Horizons</b>"] --> T1["<b>1. Market Period (Very Short Run)</b><br>Supply is completely fixed; price determined by demand alone"]
-    T --> T2["<b>2. Short Run</b><br>Plant size is fixed; variable inputs adjust (Law of Variable Proportions)"]
-    T --> T3["<b>3. Long Run</b><br>All factors are variable; capacity expands (Returns to Scale)"]
-    T --> T4["<b>4. Secular Period (Very Long Run)</b><br>Fundamental shifts in technology, population and consumer habits"]
-```
+![fundamental concepts efficiency and time element diagram 3](/flowcharts/introduction-to-economics/fundamental-concepts-efficiency-and-time-element-diagram-3.svg)
 
 | Time Period | Nature of Production Inputs | Supply Response & Adjustment |
 | :--- | :--- | :--- |

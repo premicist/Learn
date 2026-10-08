@@ -10,14 +10,7 @@ unitId: class12-u2-4
 
 Unlike land, labour, and capital?which receive contractual factor rewards (Rent, Wages, and Interest)?the entrepreneur receives **Profit**, which is a non-contractual, **residual income**. Why does profit arise? Economists have formulated two classic theories to explain profit: **Hawley's Risk-Bearing Theory** and **Knight's Uncertainty-Bearing Theory**.
 
-```mermaid
-flowchart TD
-    Theories["<b>Theories of Profit</b>"]
-    Theories --> Hawley["<b>1. Hawley's Risk-Bearing Theory (1907)</b><br>Profit is the reward for taking business risks"]
-    Theories --> Knight["<b>2. Knight's Uncertainty-Bearing Theory (1921)</b><br>Profit is the reward for bearing <b>Uninsurable Uncertainty</b>"]
-    Knight --> Ins["<b>Insurable Risks:</b> Fire, Theft, Accidents (No Profit)"]
-    Knight --> Unins["<b>Non-Insurable Uncertainties:</b> Tech innovation, Taste shifts (True Profit)"]
-```
+![class12 profit theories risk uncertainty diagram 1](/flowcharts/class-12/class12-profit-theories-risk-uncertainty-diagram-1.svg)
 
 ---
 
@@ -63,12 +56,7 @@ The **Uncertainty-Bearing Theory of Profit** was developed by the distinguished 
 #### Core Statement:
 > *"Profit is the reward for bearing **non-insurable uncertainty**, not for bearing known, predictable risks."*
 
-```mermaid
-flowchart TD
-    Dist["<b>Knight's Distinction: Risk vs Uncertainty</b>"]
-    Dist --> Risk["<b>1. Insurable Risks (Foreseeable)</b><br>? Fire, Theft, Burglary, Factory Accidents<br>? Actuarial Probability is Known<br>? Covered by Insurance Premiums<br>? <b>Generates NO Economic Profit</b>"]
-    Dist --> Unc["<b>2. Non-Insurable Uncertainties (Unforeseeable)</b><br>? Shifts in Consumer Taste &amp; Fashion<br>? Competitor Inventions &amp; New Technology<br>? Macroeconomic Depressions &amp; Wars<br>? Government Tax &amp; Import/Export Policies<br>? <b>TRUE SOURCE OF PROFIT</b>"]
-```
+![class12 profit theories risk uncertainty diagram 2](/flowcharts/class-12/class12-profit-theories-risk-uncertainty-diagram-2.svg)
 
 #### Detailed Breakdown of Knight's Classification:
 

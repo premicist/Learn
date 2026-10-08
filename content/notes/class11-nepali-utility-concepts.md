@@ -64,16 +64,7 @@ toc: []
 
 ## २. उपभोक्ता व्यवहार विश्लेषणको गुरु-फ्लोचार्ट (Master Flowchart of Approaches)
 
-```mermaid
-graph TD
-    Root["<b>उपभोक्ताको व्यवहार विश्लेषणका सिद्धान्तहरू</b>"] --> Card["<b>१. गणनावाचक उपयोगिता दृष्टिकोण <br> (Cardinal Utility Approach - Marshall)</b>"]
-    Root --> Ord["<b>२. क्रमवाचक उपयोगिता दृष्टिकोण <br> (Ordinal Utility Approach - Hicks &amp; Allen)</b>"]
-
-    Card --> Single["<b>एक वस्तुको अवस्था (Single Commodity Case):</b> <br> सीमान्त उपयोगिता ह्रास नियम <br> (Law of Diminishing Marginal Utility)"]
-    Card --> Multi["<b>दुई वा बहु-वस्तुको अवस्था (Multi-Commodity Case):</b> <br> सम-सीमान्त उपयोगिता नियम / प्रतिस्थापनको नियम <br> (Law of Equi-Marginal Utility / Substitution)"]
-
-    Ord --> IC["<b>तटस्थता वक्ररेखा विश्लेषण <br> (Indifference Curve Analysis):</b> <br> तटस्थता वक्र र बजेट रेखा"]
-```
+![class11 nepali utility concepts diagram 1](/flowcharts/class-11-nepali/class11-nepali-utility-concepts-diagram-1.svg)
 
 ---
 
@@ -113,12 +104,7 @@ $$MU_n = TU_n - TU_{n-1} \quad \text{वा} \quad MU = \frac{\Delta TU}{\Delta 
 | **५** | **३०** | **० ($30 - 30$)** | **$TU$ अधिकतम (Peak), $MU = 0$ (पूर्ण सन्तुष्टि बिन्दु - Point of Satiety)** |
 | ६ | २८ | -२ ($28 - 30$) | $TU$ घट्न थाल्छ, $MU$ ऋणात्मक (Disutility) |
 
-```mermaid
-graph TD
-    A["१. जबसम्म TU बढ्छ"] --> B["MU धनात्मक (MU &gt; 0) रहन्छ"]
-    C["२. जब TU अधिकतम (Maximum) हुन्छ"] --> D["MU शून्य (MU = 0) हुन्छ - पूर्ण सन्तुष्टि बिन्दु"]
-    E["३. जब TU घट्न थाल्छ"] --> F["MU ऋणात्मक (MU &lt; 0) हुन्छ"]
-```
+![class11 nepali utility concepts diagram 2](/flowcharts/class-11-nepali/class11-nepali-utility-concepts-diagram-2.svg)
 
 ---
 

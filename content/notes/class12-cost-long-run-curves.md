@@ -10,16 +10,7 @@ unitId: class12-u2-2
 
 In the **long run**, all factors of production are variable. A firm is not restricted to a single fixed factory; it can build larger plants, adopt new production technologies, and adjust its entire scale of operation. This lesson explores how the **Long-Run Average Cost ($LAC$)** curve is derived as an **Envelope Curve** from short-run plant choices, and why it is shaped by **Economies and Diseconomies of Scale**.
 
-```mermaid
-flowchart TD
-    LR["<b>Long-Run Cost Analysis</b><br>All Inputs are Variable (No Fixed Costs)"]
-    LR --> Plan["<b>Planning Horizon</b><br>Firm selects the optimal plant size for expected output"]
-    LR --> LAC["<b>Long-Run Average Cost (LAC)</b><br>Envelope Curve enclosing SAC₁, SAC₂, SAC₃..."]
-    LR --> Scale["<b>Returns to Scale</b>"]
-    Scale --> S1["<b>Economies of Scale:</b> LAC Falls"]
-    Scale --> S2["<b>Optimum Scale:</b> LAC at Minimum (SAC = SMC = LAC = LMC)"]
-    Scale --> S3["<b>Diseconomies of Scale:</b> LAC Rises"]
-```
+![class12 cost long run curves diagram 1](/flowcharts/class-12/class12-cost-long-run-curves-diagram-1.svg)
 
 ---
 
@@ -47,26 +38,9 @@ flowchart TD
 **Answer:**
 Suppose a firm has the option to choose among different plant sizes represented by short-run average cost curves: $SAC_1$ (small plant), $SAC_2$ (medium plant), $SAC_3$ (optimal plant), and $SAC_4$ (large plant).
 
-```
-Cost (Rs.)
-   |
-   |     SAC1             SAC4
-   |    \    /   SAC2     \  /
-   |     \  /   \   /      \/     SAC3 (Optimum Plant)
-   |      \/     \ /       /
-   |       \------*-------/----------------- LAC Curve (Envelope Curve)
-   |              |
-   |              Min LAC (Optimum Scale: Q*)
- 0 +--------------+-----------------------------> Output (Q)
-```
+![Derivation of Long-Run Average Cost Curve (LAC Envelope Curve)](/images/uploads/lrac-envelope-curve.svg)
 
-```mermaid
-flowchart TD
-    Deriv["<b>Derivation of the LAC Curve</b>"]
-    Deriv --> PlantChoice["<b>1. Series of Short-Run Plants</b><br>Firm can choose small (SAC₁), medium (SAC₂), or large (SAC₃) plants"]
-    Deriv --> Tangency["<b>2. Tangency with SAC Curves</b><br>LAC is tangent to each SAC at the lowest cost for that output"]
-    Deriv --> Envelope["<b>3. The Envelope Curve</b><br>LAC wraps around and encloses all SAC curves from below"]
-```
+![class12 cost long run curves diagram 2](/flowcharts/class-12/class12-cost-long-run-curves-diagram-2.svg)
 
 #### Why it is called an 'Envelope Curve':
 * The $LAC$ curve **surrounds and wraps around (envelopes)** all the individual Short-Run Average Cost ($SAC$) curves from below without any $SAC$ curve falling below it.
@@ -95,10 +69,7 @@ flowchart TD
 **Answer:**
 While the short-run $AC$ curve is U-shaped due to the *Law of Variable Proportions*, the $LAC$ curve is U-shaped due to the **Laws of Returns to Scale**:
 
-```mermaid
-flowchart LR
-    P1["<b>Phase 1: Increasing Returns to Scale</b><br>• Economies of Scale dominate<br>• <b>LAC Falls</b>"] --> P2["<b>Phase 2: Constant Returns to Scale</b><br>• Optimum Output / Minimum Cost<br>• <b>LAC is at Lowest Point</b>"] --> P3["<b>Phase 3: Decreasing Returns to Scale</b><br>• Diseconomies of Scale dominate<br>• <b>LAC Rises</b>"]
-```
+![class12 cost long run curves diagram 3](/flowcharts/class-12/class12-cost-long-run-curves-diagram-3.svg)
 
 1. **Phase 1: Economies of Scale (Falling LAC):**
    * As the firm expands its scale of production and builds larger plants, it enjoys technical, managerial, and financial efficiencies.
@@ -118,16 +89,7 @@ flowchart LR
 ### Q5. What are Internal and External Economies and Diseconomies of Scale?
 **Answer:**
 
-```mermaid
-flowchart TD
-    Scale["<b>Economies &amp; Diseconomies of Scale</b>"]
-    Scale --> Int["<b>Internal (Firm-Specific)</b><br>Arise from firm's own growth in size"]
-    Scale --> Ext["<b>External (Industry-Wide)</b><br>Arise from growth of the entire industry"]
-    Int --> IntE["Technical, Managerial, Financial, Marketing Economies"]
-    Int --> IntD["Managerial Bureaucracy &amp; Communication Delays"]
-    Ext --> ExtE["Better Infrastructure, Skilled Pool, Specialized Suppliers"]
-    Ext --> ExtD["Traffic Congestion, Rising Rents &amp; Resource Scarcity"]
-```
+![class12 cost long run curves diagram 4](/flowcharts/class-12/class12-cost-long-run-curves-diagram-4.svg)
 
 #### 1. Internal Economies (Benefits unique to an expanding firm):
 * **Technical Economies:** Ability to use large-scale, automated, high-precision machinery.

@@ -16,11 +16,7 @@ toc: []
 
 When buyers and sellers participate in a competitive market, both parties gain economic benefits from the voluntary exchange. Economists measure these mutual gains using the concepts of **Consumer's Surplus** and **Producer's Surplus**.
 
-```mermaid
-flowchart LR
-    A["Consumer Surplus (Benefit to Buyers)"] --> C["<b>Total Economic Welfare</b><br>Sum of Social Surplus (CS + PS)"]
-    B["Producer Surplus (Benefit to Sellers)"] --> C
-```
+![consumer surplus and producer surplus diagram 1](/flowcharts/introduction-to-economics/consumer-surplus-and-producer-surplus-diagram-1.svg)
 
 ---
 

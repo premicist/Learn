@@ -10,12 +10,7 @@ unitId: class12-u2-2
 
 In the **short run**, a firm cannot change its fixed capital equipment, factory buildings, or heavy machinery. Production can only be expanded by employing more variable inputs (raw materials, daily labour, electricity). This technological constraint produces distinct geometric shapes for short-run total and average cost curves.
 
-```mermaid
-flowchart TD
-    SR["<b>Short-Run Cost Derivations</b>"]
-    SR --> TC_Group["<b>1. Total Cost Family</b><br>• TFC (Horizontal Line)<br>• TVC (Inverse S-curve from Origin)<br>• TC (Inverse S-curve from TFC Intercept)"]
-    SR --> Unit_Group["<b>2. Per-Unit Cost Family</b><br>• AFC (Rectangular Hyperbola)<br>• AVC (U-shaped)<br>• AC (U-shaped, AC = AFC + AVC)<br>• MC (U-shaped, cuts AC &amp; AVC at minimum)"]
-```
+![class12 cost short run curves diagram 1](/flowcharts/class-12/class12-cost-short-run-curves-diagram-1.svg)
 
 ---
 
@@ -24,28 +19,9 @@ flowchart TD
 ### Q1. Explain the shapes and derivation of $TFC, TVC$, and $TC$ curves with a diagram.
 **Answer:**
 
-```
-Cost (Rs.)
-   |                                 / TC (TC = TFC + TVC)
-   |                               /
-   |                             /  / TVC
-   |                            /  /
-   |       Vertical Gap        /  /
-   |       = TFC (Constant)   /  /
-   |                         /  /
-60 + TFC Intercept --------*---/------------------- TFC Curve
-   |                     /
-   |                   /
- 0 +------------------+---------------------------> Output (Q)
-```
+![Derivation and Shapes of Short-Run Total Cost Curves: TFC, TVC, and TC](/images/uploads/short-run-total-cost-curves-tfc-tvc-tc.svg)
 
-```mermaid
-flowchart TD
-    TCs["<b>Derivation of Total Cost Curves</b>"]
-    TCs --> TFC["<b>TFC Curve:</b><br>• Originates on vertical axis at (0, 60)<br>• Perfectly horizontal line parallel to X-axis<br>• Fixed at all output levels"]
-    TCs --> TVC["<b>TVC Curve:</b><br>• Originates at the origin (0, 0)<br>• Inverse S-shape (rises slowly, then steeply)<br>• Governed by Law of Variable Proportions"]
-    TCs --> TC["<b>TC Curve:</b><br>• Starts at (0, TFC) intercept on vertical axis<br>• Exactly parallel to TVC curve<br>• Vertical distance TC − TVC = TFC at all points"]
-```
+![class12 cost short run curves diagram 2](/flowcharts/class-12/class12-cost-short-run-curves-diagram-2.svg)
 
 #### Detailed Explanation:
 1. **Total Fixed Cost ($TFC$) Curve:**
@@ -68,11 +44,7 @@ flowchart TD
 ### Q2. How are $AFC, AVC, AC$, and $MC$ curves derived geometrically?
 **Answer:**
 
-```mermaid
-flowchart LR
-    A["<b>Total Curves</b>"] -->|Slope of Ray from Origin| B["<b>Average Curves</b><br>• Ray to TFC → AFC<br>• Ray to TVC → AVC<br>• Ray to TC → AC"]
-    A -->|Slope of Tangent Line| C["<b>Marginal Curve</b><br>• Tangent to TC/TVC → MC"]
-```
+![class12 cost short run curves diagram 3](/flowcharts/class-12/class12-cost-short-run-curves-diagram-3.svg)
 
 #### 1. Derivation of Average Fixed Cost ($AFC$) Curve:
 * $AFC = \frac{TFC}{Q}$.

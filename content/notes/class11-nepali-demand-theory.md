@@ -16,12 +16,7 @@ toc: []
 
 दैनिक बोलीचालीमा **इच्छा (Desire)**, **चाहना (Want)** र **माग (Demand)** लाई उस्तै अर्थमा प्रयोग गरिन्छ। तर अर्थशास्त्रमा कुनै वस्तु प्राप्त गर्ने इच्छा मात्र माग हुन सक्दैन। माग हुनका लागि इच्छासँगै त्यसलाई पूरा गर्ने **क्रयशक्ति (Purchasing Power)** र **खर्च गर्ने तत्परता (Willingness to Spend)** अनिवार्य रूपमा हुनुपर्दछ। यस्तो मागलाई **प्रभावकारी माग (Effective Demand)** भनिन्छ।
 
-```mermaid
-flowchart LR
-    A["वस्तु प्राप्त गर्ने इच्छा <br>(Desire)"] --> D["<b>प्रभावकारी माग <br>(Effective Economic Demand)</b>"]
-    B["भुक्तानी गर्ने क्षमता / क्रयशक्ति <br>(Ability to Pay)"] --> D
-    C["रकम खर्च गर्ने तत्परता <br>(Willingness to Spend)"] --> D
-```
+![class11 nepali demand theory diagram 1](/flowcharts/class-11-nepali/class11-nepali-demand-theory-diagram-1.svg)
 
 > **परिभाषा:** कुनै निश्चित समयमा, तोकिएको मूल्यमा उपभोक्ताले खरिद गर्न चाहेको र खरिद गर्न सक्ने वस्तु तथा सेवाको परिमाणलाई **माग (Demand)** भनिन्छ।
 
@@ -68,14 +63,7 @@ $$Q_d = f(P_x, Y, P_r, T, E, N)$$
 
 $$Q_d = a - bP$$
 
-```mermaid
-graph LR
-    A["<b>Qd = a - bP</b>"] --> B["<b>Qd</b>: माग परिमाण (आश्रित चर)"]
-    A --> C["<b>a</b>: स्वायत्त माग (जब P = 0 हुन्छ)"]
-    A --> D["<b>- (माइनस)</b>: मूल्य र मागबीच विपरीत सम्बन्ध"]
-    A --> E["<b>b</b>: माग रेखाको ढाल (Slope = ΔQd / ΔP)"]
-    A --> F["<b>P</b>: वस्तुको मूल्य (स्वतन्त्र चर)"]
-```
+![class11 nepali demand theory diagram 2](/flowcharts/class-11-nepali/class11-nepali-demand-theory-diagram-2.svg)
 
 #### १. $Q_d$ (Quantity Demanded):
 यो **आश्रित चर (Dependent Variable)** हो। यसले मूल्यमा आउने परिवर्तन अनुसार माग परिमाण कसरी बदलिन्छ भन्ने देखाउँछ।

@@ -19,11 +19,7 @@ Formulated by American economist **Edward Chamberlin** in 1933, **Monopolistic C
 * **Monopoly Element:** Each firm has a mini-monopoly over its own unique brand or design due to **Product Differentiation**.
 * **Competitive Element:** There are **many sellers** producing close substitutes, with **free entry and exit**.
 
-```mermaid
-flowchart LR
-    A["<b>Monopoly Power</b><br>Product Differentiation &amp; Branding"] --> C["<b>Monopolistic Competition</b><br>Down-sloping Elastic Demand (AR)"]
-    B["<b>Competitive Forces</b><br>Many sellers &amp; Free Entry/Exit"] --> C
-```
+![monopolistic competition and excess capacity diagram 1](/flowcharts/introduction-to-economics/monopolistic-competition-and-excess-capacity-diagram-1.svg)
 
 ### Key Characteristics:
 1. **Large Number of Sellers:** Many firms compete independently without direct strategic retaliation.

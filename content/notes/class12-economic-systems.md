@@ -10,12 +10,7 @@ unitId: class12-u1-1
 
 An **economic system** is the organized framework of laws, institutions, and customs that a society uses to solve the fundamental questions of *What, How, and For Whom to Produce*. This lesson examines the three major world economic systems and explores the mixed economic model adopted by Nepal.
 
-```mermaid
-flowchart TD
-    A["<b>Economic Systems</b>"] --> B["<b>1. Capitalist / Free Market Economy</b><br>Private Ownership + Price Mechanism<br>(e.g., USA, UK, Japan)"]
-    A --> C["<b>2. Socialist / Command Economy</b><br>State Ownership + Central Planning<br>(e.g., North Korea, Cuba)"]
-    A --> D["<b>3. Mixed Economy</b><br>Public + Private + Cooperative Sectors<br>(e.g., Nepal, India, France)"]
-```
+![class12 economic systems diagram 1](/flowcharts/class-12/class12-economic-systems-diagram-1.svg)
 
 ---
 
@@ -27,10 +22,7 @@ flowchart TD
 > A **Capitalist Economy** (also known as a **Free Market Economy** or **Laissez-faire Economy**) is an economic system in which all means of production are owned and operated by private individuals and businesses, and economic decisions are guided by the forces of market demand and supply (**Price Mechanism**) with minimal government interference.
 > *Examples:* United States, United Kingdom, Singapore, Japan.
 
-```mermaid
-flowchart LR
-    D["<b>Market Demand</b><br>(Buyers)"] <--> P["<b>Price Mechanism</b><br>(Equilibrium Price)"] <--> S["<b>Market Supply</b><br>(Sellers)"]
-```
+![class12 economic systems diagram 2](/flowcharts/class-12/class12-economic-systems-diagram-2.svg)
 
 #### Key Features:
 1. **Right to Private Property:**
@@ -75,13 +67,7 @@ flowchart LR
 > A **Socialist Economy** (also known as a **Centrally Planned Economy** or **Command Economy**) is an economic system in which all major means of production (land, factories, natural resources, transport) are owned and controlled by the state on behalf of society, and all economic decisions are made by a **Central Planning Authority**.
 > *Historical & Modern Examples:* Former Soviet Union, North Korea, Cuba.
 
-```mermaid
-flowchart TD
-    CPA["<b>Central Planning Authority (Government)</b>"]
-    CPA -->|Decides| Q1["<b>What to Produce:</b> Target quotas"]
-    CPA -->|Decides| Q2["<b>How to Produce:</b> State factories"]
-    CPA -->|Decides| Q3["<b>For Whom:</b> Fair public rationing &amp; fixed wages"]
-```
+![class12 economic systems diagram 3](/flowcharts/class-12/class12-economic-systems-diagram-3.svg)
 
 #### Key Features:
 1. **State / Public Ownership of Resources:**
@@ -126,13 +112,7 @@ flowchart TD
 > A **Mixed Economy** is an economic system that combines the best elements of both capitalism and socialism. It allows the **co-existence of both the private sector and the public (government) sector**, working together under state regulation and national economic planning.
 > *Examples:* Nepal, India, France, Sweden, United Kingdom.
 
-```mermaid
-flowchart TD
-    ME["<b>Mixed Economic System</b>"]
-    ME --> PS["<b>Private Sector</b><br>• Profit Motive<br>• Consumer Goods, Retail, Tech<br>• Market Price Mechanism"]
-    ME --> GS["<b>Public (State) Sector</b><br>• Social Welfare Motive<br>• Infrastructure, Defense, Health<br>• Economic Planning &amp; Regulation"]
-    ME --> CS["<b>Cooperative Sector</b><br>• Community Empowerment<br>• Mutual Benefit &amp; Micro-finance"]
-```
+![class12 economic systems diagram 4](/flowcharts/class-12/class12-economic-systems-diagram-4.svg)
 
 #### Key Features:
 1. **Co-existence of Public and Private Sectors:**
@@ -175,13 +155,7 @@ Nepal has adopted a **Mixed Economic System**.
 Under **Article 51 of the Constitution of Nepal**, the economic policy of the state is officially founded on the **Three-Pillar Development Model**:
 > The state's economic objective is to develop a self-reliant, sustainable, and socialism-oriented economy through the mutual coordination, partnership, and participation of the **Public Sector**, the **Private Sector**, and the **Cooperative Sector**.
 
-```mermaid
-flowchart TD
-    N["<b>Three Pillars of Nepal's Economy (Article 51)</b>"]
-    N --> P1["<b>1. Public (Government) Sector:</b><br>Strategic Infrastructure, Energy, Policy, Social Services"]
-    N --> P2["<b>2. Private Sector:</b><br>Manufacturing, Trade, Tourism, Banking, Services"]
-    N --> P3["<b>3. Cooperative Sector:</b><br>Community Savings, Agriculture, Dairy, Local Empowerment"]
-```
+![class12 economic systems diagram 5](/flowcharts/class-12/class12-economic-systems-diagram-5.svg)
 
 ---
 

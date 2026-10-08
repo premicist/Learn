@@ -18,11 +18,7 @@ toc: []
 
 Under this method, a business estimates the average variable cost of producing a standard unit of output and adds a pre-determined percentage profit margin (**the mark-up**) to establish the final selling price.
 
-```mermaid
-flowchart LR
-    A["<b>1. Estimate Unit Cost (AVC)</b><br>Raw Materials + Direct Labour"] --> B["<b>2. Add Gross Mark-up (m)</b><br>Covers Overheads + Net Profit"]
-    B --> C["<b>3. Final Selling Price (P)</b><br>P = AVC × (1 + m)"]
-```
+![cost plus and mark up pricing diagram 1](/flowcharts/introduction-to-economics/cost-plus-and-mark-up-pricing-diagram-1.svg)
 
 > **Definition:** **Cost-Plus Pricing** is the practice of setting prices by calculating unit cost of production and adding a fixed percentage mark-up to guarantee the recovery of fixed overheads and earn a target rate of return.
 

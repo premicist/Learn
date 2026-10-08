@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" width="100%" height="auto" role="img" aria-label="Short-Run Equilibrium of Monopoly: Supernormal Profit, Normal Profit, and Minimum Loss">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.2; }
+    .axis { stroke: #1e293b; stroke-width: 1.8; stroke-linecap: round; }
+    .ar-curve { fill: none; stroke: #16a34a; stroke-width: 2.8; stroke-linecap: round; }
+    .mr-curve { fill: none; stroke: #dc2626; stroke-width: 2.8; stroke-linecap: round; }
+    .smc-curve { fill: none; stroke: #0f172a; stroke-width: 2.8; stroke-linecap: round; }
+    .sac-curve { fill: none; stroke: #2563eb; stroke-width: 2.8; stroke-linecap: round; }
+    .guide-line { stroke: #64748b; stroke-width: 1.2; stroke-dasharray: 3 3; }
+    .point-dot { fill: #1e293b; stroke: #ffffff; stroke-width: 2; }
+    .profit-rect { fill: #dcfce7; stroke: #16a34a; stroke-width: 1.5; }
+    .loss-rect { fill: #fee2e2; stroke: #dc2626; stroke-width: 1.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #0f172a; }
+    .text-panel-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 800; fill: #1e293b; text-anchor: middle; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 700; fill: #1e293b; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #475569; text-anchor: middle; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="30" y="30">Short-Run Equilibrium of Monopoly Firm: Three Possible States</text>
+
+  <!-- Panel A: Supernormal Profit (P > SAC) -->
+  <g transform="translate(20, 45)">
+    <rect class="card" width="280" height="375" rx="8"/>
+    <text class="text-panel-title" x="140" y="24">A. Supernormal Profit (P &gt; SAC)</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="40" y1="320" x2="40" y2="45"/>
+    <line class="axis" x1="40" y1="320" x2="265" y2="320"/>
+    <text class="text-label" x="8" y="50">P, C</text>
+    <text class="text-label" x="235" y="338">Output (Q)</text>
+    <text class="text-label" x="28" y="332">O</text>
+
+    <!-- Shaded Profit Rectangle: P(40, 100), A(130, 100), B(130, 150), C(40, 150) -->
+    <rect class="profit-rect" x="40" y="100" width="90" height="50"/>
+    <text class="text-sub" x="85" y="128" fill="#15803d"><b>PROFIT (PABC)</b></text>
+
+    <!-- AR, MR -->
+    <line class="ar-curve" x1="40" y1="70" x2="250" y2="210"/>
+    <text class="text-label" x="240" y="222" fill="#16a34a">AR</text>
+    <line class="mr-curve" x1="40" y1="70" x2="190" y2="270"/>
+    <text class="text-label" x="195" y="275" fill="#dc2626">MR</text>
+
+    <!-- SAC and SMC -->
+    <!-- SAC minimum near x=150, y=140 -->
+    <path class="sac-curve" d="M 60 210 Q 140 145 230 180"/>
+    <text class="text-label" x="235" y="180" fill="#2563eb">SAC</text>
+    <path class="smc-curve" d="M 70 240 Q 110 205 130 190 L 190 70"/>
+    <text class="text-label" x="195" y="70">SMC</text>
+
+    <!-- Equilibrium Points -->
+    <circle class="point-dot" cx="130" cy="190" r="4"/>
+    <text class="text-label" x="135" y="195">E (MR=MC)</text>
+    <line class="guide-line" x1="130" y1="100" x2="130" y2="320"/>
+
+    <circle class="point-dot" cx="130" cy="100" r="4" fill="#16a34a"/>
+    <text class="text-label" x="135" y="95">A</text>
+    <line class="guide-line" x1="40" y1="100" x2="130" y2="100"/>
+    <text class="text-label" x="22" y="104">P</text>
+
+    <circle class="point-dot" cx="130" cy="150" r="4" fill="#2563eb"/>
+    <text class="text-label" x="135" y="148">B</text>
+    <line class="guide-line" x1="40" y1="150" x2="130" y2="150"/>
+    <text class="text-label" x="22" y="154">C</text>
+    <text class="text-label" x="125" y="335">Q*</text>
+  </g>
+
+  <!-- Panel B: Normal Profit (P = SAC) -->
+  <g transform="translate(320, 45)">
+    <rect class="card" width="280" height="375" rx="8"/>
+    <text class="text-panel-title" x="140" y="24">B. Normal Profit (P = SAC)</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="40" y1="320" x2="40" y2="45"/>
+    <line class="axis" x1="40" y1="320" x2="265" y2="320"/>
+    <text class="text-label" x="8" y="50">P, C</text>
+    <text class="text-label" x="235" y="338">Output (Q)</text>
+    <text class="text-label" x="28" y="332">O</text>
+
+    <!-- AR, MR -->
+    <line class="ar-curve" x1="40" y1="70" x2="250" y2="210"/>
+    <text class="text-label" x="240" y="222" fill="#16a34a">AR</text>
+    <line class="mr-curve" x1="40" y1="70" x2="190" y2="270"/>
+    <text class="text-label" x="195" y="275" fill="#dc2626">MR</text>
+
+    <!-- SAC tangent to AR at (130, 130) -->
+    <path class="sac-curve" d="M 60 170 Q 130 130 230 170"/>
+    <text class="text-label" x="235" y="170" fill="#2563eb">SAC</text>
+    <path class="smc-curve" d="M 70 240 Q 110 205 130 190 L 190 70"/>
+    <text class="text-label" x="195" y="70">SMC</text>
+
+    <!-- Equilibrium Points -->
+    <circle class="point-dot" cx="130" cy="190" r="4"/>
+    <text class="text-label" x="135" y="195">E</text>
+    <line class="guide-line" x1="130" y1="130" x2="130" y2="320"/>
+
+    <circle class="point-dot" cx="130" cy="130" r="4" fill="#16a34a"/>
+    <text class="text-label" x="135" y="125">A (P = SAC)</text>
+    <line class="guide-line" x1="40" y1="130" x2="130" y2="130"/>
+    <text class="text-label" x="12" y="134">P = C</text>
+    <text class="text-label" x="125" y="335">Q*</text>
+    <text class="text-sub" x="140" y="280" fill="#2563eb">TR = TC (Zero Economic Profit)</text>
+  </g>
+
+  <!-- Panel C: Minimum Loss (P < SAC) -->
+  <g transform="translate(620, 45)">
+    <rect class="card" width="280" height="375" rx="8"/>
+    <text class="text-panel-title" x="140" y="24">C. Minimum Loss (P &lt; SAC)</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="40" y1="320" x2="40" y2="45"/>
+    <line class="axis" x1="40" y1="320" x2="265" y2="320"/>
+    <text class="text-label" x="8" y="50">P, C</text>
+    <text class="text-label" x="235" y="338">Output (Q)</text>
+    <text class="text-label" x="28" y="332">O</text>
+
+    <!-- Shaded Loss Rectangle: C(40, 90), B(130, 90), A(130, 140), P(40, 140) -->
+    <rect class="loss-rect" x="40" y="90" width="90" height="50"/>
+    <text class="text-sub" x="85" y="118" fill="#b91c1c"><b>LOSS (CBAP)</b></text>
+
+    <!-- AR, MR -->
+    <line class="ar-curve" x1="40" y1="80" x2="250" y2="220"/>
+    <text class="text-label" x="240" y="232" fill="#16a34a">AR</text>
+    <line class="mr-curve" x1="40" y1="80" x2="190" y2="280"/>
+    <text class="text-label" x="195" y="285" fill="#dc2626">MR</text>
+
+    <!-- SAC lying higher than AR at Q* -->
+    <path class="sac-curve" d="M 60 140 Q 140 85 230 120"/>
+    <text class="text-label" x="235" y="120" fill="#2563eb">SAC</text>
+    <path class="smc-curve" d="M 70 240 Q 110 205 130 195 L 190 70"/>
+    <text class="text-label" x="195" y="70">SMC</text>
+
+    <!-- Equilibrium Points -->
+    <circle class="point-dot" cx="130" cy="195" r="4"/>
+    <text class="text-label" x="135" y="200">E</text>
+    <line class="guide-line" x1="130" y1="90" x2="130" y2="320"/>
+
+    <circle class="point-dot" cx="130" cy="90" r="4" fill="#2563eb"/>
+    <text class="text-label" x="135" y="85">B</text>
+    <line class="guide-line" x1="40" y1="90" x2="130" y2="90"/>
+    <text class="text-label" x="22" y="94">C</text>
+
+    <circle class="point-dot" cx="130" cy="140" r="4" fill="#16a34a"/>
+    <text class="text-label" x="135" y="145">A</text>
+    <line class="guide-line" x1="40" y1="140" x2="130" y2="140"/>
+    <text class="text-label" x="22" y="144">P</text>
+    <text class="text-label" x="125" y="335">Q*</text>
+  </g>
+</svg>

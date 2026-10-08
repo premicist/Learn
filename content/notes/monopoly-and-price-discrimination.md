@@ -18,12 +18,7 @@ A **Pure Monopoly** is a market structure in which a **single seller or producin
 
 In a monopoly, the firm is the entire industry ($\text{Firm} = \text{Industry}$).
 
-```mermaid
-flowchart LR
-    A["<b>Single Producer</b><br>Firm is the entire Industry"] --> B["<b>No Close Substitutes</b><br>Buyers have no alternative brands"]
-    B --> C["<b>Total Entry Barriers</b><br>Patents, licenses, natural scale"]
-    C --> D["<b>Price Maker (P &gt; MC)</b><br>Downward-sloping demand (AR &gt; MR)"]
-```
+![monopoly and price discrimination diagram 1](/flowcharts/introduction-to-economics/monopoly-and-price-discrimination-diagram-1.svg)
 
 ### Sources of Entry Barriers:
 1. **Natural Monopolies:** Enormous economies of scale make a single large network utility (e.g., city water pipelines, national electricity grid) far cheaper per unit than multiple competing firms.

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="100%" height="auto" role="img" aria-label="Short-Run Total Cost Curves: TFC, TVC, and TC">
+  <style>
+    .bg { fill: #ffffff; stroke: #111111; stroke-width: 1.5; }
+    .axis { stroke: #1e293b; stroke-width: 2; stroke-linecap: round; }
+    .tfc-curve { fill: none; stroke: #64748b; stroke-width: 3; stroke-linecap: round; }
+    .tvc-curve { fill: none; stroke: #ea580c; stroke-width: 3.5; stroke-linecap: round; }
+    .tc-curve { fill: none; stroke: #2563eb; stroke-width: 3.5; stroke-linecap: round; }
+    .guide-line { stroke: #94a3b8; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .point-dot { fill: #1e293b; stroke: #ffffff; stroke-width: 2.5; }
+    .text-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; fill: #0f172a; }
+    .text-label { font-family: 'Manrope', system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #1e293b; }
+    .text-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 600; fill: #475569; }
+    .tag-box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; rx: 6; }
+  </style>
+
+  <rect class="bg" width="100%" height="100%" rx="10"/>
+  <text class="text-title" x="40" y="32">Short-Run Total Cost Curves: TFC, TVC, and TC</text>
+  <text class="text-sub" x="40" y="50">TC = TFC + TVC (TC and TVC are parallel; vertical distance = TFC at all output levels)</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="80" y1="380" x2="80" y2="70"/>
+  <line class="axis" x1="80" y1="380" x2="700" y2="380"/>
+  <text class="text-label" x="25" y="80">Cost (Rs.)</text>
+  <text class="text-label" x="620" y="405">Output (Q)</text>
+  <text class="text-label" x="65" y="395">O</text>
+
+  <!-- 1. TFC Curve: Horizontal Line at y = 280 (TFC = 60) -->
+  <line class="tfc-curve" x1="80" y1="280" x2="660" y2="280"/>
+  <text class="text-label" x="670" y="285" fill="#64748b">TFC</text>
+  <circle class="point-dot" cx="80" cy="280" r="5" fill="#64748b"/>
+  <text class="text-label" x="40" y="285">TFC_0</text>
+
+  <!-- 2. TVC Curve: Inverted S-curve from Origin (80, 380) -->
+  <!-- Starts concave downward, then inflection, then convex upward -->
+  <path class="tvc-curve" d="M 80 380 C 220 360, 320 310, 420 250 C 500 200, 580 140, 640 90"/>
+  <text class="text-label" x="650" y="95" fill="#ea580c">TVC</text>
+
+  <!-- 3. TC Curve: Exactly Parallel to TVC, Starting at (80, 280) -->
+  <path class="tc-curve" d="M 80 280 C 220 260, 320 210, 420 150 C 500 100, 580 40, 620 10"/>
+  <text class="text-label" x="630" y="20" fill="#2563eb">TC (TFC + TVC)</text>
+
+  <!-- Vertical Gap Indicators -->
+  <!-- At Q1 (x = 350) -->
+  <line class="guide-line" x1="350" y1="190" x2="350" y2="290"/>
+  <circle class="point-dot" cx="350" cy="190" r="4" fill="#2563eb"/>
+  <circle class="point-dot" cx="350" cy="290" r="4" fill="#ea580c"/>
+  <text class="text-sub" x="360" y="245" fill="#64748b">Gap = TFC</text>
+
+  <!-- At Q2 (x = 520) -->
+  <line class="guide-line" x1="520" y1="90" x2="520" y2="190"/>
+  <circle class="point-dot" cx="520" cy="90" r="4" fill="#2563eb"/>
+  <circle class="point-dot" cx="520" cy="190" r="4" fill="#ea580c"/>
+  <text class="text-sub" x="530" y="145" fill="#64748b">Gap = TFC</text>
+
+  <!-- Legend / Key Explanations -->
+  <g transform="translate(100, 90)">
+    <rect class="tag-box" width="200" height="75"/>
+    <text class="text-sub" x="10" y="20" fill="#64748b">• <b>TFC:</b> Constant &amp; horizontal</text>
+    <text class="text-sub" x="10" y="40" fill="#ea580c">• <b>TVC:</b> Inverse S-shape from origin</text>
+    <text class="text-sub" x="10" y="60" fill="#2563eb">• <b>TC:</b> Starts at (0, TFC), parallel to TVC</text>
+  </g>
+</svg>

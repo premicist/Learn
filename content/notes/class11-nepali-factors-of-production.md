@@ -16,13 +16,7 @@ toc: []
 
 कुनै पनि वस्तु तथा सेवा उत्पादन गर्न प्रयोग गरिने भौतिक तथा अभौतिक स्रोतसाधनहरूलाई **उत्पादनका साधनहरू (Factors of Production वा Inputs)** भनिन्छ। अर्थशास्त्रमा उत्पादनका साधनहरूलाई चार प्रमुख वर्गमा विभाजन गरिन्छ:
 
-```mermaid
-graph TD
-    Root["<b>उत्पादनका चार साधनहरू (4 Factors of Production)</b>"] --> F1["<b>१. भूमि (Land)</b> <br> प्रकृतिका निःशुल्क उपहारहरू <br> <i>प्रतिफल: लगान / भाडा (Rent)</i>"]
-    Root --> F2["<b>२. श्रम (Labour)</b> <br> मानवको शारीरिक र मानसिक प्रयास <br> <i>प्रतिफल: ज्याला / तलब (Wages)</i>"]
-    Root --> F3["<b>३. पुँजी (Capital)</b> <br> मानवनिर्मित उत्पादनका साधनहरू <br> <i>प्रतिफल: ब्याज (Interest)</i>"]
-    Root --> F4["<b>४. सङ्गठन / उद्यमशीलता (Organisation)</b> <br> साधनको संयोजन र जोखिम वहन <br> <i>प्रतिफल: नाफा (Profit)</i>"]
-```
+![class11 nepali factors of production diagram 1](/flowcharts/class-11-nepali/class11-nepali-factors-of-production-diagram-1.svg)
 
 ---
 

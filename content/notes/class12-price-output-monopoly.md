@@ -10,16 +10,7 @@ unitId: class12-u2-3
 
 A **Monopoly** is a market structure with a **single seller** of a unique product with **no close substitutes** and **high barriers to entry**. Because the single firm is the entire industry, the monopolist is a **Price Maker** facing a downward-sloping demand curve ($AR > MR$). This lesson explains how a monopolist determines its profit-maximizing price and output in both the short run and the long run.
 
-```mermaid
-flowchart TD
-    M["<b>Monopoly Price &amp; Output Determination</b>"]
-    M --> Cond["<b>Equilibrium Conditions</b><br>1. MR = MC<br>2. MC cuts MR from below"]
-    M --> SR["<b>Short-Run Equilibrium</b>"]
-    SR --> P1["<b>Supernormal Profit:</b> AR &gt; AC (Standard)"]
-    SR --> P2["<b>Normal Profit:</b> AR = AC"]
-    SR --> P3["<b>Loss State:</b> AR &lt; AC (P ≥ AVC)"]
-    M --> LR["<b>Long-Run Equilibrium</b><br>Entry Barriers Protected → <b>Supernormal Profit (AR &gt; LAC)</b>"]
-```
+![class12 price output monopoly diagram 1](/flowcharts/class-12/class12-price-output-monopoly-diagram-1.svg)
 
 ---
 
@@ -44,13 +35,7 @@ A monopoly firm maximizes profit and reaches equilibrium when two conditions are
 ### Q2. Explain the three short-run profit situations of a monopoly firm with diagrams.
 **Answer:**
 
-```mermaid
-flowchart TD
-    States["<b>Three Short-Run States of a Monopolist</b>"]
-    States --> S1["<b>1. Supernormal Profit (Most Common)</b><br>AR &gt; AC at equilibrium output Q*"]
-    States --> S2["<b>2. Normal Profit (Break-Even)</b><br>AR = AC at equilibrium output Q*"]
-    States --> S3["<b>3. Loss State</b><br>AR &lt; AC at equilibrium output Q* (if P ≥ AVC)"]
-```
+![class12 price output monopoly diagram 2](/flowcharts/class-12/class12-price-output-monopoly-diagram-2.svg)
 
 #### 1. Supernormal (Abnormal) Profit ($AR > AC$):
 * **Explanation:** This is the most common state for a monopolist. Because of pricing power and lack of substitutes, the firm sets a price ($P$) well above its average cost ($AC$).
@@ -58,20 +43,7 @@ flowchart TD
   $$\text{Per-unit Profit} = AR - AC = P - C$$
   $$\text{Total Supernormal Profit} = \text{Shaded Rectangle } P A B C = (P - C) \times Q^*$$
 
-```
-Price / Cost (Rs.)
-   |          SMC
- P +-------* A            SAC
-   |       | \           /
- C +-------* B--\-------/
-   |       |     \     /
-   |       |      \   /
-   |       |       \ /
-   |       |        * E (MR = MC)     AR (Demand)
-   |       |       / \
- 0 +-------+------+---\--------------> Output (Q)
-   0       Q*          \ MR
-```
+![Monopoly Short-Run Equilibrium and Three Profit States](/images/uploads/monopoly-short-run-equilibrium-three-states.svg)
 
 #### 2. Normal Profit / Break-Even State ($AR = AC$):
 * **Explanation:** Occurs if market demand is just sufficient to cover costs, and the $AR$ curve is tangent to the $SAC$ curve at equilibrium output.
@@ -104,29 +76,14 @@ Price / Cost (Rs.)
 **Answer:**
 In the **long run**, the monopolist can adjust all plant sizes and machinery. Because **strong barriers to entry** prevent new competitors from entering the market, supernormal profits are not competed away.
 
-```mermaid
-flowchart LR
-    E["<b>Long-Run Equilibrium:</b><br>LMC = MR &amp; LMC cuts MR from below"] --> P["<b>Price P* &gt; LAC</b><br>High Markup above Cost"] --> Profit["<b>Permanent Supernormal Profit</b><br>Protected by Barriers to Entry"]
-```
+![class12 price output monopoly diagram 3](/flowcharts/class-12/class12-price-output-monopoly-diagram-3.svg)
 
 #### Long-Run Equilibrium Conditions:
 1. **$LMC = MR$**
 2. **$LMC$ cuts $MR$ from below**
 3. **$P = AR > LAC$** (Supernormal profit is sustained indefinitely).
 
-```
-Price / Cost (Rs.)
-   |          LMC
- P +-------* A            LAC
-   |       | \           /
- C +-------* B--\-------/
-   |       |     \     /
-   |       |      \   /
-   |       |        * E (LMC = MR)
-   |       |       / \                 AR (Demand)
- 0 +-------+------+---\--------------> Output (Q)
-   0       Q*          \ MR
-```
+![Monopoly Long-Run Equilibrium and Sustained Supernormal Profit](/images/uploads/monopoly-equilibrium-profit.svg)
 
 ---
 

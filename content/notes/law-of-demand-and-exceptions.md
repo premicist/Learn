@@ -78,14 +78,7 @@ The demand curve slopes **downward from left to right** (negative slope), graphi
 
 Economists identify **five major reasons** why consumers buy more at lower prices:
 
-```mermaid
-flowchart TD
-    D["<b>Why Demand Curves Slope Downward</b>"] --> R1["<b>1. Diminishing Marginal Utility</b><br>MU declines as consumption rises"]
-    D --> R2["<b>2. Real Income Effect</b><br>Lower price raises purchasing power"]
-    D --> R3["<b>3. Substitution Effect</b><br>Cheaper good replaces alternatives"]
-    D --> R4["<b>4. New Buyers Enter</b><br>Lower price attracts new buyers"]
-    D --> R5["<b>5. Multiple Uses</b><br>Lower price enables secondary uses"]
-```
+![law of demand and exceptions diagram 1](/flowcharts/introduction-to-economics/law-of-demand-and-exceptions-diagram-1.svg)
 
 1. **Law of Diminishing Marginal Utility (DMU):**  
    According to Alfred Marshall, as a consumer consumes more units of a good, the marginal utility ($MU$) derived from each additional unit continuously declines. A rational consumer will only buy additional units if the price falls ($P_x = \dfrac{MU_x}{MU_m}$).

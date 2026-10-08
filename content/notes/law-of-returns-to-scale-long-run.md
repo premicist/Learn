@@ -16,11 +16,7 @@ toc: []
 
 In the long run, all factors of production are variable. A firm can adjust both **Labour ($L$)** and **Capital ($K$)** to produce output.
 
-```mermaid
-flowchart LR
-    A["<b>Isoquant Curve</b><br>Technical input combinations yielding same output"] --> C["<b>Producer's Equilibrium</b><br>Least-Cost Input Combination<br>(MPL / w) = (MPK / r)"]
-    B["<b>Isocost Line</b><br>Cost budget constraint: C = wL + rK"] --> C
-```
+![law of returns to scale long run diagram 1](/flowcharts/introduction-to-economics/law-of-returns-to-scale-long-run-diagram-1.svg)
 
 ### A. The Isoquant (Equal Product Curve)
 An **Isoquant** is a curve showing all possible technical combinations of two variable inputs (Labor and Capital) that yield the **exact same level of total physical output**.

@@ -136,7 +136,7 @@ def generate_ppc_from_schedule_svg() -> str:
 </svg>"""
 
 
-def generate_ppc_points_svg() -> str:
+def generate_ppc_efficiency_points_svg() -> str:
     return """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="auto" role="img" aria-label="Production Possibility Curve showing points P1, G, and H">
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -334,11 +334,264 @@ def generate_ppc_shifts_svg() -> str:
 </svg>"""
 
 
+def generate_ppc_linear_opportunity_cost_svg() -> str:
+    """PPC Diagram comparing Constant Opportunity Cost (Linear) vs Increasing Opportunity Cost (Concave)."""
+    return """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" width="100%" height="auto" role="img" aria-label="Comparison between Linear PPC (Constant Opportunity Cost) and Concave PPC (Increasing Opportunity Cost)">
+  <defs>
+    <marker id="arrow-lin" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#122a3a"/>
+    </marker>
+    <filter id="panel-shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: var(--paper-card, #ffffff); }
+    .axis { stroke: var(--ink, #122a3a); stroke-width: 2.2; stroke-linecap: round; }
+    .linear-curve { stroke: #0284c7; stroke-width: 3.5; stroke-linecap: round; }
+    .concave-curve { stroke: #146b63; stroke-width: 3.5; stroke-linecap: round; }
+    .slope-tri { fill: #e0f2fe; stroke: #0284c7; stroke-width: 1.5; }
+    .slope-tri-conc { fill: #ccfbf1; stroke: #146b63; stroke-width: 1.5; }
+    .panel-box { fill: var(--paper, #f8fafc); stroke: var(--line, #cbd5e1); stroke-width: 1.2; rx: 10; }
+    .panel-header { font-family: 'Manrope', system-ui, sans-serif; font-size: 15px; font-weight: 800; }
+    .axis-txt { font-family: 'Manrope', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; fill: var(--ink, #122a3a); }
+    .math-txt { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; fill: var(--ink-soft, #47607a); }
+    .note-txt { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 600; fill: var(--ink-soft, #47607a); }
+    .dot-node { stroke-width: 2.5; stroke: #ffffff; }
+  </style>
+
+  <!-- Background Card -->
+  <rect class="bg" width="100%" height="100%" rx="14"/>
+
+  <!-- ==================== PANEL 1: LINEAR PPC (CONSTANT OPPORTUNITY COST) ==================== -->
+  <g transform="translate(20, 20)">
+    <!-- Panel Container -->
+    <rect class="panel-box" width="405" height="460" filter="url(#panel-shadow)"/>
+    <text class="panel-header" x="20" y="32" fill="#0284c7">Case 1: Linear PPC (Straight Line)</text>
+    <text class="note-txt" x="20" y="52">Constant Opportunity Cost (MRT = Constant)</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="60" y1="360" x2="60" y2="80" marker-end="url(#arrow-lin)"/>
+    <line class="axis" x1="60" y1="360" x2="370" y2="360" marker-end="url(#arrow-lin)"/>
+    <text class="axis-txt" x="15" y="75">Good Y</text>
+    <text class="axis-txt" x="370" y="385" text-anchor="end">Good X</text>
+    <text class="axis-txt" x="48" y="375">0</text>
+
+    <!-- Linear Downward Straight Line: (60, 110) to (330, 360) -->
+    <line class="linear-curve" x1="60" y1="110" x2="330" y2="360"/>
+
+    <!-- Step Slope Triangles (Showing equal sacrifice: ΔY/ΔX = Constant) -->
+    <!-- Triangle 1 -->
+    <polygon class="slope-tri" points="120,165 180,165 180,220"/>
+    <text class="math-txt" x="186" y="196">ΔY₁</text>
+    <text class="math-txt" x="140" y="156">ΔX₁</text>
+
+    <!-- Triangle 2 -->
+    <polygon class="slope-tri" points="210,248 270,248 270,303"/>
+    <text class="math-txt" x="276" y="278">ΔY₂</text>
+    <text class="math-txt" x="230" y="240">ΔX₂</text>
+
+    <!-- Points -->
+    <circle class="dot-node" cx="60" cy="110" r="5" fill="#0284c7"/>
+    <text class="axis-txt" x="42" y="115">A</text>
+    <circle class="dot-node" cx="330" cy="360" r="5" fill="#0284c7"/>
+    <text class="axis-txt" x="332" y="380">B</text>
+
+    <!-- Explanation Box at Bottom -->
+    <rect x="20" y="395" width="365" height="52" rx="6" fill="var(--paper-card, #ffffff)" stroke="var(--line, #cbd5e1)"/>
+    <text class="note-txt" x="30" y="416">• Resources are <tspan font-weight="800" fill="#0284c7">perfect substitutes</tspan> between goods</text>
+    <text class="math-txt" x="30" y="435">• MRT = ΔY / ΔX = constant slope everywhere</text>
+  </g>
+
+  <!-- ==================== PANEL 2: CONCAVE PPC (INCREASING OPPORTUNITY COST) ==================== -->
+  <g transform="translate(455, 20)">
+    <!-- Panel Container -->
+    <rect class="panel-box" width="405" height="460" filter="url(#panel-shadow)"/>
+    <text class="panel-header" x="20" y="32" fill="#146b63">Case 2: Concave PPC (Bowed-Out)</text>
+    <text class="note-txt" x="20" y="52">Increasing Opportunity Cost (MRT Rises)</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="60" y1="360" x2="60" y2="80" marker-end="url(#arrow-lin)"/>
+    <line class="axis" x1="60" y1="360" x2="370" y2="360" marker-end="url(#arrow-lin)"/>
+    <text class="axis-txt" x="15" y="75">Good Y</text>
+    <text class="axis-txt" x="370" y="385" text-anchor="end">Good X</text>
+    <text class="axis-txt" x="48" y="375">0</text>
+
+    <!-- Concave Curve: (60, 100) to (330, 360) -->
+    <path class="concave-curve" d="M 60 100 Q 180 115 260 210 T 330 360"/>
+
+    <!-- Step Triangles Showing Increasing Sacrifice -->
+    <!-- Triangle 1 (Flatter, smaller ΔY) -->
+    <polygon class="slope-tri-conc" points="110,110 160,110 160,135"/>
+    <text class="math-txt" x="166" y="125">ΔY₁ (small)</text>
+    <text class="math-txt" x="125" y="103">ΔX</text>
+
+    <!-- Triangle 2 (Much Steeper, larger ΔY) -->
+    <polygon class="slope-tri-conc" points="230,195 280,195 280,265"/>
+    <text class="math-txt" x="286" y="235">ΔY₂ (larger)</text>
+    <text class="math-txt" x="245" y="188">ΔX</text>
+
+    <!-- Points -->
+    <circle class="dot-node" cx="60" cy="100" r="5" fill="#146b63"/>
+    <text class="axis-txt" x="42" y="105">A</text>
+    <circle class="dot-node" cx="330" cy="360" r="5" fill="#146b63"/>
+    <text class="axis-txt" x="332" y="380">B</text>
+
+    <!-- Explanation Box at Bottom -->
+    <rect x="20" y="395" width="365" height="52" rx="6" fill="var(--paper-card, #ffffff)" stroke="var(--line, #cbd5e1)"/>
+    <text class="note-txt" x="30" y="416">• Resources are <tspan font-weight="800" fill="#146b63">specialized</tspan> (imperfect substitutes)</text>
+    <text class="math-txt" x="30" y="435">• MRT = ΔY / ΔX increases as more X is produced</text>
+  </g>
+</svg>"""
+
+
+def generate_ppc_movements_and_shifts_svg() -> str:
+    """Comprehensive diagram displaying Movement Along PPC vs Parallel Shifts vs Unilateral Rotations."""
+    return """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="auto" role="img" aria-label="PPC Analysis: Movements along curve vs Shifts in curve vs Rotations of curve">
+  <defs>
+    <marker id="arrow-base" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#122a3a"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <filter id="m-shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: var(--paper-card, #ffffff); }
+    .axis { stroke: var(--ink, #122a3a); stroke-width: 2; stroke-linecap: round; }
+    .p-card { fill: var(--paper, #f8fafc); stroke: var(--line, #cbd5e1); stroke-width: 1.2; rx: 10; }
+    .p-title { font-family: 'Manrope', system-ui, sans-serif; font-size: 13.5px; font-weight: 800; }
+    .p-sub { font-family: 'Manrope', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: var(--ink-soft, #47607a); }
+    .c-base { fill: none; stroke: #146b63; stroke-width: 3; stroke-linecap: round; }
+    .c-out { fill: none; stroke: #16a34a; stroke-width: 3; stroke-linecap: round; }
+    .c-in { fill: none; stroke: #dc2626; stroke-width: 2.8; stroke-dasharray: 5 4; stroke-linecap: round; }
+    .c-rot { fill: none; stroke: #7c3aed; stroke-width: 3; stroke-linecap: round; }
+    .axis-lbl { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 700; fill: var(--ink, #122a3a); }
+    .node-txt { font-family: 'Manrope', system-ui, sans-serif; font-size: 11.5px; font-weight: 800; }
+    .dot-pt { stroke-width: 2.5; stroke: #ffffff; }
+  </style>
+
+  <!-- Background -->
+  <rect class="bg" width="100%" height="100%" rx="14"/>
+
+  <!-- ==================== PANEL 1: MOVEMENT ALONG PPC ==================== -->
+  <g transform="translate(15, 15)">
+    <rect class="p-card" width="295" height="450" filter="url(#m-shadow)"/>
+    <text class="p-title" x="16" y="28" fill="#146b63">1. Movement Along Curve</text>
+    <text class="p-sub" x="16" y="46">Reallocation of Existing Resources</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="45" y1="320" x2="45" y2="75" marker-end="url(#arrow-base)"/>
+    <line class="axis" x1="45" y1="320" x2="265" y2="320" marker-end="url(#arrow-base)"/>
+    <text class="axis-lbl" x="10" y="70">Good Y</text>
+    <text class="axis-lbl" x="265" y="340" text-anchor="end">Good X</text>
+
+    <!-- PPC Curve -->
+    <path class="c-base" d="M 45 100 Q 130 115 190 200 T 240 320"/>
+
+    <!-- Point A & Point B -->
+    <circle class="dot-pt" cx="110" cy="120" r="5.5" fill="#146b63"/>
+    <text class="node-txt" x="118" y="116" fill="#146b63">A</text>
+
+    <circle class="dot-pt" cx="190" cy="200" r="5.5" fill="#146b63"/>
+    <text class="node-txt" x="198" y="196" fill="#146b63">B</text>
+
+    <!-- Movement Arrow along curve -->
+    <path d="M 125 130 Q 155 155 175 185" fill="none" stroke="#b4872a" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arrow-base)"/>
+
+    <!-- Description -->
+    <rect x="14" y="355" width="267" height="80" rx="6" fill="var(--paper-card, #ffffff)" stroke="var(--line, #cbd5e1)"/>
+    <text class="p-sub" x="22" y="375">• Shift from point A to B</text>
+    <text class="p-sub" x="22" y="395">• More Good X produced, less Good Y</text>
+    <text class="p-sub" x="22" y="415" font-weight="700" fill="#146b63">• Total productive capacity is UNCHANGED</text>
+  </g>
+
+  <!-- ==================== PANEL 2: SHIFT IN PPC ==================== -->
+  <g transform="translate(330, 15)">
+    <rect class="p-card" width="295" height="450" filter="url(#m-shadow)"/>
+    <text class="p-title" x="16" y="28" fill="#16a34a">2. Parallel Shifts in PPC</text>
+    <text class="p-sub" x="16" y="46">Change Affecting Both Goods</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="45" y1="320" x2="45" y2="75" marker-end="url(#arrow-base)"/>
+    <line class="axis" x1="45" y1="320" x2="265" y2="320" marker-end="url(#arrow-base)"/>
+    <text class="axis-lbl" x="10" y="70">Good Y</text>
+    <text class="axis-lbl" x="265" y="340" text-anchor="end">Good X</text>
+
+    <!-- Inward Shift (PPC3) -->
+    <path class="c-in" d="M 45 140 Q 105 155 155 220 T 195 320"/>
+    <text class="node-txt" x="200" y="315" fill="#dc2626" font-size="10">PPC₃</text>
+
+    <!-- Base PPC (PPC1) -->
+    <path class="c-base" d="M 45 105 Q 125 120 185 205 T 235 320"/>
+    <text class="node-txt" x="240" y="315" fill="#146b63" font-size="10">PPC₁</text>
+
+    <!-- Outward Shift (PPC2) -->
+    <path class="c-out" d="M 45 75 Q 145 90 215 190 T 270 320"/>
+    <text class="node-txt" x="265" y="310" fill="#16a34a" font-size="10">PPC₂</text>
+
+    <!-- Shift Direction Arrows -->
+    <line x1="150" y1="170" x2="180" y2="145" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arrow-green)"/>
+    <line x1="135" y1="185" x2="105" y2="210" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arrow-red)"/>
+
+    <!-- Description -->
+    <rect x="14" y="355" width="267" height="80" rx="6" fill="var(--paper-card, #ffffff)" stroke="var(--line, #cbd5e1)"/>
+    <text class="p-sub" x="22" y="375"><tspan fill="#16a34a" font-weight="700">Right Shift (PPC₂):</tspan> Growth / More Resources</text>
+    <text class="p-sub" x="22" y="395"><tspan fill="#dc2626" font-weight="700">Left Shift (PPC₃):</tspan> Disaster / War / Depletion</text>
+    <text class="p-sub" x="22" y="415">• Affects production of <tspan font-weight="800">BOTH goods</tspan></text>
+  </g>
+
+  <!-- ==================== PANEL 3: ROTATION OF PPC ==================== -->
+  <g transform="translate(645, 15)">
+    <rect class="p-card" width="295" height="450" filter="url(#m-shadow)"/>
+    <text class="p-title" x="16" y="28" fill="#7c3aed">3. Rotations of PPC</text>
+    <text class="p-sub" x="16" y="46">Tech Change in ONLY ONE Good</text>
+
+    <!-- Axes -->
+    <line class="axis" x1="45" y1="320" x2="45" y2="75" marker-end="url(#arrow-base)"/>
+    <line class="axis" x1="45" y1="320" x2="265" y2="320" marker-end="url(#arrow-base)"/>
+    <text class="axis-lbl" x="10" y="70">Good Y</text>
+    <text class="axis-lbl" x="265" y="340" text-anchor="end">Good X</text>
+
+    <!-- Base PPC: from A(45, 100) to B(210, 320) -->
+    <path class="c-base" d="M 45 100 Q 120 120 170 210 T 210 320"/>
+    <circle class="dot-pt" cx="45" cy="100" r="4.5" fill="#146b63"/>
+    <text class="node-txt" x="30" y="105" fill="#146b63">A</text>
+    <text class="node-txt" x="210" y="338" fill="#146b63" font-size="10.5">B</text>
+
+    <!-- Rotated PPC on X-axis: A(45, 100) to B'(265, 320) -->
+    <path class="c-rot" d="M 45 100 Q 140 120 210 210 T 265 320"/>
+    <text class="node-txt" x="265" y="338" fill="#7c3aed" font-size="10.5">B'</text>
+
+    <!-- Rotation Arrow on X-Axis -->
+    <path d="M 215 305 Q 235 305 255 310" fill="none" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#arrow-base)"/>
+
+    <!-- Description -->
+    <rect x="14" y="355" width="267" height="80" rx="6" fill="var(--paper-card, #ffffff)" stroke="var(--line, #cbd5e1)"/>
+    <text class="p-sub" x="22" y="375">• <tspan fill="#7c3aed" font-weight="700">Rotation on X-axis (AB → AB'):</tspan></text>
+    <text class="p-sub" x="22" y="395">  Tech progress in <tspan font-weight="800">Good X only</tspan></text>
+    <text class="p-sub" x="22" y="415">• Y-axis maximum remains fixed at point A</text>
+  </g>
+</svg>"""
+
+
 def main():
     (OUTPUT_DIR / "ppc-from-schedule.svg").write_text(generate_ppc_from_schedule_svg(), encoding="utf-8")
-    (OUTPUT_DIR / "ppc-efficiency-points.svg").write_text(generate_ppc_points_svg(), encoding="utf-8")
-    print("Generated ppc-from-schedule.svg and ppc-efficiency-points.svg successfully in public/images/uploads/")
+    (OUTPUT_DIR / "ppc-efficiency-points.svg").write_text(generate_ppc_efficiency_points_svg(), encoding="utf-8")
+    (OUTPUT_DIR / "ppc-shifts.svg").write_text(generate_ppc_shifts_svg(), encoding="utf-8")
+    (OUTPUT_DIR / "ppc-linear-opportunity-cost.svg").write_text(generate_ppc_linear_opportunity_cost_svg(), encoding="utf-8")
+    (OUTPUT_DIR / "ppc-movements-and-shifts.svg").write_text(generate_ppc_movements_and_shifts_svg(), encoding="utf-8")
+    print("Generated all PPC diagrams successfully in public/images/uploads/")
 
 
 if __name__ == "__main__":
     main()
+

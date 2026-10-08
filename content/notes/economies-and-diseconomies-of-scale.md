@@ -16,11 +16,7 @@ toc: []
 
 In the long run, when a firm expands its total scale of production by increasing all factor inputs, its unit cost of production changes:
 
-```mermaid
-flowchart LR
-    E["<b>Economies of Scale</b><br>Cost advantages of growth<br>Long-run unit costs fall (LAC ↓)"] --> M["<b>Minimum Efficient Scale (MES)</b><br>Optimal plant capacity<br>Lowest point of LAC"]
-    M --> D["<b>Diseconomies of Scale</b><br>Bureaucracy &amp; coordination loss<br>Long-run unit costs rise (LAC ↑)"]
-```
+![economies and diseconomies of scale diagram 1](/flowcharts/introduction-to-economics/economies-and-diseconomies-of-scale-diagram-1.svg)
 
 * **Economies of Scale:** The cost advantages and cost reductions that a firm experiences as it expands its long-run scale of production, causing the **Long-Run Average Cost ($LAC$) per unit to fall**.
 * **Diseconomies of Scale:** The cost disadvantages that arise when a business grows too large, causing the **Long-Run Average Cost ($LAC$) per unit to rise**.
@@ -58,11 +54,7 @@ When an enterprise expands beyond its optimal capacity, organizational friction 
 
 **External Economies/Diseconomies** accrue to all firms in an industry when the entire industry expands in a geographic cluster, regardless of individual firm size.
 
-```mermaid
-flowchart TD
-    EXT["External Scale Forces"] --> EX1["<b>External Economies (Industry Clusters)</b><br>• Skilled regional labor pools<br>• Specialized supplier hubs<br>• Shared transport infrastructure"]
-    EXT --> EX2["<b>External Diseconomies (Congestion)</b><br>• Bidding wars for local labor &amp; land<br>• Traffic congestion &amp; pollution costs"]
-```
+![economies and diseconomies of scale diagram 2](/flowcharts/introduction-to-economics/economies-and-diseconomies-of-scale-diagram-2.svg)
 
 ### A. External Economies:
 * **Pool of Specialized Labor:** Concentrated industrial clusters (e.g., Pokhara tourism hub, Silicon Valley tech hub) attract specialized workers, reducing recruitment and training costs.

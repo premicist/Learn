@@ -8,6 +8,7 @@ import type { NoteVisualBlock as VisualBlock } from '../data/content'
 import InlineResource from './InlineResource'
 import NoteVisualBlock from './NoteVisualBlock'
 import MermaidDiagram from './MermaidDiagram'
+import DiagramCard from './DiagramCard'
 import 'katex/dist/katex.min.css'
 
 const CHART_COLORS = ['#146b63', '#b4872a', '#b23a2b', '#47607a', '#0e4a45']
@@ -135,6 +136,21 @@ function NoteMarkdown({ content }: { content: string }) {
           const child = Children.toArray(children)[0]
           if (isValidElement(child) && (child.props as { 'data-inline-content'?: boolean })['data-inline-content']) return child
           return <pre>{children}</pre>
+        },
+        img({ src, alt, ...props }) {
+          const image = <img src={src} alt={alt ?? ''} loading="lazy" decoding="async" {...props} />
+          if (typeof src === 'string' && (src.includes('/flowcharts/') || src.endsWith('.svg'))) {
+            return (
+              <DiagramCard
+                alt={alt}
+                imageSrc={src}
+                badge="Flowchart"
+              >
+                {image}
+              </DiagramCard>
+            )
+          }
+          return image
         },
         code(props) {
           const { className, children, ...rest } = props

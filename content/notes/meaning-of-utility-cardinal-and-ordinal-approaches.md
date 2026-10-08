@@ -18,11 +18,7 @@ In economic analysis, **utility** refers to the subjective capacity of a good or
 
 > **Definition:** **Utility** is the **want-satisfying power** of a commodity. It measures the pleasure, satisfaction, or benefit a consumer expects to derive from consuming a good or service.
 
-```mermaid
-flowchart LR
-    A["Consumer Desire / Need"] --> B["Consumption of Commodity"]
-    B --> C["<b>Satisfaction Derived (Utility)</b>"]
-```
+![meaning of utility cardinal and ordinal approaches diagram 1](/flowcharts/introduction-to-economics/meaning-of-utility-cardinal-and-ordinal-approaches-diagram-1.svg)
 
 ### Key Characteristics of Utility:
 1. **Subjective in Nature:** Utility is a psychological feeling that varies from person to person. A cup of coffee yields high utility to a coffee lover, but zero utility to someone who dislikes caffeine.
@@ -36,11 +32,7 @@ flowchart LR
 
 Economists study consumer decision-making through two major analytical approaches:
 
-```mermaid
-flowchart TD
-    U["<b>Approaches to Consumer Utility</b>"] --> C["<b>1. Cardinal Utility Approach</b><br>Alfred Marshall &amp; H.H. Gossen<br>Quantitative Measurement in 'Utils'"]
-    U --> O["<b>2. Ordinal Utility Approach</b><br>J.R. Hicks &amp; R.G.D. Allen<br>Qualitative Ranking &amp; Preference Order"]
-```
+![meaning of utility cardinal and ordinal approaches diagram 2](/flowcharts/introduction-to-economics/meaning-of-utility-cardinal-and-ordinal-approaches-diagram-2.svg)
 
 ### 1. The Cardinal Utility Approach (Marshallian View)
 * **Core Premise:** Utility is a measurable physical quantity, just like weight (kg), temperature (degrees), or height (meters).

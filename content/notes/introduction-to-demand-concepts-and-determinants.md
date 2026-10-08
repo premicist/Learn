@@ -18,12 +18,7 @@ In everyday conversation, the words *desire*, *want*, and *demand* are often use
 
 A mere desire or wish to buy something does not create economic demand unless it is backed by purchasing power and the willingness to spend.
 
-```mermaid
-flowchart LR
-    A["Desire for the Commodity"] --> D["<b>Effective Economic Demand</b>"]
-    B["Ability to Pay (Purchasing Power)"] --> D
-    C["Willingness to Spend Money"] --> D
-```
+![introduction to demand concepts and determinants diagram 1](/flowcharts/introduction-to-economics/introduction-to-demand-concepts-and-determinants-diagram-1.svg)
 
 > **Definition:** **Demand** is the quantity of a commodity that a consumer is both **willing and able to purchase** at a specific price during a given period of time.
 

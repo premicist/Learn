@@ -10,15 +10,7 @@ unitId: class12-u1-1
 
 In modern economies, goods and services are rarely produced by a single individual from start to finish. Instead, production is broken down into multiple separate tasks performed by specialized workers. This lesson explores the principles of **division of labour**, **specialization**, and the **efficiency of labour**.
 
-```mermaid
-flowchart TD
-    A["<b>Production Process</b>"] --> B["<b>Division of Labour</b><br>Breaking production into distinct steps"]
-    B --> C["<b>Specialization</b><br>Workers master specific tasks"]
-    C --> D["<b>Key Outcomes</b>"]
-    D --> D1["Higher Productivity &amp; Output"]
-    D --> D2["Lower Per-Unit Cost"]
-    D --> D3["Risk of Monotony &amp; Narrow Skills"]
-```
+![class12 division and specialization of labour diagram 1](/flowcharts/class-12/class12-division-and-specialization-of-labour-diagram-1.svg)
 
 ---
 
@@ -50,13 +42,7 @@ In a garment factory producing shirts:
 **Answer:**
 Division of labour generally takes three main forms:
 
-```mermaid
-flowchart TD
-    Forms["<b>Forms of Division of Labour</b>"]
-    Forms --> S["<b>1. Simple (Occupational)</b><br>Division by complete trade/profession<br>(Doctor, Farmer, Carpenter)"]
-    Forms --> C["<b>2. Complex (Process)</b><br>Subdividing a single manufacturing process<br>(Assembly line: Cutting, Stitching, Packing)"]
-    Forms --> T["<b>3. Territorial (Geographical)</b><br>Regional specialization based on climate/resources<br>(Tea in Ilam, Apples in Mustang)"]
-```
+![class12 division and specialization of labour diagram 2](/flowcharts/class-12/class12-division-and-specialization-of-labour-diagram-2.svg)
 
 #### 1. Simple Division of Labour (Occupational Division):
 * Workers specialize in an entire profession or trade according to their interest or social role.
@@ -110,16 +96,7 @@ flowchart TD
 ### Q5. What are the main Advantages (Merits) of Division of Labour?
 **Answer:**
 
-```mermaid
-flowchart TD
-    Adv["<b>Advantages of Division of Labour</b>"]
-    Adv --> A1["<b>1. Higher Productivity:</b> Mass output per hour"]
-    Adv --> A2["<b>2. Lower Production Cost:</b> Economies of scale"]
-    Adv --> A3["<b>3. Skill Development:</b> Practice makes workers perfect"]
-    Adv --> A4["<b>4. Time & Tool Saving:</b> No switching between jobs"]
-    Adv --> A5["<b>5. Right Person for Right Job:</b> Matches natural talent"]
-    Adv --> A6["<b>6. Encourages Inventions:</b> Simpler tasks allow machine automation"]
-```
+![class12 division and specialization of labour diagram 3](/flowcharts/class-12/class12-division-and-specialization-of-labour-diagram-3.svg)
 
 #### Detailed Explanation:
 1. **Increase in Labour Productivity and Total Output:**
@@ -140,15 +117,7 @@ flowchart TD
 ### Q6. What are the main Disadvantages (Demerits / Limitations) of Division of Labour?
 **Answer:**
 
-```mermaid
-flowchart TD
-    Dis["<b>Disadvantages of Division of Labour</b>"]
-    Dis --> D1["<b>1. Monotony & Boredom:</b> Repetitive work kills joy"]
-    Dis --> D2["<b>2. Loss of Craftsmanship:</b> Worker never sees whole product"]
-    Dis --> D3["<b>3. Risk of Unemployment:</b> Narrow skills reduce mobility"]
-    Dis --> D4["<b>4. High Interdependence:</b> One delay stops entire line"]
-    Dis --> D5["<b>5. Production Bottlenecks:</b> Absenteeism halts workflow"]
-```
+![class12 division and specialization of labour diagram 4](/flowcharts/class-12/class12-division-and-specialization-of-labour-diagram-4.svg)
 
 #### Detailed Explanation:
 1. **Monotony and Psychological Fatigue:**
@@ -184,16 +153,7 @@ If Worker A produces **50 units of shirts in 8 hours** and Worker B produces **8
 **Answer:**
 The efficiency of labour in an economy depends on several key determinants:
 
-```mermaid
-flowchart TD
-    Eff["<b>Determinants of Labour Efficiency</b>"]
-    Eff --> E1["<b>1. Education &amp; Technical Training</b><br>Skilled and educated workers produce faster"]
-    Eff --> E2["<b>2. Wages &amp; Financial Incentives</b><br>Fair pay, bonuses, and social security motivate workers"]
-    Eff --> E3["<b>3. Working Environment</b><br>Lighting, ventilation, safety, and modern tools"]
-    Eff --> E4["<b>4. Health &amp; Physical Fitness</b><br>Good nutrition and healthcare sustain stamina"]
-    Eff --> E5["<b>5. Climatic Conditions</b><br>Moderate climates enhance stamina over extremes"]
-    Eff --> E6["<b>6. Quality of Capital &amp; Technology</b><br>Advanced machinery multiplies worker output"]
-```
+![class12 division and specialization of labour diagram 5](/flowcharts/class-12/class12-division-and-specialization-of-labour-diagram-5.svg)
 
 1. **Education, Skills, and Technical Training:**
    * Educated, technically trained, and literate workers understand instructions quickly, make fewer errors, and adapt readily to modern technology.

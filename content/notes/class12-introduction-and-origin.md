@@ -10,18 +10,7 @@ unitId: class12-u1-1
 
 Economics is the study of how individuals, businesses, and societies make decisions when faced with limited resources. This lesson explores the origin of the subject, its historical definitions, and the primary branches of economic analysis.
 
-```mermaid
-flowchart TD
-    A["<b>Economics</b><br>Origin: Greek 'Oikonomia'"] --> B["<b>Core Problem</b><br>Unlimited Wants vs Scarce Resources"]
-    A --> C["<b>Evolution of Definitions</b>"]
-    C --> C1["Wealth (Adam Smith - 1776)"]
-    C --> C2["Welfare (Alfred Marshall - 1890)"]
-    C --> C3["Scarcity (Lionel Robbins - 1932)"]
-    C --> C4["Growth (Paul Samuelson - 1948)"]
-    A --> D["<b>Branches of Economics</b>"]
-    D --> D1["Microeconomics & Macroeconomics"]
-    D --> D2["Positive & Normative Economics"]
-```
+![class12 introduction and origin diagram 1](/flowcharts/class-12/class12-introduction-and-origin-diagram-1.svg)
 
 ---
 
@@ -64,14 +53,7 @@ Combined, *Oikonomia* originally meant **"the art of household management"**. Ju
 
 Over the centuries, economic thinking evolved through four prominent stages:
 
-```mermaid
-timeline
-    title Evolution of Economic Definitions
-    1776 : Adam Smith : Classical School : "Science of Wealth"
-    1890 : Alfred Marshall : Neoclassical School : "Study of Material Welfare"
-    1932 : Lionel Robbins : Modern Analytic View : "Science of Scarcity & Choice"
-    1948 : Paul Samuelson : Modern Dynamic View : "Growth & Resource Allocation"
-```
+![class12 introduction and origin diagram 2](/flowcharts/class-12/class12-introduction-and-origin-diagram-2.svg)
 
 ---
 
@@ -125,11 +107,7 @@ In his book *An Essay on the Nature and Significance of Economic Science* (1932)
 3. **Alternative Uses of Resources:** Scarce resources can be put to multiple different uses (for example, electricity can be used to run factories, light homes, or power vehicles; a plot of land can grow crops or support a factory).
 4. **Urgency of Wants & Choice:** Since wants differ in urgency and resources are scarce, people must make **choices** on how to allocate their means.
 
-```mermaid
-flowchart LR
-    A["Unlimited Wants (Ends)"] --- C["<b>Problem of Choice</b><br>(Economics)"]
-    B["Scarce Resources with Alternative Uses (Means)"] --- C
-```
+![class12 introduction and origin diagram 3](/flowcharts/class-12/class12-introduction-and-origin-diagram-3.svg)
 
 #### Why Robbins' Definition is Superior:
 * **Universal Applicability:** Applies to all societies—capitalist, socialist, mixed, rich, or poor—because scarcity and choice exist everywhere.
@@ -156,11 +134,7 @@ flowchart LR
 
 ### Q8. Distinguish between Microeconomics and Macroeconomics.
 
-```mermaid
-flowchart TD
-    A["<b>Economics</b>"] --> B["<b>Microeconomics</b><br>Individual Units (Firms, Households, Markets)"]
-    A --> C["<b>Macroeconomics</b><br>Aggregate Economy (GDP, Inflation, Employment)"]
-```
+![class12 introduction and origin diagram 4](/flowcharts/class-12/class12-introduction-and-origin-diagram-4.svg)
 
 **Answer:**
 The terms *Microeconomics* and *Macroeconomics* were coined by the Norwegian economist **Ragnar Frisch** in 1933.
@@ -182,11 +156,7 @@ The terms *Microeconomics* and *Macroeconomics* were coined by the Norwegian eco
 
 **Answer:**
 
-```mermaid
-flowchart LR
-    A["<b>Economic Statements</b>"] --> B["<b>Positive Economics</b><br>• What is / Facts<br>• Verifiable with Data<br>• Objective"]
-    A --> C["<b>Normative Economics</b><br>• What ought to be / Opinions<br>• Value Judgments<br>• Subjective"]
-```
+![class12 introduction and origin diagram 5](/flowcharts/class-12/class12-introduction-and-origin-diagram-5.svg)
 
 | Basis | Positive Economics | Normative Economics |
 | :--- | :--- | :--- |
