@@ -55,7 +55,15 @@ const CURVE_TEMPLATES: Record<string, () => any[]> = {
   ]) as any[],
 }
 
-const TEMPLATE_KEYS = Object.keys(CURVE_TEMPLATES)
+const BUTTONS: { key: string; label: string; emoji: string; desc: string; color: string }[] = [
+  { key: 'axes',        label: 'Axes',          emoji: '📐',  desc: 'P & Q axes',               color: '#111' },
+  { key: 'demand',      label: 'Demand',        emoji: '📉',  desc: 'Downward D curve',         color: '#e63946' },
+  { key: 'supply',      label: 'Supply',        emoji: '📈',  desc: 'Upward S curve',           color: '#2a9d8f' },
+  { key: 'dd_supply',   label: 'D & S',         emoji: '⚖️',  desc: 'Both curves together',     color: '#111' },
+  { key: 'cost_curves', label: 'Cost Curves',   emoji: '💰',  desc: 'MC, AC, AVC',              color: '#e76f51' },
+  { key: 'revenue_curves', label: 'Revenue',    emoji: '📊',  desc: 'TR, AR = MR = P',          color: '#457b9d' },
+  { key: 'ppc',         label: 'PPC',           emoji: '🔄',  desc: 'Production frontier',      color: '#6a4c93' },
+]
 
 interface WhiteboardCanvasProps {
   initialData?: any
@@ -86,15 +94,20 @@ function WhiteboardCanvas({ initialData, handleChange, clearCanvas }: Whiteboard
         <h3>Insert Curve</h3>
         <p className="whiteboard-palette__hint">Click to add to canvas</p>
         <div className="whiteboard-palette__grid">
-          {TEMPLATE_KEYS.map((key) => (
+          {BUTTONS.map((btn) => (
             <button
-              key={key}
+              key={btn.key}
               type="button"
               className="whiteboard-palette__btn"
-              onClick={() => handleInsert(key)}
-              title={key}
+              style={{ borderLeftColor: btn.color }}
+              onClick={() => handleInsert(btn.key)}
+              title={btn.desc}
             >
-              {key}
+              <span className="whiteboard-palette__btn-emoji">{btn.emoji}</span>
+              <span className="whiteboard-palette__btn-text">
+                <span className="whiteboard-palette__btn-label">{btn.label}</span>
+                <span className="whiteboard-palette__btn-desc">{btn.desc}</span>
+              </span>
             </button>
           ))}
         </div>
