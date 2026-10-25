@@ -8,8 +8,8 @@ export default defineConfig({
   // show a blank page. Leave as '/' only if you set up a custom domain.
   base: '/',
   define: {
-    // Excalidraw reads this to choose its build (React vs Preact).
-    // Must be present since Vite strips env vars by default.
+    // Excalidraw requires this in Vite to choose the React build over Preact
+    // and avoid "ReferenceError: process is not defined" in browser.
     'process.env.IS_PREACT': JSON.stringify('false'),
   },
 })
