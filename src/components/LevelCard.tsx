@@ -10,14 +10,39 @@ type LevelCardProps = {
 }
 
 function LevelCard({ level, subjectCount, index, progress, isUserLevel }: LevelCardProps) {
+  const circumference = 72.26
+  const strokeOffset = progress
+    ? Math.max(0, circumference - (circumference * Math.min(100, Math.max(0, progress.percent))) / 100)
+    : circumference
+
   return (
     <Link to={`/levels/${level.id}`} className={`level-card ${isUserLevel ? 'level-card--active-track' : ''}`}>
-      {typeof index === 'number' && (
-        <span className="level-card__number">
-          {isUserLevel ? '★ YOUR TRACK · ' : ''}
-          {String(index + 1).padStart(2, '0')}
-        </span>
-      )}
+      <div className="level-card__header-row">
+        {typeof index === 'number' && (
+          <span className="level-card__number">
+            {isUserLevel ? '★ YOUR TRACK · ' : ''}
+            {String(index + 1).padStart(2, '0')}
+          </span>
+        )}
+        {progress && progress.total > 0 && (
+          <div className="radial-progress-ring radial-progress-ring--sm" title={`${progress.percent}% completed`}>
+            <svg width="30" height="30" viewBox="0 0 30 30" className="radial-progress-ring__svg" aria-hidden="true">
+              <circle cx="15" cy="15" r="11.5" className="radial-progress-ring__track" />
+              <circle
+                cx="15"
+                cy="15"
+                r="11.5"
+                className="radial-progress-ring__fill"
+                stroke="var(--teal)"
+                strokeDasharray={circumference}
+                strokeDashoffset={strokeOffset}
+              />
+            </svg>
+            <span className="radial-progress-ring__text">{progress.percent}%</span>
+          </div>
+        )}
+      </div>
+
       <h3>{level.title}</h3>
       <p>{level.description}</p>
       <span className="level-card__count">

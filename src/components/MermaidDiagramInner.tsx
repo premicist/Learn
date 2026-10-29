@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import mermaid from 'mermaid'
+import DOMPurify from 'dompurify'
 import DiagramCard from './DiagramCard'
 
 mermaid.initialize({
   startOnLoad: false,
   theme: 'neutral',
-  securityLevel: 'loose',
+  securityLevel: 'strict',
   fontFamily: 'inherit',
   fontSize: 13,
   flowchart: {
@@ -80,7 +81,7 @@ export default function MermaidDiagramInner({ chart, title, caption }: MermaidDi
         if (!trimmed) return
         const { svg: renderedSvg } = await mermaid.render(cleanId, trimmed)
         if (isMounted) {
-          setSvg(processSvg(renderedSvg))
+          setSvg(processSvg(DOMPurify.sanitize(renderedSvg, { USE_PROFILES: { svg: true } })))
         }
       } catch (err) {
         if (isMounted) {

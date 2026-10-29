@@ -91,6 +91,30 @@ export async function submitScheduledTest(submission: ScheduledTestSubmission): 
     console.warn('Supabase is not configured — this scheduled-test submission was NOT saved.')
     return { ok: false, reason: 'not-configured' }
   }
+
+  // 1. Attempt secure, server-verified scoring RPC
+  try {
+    const { data, error } = await supabase.rpc('submit_scheduled_test_verified', {
+      p_scheduled_test_id: submission.scheduled_test_id,
+      p_subject_id: submission.subject_id,
+      p_student_name: submission.student_name,
+      p_class: submission.class,
+      p_section: submission.section,
+      p_roll_no: submission.roll_no,
+      p_answers: submission.answers,
+    })
+
+    if (!error && data && typeof data === 'object') {
+      const res = data as { ok?: boolean; reason?: string; message?: string }
+      if (res.ok) return { ok: true }
+      if (res.reason === 'duplicate') return { ok: false, reason: 'duplicate' }
+      if (res.reason) return { ok: false, reason: 'error', message: res.message || res.reason }
+    }
+  } catch {
+    // Fall back to direct table insert if RPC is not provisioned
+  }
+
+  // 2. Direct table insert fallback
   const { error } = await supabase.from('scheduled_test_submissions').insert(submission)
   if (error?.code === '23505') return { ok: false, reason: 'duplicate' }
   if (error) return { ok: false, reason: 'error', message: error.message }

@@ -5,6 +5,7 @@ import LevelCard from '../components/LevelCard'
 import SubjectCard from '../components/SubjectCard'
 import Seo from '../components/Seo'
 import PersonalizationModal from '../components/PersonalizationModal'
+import InteractiveMarketCurve from '../components/InteractiveMarketCurve'
 import { useLessonProgress } from '../utils/useLessonProgress'
 import { useBookmarks } from '../utils/useBookmarks'
 import { useStudentProfile } from '../utils/useStudentProfile'
@@ -111,12 +112,66 @@ function Home() {
 
   const nextNoteToStudy = upNextNotes[0] || activeSubjectNotes[0] || notes[0]
 
+  // Generate the last 7 days for the weekly habit strip
+  const last7Days = useMemo(() => {
+    const days: { dateStr: string; dayLabel: string; dayNum: number; isToday: boolean; isActive: boolean }[] = []
+    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    const today = new Date()
+    const todayStr = today.toISOString().split('T')[0]
+
+    let activeDates: string[] = []
+    let lastActive: string | null = null
+    if (typeof window !== 'undefined') {
+      try {
+        const stored = localStorage.getItem('learn:activeDates')
+        if (stored) activeDates = JSON.parse(stored)
+      } catch {
+        activeDates = []
+      }
+      lastActive = localStorage.getItem('learn:lastActiveDate')
+    }
+
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date()
+      d.setDate(today.getDate() - i)
+      const dateStr = d.toISOString().split('T')[0]
+      const isToday = i === 0
+
+      const isActive =
+        activeDates.includes(dateStr) ||
+        lastActive === dateStr ||
+        (streak > 0 && lastActive === todayStr && i < streak)
+
+      days.push({
+        dateStr,
+        dayLabel: dayNames[d.getDay()],
+        dayNum: d.getDate(),
+        isToday,
+        isActive,
+      })
+    }
+    return days
+  }, [streak])
+
   // Record daily study activity and calculate streak
   const recordActivity = () => {
     if (typeof window === 'undefined') return
     const today = new Date().toISOString().split('T')[0]
     const lastDate = localStorage.getItem('learn:lastActiveDate')
     const savedStreak = parseInt(localStorage.getItem('learn:streak') || '0', 10)
+
+    // Maintain rolling list of active dates for habit matrix
+    try {
+      const storedDates = localStorage.getItem('learn:activeDates')
+      let dates = storedDates ? JSON.parse(storedDates) : []
+      if (!dates.includes(today)) {
+        dates.push(today)
+        if (dates.length > 30) dates = dates.slice(dates.length - 30)
+        localStorage.setItem('learn:activeDates', JSON.stringify(dates))
+      }
+    } catch {
+      // ignore
+    }
 
     if (!lastDate) {
       localStorage.setItem('learn:streak', '1')
@@ -270,6 +325,11 @@ function Home() {
                 )}
               </div>
             </div>
+            {streak > 0 && (
+              <span className="study-track-banner__streak-pill" title={`${streak} day study streak`}>
+                🔥 {streak} {streak === 1 ? 'day' : 'days'}
+              </span>
+            )}
             <button
               type="button"
               onClick={() => setIsModalOpen(true)}
@@ -330,60 +390,8 @@ function Home() {
           </div>
         </div>
 
-        <div className="hero-graphic" aria-hidden="true">
-          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-            {/* axes */}
-            <line x1="40" y1="20" x2="40" y2="260" stroke="var(--ink-faint)" strokeWidth="1.5" />
-            <line x1="40" y1="260" x2="370" y2="260" stroke="var(--ink-faint)" strokeWidth="1.5" />
-            <text x="46" y="24" className="curve-label">
-              Price
-            </text>
-            <text x="330" y="278" className="curve-label">
-              Quantity
-            </text>
-
-            {/* demand curve: downward sloping */}
-            <path
-              className="curve-path curve-path--demand"
-              d="M 60 50 C 140 90, 220 150, 340 230"
-            />
-            {/* supply curve: upward sloping */}
-            <path
-              className="curve-path curve-path--supply"
-              d="M 60 230 C 140 170, 220 110, 340 50"
-            />
-
-            <circle className="curve-point" cx="200" cy="140" r="5" />
-            <line
-              className="curve-point"
-              x1="200"
-              y1="140"
-              x2="200"
-              y2="260"
-              stroke="var(--ink-faint)"
-              strokeWidth="1"
-              strokeDasharray="3 3"
-            />
-            <line
-              className="curve-point"
-              x1="40"
-              y1="140"
-              x2="200"
-              y2="140"
-              stroke="var(--ink-faint)"
-              strokeWidth="1"
-              strokeDasharray="3 3"
-            />
-            <text x="206" y="132" className="curve-label" fontWeight="600">
-              E
-            </text>
-            <text x="346" y="234" className="curve-label" fill="var(--teal)" fontWeight="600">
-              D
-            </text>
-            <text x="346" y="54" className="curve-label" fill="var(--gold)" fontWeight="600">
-              S
-            </text>
-          </svg>
+        <div className="hero-graphic-wrap">
+          <InteractiveMarketCurve />
         </div>
       </section>
 
@@ -514,6 +522,32 @@ function Home() {
             <div className="streak-display">
               <span className="streak-number">{streak}</span>
               <span className="streak-label">{streak === 1 ? 'Day Active' : 'Days Streak'}</span>
+            </div>
+
+            {/* 7-Day Habit Activity Matrix */}
+            <div className="activity-matrix" aria-label="7-day study activity history">
+              <div className="activity-matrix__header">
+                <span className="activity-matrix__title">Weekly Momentum</span>
+                <span className="activity-matrix__subtitle">Last 7 Days</span>
+              </div>
+              <div className="activity-matrix__dots">
+                {last7Days.map((day) => (
+                  <div
+                    key={day.dateStr}
+                    className={`activity-dot-col ${day.isToday ? 'is-today' : ''} ${day.isActive ? 'is-active' : ''}`}
+                    title={`${day.dayLabel} (${day.dateStr}): ${day.isActive ? 'Studied' : 'Rest day'}`}
+                  >
+                    <span className="activity-dot-col__label">{day.dayLabel}</span>
+                    <div className="activity-dot">
+                      {day.isActive ? (
+                        <span className="activity-dot__check" aria-hidden="true">✓</span>
+                      ) : (
+                        <span className="activity-dot__ring" aria-hidden="true" />
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             <p className="streak-hint">
               {streak > 0

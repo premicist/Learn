@@ -6,9 +6,10 @@ type NoteEndActionsProps = {
   noteId: string
   title: string
   summary?: string
+  onPrint?: () => void
 }
 
-export default function NoteEndActions({ noteId, title, summary }: NoteEndActionsProps) {
+export default function NoteEndActions({ noteId, title, summary, onPrint }: NoteEndActionsProps) {
   const { isBookmarked, toggleBookmark } = useBookmarks()
   const { isCompleted, toggleLesson } = useLessonProgress()
   const [copied, setCopied] = useState(false)
@@ -17,6 +18,10 @@ export default function NoteEndActions({ noteId, title, summary }: NoteEndAction
   const completed = isCompleted(noteId)
 
   const handlePrint = () => {
+    if (onPrint) {
+      onPrint()
+      return
+    }
     if (typeof window !== 'undefined') {
       window.print()
     }

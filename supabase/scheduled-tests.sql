@@ -164,3 +164,103 @@ $$;
 
 revoke all on function public.get_scheduled_test_leaderboard(text) from public;
 grant execute on function public.get_scheduled_test_leaderboard(text) to anon, authenticated;
+
+
+-- -----------------------------------------------------------------------------
+-- Tamper-Proof Server-Side Grading: Scheduled Test Keys & Secure Submission RPC
+-- -----------------------------------------------------------------------------
+
+create table if not exists public.scheduled_test_keys (
+  scheduled_test_id text not null,
+  question_index int not null,
+  answer numeric not null,
+  tolerance numeric not null default 0,
+  points numeric not null default 1,
+  primary key (scheduled_test_id, question_index)
+);
+
+alter table public.scheduled_test_keys enable row level security;
+revoke all on table public.scheduled_test_keys from anon, authenticated;
+
+create or replace function public.submit_scheduled_test_verified(
+  p_scheduled_test_id text,
+  p_subject_id text,
+  p_student_name text,
+  p_class text,
+  p_section text,
+  p_roll_no text,
+  p_answers jsonb
+)
+returns jsonb
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  v_score numeric := 0;
+  v_total numeric := 0;
+  v_rec record;
+  v_given text;
+  v_given_num numeric;
+begin
+  -- Validate roster if active roster exists
+  if not public.is_on_class_roster(p_class, p_section, p_roll_no) then
+    return jsonb_build_object('ok', false, 'reason', 'not_on_roster');
+  end if;
+
+  -- Calculate score if answer keys exist
+  for v_rec in
+    select question_index, answer, tolerance, points
+    from public.scheduled_test_keys
+    where scheduled_test_id = p_scheduled_test_id
+    order by question_index
+  loop
+    v_total := v_total + v_rec.points;
+    v_given := p_answers->>v_rec.question_index::text;
+    if v_given is not null and v_given ~ '^-?[0-9]+(\.[0-9]+)?$' then
+      v_given_num := v_given::numeric;
+      if abs(v_given_num - v_rec.answer) <= v_rec.tolerance then
+        v_score := v_score + v_rec.points;
+      end if;
+    end if;
+  end loop;
+
+  -- Insert the submission
+  insert into public.scheduled_test_submissions (
+    scheduled_test_id,
+    subject_id,
+    student_name,
+    class,
+    section,
+    roll_no,
+    answers,
+    numerical_score,
+    numerical_total
+  )
+  values (
+    p_scheduled_test_id,
+    p_subject_id,
+    p_student_name,
+    p_class,
+    p_section,
+    p_roll_no,
+    p_answers,
+    v_score,
+    v_total
+  );
+
+  return jsonb_build_object(
+    'ok', true,
+    'numerical_score', v_score,
+    'numerical_total', v_total
+  );
+exception
+  when unique_violation then
+    return jsonb_build_object('ok', false, 'reason', 'duplicate');
+  when others then
+    return jsonb_build_object('ok', false, 'reason', 'error', 'message', SQLERRM);
+end;
+$$;
+
+revoke all on function public.submit_scheduled_test_verified(text, text, text, text, text, text, jsonb) from public;
+grant execute on function public.submit_scheduled_test_verified(text, text, text, text, text, text, jsonb) to anon, authenticated;

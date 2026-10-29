@@ -32,7 +32,7 @@ function cleanTitle(raw?: string): string {
 
 export default function DiagramCard({
   title,
-  badge = 'Flowchart',
+  badge = 'Figure',
   caption,
   children,
   rawSvg,
@@ -45,6 +45,8 @@ export default function DiagramCard({
   const [hasOverflow, setHasOverflow] = useState(false)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(false)
+  const [copied, setCopied] = useState(false)
+
   const viewportRef = useRef<HTMLDivElement>(null)
   const closeButtonRef = useRef<HTMLButtonElement>(null)
   const cardId = useId().replace(/:/g, '')
@@ -121,6 +123,25 @@ export default function DiagramCard({
     setZoomLevel((z) => (z === 1 ? 1.75 : 1))
   }
 
+  const handleCopySvg = async () => {
+    try {
+      let svgText = rawSvg
+      if (!svgText && viewportRef.current) {
+        const svgEl = viewportRef.current.querySelector('svg')
+        if (svgEl) {
+          svgText = svgEl.outerHTML
+        }
+      }
+      if (svgText) {
+        await navigator.clipboard.writeText(svgText)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      }
+    } catch {
+      // ignore clipboard error
+    }
+  }
+
   return (
     <>
       <figure
@@ -143,12 +164,34 @@ export default function DiagramCard({
             )}
             <button
               type="button"
-              className="diagram-card__expand-btn"
+              className="diagram-card__action-btn diagram-card__copy-btn"
+              onClick={handleCopySvg}
+              title="Copy diagram SVG markup to clipboard"
+              aria-label="Copy diagram SVG markup"
+            >
+              {copied ? (
+                <>
+                  <span className="diagram-card__action-icon" aria-hidden="true">✓</span>
+                  <span>Copied</span>
+                </>
+              ) : (
+                <>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                  </svg>
+                  <span>Copy</span>
+                </>
+              )}
+            </button>
+            <button
+              type="button"
+              className="diagram-card__action-btn diagram-card__expand-btn"
               onClick={handleOpen}
               aria-label={`Expand diagram: ${displayTitle}`}
-              title="View fullscreen"
+              title="View fullscreen with zoom controls"
             >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M15 3h6v6" />
                 <path d="M9 21H3v-6" />
                 <path d="M21 3l-7 7" />
@@ -167,6 +210,7 @@ export default function DiagramCard({
 
         {caption && (
           <figcaption className="diagram-card__footer">
+            <span className="diagram-card__caption-prefix">Figure:</span>
             <p>{caption}</p>
           </figcaption>
         )}
@@ -206,7 +250,8 @@ export default function DiagramCard({
                     type="button"
                     className="diagram-modal__btn diagram-modal__btn--reset"
                     onClick={() => setZoomLevel(1)}
-                    aria-label="Reset zoom"
+                    aria-label="Reset zoom to 100%"
+                    title="Reset zoom"
                   >
                     {Math.round(zoomLevel * 100)}%
                   </button>
@@ -255,11 +300,20 @@ export default function DiagramCard({
               </div>
             </div>
 
-            {caption && (
-              <div className="diagram-modal__footer">
-                <p>{caption}</p>
+            <div className="diagram-modal__footer">
+              {caption ? (
+                <p className="diagram-modal__caption">
+                  <strong>Figure Note:</strong> {caption}
+                </p>
+              ) : (
+                <span className="diagram-modal__caption-placeholder">{displayTitle}</span>
+              )}
+              <div className="diagram-modal__shortcuts" aria-hidden="true">
+                <span><kbd>ESC</kbd> Close</span>
+                <span><kbd>+</kbd>/<kbd>-</kbd> Zoom</span>
+                <span><kbd>0</kbd> Reset</span>
               </div>
-            )}
+            </div>
           </div>
         </div>,
         document.body

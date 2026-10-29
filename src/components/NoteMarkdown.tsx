@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeRaw from 'rehype-raw'
 import rehypeKatex from 'rehype-katex'
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize'
 import type { NoteVisualBlock as VisualBlock } from '../data/content'
 import InlineResource from './InlineResource'
 import NoteVisualBlock from './NoteVisualBlock'
@@ -85,24 +86,44 @@ function NoteChart({ json }: { json: string }) {
   const chartHeight = height - top - bottom
   const x = (index: number) => left + (index / Math.max(parsed.data.length - 1, 1)) * chartWidth
   const y = (value: number) => top + ((max - value) / (max - min || 1)) * chartHeight
+  const chartTitle = `${parsed.series.join(' vs ')} (${parsed.xKey})`
+
   return (
-    <figure className="note-chart">
-      <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Interactive economics chart">
-        <line x1={left} y1={top} x2={left} y2={height - bottom} stroke="var(--ink-faint)" />
-        <line x1={left} y1={height - bottom} x2={width - right} y2={height - bottom} stroke="var(--ink-faint)" />
-        {[0, 0.5, 1].map((fraction) => {
-          const value = max - fraction * (max - min)
-          const yPosition = y(value)
-          return <g key={fraction}><line x1={left} y1={yPosition} x2={width - right} y2={yPosition} stroke="var(--line)" strokeDasharray="4 4" /><text x={left - 8} y={yPosition + 4} textAnchor="end" className="chart-label">{Math.round(value * 100) / 100}</text></g>
-        })}
-        {parsed.data.map((row, index) => <text key={String(row[parsed.xKey])} x={x(index)} y={height - 18} textAnchor="middle" className="chart-label">{String(row[parsed.xKey])}</text>)}
-        {parsed.series.map((key, seriesIndex) => {
-          const points = parsed.data.map((row, index) => `${x(index)},${y(Number(row[key]))}`).join(' ')
-          return <polyline key={key} points={points} fill="none" stroke={CHART_COLORS[seriesIndex % CHART_COLORS.length]} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-        })}
-      </svg>
-      <figcaption>{parsed.series.map((key, index) => <span key={key} className="chart-legend"><i style={{ backgroundColor: CHART_COLORS[index % CHART_COLORS.length] }} />{key}</span>)}</figcaption>
-    </figure>
+    <DiagramCard
+      title={chartTitle}
+      badge="Chart"
+      caption={`Economic trend visualization: ${parsed.series.join(', ')} measured over ${parsed.data.length} periods.`}
+    >
+      <div className="note-chart-content">
+        <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Economics chart: ${chartTitle}`}>
+          <line x1={left} y1={top} x2={left} y2={height - bottom} stroke="var(--ink-faint)" />
+          <line x1={left} y1={height - bottom} x2={width - right} y2={height - bottom} stroke="var(--ink-faint)" />
+          {[0, 0.5, 1].map((fraction) => {
+            const value = max - fraction * (max - min)
+            const yPosition = y(value)
+            return (
+              <g key={fraction}>
+                <line x1={left} y1={yPosition} x2={width - right} y2={yPosition} stroke="var(--line)" strokeDasharray="4 4" />
+                <text x={left - 8} y={yPosition + 4} textAnchor="end" className="chart-label">{Math.round(value * 100) / 100}</text>
+              </g>
+            )
+          })}
+          {parsed.data.map((row, index) => <text key={String(row[parsed.xKey])} x={x(index)} y={height - 18} textAnchor="middle" className="chart-label">{String(row[parsed.xKey])}</text>)}
+          {parsed.series.map((key, seriesIndex) => {
+            const points = parsed.data.map((row, index) => `${x(index)},${y(Number(row[key]))}`).join(' ')
+            return <polyline key={key} points={points} fill="none" stroke={CHART_COLORS[seriesIndex % CHART_COLORS.length]} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          })}
+        </svg>
+        <div className="note-chart-legend">
+          {parsed.series.map((key, index) => (
+            <span key={key} className="chart-legend">
+              <i style={{ backgroundColor: CHART_COLORS[index % CHART_COLORS.length] }} />
+              {key}
+            </span>
+          ))}
+        </div>
+      </div>
+    </DiagramCard>
   )
 }
 
@@ -117,11 +138,21 @@ function parseInlineVisualBlock(language: string, json: string): VisualBlock | n
   }
 }
 
+const sanitizeSchema = {
+  ...defaultSchema,
+  attributes: {
+    ...(defaultSchema.attributes || {}),
+    code: [...((defaultSchema.attributes && defaultSchema.attributes.code) || []), 'className'],
+    span: [...((defaultSchema.attributes && defaultSchema.attributes.span) || []), 'className', 'style'],
+    div: [...((defaultSchema.attributes && defaultSchema.attributes.div) || []), 'className', 'dataInlineContent', 'data-inline-content'],
+  },
+}
+
 function NoteMarkdown({ content }: { content: string }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm, remarkMath]}
-      rehypePlugins={[rehypeRaw, [rehypeKatex, { output: 'html' }]]}
+      rehypePlugins={[rehypeRaw, [rehypeSanitize, sanitizeSchema], [rehypeKatex, { output: 'html' }]]}
       components={{
         h2({ children, ...props }) { return <h2 id={slugify(children)} {...props}>{children}</h2> },
         h3({ children, ...props }) { return <h3 id={slugify(children)} {...props}>{children}</h3> },
@@ -139,12 +170,13 @@ function NoteMarkdown({ content }: { content: string }) {
         },
         img({ src, alt, ...props }) {
           const image = <img src={src} alt={alt ?? ''} loading="lazy" decoding="async" {...props} />
-          if (typeof src === 'string' && (src.includes('/flowcharts/') || src.endsWith('.svg'))) {
+          if (typeof src === 'string' && (src.includes('/flowcharts/') || src.endsWith('.svg') || src.includes('/images/'))) {
             return (
               <DiagramCard
                 alt={alt}
                 imageSrc={src}
-                badge="Flowchart"
+                badge={src.includes('/flowcharts/') ? 'Flowchart' : 'Figure'}
+                caption={alt && alt.length > 3 ? alt : undefined}
               >
                 {image}
               </DiagramCard>

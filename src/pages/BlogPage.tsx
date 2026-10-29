@@ -6,6 +6,7 @@ import Seo from '../components/Seo'
 import { getCurriculumBySubject } from '../data/curriculum'
 import UnitContext from '../components/UnitContext'
 import AccessibilityMenu from '../components/AccessibilityMenu'
+import ReadingProgressBar from '../components/ReadingProgressBar'
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr)
@@ -43,6 +44,7 @@ function BlogPage() {
 
   return (
     <article className="article-page">
+      <ReadingProgressBar targetSelector=".article-page__body" />
       <Seo
         title={`${post.title} | Prem Pokhrel`}
         description={post.excerpt}

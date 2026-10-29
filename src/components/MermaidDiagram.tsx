@@ -1,4 +1,5 @@
-import { lazy, Suspense, useEffect, useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
+import ErrorBoundary from './ErrorBoundary'
 
 // Lazy-load the inner Mermaid diagram component to keep the main bundle light
 const MermaidDiagramInner = lazy(() => import('./MermaidDiagramInner'))
@@ -12,62 +13,44 @@ type MermaidDiagramProps = {
 export default function MermaidDiagram({ chart, title, caption }: MermaidDiagramProps) {
   const [loadError, setLoadError] = useState<string | null>(null)
 
-  if (loadError) {
-    return (
-      <div className="diagram-card diagram-card--error" data-inline-content="true">
-        <div className="diagram-card__header">
-          <span className="diagram-card__badge">Diagram</span>
-          <h4 className="diagram-card__title">{title || 'Mermaid Diagram'}</h4>
-        </div>
-        <div className="diagram-card__canvas">
-          <p className="note-chart-error">(Diagram could not be rendered)</p>
-          <pre><code>{chart}</code></pre>
-        </div>
+  const errorCard = (msg?: string) => (
+    <div className="diagram-card diagram-card--error" data-inline-content="true">
+      <div className="diagram-card__header">
+        <span className="diagram-card__badge">Diagram</span>
+        <h4 className="diagram-card__title">{title || 'Mermaid Diagram'}</h4>
       </div>
-    )
+      <div className="diagram-card__canvas">
+        <p className="note-chart-error">({msg || 'Diagram could not be rendered'})</p>
+        <pre><code>{chart}</code></pre>
+      </div>
+    </div>
+  )
+
+  if (loadError) {
+    return errorCard(loadError)
   }
 
   return (
-    <Suspense
-      fallback={
-        <div className="diagram-card diagram-card--loading" data-inline-content="true">
-          <div className="diagram-card__header">
-            <span className="diagram-card__badge">Diagram</span>
-            <h4 className="diagram-card__title">{title || 'Diagram'}</h4>
-          </div>
-          <div className="diagram-card__canvas">
-            <span className="mermaid-diagram__placeholder">Loading diagram...</span>
-          </div>
-        </div>
-      }
+    <ErrorBoundary
+      fallbackTitle={title ? `Diagram: ${title}` : 'Mermaid Diagram'}
+      fallback={errorCard()}
+      onError={(err) => setLoadError(err.message)}
     >
-      <MermaidDiagramFallback onError={setLoadError}>
+      <Suspense
+        fallback={
+          <div className="diagram-card diagram-card--loading" data-inline-content="true">
+            <div className="diagram-card__header">
+              <span className="diagram-card__badge">Diagram</span>
+              <h4 className="diagram-card__title">{title || 'Diagram'}</h4>
+            </div>
+            <div className="diagram-card__canvas">
+              <span className="mermaid-diagram__placeholder">Loading diagram...</span>
+            </div>
+          </div>
+        }
+      >
         <MermaidDiagramInner chart={chart} title={title} caption={caption} />
-      </MermaidDiagramFallback>
-    </Suspense>
+      </Suspense>
+    </ErrorBoundary>
   )
 }
-
-// Custom simple fallback/error handler in case of network or component failures
-function MermaidDiagramFallback({
-  children,
-  onError,
-}: {
-  children: React.ReactNode
-  onError: (err: string) => void
-}) {
-  useEffect(() => {
-    const handleError = (e: ErrorEvent) => {
-      if (e?.error?.message?.includes('mermaid') || e?.message?.includes('mermaid')) {
-        onError('Diagram failed to load')
-      }
-    }
-    window.addEventListener('error', handleError)
-    return () => window.removeEventListener('error', handleError)
-  }, [onError])
-
-  return children
-}
-
-
-

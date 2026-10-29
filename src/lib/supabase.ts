@@ -92,6 +92,13 @@ export async function uploadPracticeAnswerImage(
     return { ok: false, error: 'Supabase is not configured' }
   }
 
+  if (!file.type.startsWith('image/')) {
+    return { ok: false, error: 'Only image files (JPEG, PNG, WebP) are allowed' }
+  }
+  if (file.size > 5 * 1024 * 1024) {
+    return { ok: false, error: 'Image file size exceeds the 5 MB limit' }
+  }
+
   try {
     const compressed = await compressImage(file)
     const fileExt = compressed.name.split('.').pop() || 'jpg'
@@ -107,8 +114,7 @@ export async function uploadPracticeAnswerImage(
       return { ok: false, error: error.message }
     }
 
-    const { data: publicData } = supabase.storage.from('practice-uploads').getPublicUrl(data.path)
-    return { ok: true, url: publicData.publicUrl }
+    return { ok: true, url: data.path }
   } catch (err) {
     return { ok: false, error: err instanceof Error ? err.message : 'Image upload failed' }
   }
@@ -128,4 +134,41 @@ export async function submitPracticeAnswers(submission: PracticeSubmission): Pro
   const { error } = await supabase.from('practice_submissions').insert(submission)
   if (error) return { ok: false, reason: 'error', message: error.message }
   return { ok: true }
+}
+
+
+export type TeacherSubmissionRow = {
+  id: string
+  practice_set_id: string
+  subject_id: string
+  student_name: string
+  class: string
+  section: string
+  roll_no: string
+  answers: Record<string, PracticeAnswerValue>
+  numerical_score: number | null
+  numerical_total: number | null
+  submitted_at: string
+}
+
+export async function fetchTeacherSubmissions(
+  secret: string,
+  filter?: { practiceSetId?: string; studentClass?: string; section?: string }
+): Promise<{ ok: true; rows: TeacherSubmissionRow[] } | { ok: false; error: string }> {
+  if (!supabase) {
+    return { ok: false, error: 'Supabase is not configured' }
+  }
+
+  const { data, error } = await supabase.rpc('get_teacher_practice_submissions', {
+    p_secret: secret,
+    p_practice_set_id: filter?.practiceSetId || null,
+    p_class: filter?.studentClass || null,
+    p_section: filter?.section || null,
+  })
+
+  if (error) {
+    return { ok: false, error: error.message }
+  }
+
+  return { ok: true, rows: (Array.isArray(data) ? data : []) as TeacherSubmissionRow[] }
 }

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import MoveToTop from './components/MoveToTop'
 import ScrollToTop from './components/ScrollToTop'
+import ErrorBoundary from './components/ErrorBoundary'
 
 const Home = lazy(() => import('./pages/Home'))
 const Subjects = lazy(() => import('./pages/Subjects'))
@@ -21,6 +22,7 @@ const ScheduledTestPage = lazy(() => import('./pages/ScheduledTestPage'))
 const Videos = lazy(() => import('./pages/Videos'))
 const VideoPage = lazy(() => import('./pages/VideoPage'))
 const About = lazy(() => import('./pages/About'))
+const TeacherDashboard = lazy(() => import('./pages/TeacherDashboard'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 // Whiteboard loads lazily so the 2–4 MB Excalidraw bundle never blocks
 // other pages. Lazy-load the inner canvas too so it renders in its own chunk.
@@ -29,31 +31,40 @@ const Whiteboard = lazy(() => import('./pages/Whiteboard'))
 function App() {
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <ScrollToTop />
       <Navbar />
-      <main>
-        <Suspense fallback={<div className="route-loading" role="status">Loading page…</div>}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/subjects" element={<Subjects />} />
-            <Route path="/subjects/:subjectId" element={<SubjectDetails />} />
-            <Route path="/levels/:levelId" element={<LevelDetails />} />
-            <Route path="/notes" element={<Notes />} />
-            <Route path="/notes/:noteId" element={<NotePage />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="/blogs/:blogId" element={<BlogPage />} />
-            <Route path="/quizzes" element={<Quizzes />} />
-            <Route path="/quizzes/:quizId" element={<QuizPage />} />
-            <Route path="/practice-sets" element={<PracticeSets />} />
-            <Route path="/practice-sets/:practiceSetId" element={<PracticeSetPage />} />
-            <Route path="/scheduled-tests/:scheduledTestId" element={<ScheduledTestPage />} />
-            <Route path="/videos" element={<Videos />} />
-            <Route path="/videos/:videoId" element={<VideoPage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/whiteboard" element={<Whiteboard />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
+      <main id="main-content" tabIndex={-1}>
+        <ErrorBoundary
+          fallbackTitle="Page Encountered an Issue"
+          fallbackMessage="We had trouble rendering this section. Please try refreshing or return to the previous page."
+        >
+          <Suspense fallback={<div className="route-loading" role="status">Loading page…</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/subjects" element={<Subjects />} />
+              <Route path="/subjects/:subjectId" element={<SubjectDetails />} />
+              <Route path="/levels/:levelId" element={<LevelDetails />} />
+              <Route path="/notes" element={<Notes />} />
+              <Route path="/notes/:noteId" element={<NotePage />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/blogs/:blogId" element={<BlogPage />} />
+              <Route path="/quizzes" element={<Quizzes />} />
+              <Route path="/quizzes/:quizId" element={<QuizPage />} />
+              <Route path="/practice-sets" element={<PracticeSets />} />
+              <Route path="/practice-sets/:practiceSetId" element={<PracticeSetPage />} />
+              <Route path="/scheduled-tests/:scheduledTestId" element={<ScheduledTestPage />} />
+              <Route path="/videos" element={<Videos />} />
+              <Route path="/videos/:videoId" element={<VideoPage />} />
+              <Route path="/teacher" element={<TeacherDashboard />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/whiteboard" element={<Whiteboard />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
       </main>
       <Footer />
       <MoveToTop />

@@ -1,43 +1,81 @@
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { useTheme } from '../utils/useTheme'
-import { useBookmarks } from '../utils/useBookmarks'
-import { useSmartboard } from '../utils/useSmartboard'
 
 export type FontSize = 'small' | 'normal' | 'large' | 'xlarge'
 export type FontFamily = 'default' | 'serif' | 'sans' | 'dyslexic'
 
 const FONT_SIZE_STORAGE_KEY = 'learn:font-size'
 const FONT_FAMILY_STORAGE_KEY = 'learn:font-family'
-const ZOOM_STORAGE_KEY = 'learn:zoom'
-const DOC_MODE_STORAGE_KEY = 'learn:doc-mode'
-
-const ZOOM_LEVELS = [80, 90, 100, 110, 125, 140, 160]
+const FOCUS_MODE_STORAGE_KEY = 'learn:doc-mode'
 
 type AccessibilityMenuProps = {
   contentSelector?: string
   contentTitle?: string
   noteId?: string
   onOpenDictionary?: () => void
+  onOpenPrint?: () => void
+}
+
+/**
+ * Extracts clean readable prose for speech synthesis, stripping raw KaTeX math,
+ * SVG diagrams, tables, and code snippets that sound chaotic in synthetic voice.
+ */
+function extractSpeechText(element: HTMLElement, title?: string): string {
+  const clone = element.cloneNode(true) as HTMLElement
+
+  // Elements that speech engines should skip for note reading
+  const dropSelectors = [
+    '.katex',
+    '.katex-display',
+    '.katex-html',
+    '.katex-mathml',
+    'svg',
+    'pre',
+    'code',
+    'table',
+    '.diagram-card',
+    '.note-chart',
+    '.note-chart-wrapper',
+    '.interactive-card',
+    '.interactive-market-curve',
+    '.quiz-card',
+    '.figure-card__actions',
+    '.note-table-hint',
+    'button',
+    'iframe',
+    '.sr-only',
+    '[aria-hidden="true"]',
+  ]
+
+  for (const selector of dropSelectors) {
+    clone.querySelectorAll(selector).forEach((el) => el.remove())
+  }
+
+  const rawText = clone.textContent || ''
+  const sanitized = rawText
+    .replace(/\[\d+\]/g, '') // remove footnote references [1]
+    .replace(/[#*_`~]/g, '') // remove markdown markers
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  const heading = title ? `${title.trim()}. ` : ''
+  return `${heading}${sanitized}`.trim()
 }
 
 export default function AccessibilityMenu({
   contentSelector = '.note-page__body, .article-page__body',
   contentTitle,
-  noteId,
   onOpenDictionary,
+  onOpenPrint,
 }: AccessibilityMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
-  const { isBookmarked, toggleBookmark } = useBookmarks()
-  const { isSmartboard, toggleSmartboard, toggleFullscreen } = useSmartboard()
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  // Sizing & styling state
+  // Sizing & typography state
   const [fontSize, setFontSize] = useState<FontSize>(() => {
     if (typeof window === 'undefined') return 'normal'
     return (localStorage.getItem(FONT_SIZE_STORAGE_KEY) as FontSize) || 'normal'
@@ -48,15 +86,9 @@ export default function AccessibilityMenu({
     return (localStorage.getItem(FONT_FAMILY_STORAGE_KEY) as FontFamily) || 'default'
   })
 
-  const [zoom, setZoom] = useState<number>(() => {
-    if (typeof window === 'undefined') return 100
-    const saved = Number(localStorage.getItem(ZOOM_STORAGE_KEY))
-    return ZOOM_LEVELS.includes(saved) ? saved : 100
-  })
-
-  const [isDocMode, setIsDocMode] = useState<boolean>(() => {
+  const [isFocusMode, setIsFocusMode] = useState<boolean>(() => {
     if (typeof window === 'undefined') return false
-    return localStorage.getItem(DOC_MODE_STORAGE_KEY) === 'true'
+    return localStorage.getItem(FOCUS_MODE_STORAGE_KEY) === 'true'
   })
 
   // Speech Synthesis (Read Aloud) state
@@ -79,21 +111,14 @@ export default function AccessibilityMenu({
         target.classList.add(`font-family-${fontFamily}`)
       }
 
-      // Zoom
-      if (zoom !== 100) {
-        target.style.zoom = `${zoom}%`
-      } else {
-        target.style.zoom = ''
-      }
-
-      // Document mode
-      if (isDocMode) {
+      // Document / Focus mode
+      if (isFocusMode) {
         target.classList.add('is-document-mode')
       } else {
         target.classList.remove('is-document-mode')
       }
     })
-  }, [fontSize, fontFamily, zoom, isDocMode, contentSelector])
+  }, [fontSize, fontFamily, isFocusMode, contentSelector])
 
   // Clean up speech synthesis on unmount
   useEffect(() => {
@@ -104,7 +129,7 @@ export default function AccessibilityMenu({
     }
   }, [])
 
-  // Keyboard navigation for accessibility modal
+  // Keyboard navigation: Escape key closes modal
   useEffect(() => {
     if (!isOpen) return
     const onKeyDown = (e: KeyboardEvent) => {
@@ -114,26 +139,27 @@ export default function AccessibilityMenu({
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [isOpen])
 
-  // Handlers
+  // Preference handlers
   const handleFontSize = (size: FontSize) => {
     setFontSize(size)
-    try { localStorage.setItem(FONT_SIZE_STORAGE_KEY, size) } catch {}
+    try {
+      localStorage.setItem(FONT_SIZE_STORAGE_KEY, size)
+    } catch {}
   }
 
   const handleFontFamily = (family: FontFamily) => {
     setFontFamily(family)
-    try { localStorage.setItem(FONT_FAMILY_STORAGE_KEY, family) } catch {}
+    try {
+      localStorage.setItem(FONT_FAMILY_STORAGE_KEY, family)
+    } catch {}
   }
 
-  const handleZoom = (newZoom: number) => {
-    setZoom(newZoom)
-    try { localStorage.setItem(ZOOM_STORAGE_KEY, String(newZoom)) } catch {}
-  }
-
-  const handleToggleDocMode = () => {
-    setIsDocMode((prev) => {
+  const handleToggleFocusMode = () => {
+    setIsFocusMode((prev) => {
       const next = !prev
-      try { localStorage.setItem(DOC_MODE_STORAGE_KEY, String(next)) } catch {}
+      try {
+        localStorage.setItem(FOCUS_MODE_STORAGE_KEY, String(next))
+      } catch {}
       return next
     })
   }
@@ -157,11 +183,10 @@ export default function AccessibilityMenu({
     const target = document.querySelector<HTMLElement>(contentSelector)
     if (!target) return
 
-    const titleText = contentTitle ? `${contentTitle}. ` : ''
-    const bodyText = target.innerText.replace(/\s+/g, ' ').trim()
-    const fullText = `${titleText}${bodyText}`
+    const sanitizedSpeech = extractSpeechText(target, contentTitle)
+    if (!sanitizedSpeech) return
 
-    const utterance = new SpeechSynthesisUtterance(fullText)
+    const utterance = new SpeechSynthesisUtterance(sanitizedSpeech)
     utterance.rate = speechRate
     utterance.lang = 'en-US'
 
@@ -203,33 +228,35 @@ export default function AccessibilityMenu({
     }
   }
 
-  const bookmarked = noteId ? isBookmarked(noteId) : false
-
   if (!mounted) return null
 
   return createPortal(
     <>
-      {/* ── Left-Center Floating Icon-Only Tools Trigger Button ── */}
-      <aside className="a11y-floating-anchor" aria-label="Reading tools & accessibility">
+      {/* ── Floating Reader Tools Pill Trigger Button ── */}
+      <aside className="a11y-floating-anchor no-print" aria-label="Reading tools & accessibility">
         <button
           type="button"
           className={`a11y-trigger-btn ${isOpen ? 'is-open' : ''} ${isSpeaking ? 'is-speaking' : ''}`}
           onClick={() => setIsOpen((prev) => !prev)}
-          title="Reading Tools & Accessibility (Document Mode, Text-to-Speech, Zoom, Font Size, Dictionary)"
-          aria-label="Reading Tools & Accessibility"
+          title="Reading Tools (Text Size, Typography, Focus Mode, Read Aloud)"
+          aria-label="Reading Tools & Typography"
           aria-expanded={isOpen}
           aria-haspopup="dialog"
         >
-          <span className="a11y-trigger-btn__icon" aria-hidden="true">
-            {isSpeaking ? '🔊' : '🛠️'}
+          <span className="a11y-trigger-glyph" aria-hidden="true">
+            {isSpeaking ? '🔊' : 'Aa'}
           </span>
+          <span className="a11y-trigger-label">
+            {isSpeaking ? 'Reading' : 'Reader'}
+          </span>
+          {isSpeaking && <span className="a11y-trigger-pulse-dot" aria-hidden="true" />}
         </button>
       </aside>
 
-      {/* ── Accessibility & Reader Modal / Drawer ── */}
+      {/* ── Reading Tools Modal / Tray ── */}
       {isOpen && (
         <div
-          className="a11y-modal-backdrop"
+          className="a11y-modal-backdrop no-print"
           role="presentation"
           onClick={(e) => {
             if (e.target === e.currentTarget) setIsOpen(false)
@@ -243,8 +270,11 @@ export default function AccessibilityMenu({
           >
             <header className="a11y-modal-header">
               <div className="a11y-modal-header__title">
-                <span aria-hidden="true">🛠️</span>
-                <h3 id="a11y-dialog-title">Reading Tools & Accessibility</h3>
+                <span className="a11y-modal-header__badge" aria-hidden="true">Aa</span>
+                <div>
+                  <h3 id="a11y-dialog-title">Reading Tools</h3>
+                  <p className="a11y-modal-header__sub">Adjust text, styling, and audio reader</p>
+                </div>
               </div>
               <button
                 type="button"
@@ -257,314 +287,226 @@ export default function AccessibilityMenu({
             </header>
 
             <div className="a11y-modal-body">
-              {/* Quick Actions (Dictionary & Bookmark) */}
-              {(onOpenDictionary || noteId) && (
-                <div className="a11y-section">
-                  <div className="a11y-section__header">
-                    <span className="a11y-section__icon" aria-hidden="true">⚡</span>
-                    <span className="a11y-section__label">Quick Actions</span>
-                  </div>
-                  <div className="a11y-segmented">
-                    {onOpenDictionary && (
-                      <button
-                        type="button"
-                        className="a11y-btn"
-                        onClick={() => {
-                          setIsOpen(false)
-                          onOpenDictionary()
-                        }}
-                        title="Search Economics Dictionary & Terms"
-                      >
-                        📖 Economics Dictionary
-                      </button>
-                    )}
-                    {noteId && (
-                      <button
-                        type="button"
-                        className={`a11y-btn ${bookmarked ? 'is-active' : ''}`}
-                        onClick={() => toggleBookmark(noteId)}
-                        title={bookmarked ? 'Remove Bookmark' : 'Save this Note'}
-                      >
-                        {bookmarked ? '★ Saved in Bookmarks' : '☆ Save Note'}
-                      </button>
-                    )}
-                  </div>
-                </div>
-              )}
-
-              {/* 1. View as Document */}
+              {/* 1. Text Sizing */}
               <div className="a11y-section">
                 <div className="a11y-section__header">
-                  <span className="a11y-section__icon" aria-hidden="true">📄</span>
-                  <span className="a11y-section__label">Document Layout</span>
+                  <span className="a11y-section__label">Text Size</span>
+                  <span className="a11y-section__hint">Scales note paragraphs</span>
                 </div>
-                <div className="a11y-segmented">
-                  <button
-                    type="button"
-                    className={`a11y-btn ${isDocMode ? 'is-active' : ''}`}
-                    onClick={handleToggleDocMode}
-                    title="Toggle A4 Document / Paper view with clean margins and page borders"
-                  >
-                    {isDocMode ? '✓ View as Document (Active)' : '📄 View as Document'}
-                  </button>
-                  <button
-                    type="button"
-                    className="a11y-btn"
-                    onClick={() => window.print()}
-                    title="Print article or save as PDF document"
-                  >
-                    🖨️ Export PDF / Print
-                  </button>
-                </div>
-              </div>
-
-              {/* 2. Classroom & Smart-Board Mode */}
-              <div className="a11y-section">
-                <div className="a11y-section__header">
-                  <span className="a11y-section__icon" aria-hidden="true">🖥️</span>
-                  <span className="a11y-section__label">Classroom &amp; Smart-Board</span>
-                </div>
-                <div className="a11y-segmented">
-                  <button
-                    type="button"
-                    className={`a11y-btn ${isSmartboard ? 'is-active' : ''}`}
-                    onClick={toggleSmartboard}
-                    title="Maximize width and scale typography for smart-boards and projectors"
-                  >
-                    {isSmartboard ? '✓ Smart-Board Mode (Active)' : '🖥️ Smart-Board Mode'}
-                  </button>
-                  <button
-                    type="button"
-                    className="a11y-btn"
-                    onClick={toggleFullscreen}
-                    title="Toggle full screen projection"
-                  >
-                    ⛶ Fullscreen
-                  </button>
-                </div>
-              </div>
-
-              {/* 2. Read Aloud (Text to Speech) */}
-              <div className="a11y-section">
-                <div className="a11y-section__header">
-                  <span className="a11y-section__icon" aria-hidden="true">🔊</span>
-                  <span className="a11y-section__label">Read Aloud (Text-to-Speech)</span>
-                </div>
-                <div className="a11y-tts-controls">
-                  {!isSpeaking && !isPaused && (
-                    <button
-                      type="button"
-                      className="a11y-btn a11y-btn--primary"
-                      onClick={handlePlaySpeech}
-                      title="Read this note aloud"
-                    >
-                      ▶️ Play Speech
-                    </button>
-                  )}
-
-                  {isSpeaking && (
-                    <button
-                      type="button"
-                      className="a11y-btn"
-                      onClick={handlePauseSpeech}
-                      title="Pause speech"
-                    >
-                      ⏸️ Pause
-                    </button>
-                  )}
-
-                  {isPaused && (
-                    <button
-                      type="button"
-                      className="a11y-btn a11y-btn--primary"
-                      onClick={handlePlaySpeech}
-                      title="Resume speech"
-                    >
-                      ▶️ Resume
-                    </button>
-                  )}
-
-                  {(isSpeaking || isPaused) && (
-                    <button
-                      type="button"
-                      className="a11y-btn"
-                      onClick={handleStopSpeech}
-                      title="Stop reading"
-                    >
-                      ⏹️ Stop
-                    </button>
-                  )}
-
-                  {/* Speed Selector */}
-                  <div className="a11y-tts-speed" role="group" aria-label="Speech Speed">
-                    {[1, 1.25, 1.5].map((rate) => (
-                      <button
-                        key={rate}
-                        type="button"
-                        className={`a11y-speed-btn ${speechRate === rate ? 'is-active' : ''}`}
-                        onClick={() => handleSpeedChange(rate)}
-                        title={`Speech speed ${rate}x`}
-                      >
-                        {rate}x
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* 3. Zoom Controls */}
-              <div className="a11y-section">
-                <div className="a11y-section__header">
-                  <span className="a11y-section__icon" aria-hidden="true">🔍</span>
-                  <span className="a11y-section__label">Page Zoom & Magnification</span>
-                </div>
-                <div className="a11y-stepper">
-                  <button
-                    type="button"
-                    className="a11y-btn a11y-btn--icon"
-                    onClick={() => {
-                      const idx = ZOOM_LEVELS.indexOf(zoom)
-                      if (idx > 0) handleZoom(ZOOM_LEVELS[idx - 1])
-                    }}
-                    disabled={zoom <= ZOOM_LEVELS[0]}
-                    title="Zoom Out (-10%)"
-                    aria-label="Zoom out"
-                  >
-                    −
-                  </button>
-                  <span className="a11y-zoom-indicator">{zoom}%</span>
-                  <button
-                    type="button"
-                    className="a11y-btn a11y-btn--icon"
-                    onClick={() => {
-                      const idx = ZOOM_LEVELS.indexOf(zoom)
-                      if (idx < ZOOM_LEVELS.length - 1) handleZoom(ZOOM_LEVELS[idx + 1])
-                    }}
-                    disabled={zoom >= ZOOM_LEVELS[ZOOM_LEVELS.length - 1]}
-                    title="Zoom In (+10%)"
-                    aria-label="Zoom in"
-                  >
-                    +
-                  </button>
-                  <button
-                    type="button"
-                    className="a11y-btn a11y-btn--sm"
-                    onClick={() => handleZoom(100)}
-                    disabled={zoom === 100}
-                    title="Reset zoom to 100%"
-                  >
-                    Reset (100%)
-                  </button>
-                </div>
-              </div>
-
-              {/* 4. Font Size */}
-              <div className="a11y-section">
-                <div className="a11y-section__header">
-                  <span className="a11y-section__icon" aria-hidden="true">🔠</span>
-                  <span className="a11y-section__label">Text Sizing</span>
-                </div>
-                <div className="a11y-segmented">
+                <div className="a11y-segmented a11y-segmented--grid4">
                   <button
                     type="button"
                     className={`a11y-btn ${fontSize === 'small' ? 'is-active' : ''}`}
                     onClick={() => handleFontSize('small')}
-                    title="Small text"
+                    title="Small text (0.95rem)"
                   >
-                    A- (Small)
+                    <span className="a11y-btn__preview" style={{ fontSize: '0.82rem' }}>A</span>
+                    <span>Small</span>
                   </button>
                   <button
                     type="button"
                     className={`a11y-btn ${fontSize === 'normal' ? 'is-active' : ''}`}
                     onClick={() => handleFontSize('normal')}
-                    title="Default normal text"
+                    title="Default normal text (1.05rem)"
                   >
-                    A (Default)
+                    <span className="a11y-btn__preview" style={{ fontSize: '0.95rem' }}>A</span>
+                    <span>Normal</span>
                   </button>
                   <button
                     type="button"
                     className={`a11y-btn ${fontSize === 'large' ? 'is-active' : ''}`}
                     onClick={() => handleFontSize('large')}
-                    title="Large readable text"
+                    title="Large readable text (1.18rem)"
                   >
-                    A+ (Large)
+                    <span className="a11y-btn__preview" style={{ fontSize: '1.1rem' }}>A</span>
+                    <span>Large</span>
                   </button>
                   <button
                     type="button"
                     className={`a11y-btn ${fontSize === 'xlarge' ? 'is-active' : ''}`}
                     onClick={() => handleFontSize('xlarge')}
-                    title="Extra large text"
+                    title="Extra large text (1.32rem)"
                   >
-                    A++ (X-Large)
+                    <span className="a11y-btn__preview" style={{ fontSize: '1.25rem' }}>A</span>
+                    <span>X-Large</span>
                   </button>
                 </div>
               </div>
 
-              {/* 5. Typography Font Family */}
+              {/* 2. Typography Style */}
               <div className="a11y-section">
                 <div className="a11y-section__header">
-                  <span className="a11y-section__icon" aria-hidden="true">🖋️</span>
-                  <span className="a11y-section__label">Font Style</span>
+                  <span className="a11y-section__label">Typography Style</span>
+                  <span className="a11y-section__hint">Font family preference</span>
                 </div>
-                <div className="a11y-segmented">
+                <div className="a11y-segmented a11y-segmented--grid3">
                   <button
                     type="button"
-                    className={`a11y-btn ${fontFamily === 'default' ? 'is-active' : ''}`}
+                    className={`a11y-btn a11y-btn--font-opt ${fontFamily === 'default' ? 'is-active' : ''}`}
                     onClick={() => handleFontFamily('default')}
-                    title="System default font"
+                    title="Clean Sans-serif font (Manrope)"
                   >
-                    Default
+                    <span className="a11y-font-sample" style={{ fontFamily: 'var(--font-body)' }}>Ag</span>
+                    <span className="a11y-font-name">Modern Sans</span>
                   </button>
                   <button
                     type="button"
-                    className={`a11y-btn ${fontFamily === 'serif' ? 'is-active' : ''}`}
+                    className={`a11y-btn a11y-btn--font-opt ${fontFamily === 'serif' ? 'is-active' : ''}`}
                     onClick={() => handleFontFamily('serif')}
-                    title="Book Serif (Editorial textbook font)"
+                    title="Book Serif font (Fraunces / Editorial)"
                   >
-                    📖 Book Serif
+                    <span className="a11y-font-sample" style={{ fontFamily: 'var(--font-display), Georgia, serif' }}>Ag</span>
+                    <span className="a11y-font-name">Book Serif</span>
                   </button>
                   <button
                     type="button"
-                    className={`a11y-btn ${fontFamily === 'dyslexic' ? 'is-active' : ''}`}
+                    className={`a11y-btn a11y-btn--font-opt ${fontFamily === 'dyslexic' ? 'is-active' : ''}`}
                     onClick={() => handleFontFamily('dyslexic')}
-                    title="Dyslexic friendly / High Legibility font"
+                    title="Dyslexic-friendly weighted font"
                   >
-                    📝 High Legibility
+                    <span className="a11y-font-sample" style={{ fontFamily: '"OpenDyslexic", "Comic Sans MS", sans-serif' }}>Ag</span>
+                    <span className="a11y-font-name">High Legibility</span>
                   </button>
                 </div>
               </div>
 
-              {/* 6. Reading Themes */}
+              {/* 3. Focus / Document Reading Mode */}
               <div className="a11y-section">
                 <div className="a11y-section__header">
-                  <span className="a11y-section__icon" aria-hidden="true">🎨</span>
-                  <span className="a11y-section__label">Color & Reading Theme</span>
+                  <span className="a11y-section__label">Reading Measure</span>
+                  <span className="a11y-section__hint">Card layout &amp; line length</span>
                 </div>
-                <div className="a11y-segmented">
+                <button
+                  type="button"
+                  className={`a11y-focus-toggle ${isFocusMode ? 'is-active' : ''}`}
+                  onClick={handleToggleFocusMode}
+                  title="Toggle distraction-free document frame with optimal 68ch line measure"
+                >
+                  <div className="a11y-focus-toggle__info">
+                    <span className="a11y-focus-toggle__title">
+                      {isFocusMode ? '✓ Focused Document Frame (Active)' : 'Distraction-Free Focus Frame'}
+                    </span>
+                    <span className="a11y-focus-toggle__desc">
+                      Centers text in an optimal 68ch measure with paper-card borders.
+                    </span>
+                  </div>
+                  <span className={`a11y-switch ${isFocusMode ? 'is-on' : ''}`} aria-hidden="true">
+                    <span className="a11y-switch__knob" />
+                  </span>
+                </button>
+              </div>
+
+              {/* 4. Clean Read Aloud (Text to Speech) */}
+              <div className="a11y-section">
+                <div className="a11y-section__header">
+                  <span className="a11y-section__label">Read Aloud (Voice)</span>
+                  <span className="a11y-section__hint">Filters formulas &amp; SVG noise</span>
+                </div>
+
+                <div className="a11y-tts-box">
+                  <div className="a11y-tts-actions">
+                    {!isSpeaking && !isPaused && (
+                      <button
+                        type="button"
+                        className="a11y-btn a11y-btn--primary"
+                        onClick={handlePlaySpeech}
+                        title="Listen to this note read aloud"
+                      >
+                        ▶ Listen to Note
+                      </button>
+                    )}
+
+                    {isSpeaking && (
+                      <button
+                        type="button"
+                        className="a11y-btn a11y-btn--warning"
+                        onClick={handlePauseSpeech}
+                        title="Pause voice playback"
+                      >
+                        ⏸ Pause
+                      </button>
+                    )}
+
+                    {isPaused && (
+                      <button
+                        type="button"
+                        className="a11y-btn a11y-btn--primary"
+                        onClick={handlePlaySpeech}
+                        title="Resume voice playback"
+                      >
+                        ▶ Resume
+                      </button>
+                    )}
+
+                    {(isSpeaking || isPaused) && (
+                      <button
+                        type="button"
+                        className="a11y-btn"
+                        onClick={handleStopSpeech}
+                        title="Stop voice playback"
+                      >
+                        ⏹ Stop
+                      </button>
+                    )}
+
+                    {/* Speed Selector */}
+                    <div className="a11y-tts-speed" role="group" aria-label="Speech Speed">
+                      {[1, 1.25, 1.5].map((rate) => (
+                        <button
+                          key={rate}
+                          type="button"
+                          className={`a11y-speed-btn ${speechRate === rate ? 'is-active' : ''}`}
+                          onClick={() => handleSpeedChange(rate)}
+                          title={`Speech speed ${rate}x`}
+                        >
+                          {rate}x
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {isSpeaking && (
+                    <div className="a11y-tts-status">
+                      <span className="a11y-tts-waveform" aria-hidden="true">
+                        <span /><span /><span /><span />
+                      </span>
+                      <span>Reading text aloud (formulas &amp; diagrams skipped)</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* 5. Study & Document Actions */}
+              <div className="a11y-section">
+                <div className="a11y-section__header">
+                  <span className="a11y-section__label">Study &amp; Document</span>
+                </div>
+                <div className="a11y-segmented a11y-segmented--grid2">
                   <button
                     type="button"
-                    className={`a11y-btn ${theme === 'light' ? 'is-active' : ''}`}
-                    onClick={() => setTheme('light')}
-                    title="Light / Paper White theme"
+                    className="a11y-btn a11y-btn--full"
+                    onClick={() => {
+                      setIsOpen(false)
+                      if (onOpenPrint) onOpenPrint()
+                      else window.print()
+                    }}
+                    title="Print or export note as clean academic PDF with header & watermark"
                   >
-                    ☀️ Light
+                    <span>🖨️ Print Note</span>
                   </button>
-                  <button
-                    type="button"
-                    className={`a11y-btn ${theme === 'warm' ? 'is-active' : ''}`}
-                    onClick={() => setTheme('warm')}
-                    title="Warm Sepia Eye-Comfort theme"
-                  >
-                    📖 Warm Sepia
-                  </button>
-                  <button
-                    type="button"
-                    className={`a11y-btn ${theme === 'dark' ? 'is-active' : ''}`}
-                    onClick={() => setTheme('dark')}
-                    title="Dark Slate Night theme"
-                  >
-                    🌙 Dark
-                  </button>
+                  {onOpenDictionary && (
+                    <button
+                      type="button"
+                      className="a11y-btn a11y-btn--full"
+                      onClick={() => {
+                        setIsOpen(false)
+                        onOpenDictionary()
+                      }}
+                      title="Search economics terms, equations, and definitions"
+                    >
+                      <span>📖 Dictionary</span>
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -576,7 +518,7 @@ export default function AccessibilityMenu({
                 className="a11y-btn a11y-btn--sm"
                 onClick={() => setIsOpen(false)}
               >
-                Close
+                Done
               </button>
             </footer>
           </section>

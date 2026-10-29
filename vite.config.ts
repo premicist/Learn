@@ -12,4 +12,26 @@ export default defineConfig({
     // and avoid "ReferenceError: process is not defined" in browser.
     'process.env.IS_PREACT': JSON.stringify('false'),
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/katex')) {
+            return 'vendor-katex'
+          }
+          if (id.includes('node_modules/@supabase')) {
+            return 'vendor-supabase'
+          }
+          if (
+            id.includes('node_modules/react-markdown') ||
+            id.includes('node_modules/rehype') ||
+            id.includes('node_modules/remark') ||
+            id.includes('node_modules/micromark')
+          ) {
+            return 'vendor-markdown'
+          }
+        },
+      },
+    },
+  },
 })

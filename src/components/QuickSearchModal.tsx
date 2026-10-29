@@ -19,14 +19,20 @@ type QuickSearchModalProps = {
 export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalProps) {
   const [query, setQuery] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
+  const dialogRef = useRef<HTMLDivElement>(null)
+  const previousActiveElement = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     if (isOpen) {
+      previousActiveElement.current = document.activeElement as HTMLElement | null
       setTimeout(() => inputRef.current?.focus(), 50)
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''
       setQuery('')
+      if (previousActiveElement.current && typeof previousActiveElement.current.focus === 'function') {
+        previousActiveElement.current.focus()
+      }
     }
     return () => {
       document.body.style.overflow = ''
@@ -44,6 +50,22 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
           onClose()
         } else {
           // Open handled by Navbar/App
+        }
+      }
+      if (e.key === 'Tab' && isOpen && dialogRef.current) {
+        const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        )
+        if (focusable.length > 0) {
+          const first = focusable[0]
+          const last = focusable[focusable.length - 1]
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault()
+            last.focus()
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault()
+            first.focus()
+          }
         }
       }
     }
@@ -142,7 +164,7 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
       aria-modal="true"
       aria-label="Quick Search"
     >
-      <div className="quick-search-dialog">
+      <div ref={dialogRef} className="quick-search-dialog">
         <div className="quick-search-header">
           <span aria-hidden="true">🔍</span>
           <input

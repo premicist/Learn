@@ -9,9 +9,12 @@ import { getCurriculumBySubject } from '../data/curriculum'
 import UnitContext from '../components/UnitContext'
 import NoteUnitNavigator from '../components/NoteUnitNavigator'
 import NoteSlideViewer from '../components/NoteSlideViewer'
+import ErrorBoundary from '../components/ErrorBoundary'
 import DictionaryPopover from '../components/DictionaryPopover'
 import AccessibilityMenu from '../components/AccessibilityMenu'
 import NoteEndActions from '../components/NoteEndActions'
+import PrintNoteModal from '../components/PrintNoteModal'
+import ReadingProgressBar from '../components/ReadingProgressBar'
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr)
@@ -52,6 +55,7 @@ function NotePage() {
   const [isDictOpen, setIsDictOpen] = useState(false)
   const [dictQuery, setDictQuery] = useState('')
   const [dictPos, setDictPos] = useState<{ x: number; y: number } | null>(null)
+  const [isPrintModalOpen, setIsPrintModalOpen] = useState(false)
 
   useEffect(() => {
     if (typeof window !== 'undefined' && note) {
@@ -98,16 +102,76 @@ function NotePage() {
   const noteUnit = curriculum?.units.find(
     (unit) => (note.unitId && unit.id === note.unitId) || unit.lessons.some((lesson) => lesson.resourceType === 'note' && lesson.resourceId === note.id)
   )
+  const noteLesson = noteUnit?.lessons.find(
+    (lesson) => lesson.resourceType === 'note' && lesson.resourceId === note.id
+  )
+  const unitNotes = noteUnit
+    ? noteUnit.lessons
+        .filter((l) => l.resourceType === 'note' && l.resourceId)
+        .map((l) => notes.find((n) => n.id === l.resourceId))
+        .filter((n): n is Note => Boolean(n))
+    : []
   const relatedNotes = notes
     .filter((item) => item.subjectId === note.subjectId && item.id !== note.id)
     .slice(0, 3)
 
   return (
     <article className="note-page">
+      <ReadingProgressBar targetSelector=".note-page__body" />
       <Seo title={`${note.title} | Prem Pokhrel`} description={note.summary} type="article" image={note.image || undefined} />
+
+      {/* ── Diagonal Print Watermark: (c) prempokhrel.com.np ── */}
+      <div className="note-print-watermark" aria-hidden="true">
+        <div className="note-print-watermark__layer">
+          <span className="note-print-watermark__text">© prempokhrel.com.np</span>
+          <span className="note-print-watermark__text">© prempokhrel.com.np</span>
+          <span className="note-print-watermark__text">© prempokhrel.com.np</span>
+        </div>
+      </div>
       {note.image && <img className="note-page__image" src={note.image} alt={note.imageAlt || ''} loading="lazy" decoding="async" />}
 
       <section className="note-page__content">
+        {/* ── Dedicated Academic Print Header (Only visible on print / PDF export) ── */}
+        <header className="note-print-header" aria-hidden="true">
+          <div className="note-print-header__top">
+            <div className="note-print-header__brand">
+              <span className="note-print-header__author">Prem Pokhrel</span>
+              <span className="note-print-header__domain">• prempokhrel.com.np</span>
+            </div>
+            <span className="note-print-header__badge">ECONOMICS STUDY MATERIAL</span>
+          </div>
+
+          <div className="note-print-header__hierarchy">
+            <div className="note-print-header__hierarchy-item">
+              <span className="note-print-header__hierarchy-label">Subject:</span>
+              <span className="note-print-header__hierarchy-val">{subject?.title || 'Economics'}</span>
+            </div>
+            {noteUnit && (
+              <div className="note-print-header__hierarchy-item">
+                <span className="note-print-header__hierarchy-label">Unit:</span>
+                <span className="note-print-header__hierarchy-val">{noteUnit.title}</span>
+              </div>
+            )}
+            {noteLesson && (
+              <div className="note-print-header__hierarchy-item">
+                <span className="note-print-header__hierarchy-label">Sub-Unit:</span>
+                <span className="note-print-header__hierarchy-val">{noteLesson.title}</span>
+              </div>
+            )}
+          </div>
+
+          <h1 className="note-print-header__title">{note.title}</h1>
+          {note.summary && <p className="note-print-header__summary">{note.summary}</p>}
+
+          <div className="note-print-header__meta">
+            <span>Date: {formatDate(note.date)}</span>
+            <span>•</span>
+            <span>Reading Time: {readingTime(note.body)}</span>
+            <span>•</span>
+            <span>Source: https://prempokhrel.com.np/notes/{note.id}</span>
+          </div>
+        </header>
+
         <div className="note-page__meta">
           <time className="note-page__date" dateTime={note.date}>{formatDate(note.date)}</time>
           <span aria-hidden="true">·</span>
@@ -124,10 +188,40 @@ function NotePage() {
               <span className="note-page__unit-tag">{noteUnit.title}</span>
             </>
           )}
+          <span aria-hidden="true">·</span>
+          <button
+            type="button"
+            onClick={() => setIsPrintModalOpen(true)}
+            className="note-page__print-pill"
+            title="Print or export clean academic PDF"
+            aria-label="Print Note"
+          >
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="6 9 6 2 18 2 18 9" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect x="6" y="14" width="12" height="8" />
+            </svg>
+            <span>Print Note</span>
+          </button>
         </div>
         <h1>{note.title}</h1>
         <p className="note-page__summary">{note.summary}</p>
-        <NoteSlideViewer note={note} />
+        <ErrorBoundary
+          fallbackTitle="Slide Viewer could not be loaded"
+          fallbackMessage="The presentation view could not be generated for this note, but full note content is available below."
+        >
+          <NoteSlideViewer note={note} />
+        </ErrorBoundary>
 
         {noteUnit && headings.length > 0 && <NoteUnitNavigator unit={noteUnit} headings={headings} />}
 
@@ -148,10 +242,17 @@ function NotePage() {
           <NoteMarkdown content={noteBody} />
         </div>
 
+        {/* ── Dedicated Print Footer (Only visible on print / PDF export) ── */}
+        <footer className="note-print-footer" aria-hidden="true">
+          <span>© Prem Pokhrel • Economics Learning Platform • All Rights Reserved</span>
+          <span>https://prempokhrel.com.np</span>
+        </footer>
+
         <NoteEndActions
           noteId={note.id}
           title={note.title}
           summary={note.summary}
+          onPrint={() => setIsPrintModalOpen(true)}
         />
 
         <DictionaryPopover
@@ -193,6 +294,20 @@ function NotePage() {
           setDictPos(null)
           setIsDictOpen(true)
         }}
+        onOpenPrint={() => setIsPrintModalOpen(true)}
+      />
+      <PrintNoteModal
+        isOpen={isPrintModalOpen}
+        onClose={() => setIsPrintModalOpen(false)}
+        note={note}
+        subjectTitle={subject?.title}
+        unitTitle={noteUnit?.title}
+        subUnitTitle={noteLesson?.title}
+        noteBody={noteBody}
+        headings={headings}
+        unitNotes={unitNotes}
+        formattedDate={formatDate(note.date)}
+        readingTimeStr={readingTime(note.body)}
       />
     </article>
   )
