@@ -106,7 +106,7 @@ function Notes() {
           {searchResults.length === 0 ? (
             <div className="no-results">
               <p className="empty-state">No notes match those filters.</p>
-              <p className="no-results__prompt">Don&apos;t see what you&apos;re looking for?</p>
+              <p className="no-results__prompt">Don’t see what you’re looking for?</p>
               <a
                 href="https://forms.gle/fwU1Fyxs3RKVEHxT7"
                 target="_blank"

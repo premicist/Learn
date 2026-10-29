@@ -6,7 +6,7 @@ function Footer() {
       <div className="footer__content">
         <p>&copy; {new Date().getFullYear()} Prem Pokhrel ECON &mdash; Economics learning resources.</p>
         <p className="footer__note">
-          Class 11 & 12 &middot; Bachelor&apos;s &middot; Master&apos;s &middot;{' '}
+          Class 11 & 12 · Bachelor’s · Master’s ·{' '}
           <Link to="/teacher" className="footer__teacher-link">
             Teacher View
           </Link>

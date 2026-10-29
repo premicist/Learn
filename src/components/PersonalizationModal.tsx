@@ -85,7 +85,7 @@ export default function PersonalizationModal({
             <span className="personalize-modal-icon">🎯</span>
             <div>
               <h2 id="personalize-title">Personalize Your Study Track</h2>
-              <p>Tell us what you&apos;re studying so we can customize your syllabus, notes, and quizzes.</p>
+              <p>Tell us what you’re studying so we can customize your syllabus, notes, and quizzes.</p>
             </div>
           </div>
           <button

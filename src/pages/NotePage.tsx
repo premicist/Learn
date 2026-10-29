@@ -89,7 +89,7 @@ function NotePage() {
     return (
       <section>
         <Seo title="Note not found | Prem Pokhrel" description="The requested economics note could not be found." />
-        <p className="empty-state">This note couldn&apos;t be found.</p>
+        <p className="empty-state">This note couldn’t be found.</p>
         <Link to="/notes" className="back-link">← Back to notes</Link>
       </section>
     )
@@ -237,7 +237,6 @@ function NotePage() {
         <div
           className="note-page__body"
           onMouseUp={handleTextSelection}
-          onTouchEnd={handleTextSelection}
         >
           <NoteMarkdown content={noteBody} />
         </div>

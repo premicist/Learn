@@ -27,7 +27,7 @@ function BlogPage() {
     return (
       <section>
         <Seo title="Article not found | Prem Pokhrel" description="The requested article could not be found." />
-        <p className="empty-state">This article couldn&apos;t be found.</p>
+        <p className="empty-state">This article couldn’t be found.</p>
         <Link to="/blogs" className="back-link">← Back to blogs</Link>
       </section>
     )

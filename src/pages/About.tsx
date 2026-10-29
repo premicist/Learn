@@ -8,7 +8,7 @@ function About() {
       <h2>About Prem Pokhrel ECON</h2>
       <p>
         Prem Pokhrel ECON is a learning resource covering economics from Class 11 &amp; 12 (NEB)
-        through bachelor&apos;s and master&apos;s level. It brings together study notes, blog articles,
+        through bachelor’s and master’s level. It brings together study notes, blog articles,
         short quizzes, and videos for each subject in one place.
       </p>
       <p>

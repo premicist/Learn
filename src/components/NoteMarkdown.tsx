@@ -71,7 +71,7 @@ function NoteChart({ json }: { json: string }) {
     parsed = null
   }
   if (!parsed || !parsed.xKey || !Array.isArray(parsed.series) || !Array.isArray(parsed.data) || parsed.data.length === 0) {
-    return <p className="note-chart-error">(Chart data couldn&apos;t be read.)</p>
+    return <p className="note-chart-error">(Chart data couldn’t be read.)</p>
   }
   const values = parsed.series.flatMap((key) => parsed.data.map((row) => Number(row[key])).filter(Number.isFinite))
   const min = Math.min(0, ...values)

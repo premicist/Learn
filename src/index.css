@@ -174,6 +174,34 @@ h3 {
   border-radius: 4px;
 }
 
+/* ===== Skip to Main Content Link (Visually hidden until Tab-focused) ===== */
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: 20px;
+  z-index: 99999;
+  padding: 10px 18px;
+  background: var(--ink, #122a3a);
+  color: #ffffff !important;
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border: 2px solid var(--gold, #b4872a);
+  border-top: none;
+  transition: top 0.2s ease-in-out;
+  outline: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 0;
+  outline: 3px solid var(--gold, #b4872a);
+  outline-offset: 2px;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -357,6 +385,7 @@ h2 {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.18s ease;
+  position: relative;
 }
 
 .navbar__action-btn:hover {
@@ -368,7 +397,18 @@ h2 {
 .navbar__action-btn.is-active {
   background: color-mix(in srgb, var(--teal) 35%, transparent);
   border-color: var(--teal);
-  color: var(--teal);
+  color: #ffffff;
+}
+
+.navbar__action-btn.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 999px;
 }
 
 .navbar__action-icon {
@@ -572,6 +612,12 @@ h2 {
   }
 
   .navbar__kbd {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .navbar__action-btn--board {
     display: none;
   }
 }
@@ -4201,18 +4247,15 @@ h2 {
   .move-to-top span:not([aria-hidden="true"]) { display: none; }
 
   body:has(.unit-sequence-dock) .move-to-top {
-    right: auto;
-    bottom: calc(3.45rem + env(safe-area-inset-bottom));
-    left: 50%;
-    min-width: auto;
-    min-height: 1.5rem;
-    padding: 0.1rem 0.4rem;
-    font-size: 0.7rem;
-    border: 0;
-    background: transparent;
-    color: var(--teal);
-    box-shadow: none;
-    transform: translateX(-50%);
+    right: 14px;
+    bottom: 16px;
+    left: auto;
+    min-width: 2.8rem;
+    min-height: 2.8rem;
+    padding: 0.6rem;
+    font-size: 0.78rem;
+    border-radius: 50%;
+    transform: none;
   }
 
   body:has(.unit-sequence-dock) .move-to-top:hover {
@@ -5087,11 +5130,18 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
 }
 
 @media (max-width: 640px) {
+  /* On mobile, place sequence navigation in-page flow at end of note to free up reading viewport */
   .unit-sequence-dock {
-    padding: 0.35rem 0.6rem calc(0.35rem + env(safe-area-inset-bottom)) !important;
+    position: static !important;
+    padding: 12px 14px !important;
+    margin: 24px 0 20px 0 !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--line) !important;
+    background: var(--paper-card) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
     width: 100% !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
+    max-width: 100% !important;
+    overflow: visible !important;
     box-sizing: border-box !important;
   }
 
@@ -5099,7 +5149,7 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    gap: 0.35rem !important;
+    gap: 0.5rem !important;
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
@@ -5108,15 +5158,16 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
   .unit-sequence-dock__item {
     flex: 1 1 0 !important;
     min-width: 0 !important;
-    max-width: 44% !important;
-    padding: 0.25rem 0.45rem !important;
+    max-width: 46% !important;
+    padding: 0.4rem 0.6rem !important;
     overflow: hidden !important;
-    border-radius: 6px !important;
+    border-radius: 8px !important;
     background: var(--paper) !important;
+    border: 1px solid var(--line) !important;
   }
 
   .unit-sequence-dock__item strong {
-    font-size: 0.74rem !important;
+    font-size: 0.78rem !important;
     line-height: 1.25 !important;
     white-space: nowrap !important;
     overflow: hidden !important;
@@ -5126,8 +5177,8 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
   }
 
   .unit-sequence-dock__label {
-    font-size: 0.58rem !important;
-    line-height: 1 !important;
+    font-size: 0.62rem !important;
+    line-height: 1.1 !important;
     white-space: nowrap !important;
     margin-bottom: 2px !important;
   }
@@ -5138,13 +5189,13 @@ main:has(.unit-sequence-dock) { padding-bottom: 112px; }
 
   .unit-sequence-dock__progress {
     flex: none !important;
-    font-size: 0.62rem !important;
-    padding: 0 4px !important;
+    font-size: 0.68rem !important;
+    padding: 0 6px !important;
     color: var(--ink-faint) !important;
   }
 
   main:has(.unit-sequence-dock) {
-    padding-bottom: 110px !important;
+    padding-bottom: 24px !important;
   }
 }
 
@@ -7338,7 +7389,7 @@ body:has(.unit-sequence-dock) .a11y-floating-anchor {
     bottom: 16px !important;
   }
   body:has(.unit-sequence-dock) .a11y-floating-anchor {
-    bottom: calc(5.2rem + env(safe-area-inset-bottom)) !important;
+    bottom: 16px !important;
   }
   .a11y-trigger-btn {
     padding: 0 12px;
@@ -9303,15 +9354,22 @@ body:has(.unit-sequence-dock) .a11y-floating-anchor {
    ========================================================================== */
 
 /* Navbar Board Mode Indicator */
-.navbar__icon-btn--board.is-active {
-  background: var(--gold-tint) !important;
-  border-color: var(--gold) !important;
-  color: #785206 !important;
+.navbar__icon-btn--board.is-active,
+.navbar__action-btn--board.is-active {
+  background: color-mix(in srgb, var(--teal) 35%, transparent) !important;
+  border-color: var(--teal) !important;
+  color: #ffffff !important;
 }
 
-[data-theme="dark"] .navbar__icon-btn--board.is-active {
-  background: var(--gold-tint) !important;
-  color: var(--gold) !important;
+.navbar__action-btn--board.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 999px;
 }
 
 .navbar__mode-text {

@@ -4,15 +4,23 @@ import { useTheme } from '../utils/useTheme'
 import { useSmartboard } from '../utils/useSmartboard'
 const QuickSearchModal = lazy(() => import('./QuickSearchModal'))
 
-const links = [
-  { to: '/', label: 'Home', icon: '🏠', end: true },
+interface NavItem {
+  to: string
+  label: string
+  icon: string
+  end?: boolean
+  hideInDesktopNav?: boolean
+}
+
+const links: NavItem[] = [
+  { to: '/', label: 'Home', icon: '🏠', end: true, hideInDesktopNav: true },
   { to: '/subjects', label: 'Subjects', icon: '📚' },
   { to: '/notes', label: 'Notes', icon: '📝' },
-  { to: '/whiteboard', label: 'Whiteboard', icon: '🎨' },
-  { to: '/quizzes', label: 'Quizzes', icon: '❓' },
   { to: '/practice-sets', label: 'Practice', icon: '💪' },
+  { to: '/quizzes', label: 'Quizzes', icon: '❓' },
   { to: '/blogs', label: 'Blogs', icon: '✍️' },
   { to: '/videos', label: 'Videos', icon: '▶️' },
+  { to: '/whiteboard', label: 'Whiteboard', icon: '🎨', end: true },
   { to: '/about', label: 'About', icon: 'ℹ️' },
 ]
 
@@ -67,10 +75,11 @@ function Navbar() {
           {/* Desktop Navigation Links */}
           <nav className="navbar__desktop-nav" aria-label="Main navigation">
             <ul className="navbar__nav-list">
-              {links.filter((l) => !l.end).map((link) => (
+              {links.filter((l) => !l.hideInDesktopNav).map((link) => (
                 <li key={link.to}>
                   <NavLink
                     to={link.to}
+                    end={link.end}
                     className={({ isActive }) => `navbar__nav-link ${isActive ? 'is-active' : ''}`}
                   >
                     {link.label}

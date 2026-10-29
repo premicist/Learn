@@ -26,15 +26,7 @@ function Home() {
   const [weeklyGoal, setWeeklyGoal] = useState(5)
   const [customGoalInput, setCustomGoalInput] = useState('5')
 
-  // Auto-open modal on first-ever visit if user has not yet completed onboarding
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('learn:studentProfile')
-      if (!stored) {
-        setIsModalOpen(true)
-      }
-    }
-  }, [])
+  // Onboarding modal is accessible via "Personalize Now" button without aggressively blocking first-time visitors
 
   const [lastStudiedNoteId, setLastStudiedNoteId] = useState<string | null>(() => {
     if (typeof window !== 'undefined') {
@@ -299,14 +291,14 @@ function Home() {
           <span className="eyebrow">
             {profile?.firstName
               ? `Welcome, ${profile.firstName}! · ${activeSubject?.title}`
-              : 'Class 11 & 12 · Bachelor&apos;s · Master&apos;s'}
+              : 'Class 11 & 12 · Bachelor’s · Master’s'}
           </span>
           <h1>
             Where supply meets <em>understanding</em>.
           </h1>
           <p>
             Notes, articles, quizzes, and videos in economics — built for students pursuing class 11-12,
-            bachelor&apos;s and master&apos;s level coursework.
+            bachelor’s and master’s level coursework.
           </p>
 
           {/* Active Study Track Personalization Bar */}
@@ -494,10 +486,10 @@ function Home() {
         {displayNotes.length === 0 && (
           <div className="resume-empty">
             {activeTab === 'completed' && (
-              <p>You haven&apos;t marked any notes as completed yet. Read any note and click &quot;Mark Complete&quot; to track your progress!</p>
+              <p>You haven’t marked any notes as completed yet. Read any note and click "Mark Complete" to track your progress!</p>
             )}
             {activeTab === 'bookmarked' && (
-              <p>You haven&apos;t saved any bookmarks yet. Click the star icon on any note to pin it here for quick review!</p>
+              <p>You haven’t saved any bookmarks yet. Click the star icon on any note to pin it here for quick review!</p>
             )}
             {activeTab === 'continue' && (
               <p>All notes completed in {activeSubject?.title}! Excellent achievement.</p>

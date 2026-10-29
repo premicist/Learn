@@ -36,10 +36,11 @@ function NoteUnitNavigator({ unit, headings }: NoteUnitNavigatorProps) {
   const eyebrowText = unit.unitGroup || `Unit ${unit.order}`
 
   return (
-    <details className="note-unit-navigator" open>
+    <details className="note-unit-navigator">
       <summary>
         <span className="note-unit-navigator__eyebrow">{eyebrowText}</span>
         <strong>{unit.title}</strong>
+        <span className="note-unit-navigator__hint">Table of Contents ({headings.length})</span>
       </summary>
       <div className="note-unit-navigator__panel">
         <p>{unit.summary}</p>

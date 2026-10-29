@@ -16,7 +16,7 @@ function InlineGraph({ block, title }: { block: VisualBlock; title: string }) {
   const points = (block.points || []).filter((point): point is [number, number] => (
     Array.isArray(point) && point.length === 2 && point.every((value) => typeof value === 'number' && Number.isFinite(value))
   ))
-  if (points.length < 2) return <p className="note-chart-error">(Graph data couldn&apos;t be read.)</p>
+  if (points.length < 2) return <p className="note-chart-error">(Graph data couldn’t be read.)</p>
 
   const width = 760
   const height = 390
